@@ -1,0 +1,13 @@
+{
+  "name": "orlando-park-guide",
+  "version": "1.0.0",
+  "description": "Family-friendly guide to Orlando theme park rides",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "npx serve ."
+  },
+  "keywords": ["orlando", "theme-parks", "disney", "universal", "accessibility"],
+  "author": "",
+  "license": "MIT"
+}
