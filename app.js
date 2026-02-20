@@ -1711,63 +1711,72 @@ const parkConfig = {
     id: 'mk',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #1a5fb4 0%, #3584e4 50%, #c01c28 100%)',
+    gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
+    image: 'https://picsum.photos/seed/mk/800/400',
     accent: '#f5c211'
   },
   'EPCOT': {
     id: 'epcot',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #613583 0%, #1c71d8 50%, #26a269 100%)',
+    gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
+    image: 'https://picsum.photos/seed/epcot/800/400',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
     id: 'hs',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #a51d2d 0%, #e66100 50%, #b5835a 100%)',
+    gradient: 'linear-gradient(180deg, rgba(165,29,45,0.1) 0%, rgba(165,29,45,0.95) 100%)',
+    image: 'https://picsum.photos/seed/hs/800/400',
     accent: '#f5c211'
   },
   'Animal Kingdom': {
     id: 'ak',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #26a269 0%, #5e9624 50%, #8f6e28 100%)',
+    gradient: 'linear-gradient(180deg, rgba(38,162,105,0.1) 0%, rgba(38,162,105,0.95) 100%)',
+    image: 'https://picsum.photos/seed/ak/800/400',
     accent: '#e5a50a'
   },
   'Universal Studios Florida': {
     id: 'usf',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #4a4a6a 50%, #e66100 100%)',
+    gradient: 'linear-gradient(180deg, rgba(26,26,46,0.2) 0%, rgba(26,26,46,0.98) 100%)',
+    image: 'https://picsum.photos/seed/usf/800/400',
     accent: '#f5c211'
   },
   'Islands of Adventure': {
     id: 'ioa',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 50%, #1c71d8 100%)',
+    gradient: 'linear-gradient(180deg, rgba(192,28,40,0.1) 0%, rgba(192,28,40,0.95) 100%)',
+    image: 'https://picsum.photos/seed/ioa/800/400',
     accent: '#f5c211'
   },
   'Epic Universe': {
     id: 'eu',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%)',
+    gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
+    image: 'https://picsum.photos/seed/eu/800/400',
     accent: '#f5c211'
   },
   'SeaWorld Orlando': {
     id: 'sw',
-    resort: 'SeaWorld Parks',
+    resort: 'Other Parks',
     parent: 'SeaWorld',
-    gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 50%, #8f6e28 100%)',
+    gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
+    image: 'https://picsum.photos/seed/sw/800/400',
     accent: '#e5a50a'
   },
   'LEGOLAND Florida': {
     id: 'll',
-    resort: 'SeaWorld Parks',
+    resort: 'Other Parks',
     parent: 'SeaWorld',
-    gradient: 'linear-gradient(135deg, #e3000f 0%, #f5c211 50%, #00a651 100%)',
+    gradient: 'linear-gradient(180deg, rgba(227,0,15,0.1) 0%, rgba(227,0,15,0.95) 100%)',
+    image: 'https://picsum.photos/seed/ll/800/400',
     accent: '#f5c211'
   }
 };
@@ -1953,7 +1962,7 @@ function renderLeaderboard() {
             const remainingCount = rides.length - previewRides.length;
             
             return `
-              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')">
+              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: url('${config.image}'), ${config.gradient}; background-size: cover, 100% 100%; background-position: center, center; background-blend-mode: normal, normal;">
                 <div class="park-card-header">
                   <h3>${escapeHtml(parkName)}</h3>
                   <span class="ride-count" style="color: ${config.accent}">${rides.length}</span>
