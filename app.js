@@ -1712,7 +1712,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
-    image: 'https://picsum.photos/seed/mk/800/400',
+    image: 'https://images.unsplash.com/photo-1597466599360-3b9775841aec?w=800&q=80',
     accent: '#f5c211'
   },
   'EPCOT': {
@@ -1720,7 +1720,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
-    image: 'https://picsum.photos/seed/epcot/800/400',
+    image: 'https://images.unsplash.com/photo-1549488497-3b6aef9637ce?w=800&q=80',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
@@ -1728,7 +1728,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(165,29,45,0.1) 0%, rgba(165,29,45,0.95) 100%)',
-    image: 'https://picsum.photos/seed/hs/800/400',
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
     accent: '#f5c211'
   },
   'Animal Kingdom': {
@@ -1736,7 +1736,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(38,162,105,0.1) 0%, rgba(38,162,105,0.95) 100%)',
-    image: 'https://picsum.photos/seed/ak/800/400',
+    image: 'https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80',
     accent: '#e5a50a'
   },
   'Universal Studios Florida': {
@@ -1744,7 +1744,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(26,26,46,0.2) 0%, rgba(26,26,46,0.98) 100%)',
-    image: 'https://picsum.photos/seed/usf/800/400',
+    image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
     accent: '#f5c211'
   },
   'Islands of Adventure': {
@@ -1752,7 +1752,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(192,28,40,0.1) 0%, rgba(192,28,40,0.95) 100%)',
-    image: 'https://picsum.photos/seed/ioa/800/400',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80',
     accent: '#f5c211'
   },
   'Epic Universe': {
@@ -1760,7 +1760,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
-    image: 'https://picsum.photos/seed/eu/800/400',
+    image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80',
     accent: '#f5c211'
   },
   'SeaWorld Orlando': {
@@ -1768,7 +1768,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
-    image: 'https://picsum.photos/seed/sw/800/400',
+    image: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80',
     accent: '#e5a50a'
   },
   'LEGOLAND Florida': {
@@ -1776,7 +1776,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     gradient: 'linear-gradient(180deg, rgba(227,0,15,0.1) 0%, rgba(227,0,15,0.95) 100%)',
-    image: 'https://picsum.photos/seed/ll/800/400',
+    image: 'https://images.unsplash.com/photo-1585366119957-f973043d4561?w=800&q=80',
     accent: '#f5c211'
   }
 };
