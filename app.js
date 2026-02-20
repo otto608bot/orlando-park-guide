@@ -7,6 +7,54 @@ const state = {
     pregnancy: false,
     wheelchair: false,
     sensory: false
+  },
+  currentView: 'leaderboard',
+  selectedPark: null
+};
+
+// Park configuration with styling and metadata
+const parkConfig = {
+  'Magic Kingdom': {
+    id: 'mk',
+    resort: 'Walt Disney World',
+    gradient: 'linear-gradient(135deg, #1a5fb4 0%, #3584e4 50%, #c01c28 100%)',
+    accent: '#f5c211',
+    description: 'Where fairy tales come true'
+  },
+  'EPCOT': {
+    id: 'epcot',
+    resort: 'Walt Disney World',
+    gradient: 'linear-gradient(135deg, #613583 0%, #1c71d8 50%, #26a269 100%)',
+    accent: '#e5a50a',
+    description: 'Celebrate human achievement'
+  },
+  'Hollywood Studios': {
+    id: 'hs',
+    resort: 'Walt Disney World',
+    gradient: 'linear-gradient(135deg, #a51d2d 0%, #e66100 50%, #b5835a 100%)',
+    accent: '#f5c211',
+    description: 'The magic of movies'
+  },
+  'Animal Kingdom': {
+    id: 'ak',
+    resort: 'Walt Disney World',
+    gradient: 'linear-gradient(135deg, #26a269 0%, #5e9624 50%, #8f6e28 100%)',
+    accent: '#e5a50a',
+    description: 'A celebration of nature'
+  },
+  'Universal Studios Florida': {
+    id: 'usf',
+    resort: 'Universal Orlando',
+    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #4a4a6a 50%, #e66100 100%)',
+    accent: '#f5c211',
+    description: 'Ride the movies'
+  },
+  'Islands of Adventure': {
+    id: 'ioa',
+    resort: 'Universal Orlando',
+    gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 50%, #1c71d8 100%)',
+    accent: '#f5c211',
+    description: 'Live the adventure'
   }
 };
 
@@ -14,24 +62,21 @@ const state = {
 const elements = {
   heightSlider: document.getElementById('height-slider'),
   heightValue: document.getElementById('height-value'),
-  matchCount: document.getElementById('match-count'),
-  parkCount: document.getElementById('park-count'),
-  parkList: document.getElementById('park-list'),
+  totalCount: document.getElementById('total-count'),
+  leaderboard: document.getElementById('leaderboard'),
+  leaderboardView: document.getElementById('leaderboard-view'),
+  parkDetailView: document.getElementById('park-detail-view'),
+  parkHero: document.getElementById('park-hero'),
+  detailResort: document.getElementById('detail-resort'),
+  detailParkName: document.getElementById('detail-park-name'),
+  detailRideCount: document.getElementById('detail-ride-count'),
+  detailHeightLimit: document.getElementById('detail-height-limit'),
+  rideGrid: document.getElementById('ride-grid'),
   toggles: {
     pregnancy: document.getElementById('toggle-pregnancy'),
     wheelchair: document.getElementById('toggle-wheelchair'),
     sensory: document.getElementById('toggle-sensory')
   }
-};
-
-// Park color mapping
-const parkColors = {
-  'Magic Kingdom': { color: '#2563eb', bg: '#dbeafe' },
-  'EPCOT': { color: '#4f46e5', bg: '#e0e7ff' },
-  'Hollywood Studios': { color: '#7c3aed', bg: '#ede9fe' },
-  'Animal Kingdom': { color: '#059669', bg: '#d1fae5' },
-  'Universal Studios Florida': { color: '#ea580c', bg: '#ffedd5' },
-  'Islands of Adventure': { color: '#dc2626', bg: '#fee2e2' }
 };
 
 // Initialize
@@ -49,10 +94,11 @@ function setupEventListeners() {
 function handleHeightChange(e) {
   state.filters.height = parseInt(e.target.value);
   elements.heightValue.textContent = `${state.filters.height}"`;
+  elements.detailHeightLimit.textContent = `${state.filters.height}"`;
   render();
 }
 
-// Toggle filter handler (exposed to window)
+// Toggle filter handler
 window.toggleFilter = function(type) {
   state.filters[type] = !state.filters[type];
   
@@ -61,6 +107,28 @@ window.toggleFilter = function(type) {
   
   btn.classList.toggle('active', isActive);
   btn.setAttribute('aria-pressed', isActive);
+  
+  render();
+};
+
+// Show park detail view
+window.showParkDetail = function(parkName) {
+  state.selectedPark = parkName;
+  state.currentView = 'detail';
+  
+  elements.leaderboardView.style.display = 'none';
+  elements.parkDetailView.classList.add('active');
+  
+  renderParkDetail(parkName);
+};
+
+// Show leaderboard view
+window.showLeaderboard = function() {
+  state.currentView = 'leaderboard';
+  state.selectedPark = null;
+  
+  elements.parkDetailView.classList.remove('active');
+  elements.leaderboardView.style.display = 'block';
   
   render();
 };
@@ -95,122 +163,130 @@ function groupByPark(rides) {
   
   rides.forEach(ride => {
     if (!groups[ride.park]) {
-      groups[ride.park] = {
-        resort: ride.resort,
-        rides: []
-      };
+      groups[ride.park] = [];
     }
-    groups[ride.park].rides.push(ride);
+    groups[ride.park].push(ride);
   });
   
   return groups;
 }
 
-// Generate sensory tags
+// Get sensory tags for display
 function getSensoryTags(sensory) {
   const tags = [];
-  
-  if (sensory.dark) {
-    tags.push({ label: 'Dark', class: 'tag--sensory-dark' });
-  }
-  if (sensory.loud) {
-    tags.push({ label: 'Loud', class: 'tag--sensory-loud' });
-  }
-  if (sensory.sudden) {
-    tags.push({ label: 'Sudden', class: 'tag--sensory-sudden' });
-  }
-  if (sensory.enclosed) {
-    tags.push({ label: 'Enclosed', class: 'tag--sensory-enclosed' });
-  }
-  if (sensory.strobe) {
-    tags.push({ label: 'Strobe', class: 'tag--sensory-strobe' });
-  }
-  
+  if (sensory.dark) tags.push({ label: 'Dark', class: 'tag-sensory-dark' });
+  if (sensory.loud) tags.push({ label: 'Loud', class: 'tag-sensory-loud' });
+  if (sensory.sudden) tags.push({ label: 'Sudden', class: 'tag-sensory-sudden' });
+  if (sensory.enclosed) tags.push({ label: 'Enclosed', class: 'tag-sensory-enclosed' });
+  if (sensory.strobe) tags.push({ label: 'Strobe', class: 'tag-sensory-strobe' });
   return tags;
 }
 
-// Render ride card
-function renderRideCard(ride) {
-  const sensoryTags = getSensoryTags(ride.sensory);
+// Render leaderboard
+function renderLeaderboard() {
+  const filtered = getFilteredRides();
+  const grouped = groupByPark(filtered);
   
-  return `
-    <article class="ride-card">
-      <div class="ride-card__header">
-        <h3 class="ride-card__name">${escapeHtml(ride.name)}</h3>
-        <span class="ride-card__duration">${escapeHtml(ride.duration)}</span>
-      </div>
-      <p class="ride-card__description">${escapeHtml(ride.description)}</p>
-      <div class="ride-card__tags">
-        ${ride.height > 0 ? `
-          <span class="tag tag--height">${ride.height}"</span>
-        ` : ''}
-        ${ride.pregnant ? `
-          <span class="tag tag--pregnancy">🤰 Safe</span>
-        ` : ''}
-        ${ride.wheelchair === 'WAV' ? `
-          <span class="tag tag--wheelchair">♿ No Transfer</span>
-        ` : ride.wheelchair === 'TAV' ? `
-          <span class="tag tag--height">Transfer Required</span>
-        ` : ''}
-        ${sensoryTags.map(tag => `
-          <span class="tag ${tag.class}">${tag.label}</span>
-        `).join('')}
-      </div>
-    </article>
-  `;
-}
-
-// Render park section
-function renderParkSection(parkName, parkData) {
-  const colors = parkColors[parkName] || { color: '#64748b', bg: '#f1f5f9' };
+  // Update total count
+  elements.totalCount.textContent = filtered.length;
   
-  return `
-    <details class="park-section" open>
-      <summary class="park-header">
-        <div class="park-header__info">
-          <span class="park-header__resort" style="color: ${colors.color}">${escapeHtml(parkData.resort)}</span>
-          <span class="park-header__name">${escapeHtml(parkName)}</span>
-          <span class="park-header__count" style="color: ${colors.color}">${parkData.rides.length} rides</span>
+  // Sort parks by ride count (descending)
+  const sortedParks = Object.entries(grouped)
+    .sort((a, b) => b[1].length - a[1].length);
+  
+  // Render park cards
+  elements.leaderboard.innerHTML = sortedParks.map(([parkName, rides]) => {
+    const config = parkConfig[parkName];
+    const previewRides = rides.slice(0, 4);
+    const remainingCount = rides.length - previewRides.length;
+    
+    return `
+      <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')">
+        <div class="park-card-header">
+          <div class="park-info">
+            <div class="park-resort">${config.resort}</div>
+            <h3>${parkName}</h3>
+          </div>
+          <div class="ride-count">
+            <div class="number">${rides.length}</div>
+            <div class="label">Rides</div>
+          </div>
         </div>
-        <svg class="park-header__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 9l-7 7-7-7"/>
-        </svg>
-      </summary>
-      <div class="ride-list">
-        ${parkData.rides.map(renderRideCard).join('')}
+        <div class="park-preview">
+          <div class="ride-chips">
+            ${previewRides.map(ride => `
+              <span class="ride-chip">${escapeHtml(ride.name)}</span>
+            `).join('')}
+            ${remainingCount > 0 ? `
+              <span class="more-rides">+${remainingCount} more</span>
+            ` : ''}
+          </div>
+        </div>
       </div>
-    </details>
-  `;
+    `;
+  }).join('');
 }
 
-// Render empty state
-function renderEmptyState() {
-  return `
-    <div class="empty-state">
-      <div class="empty-state__icon">🔍</div>
-      <div class="empty-state__title">No rides match your filters</div>
-      <p>Try adjusting your height requirement or turning off some filters.</p>
-    </div>
-  `;
+// Render park detail
+function renderParkDetail(parkName) {
+  const config = parkConfig[parkName];
+  const filtered = getFilteredRides();
+  const parkRides = filtered.filter(ride => ride.park === parkName);
+  
+  // Update hero
+  elements.parkHero.className = `park-hero ${config.id}`;
+  elements.detailResort.textContent = config.resort;
+  elements.detailParkName.textContent = parkName;
+  elements.detailRideCount.textContent = parkRides.length;
+  elements.detailHeightLimit.textContent = `${state.filters.height}"`;
+  
+  // Render ride cards
+  if (parkRides.length === 0) {
+    elements.rideGrid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <div class="empty-state-icon">🔍</div>
+        <h3>No rides match your filters</h3>
+        <p>Try adjusting your height requirement or turning off some filters.</p>
+      </div>
+    `;
+  } else {
+    elements.rideGrid.innerHTML = parkRides.map(ride => {
+      const sensoryTags = getSensoryTags(ride.sensory);
+      
+      return `
+        <div class="ride-card">
+          <div class="ride-header">
+            <div class="ride-name">${escapeHtml(ride.name)}</div>
+            <div class="ride-type">${escapeHtml(ride.type)}</div>
+          </div>
+          <p class="ride-description">${escapeHtml(ride.description)}</p>
+          <div class="ride-meta">
+            <div class="meta-item">⏱️ ${escapeHtml(ride.duration)}</div>
+            ${ride.wheelchair === 'WAV' ? '<div class="meta-item">♿ No Transfer</div>' : ride.wheelchair === 'TAV' ? '<div class="meta-item">♿ Transfer Required</div>' : '<div class="meta-item">♿ Not Accessible</div>'}
+          </div>
+          <div class="ride-tags">
+            ${ride.height > 0 ? `
+              <span class="tag tag-height">📏 ${ride.height}"</span>
+            ` : ''}
+            ${ride.pregnant ? `
+              <span class="tag tag-pregnancy">🤰 Pregnancy Safe</span>
+            ` : ''}
+            ${sensoryTags.map(tag => `
+              <span class="tag ${tag.class}">${tag.label}</span>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
 }
 
 // Main render function
 function render() {
-  const filtered = getFilteredRides();
-  const grouped = groupByPark(filtered);
-  const parkNames = Object.keys(grouped);
-  
-  // Update counts
-  elements.matchCount.textContent = filtered.length;
-  elements.parkCount.textContent = parkNames.length;
-  
-  // Render results
-  if (filtered.length === 0) {
-    elements.parkList.innerHTML = renderEmptyState();
-  } else {
-    elements.parkList.innerHTML = parkNames
-      .map(park => renderParkSection(park, grouped[park]))
-      .join('');
+  if (state.currentView === 'leaderboard') {
+    renderLeaderboard();
+  } else if (state.currentView === 'detail' && state.selectedPark) {
+    renderParkDetail(state.selectedPark);
   }
 }
 
