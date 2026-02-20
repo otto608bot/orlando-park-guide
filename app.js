@@ -1498,6 +1498,176 @@ const rideData = [
     type: "Observation Tower",
     duration: "10 min",
     description: "A 400-foot observation tower with panoramic views"
+  },
+
+  // LEGOLAND FLORIDA
+  {
+    id: "ll-coastersaurus",
+    name: "Coastersaurus",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 42,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A family wooden coaster through a LEGO dinosaur jungle"
+  },
+  {
+    id: "ll-dragon",
+    name: "The Dragon",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 40,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "3 min",
+    description: "An indoor/outdoor coaster through a LEGO castle"
+  },
+  {
+    id: "ll-flying-school",
+    name: "Flying School",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 44,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A suspended family coaster"
+  },
+  {
+    id: "ll-duplo-express",
+    name: "DUPLO Express",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Train",
+    duration: "3 min",
+    description: "A gentle train ride for little ones"
+  },
+  {
+    id: "ll-drivingschool",
+    name: "Ford Driving School",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "NO",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Driving",
+    duration: "5 min",
+    description: "Kids drive LEGO cars on a real course"
+  },
+  {
+    id: "ll-juniordriving",
+    name: "Ford Jr. Driving School",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "NO",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Driving",
+    duration: "5 min",
+    description: "Smaller driving course for younger kids"
+  },
+  {
+    id: "ll-boating",
+    name: "Boating School",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Boat Ride",
+    duration: "3 min",
+    description: "Captain your own LEGO boat"
+  },
+  {
+    id: "ll-beetle-bounce",
+    name: "Beetle Bounce",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Drop Tower",
+    duration: "1 min",
+    description: "A gentle kid-sized drop tower"
+  },
+  {
+    id: "ll-fairy-tale-brook",
+    name: "Fairy Tale Brook",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Boat Ride",
+    duration: "4 min",
+    description: "A gentle boat ride past LEGO fairy tale scenes"
+  },
+  {
+    id: "ll-merlin",
+    name: "Merlin's Challenge",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 36,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Carousel",
+    duration: "2 min",
+    description: "A spinning carousel ride"
+  },
+  {
+    id: "ll-lost-kingdom",
+    name: "Lost Kingdom Adventure",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Interactive Dark Ride",
+    duration: "4 min",
+    description: "An interactive laser blast adventure"
+  },
+  {
+    id: "ll-ninjago",
+    name: "LEGO NINJAGO The Ride",
+    park: "LEGOLAND Florida",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Interactive Dark Ride",
+    duration: "4 min",
+    description: "Use hand gestures to throw ninja powers"
   }
 ];
 
@@ -1592,6 +1762,13 @@ const parkConfig = {
     parent: 'SeaWorld',
     gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 50%, #8f6e28 100%)',
     accent: '#e5a50a'
+  },
+  'LEGOLAND Florida': {
+    id: 'll',
+    resort: 'SeaWorld Parks',
+    parent: 'SeaWorld',
+    gradient: 'linear-gradient(135deg, #e3000f 0%, #f5c211 50%, #00a651 100%)',
+    accent: '#f5c211'
   }
 };
 
@@ -1680,7 +1857,7 @@ function getFilteredRides() {
     // Pregnancy filter
     if (state.filters.pregnancy && !ride.pregnant) return false;
     
-    // Wheelchair filter (WAV = no transfer required)
+    // Wheelchair filter (WAV = wheelchair accessible, no transfer required)
     if (state.filters.wheelchair && ride.wheelchair !== 'WAV') return false;
     
     // Sensory filter (no intense effects)

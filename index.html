@@ -58,11 +58,23 @@
       --eu-accent: #f5c211;
       --eu-gradient: linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%);
       
+      /* Epic Universe (Cosmic/Nintendo/Monsters) */
+      --eu-primary: #613583;
+      --eu-secondary: #c01c28;
+      --eu-accent: #f5c211;
+      --eu-gradient: linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%);
+      
       /* SeaWorld (Ocean) */
       --sw-primary: #26a269;
       --sw-secondary: #1c71d8;
       --sw-accent: #e5a50a;
       --sw-gradient: linear-gradient(135deg, #26a269 0%, #1c71d8 50%, #8f6e28 100%);
+      
+      /* LEGOLAND (Bright/Playful) */
+      --ll-primary: #e3000f;
+      --ll-secondary: #f5c211;
+      --ll-accent: #00a651;
+      --ll-gradient: linear-gradient(135deg, #e3000f 0%, #f5c211 50%, #00a651 100%);
       
       /* Neutral */
       --bg-dark: #0f0f1a;
@@ -346,6 +358,8 @@
     .park-card.ak::before { background: var(--ak-gradient); }
     .park-card.usf::before { background: var(--usf-gradient); }
     .park-card.ioa::before { background: var(--ioa-gradient); }
+    .park-card.sw::before { background: var(--sw-gradient); }
+    .park-card.ll::before { background: var(--ll-gradient); }
     
     .park-card-header {
       padding: var(--space-xl);
@@ -368,6 +382,8 @@
     .park-card.ak .park-info h3 { color: var(--ak-accent); }
     .park-card.usf .park-info h3 { color: var(--usf-accent); }
     .park-card.ioa .park-info h3 { color: var(--ioa-accent); }
+    .park-card.sw .park-info h3 { color: var(--sw-accent); }
+    .park-card.ll .park-info h3 { color: var(--ll-secondary); }
     
     .park-resort {
       font-size: 0.75rem;
@@ -393,6 +409,8 @@
     .park-card.ak .ride-count .number { color: var(--ak-accent); }
     .park-card.usf .ride-count .number { color: var(--usf-accent); }
     .park-card.ioa .ride-count .number { color: var(--ioa-accent); }
+    .park-card.sw .ride-count .number { color: var(--sw-accent); }
+    .park-card.ll .ride-count .number { color: var(--ll-secondary); }
     
     .ride-count .label {
       font-size: 0.75rem;
@@ -499,6 +517,15 @@
     .park-hero.ioa { background: linear-gradient(135deg, rgba(192,28,40,0.3) 0%, rgba(28,113,216,0.3) 100%); }
     .park-hero.ioa::before { background: var(--ioa-gradient); }
     
+    .park-hero.eu { background: linear-gradient(135deg, rgba(97,53,131,0.3) 0%, rgba(192,28,40,0.3) 50%, rgba(245,194,17,0.2) 100%); }
+    .park-hero.eu::before { background: var(--eu-gradient); }
+    
+    .park-hero.sw { background: linear-gradient(135deg, rgba(38,162,105,0.3) 0%, rgba(28,113,216,0.3) 100%); }
+    .park-hero.sw::before { background: var(--sw-gradient); }
+    
+    .park-hero.ll { background: linear-gradient(135deg, rgba(227,0,15,0.2) 0%, rgba(0,166,81,0.2) 100%); }
+    .park-hero.ll::before { background: var(--ll-gradient); }
+    
     .park-hero-content {
       position: relative;
       z-index: 1;
@@ -517,6 +544,9 @@
     .park-hero.ak h2 { color: var(--ak-accent); }
     .park-hero.usf h2 { color: var(--usf-accent); }
     .park-hero.ioa h2 { color: var(--ioa-accent); }
+    .park-hero.eu h2 { color: var(--eu-accent); }
+    .park-hero.sw h2 { color: var(--sw-accent); }
+    .park-hero.ll h2 { color: var(--ll-secondary); }
     
     .park-hero .resort {
       font-size: 1rem;
@@ -793,6 +823,7 @@
     .park-card.ioa::before { background: var(--ioa-gradient); }
     .park-card.eu::before { background: var(--eu-gradient); }
     .park-card.sw::before { background: var(--sw-gradient); }
+    .park-card.ll::before { background: var(--ll-gradient); }
     
     .park-card-header {
       padding: var(--space-lg);
@@ -868,7 +899,7 @@
         
         <button class="toggle-btn" id="toggle-wheelchair" onclick="toggleFilter('wheelchair')">
           <span class="icon">♿</span>
-          <span>No Transfer</span>
+          <span>Wheelchair Accessible</span>
         </button>
         
         <button class="toggle-btn" id="toggle-sensory" onclick="toggleFilter('sensory')">
