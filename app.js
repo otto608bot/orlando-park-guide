@@ -1455,3 +1455,8 @@ function render() {
 
 // Start the app
 init();
+
+// Expose functions to global scope for HTML onclick handlers
+window.toggleFilter = toggleFilter;
+window.showParkDetail = showParkDetail;
+window.showLeaderboard = showLeaderboard;
