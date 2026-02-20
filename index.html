@@ -52,6 +52,18 @@
       --ioa-accent: #f5c211;
       --ioa-gradient: linear-gradient(135deg, #c01c28 0%, #e66100 50%, #1c71d8 100%);
       
+      /* Epic Universe (Cosmic/Nintendo/Monsters) */
+      --eu-primary: #613583;
+      --eu-secondary: #c01c28;
+      --eu-accent: #f5c211;
+      --eu-gradient: linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%);
+      
+      /* SeaWorld (Ocean) */
+      --sw-primary: #26a269;
+      --sw-secondary: #1c71d8;
+      --sw-accent: #e5a50a;
+      --sw-gradient: linear-gradient(135deg, #26a269 0%, #1c71d8 50%, #8f6e28 100%);
+      
       /* Neutral */
       --bg-dark: #0f0f1a;
       --bg-card: #1a1a2e;
@@ -717,6 +729,118 @@
         gap: var(--space-md);
       }
     }
+    
+    /* Parent Company Sections */
+    .parent-section {
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .parent-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-lg) var(--space-xl);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .parent-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0;
+    }
+    
+    .parent-count {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+    
+    .parks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    /* Park Cards */
+    .park-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .park-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    .park-card::before {
+      content: '';
+      display: block;
+      height: 4px;
+      background: var(--mk-gradient);
+    }
+    
+    .park-card.epcot::before { background: var(--epcot-gradient); }
+    .park-card.hs::before { background: var(--hs-gradient); }
+    .park-card.ak::before { background: var(--ak-gradient); }
+    .park-card.usf::before { background: var(--usf-gradient); }
+    .park-card.ioa::before { background: var(--ioa-gradient); }
+    .park-card.eu::before { background: var(--eu-gradient); }
+    .park-card.sw::before { background: var(--sw-gradient); }
+    
+    .park-card-header {
+      padding: var(--space-lg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .park-card-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    
+    .park-card-header .ride-count {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .park-preview {
+      padding: 0 var(--space-lg) var(--space-lg);
+    }
+    
+    .ride-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    
+    .ride-chip {
+      font-size: 0.75rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: var(--bg-elevated);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+    }
+    
+    .more-rides {
+      font-size: 0.75rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: transparent;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
@@ -734,6 +858,7 @@
           <div class="slider-container">
             <input type="range" id="height-slider" min="0" max="54" value="40" step="1">
           </div>
+          <span class="filter-label" style="font-size: 0.75rem; color: var(--text-muted); margin-left: var(--space-xs);">54+</span>
         </div>
         
         <button class="toggle-btn" id="toggle-pregnancy" onclick="toggleFilter('pregnancy')">

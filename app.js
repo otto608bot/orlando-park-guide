@@ -6,6 +6,7 @@ const rideData = [
     name: "Astro Orbiter",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -19,6 +20,7 @@ const rideData = [
     name: "The Barnstormer",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 35,
     pregnant: false,
     wheelchair: "TAV",
@@ -32,6 +34,7 @@ const rideData = [
     name: "Big Thunder Mountain Railroad",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -45,6 +48,7 @@ const rideData = [
     name: "Buzz Lightyear's Space Ranger Spin",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -58,6 +62,7 @@ const rideData = [
     name: "Country Bear Musical Jamboree",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -71,6 +76,7 @@ const rideData = [
     name: "Dumbo the Flying Elephant",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -84,6 +90,7 @@ const rideData = [
     name: "Enchanted Tales with Belle",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -97,6 +104,7 @@ const rideData = [
     name: "Haunted Mansion",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -110,6 +118,7 @@ const rideData = [
     name: "It's a Small World",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -123,6 +132,7 @@ const rideData = [
     name: "Jungle Cruise",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -136,6 +146,7 @@ const rideData = [
     name: "Liberty Square Riverboat",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -149,6 +160,7 @@ const rideData = [
     name: "Mad Tea Party",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -162,6 +174,7 @@ const rideData = [
     name: "The Magic Carpets of Aladdin",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -175,6 +188,7 @@ const rideData = [
     name: "The Many Adventures of Winnie the Pooh",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -188,6 +202,7 @@ const rideData = [
     name: "Mickey's PhilharMagic",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -201,6 +216,7 @@ const rideData = [
     name: "Peter Pan's Flight",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -214,6 +230,7 @@ const rideData = [
     name: "Pirates of the Caribbean",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -227,6 +244,7 @@ const rideData = [
     name: "Prince Charming Regal Carrousel",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -240,6 +258,7 @@ const rideData = [
     name: "Seven Dwarfs Mine Train",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 38,
     pregnant: false,
     wheelchair: "TAV",
@@ -253,6 +272,7 @@ const rideData = [
     name: "Space Mountain",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 44,
     pregnant: false,
     wheelchair: "TAV",
@@ -266,6 +286,7 @@ const rideData = [
     name: "Swiss Family Treehouse",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "NO",
@@ -279,6 +300,7 @@ const rideData = [
     name: "Tiana's Bayou Adventure",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -292,6 +314,7 @@ const rideData = [
     name: "Tomorrowland Speedway",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 32,
     pregnant: false,
     wheelchair: "TAV",
@@ -305,6 +328,7 @@ const rideData = [
     name: "Tomorrowland Transit Authority PeopleMover",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -318,6 +342,7 @@ const rideData = [
     name: "TRON Lightcycle / Run",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 48,
     pregnant: false,
     wheelchair: "TAV",
@@ -331,6 +356,7 @@ const rideData = [
     name: "Under the Sea ~ Journey of The Little Mermaid",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -344,6 +370,7 @@ const rideData = [
     name: "Walt Disney World Railroad",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -357,6 +384,7 @@ const rideData = [
     name: "Walt Disney's Carousel of Progress",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -372,6 +400,7 @@ const rideData = [
     name: "Disney and Pixar Short Film Festival",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -385,6 +414,7 @@ const rideData = [
     name: "Frozen Ever After",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -398,6 +428,7 @@ const rideData = [
     name: "Gran Fiesta Tour",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -411,6 +442,7 @@ const rideData = [
     name: "Guardians of the Galaxy: Cosmic Rewind",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 42,
     pregnant: false,
     wheelchair: "TAV",
@@ -424,6 +456,7 @@ const rideData = [
     name: "Journey into Imagination with Figment",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -437,6 +470,7 @@ const rideData = [
     name: "Living with the Land",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -450,6 +484,7 @@ const rideData = [
     name: "Mission: SPACE (Green)",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -463,6 +498,7 @@ const rideData = [
     name: "Mission: SPACE (Orange)",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 44,
     pregnant: false,
     wheelchair: "TAV",
@@ -476,6 +512,7 @@ const rideData = [
     name: "Remy's Ratatouille Adventure",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -489,6 +526,7 @@ const rideData = [
     name: "The Seas with Nemo & Friends",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -502,6 +540,7 @@ const rideData = [
     name: "Soarin' Around the World",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -515,6 +554,7 @@ const rideData = [
     name: "Spaceship Earth",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -528,6 +568,7 @@ const rideData = [
     name: "Test Track",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -541,6 +582,7 @@ const rideData = [
     name: "Turtle Talk with Crush",
     park: "EPCOT",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -556,6 +598,7 @@ const rideData = [
     name: "Alien Swirling Saucers",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 32,
     pregnant: false,
     wheelchair: "TAV",
@@ -569,6 +612,7 @@ const rideData = [
     name: "Mickey & Minnie's Runaway Railway",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -582,6 +626,7 @@ const rideData = [
     name: "Millennium Falcon: Smugglers Run",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 38,
     pregnant: false,
     wheelchair: "TAV",
@@ -595,6 +640,7 @@ const rideData = [
     name: "Rock 'n' Roller Coaster",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 48,
     pregnant: false,
     wheelchair: "TAV",
@@ -608,6 +654,7 @@ const rideData = [
     name: "Slinky Dog Dash",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 38,
     pregnant: false,
     wheelchair: "TAV",
@@ -621,6 +668,7 @@ const rideData = [
     name: "Star Tours",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -634,6 +682,7 @@ const rideData = [
     name: "Star Wars: Rise of the Resistance",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -647,6 +696,7 @@ const rideData = [
     name: "Toy Story Mania!",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -660,6 +710,7 @@ const rideData = [
     name: "The Twilight Zone Tower of Terror",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -673,6 +724,7 @@ const rideData = [
     name: "Muppet*Vision 3D",
     park: "Hollywood Studios",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -688,6 +740,7 @@ const rideData = [
     name: "Avatar Flight of Passage",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 44,
     pregnant: false,
     wheelchair: "TAV",
@@ -701,6 +754,7 @@ const rideData = [
     name: "DINOSAUR",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -714,6 +768,7 @@ const rideData = [
     name: "Expedition Everest",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 44,
     pregnant: false,
     wheelchair: "TAV",
@@ -727,6 +782,7 @@ const rideData = [
     name: "It's Tough to be a Bug!",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -740,6 +796,7 @@ const rideData = [
     name: "Kali River Rapids",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 38,
     pregnant: false,
     wheelchair: "TAV",
@@ -753,6 +810,7 @@ const rideData = [
     name: "Kilimanjaro Safaris",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -766,6 +824,7 @@ const rideData = [
     name: "Na'vi River Journey",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -779,6 +838,7 @@ const rideData = [
     name: "TriceraTop Spin",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -792,6 +852,7 @@ const rideData = [
     name: "Wildlife Express Train",
     park: "Animal Kingdom",
     resort: "Walt Disney World",
+    parent: "Disney",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -807,6 +868,7 @@ const rideData = [
     name: "Despicable Me Minion Mayhem",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -820,6 +882,7 @@ const rideData = [
     name: "E.T. Adventure",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 34,
     pregnant: true,
     wheelchair: "TAV",
@@ -833,6 +896,7 @@ const rideData = [
     name: "Fast & Furious",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -846,6 +910,7 @@ const rideData = [
     name: "Harry Potter: Escape from Gringotts",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 42,
     pregnant: false,
     wheelchair: "TAV",
@@ -859,6 +924,7 @@ const rideData = [
     name: "Hogwarts Express (King's Cross)",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -872,6 +938,7 @@ const rideData = [
     name: "Hollywood Rip Ride Rockit",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 51,
     pregnant: false,
     wheelchair: "TAV",
@@ -885,6 +952,7 @@ const rideData = [
     name: "MEN IN BLACK Alien Attack",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 42,
     pregnant: false,
     wheelchair: "TAV",
@@ -898,6 +966,7 @@ const rideData = [
     name: "Race Through New York",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -911,6 +980,7 @@ const rideData = [
     name: "Revenge of the Mummy",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 48,
     pregnant: false,
     wheelchair: "TAV",
@@ -924,6 +994,7 @@ const rideData = [
     name: "The Simpsons Ride",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -937,6 +1008,7 @@ const rideData = [
     name: "TRANSFORMERS: The Ride-3D",
     park: "Universal Studios Florida",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -952,6 +1024,7 @@ const rideData = [
     name: "The Cat in the Hat",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 36,
     pregnant: true,
     wheelchair: "TAV",
@@ -965,6 +1038,7 @@ const rideData = [
     name: "Doctor Doom's Fearfall",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 52,
     pregnant: false,
     wheelchair: "TAV",
@@ -978,6 +1052,7 @@ const rideData = [
     name: "Dudley Do-Right's Ripsaw Falls",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 44,
     pregnant: false,
     wheelchair: "TAV",
@@ -991,6 +1066,7 @@ const rideData = [
     name: "Hagrid's Magical Creatures",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 48,
     pregnant: false,
     wheelchair: "TAV",
@@ -1004,6 +1080,7 @@ const rideData = [
     name: "Harry Potter: Forbidden Journey",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 48,
     pregnant: false,
     wheelchair: "TAV",
@@ -1017,6 +1094,7 @@ const rideData = [
     name: "The High in the Sky Seuss Trolley",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 36,
     pregnant: true,
     wheelchair: "TAV",
@@ -1030,6 +1108,7 @@ const rideData = [
     name: "Hogwarts Express (Hogsmeade)",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 0,
     pregnant: true,
     wheelchair: "WAV",
@@ -1043,6 +1122,7 @@ const rideData = [
     name: "The Incredible Hulk Coaster",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 54,
     pregnant: false,
     wheelchair: "TAV",
@@ -1056,6 +1136,7 @@ const rideData = [
     name: "Jurassic Park River Adventure",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 42,
     pregnant: false,
     wheelchair: "TAV",
@@ -1069,6 +1150,7 @@ const rideData = [
     name: "Jurassic World VelociCoaster",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 51,
     pregnant: false,
     wheelchair: "TAV",
@@ -1082,6 +1164,7 @@ const rideData = [
     name: "One Fish, Two Fish",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -1095,6 +1178,7 @@ const rideData = [
     name: "Popeye & Bluto's Bilge-Rat Barges",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 42,
     pregnant: false,
     wheelchair: "TAV",
@@ -1108,6 +1192,7 @@ const rideData = [
     name: "Pteranodon Flyers",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 36,
     pregnant: false,
     wheelchair: "NO",
@@ -1121,6 +1206,7 @@ const rideData = [
     name: "Skull Island: Reign of Kong",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 36,
     pregnant: false,
     wheelchair: "TAV",
@@ -1134,6 +1220,7 @@ const rideData = [
     name: "The Amazing Adventures of Spider-Man",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 40,
     pregnant: false,
     wheelchair: "TAV",
@@ -1147,6 +1234,7 @@ const rideData = [
     name: "Storm Force Accelatron",
     park: "Islands of Adventure",
     resort: "Universal Orlando",
+    parent: "Universal",
     height: 0,
     pregnant: true,
     wheelchair: "TAV",
@@ -1154,6 +1242,262 @@ const rideData = [
     type: "Spinner",
     duration: "2 min",
     description: "A spinning ride with X-Men theming"
+  },
+
+  // EPIC UNIVERSE
+  {
+    id: "eu-stardust",
+    name: "Stardust Racers",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 48,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "Dueling launch coaster racing through the stars"
+  },
+  {
+    id: "eu-constellation",
+    name: "Constellation Carousel",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Carousel",
+    duration: "3 min",
+    description: "A celestial carousel with animal carriages that lift riders up to 6 feet"
+  },
+  {
+    id: "eu-battle-ministry",
+    name: "Harry Potter and the Battle at the Ministry",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 40,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: true, strobe: true },
+    type: "Dark Ride",
+    duration: "5 min",
+    description: "An omnidirectional ride through the Ministry of Magic"
+  },
+  {
+    id: "eu-monsters",
+    name: "Monsters Unchained: The Frankenstein Experiment",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 40,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: true, sudden: true, enclosed: true, strobe: true },
+    type: "Dark Ride",
+    duration: "5 min",
+    description: "A KUKA-arm dark ride through Frankenstein Manor"
+  },
+  {
+    id: "eu-werewolf",
+    name: "Curse of the Werewolf",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 48,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "3 min",
+    description: "A multi-launch spinning coaster themed to The Wolf Man"
+  },
+  {
+    id: "eu-mario-kart",
+    name: "Mario Kart: Bowser's Challenge",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 40,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Interactive Dark Ride",
+    duration: "5 min",
+    description: "An AR-enhanced Mario Kart race with virtual shells and coins"
+  },
+  {
+    id: "eu-mine-cart",
+    name: "Mine-Cart Madness",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 40,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "3 min",
+    description: "A Donkey Kong-themed coaster with false track illusions"
+  },
+  {
+    id: "eu-hiccup",
+    name: "Hiccup's Wing Gliders",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 36,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A family launched coaster through the Isle of Berk"
+  },
+  {
+    id: "eu-fyre-drill",
+    name: "Fyre Drill",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Interactive Boat Ride",
+    duration: "4 min",
+    description: "An interactive water battle with water cannons"
+  },
+  {
+    id: "eu-yoshi",
+    name: "Yoshi's Adventure",
+    park: "Epic Universe",
+    resort: "Universal Orlando",
+    parent: "Universal",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
+    type: "Omnimover",
+    duration: "4 min",
+    description: "A gentle omnimover ride through Super Nintendo World"
+  },
+
+  // SEAWORLD ORLANDO
+  {
+    id: "sw-mako",
+    name: "Mako",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 54,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "3 min",
+    description: "A hypercoaster themed to the fastest shark in the ocean"
+  },
+  {
+    id: "sw-kraken",
+    name: "Kraken",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 54,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A floorless coaster with multiple inversions"
+  },
+  {
+    id: "sw-manta",
+    name: "Manta",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 54,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A flying coaster that simulates swimming with rays"
+  },
+  {
+    id: "sw-pipeline",
+    name: "Pipeline: The Surf Coaster",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 54,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
+    type: "Coaster",
+    duration: "2 min",
+    description: "A stand-up coaster with surfing-inspired cars"
+  },
+  {
+    id: "sw-infinity",
+    name: "Infinity Falls",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 42,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: false, loud: true, fog: true, sudden: true, enclosed: false, strobe: false },
+    type: "River Rapids",
+    duration: "5 min",
+    description: "A river rapids ride with the world's tallest drop"
+  },
+  {
+    id: "sw-journey-atlantis",
+    name: "Journey to Atlantis",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 42,
+    pregnant: false,
+    wheelchair: "TAV",
+    sensory: { dark: true, loud: true, fog: true, sudden: true, enclosed: false, strobe: false },
+    type: "Water Coaster",
+    duration: "6 min",
+    description: "A water coaster through the lost city of Atlantis"
+  },
+  {
+    id: "sw-antarctica",
+    name: "Antarctica: Empire of the Penguin",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: true, loud: false, fog: true, sudden: true, enclosed: false, strobe: false },
+    type: "Trackless Dark Ride",
+    duration: "5 min",
+    description: "A trackless ride to the South Pole with live penguins"
+  },
+  {
+    id: "sw-sky-tower",
+    name: "Sky Tower",
+    park: "SeaWorld Orlando",
+    resort: "SeaWorld Parks",
+    parent: "SeaWorld",
+    height: 0,
+    pregnant: true,
+    wheelchair: "WAV",
+    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: true, strobe: false },
+    type: "Observation Tower",
+    duration: "10 min",
+    description: "A 400-foot observation tower with panoramic views"
   }
 ];
 
@@ -1169,49 +1513,85 @@ const state = {
   selectedPark: null
 };
 
+// Parent company configuration
+const parentConfig = {
+  'Disney': {
+    name: 'Walt Disney World',
+    color: '#1a5fb4',
+    accent: '#f5c211',
+    gradient: 'linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%)'
+  },
+  'Universal': {
+    name: 'Universal Orlando',
+    color: '#c01c28',
+    accent: '#f5c211',
+    gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 100%)'
+  },
+  'SeaWorld': {
+    name: 'SeaWorld Parks',
+    color: '#26a269',
+    accent: '#e5a50a',
+    gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 100%)'
+  }
+};
+
 // Park configuration with styling and metadata
 const parkConfig = {
   'Magic Kingdom': {
     id: 'mk',
     resort: 'Walt Disney World',
+    parent: 'Disney',
     gradient: 'linear-gradient(135deg, #1a5fb4 0%, #3584e4 50%, #c01c28 100%)',
-    accent: '#f5c211',
-    description: 'Where fairy tales come true'
+    accent: '#f5c211'
   },
   'EPCOT': {
     id: 'epcot',
     resort: 'Walt Disney World',
+    parent: 'Disney',
     gradient: 'linear-gradient(135deg, #613583 0%, #1c71d8 50%, #26a269 100%)',
-    accent: '#e5a50a',
-    description: 'Celebrate human achievement'
+    accent: '#e5a50a'
   },
   'Hollywood Studios': {
     id: 'hs',
     resort: 'Walt Disney World',
+    parent: 'Disney',
     gradient: 'linear-gradient(135deg, #a51d2d 0%, #e66100 50%, #b5835a 100%)',
-    accent: '#f5c211',
-    description: 'The magic of movies'
+    accent: '#f5c211'
   },
   'Animal Kingdom': {
     id: 'ak',
     resort: 'Walt Disney World',
+    parent: 'Disney',
     gradient: 'linear-gradient(135deg, #26a269 0%, #5e9624 50%, #8f6e28 100%)',
-    accent: '#e5a50a',
-    description: 'A celebration of nature'
+    accent: '#e5a50a'
   },
   'Universal Studios Florida': {
     id: 'usf',
     resort: 'Universal Orlando',
+    parent: 'Universal',
     gradient: 'linear-gradient(135deg, #1a1a2e 0%, #4a4a6a 50%, #e66100 100%)',
-    accent: '#f5c211',
-    description: 'Ride the movies'
+    accent: '#f5c211'
   },
   'Islands of Adventure': {
     id: 'ioa',
     resort: 'Universal Orlando',
+    parent: 'Universal',
     gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 50%, #1c71d8 100%)',
-    accent: '#f5c211',
-    description: 'Live the adventure'
+    accent: '#f5c211'
+  },
+  'Epic Universe': {
+    id: 'eu',
+    resort: 'Universal Orlando',
+    parent: 'Universal',
+    gradient: 'linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%)',
+    accent: '#f5c211'
+  },
+  'SeaWorld Orlando': {
+    id: 'sw',
+    resort: 'SeaWorld Parks',
+    parent: 'SeaWorld',
+    gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 50%, #8f6e28 100%)',
+    accent: '#e5a50a'
   }
 };
 
@@ -1249,9 +1629,10 @@ function setupEventListeners() {
 
 // Height change handler
 function handleHeightChange(e) {
-  state.filters.height = parseInt(e.target.value);
-  elements.heightValue.textContent = state.filters.height + '"';
-  elements.detailHeightLimit.textContent = state.filters.height + '"';
+  const value = parseInt(e.target.value);
+  state.filters.height = value;
+  elements.heightValue.textContent = value >= 54 ? '54+' : value + '"';
+  elements.detailHeightLimit.textContent = value >= 54 ? '54+' : value + '"';
   render();
 }
 
@@ -1293,8 +1674,8 @@ function showLeaderboard() {
 // Filter rides
 function getFilteredRides() {
   return rideData.filter(function(ride) {
-    // Height filter
-    if (ride.height > state.filters.height) return false;
+    // Height filter - if slider is at 54, show all rides (54+)
+    if (state.filters.height < 54 && ride.height > state.filters.height) return false;
     
     // Pregnancy filter
     if (state.filters.pregnancy && !ride.pregnant) return false;
@@ -1304,7 +1685,7 @@ function getFilteredRides() {
     
     // Sensory filter (no intense effects)
     if (state.filters.sensory) {
-      var s = ride.sensory;
+      const s = ride.sensory;
       if (s.dark || s.loud || s.fog || s.sudden || s.enclosed || s.strobe) {
         return false;
       }
@@ -1314,15 +1695,21 @@ function getFilteredRides() {
   });
 }
 
-// Group rides by park
-function groupByPark(rides) {
-  var groups = {};
+// Group rides by parent company, then by park
+function groupByParentAndPark(rides) {
+  const groups = {};
   
   rides.forEach(function(ride) {
-    if (!groups[ride.park]) {
-      groups[ride.park] = [];
+    const parent = ride.parent || 'Other';
+    const park = ride.park;
+    
+    if (!groups[parent]) {
+      groups[parent] = {};
     }
-    groups[ride.park].push(ride);
+    if (!groups[parent][park]) {
+      groups[parent][park] = [];
+    }
+    groups[parent][park].push(ride);
   });
   
   return groups;
@@ -1330,7 +1717,7 @@ function groupByPark(rides) {
 
 // Get sensory tags for display
 function getSensoryTags(sensory) {
-  var tags = [];
+  const tags = [];
   if (sensory.dark) tags.push({ label: 'Dark', class: 'tag-sensory-dark' });
   if (sensory.loud) tags.push({ label: 'Loud', class: 'tag-sensory-loud' });
   if (sensory.sudden) tags.push({ label: 'Sudden', class: 'tag-sensory-sudden' });
@@ -1341,50 +1728,70 @@ function getSensoryTags(sensory) {
 
 // Escape HTML to prevent XSS
 function escapeHtml(text) {
-  var div = document.createElement('div');
+  const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
 }
 
-// Render leaderboard
+// Render leaderboard grouped by parent company
 function renderLeaderboard() {
-  var filtered = getFilteredRides();
-  var grouped = groupByPark(filtered);
+  const filtered = getFilteredRides();
+  const grouped = groupByParentAndPark(filtered);
   
   // Update total count
   elements.totalCount.textContent = filtered.length;
   
-  // Sort parks by ride count (descending)
-  var sortedParks = Object.keys(grouped).sort(function(a, b) {
-    return grouped[b].length - grouped[a].length;
+  // Sort parents (Disney first, then Universal, then others)
+  const parentOrder = ['Disney', 'Universal', 'SeaWorld'];
+  const sortedParents = Object.keys(grouped).sort(function(a, b) {
+    const indexA = parentOrder.indexOf(a);
+    const indexB = parentOrder.indexOf(b);
+    if (indexA === -1 && indexB === -1) return a.localeCompare(b);
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
   });
   
-  // Render park cards
-  elements.leaderboard.innerHTML = sortedParks.map(function(parkName) {
-    var rides = grouped[parkName];
-    var config = parkConfig[parkName];
-    var previewRides = rides.slice(0, 4);
-    var remainingCount = rides.length - previewRides.length;
+  // Render grouped by parent
+  elements.leaderboard.innerHTML = sortedParents.map(function(parent) {
+    const parentData = parentConfig[parent] || { name: parent, gradient: 'linear-gradient(135deg, #666 0%, #999 100%)', accent: '#fff' };
+    const parks = grouped[parent];
+    
+    // Sort parks by ride count
+    const sortedParks = Object.keys(parks).sort(function(a, b) {
+      return parks[b].length - parks[a].length;
+    });
     
     return `
-      <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')">
-        <div class="park-card-header">
-          <div class="park-info">
-            <div class="park-resort">${escapeHtml(config.resort)}</div>
-            <h3>${escapeHtml(parkName)}</h3>
-          </div>
-          <div class="ride-count">
-            <div class="number">${rides.length}</div>
-            <div class="label">Rides</div>
-          </div>
+      <div class="parent-section">
+        <div class="parent-header" style="background: ${parentData.gradient}">
+          <h2 class="parent-name">${escapeHtml(parentData.name)}</h2>
+          <span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
         </div>
-        <div class="park-preview">
-          <div class="ride-chips">
-            ${previewRides.map(function(ride) {
-              return '<span class="ride-chip">' + escapeHtml(ride.name) + '</span>';
-            }).join('')}
-            ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
-          </div>
+        <div class="parks-grid">
+          ${sortedParks.map(function(parkName) {
+            const rides = parks[parkName];
+            const config = parkConfig[parkName];
+            const previewRides = rides.slice(0, 3);
+            const remainingCount = rides.length - previewRides.length;
+            
+            return `
+              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')">
+                <div class="park-card-header">
+                  <h3>${escapeHtml(parkName)}</h3>
+                  <span class="ride-count" style="color: ${config.accent}">${rides.length}</span>
+                </div>
+                <div class="park-preview">
+                  <div class="ride-chips">
+                    ${previewRides.map(function(ride) {
+                      return '<span class="ride-chip">' + escapeHtml(ride.name) + '</span>';
+                    }).join('')}
+                    ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
         </div>
       </div>
     `;
@@ -1393,16 +1800,16 @@ function renderLeaderboard() {
 
 // Render park detail
 function renderParkDetail(parkName) {
-  var config = parkConfig[parkName];
-  var filtered = getFilteredRides();
-  var parkRides = filtered.filter(function(ride) { return ride.park === parkName; });
+  const config = parkConfig[parkName];
+  const filtered = getFilteredRides();
+  const parkRides = filtered.filter(function(ride) { return ride.park === parkName; });
   
   // Update hero
   elements.parkHero.className = 'park-hero ' + config.id;
   elements.detailResort.textContent = config.resort;
   elements.detailParkName.textContent = parkName;
   elements.detailRideCount.textContent = parkRides.length;
-  elements.detailHeightLimit.textContent = state.filters.height + '"';
+  elements.detailHeightLimit.textContent = state.filters.height >= 54 ? '54+' : state.filters.height + '"';
   
   // Render ride cards
   if (parkRides.length === 0) {
@@ -1415,8 +1822,8 @@ function renderParkDetail(parkName) {
     `;
   } else {
     elements.rideGrid.innerHTML = parkRides.map(function(ride) {
-      var sensoryTags = getSensoryTags(ride.sensory);
-      var wheelchairText = ride.wheelchair === 'WAV' ? '♿ No Transfer' : 
+      const sensoryTags = getSensoryTags(ride.sensory);
+      const wheelchairText = ride.wheelchair === 'WAV' ? '♿ No Transfer' : 
                           ride.wheelchair === 'TAV' ? '♿ Transfer Required' : 
                           '♿ Not Accessible';
       
