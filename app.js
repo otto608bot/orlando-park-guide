@@ -1698,7 +1698,7 @@ const parentConfig = {
     gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 100%)'
   },
   'SeaWorld': {
-    name: 'SeaWorld Parks',
+    name: 'Other Parks',
     color: '#26a269',
     accent: '#e5a50a',
     gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 100%)'
@@ -1943,7 +1943,7 @@ function renderLeaderboard() {
       <div class="parent-section">
         <div class="parent-header" style="background: ${parentData.gradient}">
           <h2 class="parent-name">${escapeHtml(parentData.name)}</h2>
-          <span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
+          ${parent !== 'SeaWorld' ? `<span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>` : ''}
         </div>
         <div class="parks-grid">
           ${sortedParks.map(function(parkName) {
