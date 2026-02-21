@@ -1981,8 +1981,11 @@ function renderParkDetail(parkName) {
   const filtered = getFilteredRides();
   const parkRides = filtered.filter(function(ride) { return ride.park === parkName; });
   
-  // Update hero
+  // Update hero with image background
   elements.parkHero.className = 'park-hero ' + config.id;
+  elements.parkHero.style.backgroundImage = `url('${config.image}')`;
+  elements.parkHero.style.backgroundSize = 'cover';
+  elements.parkHero.style.backgroundPosition = 'center';
   elements.detailResort.textContent = config.resort;
   elements.detailParkName.textContent = parkName;
   elements.detailRideCount.textContent = parkRides.length;
