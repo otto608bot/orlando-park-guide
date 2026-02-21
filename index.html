@@ -279,6 +279,58 @@
       font-size: 1rem;
     }
     
+    /* Filter Toggle Button */
+    .filter-toggle {
+      display: none;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-full);
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .filter-toggle:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    @media (max-width: 1024px) {
+      .filter-toggle {
+        display: flex;
+      }
+      
+      .filter-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10,22,40,0.98);
+        padding: var(--space-lg);
+        flex-direction: column;
+        gap: var(--space-md);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .filter-bar.active {
+        display: flex;
+      }
+      
+      .filter-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      
+      .toggle-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
     /* Main Content */
     .main {
       max-width: 1400px;
@@ -979,14 +1031,16 @@
         <div class="logo-text">Orlando <span>Park Guide</span></div>
       </div>
       
-      <div class="filter-bar">
+      <button class="filter-toggle" id="filter-toggle" onclick="toggleFilterPanel()">
+        <span>🔍 Filters</span>
+      </button>
+      <div class="filter-bar" id="filter-bar">
         <div class="filter-group">
-          <span class="filter-label">Height</span>
-          <span class="height-display" id="height-value">54+</span>
+          <span class="filter-label">Min Height</span>
+          <span class="height-display" id="height-value">Any</span>
           <div class="slider-container">
-            <input type="range" id="height-slider" min="0" max="54" value="54" step="1">
+            <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
           </div>
-          <span class="filter-label" style="font-size: 0.75rem; color: var(--text-muted); margin-left: var(--space-xs);">54+</span>
         </div>
         
         <button class="toggle-btn" id="toggle-pregnancy" onclick="toggleFilter('pregnancy')">
@@ -996,12 +1050,12 @@
         
         <button class="toggle-btn" id="toggle-wheelchair" onclick="toggleFilter('wheelchair')">
           <span class="icon">♿</span>
-          <span>Wheelchair Accessible</span>
+          <span>Stay in Wheelchair</span>
         </button>
         
         <button class="toggle-btn" id="toggle-sensory" onclick="toggleFilter('sensory')">
           <span class="icon">🧘</span>
-          <span>Sensory Friendly</span>
+          <span>Calm Experience</span>
         </button>
       </div>
     </div>
@@ -1010,11 +1064,11 @@
   <main class="main">
     <!-- Leaderboard View -->
     <div id="leaderboard-view" class="hero">
-      <h1 class="hero-title">Find Your Perfect Ride</h1>
-      <p class="hero-subtitle">Filter by height, accessibility, and sensory preferences</p>
+      <h1 class="hero-title">Find Rides for Everyone</h1>
+      <p class="hero-subtitle">Filter Orlando theme parks by height, accessibility & sensory needs</p>
       
       <div class="total-counter">
-        <span class="label">Total Available Rides</span>
+        <span class="label">Available Rides</span>
         <span class="count" id="total-count">0</span>
       </div>
       
@@ -1039,7 +1093,7 @@
               <span class="stat-label">Rides Available</span>
             </div>
             <div class="stat">
-              <span class="stat-value" id="detail-height-limit">54+</span>
+              <span class="stat-value" id="detail-height-limit">Any</span>
               <span class="stat-label">Height Limit</span>
             </div>
           </div>

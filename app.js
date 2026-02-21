@@ -1674,7 +1674,7 @@ const rideData = [
 // State management
 const state = {
   filters: {
-    height: 54,
+    height: 0,
     pregnancy: false,
     wheelchair: false,
     sensory: false
@@ -1817,9 +1817,15 @@ function setupEventListeners() {
 function handleHeightChange(e) {
   const value = parseInt(e.target.value);
   state.filters.height = value;
-  elements.heightValue.textContent = value >= 54 ? '54+' : value + '"';
-  elements.detailHeightLimit.textContent = value >= 54 ? '54+' : value + '"';
+  elements.heightValue.textContent = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
+  elements.detailHeightLimit.textContent = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
   render();
+}
+
+// Toggle filter panel on mobile
+function toggleFilterPanel() {
+  const filterBar = document.getElementById('filter-bar');
+  filterBar.classList.toggle('active');
 }
 
 // Toggle filter handler
@@ -1860,8 +1866,9 @@ function showLeaderboard() {
 // Filter rides
 function getFilteredRides() {
   return rideData.filter(function(ride) {
-    // Height filter - if slider is at 54, show all rides (54+)
-    if (state.filters.height < 54 && ride.height > state.filters.height) return false;
+    // Height filter - if slider is at 0, show all rides (Any)
+    if (state.filters.height > 0 && state.filters.height < 54 && ride.height > state.filters.height) return false;
+    if (state.filters.height >= 54 && ride.height > 54) return false;
     
     // Pregnancy filter
     if (state.filters.pregnancy && !ride.pregnant) return false;
