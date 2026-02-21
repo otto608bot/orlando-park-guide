@@ -1950,7 +1950,7 @@ function renderLeaderboard() {
     
     return `
       <div class="parent-section">
-        <div class="parent-header" style="${parentData.image ? `background-image: url('${parentData.image}'); background-size: cover; background-position: center;` : `background: ${parentData.gradient}`}">
+        <div class="parent-header" style="${parentData.image ? `background-image: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%), url('${parentData.image}'); background-size: cover; background-position: center;` : `background: ${parentData.gradient}`}">
           <h2 class="parent-name">${escapeHtml(parentData.name)}</h2>
           ${parent !== 'SeaWorld' ? `<span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>` : ''}
         </div>
