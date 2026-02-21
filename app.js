@@ -1712,7 +1712,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1505995433366-e12047f3f144?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1368502/pexels-photo-1368502.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   },
   'EPCOT': {
@@ -1720,7 +1720,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1549488497-3b6aef9637ce?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
@@ -1728,7 +1728,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(165,29,45,0.1) 0%, rgba(165,29,45,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1596727147705-54a9d750e718?w=800&q=80',
+    image: 'https://images.pexels.com/photos/2087454/pexels-photo-2087454.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   },
   'Animal Kingdom': {
@@ -1736,7 +1736,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(38,162,105,0.1) 0%, rgba(38,162,105,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80',
+    image: 'https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#e5a50a'
   },
   'Universal Studios Florida': {
@@ -1744,7 +1744,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(26,26,46,0.2) 0%, rgba(26,26,46,0.98) 100%)',
-    image: 'https://images.unsplash.com/photo-1575089776834-8be34696ffb9?w=800&q=80',
+    image: 'https://images.pexels.com/photos/2087452/pexels-photo-2087452.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   },
   'Islands of Adventure': {
@@ -1752,7 +1752,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(192,28,40,0.1) 0%, rgba(192,28,40,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1368500/pexels-photo-1368500.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   },
   'Epic Universe': {
@@ -1760,7 +1760,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   },
   'SeaWorld Orlando': {
@@ -1768,7 +1768,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80',
+    image: 'https://images.pexels.com/photos/64219/dolphin-marine-mammals-water-sea-64219.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#e5a50a'
   },
   'LEGOLAND Florida': {
@@ -1776,7 +1776,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     gradient: 'linear-gradient(180deg, rgba(227,0,15,0.1) 0%, rgba(227,0,15,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1585366119957-f973043d4561?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1619652/pexels-photo-1619652.jpeg?auto=compress&cs=tinysrgb&w=800',
     accent: '#f5c211'
   }
 };
