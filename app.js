@@ -1674,7 +1674,7 @@ const rideData = [
 // State management
 const state = {
   filters: {
-    height: 40,
+    height: 54,
     pregnancy: false,
     wheelchair: false,
     sensory: false
@@ -1712,6 +1712,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'Magic Kingdom.webp',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
     accent: '#f5c211'
   },
   'EPCOT': {
@@ -1719,6 +1720,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'epcot.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
@@ -1726,6 +1728,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'Hollywood Studios.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(165,29,45,0.9) 100%)',
     accent: '#f5c211'
   },
   'Animal Kingdom': {
@@ -1733,6 +1736,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'animal kingdom.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(38,162,105,0.9) 100%)',
     accent: '#e5a50a'
   },
   'Universal Studios Florida': {
@@ -1740,6 +1744,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'universal studios florida.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,46,0.95) 100%)',
     accent: '#f5c211'
   },
   'Islands of Adventure': {
@@ -1747,6 +1752,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'islands of adventure.webp',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(192,28,40,0.9) 100%)',
     accent: '#f5c211'
   },
   'Epic Universe': {
@@ -1754,6 +1760,7 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'epic universe.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
     accent: '#f5c211'
   },
   'SeaWorld Orlando': {
@@ -1761,6 +1768,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     image: 'sea world.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
     accent: '#e5a50a'
   },
   'LEGOLAND Florida': {
@@ -1768,6 +1776,7 @@ const parkConfig = {
     resort: 'Other Parks',
     parent: 'SeaWorld',
     image: 'legoland.jpeg',
+    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(227,0,15,0.9) 100%)',
     accent: '#f5c211'
   }
 };
@@ -1953,10 +1962,10 @@ function renderLeaderboard() {
             const remainingCount = rides.length - previewRides.length;
             
             return `
-              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: url('${config.image}'); background-size: cover; background-position: center;">
+              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: ${config.gradient}, url('${config.image}'); background-size: 100% 100%, cover; background-position: center, center;">
                 <div class="park-card-header">
                   <h3>${escapeHtml(parkName)}</h3>
-                  <span class="ride-count" style="color: ${config.accent}">${rides.length}</span>
+                  <span class="ride-count">${rides.length} <span style="font-size: 0.5em; display: block; font-weight: 500;">rides</span></span>
                 </div>
                 <div class="park-preview">
                   <div class="ride-chips">
