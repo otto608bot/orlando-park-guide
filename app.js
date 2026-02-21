@@ -1689,13 +1689,13 @@ const parentConfig = {
     name: 'Walt Disney World',
     color: '#1a5fb4',
     accent: '#f5c211',
-    gradient: 'linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%)'
+    image: 'Disney World.webp'
   },
   'Universal': {
     name: 'Universal Orlando',
     color: '#c01c28',
     accent: '#f5c211',
-    gradient: 'linear-gradient(135deg, #c01c28 0%, #e66100 100%)'
+    image: 'Universal Studios.jpeg'
   },
   'SeaWorld': {
     name: 'Other Parks',
@@ -1941,7 +1941,7 @@ function renderLeaderboard() {
     
     return `
       <div class="parent-section">
-        <div class="parent-header" style="background: ${parentData.gradient}">
+        <div class="parent-header" style="${parentData.image ? `background-image: url('${parentData.image}'); background-size: cover; background-position: center;` : `background: ${parentData.gradient}`}">
           <h2 class="parent-name">${escapeHtml(parentData.name)}</h2>
           ${parent !== 'SeaWorld' ? `<span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>` : ''}
         </div>
