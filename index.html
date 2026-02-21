@@ -5,87 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orlando Park Guide - Find Your Perfect Ride</title>
   <meta name="description" content="Filter Orlando theme park rides by height, pregnancy safety, wheelchair accessibility, and sensory considerations.">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
+  
   <style>
     :root {
       /* Base */
       --font-display: 'Space Grotesk', sans-serif;
       --font-body: 'Inter', sans-serif;
-
+      
       /* Sunny Florida Vibes */
       --florida-sky: #4A90D9;
       --florida-sun: #FFB347;
       --florida-orange: #FF6B35;
       --florida-palm: #2D5016;
       --florida-sand: #F5E6D3;
-
+      
       /* Park Colors - Magic Kingdom (Fairytale/Castle) */
       --mk-primary: #1a5fb4;
       --mk-secondary: #c01c28;
       --mk-accent: #f5c211;
-      --mk-gradient: linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%);
-      --mk-image: url('https://picsum.photos/seed/mk/800/400');
-
+      --mk-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%);
+      --mk-image: url('https://images.unsplash.com/photo-1597466599360-3b9775841aec?w=800&q=80');
+      
       /* EPCOT (Futuristic/World) */
       --epcot-primary: #613583;
       --epcot-secondary: #1c71d8;
       --epcot-accent: #e5a50a;
-      --epcot-gradient: linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%);
-      --epcot-image: url('https://picsum.photos/seed/epcot/800/400');
-
+      --epcot-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%);
+      --epcot-image: url('https://images.unsplash.com/photo-1549488497-3b6aef9637ce?w=800&q=80');
+      
       /* Hollywood Studios (Golden Age/Art Deco) */
       --hs-primary: #a51d2d;
       --hs-secondary: #b5835a;
       --hs-accent: #f5c211;
-      --hs-gradient: linear-gradient(180deg, rgba(165,29,45,0.1) 0%, rgba(165,29,45,0.95) 100%);
-      --hs-image: url('https://picsum.photos/seed/hs/800/400');
-
+      --hs-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(165,29,45,0.9) 100%);
+      --hs-image: url('https://images.unsplash.com/photo-1596727147705-54a9d750e718?w=800&q=80');
+      
       /* Animal Kingdom (Nature/Earthy) */
       --ak-primary: #26a269;
       --ak-secondary: #8f6e28;
       --ak-accent: #e5a50a;
-      --ak-gradient: linear-gradient(180deg, rgba(38,162,105,0.1) 0%, rgba(38,162,105,0.95) 100%);
-      --ak-image: url('https://picsum.photos/seed/ak/800/400');
-
+      --ak-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(38,162,105,0.9) 100%);
+      --ak-image: url('https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80');
+      
       /* Universal Studios (Cinematic) */
       --usf-primary: #1a1a2e;
       --usf-secondary: #e66100;
       --usf-accent: #f5c211;
-      --usf-gradient: linear-gradient(180deg, rgba(26,26,46,0.2) 0%, rgba(26,26,46,0.98) 100%);
-      --usf-image: url('https://picsum.photos/seed/usf/800/400');
-
+      --usf-gradient: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,46,0.95) 100%);
+      --usf-image: url('https://images.unsplash.com/photo-1596727147705-54a9d750e718?w=800&q=80');
+      
       /* Islands of Adventure (Bold/Adventure) */
       --ioa-primary: #c01c28;
       --ioa-secondary: #1c71d8;
       --ioa-accent: #f5c211;
-      --ioa-gradient: linear-gradient(180deg, rgba(192,28,40,0.1) 0%, rgba(192,28,40,0.95) 100%);
-      --ioa-image: url('https://picsum.photos/seed/ioa/800/400');
-
+      --ioa-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(192,28,40,0.9) 100%);
+      --ioa-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80');
+      
       /* Epic Universe (Cosmic/Nintendo/Monsters) */
       --eu-primary: #613583;
       --eu-secondary: #c01c28;
       --eu-accent: #f5c211;
-      --eu-gradient: linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%);
-      --eu-image: url('https://picsum.photos/seed/eu/800/400');
-
+      --eu-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%);
+      --eu-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80');
+      
+      /* Epic Universe (Cosmic/Nintendo/Monsters) */
+      --eu-primary: #613583;
+      --eu-secondary: #c01c28;
+      --eu-accent: #f5c211;
+      --eu-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%);
+      --eu-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80');
+      
       /* SeaWorld (Ocean) */
       --sw-primary: #26a269;
       --sw-secondary: #1c71d8;
       --sw-accent: #e5a50a;
-      --sw-gradient: linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%);
-      --sw-image: url('https://picsum.photos/seed/sw/800/400');
-
+      --sw-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%);
+      --sw-image: url('https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80');
+      
       /* LEGOLAND (Bright/Playful) */
       --ll-primary: #e3000f;
       --ll-secondary: #f5c211;
       --ll-accent: #00a651;
-      --ll-gradient: linear-gradient(180deg, rgba(227,0,15,0.1) 0%, rgba(227,0,15,0.95) 100%);
-      --ll-image: url('https://picsum.photos/seed/ll/800/400');
-
+      --ll-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(227,0,15,0.9) 100%);
+      --ll-image: url('https://images.unsplash.com/photo-1585366119957-f973043d4561?w=800&q=80');
+      
       /* Neutral - Sunny Florida Theme */
       --bg-dark: #0a1628;
       --bg-card: rgba(255,255,255,0.05);
@@ -97,7 +104,7 @@
       --success: #26a269;
       --warning: #FFB347;
       --danger: #FF6B35;
-
+      
       /* Spacing */
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -107,7 +114,7 @@
       --space-2xl: 3rem;
       --space-3xl: 4rem;
       --space-4xl: 6rem;
-
+      
       /* Radius */
       --radius-sm: 8px;
       --radius-md: 12px;
@@ -115,17 +122,17 @@
       --radius-xl: 24px;
       --radius-full: 9999px;
     }
-
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     html {
       scroll-behavior: smooth;
     }
-
+    
     body {
       font-family: var(--font-body);
       background: linear-gradient(135deg, #1a3a5c 0%, #0a1628 50%, #1a3a5c 100%);
@@ -134,7 +141,7 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-
+    
     /* Header - Sunny Florida */
     .header {
       background: linear-gradient(180deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.8) 100%);
@@ -144,7 +151,7 @@
       top: 0;
       z-index: 100;
     }
-
+    
     .header-content {
       max-width: 1400px;
       margin: 0 auto;
@@ -154,13 +161,13 @@
       justify-content: space-between;
       gap: var(--space-lg);
     }
-
+    
     .logo {
       display: flex;
       align-items: center;
       gap: var(--space-sm);
     }
-
+    
     .logo-icon {
       width: 40px;
       height: 40px;
@@ -172,7 +179,7 @@
       font-size: 20px;
       box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
     }
-
+    
     .logo-text {
       font-family: var(--font-display);
       font-size: 1.25rem;
@@ -182,22 +189,26 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+    
     .logo-text span {
       background: linear-gradient(135deg, var(--florida-sun) 0%, var(--florida-orange) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
-    /* Filter Bar */
-    .filter-bar {
+    
+    /* Filters Row */
+    .filters-row {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--space-sm) var(--space-xl);
       display: flex;
       align-items: center;
       gap: var(--space-md);
       flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
-
+    
     .filter-group {
       display: flex;
       align-items: center;
@@ -208,13 +219,13 @@
       border: 1px solid rgba(255,255,255,0.15);
       backdrop-filter: blur(10px);
     }
-
+    
     .filter-label {
       font-size: 0.875rem;
       color: var(--text-secondary);
       font-weight: 500;
     }
-
+    
     .height-display {
       font-family: var(--font-display);
       font-size: 1.25rem;
@@ -223,11 +234,11 @@
       min-width: 50px;
       text-align: center;
     }
-
+    
     .slider-container {
       width: 120px;
     }
-
+    
     input[type="range"] {
       -webkit-appearance: none;
       width: 100%;
@@ -236,7 +247,7 @@
       border-radius: var(--radius-full);
       outline: none;
     }
-
+    
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 18px;
@@ -246,7 +257,7 @@
       cursor: pointer;
       box-shadow: 0 2px 8px rgba(255, 179, 71, 0.5);
     }
-
+    
     .toggle-btn {
       display: flex;
       align-items: center;
@@ -261,129 +272,38 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-
+    
     .toggle-btn:hover {
       background: rgba(255,255,255,0.15);
       color: var(--text-primary);
       border-color: rgba(255,255,255,0.25);
     }
-
+    
     .toggle-btn.active {
       background: linear-gradient(135deg, var(--florida-sun) 0%, var(--florida-orange) 100%);
       border-color: transparent;
       color: white;
       box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     }
-
+    
     .toggle-btn .icon {
       font-size: 1rem;
     }
-
-    .filter-bar {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-    }
-
-    .height-filter {
-      margin-right: auto;
-    }
-
-    /* Filter Toggle Button */
-    .filter-toggle {
-      display: none;
-      align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-sm) var(--space-md);
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-full);
-      color: white;
-      font-size: 0.875rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .filter-toggle:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    /* Filter Close Button */
-    .filter-close {
-      display: none;
-      position: absolute;
-      top: var(--space-md);
-      right: var(--space-md);
-      width: 32px;
-      height: 32px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .filter-close:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    @media (max-width: 1024px) {
-      .filter-toggle {
-        display: flex;
-      }
-
-      .filter-close {
-        display: flex;
-      }
-
-      .height-filter {
-        order: -1;
-        margin-right: 0;
-      }
-
-      .filter-bar {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10,22,40,0.98);
-        padding: var(--space-3xl) var(--space-lg) var(--space-lg);
-        flex-direction: column;
-        gap: var(--space-md);
-        z-index: 200;
-        overflow-y: auto;
-      }
-
-      .filter-bar.active {
-        display: flex;
-      }
-
-      .toggle-btn {
-        width: 100%;
-        justify-content: center;
-        padding: var(--space-md);
-      }
-    }
-
+    
     /* Main Content */
     .main {
       max-width: 1400px;
       margin: 0 auto;
       padding: var(--space-xl) var(--space-xl);
     }
-
+    
     /* Hero / Leaderboard Section - Sunny Florida */
     .hero {
       text-align: center;
       margin-bottom: var(--space-2xl);
       padding: var(--space-lg) 0;
     }
-
+    
     .hero-title {
       font-family: var(--font-display);
       font-size: 2.5rem;
@@ -395,14 +315,14 @@
       background-clip: text;
       text-shadow: none;
     }
-
+    
     .hero-subtitle {
       font-size: 1.125rem;
       color: var(--text-secondary);
       margin-bottom: var(--space-lg);
       font-weight: 400;
     }
-
+    
     .total-counter {
       display: inline-flex;
       align-items: center;
@@ -415,7 +335,7 @@
       margin-bottom: var(--space-lg);
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     }
-
+    
     .total-counter .label {
       font-size: 0.75rem;
       color: var(--text-secondary);
@@ -423,14 +343,14 @@
       letter-spacing: 0.1em;
       font-weight: 500;
     }
-
+    
     .total-counter .count {
       font-family: var(--font-display);
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--florida-sun);
     }
-
+    
     /* Leaderboard Grid */
     .leaderboard {
       display: grid;
@@ -438,7 +358,7 @@
       gap: var(--space-lg);
       margin-top: var(--space-2xl);
     }
-
+    
     /* Park Cards with Image Backgrounds */
     .park-card {
       background: transparent;
@@ -452,13 +372,13 @@
       display: flex;
       flex-direction: column;
     }
-
+    
     .park-card:hover {
       transform: translateY(-4px) scale(1.02);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
       border-color: rgba(255,255,255,0.2);
     }
-
+    
     .park-card::before {
       content: '';
       position: absolute;
@@ -470,7 +390,7 @@
       background-position: center;
       z-index: 0;
     }
-
+    
     .park-card::after {
       content: '';
       position: absolute;
@@ -480,31 +400,31 @@
       bottom: 0;
       z-index: 1;
     }
-
+    
     .park-card.mk::before { background-image: var(--mk-image); }
     .park-card.mk::after { background: var(--mk-gradient); }
-
+    
     .park-card.epcot::before { background-image: var(--epcot-image); }
     .park-card.epcot::after { background: var(--epcot-gradient); }
-
+    
     .park-card.hs::before { background-image: var(--hs-image); }
     .park-card.hs::after { background: var(--hs-gradient); }
-
+    
     .park-card.ak::before { background-image: var(--ak-image); }
     .park-card.ak::after { background: var(--ak-gradient); }
-
+    
     .park-card.usf::before { background-image: var(--usf-image); }
     .park-card.usf::after { background: var(--usf-gradient); }
-
+    
     .park-card.ioa::before { background-image: var(--ioa-image); }
     .park-card.ioa::after { background: var(--ioa-gradient); }
-
+    
     .park-card.sw::before { background-image: var(--sw-image); }
     .park-card.sw::after { background: var(--sw-gradient); }
-
+    
     .park-card.ll::before { background-image: var(--ll-image); }
     .park-card.ll::after { background: var(--ll-gradient); }
-
+    
     .park-card-header {
       padding: var(--space-xl);
       display: flex;
@@ -515,7 +435,7 @@
       z-index: 2;
       margin-top: auto;
     }
-
+    
     .park-info h3 {
       font-family: var(--font-display);
       font-size: 1.75rem;
@@ -524,7 +444,7 @@
       color: white;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-
+    
     .park-resort {
       font-size: 0.875rem;
       color: rgba(255,255,255,0.8);
@@ -532,11 +452,11 @@
       letter-spacing: 0.1em;
       font-weight: 500;
     }
-
+    
     .ride-count {
       text-align: right;
     }
-
+    
     .ride-count .number {
       font-family: var(--font-display);
       font-size: 3.5rem;
@@ -545,26 +465,26 @@
       color: white;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
+    
     .ride-count .label {
       font-size: 0.75rem;
       color: rgba(255,255,255,0.7);
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-
+    
     .park-preview {
       padding: 0 var(--space-xl) var(--space-xl);
       position: relative;
       z-index: 2;
     }
-
+    
     .ride-chips {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-xs);
     }
-
+    
     .ride-chip {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
@@ -578,7 +498,7 @@
       max-width: 150px;
       border: 1px solid rgba(255,255,255,0.1);
     }
-
+    
     .more-rides {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
@@ -587,22 +507,22 @@
       border-radius: var(--radius-sm);
       color: rgba(255,255,255,0.7);
     }
-
+    
     /* Park Detail View */
     .park-detail {
       display: none;
       animation: fadeIn 0.3s ease;
     }
-
+    
     .park-detail.active {
       display: block;
     }
-
+    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+    
     .back-btn {
       display: inline-flex;
       align-items: center;
@@ -617,12 +537,12 @@
       margin-bottom: var(--space-xl);
       transition: all 0.2s ease;
     }
-
+    
     .back-btn:hover {
       background: var(--bg-elevated);
       color: var(--text-primary);
     }
-
+    
     .park-hero {
       padding: var(--space-3xl);
       border-radius: var(--radius-xl);
@@ -630,97 +550,93 @@
       position: relative;
       overflow: hidden;
     }
-
+    
     .park-hero::before {
       content: '';
       position: absolute;
       inset: 0;
       opacity: 0.1;
     }
-
+    
     .park-hero.mk { background: linear-gradient(135deg, rgba(26,95,180,0.3) 0%, rgba(192,28,40,0.3) 100%); }
     .park-hero.mk::before { background: var(--mk-gradient); }
-
+    
     .park-hero.epcot { background: linear-gradient(135deg, rgba(97,53,131,0.3) 0%, rgba(38,162,105,0.3) 100%); }
     .park-hero.epcot::before { background: var(--epcot-gradient); }
-
+    
     .park-hero.hs { background: linear-gradient(135deg, rgba(165,29,45,0.3) 0%, rgba(181,131,90,0.3) 100%); }
     .park-hero.hs::before { background: var(--hs-gradient); }
-
+    
     .park-hero.ak { background: linear-gradient(135deg, rgba(38,162,105,0.3) 0%, rgba(143,110,40,0.3) 100%); }
     .park-hero.ak::before { background: var(--ak-gradient); }
-
+    
     .park-hero.usf { background: linear-gradient(135deg, rgba(26,26,46,0.5) 0%, rgba(230,97,0,0.3) 100%); }
     .park-hero.usf::before { background: var(--usf-gradient); }
-
+    
     .park-hero.ioa { background: linear-gradient(135deg, rgba(192,28,40,0.3) 0%, rgba(28,113,216,0.3) 100%); }
     .park-hero.ioa::before { background: var(--ioa-gradient); }
-
-    .park-hero.eu { background: linear-gradient(135deg, rgba(97,53,131,0.3) 0%, rgba(192,28,40,0.3) 50%, rgba(245,194,17,0.2) 100%); }
-    .park-hero.eu::before { background: var(--eu-gradient); }
-
+    
     .park-hero.sw { background: linear-gradient(135deg, rgba(38,162,105,0.3) 0%, rgba(28,113,216,0.3) 100%); }
     .park-hero.sw::before { background: var(--sw-gradient); }
-
+    
     .park-hero.ll { background: linear-gradient(135deg, rgba(227,0,15,0.2) 0%, rgba(0,166,81,0.2) 100%); }
     .park-hero.ll::before { background: var(--ll-gradient); }
-
+    
     .park-hero-content {
       position: relative;
       z-index: 1;
     }
-
+    
     .park-hero h2 {
       font-family: var(--font-display);
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: var(--space-sm);
     }
-
+    
     .park-hero.mk h2 { color: var(--mk-accent); }
     .park-hero.epcot h2 { color: var(--epcot-accent); }
     .park-hero.hs h2 { color: var(--hs-accent); }
     .park-hero.ak h2 { color: var(--ak-accent); }
     .park-hero.usf h2 { color: var(--usf-accent); }
     .park-hero.ioa h2 { color: var(--ioa-accent); }
-    .park-hero.eu h2 { color: var(--eu-accent); }
     .park-hero.sw h2 { color: var(--sw-accent); }
     .park-hero.ll h2 { color: var(--ll-secondary); }
-
+    
     .park-hero .resort {
       font-size: 1rem;
       color: var(--text-secondary);
       margin-bottom: var(--space-lg);
     }
-
+    
     .stats-row {
       display: flex;
       gap: var(--space-xl);
     }
-
+    
     .stat {
       display: flex;
       flex-direction: column;
     }
-
+    
     .stat-value {
       font-family: var(--font-display);
       font-size: 2.5rem;
       font-weight: 700;
     }
-
+    
     .stat-label {
       font-size: 0.875rem;
       color: var(--text-muted);
     }
-
+    
     /* Ride Grid */
     .ride-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: var(--space-lg);
     }
-
+    
     .ride-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -728,26 +644,26 @@
       padding: var(--space-lg);
       transition: all 0.2s ease;
     }
-
+    
     .ride-card:hover {
       border-color: var(--text-muted);
       transform: translateY(-2px);
     }
-
+    
     .ride-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: var(--space-sm);
     }
-
+    
     .ride-name {
       font-family: var(--font-display);
       font-size: 1.125rem;
       font-weight: 600;
       color: var(--text-primary);
     }
-
+    
     .ride-type {
       font-size: 0.75rem;
       color: var(--text-muted);
@@ -755,21 +671,21 @@
       padding: var(--space-xs) var(--space-sm);
       border-radius: var(--radius-sm);
     }
-
+    
     .ride-description {
       font-size: 0.875rem;
       color: var(--text-secondary);
       margin-bottom: var(--space-md);
       line-height: 1.5;
     }
-
+    
     .ride-meta {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-sm);
       margin-bottom: var(--space-md);
     }
-
+    
     .meta-item {
       display: flex;
       align-items: center;
@@ -777,211 +693,202 @@
       font-size: 0.75rem;
       color: var(--text-muted);
     }
-
+    
     .ride-tags {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-xs);
     }
-
+    
     .tag {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
       border-radius: var(--radius-full);
       font-weight: 500;
     }
-
+    
     .tag-height {
       background: rgba(245, 194, 17, 0.15);
       color: #f5c211;
     }
-
+    
     .tag-pregnancy {
       background: rgba(38, 162, 105, 0.15);
       color: #26a269;
     }
-
+    
     .tag-wheelchair {
       background: rgba(28, 113, 216, 0.15);
       color: #1c71d8;
     }
-
+    
     .tag-sensory-dark {
       background: rgba(97, 53, 131, 0.15);
       color: #c061cb;
     }
-
+    
     .tag-sensory-loud {
       background: rgba(192, 28, 40, 0.15);
       color: #f66151;
     }
-
+    
     .tag-sensory-sudden {
       background: rgba(230, 97, 0, 0.15);
       color: #ff7800;
     }
-
+    
     .tag-sensory-enclosed {
       background: rgba(26, 26, 46, 0.5);
       color: #a0a0b0;
       border: 1px solid var(--border);
     }
-
+    
     .tag-sensory-strobe {
       background: rgba(245, 194, 17, 0.15);
       color: #f5c211;
     }
-
+    
     /* Empty State */
     .empty-state {
       text-align: center;
       padding: var(--space-4xl);
       color: var(--text-secondary);
     }
-
+    
     .empty-state-icon {
       font-size: 4rem;
       margin-bottom: var(--space-lg);
       opacity: 0.5;
     }
-
+    
     .empty-state h3 {
       font-family: var(--font-display);
       font-size: 1.5rem;
       margin-bottom: var(--space-sm);
       color: var(--text-primary);
     }
-
+    
     /* Responsive */
     @media (max-width: 1024px) {
       .header {
         position: relative;
       }
-
+      
       .header-content {
         flex-direction: column;
         align-items: stretch;
         gap: var(--space-md);
       }
-
-      .filter-bar {
-        justify-content: center;
-        flex-wrap: wrap;
+      
+      .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-sm);
       }
-
+      
+      .filter-group,
+      .toggle-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
       .hero-title {
         font-size: 2.5rem;
       }
-
+      
       .leaderboard {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
-
+      
       .ride-grid {
         grid-template-columns: 1fr;
       }
     }
-
+    
     @media (max-width: 640px) {
-      .header {
-        position: relative;
-      }
-
       .header-content {
         padding: var(--space-md) var(--space-lg);
-        gap: var(--space-md);
       }
-
-      .filter-bar {
-        gap: var(--space-sm);
+      
+      .filters-row {
+        padding: var(--space-sm) var(--space-lg);
       }
-
-      .filter-group {
-        padding: var(--space-xs) var(--space-sm);
-      }
-
-      .toggle-btn {
-        padding: var(--space-xs) var(--space-sm);
-        font-size: 0.8rem;
-      }
-
+      
       .main {
         padding: var(--space-lg);
       }
-
+      
       .hero {
         padding: var(--space-xl) 0;
       }
-
+      
       .hero-title {
         font-size: 1.75rem;
       }
-
+      
       .hero-subtitle {
         font-size: 1rem;
       }
-
+      
       .park-hero {
         padding: var(--space-xl);
       }
-
+      
       .park-hero h2 {
         font-size: 1.75rem;
       }
-
+      
       .stats-row {
         flex-direction: column;
         gap: var(--space-md);
       }
-
+      
       .parent-name {
         font-size: 1.25rem;
       }
-
+      
       .parent-header {
         padding: var(--space-md) var(--space-lg);
       }
     }
-
+    
     /* Parent Company Sections - Sunny Florida Style */
     .parent-section {
-      margin-bottom: var(--space-3xl);
+      margin-bottom: var(--space-2xl);
     }
-
+    
     .parent-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: var(--space-xl) var(--space-2xl);
-      border-radius: var(--radius-xl);
-      margin-bottom: var(--space-xl);
-      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-lg);
+      min-height: 60px;
     }
-
+    
     .parent-name {
       font-family: var(--font-display);
-      font-size: 1.75rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: white;
       margin: 0;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
-
+    
     .parent-count {
-      font-size: 1.125rem;
+      font-size: 1rem;
       color: var(--florida-sun);
       font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
-
+    
     .parks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: var(--space-xl);
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-lg);
     }
-
+    
     /* Park Cards */
     .park-card {
       background: var(--bg-card);
@@ -991,19 +898,19 @@
       transition: all 0.3s ease;
       cursor: pointer;
     }
-
+    
     .park-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     }
-
+    
     .park-card-header {
       padding: var(--space-lg);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
+    
     .park-card-header h3 {
       font-family: var(--font-display);
       font-size: 1.25rem;
@@ -1011,23 +918,23 @@
       color: var(--text-primary);
       margin: 0;
     }
-
+    
     .park-card-header .ride-count {
       font-family: var(--font-display);
       font-size: 2rem;
       font-weight: 700;
     }
-
+    
     .park-preview {
       padding: 0 var(--space-lg) var(--space-lg);
     }
-
+    
     .ride-chips {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-xs);
     }
-
+    
     .ride-chip {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
@@ -1035,7 +942,7 @@
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
     }
-
+    
     .more-rides {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
@@ -1053,8 +960,10 @@
         <div class="logo-icon">🎢</div>
         <div class="logo-text">Orlando <span>Park Guide</span></div>
       </div>
-
-      <!-- Height filter always visible -->
+    </div>
+    
+    <!-- Filters row -->
+    <div class="filters-row">
       <div class="filter-group height-filter">
         <span class="filter-label">Height</span>
         <span class="height-display" id="height-value">Any</span>
@@ -1062,28 +971,21 @@
           <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
         </div>
       </div>
-
-      <!-- Other filters toggle on mobile -->
-      <button class="filter-toggle" id="filter-toggle" onclick="toggleFilterPanel()">
-        <span>🔍 More Filters</span>
+      
+      <button class="toggle-btn" id="toggle-pregnancy" onclick="toggleFilter('pregnancy')">
+        <span class="icon">🤰</span>
+        <span>Pregnancy Safe</span>
       </button>
-      <div class="filter-bar" id="filter-bar">
-        <button class="filter-close" onclick="toggleFilterPanel()">✕</button>
-        <button class="toggle-btn" id="toggle-pregnancy" onclick="toggleFilter('pregnancy')">
-          <span class="icon">🤰</span>
-          <span>Pregnancy Safe</span>
-        </button>
-
-        <button class="toggle-btn" id="toggle-wheelchair" onclick="toggleFilter('wheelchair')">
-          <span class="icon">♿</span>
-          <span>Stay in Wheelchair</span>
-        </button>
-
-        <button class="toggle-btn" id="toggle-sensory" onclick="toggleFilter('sensory')">
-          <span class="icon">🧘</span>
-          <span>Calm Experience</span>
-        </button>
-      </div>
+      
+      <button class="toggle-btn" id="toggle-wheelchair" onclick="toggleFilter('wheelchair')">
+        <span class="icon">♿</span>
+        <span>Stay in Wheelchair</span>
+      </button>
+      
+      <button class="toggle-btn" id="toggle-sensory" onclick="toggleFilter('sensory')">
+        <span class="icon">🧘</span>
+        <span>Calm Experience</span>
+      </button>
     </div>
   </header>
 
@@ -1092,23 +994,23 @@
     <div id="leaderboard-view" class="hero">
       <h1 class="hero-title">Find Rides for Everyone</h1>
       <p class="hero-subtitle">Filter Orlando theme parks by height, accessibility & sensory needs</p>
-
+      
       <div class="total-counter">
         <span class="label">Available Rides</span>
         <span class="count" id="total-count">0</span>
       </div>
-
+      
       <div class="leaderboard" id="leaderboard">
         <!-- Park cards injected here -->
       </div>
     </div>
-
+    
     <!-- Park Detail View -->
     <div id="park-detail-view" class="park-detail">
       <button class="back-btn" onclick="showLeaderboard()">
         ← Back to Parks
       </button>
-
+      
       <div class="park-hero" id="park-hero">
         <div class="park-hero-content">
           <div class="resort" id="detail-resort"></div>
@@ -1125,13 +1027,13 @@
           </div>
         </div>
       </div>
-
+      
       <div class="ride-grid" id="ride-grid">
         <!-- Ride cards injected here -->
       </div>
     </div>
   </main>
-
+  
   <script src="app.js?v=3"></script>
 </body>
 </html>
