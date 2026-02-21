@@ -1712,7 +1712,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(26,95,180,0.1) 0%, rgba(26,95,180,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1546706878-91e9ce9229c3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1505995433366-e12047f3f144?w=800&q=80',
     accent: '#f5c211'
   },
   'EPCOT': {
@@ -1720,7 +1720,7 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     gradient: 'linear-gradient(180deg, rgba(97,53,131,0.1) 0%, rgba(97,53,131,0.95) 100%)',
-    image: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1549488497-3b6aef9637ce?w=800&q=80',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
