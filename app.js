@@ -1711,63 +1711,63 @@ const parkConfig = {
     id: 'mk',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #1a5fb4 0%, #c01c28 100%)',
+    image: 'Magic Kingdom.webp',
     accent: '#f5c211'
   },
   'EPCOT': {
     id: 'epcot',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #613583 0%, #26a269 100%)',
+    image: 'epcot.jpeg',
     accent: '#e5a50a'
   },
   'Hollywood Studios': {
     id: 'hs',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #a51d2d 0%, #b5835a 100%)',
+    image: 'Hollywood Studios.jpeg',
     accent: '#f5c211'
   },
   'Animal Kingdom': {
     id: 'ak',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    gradient: 'linear-gradient(135deg, #26a269 0%, #8f6e28 100%)',
+    image: 'animal kingdom.jpeg',
     accent: '#e5a50a'
   },
   'Universal Studios Florida': {
     id: 'usf',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #e66100 100%)',
+    image: 'universal studios florida.jpeg',
     accent: '#f5c211'
   },
   'Islands of Adventure': {
     id: 'ioa',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #c01c28 0%, #1c71d8 100%)',
+    image: 'islands of adventure.webp',
     accent: '#f5c211'
   },
   'Epic Universe': {
     id: 'eu',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    gradient: 'linear-gradient(135deg, #613583 0%, #c01c28 50%, #f5c211 100%)',
+    image: 'epic universe.jpeg',
     accent: '#f5c211'
   },
   'SeaWorld Orlando': {
     id: 'sw',
     resort: 'Other Parks',
     parent: 'SeaWorld',
-    gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 100%)',
+    image: 'sea world.jpeg',
     accent: '#e5a50a'
   },
   'LEGOLAND Florida': {
     id: 'll',
     resort: 'Other Parks',
     parent: 'SeaWorld',
-    gradient: 'linear-gradient(135deg, #e3000f 0%, #f5c211 50%, #00a651 100%)',
+    image: 'legoland.jpeg',
     accent: '#f5c211'
   }
 };
@@ -1953,7 +1953,7 @@ function renderLeaderboard() {
             const remainingCount = rides.length - previewRides.length;
             
             return `
-              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background: ${config.gradient}">
+              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: url('${config.image}'); background-size: cover; background-position: center;">
                 <div class="park-card-header">
                   <h3>${escapeHtml(parkName)}</h3>
                   <span class="ride-count" style="color: ${config.accent}">${rides.length}</span>
