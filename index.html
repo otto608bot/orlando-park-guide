@@ -345,6 +345,11 @@
       color: var(--florida-sun);
     }
     
+    .total-counter .count.total {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+    }
+    
     /* Leaderboard Grid */
     .leaderboard {
       display: grid;
@@ -990,8 +995,10 @@
       <p class="hero-subtitle">Plan your perfect day at Disney World, Universal, SeaWorld & LEGOLAND</p>
       
       <div class="total-counter">
-        <span class="label">Available Rides</span>
-        <span class="count" id="total-count">0</span>
+        <span class="label">Rides</span>
+        <span class="count" id="filtered-count">0</span>
+        <span class="label">of</span>
+        <span class="count total" id="total-count">0</span>
       </div>
       
       <div class="leaderboard" id="leaderboard">

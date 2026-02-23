@@ -1785,6 +1785,7 @@ const parkConfig = {
 const elements = {
   heightSlider: document.getElementById('height-slider'),
   heightValue: document.getElementById('height-value'),
+  filteredCount: document.getElementById('filtered-count'),
   totalCount: document.getElementById('total-count'),
   leaderboard: document.getElementById('leaderboard'),
   leaderboardView: document.getElementById('leaderboard-view'),
@@ -1931,8 +1932,9 @@ function renderLeaderboard() {
   const filtered = getFilteredRides();
   const grouped = groupByParentAndPark(filtered);
   
-  // Update total count
-  elements.totalCount.textContent = filtered.length;
+  // Update filtered count and total count
+  elements.filteredCount.textContent = filtered.length;
+  elements.totalCount.textContent = rideData.length;
   
   // Sort parents (Disney first, then Universal, then others)
   const parentOrder = ['Disney', 'Universal', 'SeaWorld'];
