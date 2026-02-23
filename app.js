@@ -1993,11 +1993,11 @@ function renderLeaderboard() {
   }).join('');
 }
 
-// Render park detail
+// Render park detail with all rides showing unavailable ones
 function renderParkDetail(parkName) {
   const config = parkConfig[parkName];
-  const filtered = getFilteredRides();
-  const parkRides = filtered.filter(function(ride) { return ride.park === parkName; });
+  const allRides = rideData.filter(function(ride) { return ride.park === parkName; });
+  const filteredRides = getFilteredRides().filter(function(ride) { return ride.park === parkName; });
   
   // Update hero with image background
   elements.parkHero.className = 'park-hero ' + config.id;
@@ -2006,47 +2006,58 @@ function renderParkDetail(parkName) {
   elements.parkHero.style.backgroundPosition = 'center';
   elements.detailResort.textContent = config.resort;
   elements.detailParkName.textContent = parkName;
-  elements.detailRideCount.textContent = parkRides.length;
-  elements.detailHeightLimit.textContent = state.filters.height >= 54 ? '54+' : state.filters.height + '"';
+  elements.detailRideCount.textContent = filteredRides.length + ' of ' + allRides.length;
+  elements.detailHeightLimit.textContent = state.filters.height === 0 ? 'Any' : state.filters.height >= 54 ? '54+' : state.filters.height + '"';
   
-  // Render ride cards
-  if (parkRides.length === 0) {
-    elements.rideGrid.innerHTML = `
-      <div class="empty-state" style="grid-column: 1 / -1;">
-        <div class="empty-state-icon">🔍</div>
-        <h3>No rides match your filters</h3>
-        <p>Try adjusting your height requirement or turning off some filters.</p>
+  // Render all ride cards with unavailable ones marked
+  elements.rideGrid.innerHTML = allRides.map(function(ride) {
+    const isAvailable = filteredRides.some(function(r) { return r.id === ride.id; });
+    const sensoryTags = getSensoryTags(ride.sensory);
+    const wheelchairText = ride.wheelchair === 'WAV' ? '♿ Stay in Wheelchair' : 
+                        ride.wheelchair === 'TAV' ? '♿ Transfer Required' : 
+                        '♿ Not Accessible';
+    
+    // Determine why ride is unavailable
+    let unavailableReason = '';
+    if (!isAvailable) {
+      if (state.filters.height > 0 && ride.height > state.filters.height) {
+        unavailableReason = '📏 ' + ride.height + '" required';
+      } else if (state.filters.pregnancy && !ride.pregnant) {
+        unavailableReason = '🤰 Not pregnancy safe';
+      } else if (state.filters.wheelchair && ride.wheelchair !== 'WAV') {
+        unavailableReason = '♿ Wheelchair transfer required';
+      } else if (state.filters.sensory) {
+        const s = ride.sensory;
+        if (s.dark) unavailableReason = '🌑 Dark ride';
+        else if (s.loud) unavailableReason = '🔊 Loud';
+        else if (s.sudden) unavailableReason = '⚡ Sudden movements';
+        else if (s.enclosed) unavailableReason = '📦 Enclosed space';
+        else unavailableReason = '🧘 Intense sensory';
+      }
+    }
+    
+    return `
+      <div class="ride-card ${isAvailable ? '' : 'ride-unavailable'}">
+        <div class="ride-header">
+          <div class="ride-name">${escapeHtml(ride.name)}</div>
+          <div class="ride-type">${escapeHtml(ride.type)}</div>
+          ${!isAvailable ? `<span class="unavailable-badge">${unavailableReason}</span>` : ''}
+        </div>
+        <p class="ride-description">${escapeHtml(ride.description)}</p>
+        <div class="ride-meta">
+          <div class="meta-item">⏱️ ${escapeHtml(ride.duration)}</div>
+          <div class="meta-item">${wheelchairText}</div>
+        </div>
+        <div class="ride-tags">
+          ${ride.height > 0 ? '<span class="tag tag-height">📏 ' + ride.height + '"</span>' : ''}
+          ${ride.pregnant ? '<span class="tag tag-pregnancy">🤰 Pregnancy Safe</span>' : ''}
+          ${sensoryTags.map(function(tag) {
+            return '<span class="tag ' + tag.class + '">' + tag.label + '</span>';
+          }).join('')}
+        </div>
       </div>
     `;
-  } else {
-    elements.rideGrid.innerHTML = parkRides.map(function(ride) {
-      const sensoryTags = getSensoryTags(ride.sensory);
-      const wheelchairText = ride.wheelchair === 'WAV' ? '♿ No Transfer' : 
-                          ride.wheelchair === 'TAV' ? '♿ Transfer Required' : 
-                          '♿ Not Accessible';
-      
-      return `
-        <div class="ride-card">
-          <div class="ride-header">
-            <div class="ride-name">${escapeHtml(ride.name)}</div>
-            <div class="ride-type">${escapeHtml(ride.type)}</div>
-          </div>
-          <p class="ride-description">${escapeHtml(ride.description)}</p>
-          <div class="ride-meta">
-            <div class="meta-item">⏱️ ${escapeHtml(ride.duration)}</div>
-            <div class="meta-item">${wheelchairText}</div>
-          </div>
-          <div class="ride-tags">
-            ${ride.height > 0 ? '<span class="tag tag-height">📏 ' + ride.height + '"</span>' : ''}
-            ${ride.pregnant ? '<span class="tag tag-pregnancy">🤰 Pregnancy Safe</span>' : ''}
-            ${sensoryTags.map(function(tag) {
-              return '<span class="tag ' + tag.class + '">' + tag.label + '</span>';
-            }).join('')}
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
+  }).join('');
 }
 
 // Main render function

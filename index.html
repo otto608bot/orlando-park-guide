@@ -747,6 +747,30 @@
       color: #f5c211;
     }
     
+    /* Unavailable ride styling */
+    .ride-unavailable {
+      opacity: 0.4;
+      background: rgba(255,255,255,0.02);
+    }
+    
+    .ride-unavailable .ride-name {
+      color: var(--text-muted);
+    }
+    
+    .ride-unavailable .ride-description {
+      color: var(--text-muted);
+    }
+    
+    .unavailable-badge {
+      font-size: 0.7rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: rgba(192, 28, 40, 0.3);
+      color: #f66151;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
     /* Empty State */
     .empty-state {
       text-align: center;
