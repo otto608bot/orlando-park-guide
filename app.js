@@ -1932,6 +1932,9 @@ function renderLeaderboard() {
   const filtered = getFilteredRides();
   const grouped = groupByParentAndPark(filtered);
   
+  // Get all rides grouped for totals
+  const allGrouped = groupByParentAndPark(rideData);
+  
   // Update filtered count and total count
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
@@ -1951,6 +1954,7 @@ function renderLeaderboard() {
   elements.leaderboard.innerHTML = sortedParents.map(function(parent) {
     const parentData = parentConfig[parent] || { name: parent, gradient: 'linear-gradient(135deg, #666 0%, #999 100%)', accent: '#fff' };
     const parks = grouped[parent];
+    const allParks = allGrouped[parent] || {};
     
     // Sort parks by ride count
     const sortedParks = Object.keys(parks).sort(function(a, b) {
@@ -1966,6 +1970,7 @@ function renderLeaderboard() {
         <div class="parks-grid">
           ${sortedParks.map(function(parkName) {
             const rides = parks[parkName];
+            const totalRides = allParks[parkName] ? allParks[parkName].length : rides.length;
             const config = parkConfig[parkName];
             const previewRides = rides.slice(0, 3);
             const remainingCount = rides.length - previewRides.length;
@@ -1974,7 +1979,7 @@ function renderLeaderboard() {
               <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: ${config.gradient}, url('${config.image}'); background-size: 100% 100%, cover; background-position: center, center;">
                 <div class="park-card-header">
                   <h3>${escapeHtml(parkName)}</h3>
-                  <span class="ride-count">${rides.length} <span style="font-size: 0.5em; display: block; font-weight: 500;">rides</span></span>
+                  <span class="ride-count">${rides.length}<span style="font-size: 0.6em; opacity: 0.7;">/${totalRides}</span> <span style="font-size: 0.5em; display: block; font-weight: 500;">rides</span></span>
                 </div>
                 <div class="park-preview">
                   <div class="ride-chips">
