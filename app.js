@@ -1956,27 +1956,39 @@ function renderParksGrid() {
   const filteredByPark = groupByPark(filtered);
   const allByPark = groupByPark(rideData);
   
-  // Calculate parent company breakdown
-  const parentCounts = { 'Disney': 0, 'Universal': 0, 'SeaWorld': 0 };
+  // Calculate parent company breakdown with totals
+  const parentCounts = { 
+    'Disney': { filtered: 0, total: 0 }, 
+    'Universal': { filtered: 0, total: 0 }, 
+    'SeaWorld': { filtered: 0, total: 0 } 
+  };
+  
+  // Count filtered rides by parent
   filtered.forEach(function(ride) {
-    if (parentCounts[ride.parent] !== undefined) {
-      parentCounts[ride.parent]++;
+    if (parentCounts[ride.parent]) {
+      parentCounts[ride.parent].filtered++;
     }
   });
   
-  // Update counts with breakdown
+  // Count total rides by parent
+  rideData.forEach(function(ride) {
+    if (parentCounts[ride.parent]) {
+      parentCounts[ride.parent].total++;
+    }
+  });
+  
+  // Update counts
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
   
-  // Update parent breakdown display
-  const parentBreakdown = document.getElementById('parent-breakdown');
-  if (parentBreakdown) {
-    parentBreakdown.innerHTML = `
-      <span class="parent-count disney">${parentCounts.Disney} Disney</span>
-      <span class="parent-count universal">${parentCounts.Universal} Universal</span>
-      <span class="parent-count other">${parentCounts.SeaWorld} Other</span>
-    `;
-  }
+  // Update parent breakdown with X/Y format
+  const disneyEl = document.getElementById('disney-count');
+  const universalEl = document.getElementById('universal-count');
+  const otherEl = document.getElementById('other-count');
+  
+  if (disneyEl) disneyEl.textContent = parentCounts.Disney.filtered + '/' + parentCounts.Disney.total;
+  if (universalEl) universalEl.textContent = parentCounts.Universal.filtered + '/' + parentCounts.Universal.total;
+  if (otherEl) otherEl.textContent = parentCounts.SeaWorld.filtered + '/' + parentCounts.SeaWorld.total;
   
   // Get park names and sort by parent company, then by ride count
   const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
