@@ -1989,7 +1989,7 @@ const parentConfig = {
   }
 };
 
-// Render park grid grouped by parent company
+// Render park grid grouped by parent company - horizontal layout
 function renderParksGrid() {
   const filtered = getFilteredRides();
   const grouped = groupByParentAndPark(filtered);
@@ -2010,7 +2010,7 @@ function renderParksGrid() {
     return indexA - indexB;
   });
   
-  // Render grouped by parent
+  // Render grouped by parent - horizontal scrolling on desktop
   elements.parksGrid.innerHTML = sortedParents.map(function(parent) {
     const parentData = parentConfig[parent] || { name: parent, color: '#666', accent: '#fff' };
     const parks = grouped[parent];
@@ -2022,39 +2022,33 @@ function renderParksGrid() {
     });
     
     return `
-      <div class="parent-section" style="margin-bottom: 3rem;">
-        <div class="parent-header" style="background: linear-gradient(135deg, ${parentData.color} 0%, ${parentData.color}dd 100%); padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: white; margin: 0;">${escapeHtml(parentData.name)}</h2>
-          <span style="color: ${parentData.accent}; font-weight: 700; font-size: 1.125rem;">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
+      <div class="parent-section" style="margin-bottom: 2.5rem;">
+        <div class="parent-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid ${parentData.color}20;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: ${parentData.color};"></div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parentData.name)}</h2>
+          <span style="color: var(--gray-500); font-size: 0.875rem; font-weight: 500;">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
         </div>
-        <div class="parks-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="parks-row" style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; scrollbar-width: thin; scrollbar-color: var(--gray-300) transparent;">
           ${sortedParks.map(function(parkName) {
             const rides = parks[parkName];
             const totalRides = allParks[parkName] ? allParks[parkName].length : rides.length;
             const config = parkConfig[parkName];
-            const previewRides = rides.slice(0, 3);
-            const remainingCount = rides.length - previewRides.length;
+            const previewRides = rides.slice(0, 2);
             
             return `
-              <div class="park-card" onclick="showParkDetail('${parkName}')" style="background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: var(--shadow-sm);">
-                <div class="park-card-image" style="height: 140px; background-image: url('${config.image}'); background-size: cover; background-position: center; position: relative;">
-                  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);"></div>
+              <div class="park-card" onclick="showParkDetail('${parkName}')" style="flex: 0 0 280px; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.2s ease; cursor: pointer; box-shadow: var(--shadow-sm);">
+                <div class="park-card-image" style="height: 100px; background-image: url('${config.image}'); background-size: cover; background-position: center; position: relative;">
+                  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);"></div>
+                  <div style="position: absolute; bottom: 0.5rem; right: 0.75rem; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: white;">${rides.length}<span style="font-size: 0.75rem; opacity: 0.8;">/${totalRides}</span></div>
                 </div>
-                <div class="park-card-content" style="padding: 1.5rem;">
-                  <div class="park-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-                    <div>
-                      <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parkName)}</h3>
-                      <div class="resort" style="font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">${escapeHtml(config.resort)}</div>
-                    </div>
-                    <div class="ride-count-badge" style="display: flex; align-items: center; gap: 0.25rem; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--action-orange);">
-                      ${rides.length}<span style="font-size: 0.875rem; color: var(--gray-400); font-weight: 600;">/${totalRides}</span>
-                    </div>
-                  </div>
+                <div class="park-card-content" style="padding: 1rem;">
+                  <h3 style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--base-dark); margin: 0 0 0.25rem 0;">${escapeHtml(parkName)}</h3>
+                  <div style="font-size: 0.6875rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.75rem;">${escapeHtml(config.resort)}</div>
                   <div class="ride-chips" style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
                     ${previewRides.map(function(ride) {
-                      return '<span class="ride-chip" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--gray-100); border-radius: 4px; color: var(--gray-600); white-space: nowrap;">' + escapeHtml(ride.name) + '</span>';
+                      return '<span class="ride-chip" style="font-size: 0.6875rem; padding: 0.25rem 0.5rem; background: var(--gray-100); border-radius: 4px; color: var(--gray-600); white-space: nowrap;">' + escapeHtml(ride.name) + '</span>';
                     }).join('')}
-                    ${remainingCount > 0 ? '<span class="more-rides" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: transparent; border: 1px dashed var(--gray-300); border-radius: 4px; color: var(--gray-400);">+' + remainingCount + ' more</span>' : ''}
+                    ${rides.length > 2 ? '<span class="more-rides" style="font-size: 0.6875rem; padding: 0.25rem 0.5rem; background: transparent; border: 1px dashed var(--gray-300); border-radius: 4px; color: var(--gray-400);">+' + (rides.length - 2) + ' more</span>' : ''}
                   </div>
                 </div>
               </div>
