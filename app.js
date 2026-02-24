@@ -2035,19 +2035,7 @@ function renderParkDetail(parkName) {
   
   // Add affiliate link button if available
   const affiliateButton = config.affiliateLink ? `
-    <a href="${config.affiliateLink}" target="_blank" rel="noopener noreferrer" class="affiliate-btn" style="
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: linear-gradient(135deg, #FF6B35 0%, #FFB347 100%);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 16px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(255, 107, 53, 0.3)'">
+    <a href="${config.affiliateLink}" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
       🎟️ ${config.affiliateText}
     </a>
   ` : '';

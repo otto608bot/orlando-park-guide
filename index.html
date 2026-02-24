@@ -974,6 +974,119 @@
       border-radius: var(--radius-sm);
       color: var(--text-muted);
     }
+    
+    /* Affiliate Section */
+    .affiliate-section {
+      margin-top: var(--space-3xl);
+      padding: var(--space-xl);
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+    }
+    
+    .affiliate-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+      color: var(--florida-sun);
+    }
+    
+    .affiliate-section p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .affiliate-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    
+    .affiliate-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-lg);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .affiliate-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .affiliate-link.disney {
+      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+      box-shadow: 0 4px 12px rgba(26, 95, 180, 0.3);
+    }
+    
+    .affiliate-link.disney:hover {
+      box-shadow: 0 6px 20px rgba(26, 95, 180, 0.4);
+    }
+    
+    .affiliate-link.universal {
+      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
+      box-shadow: 0 4px 12px rgba(192, 28, 40, 0.3);
+    }
+    
+    .affiliate-link.universal:hover {
+      box-shadow: 0 6px 20px rgba(192, 28, 40, 0.4);
+    }
+    
+    .affiliate-link.seaworld {
+      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
+      box-shadow: 0 4px 12px rgba(38, 162, 105, 0.3);
+    }
+    
+    .affiliate-link.seaworld:hover {
+      box-shadow: 0 6px 20px rgba(38, 162, 105, 0.4);
+    }
+    
+    .affiliate-link.legoland {
+      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
+      box-shadow: 0 4px 12px rgba(227, 0, 15, 0.3);
+    }
+    
+    .affiliate-link.legoland:hover {
+      box-shadow: 0 6px 20px rgba(227, 0, 15, 0.4);
+    }
+    
+    .affiliate-disclosure {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: var(--space-lg);
+    }
+    
+    /* Park Detail Affiliate Button */
+    #affiliate-container {
+      margin-top: var(--space-lg);
+    }
+    
+    .affiliate-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background: linear-gradient(135deg, var(--florida-orange) 0%, var(--florida-sun) 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    }
+    
+    .affiliate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -1030,60 +1143,25 @@
       </div>
       
       <!-- Affiliate Links Section -->
-      <div class="affiliate-section" style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: var(--florida-sun);">🎟️ Get Discount Tickets</h3>
-        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Save money on Orlando theme park tickets with our trusted partner:</p>
-        <div class="affiliate-links" style="display: flex; flex-wrap: wrap; gap: 1rem;">
-          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-link" style="
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(26, 95, 180, 0.3);
-          " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(26, 95, 180, 0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(26, 95, 180, 0.3)'">
+      <div class="affiliate-section">
+        <h3>🎟️ Get Discount Tickets</h3>
+        <p>Save money on Orlando theme park tickets with our trusted partner:</p>
+        <div class="affiliate-links">
+          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-link disney">
             🏰 Disney World Tickets
           </a>
-          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="affiliate-link" style="
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(192, 28, 40, 0.3);
-          " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(192, 28, 40, 0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(192, 28, 40, 0.3)'">
+          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="affiliate-link universal">
             🎢 Universal Orlando Tickets
           </a>
-          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="affiliate-link" style="
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(38, 162, 105, 0.3);
-          " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(38, 162, 105, 0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(38, 162, 105, 0.3)'">
+          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="affiliate-link seaworld">
             🐋 SeaWorld Tickets
           </a>
-          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="affiliate-link" style="
-            display: inline-flex;
+          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="affiliate-link legoland">
+            🧱 LEGOLAND Tickets
+          </a>
+        </div>
+        <p class="affiliate-disclosure">Affiliate links — we earn a commission at no extra cost to you</p>
+      </div>
             align-items: center;
             gap: 0.5rem;
             padding: 0.875rem 1.5rem;
