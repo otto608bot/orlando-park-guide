@@ -17,7 +17,7 @@
   
   <style>
     :root {
-      /* Brand Colors from Style Guide */
+      /* Brand Colors */
       --primary-blue: #4A9DE8;
       --action-orange: #F37021;
       --deep-purple: #5A4FCF;
@@ -25,7 +25,6 @@
       --base-dark: #2D3748;
       --bg-off-white: #F8F9FA;
       
-      /* Extended palette */
       --white: #FFFFFF;
       --gray-100: #F7FAFC;
       --gray-200: #EDF2F7;
@@ -46,7 +45,6 @@
       --space-lg: 1.5rem;
       --space-xl: 2rem;
       --space-2xl: 3rem;
-      --space-3xl: 4rem;
       
       /* Radius */
       --radius-sm: 8px;
@@ -60,56 +58,6 @@
       --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
       --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
       --shadow-orange: 0 4px 12px rgba(243, 112, 33, 0.3);
-      --shadow-orange-hover: 0 6px 20px rgba(243, 112, 33, 0.4);
-      
-      /* Park-specific colors for theming */
-      --mk-primary: #1a5fb4;
-      --mk-secondary: #c01c28;
-      --mk-accent: #f5c211;
-      --mk-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%);
-      --mk-image: url('https://images.unsplash.com/photo-1597466599360-3b9775841aec?w=800&q=80');
-      
-      --epcot-primary: #613583;
-      --epcot-secondary: #1c71d8;
-      --epcot-accent: #e5a50a;
-      --epcot-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%);
-      --epcot-image: url('https://images.unsplash.com/photo-1549488497-3b6aef9637ce?w=800&q=80');
-      
-      --hs-primary: #a51d2d;
-      --hs-secondary: #b5835a;
-      --hs-accent: #f5c211;
-      --hs-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(165,29,45,0.9) 100%);
-      --hs-image: url('https://images.unsplash.com/photo-1596727147705-54a9d750e718?w=800&q=80');
-      
-      --ak-primary: #26a269;
-      --ak-secondary: #8f6e28;
-      --ak-accent: #e5a50a;
-      --ak-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(38,162,105,0.9) 100%);
-      --ak-image: url('https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80');
-      
-      --usf-primary: #1a1a2e;
-      --usf-secondary: #e66100;
-      --usf-accent: #f5c211;
-      --usf-gradient: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,46,0.95) 100%);
-      --usf-image: url('https://images.unsplash.com/photo-1596727147705-54a9d750e718?w=800&q=80');
-      
-      --ioa-primary: #c01c28;
-      --ioa-secondary: #1c71d8;
-      --ioa-accent: #f5c211;
-      --ioa-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(192,28,40,0.9) 100%);
-      --ioa-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80');
-      
-      --sw-primary: #26a269;
-      --sw-secondary: #1c71d8;
-      --sw-accent: #e5a50a;
-      --sw-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%);
-      --sw-image: url('https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80');
-      
-      --ll-primary: #e3000f;
-      --ll-secondary: #f5c211;
-      --ll-accent: #00a651;
-      --ll-gradient: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(227,0,15,0.9) 100%);
-      --ll-image: url('https://images.unsplash.com/photo-1585366119957-f973043d4561?w=800&q=80');
     }
     
     * {
@@ -161,111 +109,229 @@
       object-fit: contain;
     }
     
-    /* Filters Row */
-    .filters-row {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: var(--space-sm) var(--space-xl);
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      flex-wrap: wrap;
-      border-top: 1px solid var(--gray-100);
-    }
-    
-    .filter-group {
-      display: flex;
+    /* Mobile Filter Button */
+    .mobile-filter-btn {
+      display: none;
       align-items: center;
       gap: var(--space-sm);
-      background: var(--gray-100);
       padding: var(--space-sm) var(--space-md);
+      background: var(--action-orange);
+      color: white;
+      border: none;
       border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-orange);
+    }
+    
+    /* Layout Container */
+    .layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: var(--space-xl);
+      padding: var(--space-xl);
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .sidebar-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      box-shadow: var(--shadow-sm);
       border: 1px solid var(--gray-200);
     }
     
-    .filter-label {
-      font-size: 0.875rem;
-      color: var(--gray-600);
-      font-weight: 500;
+    .sidebar-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: var(--space-md);
+    }
+    
+    /* Height Filter - Visual Ruler */
+    .height-filter {
+      margin-bottom: var(--space-lg);
     }
     
     .height-display {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-      min-width: 50px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--action-orange);
       text-align: center;
+      margin-bottom: var(--space-md);
     }
     
-    .slider-container {
-      width: 120px;
+    .height-display span {
+      font-size: 1rem;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    
+    .height-ruler {
+      position: relative;
+      height: 40px;
+      background: linear-gradient(to right, var(--splash-teal) 0%, var(--primary-blue) 50%, var(--action-orange) 100%);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .height-ruler-marks {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 0.625rem;
+      color: var(--gray-500);
+      font-weight: 600;
     }
     
     input[type="range"] {
       -webkit-appearance: none;
       width: 100%;
-      height: 6px;
-      background: var(--gray-300);
+      height: 40px;
+      background: transparent;
       border-radius: var(--radius-full);
       outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
     }
     
     input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      background: var(--action-orange);
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      border: 3px solid var(--action-orange);
       border-radius: 50%;
       cursor: pointer;
-      box-shadow: var(--shadow-orange);
+      box-shadow: var(--shadow-md);
     }
     
-    /* Toggle Buttons - Pill shaped per style guide */
-    .toggle-btn {
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      border: 3px solid var(--action-orange);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* Filter Chips */
+    .filter-chips {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    .filter-chip {
       display: flex;
       align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-sm) var(--space-md);
+      gap: var(--space-sm);
+      padding: var(--space-md);
       background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-full);
-      color: var(--gray-600);
-      font-size: 0.875rem;
-      font-weight: 500;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-md);
       cursor: pointer;
       transition: all 0.2s ease;
       font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-align: left;
     }
     
-    .toggle-btn:hover {
-      background: var(--gray-200);
-      color: var(--base-dark);
+    .filter-chip:hover {
       border-color: var(--gray-300);
+      background: var(--gray-200);
     }
     
-    .toggle-btn.active {
-      background: var(--action-orange);
+    .filter-chip.active {
+      background: rgba(243, 112, 33, 0.1);
       border-color: var(--action-orange);
-      color: white;
-      box-shadow: var(--shadow-orange);
+      color: var(--action-orange);
     }
     
-    .toggle-btn .icon {
-      font-size: 1rem;
+    .filter-chip svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    
+    /* Ticket Cards */
+    .ticket-cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    .ticket-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ticket-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ticket-card.disney {
+      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+    }
+    
+    .ticket-card.universal {
+      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
+    }
+    
+    .ticket-card.seaworld {
+      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
+    }
+    
+    .ticket-card.legoland {
+      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
+    }
+    
+    .ticket-card img {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
     }
     
     /* Main Content */
     .main {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: var(--space-xl) var(--space-xl);
+      flex: 1;
+      min-width: 0;
     }
     
-    /* Hero Section */
+    /* Hero */
     .hero {
       text-align: center;
-      margin-bottom: var(--space-2xl);
+      margin-bottom: var(--space-xl);
       padding: var(--space-lg) 0;
     }
     
@@ -285,7 +351,6 @@
       font-size: 1.125rem;
       color: var(--gray-600);
       margin-bottom: var(--space-lg);
-      font-weight: 400;
     }
     
     .total-counter {
@@ -296,7 +361,6 @@
       padding: var(--space-sm) var(--space-lg);
       border-radius: var(--radius-full);
       border: 1px solid var(--gray-200);
-      margin-bottom: var(--space-lg);
       box-shadow: var(--shadow-sm);
     }
     
@@ -320,26 +384,22 @@
       font-size: 1.25rem;
     }
     
-    /* Leaderboard Grid */
-    .leaderboard {
+    /* Park Grid */
+    .parks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: var(--space-lg);
-      margin-top: var(--space-2xl);
     }
     
-    /* Park Cards with Image Backgrounds */
+    /* Park Cards */
     .park-card {
-      background: transparent;
-      border-radius: var(--radius-xl);
+      background: var(--white);
+      border-radius: var(--radius-lg);
       border: 1px solid var(--gray-200);
       overflow: hidden;
       transition: all 0.3s ease;
       cursor: pointer;
-      position: relative;
-      min-height: 280px;
-      display: flex;
-      flex-direction: column;
+      box-shadow: var(--shadow-sm);
     }
     
     .park-card:hover {
@@ -348,105 +408,62 @@
       border-color: var(--gray-300);
     }
     
-    .park-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    .park-card-image {
+      height: 140px;
       background-size: cover;
       background-position: center;
-      z-index: 0;
+      position: relative;
     }
     
-    .park-card::after {
+    .park-card-image::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
     }
     
-    .park-card.mk::before { background-image: var(--mk-image); }
-    .park-card.mk::after { background: var(--mk-gradient); }
-    
-    .park-card.epcot::before { background-image: var(--epcot-image); }
-    .park-card.epcot::after { background: var(--epcot-gradient); }
-    
-    .park-card.hs::before { background-image: var(--hs-image); }
-    .park-card.hs::after { background: var(--hs-gradient); }
-    
-    .park-card.ak::before { background-image: var(--ak-image); }
-    .park-card.ak::after { background: var(--ak-gradient); }
-    
-    .park-card.usf::before { background-image: var(--usf-image); }
-    .park-card.usf::after { background: var(--usf-gradient); }
-    
-    .park-card.ioa::before { background-image: var(--ioa-image); }
-    .park-card.ioa::after { background: var(--ioa-gradient); }
-    
-    .park-card.sw::before { background-image: var(--sw-image); }
-    .park-card.sw::after { background: var(--sw-gradient); }
-    
-    .park-card.ll::before { background-image: var(--ll-image); }
-    .park-card.ll::after { background: var(--ll-gradient); }
+    .park-card-content {
+      padding: var(--space-lg);
+    }
     
     .park-card-header {
-      padding: var(--space-xl);
       display: flex;
-      align-items: flex-end;
       justify-content: space-between;
-      gap: var(--space-md);
-      position: relative;
-      z-index: 2;
-      margin-top: auto;
+      align-items: flex-start;
+      margin-bottom: var(--space-sm);
     }
     
-    .park-info h3 {
+    .park-card h3 {
       font-family: var(--font-heading);
-      font-size: 1.75rem;
-      font-weight: 800;
-      margin-bottom: var(--space-xs);
-      color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin: 0;
     }
     
-    .park-resort {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.8);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-    }
-    
-    .ride-count {
-      text-align: right;
-    }
-    
-    .ride-count .number {
-      font-family: var(--font-heading);
-      font-size: 3.5rem;
-      font-weight: 900;
-      line-height: 1;
-      color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    
-    .ride-count .label {
+    .park-card .resort {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.7);
+      color: var(--gray-500);
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 500;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
     }
     
-    .park-preview {
-      padding: 0 var(--space-xl) var(--space-xl);
-      position: relative;
-      z-index: 2;
+    .ride-count-badge {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--action-orange);
+    }
+    
+    .ride-count-badge span {
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      font-weight: 600;
     }
     
     .ride-chips {
@@ -458,34 +475,29 @@
     .ride-chip {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
+      background: var(--gray-100);
       border-radius: var(--radius-sm);
-      color: rgba(255,255,255,0.9);
+      color: var(--gray-600);
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 150px;
-      border: 1px solid rgba(255,255,255,0.1);
     }
     
     .more-rides {
       font-size: 0.75rem;
       padding: var(--space-xs) var(--space-sm);
-      background: rgba(255,255,255,0.1);
-      border: 1px dashed rgba(255,255,255,0.3);
+      background: transparent;
+      border: 1px dashed var(--gray-300);
       border-radius: var(--radius-sm);
-      color: rgba(255,255,255,0.7);
+      color: var(--gray-400);
     }
     
     /* Park Detail View */
     .park-detail {
       display: none;
-      animation: fadeIn 0.3s ease;
     }
     
     .park-detail.active {
       display: block;
+      animation: fadeIn 0.3s ease;
     }
     
     @keyframes fadeIn {
@@ -504,7 +516,7 @@
       color: var(--gray-600);
       font-size: 0.875rem;
       cursor: pointer;
-      margin-bottom: var(--space-xl);
+      margin-bottom: var(--space-lg);
       transition: all 0.2s ease;
       font-family: var(--font-body);
       font-weight: 500;
@@ -513,71 +525,51 @@
     .back-btn:hover {
       background: var(--gray-100);
       color: var(--base-dark);
-      border-color: var(--gray-300);
     }
     
     .park-hero {
-      padding: var(--space-3xl);
+      padding: var(--space-2xl);
       border-radius: var(--radius-xl);
-      margin-bottom: var(--space-2xl);
+      margin-bottom: var(--space-xl);
+      background-size: cover;
+      background-position: center;
       position: relative;
-      overflow: hidden;
+      color: white;
     }
     
     .park-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      opacity: 0.1;
+      background: rgba(0,0,0,0.5);
+      border-radius: var(--radius-xl);
     }
-    
-    .park-hero.mk { background: linear-gradient(135deg, rgba(26,95,180,0.15) 0%, rgba(192,28,40,0.15) 100%); }
-    .park-hero.mk::before { background: var(--mk-gradient); }
-    
-    .park-hero.epcot { background: linear-gradient(135deg, rgba(97,53,131,0.15) 0%, rgba(38,162,105,0.15) 100%); }
-    .park-hero.epcot::before { background: var(--epcot-gradient); }
-    
-    .park-hero.hs { background: linear-gradient(135deg, rgba(165,29,45,0.15) 0%, rgba(181,131,90,0.15) 100%); }
-    .park-hero.hs::before { background: var(--hs-gradient); }
-    
-    .park-hero.ak { background: linear-gradient(135deg, rgba(38,162,105,0.15) 0%, rgba(143,110,40,0.15) 100%); }
-    .park-hero.ak::before { background: var(--ak-gradient); }
-    
-    .park-hero.usf { background: linear-gradient(135deg, rgba(26,26,46,0.15) 0%, rgba(230,97,0,0.15) 100%); }
-    .park-hero.usf::before { background: var(--usf-gradient); }
-    
-    .park-hero.ioa { background: linear-gradient(135deg, rgba(192,28,40,0.15) 0%, rgba(28,113,216,0.15) 100%); }
-    .park-hero.ioa::before { background: var(--ioa-gradient); }
-    
-    .park-hero.sw { background: linear-gradient(135deg, rgba(38,162,105,0.15) 0%, rgba(28,113,216,0.15) 100%); }
-    .park-hero.sw::before { background: var(--sw-gradient); }
-    
-    .park-hero.ll { background: linear-gradient(135deg, rgba(227,0,15,0.1) 0%, rgba(0,166,81,0.1) 100%); }
-    .park-hero.ll::before { background: var(--ll-gradient); }
     
     .park-hero-content {
       position: relative;
       z-index: 1;
     }
     
-    .park-hero h2 {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 800;
+    .park-hero .resort {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      opacity: 0.9;
       margin-bottom: var(--space-sm);
-      color: var(--base-dark);
     }
     
-    .park-hero .resort {
-      font-size: 1rem;
-      color: var(--gray-600);
+    .park-hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
       margin-bottom: var(--space-lg);
-      font-weight: 500;
     }
     
     .stats-row {
       display: flex;
       gap: var(--space-xl);
+      margin-bottom: var(--space-lg);
     }
     
     .stat {
@@ -587,25 +579,46 @@
     
     .stat-value {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 800;
-      color: var(--action-orange);
     }
     
     .stat-label {
       font-size: 0.875rem;
-      color: var(--gray-500);
-      font-weight: 500;
+      opacity: 0.8;
+    }
+    
+    .affiliate-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background: var(--action-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-orange);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    
+    .affiliate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
     }
     
     /* Ride Grid */
     .ride-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: var(--space-lg);
     }
     
-    /* Ride Cards - Updated per style guide */
+    /* Ride Cards */
     .ride-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
@@ -621,11 +634,17 @@
       box-shadow: var(--shadow-md);
     }
     
+    .ride-card.unavailable {
+      opacity: 0.6;
+      background: var(--gray-100);
+    }
+    
     .ride-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: var(--space-sm);
+      gap: var(--space-sm);
     }
     
     .ride-name {
@@ -633,6 +652,11 @@
       font-size: 1.125rem;
       font-weight: 700;
       color: var(--base-dark);
+      flex: 1;
+    }
+    
+    .ride-card.unavailable .ride-name {
+      color: var(--gray-500);
     }
     
     .ride-type {
@@ -642,6 +666,17 @@
       padding: var(--space-xs) var(--space-sm);
       border-radius: var(--radius-sm);
       font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    .unavailable-badge {
+      font-size: 0.7rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: rgba(192, 28, 40, 0.1);
+      color: #c01c28;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      white-space: nowrap;
     }
     
     .ride-description {
@@ -651,10 +686,14 @@
       line-height: 1.5;
     }
     
+    .ride-card.unavailable .ride-description {
+      color: var(--gray-400);
+    }
+    
     .ride-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-sm);
+      gap: var(--space-md);
       margin-bottom: var(--space-md);
     }
     
@@ -699,12 +738,9 @@
       color: var(--deep-purple);
     }
     
-    .tag-sensory-loud {
-      background: rgba(243, 112, 33, 0.1);
-      color: var(--action-orange);
-    }
-    
-    .tag-sensory-sudden {
+    .tag-sensory-loud,
+    .tag-sensory-sudden,
+    .tag-sensory-strobe {
       background: rgba(243, 112, 33, 0.1);
       color: var(--action-orange);
     }
@@ -714,39 +750,10 @@
       color: var(--base-dark);
     }
     
-    .tag-sensory-strobe {
-      background: rgba(243, 112, 33, 0.1);
-      color: var(--action-orange);
-    }
-    
-    /* Unavailable ride styling */
-    .ride-unavailable {
-      opacity: 0.5;
-      background: var(--gray-100);
-    }
-    
-    .ride-unavailable .ride-name {
-      color: var(--gray-500);
-    }
-    
-    .ride-unavailable .ride-description {
-      color: var(--gray-400);
-    }
-    
-    .unavailable-badge {
-      font-size: 0.7rem;
-      padding: var(--space-xs) var(--space-sm);
-      background: rgba(192, 28, 40, 0.1);
-      color: #c01c28;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    
     /* Empty State */
     .empty-state {
       text-align: center;
-      padding: var(--space-3xl);
+      padding: var(--space-2xl);
       color: var(--gray-500);
     }
     
@@ -763,134 +770,78 @@
       color: var(--base-dark);
     }
     
-    /* Affiliate Section */
-    .affiliate-section {
-      margin-top: var(--space-3xl);
-      padding: var(--space-xl);
+    /* Mobile Bottom Sheet */
+    .mobile-filter-sheet {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0,0,0,0.5);
+    }
+    
+    .mobile-filter-sheet.active {
+      display: block;
+    }
+    
+    .mobile-filter-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       background: var(--white);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--gray-200);
-      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      padding: var(--space-lg);
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
     }
     
-    .affiliate-section h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: var(--space-md);
-      color: var(--base-dark);
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
     }
     
-    .affiliate-section p {
-      color: var(--gray-600);
+    .mobile-filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: var(--space-lg);
     }
     
-    .affiliate-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-md);
+    .mobile-filter-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
     }
     
-    /* Pill-shaped buttons per style guide */
-    .affiliate-link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-md) var(--space-lg);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-md);
-    }
-    
-    .affiliate-link:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .affiliate-link.disney {
-      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
-    }
-    
-    .affiliate-link.universal {
-      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
-    }
-    
-    .affiliate-link.seaworld {
-      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
-    }
-    
-    .affiliate-link.legoland {
-      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
-    }
-    
-    .affiliate-disclosure {
-      color: var(--gray-500);
-      font-size: 0.8rem;
-      margin-top: var(--space-lg);
-    }
-    
-    /* Park Detail Affiliate Button - Pill shaped */
-    #affiliate-container {
-      margin-top: var(--space-lg);
-    }
-    
-    .affiliate-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-md) var(--space-xl);
-      background: var(--action-orange);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-orange);
+    .close-sheet-btn {
+      background: none;
       border: none;
+      font-size: 1.5rem;
       cursor: pointer;
-      font-family: var(--font-body);
-    }
-    
-    .affiliate-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-orange-hover);
+      color: var(--gray-500);
     }
     
     /* Responsive */
     @media (max-width: 1024px) {
-      .header {
-        position: relative;
-      }
-      
-      .header-content {
+      .layout {
         flex-direction: column;
-        align-items: stretch;
-        gap: var(--space-md);
       }
       
-      .filters-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: var(--space-sm);
+      .sidebar {
+        display: none;
       }
       
-      .filter-group,
-      .toggle-btn {
-        width: 100%;
-        justify-content: center;
+      .mobile-filter-btn {
+        display: flex;
       }
       
       .hero-title {
         font-size: 2rem;
       }
       
-      .leaderboard {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .parks-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
       
       .ride-grid {
@@ -903,16 +854,12 @@
         padding: var(--space-md) var(--space-lg);
       }
       
-      .filters-row {
-        padding: var(--space-sm) var(--space-lg);
-      }
-      
-      .main {
+      .layout {
         padding: var(--space-lg);
       }
       
       .hero {
-        padding: var(--space-xl) 0;
+        padding: var(--space-lg) 0;
       }
       
       .hero-title {
@@ -935,6 +882,10 @@
         flex-direction: column;
         gap: var(--space-md);
       }
+      
+      .parks-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -944,104 +895,223 @@
       <div class="logo">
         <img src="logo-full.png" alt="Plan Your Park" class="logo-img">
       </div>
-    </div>
-    
-    <!-- Filters row -->
-    <div class="filters-row">
-      <div class="filter-group height-filter">
-        <span class="filter-label">Height</span>
-        <span class="height-display" id="height-value">Any</span>
-        <div class="slider-container">
-          <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
-        </div>
-      </div>
-      
-      <button class="toggle-btn" id="toggle-pregnancy" onclick="toggleFilter('pregnancy')">
-        <span class="icon">🤰</span>
-        <span>Pregnancy Safe</span>
-      </button>
-      
-      <button class="toggle-btn" id="toggle-wheelchair" onclick="toggleFilter('wheelchair')">
-        <span class="icon">♿</span>
-        <span>Stay in Wheelchair</span>
-      </button>
-      
-      <button class="toggle-btn" id="toggle-sensory" onclick="toggleFilter('sensory')">
-        <span class="icon">🧘</span>
-        <span>Calm Experience</span>
+      <button class="mobile-filter-btn" onclick="openMobileFilters()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
       </button>
     </div>
   </header>
 
-  <main class="main">
-    <!-- Leaderboard View -->
-    <div id="leaderboard-view" class="hero">
-      <h1 class="hero-title">Find Rides for <span>Everyone</span></h1>
-      <p class="hero-subtitle">Plan your perfect day at Disney World, Universal, SeaWorld & LEGOLAND</p>
-      
-      <div class="total-counter">
-        <span class="label">Rides</span>
-        <span class="count" id="filtered-count">0</span>
-        <span class="label">of</span>
-        <span class="count total" id="total-count">0</span>
-      </div>
-      
-      <div class="leaderboard" id="leaderboard">
-        <!-- Park cards injected here -->
-      </div>
-      
-      <!-- Affiliate Links Section -->
-      <div class="affiliate-section">
-        <h3>🎟️ Get Discount Tickets</h3>
-        <p>Save money on Orlando theme park tickets with our trusted partner:</p>
-        <div class="affiliate-links">
-          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-link disney">
-            🏰 Disney World Tickets
-          </a>
-          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="affiliate-link universal">
-            🎢 Universal Orlando Tickets
-          </a>
-          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="affiliate-link seaworld">
-            🐋 SeaWorld Tickets
-          </a>
-          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="affiliate-link legoland">
-            🧱 LEGOLAND Tickets
-          </a>
-        </div>
-        <p class="affiliate-disclosure">Affiliate links — we earn a commission at no extra cost to you</p>
-      </div>
-    </div>
-    
-    <!-- Park Detail View -->
-    <div id="park-detail-view" class="park-detail">
-      <button class="back-btn" onclick="showLeaderboard()">
-        ← Back to Parks
-      </button>
-      
-      <div class="park-hero" id="park-hero">
-        <div class="park-hero-content">
-          <div class="resort" id="detail-resort"></div>
-          <h2 id="detail-park-name"></h2>
-          <div class="stats-row">
-            <div class="stat">
-              <span class="stat-value" id="detail-ride-count">0</span>
-              <span class="stat-label">Rides Available</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value" id="detail-height-limit">Any</span>
-              <span class="stat-label">Height Limit</span>
-            </div>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="height-filter">
+          <div class="height-display" id="height-display">Any <span>height</span></div>
+          <div class="height-ruler">
+            <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
           </div>
-          <div id="affiliate-container"></div>
+          <div class="height-ruler-marks">
+            <span>Any</span>
+            <span>36″</span>
+            <span>48″</span>
+            <span>54″</span>
+          </div>
+        </div>
+        
+        <div class="filter-chips">
+          <button class="filter-chip" id="chip-pregnancy" onclick="toggleFilter('pregnancy')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M12 14v7"></path>
+              <path d="M9 18h6"></path>
+            </svg>
+            Pregnancy Safe
+          </button>
+          
+          <button class="filter-chip" id="chip-wheelchair" onclick="toggleFilter('wheelchair')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v8"></path>
+              <path d="M9 10h6"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+            Stay in Wheelchair
+          </button>
+          
+          <button class="filter-chip" id="chip-sensory" onclick="toggleFilter('sensory')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            Calm Experience
+          </button>
         </div>
       </div>
       
-      <div class="ride-grid" id="ride-grid">
-        <!-- Ride cards injected here -->
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Get Tickets</h3>
+        <div class="ticket-cards">
+          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="ticket-card disney">
+            🏰 Disney World
+          </a>
+          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="ticket-card universal">
+            🎢 Universal
+          </a>
+          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="ticket-card seaworld">
+            🐋 SeaWorld
+          </a>
+          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="ticket-card legoland">
+            🧱 LEGOLAND
+          </a>
+        </div>
+        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Affiliate links — we earn a commission at no extra cost to you</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Leaderboard View -->
+      <div id="leaderboard-view">
+        <div class="hero">
+          <h1 class="hero-title">Find Rides for <span>Everyone</span></h1>
+          <p class="hero-subtitle">Plan your perfect day at Disney World, Universal, SeaWorld & LEGOLAND</p>
+          
+          <div class="total-counter">
+            <span class="label">Showing</span>
+            <span class="count" id="filtered-count">0</span>
+            <span class="label">of</span>
+            <span class="count total" id="total-count">0</span>
+            <span class="label">rides</span>
+          </div>
+        </div>
+        
+        <div class="parks-grid" id="parks-grid">
+          <!-- Park cards injected here -->
+        </div>
+      </div>
+      
+      <!-- Park Detail View -->
+      <div id="park-detail-view" class="park-detail">
+        <button class="back-btn" onclick="showLeaderboard()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          Back to Parks
+        </button>
+        
+        <div class="park-hero" id="park-hero">
+          <div class="park-hero-content">
+            <div class="resort" id="detail-resort"></div>
+            <h2 id="detail-park-name"></h2>
+            <div class="stats-row">
+              <div class="stat">
+                <span class="stat-value" id="detail-ride-count">0</span>
+                <span class="stat-label">Rides Available</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value" id="detail-height-limit">Any</span>
+                <span class="stat-label">Height Limit</span>
+              </div>
+            </div>
+            <div id="affiliate-container"></div>
+          </div>
+        </div>
+        
+        <div class="ride-grid" id="ride-grid">
+          <!-- Ride cards injected here -->
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Mobile Filter Sheet -->
+  <div class="mobile-filter-sheet" id="mobile-filter-sheet" onclick="closeMobileFilters(event)">
+    <div class="mobile-filter-content" onclick="event.stopPropagation()">
+      <div class="mobile-filter-header">
+        <h3>Filters</h3>
+        <button class="close-sheet-btn" onclick="closeMobileFilters()">&times;</button>
+      </div>
+      
+      <div class="height-filter">
+        <div class="height-display" id="mobile-height-display">Any <span>height</span></div>
+        <div class="height-ruler">
+          <input type="range" id="mobile-height-slider" min="0" max="54" value="0" step="1">
+        </div>
+        <div class="height-ruler-marks">
+          <span>Any</span>
+          <span>36″</span>
+          <span>48″</span>
+          <span>54″</span>
+        </div>
+      </div>
+      
+      <div class="filter-chips" style="margin-top: var(--space-lg);">
+        <button class="filter-chip" id="mobile-chip-pregnancy" onclick="toggleFilter('pregnancy')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+            <path d="M12 14v7"></path>
+            <path d="M9 18h6"></path>
+          </svg>
+          Pregnancy Safe
+        </button>
+        
+        <button class="filter-chip" id="mobile-chip-wheelchair" onclick="toggleFilter('wheelchair')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v8"></path>
+            <path d="M9 10h6"></path>
+            <path d="M9 14h6"></path>
+          </svg>
+          Stay in Wheelchair
+        </button>
+        
+        <button class="filter-chip" id="mobile-chip-sensory" onclick="toggleFilter('sensory')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          Calm Experience
+        </button>
+      </div>
+      
+      <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--gray-200);">
+        <h4 style="font-family: var(--font-heading); font-size: 0.875rem; margin-bottom: var(--space-md);">Get Tickets</h4>
+        <div class="ticket-cards">
+          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="ticket-card disney">
+            🏰 Disney World
+          </a>
+          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="ticket-card universal">
+            🎢 Universal
+          </a>
+          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="ticket-card seaworld">
+            🐋 SeaWorld
+          </a>
+          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="ticket-card legoland">
+            🧱 LEGOLAND
+          </a>
+        </div>
       </div>
     </div>
-  </main>
+  </div>
   
-  <script src="app.js?v=5"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

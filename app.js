@@ -803,7 +803,7 @@ const rideData = [
     sensory: { dark: false, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
     type: "Raft Ride",
     duration: "5 min",
-    description: "A whitewater raft ride through the jungle"
+    description: "A rough whitewater raft ride through the jungle"
   },
   {
     id: "ak-safari",
@@ -1683,28 +1683,6 @@ const state = {
   selectedPark: null
 };
 
-// Parent company configuration
-const parentConfig = {
-  'Disney': {
-    name: 'Walt Disney World',
-    color: '#1a5fb4',
-    accent: '#f5c211',
-    image: 'Disney World.webp'
-  },
-  'Universal': {
-    name: 'Universal Orlando',
-    color: '#c01c28',
-    accent: '#f5c211',
-    image: 'Universal Studios.jpeg'
-  },
-  'SeaWorld': {
-    name: 'Other Parks',
-    color: '#26a269',
-    accent: '#e5a50a',
-    gradient: 'linear-gradient(135deg, #26a269 0%, #1c71d8 100%)'
-  }
-};
-
 // Park configuration with styling and metadata
 const parkConfig = {
   'Magic Kingdom': {
@@ -1712,8 +1690,6 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'Magic Kingdom.webp',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1722,8 +1698,6 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'epcot.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
-    accent: '#e5a50a',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12783539',
     affiliateText: 'Save $53 on 4-Day Park Hopper'
   },
@@ -1732,8 +1706,6 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'Hollywood Studios.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(165,29,45,0.9) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1742,8 +1714,6 @@ const parkConfig = {
     resort: 'Walt Disney World',
     parent: 'Disney',
     image: 'animal kingdom.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(38,162,105,0.9) 100%)',
-    accent: '#e5a50a',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1752,8 +1722,6 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'universal studios florida.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,46,0.95) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
@@ -1762,8 +1730,6 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'islands of adventure.webp',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(192,28,40,0.9) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
@@ -1772,28 +1738,22 @@ const parkConfig = {
     resort: 'Universal Orlando',
     parent: 'Universal',
     image: 'epic universe.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
   'SeaWorld Orlando': {
     id: 'sw',
-    resort: 'Other Parks',
+    resort: 'SeaWorld Parks',
     parent: 'SeaWorld',
     image: 'sea world.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
-    accent: '#e5a50a',
     affiliateLink: 'https://www.kqzyfj.com/click-101693488-12540778',
     affiliateText: 'Save up to $88 on SeaWorld Tickets'
   },
   'LEGOLAND Florida': {
     id: 'll',
-    resort: 'Other Parks',
+    resort: 'SeaWorld Parks',
     parent: 'SeaWorld',
     image: 'legoland.jpeg',
-    gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(227,0,15,0.9) 100%)',
-    accent: '#f5c211',
     affiliateLink: 'https://www.jdoqocy.com/click-101693488-12540781',
     affiliateText: 'Save up to $43 on LEGOLAND Tickets'
   }
@@ -1802,10 +1762,12 @@ const parkConfig = {
 // DOM Elements
 const elements = {
   heightSlider: document.getElementById('height-slider'),
-  heightValue: document.getElementById('height-value'),
+  heightDisplay: document.getElementById('height-display'),
+  mobileHeightSlider: document.getElementById('mobile-height-slider'),
+  mobileHeightDisplay: document.getElementById('mobile-height-display'),
   filteredCount: document.getElementById('filtered-count'),
   totalCount: document.getElementById('total-count'),
-  leaderboard: document.getElementById('leaderboard'),
+  parksGrid: document.getElementById('parks-grid'),
   leaderboardView: document.getElementById('leaderboard-view'),
   parkDetailView: document.getElementById('park-detail-view'),
   parkHero: document.getElementById('park-hero'),
@@ -1815,10 +1777,16 @@ const elements = {
   detailHeightLimit: document.getElementById('detail-height-limit'),
   affiliateContainer: document.getElementById('affiliate-container'),
   rideGrid: document.getElementById('ride-grid'),
-  toggles: {
-    pregnancy: document.getElementById('toggle-pregnancy'),
-    wheelchair: document.getElementById('toggle-wheelchair'),
-    sensory: document.getElementById('toggle-sensory')
+  mobileFilterSheet: document.getElementById('mobile-filter-sheet'),
+  chips: {
+    pregnancy: document.getElementById('chip-pregnancy'),
+    wheelchair: document.getElementById('chip-wheelchair'),
+    sensory: document.getElementById('chip-sensory')
+  },
+  mobileChips: {
+    pregnancy: document.getElementById('mobile-chip-pregnancy'),
+    wheelchair: document.getElementById('mobile-chip-wheelchair'),
+    sensory: document.getElementById('mobile-chip-sensory')
   }
 };
 
@@ -1831,32 +1799,72 @@ function init() {
 // Event listeners
 function setupEventListeners() {
   elements.heightSlider.addEventListener('input', handleHeightChange);
+  if (elements.mobileHeightSlider) {
+    elements.mobileHeightSlider.addEventListener('input', handleMobileHeightChange);
+  }
 }
 
 // Height change handler
 function handleHeightChange(e) {
   const value = parseInt(e.target.value);
   state.filters.height = value;
-  elements.heightValue.textContent = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
-  elements.detailHeightLimit.textContent = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
+  updateHeightDisplay(value);
+  if (elements.mobileHeightSlider) {
+    elements.mobileHeightSlider.value = value;
+    updateMobileHeightDisplay(value);
+  }
   render();
 }
 
-// Toggle filter panel on mobile
-function toggleFilterPanel() {
-  const filterBar = document.getElementById('filter-bar');
-  filterBar.classList.toggle('active');
+function handleMobileHeightChange(e) {
+  const value = parseInt(e.target.value);
+  state.filters.height = value;
+  updateMobileHeightDisplay(value);
+  if (elements.heightSlider) {
+    elements.heightSlider.value = value;
+    updateHeightDisplay(value);
+  }
+  render();
+}
+
+function updateHeightDisplay(value) {
+  const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
+  elements.heightDisplay.innerHTML = displayText + ' <span>height</span>';
+}
+
+function updateMobileHeightDisplay(value) {
+  const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
+  elements.mobileHeightDisplay.innerHTML = displayText + ' <span>height</span>';
+}
+
+// Mobile filter sheet
+function openMobileFilters() {
+  elements.mobileFilterSheet.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileFilters(event) {
+  if (!event || event.target === elements.mobileFilterSheet) {
+    elements.mobileFilterSheet.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
 
 // Toggle filter handler
 function toggleFilter(type) {
   state.filters[type] = !state.filters[type];
   
-  const btn = elements.toggles[type];
   const isActive = state.filters[type];
   
-  btn.classList.toggle('active', isActive);
-  btn.setAttribute('aria-pressed', isActive);
+  // Update desktop chip
+  if (elements.chips[type]) {
+    elements.chips[type].classList.toggle('active', isActive);
+  }
+  
+  // Update mobile chip
+  if (elements.mobileChips[type]) {
+    elements.mobileChips[type].classList.toggle('active', isActive);
+  }
   
   render();
 }
@@ -1870,6 +1878,7 @@ function showParkDetail(parkName) {
   elements.parkDetailView.classList.add('active');
   
   renderParkDetail(parkName);
+  window.scrollTo(0, 0);
 }
 
 // Show leaderboard view
@@ -1908,21 +1917,16 @@ function getFilteredRides() {
   });
 }
 
-// Group rides by parent company, then by park
-function groupByParentAndPark(rides) {
+// Group rides by park
+function groupByPark(rides) {
   const groups = {};
   
   rides.forEach(function(ride) {
-    const parent = ride.parent || 'Other';
     const park = ride.park;
-    
-    if (!groups[parent]) {
-      groups[parent] = {};
+    if (!groups[park]) {
+      groups[park] = [];
     }
-    if (!groups[parent][park]) {
-      groups[parent][park] = [];
-    }
-    groups[parent][park].push(ride);
+    groups[park].push(ride);
   });
   
   return groups;
@@ -1946,71 +1950,47 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Render leaderboard grouped by parent company
-function renderLeaderboard() {
+// Render park grid
+function renderParksGrid() {
   const filtered = getFilteredRides();
-  const grouped = groupByParentAndPark(filtered);
+  const filteredByPark = groupByPark(filtered);
+  const allByPark = groupByPark(rideData);
   
-  // Get all rides grouped for totals
-  const allGrouped = groupByParentAndPark(rideData);
-  
-  // Update filtered count and total count
+  // Update counts
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
   
-  // Sort parents (Disney first, then Universal, then others)
-  const parentOrder = ['Disney', 'Universal', 'SeaWorld'];
-  const sortedParents = Object.keys(grouped).sort(function(a, b) {
-    const indexA = parentOrder.indexOf(a);
-    const indexB = parentOrder.indexOf(b);
-    if (indexA === -1 && indexB === -1) return a.localeCompare(b);
-    if (indexA === -1) return 1;
-    if (indexB === -1) return -1;
-    return indexA - indexB;
+  // Sort parks by ride count
+  const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
+    return filteredByPark[b].length - filteredByPark[a].length;
   });
   
-  // Render grouped by parent
-  elements.leaderboard.innerHTML = sortedParents.map(function(parent) {
-    const parentData = parentConfig[parent] || { name: parent, gradient: 'linear-gradient(135deg, #666 0%, #999 100%)', accent: '#fff' };
-    const parks = grouped[parent];
-    const allParks = allGrouped[parent] || {};
-    
-    // Sort parks by ride count
-    const sortedParks = Object.keys(parks).sort(function(a, b) {
-      return parks[b].length - parks[a].length;
-    });
+  elements.parksGrid.innerHTML = sortedParks.map(function(parkName) {
+    const rides = filteredByPark[parkName];
+    const allRides = allByPark[parkName] || [];
+    const config = parkConfig[parkName];
+    const previewRides = rides.slice(0, 3);
+    const remainingCount = rides.length - previewRides.length;
     
     return `
-      <div class="parent-section">
-        <div class="parent-header" style="${parentData.image ? `background-image: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%), url('${parentData.image}'); background-size: cover; background-position: center;` : `background: ${parentData.gradient}`}">
-          <h2 class="parent-name">${escapeHtml(parentData.name)}</h2>
-          ${parent !== 'SeaWorld' ? `<span class="parent-count">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>` : ''}
-        </div>
-        <div class="parks-grid">
-          ${sortedParks.map(function(parkName) {
-            const rides = parks[parkName];
-            const totalRides = allParks[parkName] ? allParks[parkName].length : rides.length;
-            const config = parkConfig[parkName];
-            const previewRides = rides.slice(0, 3);
-            const remainingCount = rides.length - previewRides.length;
-            
-            return `
-              <div class="park-card ${config.id}" onclick="showParkDetail('${parkName}')" style="background-image: ${config.gradient}, url('${config.image}'); background-size: 100% 100%, cover; background-position: center, center;">
-                <div class="park-card-header">
-                  <h3>${escapeHtml(parkName)}</h3>
-                  <span class="ride-count">${rides.length}<span style="font-size: 0.6em; opacity: 0.7;">/${totalRides}</span> <span style="font-size: 0.5em; display: block; font-weight: 500;">rides</span></span>
-                </div>
-                <div class="park-preview">
-                  <div class="ride-chips">
-                    ${previewRides.map(function(ride) {
-                      return '<span class="ride-chip">' + escapeHtml(ride.name) + '</span>';
-                    }).join('')}
-                    ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
-                  </div>
-                </div>
-              </div>
-            `;
-          }).join('')}
+      <div class="park-card" onclick="showParkDetail('${parkName}')">
+        <div class="park-card-image" style="background-image: url('${config.image}')"></div>
+        <div class="park-card-content">
+          <div class="park-card-header">
+            <div>
+              <h3>${escapeHtml(parkName)}</h3>
+              <div class="resort">${escapeHtml(config.resort)}</div>
+            </div>
+            <div class="ride-count-badge">
+              ${rides.length}<span>/${allRides.length}</span>
+            </div>
+          </div>
+          <div class="ride-chips">
+            ${previewRides.map(function(ride) {
+              return '<span class="ride-chip">' + escapeHtml(ride.name) + '</span>';
+            }).join('')}
+            ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
+          </div>
         </div>
       </div>
     `;
@@ -2023,68 +2003,79 @@ function renderParkDetail(parkName) {
   const allRides = rideData.filter(function(ride) { return ride.park === parkName; });
   const filteredRides = getFilteredRides().filter(function(ride) { return ride.park === parkName; });
   
-  // Update hero with image background
-  elements.parkHero.className = 'park-hero ' + config.id;
+  // Update hero
   elements.parkHero.style.backgroundImage = `url('${config.image}')`;
-  elements.parkHero.style.backgroundSize = 'cover';
-  elements.parkHero.style.backgroundPosition = 'center';
   elements.detailResort.textContent = config.resort;
   elements.detailParkName.textContent = parkName;
   elements.detailRideCount.textContent = filteredRides.length + ' of ' + allRides.length;
   elements.detailHeightLimit.textContent = state.filters.height === 0 ? 'Any' : state.filters.height >= 54 ? '54+' : state.filters.height + '"';
   
-  // Add affiliate link button if available
+  // Add affiliate link button
   const affiliateButton = config.affiliateLink ? `
     <a href="${config.affiliateLink}" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
-      🎟️ ${config.affiliateText}
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+        <path d="M9 12h6"></path>
+        <path d="M12 9v6"></path>
+      </svg>
+      ${config.affiliateText}
     </a>
   ` : '';
   
-  // Update affiliate container
   elements.affiliateContainer.innerHTML = affiliateButton;
   
-  // Render all ride cards with unavailable ones marked
+  // Render all ride cards
   elements.rideGrid.innerHTML = allRides.map(function(ride) {
     const isAvailable = filteredRides.some(function(r) { return r.id === ride.id; });
     const sensoryTags = getSensoryTags(ride.sensory);
-    const wheelchairText = ride.wheelchair === 'WAV' ? '♿ Stay in Wheelchair' : 
-                        ride.wheelchair === 'TAV' ? '♿ Transfer Required' : 
-                        '♿ Not Accessible';
     
     // Determine why ride is unavailable
     let unavailableReason = '';
     if (!isAvailable) {
       if (state.filters.height > 0 && ride.height > state.filters.height) {
-        unavailableReason = '📏 ' + ride.height + '" required';
+        unavailableReason = ride.height + '" height required';
       } else if (state.filters.pregnancy && !ride.pregnant) {
-        unavailableReason = '🤰 Not pregnancy safe';
+        unavailableReason = 'Not pregnancy safe';
       } else if (state.filters.wheelchair && ride.wheelchair !== 'WAV') {
-        unavailableReason = '♿ Wheelchair transfer required';
+        unavailableReason = 'Transfer required';
       } else if (state.filters.sensory) {
         const s = ride.sensory;
-        if (s.dark) unavailableReason = '🌑 Dark ride';
-        else if (s.loud) unavailableReason = '🔊 Loud';
-        else if (s.sudden) unavailableReason = '⚡ Sudden movements';
-        else if (s.enclosed) unavailableReason = '📦 Enclosed space';
-        else unavailableReason = '🧘 Intense sensory';
+        if (s.dark) unavailableReason = 'Dark areas';
+        else if (s.loud) unavailableReason = 'Loud noises';
+        else if (s.sudden) unavailableReason = 'Sudden movements';
+        else if (s.enclosed) unavailableReason = 'Enclosed spaces';
+        else unavailableReason = 'Intense effects';
       }
     }
     
     return `
-      <div class="ride-card ${isAvailable ? '' : 'ride-unavailable'}">
+      <div class="ride-card ${isAvailable ? '' : 'unavailable'}">
         <div class="ride-header">
           <div class="ride-name">${escapeHtml(ride.name)}</div>
-          <div class="ride-type">${escapeHtml(ride.type)}</div>
-          ${!isAvailable ? `<span class="unavailable-badge">${unavailableReason}</span>` : ''}
+          ${!isAvailable ? `<span class="unavailable-badge">${unavailableReason}</span>` : `<div class="ride-type">${escapeHtml(ride.type)}</div>`}
         </div>
         <p class="ride-description">${escapeHtml(ride.description)}</p>
         <div class="ride-meta">
-          <div class="meta-item">⏱️ ${escapeHtml(ride.duration)}</div>
-          <div class="meta-item">${wheelchairText}</div>
+          <div class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            ${escapeHtml(ride.duration)}
+          </div>
+          <div class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v8"></path>
+              <path d="M9 10h6"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+            ${ride.wheelchair === 'WAV' ? 'Stay in wheelchair' : ride.wheelchair === 'TAV' ? 'Transfer required' : 'Not accessible'}
+          </div>
         </div>
         <div class="ride-tags">
-          ${ride.height > 0 ? '<span class="tag tag-height">📏 ' + ride.height + '"</span>' : ''}
-          ${ride.pregnant ? '<span class="tag tag-pregnancy">🤰 Pregnancy Safe</span>' : ''}
+          ${ride.height > 0 ? '<span class="tag tag-height">' + ride.height + '" min</span>' : ''}
+          ${ride.pregnant ? '<span class="tag tag-pregnancy">Pregnancy safe</span>' : ''}
           ${sensoryTags.map(function(tag) {
             return '<span class="tag ' + tag.class + '">' + tag.label + '</span>';
           }).join('')}
@@ -2097,7 +2088,7 @@ function renderParkDetail(parkName) {
 // Main render function
 function render() {
   if (state.currentView === 'leaderboard') {
-    renderLeaderboard();
+    renderParksGrid();
   } else if (state.currentView === 'detail' && state.selectedPark) {
     renderParkDetail(state.selectedPark);
   }
@@ -2110,3 +2101,5 @@ init();
 window.toggleFilter = toggleFilter;
 window.showParkDetail = showParkDetail;
 window.showLeaderboard = showLeaderboard;
+window.openMobileFilters = openMobileFilters;
+window.closeMobileFilters = closeMobileFilters;
