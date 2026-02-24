@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+[context.production]
+  command = "echo 'Production deploy'"
+
+[context.staging]
+  command = "echo 'Staging deploy'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
