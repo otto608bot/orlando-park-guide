@@ -1713,7 +1713,9 @@ const parkConfig = {
     parent: 'Disney',
     image: 'Magic Kingdom.webp',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
+    affiliateText: 'Get Disney Park Hopper Tickets'
   },
   'EPCOT': {
     id: 'epcot',
@@ -1721,7 +1723,9 @@ const parkConfig = {
     parent: 'Disney',
     image: 'epcot.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
-    accent: '#e5a50a'
+    accent: '#e5a50a',
+    affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12783539',
+    affiliateText: 'Save $53 on 4-Day Park Hopper'
   },
   'Hollywood Studios': {
     id: 'hs',
@@ -1729,7 +1733,9 @@ const parkConfig = {
     parent: 'Disney',
     image: 'Hollywood Studios.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(165,29,45,0.9) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
+    affiliateText: 'Get Disney Park Hopper Tickets'
   },
   'Animal Kingdom': {
     id: 'ak',
@@ -1737,7 +1743,9 @@ const parkConfig = {
     parent: 'Disney',
     image: 'animal kingdom.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(38,162,105,0.9) 100%)',
-    accent: '#e5a50a'
+    accent: '#e5a50a',
+    affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
+    affiliateText: 'Get Disney Park Hopper Tickets'
   },
   'Universal Studios Florida': {
     id: 'usf',
@@ -1745,7 +1753,9 @@ const parkConfig = {
     parent: 'Universal',
     image: 'universal studios florida.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,46,0.95) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
+    affiliateText: 'Save up to $109 on Universal Tickets'
   },
   'Islands of Adventure': {
     id: 'ioa',
@@ -1753,7 +1763,9 @@ const parkConfig = {
     parent: 'Universal',
     image: 'islands of adventure.webp',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(192,28,40,0.9) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
+    affiliateText: 'Save up to $109 on Universal Tickets'
   },
   'Epic Universe': {
     id: 'eu',
@@ -1761,7 +1773,9 @@ const parkConfig = {
     parent: 'Universal',
     image: 'epic universe.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(97,53,131,0.9) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
+    affiliateText: 'Save up to $109 on Universal Tickets'
   },
   'SeaWorld Orlando': {
     id: 'sw',
@@ -1769,7 +1783,9 @@ const parkConfig = {
     parent: 'SeaWorld',
     image: 'sea world.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(26,95,180,0.9) 100%)',
-    accent: '#e5a50a'
+    accent: '#e5a50a',
+    affiliateLink: 'https://www.kqzyfj.com/click-101693488-12540778',
+    affiliateText: 'Save up to $88 on SeaWorld Tickets'
   },
   'LEGOLAND Florida': {
     id: 'll',
@@ -1777,7 +1793,9 @@ const parkConfig = {
     parent: 'SeaWorld',
     image: 'legoland.jpeg',
     gradient: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(227,0,15,0.9) 100%)',
-    accent: '#f5c211'
+    accent: '#f5c211',
+    affiliateLink: 'https://www.jdoqocy.com/click-101693488-12540781',
+    affiliateText: 'Save up to $43 on LEGOLAND Tickets'
   }
 };
 
@@ -1795,6 +1813,7 @@ const elements = {
   detailParkName: document.getElementById('detail-park-name'),
   detailRideCount: document.getElementById('detail-ride-count'),
   detailHeightLimit: document.getElementById('detail-height-limit'),
+  affiliateContainer: document.getElementById('affiliate-container'),
   rideGrid: document.getElementById('ride-grid'),
   toggles: {
     pregnancy: document.getElementById('toggle-pregnancy'),
@@ -2013,6 +2032,28 @@ function renderParkDetail(parkName) {
   elements.detailParkName.textContent = parkName;
   elements.detailRideCount.textContent = filteredRides.length + ' of ' + allRides.length;
   elements.detailHeightLimit.textContent = state.filters.height === 0 ? 'Any' : state.filters.height >= 54 ? '54+' : state.filters.height + '"';
+  
+  // Add affiliate link button if available
+  const affiliateButton = config.affiliateLink ? `
+    <a href="${config.affiliateLink}" target="_blank" rel="noopener noreferrer" class="affiliate-btn" style="
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #FF6B35 0%, #FFB347 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 16px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(255, 107, 53, 0.3)'">
+      🎟️ ${config.affiliateText}
+    </a>
+  ` : '';
+  
+  // Update affiliate container
+  elements.affiliateContainer.innerHTML = affiliateButton;
   
   // Render all ride cards with unavailable ones marked
   elements.rideGrid.innerHTML = allRides.map(function(ride) {
