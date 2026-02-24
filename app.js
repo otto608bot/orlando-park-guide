@@ -1950,7 +1950,7 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Render park grid
+// Render park grid - grouped by parent company (Disney, Universal, Other)
 function renderParksGrid() {
   const filtered = getFilteredRides();
   const filteredByPark = groupByPark(filtered);
@@ -1960,8 +1960,22 @@ function renderParksGrid() {
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
   
-  // Sort parks by ride count
+  // Get park names and sort by parent company, then by ride count
   const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
+    const configA = parkConfig[a];
+    const configB = parkConfig[b];
+    
+    // Parent company order: Disney (1), Universal (2), Other (3)
+    const parentOrder = { 'Disney': 1, 'Universal': 2, 'SeaWorld': 3 };
+    const parentA = parentOrder[configA.parent] || 4;
+    const parentB = parentOrder[configB.parent] || 4;
+    
+    // First sort by parent company
+    if (parentA !== parentB) {
+      return parentA - parentB;
+    }
+    
+    // Then sort by ride count within same parent
     return filteredByPark[b].length - filteredByPark[a].length;
   });
   
