@@ -9,8 +9,8 @@ headers = []
 [build]
 publish = "/root/.openclaw/workspace/orlando-park-guide"
 publishOrigin = "config"
+command = "echo 'Production deploy'"
 commandOrigin = "config"
-command = "echo 'Staging deploy'"
 
 [build.environment]
 
