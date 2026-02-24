@@ -464,8 +464,8 @@
     }
     
     .meter-icon {
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 24px;
     }
     
     .parent-name {
@@ -1100,25 +1100,55 @@
             </div>
             <div class="parent-breakdown" id="parent-breakdown">
               <div class="parent-stat">
-                <svg class="meter-icon" viewBox="0 0 24 24" fill="none" stroke="#1a5fb4" stroke-width="2">
-                  <path d="M12 2v20M12 14l4-4M12 10l-4 4"/>
-                  <circle cx="12" cy="12" r="10"/>
+                <svg class="gauge-icon" viewBox="0 0 40 24">
+                  <defs>
+                    <linearGradient id="disneyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#1a5fb4;stop-opacity:0.2" />
+                      <stop offset="100%" style="stop-color:#1a5fb4;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+                  <path id="disney-gauge-fill" d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="url(#disneyGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="50.3" stroke-dashoffset="50.3"/>
+                  <g id="disney-needle" transform="rotate(-90 20 20)">
+                    <circle cx="20" cy="20" r="3" fill="#1a5fb4"/>
+                    <path d="M20 20 L20 6" stroke="#1a5fb4" stroke-width="2" stroke-linecap="round"/>
+                  </g>
                 </svg>
                 <span class="parent-name">Disney</span>
                 <span class="parent-fraction" id="disney-count">0/0</span>
               </div>
               <div class="parent-stat">
-                <svg class="meter-icon" viewBox="0 0 24 24" fill="none" stroke="#c01c28" stroke-width="2">
-                  <path d="M12 2v20M12 14l4-4M12 10l-4 4"/>
-                  <circle cx="12" cy="12" r="10"/>
+                <svg class="gauge-icon" viewBox="0 0 40 24">
+                  <defs>
+                    <linearGradient id="universalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#c01c28;stop-opacity:0.2" />
+                      <stop offset="100%" style="stop-color:#c01c28;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+                  <path id="universal-gauge-fill" d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="url(#universalGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="50.3" stroke-dashoffset="50.3"/>
+                  <g id="universal-needle" transform="rotate(-90 20 20)">
+                    <circle cx="20" cy="20" r="3" fill="#c01c28"/>
+                    <path d="M20 20 L20 6" stroke="#c01c28" stroke-width="2" stroke-linecap="round"/>
+                  </g>
                 </svg>
                 <span class="parent-name">Universal</span>
                 <span class="parent-fraction" id="universal-count">0/0</span>
               </div>
               <div class="parent-stat">
-                <svg class="meter-icon" viewBox="0 0 24 24" fill="none" stroke="#26a269" stroke-width="2">
-                  <path d="M12 2v20M12 14l4-4M12 10l-4 4"/>
-                  <circle cx="12" cy="12" r="10"/>
+                <svg class="gauge-icon" viewBox="0 0 40 24">
+                  <defs>
+                    <linearGradient id="otherGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#26a269;stop-opacity:0.2" />
+                      <stop offset="100%" style="stop-color:#26a269;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+                  <path id="other-gauge-fill" d="M4 20 A16 16 0 0 1 36 20" fill="none" stroke="url(#otherGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="50.3" stroke-dashoffset="50.3"/>
+                  <g id="other-needle" transform="rotate(-90 20 20)">
+                    <circle cx="20" cy="20" r="3" fill="#26a269"/>
+                    <path d="M20 20 L20 6" stroke="#26a269" stroke-width="2" stroke-linecap="round"/>
+                  </g>
                 </svg>
                 <span class="parent-name">Other</span>
                 <span class="parent-fraction" id="other-count">0/0</span>

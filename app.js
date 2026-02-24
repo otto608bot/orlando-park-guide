@@ -1853,19 +1853,19 @@ function closeMobileFilters(event) {
 // Toggle filter handler
 function toggleFilter(type) {
   state.filters[type] = !state.filters[type];
-  
+
   const isActive = state.filters[type];
-  
+
   // Update desktop chip
   if (elements.chips[type]) {
     elements.chips[type].classList.toggle('active', isActive);
   }
-  
+
   // Update mobile chip
   if (elements.mobileChips[type]) {
     elements.mobileChips[type].classList.toggle('active', isActive);
   }
-  
+
   render();
 }
 
@@ -1873,10 +1873,10 @@ function toggleFilter(type) {
 function showParkDetail(parkName) {
   state.selectedPark = parkName;
   state.currentView = 'detail';
-  
+
   elements.leaderboardView.style.display = 'none';
   elements.parkDetailView.classList.add('active');
-  
+
   renderParkDetail(parkName);
   window.scrollTo(0, 0);
 }
@@ -1885,10 +1885,10 @@ function showParkDetail(parkName) {
 function showLeaderboard() {
   state.currentView = 'leaderboard';
   state.selectedPark = null;
-  
+
   elements.parkDetailView.classList.remove('active');
   elements.leaderboardView.style.display = 'block';
-  
+
   render();
 }
 
@@ -1898,13 +1898,13 @@ function getFilteredRides() {
     // Height filter - if slider is at 0, show all rides (Any)
     if (state.filters.height > 0 && state.filters.height < 54 && ride.height > state.filters.height) return false;
     if (state.filters.height >= 54 && ride.height > 54) return false;
-    
+
     // Pregnancy filter
     if (state.filters.pregnancy && !ride.pregnant) return false;
-    
+
     // Wheelchair filter (WAV = wheelchair accessible, no transfer required)
     if (state.filters.wheelchair && ride.wheelchair !== 'WAV') return false;
-    
+
     // Sensory filter (no intense effects)
     if (state.filters.sensory) {
       const s = ride.sensory;
@@ -1912,7 +1912,7 @@ function getFilteredRides() {
         return false;
       }
     }
-    
+
     return true;
   });
 }
@@ -1920,7 +1920,7 @@ function getFilteredRides() {
 // Group rides by park
 function groupByPark(rides) {
   const groups = {};
-  
+
   rides.forEach(function(ride) {
     const park = ride.park;
     if (!groups[park]) {
@@ -1928,7 +1928,7 @@ function groupByPark(rides) {
     }
     groups[park].push(ride);
   });
-  
+
   return groups;
 }
 
@@ -1955,67 +1955,89 @@ function renderParksGrid() {
   const filtered = getFilteredRides();
   const filteredByPark = groupByPark(filtered);
   const allByPark = groupByPark(rideData);
-  
+
   // Calculate parent company breakdown with totals
-  const parentCounts = { 
-    'Disney': { filtered: 0, total: 0 }, 
-    'Universal': { filtered: 0, total: 0 }, 
-    'SeaWorld': { filtered: 0, total: 0 } 
+  const parentCounts = {
+    'Disney': { filtered: 0, total: 0 },
+    'Universal': { filtered: 0, total: 0 },
+    'SeaWorld': { filtered: 0, total: 0 }
   };
-  
+
   // Count filtered rides by parent
   filtered.forEach(function(ride) {
     if (parentCounts[ride.parent]) {
       parentCounts[ride.parent].filtered++;
     }
   });
-  
+
   // Count total rides by parent
   rideData.forEach(function(ride) {
     if (parentCounts[ride.parent]) {
       parentCounts[ride.parent].total++;
     }
   });
-  
+
   // Update counts
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
-  
-  // Update parent breakdown with X/Y format
+
+  // Update parent breakdown with X/Y format and gauge rotation
   const disneyEl = document.getElementById('disney-count');
   const universalEl = document.getElementById('universal-count');
   const otherEl = document.getElementById('other-count');
-  
+
   if (disneyEl) disneyEl.textContent = parentCounts.Disney.filtered + '/' + parentCounts.Disney.total;
   if (universalEl) universalEl.textContent = parentCounts.Universal.filtered + '/' + parentCounts.Universal.total;
   if (otherEl) otherEl.textContent = parentCounts.SeaWorld.filtered + '/' + parentCounts.SeaWorld.total;
-  
+
+  // Update gauge needles and fills
+  function updateGauge(parent, filtered, total) {
+    const percentage = total > 0 ? filtered / total : 0;
+    const angle = -90 + (percentage * 180); // -90 (left) to 90 (right)
+
+    const needle = document.getElementById(parent + '-needle');
+    const fill = document.getElementById(parent + '-gauge-fill');
+
+    if (needle) {
+      needle.setAttribute('transform', 'rotate(' + angle + ' 20 20)');
+    }
+    if (fill) {
+      const maxDash = 50.3; // Half circle circumference
+      const dashOffset = maxDash - (percentage * maxDash);
+      fill.setAttribute('stroke-dashoffset', dashOffset);
+    }
+  }
+
+  updateGauge('disney', parentCounts.Disney.filtered, parentCounts.Disney.total);
+  updateGauge('universal', parentCounts.Universal.filtered, parentCounts.Universal.total);
+  updateGauge('other', parentCounts.SeaWorld.filtered, parentCounts.SeaWorld.total);
+
   // Get park names and sort by parent company, then by ride count
   const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
     const configA = parkConfig[a];
     const configB = parkConfig[b];
-    
+
     // Parent company order: Disney (1), Universal (2), Other (3)
     const parentOrder = { 'Disney': 1, 'Universal': 2, 'SeaWorld': 3 };
     const parentA = parentOrder[configA.parent] || 4;
     const parentB = parentOrder[configB.parent] || 4;
-    
+
     // First sort by parent company
     if (parentA !== parentB) {
       return parentA - parentB;
     }
-    
+
     // Then sort by ride count within same parent
     return filteredByPark[b].length - filteredByPark[a].length;
   });
-  
+
   elements.parksGrid.innerHTML = sortedParks.map(function(parkName) {
     const rides = filteredByPark[parkName];
     const allRides = allByPark[parkName] || [];
     const config = parkConfig[parkName];
     const previewRides = rides.slice(0, 3);
     const remainingCount = rides.length - previewRides.length;
-    
+
     return `
       <div class="park-card" onclick="showParkDetail('${parkName}')">
         <div class="park-card-image" style="background-image: url('${config.image}')"></div>
@@ -2046,14 +2068,14 @@ function renderParkDetail(parkName) {
   const config = parkConfig[parkName];
   const allRides = rideData.filter(function(ride) { return ride.park === parkName; });
   const filteredRides = getFilteredRides().filter(function(ride) { return ride.park === parkName; });
-  
+
   // Update hero
   elements.parkHero.style.backgroundImage = `url('${config.image}')`;
   elements.detailResort.textContent = config.resort;
   elements.detailParkName.textContent = parkName;
   elements.detailRideCount.textContent = filteredRides.length + ' of ' + allRides.length;
   elements.detailHeightLimit.textContent = state.filters.height === 0 ? 'Any' : state.filters.height >= 54 ? '54+' : state.filters.height + '"';
-  
+
   // Add affiliate link button
   const affiliateButton = config.affiliateLink ? `
     <a href="${config.affiliateLink}" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
@@ -2065,14 +2087,14 @@ function renderParkDetail(parkName) {
       ${config.affiliateText}
     </a>
   ` : '';
-  
+
   elements.affiliateContainer.innerHTML = affiliateButton;
-  
+
   // Render all ride cards
   elements.rideGrid.innerHTML = allRides.map(function(ride) {
     const isAvailable = filteredRides.some(function(r) { return r.id === ride.id; });
     const sensoryTags = getSensoryTags(ride.sensory);
-    
+
     // Determine why ride is unavailable
     let unavailableReason = '';
     if (!isAvailable) {
@@ -2091,7 +2113,7 @@ function renderParkDetail(parkName) {
         else unavailableReason = 'Intense effects';
       }
     }
-    
+
     return `
       <div class="ride-card ${isAvailable ? '' : 'unavailable'}">
         <div class="ride-header">
