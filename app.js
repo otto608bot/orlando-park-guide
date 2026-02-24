@@ -2028,7 +2028,7 @@ function renderParksGrid() {
           <h2 style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parentData.name)}</h2>
           <span style="color: var(--gray-500); font-size: 0.875rem; font-weight: 500;">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
         </div>
-        <div class="parks-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+        <div class="parks-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
           ${sortedParks.map(function(parkName) {
             const rides = parks[parkName];
             const totalRides = allParks[parkName] ? allParks[parkName].length : rides.length;
@@ -2037,25 +2037,23 @@ function renderParksGrid() {
             const remainingCount = rides.length - previewRides.length;
 
             return `
-              <div class="park-card" onclick="showParkDetail('${parkName}')" style="background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.2s ease; cursor: pointer; box-shadow: var(--shadow-sm);">
-                <div class="park-card-image" style="height: 120px; background-image: url('${config.image}'); background-size: cover; background-position: center; position: relative;">
-                  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);"></div>
+              <div class="park-card" onclick="showParkDetail('${parkName}')" style="display: flex; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.2s ease; cursor: pointer; box-shadow: var(--shadow-sm);">
+                <div class="park-card-image" style="width: 120px; min-height: 100px; background-image: url('${config.image}'); background-size: cover; background-position: center; position: relative; flex-shrink: 0;">
+                  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);"></div>
                 </div>
-                <div class="park-card-content" style="padding: 1rem;">
-                  <div class="park-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-                    <div>
-                      <h3 style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parkName)}</h3>
-                      <div class="resort" style="font-size: 0.6875rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">${escapeHtml(config.resort)}</div>
-                    </div>
-                    <div class="ride-count-badge" style="display: flex; align-items: center; gap: 0.25rem; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--action-orange);">
+                <div class="park-card-content" style="padding: 1rem; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parkName)}</h3>
+                    <div class="ride-count-badge" style="display: flex; align-items: center; gap: 0.25rem; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--action-orange); flex-shrink: 0;">
                       ${rides.length}<span style="font-size: 0.75rem; color: var(--gray-400); font-weight: 600;">/${totalRides}</span>
                     </div>
                   </div>
-                  <div class="ride-chips" style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  <div class="resort" style="font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.5rem;">${escapeHtml(config.resort)}</div>
+                  <div class="ride-chips" style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
                     ${previewRides.map(function(ride) {
-                      return '<span class="ride-chip" style="font-size: 0.6875rem; padding: 0.25rem 0.5rem; background: var(--gray-100); border-radius: 4px; color: var(--gray-600); white-space: nowrap;">' + escapeHtml(ride.name) + '</span>';
+                      return '<span class="ride-chip" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--gray-100); border-radius: 4px; color: var(--gray-600);">' + escapeHtml(ride.name) + '</span>';
                     }).join('')}
-                    ${remainingCount > 0 ? '<span class="more-rides" style="font-size: 0.6875rem; padding: 0.25rem 0.5rem; background: transparent; border: 1px dashed var(--gray-300); border-radius: 4px; color: var(--gray-400);">+' + remainingCount + ' more</span>' : ''}
+                    ${remainingCount > 0 ? '<span class="more-rides" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: transparent; border: 1px dashed var(--gray-300); border-radius: 4px; color: var(--gray-400);">+' + remainingCount + ' more</span>' : ''}
                   </div>
                 </div>
               </div>
