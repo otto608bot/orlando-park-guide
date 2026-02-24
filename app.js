@@ -1950,115 +1950,47 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Group rides by parent company, then by park
-function groupByParentAndPark(rides) {
-  const groups = {};
-  
-  rides.forEach(function(ride) {
-    const parent = ride.parent || 'Other';
-    const park = ride.park;
-    
-    if (!groups[parent]) {
-      groups[parent] = {};
-    }
-    if (!groups[parent][park]) {
-      groups[parent][park] = [];
-    }
-    groups[parent][park].push(ride);
-  });
-  
-  return groups;
-}
-
-// Parent company configuration
-const parentConfig = {
-  'Disney': {
-    name: 'Walt Disney World',
-    color: '#1a5fb4',
-    accent: '#f5c211'
-  },
-  'Universal': {
-    name: 'Universal Orlando',
-    color: '#c01c28',
-    accent: '#f5c211'
-  },
-  'SeaWorld': {
-    name: 'Other Parks',
-    color: '#26a269',
-    accent: '#e5a50a'
-  }
-};
-
-// Render park grid grouped by parent company - grid layout under each label
+// Render park grid
 function renderParksGrid() {
   const filtered = getFilteredRides();
-  const grouped = groupByParentAndPark(filtered);
-  const allGrouped = groupByParentAndPark(rideData);
-
+  const filteredByPark = groupByPark(filtered);
+  const allByPark = groupByPark(rideData);
+  
   // Update counts
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
-
-  // Sort parents (Disney first, then Universal, then others)
-  const parentOrder = ['Disney', 'Universal', 'SeaWorld'];
-  const sortedParents = Object.keys(grouped).sort(function(a, b) {
-    const indexA = parentOrder.indexOf(a);
-    const indexB = parentOrder.indexOf(b);
-    if (indexA === -1 && indexB === -1) return a.localeCompare(b);
-    if (indexA === -1) return 1;
-    if (indexB === -1) return -1;
-    return indexA - indexB;
+  
+  // Sort parks by ride count
+  const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
+    return filteredByPark[b].length - filteredByPark[a].length;
   });
-
-  // Render grouped by parent - grid layout
-  elements.parksGrid.innerHTML = sortedParents.map(function(parent) {
-    const parentData = parentConfig[parent] || { name: parent, color: '#666', accent: '#fff' };
-    const parks = grouped[parent];
-    const allParks = allGrouped[parent] || {};
-
-    // Sort parks by ride count
-    const sortedParks = Object.keys(parks).sort(function(a, b) {
-      return parks[b].length - parks[a].length;
-    });
-
+  
+  elements.parksGrid.innerHTML = sortedParks.map(function(parkName) {
+    const rides = filteredByPark[parkName];
+    const allRides = allByPark[parkName] || [];
+    const config = parkConfig[parkName];
+    const previewRides = rides.slice(0, 3);
+    const remainingCount = rides.length - previewRides.length;
+    
     return `
-      <div class="parent-section" style="margin-bottom: 2.5rem;">
-        <div class="parent-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid ${parentData.color}20;">
-          <div style="width: 12px; height: 12px; border-radius: 50%; background: ${parentData.color};"></div>
-          <h2 style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parentData.name)}</h2>
-          <span style="color: var(--gray-500); font-size: 0.875rem; font-weight: 500;">${sortedParks.reduce(function(sum, p) { return sum + parks[p].length; }, 0)} rides</span>
-        </div>
-        <div class="parks-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
-          ${sortedParks.map(function(parkName) {
-            const rides = parks[parkName];
-            const totalRides = allParks[parkName] ? allParks[parkName].length : rides.length;
-            const config = parkConfig[parkName];
-            const previewRides = rides.slice(0, 3);
-            const remainingCount = rides.length - previewRides.length;
-
-            return `
-              <div class="park-card" onclick="showParkDetail('${parkName}')" style="display: flex; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.2s ease; cursor: pointer; box-shadow: var(--shadow-sm);">
-                <div class="park-card-image" style="width: 120px; min-height: 100px; background-image: url('${config.image}'); background-size: cover; background-position: center; position: relative; flex-shrink: 0;">
-                  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);"></div>
-                </div>
-                <div class="park-card-content" style="padding: 1rem; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
-                    <h3 style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; color: var(--base-dark); margin: 0;">${escapeHtml(parkName)}</h3>
-                    <div class="ride-count-badge" style="display: flex; align-items: center; gap: 0.25rem; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--action-orange); flex-shrink: 0;">
-                      ${rides.length}<span style="font-size: 0.75rem; color: var(--gray-400); font-weight: 600;">/${totalRides}</span>
-                    </div>
-                  </div>
-                  <div class="resort" style="font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.5rem;">${escapeHtml(config.resort)}</div>
-                  <div class="ride-chips" style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
-                    ${previewRides.map(function(ride) {
-                      return '<span class="ride-chip" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--gray-100); border-radius: 4px; color: var(--gray-600);">' + escapeHtml(ride.name) + '</span>';
-                    }).join('')}
-                    ${remainingCount > 0 ? '<span class="more-rides" style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: transparent; border: 1px dashed var(--gray-300); border-radius: 4px; color: var(--gray-400);">+' + remainingCount + ' more</span>' : ''}
-                  </div>
-                </div>
-              </div>
-            `;
-          }).join('')}
+      <div class="park-card" onclick="showParkDetail('${parkName}')">
+        <div class="park-card-image" style="background-image: url('${config.image}')"></div>
+        <div class="park-card-content">
+          <div class="park-card-header">
+            <div>
+              <h3>${escapeHtml(parkName)}</h3>
+              <div class="resort">${escapeHtml(config.resort)}</div>
+            </div>
+            <div class="ride-count-badge">
+              ${rides.length}<span>/${allRides.length}</span>
+            </div>
+          </div>
+          <div class="ride-chips">
+            ${previewRides.map(function(ride) {
+              return '<span class="ride-chip">' + escapeHtml(ride.name) + '</span>';
+            }).join('')}
+            ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
+          </div>
         </div>
       </div>
     `;
