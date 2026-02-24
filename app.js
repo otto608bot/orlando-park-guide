@@ -1956,9 +1956,27 @@ function renderParksGrid() {
   const filteredByPark = groupByPark(filtered);
   const allByPark = groupByPark(rideData);
   
-  // Update counts
+  // Calculate parent company breakdown
+  const parentCounts = { 'Disney': 0, 'Universal': 0, 'SeaWorld': 0 };
+  filtered.forEach(function(ride) {
+    if (parentCounts[ride.parent] !== undefined) {
+      parentCounts[ride.parent]++;
+    }
+  });
+  
+  // Update counts with breakdown
   elements.filteredCount.textContent = filtered.length;
   elements.totalCount.textContent = rideData.length;
+  
+  // Update parent breakdown display
+  const parentBreakdown = document.getElementById('parent-breakdown');
+  if (parentBreakdown) {
+    parentBreakdown.innerHTML = `
+      <span class="parent-count disney">${parentCounts.Disney} Disney</span>
+      <span class="parent-count universal">${parentCounts.Universal} Universal</span>
+      <span class="parent-count other">${parentCounts.SeaWorld} Other</span>
+    `;
+  }
   
   // Get park names and sort by parent company, then by ride count
   const sortedParks = Object.keys(filteredByPark).sort(function(a, b) {
