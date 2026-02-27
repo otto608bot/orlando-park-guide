@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Plan Your Park | Orlando Theme Park Guides & Tips</title>
+  <meta name="description" content="Expert tips, guides, and insider secrets for Disney World, Universal Orlando, SeaWorld & LEGOLAND. Plan your perfect park vacation.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo img { height: 40px; }
+    
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav a {
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav a:hover, .nav a.active {
+      color: var(--action-orange);
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Blog Grid */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .blog-card-image {
+      height: 180px;
+      background: linear-gradient(135deg, var(--splash-teal) 0%, var(--primary-blue) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    
+    .blog-card-content {
+      padding: 1.5rem;
+    }
+    
+    .blog-card-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+    }
+    
+    .blog-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--base-dark);
+    }
+    
+    .blog-card p {
+      color: var(--gray-600);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    
+    .blog-card-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      color: var(--gray-600);
+    }
+    
+    /* Affiliate Banner */
+    .affiliate-banner {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .affiliate-banner h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .affiliate-banner p {
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
+    
+    .affiliate-btn {
+      display: inline-block;
+      background: white;
+      color: var(--action-orange);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+    
+    .affiliate-btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--base-dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    
+    .footer p {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .hero h1 { font-size: 2rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      <nav class="nav">
+        <a href="/">Rides</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/guides/">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Orlando Park Tips & Guides</h1>
+    <p>Expert advice, insider secrets, and money-saving tips for your perfect Disney World, Universal, SeaWorld & LEGOLAND vacation.</p>
+  </section>
+
+  <div class="container">
+    <div class="affiliate-banner">
+      <h3>🏰 Save Big on Park Tickets</h3>
+      <p>Get discounted tickets through our trusted partner and save up to $50 per person</p>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" class="affiliate-btn" target="_blank" rel="noopener">Get Discounted Tickets</a>
+    </div>
+
+    <div class="blog-grid">
+      <a href="/blog/best-rides-5-year-olds-disney-world.html" class="blog-card">
+        <div class="blog-card-image">🎠</div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Best Rides for 5-Year-Olds at Disney World</h2>
+          <p>A parent-tested guide to the perfect rides for kindergarteners—no meltdowns, no scary surprises, just pure magic.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Magic Kingdom</span>
+            <span class="tag">Kids</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="blog-card">
+        <div class="blog-card-image">🤰</div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Pregnant Mom's Guide to Magic Kingdom</h2>
+          <p>Which rides are safe during pregnancy? Where are the best rest spots? Everything expectant moms need to know.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Pregnancy</span>
+            <span class="tag">Magic Kingdom</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/blog/universal-vs-disney-comparison.html" class="blog-card">
+        <div class="blog-card-image">⚡</div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Comparison</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Universal vs Disney: Which Is Better for Your Family?</h2>
+          <p>Head-to-head comparison of rides, food, hotels, and value to help you decide where to spend your vacation dollars.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Universal</span>
+            <span class="tag">Disney</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site at no extra cost to you</p>
+  </footer>
+</body>
+</html>
