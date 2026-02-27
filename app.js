@@ -1751,8 +1751,8 @@ const parkConfig = {
   },
   'LEGOLAND Florida': {
     id: 'll',
-    resort: 'SeaWorld Parks',
-    parent: 'SeaWorld',
+    resort: 'LEGOLAND Parks',
+    parent: 'LEGOLAND',
     image: 'legoland.jpeg',
     affiliateLink: 'https://www.jdoqocy.com/click-101693488-12540781',
     affiliateText: 'Save up to $43 on LEGOLAND Tickets'
