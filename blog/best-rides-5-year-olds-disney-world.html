@@ -5,24 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Rides for 5-Year-Olds at Disney World | Plan Your Park</title>
   <meta name="description" content="Discover the best rides for 5 year olds at Disney World! Our parent-tested guide covers Magic Kingdom, Hollywood Studios, Animal Kingdom, and EPCOT favorites.">
-  <meta name="keywords" content="best rides for 5 year olds disney world, disney world rides for 5 year olds, magic kingdom rides for kids">
   <meta name="author" content="PlanYourPark.com">
   <meta property="og:title" content="Best Rides for 5-Year-Olds at Disney World">
   <meta property="og:description" content="A parent-tested guide to the perfect rides for kindergarteners at Disney World">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://planyourpark.com/blog/best-rides-5-year-olds-disney-world.html">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Best Rides for 5-Year-Olds at Disney World",
-    "description": "Discover the best rides for 5 year olds at Disney World!",
-    "author": {"@type": "Organization", "name": "PlanYourPark.com"},
-    "datePublished": "2026-02-26",
-    "publisher": {"@type": "Organization", "name": "PlanYourPark.com"}
-  }
-  </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +48,7 @@
     }
     
     .header-content {
-      max-width: 1200px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 1rem 2rem;
       display: flex;
@@ -71,61 +56,58 @@
       justify-content: space-between;
     }
     
-    .logo img { height: 40px; }
+    .logo img { height: 36px; }
     
-    .nav { display: flex; gap: 2rem; }
+    .nav { display: flex; gap: 1.5rem; }
     .nav a {
       color: var(--gray-600);
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.9375rem;
     }
-    .nav a:hover, .nav a.active { color: var(--action-orange); }
+    .nav a:hover { color: var(--action-orange); }
     
     .article {
-      max-width: 800px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 2rem;
       background: var(--white);
     }
     
     .article-header {
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid var(--gray-200);
+      margin-bottom: 1.5rem;
     }
     
     .article-meta {
-      display: flex;
-      gap: 1rem;
       color: var(--gray-600);
       font-size: 0.875rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     
     .article h1 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
-      line-height: 1.2;
+      font-size: 2rem;
+      line-height: 1.25;
       margin-bottom: 1rem;
     }
     
     .article h2 {
       font-family: var(--font-heading);
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.375rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
       color: var(--primary-blue);
     }
     
     .article h3 {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       margin-top: 1.5rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
     
     .article p {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     
     .article a {
@@ -133,67 +115,69 @@
       text-decoration: none;
     }
     
-    .article a:hover {
-      text-decoration: underline;
+    .article a:hover { text-decoration: underline; }
+    
+    .article strong { color: var(--base-dark); }
+    
+    .article ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
     }
     
-    .article strong {
-      color: var(--base-dark);
-    }
-    
-    .affiliate-box {
-      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin: 2rem 0;
-      text-align: center;
-    }
-    
-    .affiliate-box h4 {
-      font-family: var(--font-heading);
+    .article li {
       margin-bottom: 0.5rem;
     }
     
-    .affiliate-box a {
+    /* Inline CTA */
+    .inline-cta {
+      background: var(--gray-100);
+      border-left: 3px solid var(--action-orange);
+      padding: 0.75rem 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9375rem;
+    }
+    
+    .inline-cta a {
+      color: var(--action-orange);
+      font-weight: 600;
+    }
+    
+    /* Bottom CTA */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .bottom-cta p {
+      margin-bottom: 0.75rem;
+      font-size: 0.9375rem;
+    }
+    
+    .bottom-cta a {
       display: inline-block;
       background: white;
       color: var(--action-orange);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin-top: 0.75rem;
+      font-size: 0.875rem;
     }
     
-    .toc {
-      background: var(--gray-100);
-      padding: 1.5rem;
-      border-radius: 8px;
+    hr {
+      border: none;
+      border-top: 1px solid var(--gray-200);
       margin: 2rem 0;
     }
     
-    .toc h4 {
-      font-family: var(--font-heading);
-      margin-bottom: 1rem;
-    }
-    
-    .toc ul {
-      list-style: none;
-    }
-    
-    .toc li {
-      margin-bottom: 0.5rem;
-    }
-    
-    .toc a {
-      color: var(--gray-600);
-    }
-    
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       .nav { display: none; }
-      .article h1 { font-size: 1.75rem; }
-      .article { padding: 2rem 1rem; }
+      .article { padding: 1.5rem; }
+      .article h1 { font-size: 1.625rem; }
     }
   </style>
 </head>
@@ -203,42 +187,25 @@
       <a href="/" class="logo"><img src="/logo-full.png" alt="Plan Your Park"></a>
       <nav class="nav">
         <a href="/">Rides</a>
-        <a href="/blog/" class="active">Blog</a>
+        <a href="/blog/">Blog</a>
       </nav>
     </div>
   </header>
 
   <article class="article">
     <header class="article-header">
-      <div class="article-meta">
-        <span>Disney World</span>
-        <span>•</span>
-        <span>February 26, 2026</span>
-      </div>
+      <div class="article-meta">Disney World • February 26, 2026</div>
       <h1>Best Rides for 5-Year-Olds at Disney World</h1>
       <p>A parent-tested guide to the perfect rides for kindergarteners—no meltdowns, no scary surprises, just pure magic.</p>
     </header>
 
-    <div class="affiliate-box">
-      <h4>🏰 Save Up to $50 on Disney Tickets</h4>
-      <p>Get discounted park hopper tickets through our trusted partner</p>
-      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets</a>
-    </div>
-
-    <div class="toc">
-      <h4>Table of Contents</h4>
-      <ul>
-        <li><a href="#magic-kingdom">Magic Kingdom</a></li>
-        <li><a href="#hollywood-studios">Hollywood Studios</a></li>
-        <li><a href="#animal-kingdom">Animal Kingdom</a></li>
-        <li><a href="#epcot">EPCOT</a></li>
-        <li><a href="#tips">Essential Tips</a></li>
-      </ul>
-    </div>
-
     <p>Planning a Disney World trip with a 5-year-old? You're in that sweet spot where your little one is old enough to remember the magic but still young enough to believe in it completely.</p>
 
-    <h2 id="magic-kingdom">Magic Kingdom: Where the Magic Begins</h2>
+    <div class="inline-cta">
+      💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
+    </div>
+
+    <h2>Magic Kingdom: Where the Magic Begins</h2>
     <p>Magic Kingdom is the heart of Disney World and the park where you'll find the most ride options perfect for 5-year-olds.</p>
 
     <h3>Peter Pan's Flight</h3>
@@ -253,13 +220,7 @@
     <h3>Buzz Lightyear's Space Ranger Spin</h3>
     <p>Interactive rides are gold for 5-year-olds. Kids get competitive trying to rack up points shooting at targets.</p>
 
-    <div class="affiliate-box">
-      <h4>🎢 Planning Your Disney Trip?</h4>
-      <p>Check wait times, Genie+ tips, and more with Undercover Tourist</p>
-      <a href="https://www.undercovertourist.com/" target="_blank" rel="noopener">Learn More</a>
-    </div>
-
-    <h2 id="hollywood-studios">Hollywood Studios: Action and Adventure</h2>
+    <h2>Hollywood Studios: Action and Adventure</h2>
     
     <h3>Toy Story Mania!</h3>
     <p>This 4D carnival-style game is an absolute must-do. The competition factor makes it fun for the whole family.</p>
@@ -267,7 +228,7 @@
     <h3>Mickey & Minnie's Runaway Railway</h3>
     <p>Disney's newest trackless ride is pure joy from start to finish. <strong>Height requirement:</strong> None</p>
 
-    <h2 id="animal-kingdom">Animal Kingdom: Wild Encounters</h2>
+    <h2>Animal Kingdom: Wild Encounters</h2>
 
     <h3>Kilimanjaro Safaris</h3>
     <p>A 20-minute open-air truck tour through an African savanna with real animals. Best time: early morning or late afternoon.</p>
@@ -275,25 +236,27 @@
     <h3>Na'vi River Journey</h3>
     <p>A gentle boat ride through the bioluminescent forests of Pandora. <strong>Height requirement:</strong> None</p>
 
-    <h2 id="epcot">EPCOT: World Discovery</h2>
+    <h2>EPCOT: World Discovery</h2>
 
     <h3>Frozen Ever After</h3>
     <p>A boat ride through Arendelle featuring Anna, Elsa, and Olaf. Two small backward drops that are very mild.</p>
 
-    <h2 id="tips">Essential Tips for Parents</h2>
+    <h2>Essential Tips for Parents</h2>
 
-    <h3>Height Requirements to Know</h3>
+    <p><strong>Height Requirements to Know:</strong></p>
     <ul>
       <li><strong>32 inches:</strong> Alien Swirling Saucers</li>
       <li><strong>40 inches:</strong> Slinky Dog Dash, Seven Dwarfs Mine Train</li>
     </ul>
 
-    <h3>Rider Switch</h3>
-    <p>Use <a href="https://www.undercovertourist.com/blog/disney-rider-switch/">Rider Switch</a> for rides your 5-year-old can't do. One parent waits while the other rides, then you swap without waiting again.</p>
+    <p><strong>Rider Switch:</strong> Use <a href="https://www.undercovertourist.com/blog/disney-rider-switch/">Rider Switch</a> for rides your 5-year-old can't do. One parent waits while the other rides, then you swap without waiting again.</p>
 
     <hr>
 
-    <p><em>Ready to start planning? Grab discounted tickets through <a href="https://www.undercovertourist.com/">Undercover Tourist</a> and save money for more Mickey ice cream bars.</em></p>
+    <div class="bottom-cta">
+      <p>Ready to start planning? Grab discounted tickets and save money for more Mickey ice cream bars.</p>
+      <a href="https://www.undercovertourist.com/" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+    </div>
   </article>
 </body>
 </html>

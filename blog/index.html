@@ -85,18 +85,18 @@
     .hero {
       background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
       color: white;
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
     
     .hero h1 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
     }
     
     .hero p {
-      font-size: 1.125rem;
+      font-size: 1rem;
       opacity: 0.9;
       max-width: 600px;
       margin: 0 auto;
@@ -106,13 +106,13 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 2rem;
     }
     
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
     }
     
     .blog-card {
@@ -131,7 +131,7 @@
     }
     
     .blog-card-image {
-      height: 180px;
+      height: 160px;
       background: linear-gradient(135deg, var(--splash-teal) 0%, var(--primary-blue) 100%);
       display: flex;
       align-items: center;
@@ -140,86 +140,87 @@
     }
     
     .blog-card-content {
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
     
     .blog-card-meta {
       display: flex;
-      gap: 1rem;
-      font-size: 0.875rem;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
       color: var(--gray-500);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
     
     .blog-card h2 {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
       color: var(--base-dark);
+      line-height: 1.3;
     }
     
     .blog-card p {
       color: var(--gray-600);
-      font-size: 0.9375rem;
-      line-height: 1.6;
+      font-size: 0.875rem;
+      line-height: 1.5;
     }
     
     .blog-card-tags {
       display: flex;
       gap: 0.5rem;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
     }
     
     .tag {
       font-size: 0.75rem;
-      padding: 0.25rem 0.75rem;
+      padding: 0.2rem 0.6rem;
       background: var(--gray-100);
       border-radius: var(--radius-sm);
       color: var(--gray-600);
     }
     
-    /* Affiliate Banner */
-    .affiliate-banner {
+    /* Compact Affiliate CTA */
+    .affiliate-cta {
       background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
       color: white;
-      padding: 2rem;
-      border-radius: var(--radius-lg);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
       text-align: center;
-      margin: 3rem 0;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
     
-    .affiliate-banner h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+    .affiliate-cta span {
+      font-weight: 600;
     }
     
-    .affiliate-banner p {
-      margin-bottom: 1rem;
-      opacity: 0.95;
-    }
-    
-    .affiliate-btn {
-      display: inline-block;
+    .affiliate-cta a {
       background: white;
       color: var(--action-orange);
-      padding: 0.75rem 1.5rem;
-      border-radius: var(--radius-md);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.875rem;
       transition: transform 0.2s;
     }
     
-    .affiliate-btn:hover {
-      transform: translateY(-2px);
+    .affiliate-cta a:hover {
+      transform: translateY(-1px);
     }
     
     /* Footer */
     .footer {
       background: var(--base-dark);
       color: white;
-      padding: 3rem 2rem;
+      padding: 2rem;
       text-align: center;
+      font-size: 0.875rem;
     }
     
     .footer p {
@@ -228,8 +229,9 @@
     
     @media (max-width: 768px) {
       .nav { display: none; }
-      .hero h1 { font-size: 2rem; }
+      .hero h1 { font-size: 1.5rem; }
       .blog-grid { grid-template-columns: 1fr; }
+      .affiliate-cta { flex-direction: column; gap: 0.75rem; }
     }
   </style>
 </head>
@@ -242,21 +244,19 @@
       <nav class="nav">
         <a href="/">Rides</a>
         <a href="/blog/" class="active">Blog</a>
-        <a href="/guides/">Guides</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <h1>Orlando Park Tips & Guides</h1>
-    <p>Expert advice, insider secrets, and money-saving tips for your perfect Disney World, Universal, SeaWorld & LEGOLAND vacation.</p>
+    <p>Expert advice and money-saving tips for your perfect Disney World, Universal, SeaWorld & LEGOLAND vacation.</p>
   </section>
 
   <div class="container">
-    <div class="affiliate-banner">
-      <h3>🏰 Save Big on Park Tickets</h3>
-      <p>Get discounted tickets through our trusted partner and save up to $50 per person</p>
-      <a href="https://www.dpbolvw.net/click-101693488-5527150" class="affiliate-btn" target="_blank" rel="noopener">Get Discounted Tickets</a>
+    <div class="affiliate-cta">
+      <span>🏰 Save up to $50 on park tickets</span>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
     </div>
 
     <div class="blog-grid">
@@ -311,7 +311,7 @@
   </div>
 
   <footer class="footer">
-    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site at no extra cost to you</p>
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
   </footer>
 </body>
 </html>
