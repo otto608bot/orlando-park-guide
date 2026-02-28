@@ -1837,6 +1837,19 @@ function updateMobileHeightDisplay(value) {
   elements.mobileHeightDisplay.innerHTML = displayText + ' <span>height</span>';
 }
 
+// Mobile navigation sheet
+function openMobileNav() {
+  document.getElementById('mobile-nav-sheet').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileNav(event) {
+  if (!event || event.target === document.getElementById('mobile-nav-sheet')) {
+    document.getElementById('mobile-nav-sheet').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
 // Mobile filter sheet
 function openMobileFilters() {
   elements.mobileFilterSheet.classList.add('active');
@@ -2167,5 +2180,7 @@ init();
 window.toggleFilter = toggleFilter;
 window.showParkDetail = showParkDetail;
 window.showLeaderboard = showLeaderboard;
+window.openMobileNav = openMobileNav;
+window.closeMobileNav = closeMobileNav;
 window.openMobileFilters = openMobileFilters;
 window.closeMobileFilters = closeMobileFilters;
