@@ -1441,7 +1441,92 @@
       </nav>
     </div>
   </div>
-  
+
+  <!-- Email Capture Section -->
+  <section class="email-section">
+    <div class="email-section-content">
+      <h3>🏰 Get Weekly Disney Tips</h3>
+      <p>Money-saving hacks, ride guides, and insider secrets delivered to your inbox.</p>
+      <form class="email-form-inline" action="https://formspree.io/f/xpqjewvb" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <input type="hidden" name="source" value="homepage">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="email-note">No spam. Unsubscribe anytime. Join 2,000+ parents.</p>
+    </div>
+  </section>
+
+  <style>
+    .email-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+    }
+    .email-section-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+    .email-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .email-section p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    .email-form-inline {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .email-form-inline input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .email-form-inline button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form-inline button:hover {
+      background: #e05a0f;
+    }
+    .email-note {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      .email-form-inline {
+        flex-direction: column;
+        align-items: center;
+      }
+      .email-form-inline input[type="email"] {
+        width: 100%;
+        max-width: none;
+      }
+      .email-form-inline button {
+        width: 100%;
+      }
+    }
+  </style>
+
   <script src="app.js?v=6"></script>
 </body>
 </html>
