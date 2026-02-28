@@ -7,7 +7,25 @@
     "start": "python3 -m http.server 8080",
     "serve": "npx serve ."
   },
-  "keywords": ["orlando", "theme-parks", "disney", "universal", "accessibility"],
+  "keywords": [
+    "orlando",
+    "theme-parks",
+    "disney",
+    "universal",
+    "accessibility"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otto608bot/orlando-park-guide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otto608bot/orlando-park-guide/issues"
+  },
+  "homepage": "https://github.com/otto608bot/orlando-park-guide#readme",
+  "dependencies": {
+    "@google/genai": "^1.43.0"
+  }
 }
