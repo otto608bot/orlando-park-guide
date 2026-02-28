@@ -1854,12 +1854,19 @@ function closeMobileNav(event) {
 function openMobileFilters() {
   elements.mobileFilterSheet.classList.add('active');
   document.body.style.overflow = 'hidden';
+  // Sync mobile slider with current filter state
+  if (elements.mobileHeightSlider) {
+    elements.mobileHeightSlider.value = state.filters.height;
+    updateMobileHeightDisplay(state.filters.height);
+  }
 }
 
 function closeMobileFilters(event) {
   if (!event || event.target === elements.mobileFilterSheet) {
     elements.mobileFilterSheet.classList.remove('active');
     document.body.style.overflow = '';
+    // Ensure main view refreshes with current filters
+    render();
   }
 }
 
