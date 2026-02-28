@@ -1830,11 +1830,40 @@ function handleMobileHeightChange(e) {
 function updateHeightDisplay(value) {
   const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
   elements.heightDisplay.innerHTML = displayText + ' <span>height</span>';
+  
+  // Highlight the appropriate ruler mark
+  highlightRulerMark(value, false);
 }
 
 function updateMobileHeightDisplay(value) {
   const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
   elements.mobileHeightDisplay.innerHTML = displayText + ' <span>height</span>';
+  
+  // Highlight the appropriate ruler mark
+  highlightRulerMark(value, true);
+}
+
+function highlightRulerMark(value, isMobile) {
+  const prefix = isMobile ? 'mobile-' : '';
+  const marks = document.querySelectorAll(`#${prefix}height-slider`).length > 0 
+    ? document.querySelectorAll(`#${prefix}height-slider`).item(0).closest('.height-filter').querySelectorAll('.height-ruler-marks span')
+    : [];
+  
+  marks.forEach((mark, index) => {
+    mark.classList.remove('active');
+    
+    // Determine which mark should be active based on value
+    // 0 = Any (first mark), 1-35 = approaching 36, 36-47 = 36, 48-53 = 48, 54 = 54+
+    let shouldBeActive = false;
+    if (index === 0 && value === 0) shouldBeActive = true;
+    else if (index === 1 && value >= 30 && value < 42) shouldBeActive = true;
+    else if (index === 2 && value >= 42 && value < 51) shouldBeActive = true;
+    else if (index === 3 && value >= 51) shouldBeActive = true;
+    
+    if (shouldBeActive) {
+      mark.classList.add('active');
+    }
+  });
 }
 
 // Mobile navigation sheet

@@ -359,6 +359,15 @@
       font-weight: 600;
     }
     
+    .height-ruler-marks span {
+      transition: color 0.2s, transform 0.2s;
+    }
+    
+    .height-ruler-marks span.active {
+      color: var(--action-orange);
+      transform: scale(1.1);
+    }
+    
     input[type="range"] {
       -webkit-appearance: none;
       width: 100%;
