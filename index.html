@@ -176,6 +176,117 @@
       box-shadow: var(--shadow-orange);
     }
     
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--gray-600);
+      margin-right: var(--space-sm);
+    }
+    
+    .mobile-menu-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile Navigation Sheet */
+    .mobile-nav-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .mobile-nav-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      background: var(--white);
+      padding: var(--space-xl);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .mobile-nav-sheet.active .mobile-nav-content {
+      transform: translateX(0);
+    }
+    
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .mobile-nav-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    
+    .close-nav-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      padding: var(--space-sm);
+    }
+    
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      color: var(--base-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-radius: var(--radius-md);
+      transition: background 0.2s;
+    }
+    
+    .mobile-nav-links a:hover {
+      background: var(--gray-100);
+    }
+    
+    .mobile-nav-links a.active {
+      color: var(--action-orange);
+      background: var(--gray-100);
+    }
+    
+    @media (max-width: 1024px) {
+      .nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+    }
+    
     /* Layout Container */
     .layout {
       max-width: 1400px;
@@ -1019,6 +1130,13 @@
 <body>
   <header class="header">
     <div class="header-content">
+      <button class="mobile-menu-btn" onclick="openMobileNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
       <a href="/" class="logo">
         <img src="logo-full.png" alt="Plan Your Park" class="logo-img">
       </a>
@@ -1044,12 +1162,6 @@
           <div class="height-display" id="height-display">Any <span>height</span></div>
           <div class="height-ruler">
             <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
-          </div>
-          <div class="height-ruler-marks">
-            <span>Any</span>
-            <span>36″</span>
-            <span>48″</span>
-            <span>54″</span>
           </div>
         </div>
         
@@ -1235,12 +1347,6 @@
         <div class="height-ruler">
           <input type="range" id="mobile-height-slider" min="0" max="54" value="0" step="1">
         </div>
-        <div class="height-ruler-marks">
-          <span>Any</span>
-          <span>36″</span>
-          <span>48″</span>
-          <span>54″</span>
-        </div>
       </div>
       
       <div class="filter-chips" style="margin-top: var(--space-lg);">
@@ -1298,6 +1404,117 @@
     </div>
   </div>
   
+  <!-- Mobile Navigation Sheet -->
+  <div class="mobile-nav-sheet" id="mobile-nav-sheet" onclick="closeMobileNav(event)">
+    <div class="mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="close-nav-btn" onclick="closeMobileNav()">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="/" class="active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Rides
+        </a>
+        <a href="/blog/">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Email Capture Section -->
+  <section class="email-section">
+    <div class="email-section-content">
+      <h3>🏰 Get Weekly Disney Tips</h3>
+      <p>Money-saving hacks, ride guides, and insider secrets delivered to your inbox.</p>
+      <form class="email-form-inline" action="https://formspree.io/f/xpqjewvb" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <input type="hidden" name="source" value="homepage">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="email-note">No spam. Unsubscribe anytime. Join 2,000+ parents.</p>
+    </div>
+  </section>
+
+  <style>
+    .email-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+    }
+    .email-section-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+    .email-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .email-section p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    .email-form-inline {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .email-form-inline input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .email-form-inline button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form-inline button:hover {
+      background: #e05a0f;
+    }
+    .email-note {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      .email-form-inline {
+        flex-direction: column;
+        align-items: center;
+      }
+      .email-form-inline input[type="email"] {
+        width: 100%;
+        max-width: none;
+      }
+      .email-form-inline button {
+        width: 100%;
+      }
+    }
+  </style>
+
   <script src="app.js?v=6"></script>
 </body>
 </html>
