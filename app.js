@@ -2058,8 +2058,18 @@ function renderParksGrid() {
     const previewRides = rides.slice(0, 3);
     const remainingCount = rides.length - previewRides.length;
 
+    // Build park URL with current filters
+    const parkSlug = parkName.toLowerCase().replace(/ /g, '-');
+    const params = new URLSearchParams();
+    params.set('park', parkSlug);
+    if (state.filters.height > 0) params.set('height', state.filters.height);
+    if (state.filters.pregnancy) params.set('pregnant', 'true');
+    if (state.filters.wheelchair) params.set('wheelchair', 'WAV');
+    if (state.filters.sensory) params.set('sensory', 'dark,loud,sudden,enclosed,strobe');
+    const parkUrl = '/park.html?' + params.toString();
+
     return `
-      <div class="park-card" onclick="showParkDetail('${parkName}')">
+      <a href="${parkUrl}" class="park-card">
         <div class="park-card-image" style="background-image: url('${config.image}')"></div>
         <div class="park-card-content">
           <div class="park-card-header">
@@ -2078,7 +2088,7 @@ function renderParksGrid() {
             ${remainingCount > 0 ? '<span class="more-rides">+' + remainingCount + ' more</span>' : ''}
           </div>
         </div>
-      </div>
+      </a>
     `;
   }).join('');
 }

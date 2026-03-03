@@ -471,10 +471,16 @@
     
     // Get park URL for linking
     function getParkUrl(parkName) {
-      if (parkName.includes('Magic Kingdom')) return '/magic-kingdom.html';
-      if (parkName.includes('Epcot')) return '/epcot.html';
-      if (parkName.includes('Hollywood')) return '/hollywood-studios.html';
-      if (parkName.includes('Animal Kingdom')) return '/animal-kingdom.html';
+      const parkSlugs = {
+        'Magic Kingdom': 'magic-kingdom',
+        'EPCOT': 'epcot',
+        'Hollywood Studios': 'hollywood-studios',
+        'Animal Kingdom': 'animal-kingdom'
+      };
+      
+      for (const [name, slug] of Object.entries(parkSlugs)) {
+        if (parkName.includes(name)) return `/park.html?park=${slug}`;
+      }
       return null;
     }
     
