@@ -86,10 +86,120 @@
     
     .nav a:hover, .nav a.active { color: var(--action-orange); }
     
-    .container {
+    .layout {
       max-width: 1400px;
       margin: 0 auto;
+      display: flex;
+      gap: 2rem;
       padding: 2rem;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .sidebar-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .sidebar-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .filter-chips {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .filter-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--gray-100);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      transition: all 0.2s;
+      font-family: var(--font-body);
+      text-align: left;
+    }
+    
+    .filter-chip:hover {
+      border-color: var(--gray-300);
+      background: var(--gray-200);
+    }
+    
+    .filter-chip.active {
+      background: rgba(243, 112, 33, 0.1);
+      border-color: var(--action-orange);
+      color: var(--action-orange);
+    }
+    
+    /* Ticket Cards */
+    .ticket-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .ticket-card {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ticket-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ticket-card.disney {
+      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+    }
+    
+    .ticket-card.universal {
+      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
+    }
+    
+    .ticket-card.seaworld {
+      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
+    }
+    
+    .ticket-card.legoland {
+      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
+    }
+    
+    /* Main Content */
+    .main {
+      flex: 1;
+      min-width: 0;
     }
     
     .hero {
@@ -112,98 +222,29 @@
       color: var(--gray-600);
     }
     
-    /* Filters */
-    .filters {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       margin-bottom: 2rem;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-200);
-    }
-    
-    .filter-row {
-      display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
     }
     
-    .filter-row:last-child { margin-bottom: 0; }
-    
-    .filter-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+    .stat-item {
+      text-align: center;
     }
     
-    .filter-group label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    
-    .filter-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    
-    .filter-chip {
-      padding: 0.5rem 1rem;
-      background: var(--gray-100);
-      border: 2px solid var(--gray-200);
-      border-radius: var(--radius-full);
-      cursor: pointer;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      transition: all 0.2s;
-      font-family: var(--font-body);
-    }
-    
-    .filter-chip:hover {
-      border-color: var(--gray-300);
-      background: var(--gray-200);
-    }
-    
-    .filter-chip.active {
-      background: rgba(243, 112, 33, 0.1);
-      border-color: var(--action-orange);
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
       color: var(--action-orange);
     }
     
-    /* View Toggle */
-    .view-toggle {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    
-    .view-btn {
-      padding: 0.75rem 1.5rem;
-      background: var(--white);
-      border: 2px solid var(--gray-200);
-      border-radius: var(--radius-full);
-      cursor: pointer;
+    .stat-label {
       font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--gray-600);
-      transition: all 0.2s;
-      font-family: var(--font-body);
-    }
-    
-    .view-btn:hover {
-      border-color: var(--gray-300);
-    }
-    
-    .view-btn.active {
-      background: var(--action-orange);
-      border-color: var(--action-orange);
-      color: white;
+      color: var(--gray-500);
     }
     
     /* Matrix View */
@@ -235,96 +276,25 @@
       z-index: 10;
     }
     
-    .matrix-table th.character-col {
-      width: 200px;
+    .matrix-table th.restaurant-col {
+      width: 250px;
+      min-width: 250px;
+    }
+    
+    .matrix-table th.meal-col {
       min-width: 200px;
-    }
-    
-    .matrix-table th.location-col {
-      min-width: 150px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    
-    .matrix-table th.location-col:hover {
-      background: var(--gray-200);
     }
     
     .matrix-table td {
       padding: 0.75rem 1rem;
       border-bottom: 1px solid var(--gray-200);
-      vertical-align: middle;
+      vertical-align: top;
     }
     
     .matrix-table tr:hover td {
       background: var(--gray-50);
     }
     
-    .character-cell {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .character-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-full);
-      background: linear-gradient(135deg, var(--primary-blue), var(--deep-purple));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    
-    .character-name {
-      font-weight: 600;
-      color: var(--base-dark);
-    }
-    
-    .meal-indicator {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    
-    .meal-dot {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: var(--radius-sm);
-      font-weight: 500;
-    }
-    
-    .meal-dot.breakfast {
-      background: rgba(243, 112, 33, 0.1);
-      color: var(--action-orange);
-    }
-    
-    .meal-dot.lunch {
-      background: rgba(74, 157, 232, 0.1);
-      color: var(--primary-blue);
-    }
-    
-    .meal-dot.dinner {
-      background: rgba(90, 79, 207, 0.1);
-      color: var(--deep-purple);
-    }
-    
-    .price-tag {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      margin-top: 0.25rem;
-    }
-    
-    .no-meal {
-      color: var(--gray-300);
-      font-size: 0.875rem;
-    }
-    
-    /* Location Header Card */
     .location-header {
       display: flex;
       flex-direction: column;
@@ -334,7 +304,7 @@
     .location-name {
       font-weight: 700;
       color: var(--base-dark);
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       line-height: 1.3;
     }
     
@@ -351,250 +321,51 @@
       border-radius: var(--radius-sm);
       font-size: 0.75rem;
       font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .location-park:hover {
+      opacity: 0.8;
     }
     
     .location-park.disney { background: #1a5fb4; color: white; }
-    .location-park.universal { background: #c01c28; color: white; }
     .location-park.epcot { background: #5A4FCF; color: white; }
     .location-park.hollywood { background: #c01c28; color: white; }
     .location-park.animal { background: #26a269; color: white; }
     .location-park.resort { background: var(--gray-600); color: white; }
     
-    /* Card View */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .meal-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--gray-200);
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-sm);
-    }
-    
-    .meal-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gray-300);
-    }
-    
-    .meal-card-header {
-      padding: 1.25rem;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    
-    .meal-card-title {
-      font-family: var(--font-heading);
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--base-dark);
-      margin-bottom: 0.5rem;
-    }
-    
-    .meal-card-location {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--gray-600);
-    }
-    
-    .meal-card-body {
-      padding: 1.25rem;
-    }
-    
-    .characters-section {
-      margin-bottom: 1rem;
-    }
-    
-    .section-label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
-    }
-    
     .characters-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.25rem;
     }
     
     .character-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.375rem;
-      padding: 0.375rem 0.75rem;
-      background: var(--gray-100);
-      border-radius: var(--radius-full);
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--base-dark);
-    }
-    
-    .character-chip.princess {
-      background: rgba(90, 79, 207, 0.1);
-      color: var(--deep-purple);
-    }
-    
-    .character-chip.fab-five {
-      background: rgba(243, 112, 33, 0.1);
-      color: var(--action-orange);
-    }
-    
-    .meals-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    
-    .meal-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.625rem 0.875rem;
-      background: var(--gray-50);
-      border-radius: var(--radius-md);
-    }
-    
-    .meal-row.available {
-      background: rgba(56, 178, 172, 0.08);
-    }
-    
-    .meal-info {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .meal-time {
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--base-dark);
-    }
-    
-    .meal-type {
       font-size: 0.75rem;
-      color: var(--gray-500);
-    }
-    
-    .meal-price {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      color: var(--action-orange);
-      font-size: 0.9375rem;
-    }
-    
-    .meal-price span {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      font-weight: 500;
-    }
-    
-    .meal-card-footer {
-      padding: 1rem 1.25rem;
-      background: var(--gray-50);
-      border-top: 1px solid var(--gray-200);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .dining-plan-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
       padding: 0.25rem 0.5rem;
-      background: rgba(74, 157, 232, 0.1);
-      color: var(--primary-blue);
+      background: var(--gray-100);
+      color: var(--base-dark);
       border-radius: var(--radius-sm);
+      font-weight: 500;
+    }
+    
+    .price-tag {
       font-size: 0.75rem;
       font-weight: 600;
-    }
-    
-    .book-btn {
-      padding: 0.5rem 1rem;
-      background: var(--action-orange);
-      color: white;
-      border: none;
-      border-radius: var(--radius-full);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    
-    .book-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
-    }
-    
-    /* Stats Bar */
-    .stats-bar {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    
-    .stat-item {
-      text-align: center;
-    }
-    
-    .stat-value {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 800;
       color: var(--action-orange);
+      margin-top: 0.5rem;
     }
     
-    .stat-label {
+    .no-meal {
+      color: var(--gray-300);
       font-size: 0.875rem;
-      color: var(--gray-500);
     }
-    
-    /* Legend */
-    .legend {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--gray-600);
-    }
-    
-    .legend-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: var(--radius-full);
-    }
-    
-    .legend-dot.breakfast { background: var(--action-orange); }
-    .legend-dot.lunch { background: var(--primary-blue); }
-    .legend-dot.dinner { background: var(--deep-purple); }
     
     /* Responsive */
-    @media (max-width: 768px) {
-      .container { padding: 1rem; }
-      .hero h1 { font-size: 1.75rem; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .filter-row { flex-direction: column; }
-      .nav { display: none; }
+    @media (max-width: 1024px) {
+      .layout { flex-direction: column; }
+      .sidebar { display: none; }
     }
   </style>
 </head>
@@ -612,131 +383,127 @@
     </div>
   </header>
 
-  <div class="container">
-    <div class="hero">
-      <h1>Character Dining <span>Matrix</span></h1>
-      <p>Find where to meet your favorite characters at Disney World</p>
-    </div>
-    
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-value" id="stat-locations">14</div>
-        <div class="stat-label">Locations</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="stat-characters">25+</div>
-        <div class="stat-label">Characters</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" id="stat-breakfast">10</div>
-        <div class="stat-label">Breakfast Options</div>
-      </div>
-    </div>
-    
-    <div class="filters">
-      <div class="filter-row">
-        <div class="filter-group">
-          <label>Location Type</label>
-          <div class="filter-chips">
-            <button class="filter-chip active" data-filter="all">All</button>
-            <button class="filter-chip" data-filter="park">In-Park</button>
-            <button class="filter-chip" data-filter="resort">Resort Hotels</button>
-          </div>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="filter-chips">
+          <button class="filter-chip active" data-filter="all">All Locations</button>
+          <button class="filter-chip" data-filter="park">In-Park Only</button>
+          <button class="filter-chip" data-filter="resort">Resort Hotels</button>
         </div>
       </div>
       
-      <div class="filter-row">
-        <div class="filter-group">
-          <label>Meal Time</label>
-          <div class="filter-chips">
-            <button class="filter-chip active" data-meal="all">All</button>
-            <button class="filter-chip" data-meal="breakfast">Breakfast</button>
-            <button class="filter-chip" data-meal="lunch">Lunch</button>
-            <button class="filter-chip" data-meal="dinner">Dinner</button>
-          </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Meal Time</h3>
+        <div class="filter-chips">
+          <button class="filter-chip active" data-meal="all">All Meals</button>
+          <button class="filter-chip" data-meal="breakfast">Breakfast</button>
+          <button class="filter-chip" data-meal="lunch">Lunch</button>
+          <button class="filter-chip" data-meal="dinner">Dinner</button>
         </div>
       </div>
       
-      <div class="filter-row">
-        <div class="filter-group">
-          <label>Character Type</label>
-          <div class="filter-chips">
-            <button class="filter-chip active" data-character="all">All</button>
-            <button class="filter-chip" data-character="princess">Princesses</button>
-            <button class="filter-chip" data-character="fab-five">Fab Five</button>
-            <button class="filter-chip" data-character="mickey">Mickey</button>
-            <button class="filter-chip" data-character="pooh">Pooh & Friends</button>
-          </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Get Tickets</h3>
+        <div class="ticket-cards">
+          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="ticket-card disney">
+            🏰 Disney World
+          </a>
+          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="ticket-card universal">
+            🎢 Universal
+          </a>
+          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="ticket-card seaworld">
+            🐋 SeaWorld
+          </a>
+          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="ticket-card legoland">
+            🧱 LEGOLAND
+          </a>
+        </div>
+        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: 1rem;">Affiliate links — we earn a commission at no extra cost to you</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="hero">
+        <h1>Character Dining <span>Matrix</span></h1>
+        <p>Find where to meet your favorite characters at Disney World</p>
+      </div>
+      
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-value" id="stat-locations">14</div>
+          <div class="stat-label">Locations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-characters">25+</div>
+          <div class="stat-label">Characters</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-breakfast">10</div>
+          <div class="stat-label">Breakfast Options</div>
         </div>
       </div>
-    </div>
-    
-    <div class="legend">
-      <div class="legend-item">
-        <span class="location-park disney" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Magic Kingdom</span>
+      
+      <div id="content-area">
+        <!-- Matrix injected by JavaScript -->
       </div>
-      <div class="legend-item">
-        <span class="location-park epcot" style="padding:0.25rem 0.5rem;font-size:0.75rem;">EPCOT</span>
-      </div>
-      <div class="legend-item">
-        <span class="location-park hollywood" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Hollywood Studios</span>
-      </div>
-      <div class="legend-item">
-        <span class="location-park animal" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Animal Kingdom</span>
-      </div>
-      <div class="legend-item">
-        <span class="location-park resort" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Resort Hotel</span>
-      </div>
-    </div>
-    
-    <div class="view-toggle">
-      <button class="view-btn" data-view="cards">Card View</button>
-      <button class="view-btn active" data-view="matrix">Matrix View</button>
-    </div>
-    
-    <div id="content-area">
-      <!-- Content injected by JavaScript -->
-    </div>
+    </main>
   </div>
 
   <script src="data/character-meal-data.js"></script>
   <script>
     // State
-    let currentView = 'matrix';
     let filters = {
       location: 'all',
-      meal: 'all',
-      character: 'all'
+      meal: 'all'
     };
     
-    // Character type detection
-    function getCharacterType(character) {
-      const princesses = ['Cinderella', 'Ariel', 'Belle', 'Aurora', 'Jasmine', 'Snow White', 'Tiana', 'Rapunzel', 'Mirabel'];
-      const fabFive = ['Mickey', 'Minnie', 'Donald', 'Goofy', 'Pluto'];
-      const poohFriends = ['Pooh', 'Tigger', 'Piglet', 'Eeyore'];
-      
-      if (princesses.some(p => character.includes(p))) return 'princess';
-      if (fabFive.some(f => character.includes(f))) return 'fab-five';
-      if (poohFriends.some(p => character.includes(p))) return 'pooh';
-      return 'other';
+    // Park order for sorting
+    const parkOrder = {
+      'Magic Kingdom': 1,
+      'Epcot': 2,
+      'Disney\'s Hollywood Studios': 3,
+      'Disney\'s Animal Kingdom': 4
+    };
+    
+    // Get park URL for linking
+    function getParkUrl(parkName) {
+      if (parkName.includes('Magic Kingdom')) return '/magic-kingdom.html';
+      if (parkName.includes('Epcot')) return '/epcot.html';
+      if (parkName.includes('Hollywood')) return '/hollywood-studios.html';
+      if (parkName.includes('Animal Kingdom')) return '/animal-kingdom.html';
+      return null;
     }
     
-    // Get unique characters from all meals
-    function getAllCharacters() {
-      const chars = new Set();
-      disneyCharacterMeals.forEach(meal => {
-        ['breakfast', 'lunch', 'dinner'].forEach(time => {
-          if (meal.characters[time]) {
-            meal.characters[time].forEach(c => chars.add(c));
-          }
-        });
+    // Sort meals by park order, then alphabetically for resorts
+    function sortMeals(meals) {
+      return meals.sort((a, b) => {
+        const parkA = a.location.park;
+        const parkB = b.location.park;
+        
+        // Both in parks - use park order
+        if (parkA && parkB) {
+          const orderA = parkOrder[parkA] || 99;
+          const orderB = parkOrder[parkB] || 99;
+          if (orderA !== orderB) return orderA - orderB;
+          return a.name.localeCompare(b.name);
+        }
+        
+        // Park comes before resort
+        if (parkA && !parkB) return -1;
+        if (!parkA && parkB) return 1;
+        
+        // Both resorts - alphabetical
+        return a.name.localeCompare(b.name);
       });
-      return Array.from(chars).sort();
     }
     
     // Filter meals
     function getFilteredMeals() {
-      return disneyCharacterMeals.filter(meal => {
+      let meals = disneyCharacterMeals.filter(meal => {
         // Location filter
         if (filters.location === 'park' && !meal.location.park) return false;
         if (filters.location === 'resort' && meal.location.park) return false;
@@ -747,113 +514,14 @@
           if (!mealData || !mealData.available) return false;
         }
         
-        // Character filter
-        if (filters.character !== 'all') {
-          const allChars = [
-            ...(meal.characters.breakfast || []),
-            ...(meal.characters.lunch || []),
-            ...(meal.characters.dinner || [])
-          ];
-          
-          if (filters.character === 'mickey') {
-            if (!allChars.some(c => c.includes('Mickey'))) return false;
-          } else if (filters.character === 'princess') {
-            const princesses = ['Cinderella', 'Ariel', 'Belle', 'Aurora', 'Jasmine', 'Snow White', 'Tiana'];
-            if (!allChars.some(c => princesses.some(p => c.includes(p)))) return false;
-          } else if (filters.character === 'fab-five') {
-            const fabFive = ['Mickey', 'Minnie', 'Donald', 'Goofy', 'Pluto'];
-            if (!allChars.some(c => fabFive.some(f => c.includes(f) && c.includes('Minnie')))) return false;
-          } else if (filters.character === 'pooh') {
-            if (!allChars.some(c => c.includes('Pooh') || c.includes('Tigger'))) return false;
-          }
-        }
-        
         return true;
       });
-    }
-    
-    // Render card view
-    function renderCardView() {
-      const meals = getFilteredMeals();
-      const container = document.getElementById('content-area');
       
-      if (meals.length === 0) {
-        container.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--gray-500)">No character meals match your filters.</div>';
-        return;
-      }
-      
-      container.innerHTML = `
-        <div class="cards-grid">
-          ${meals.map(meal => renderMealCard(meal)).join('')}
-        </div>
-      `;
-    }
-    
-    // Render individual meal card
-    function renderMealCard(meal) {
-      const allChars = [
-        ...(meal.characters.breakfast || []),
-        ...(meal.characters.lunch || []),
-        ...(meal.characters.dinner || [])
-      ];
-      const uniqueChars = [...new Set(allChars)];
-      
-      const parkBadge = meal.location.park 
-        ? `<span class="location-park ${meal.location.park.toLowerCase().replace(/[^a-z]/g, '')}">${meal.location.park}</span>`
-        : `<span class="location-park resort">Resort</span>`;
-      
-      const mealsHtml = ['breakfast', 'lunch', 'dinner'].map(time => {
-        const mealData = meal.meals[time];
-        if (!mealData || !mealData.available) {
-          return `<div class="meal-row"><div class="meal-info"><span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span></div><span style="color:var(--gray-400);font-size:0.75rem">Not available</span></div>`;
-        }
-        const price = mealData.price ? `$${mealData.price.adult}` : 'Check price';
-        return `
-          <div class="meal-row available">
-            <div class="meal-info">
-              <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
-              <span class="meal-type">${mealData.type}</span>
-            </div>
-            <span class="meal-price">${price} <span>adult</span></span>
-          </div>
-        `;
-      }).join('');
-      
-      return `
-        <div class="meal-card">
-          <div class="meal-card-header">
-            <div class="meal-card-title">${meal.name}</div>
-            <div class="meal-card-location">
-              ${parkBadge}
-              <span>${meal.location.area || meal.location.resort || 'Disney World'}</span>
-            </div>
-          </div>
-          <div class="meal-card-body">
-            <div class="characters-section">
-              <div class="section-label">Characters You'll Meet</div>
-              <div class="characters-list">
-                ${uniqueChars.slice(0, 6).map(c => {
-                  const type = getCharacterType(c);
-                  return `<span class="character-chip ${type}">${c.split(' ')[0]}</span>`;
-                }).join('')}
-                ${uniqueChars.length > 6 ? `<span class="character-chip">+${uniqueChars.length - 6} more</span>` : ''}
-              </div>
-            </div>
-            <div class="meals-section">
-              <div class="section-label">Available Meals</div>
-              ${mealsHtml}
-            </div>
-          </div>
-          <div class="meal-card-footer">
-            ${meal.diningPlan ? `<span class="dining-plan-badge">✓ Dining Plan</span>` : '<span></span>'}
-            <a href="https://disneyworld.disney.go.com/dining/${meal.id}/" target="_blank" class="book-btn">Check Availability</a>
-          </div>
-        </div>
-      `;
+      return sortMeals(meals);
     }
     
     // Render matrix view
-    function renderMatrixView() {
+    function renderMatrix() {
       const meals = getFilteredMeals();
       const container = document.getElementById('content-area');
       
@@ -867,34 +535,38 @@
           <table class="matrix-table">
             <thead>
               <tr>
-                <th class="character-col">Restaurant</th>
-                <th class="location-col">Breakfast</th>
-                <th class="location-col">Lunch</th>
-                <th class="location-col">Dinner</th>
+                <th class="restaurant-col">Restaurant</th>
+                <th class="meal-col">Breakfast</th>
+                <th class="meal-col">Lunch</th>
+                <th class="meal-col">Dinner</th>
               </tr>
             </thead>
             <tbody>
               ${meals.map(meal => {
-                // Determine park color class
+                // Determine park badge
                 let parkClass = 'resort';
                 let parkLabel = meal.location.resort?.replace("Disney's", '') || 'Resort';
+                let parkUrl = null;
+                
                 if (meal.location.park) {
-                  const park = meal.location.park.toLowerCase();
-                  if (park.includes('magic kingdom')) { parkClass = 'disney'; parkLabel = 'Magic Kingdom'; }
-                  else if (park.includes('epcot')) { parkClass = 'epcot'; parkLabel = 'EPCOT'; }
-                  else if (park.includes('hollywood')) { parkClass = 'hollywood'; parkLabel = 'Hollywood Studios'; }
-                  else if (park.includes('animal kingdom')) { parkClass = 'animal'; parkLabel = 'Animal Kingdom'; }
-                  else if (park.includes('universal')) { parkClass = 'universal'; parkLabel = 'Universal'; }
+                  const park = meal.location.park;
+                  parkUrl = getParkUrl(park);
+                  if (park.includes('Magic Kingdom')) { parkClass = 'disney'; parkLabel = 'Magic Kingdom'; }
+                  else if (park.includes('Epcot')) { parkClass = 'epcot'; parkLabel = 'EPCOT'; }
+                  else if (park.includes('Hollywood')) { parkClass = 'hollywood'; parkLabel = 'Hollywood Studios'; }
+                  else if (park.includes('Animal Kingdom')) { parkClass = 'animal'; parkLabel = 'Animal Kingdom'; }
                 }
                 
-                const locationLabel = `<span class="location-park ${parkClass}">${parkLabel}</span>`;
+                const parkBadge = parkUrl 
+                  ? `<a href="${parkUrl}" class="location-park ${parkClass}">${parkLabel}</a>`
+                  : `<span class="location-park ${parkClass}">${parkLabel}</span>`;
                 
                 return `
                   <tr>
                     <td>
                       <div class="location-header">
                         <span class="location-name">${meal.name}</span>
-                        <span class="location-meta">${locationLabel}</span>
+                        <span class="location-meta">${parkBadge}</span>
                       </div>
                     </td>
                     ${['breakfast', 'lunch', 'dinner'].map(time => {
@@ -908,12 +580,12 @@
                       }
                       return `
                         <td>
-                          <div class="characters-list" style="flex-wrap:wrap;gap:0.25rem;">
-                            ${chars.map(c => {
-                              return `<span class="character-chip" style="font-size:0.75rem;padding:0.25rem 0.5rem;background:var(--gray-100);color:var(--base-dark);border-radius:var(--radius-sm);">${c.split(' ')[0]}</span>`;
-                            }).join('')}
+                          <div class="characters-list">
+                            ${chars.map(c => `
+                              <span class="character-chip">${c.split(' ')[0]}</span>
+                            `).join('')}
                           </div>
-                          ${mealData.price ? `<div class="price-tag" style="margin-top:0.5rem;font-weight:600;color:var(--action-orange);">$${mealData.price.adult}</div>` : ''}
+                          ${mealData.price ? `<div class="price-tag">$${mealData.price.adult}</div>` : ''}
                         </td>
                       `;
                     }).join('')}
@@ -926,41 +598,21 @@
       `;
     }
     
-    // Render current view
-    function render() {
-      if (currentView === 'cards') {
-        renderCardView();
-      } else {
-        renderMatrixView();
-      }
-    }
-    
     // Event listeners
     document.addEventListener('DOMContentLoaded', () => {
-      render();
-      
-      // View toggle
-      document.querySelectorAll('.view-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          currentView = btn.dataset.view;
-          render();
-        });
-      });
+      renderMatrix();
       
       // Filter chips
       document.querySelectorAll('.filter-chip').forEach(chip => {
         chip.addEventListener('click', () => {
-          const parent = chip.parentElement;
+          const parent = chip.closest('.filter-chips');
           parent.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
           chip.classList.add('active');
           
           if (chip.dataset.filter) filters.location = chip.dataset.filter;
           if (chip.dataset.meal) filters.meal = chip.dataset.meal;
-          if (chip.dataset.character) filters.character = chip.dataset.character;
           
-          render();
+          renderMatrix();
         });
       });
     });
