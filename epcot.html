@@ -218,6 +218,59 @@
       font-weight: 700;
       color: var(--base-dark);
     }
+
+    /* Blog Posts Section */
+    .blog-section {
+      margin: 3rem 0;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gray-300);
+    }
+
+    .blog-card-image {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .blog-card-content {
+      padding: 1.25rem;
+    }
+
+    .blog-card-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
     
     /* Ride Grid */
     .ride-grid {
@@ -563,6 +616,38 @@
   </section>
 
   <div class="container">
+    <!-- Related Blog Posts -->
+    <div class="blog-section">
+      <div class="section-header">
+        <h2 class="section-title">Related Guides</h2>
+      </div>
+      <div class="blog-grid">
+        <a href="/blog/best-rides-5-year-olds-disney-world.html" class="blog-card">
+          <div class="blog-card-image" style="background-image: url('/blog/Best Rides for 5 Year olds.webp');"></div>
+          <div class="blog-card-content">
+            <div class="blog-card-title">Best Rides for 5 Year Olds at Disney World</div>
+            <div class="blog-card-excerpt">Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.</div>
+          </div>
+        </a>
+        
+        <a href="/blog/toddler-rides-disney-world.html" class="blog-card">
+          <div class="blog-card-image" style="background-image: url('/blog/toddler-rides-disney-world.webp');"></div>
+          <div class="blog-card-content">
+            <div class="blog-card-title">Toddler Rides at Disney World: The Complete Guide</div>
+            <div class="blog-card-excerpt">Everything you need to know about rides for little ones including height requirements and best parks.</div>
+          </div>
+        </a>
+        
+        <a href="/blog/universal-vs-disney-comparison.html" class="blog-card">
+          <div class="blog-card-image" style="background-image: url('/blog/universal-vs-disney.webp');"></div>
+          <div class="blog-card-content">
+            <div class="blog-card-title">Universal vs Disney: The Complete Comparison</div>
+            <div class="blog-card-excerpt">Which resort is right for your family? We compare rides, dining, hotels, and value.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <!-- Rides Section -->
     <div class="section-header">
       <h2 class="section-title">Rides & Attractions</h2>
