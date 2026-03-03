@@ -406,14 +406,17 @@ const disneyCharacterMeals = [
       transportation: "Walk (inside park)"
     },
     characters: {
-      breakfast: [],
+      breakfast: ["Minnie Mouse", "Mickey Mouse", "Goofy", "Pluto/Donald/Daisy (varies)"],
       lunch: ["Minnie Mouse", "Mickey Mouse", "Goofy", "Pluto/Donald/Daisy (varies)"],
       dinner: ["Minnie Mouse", "Mickey Mouse", "Goofy", "Pluto/Donald/Daisy (varies)"]
     },
     meals: {
       breakfast: {
-        available: false,
-        note: "Previously offered Disney Junior characters but ended in 2025"
+        available: true,
+        type: "Buffet",
+        price: { adult: 54, child: 36 },
+        time: "Breakfast",
+        description: "Minnie's Seasonal Breakfast"
       },
       lunch: {
         available: true,
