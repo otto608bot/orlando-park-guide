@@ -859,64 +859,55 @@
         return;
       }
       
-      // Get characters that appear in filtered meals
-      const charMap = new Map();
-      meals.forEach(meal => {
-        ['breakfast', 'lunch', 'dinner'].forEach(time => {
-          if (meal.meals[time]?.available && meal.characters[time]) {
-            meal.characters[time].forEach(char => {
-              if (!charMap.has(char)) {
-                charMap.set(char, new Map());
-              }
-              if (!charMap.get(char).has(meal.id)) {
-                charMap.get(char).set(meal.id, []);
-              }
-              charMap.get(char).get(meal.id).push(time);
-            });
-          }
-        });
-      });
-      
-      const characters = Array.from(charMap.keys()).sort();
-      
       container.innerHTML = `
         <div class="matrix-container">
           <table class="matrix-table">
             <thead>
               <tr>
-                <th class="character-col">Character</th>
-                ${meals.map(m => `
-                  <th class="location-col">
-                    <div class="location-header">
-                      <span class="location-name">${m.name}</span>
-                      <span class="location-meta">${m.location.park || m.location.resort?.replace("Disney's", '') || 'Resort'}</span>
-                    </div>
-                  </th>
-                `).join('')}
+                <th class="character-col">Restaurant</th>
+                <th class="location-col">Breakfast</th>
+                <th class="location-col">Lunch</th>
+                <th class="location-col">Dinner</th>
               </tr>
             </thead>
             <tbody>
-              ${characters.map(char => `
-                <tr>
-                  <td>
-                    <div class="character-cell">
-                      <div class="character-avatar">${char.charAt(0)}</div>
-                      <span class="character-name">${char}</span>
-                    </div>
-                  </td>
-                  ${meals.map(meal => {
-                    const times = charMap.get(char)?.get(meal.id);
-                    if (!times) return '<td><span class="no-meal">—</span></td>';
-                    return `
-                      <td>
-                        <div class="meal-indicator">
-                          ${times.map(t => `<span class="meal-dot ${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</span>`).join('')}
-                        </div>
-                      </td>
-                    `;
-                  }).join('')}
-                </tr>
-              `).join('')}
+              ${meals.map(meal => {
+                const parkBadge = meal.location.park 
+                  ? `<span class="location-park ${meal.location.park.toLowerCase().replace(/[^a-z]/g, '')}">${meal.location.park}</span>`
+                  : `<span class="location-park resort">Resort</span>`;
+                
+                return `
+                  <tr>
+                    <td>
+                      <div class="location-header">
+                        <span class="location-name">${meal.name}</span>
+                        <span class="location-meta">${parkBadge} ${meal.location.area || ''}</span>
+                      </div>
+                    </td>
+                    ${['breakfast', 'lunch', 'dinner'].map(time => {
+                      const mealData = meal.meals[time];
+                      if (!mealData || !mealData.available) {
+                        return '<td><span class="no-meal">—</span></td>';
+                      }
+                      const chars = meal.characters[time] || [];
+                      if (chars.length === 0) {
+                        return '<td><span class="no-meal">No characters</span></td>';
+                      }
+                      return `
+                        <td>
+                          <div class="characters-list" style="flex-wrap:wrap;gap:0.25rem;">
+                            ${chars.map(c => {
+                              const type = getCharacterType(c);
+                              return `<span class="character-chip ${type}" style="font-size:0.75rem;padding:0.25rem 0.5rem;">${c.split(' ')[0]}</span>`;
+                            }).join('')}
+                          </div>
+                          ${mealData.price ? `<div class="price-tag" style="margin-top:0.5rem;">$${mealData.price.adult} adult</div>` : ''}
+                        </td>
+                      `;
+                    }).join('')}
+                  </tr>
+                `;
+              }).join('')}
             </tbody>
           </table>
         </div>
