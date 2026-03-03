@@ -2177,8 +2177,18 @@
       const section = document.getElementById('character-meals-section');
       const grid = document.getElementById('character-meals-grid');
       
+      // Map park names to match character meal data
+      const parkNameMap = {
+        'EPCOT': 'Epcot',
+        'Hollywood Studios': "Disney's Hollywood Studios",
+        'Animal Kingdom': "Disney's Animal Kingdom",
+        'Magic Kingdom': 'Magic Kingdom'
+      };
+      
+      const lookupName = parkNameMap[currentPark.name] || currentPark.name;
+      
       // Get character meals for this park
-      const meals = disneyCharacterMeals.filter(m => m.location.park === currentPark.name);
+      const meals = disneyCharacterMeals.filter(m => m.location.park === lookupName);
       
       if (meals.length === 0) {
         section.style.display = 'none';
