@@ -7,9 +7,39 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://planyourpark.com/blog/</loc>
+    <loc>https://planyourpark.com/character-meals.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/magic-kingdom.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/epcot.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/hollywood-studios.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/animal-kingdom.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/blog/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
