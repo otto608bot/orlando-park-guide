@@ -2059,7 +2059,18 @@ function renderParksGrid() {
     const remainingCount = rides.length - previewRides.length;
 
     // Build park URL with current filters
-    const parkSlug = parkName.toLowerCase().replace(/ /g, '-');
+    const parkSlugMap = {
+      'Magic Kingdom': 'magic-kingdom',
+      'EPCOT': 'epcot',
+      'Hollywood Studios': 'hollywood-studios',
+      'Animal Kingdom': 'animal-kingdom',
+      'Universal Studios Florida': 'universal-studios',
+      'Islands of Adventure': 'islands-of-adventure',
+      'Epic Universe': 'epic-universe',
+      'SeaWorld Orlando': 'seaworld',
+      'LEGOLAND Florida': 'legoland'
+    };
+    const parkSlug = parkSlugMap[parkName] || parkName.toLowerCase().replace(/ /g, '-');
     const params = new URLSearchParams();
     params.set('park', parkSlug);
     if (state.filters.height > 0) params.set('height', state.filters.height);
