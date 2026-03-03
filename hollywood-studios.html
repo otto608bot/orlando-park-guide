@@ -33,11 +33,13 @@
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
+      --radius-xl: 24px;
       --radius-full: 9999px;
       
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
       --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
       --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-orange: 0 4px 12px rgba(243, 112, 33, 0.3);
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -86,26 +88,92 @@
     
     .nav a:hover, .nav a.active { color: var(--action-orange); }
     
-    /* Hero */
+    /* Park Hero */
     .park-hero {
-      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
-      color: white;
       padding: 4rem 2rem;
-      text-align: center;
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+      margin-bottom: 2rem;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .park-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    }
+    
+    .park-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-full);
+      color: white;
+      font-size: 0.875rem;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s;
+    }
+    
+    .back-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .park-hero .resort {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
     }
     
     .park-hero h1 {
       font-family: var(--font-heading);
       font-size: 3rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
     
-    .park-hero p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
+    .stats-row {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
     }
     
     .affiliate-btn {
@@ -120,7 +188,9 @@
       font-weight: 600;
       font-size: 1rem;
       transition: all 0.2s;
-      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+      box-shadow: var(--shadow-orange);
+      border: none;
+      cursor: pointer;
     }
     
     .affiliate-btn:hover {
@@ -128,29 +198,25 @@
       box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
     }
     
+    /* Main Content */
     .container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 0 2rem 3rem;
     }
     
     .section-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.5rem;
+      margin: 3rem 0 1.5rem;
     }
     
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--base-dark);
-    }
-    
-    .section-count {
-      font-size: 1rem;
-      color: var(--gray-500);
     }
     
     /* Ride Grid */
@@ -158,7 +224,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 4rem;
     }
     
     .ride-card {
@@ -174,6 +239,11 @@
       border-color: var(--gray-300);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
+    }
+    
+    .ride-card.unavailable {
+      opacity: 0.6;
+      background: var(--gray-100);
     }
     
     .ride-header {
@@ -192,6 +262,10 @@
       flex: 1;
     }
     
+    .ride-card.unavailable .ride-name {
+      color: var(--gray-500);
+    }
+    
     .ride-type {
       font-size: 0.75rem;
       color: var(--gray-500);
@@ -202,11 +276,25 @@
       white-space: nowrap;
     }
     
+    .unavailable-badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      background: rgba(192, 28, 40, 0.1);
+      color: #c01c28;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
     .ride-description {
       font-size: 0.875rem;
       color: var(--gray-600);
       margin-bottom: 1rem;
       line-height: 1.5;
+    }
+    
+    .ride-card.unavailable .ride-description {
+      color: var(--gray-400);
     }
     
     .ride-meta {
@@ -247,6 +335,12 @@
       color: var(--splash-teal);
     }
     
+    .tag-sensory-dark { background: rgba(90, 79, 207, 0.1); color: var(--deep-purple); }
+    .tag-sensory-loud { background: rgba(243, 112, 33, 0.1); color: var(--action-orange); }
+    .tag-sensory-sudden { background: rgba(243, 112, 33, 0.1); color: var(--action-orange); }
+    .tag-sensory-enclosed { background: rgba(45, 55, 72, 0.1); color: var(--base-dark); }
+    .tag-sensory-strobe { background: rgba(243, 112, 33, 0.1); color: var(--action-orange); }
+    
     /* Character Meal Cards */
     .meal-cards-grid {
       display: grid;
@@ -272,7 +366,6 @@
     .meal-card-header {
       padding: 1.25rem;
       border-bottom: 1px solid var(--gray-200);
-      background: linear-gradient(135deg, rgba(26, 95, 180, 0.05) 0%, rgba(53, 132, 228, 0.05) 100%);
     }
     
     .meal-card-title {
@@ -420,23 +513,11 @@
       box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
     }
     
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--gray-600);
-      text-decoration: none;
-      font-weight: 500;
-      margin-bottom: 2rem;
-    }
-    
-    .back-link:hover {
-      color: var(--action-orange);
-    }
-    
     /* Responsive */
     @media (max-width: 768px) {
       .park-hero h1 { font-size: 2rem; }
+      .stats-row { gap: 1.5rem; }
+      .stat-value { font-size: 2rem; }
       .ride-grid, .meal-cards-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -455,21 +536,36 @@
     </div>
   </header>
 
-  <section class="park-hero">
-    <h1>🎬 Hollywood Studios</h1>
-    <p>The magic of movies comes to life — experience blockbuster attractions, live shows, and Star Wars adventures.</p>
-    <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
-      Get Hollywood Studios Tickets
-    </a>
+  <section class="park-hero" style="background-image: url('Hollywood Studios.webp');">
+    <div class="park-hero-content">
+      <a href="/" class="back-btn">← Back to All Parks</a>
+      <div class="resort">Walt Disney World</div>
+      <h1>Hollywood Studios</h1>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-value" id="ride-stat">0</span>
+          <span class="stat-label">Rides</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="meal-stat">0</span>
+          <span class="stat-label">Character Meals</span>
+        </div>
+      </div>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+          <path d="M9 12h6"></path>
+          <path d="M12 9v6"></path>
+        </svg>
+        Get Hollywood Studios Tickets
+      </a>
+    </div>
   </section>
 
   <div class="container">
-    <a href="/" class="back-link">← Back to All Parks</a>
-
     <!-- Rides Section -->
     <div class="section-header">
       <h2 class="section-title">Rides & Attractions</h2>
-      <span class="section-count" id="ride-count">Loading...</span>
     </div>
     <div class="ride-grid" id="rides-container">
       <!-- Rides injected by JavaScript -->
@@ -478,7 +574,6 @@
     <!-- Character Meals Section -->
     <div class="section-header">
       <h2 class="section-title">Character Dining</h2>
-      <span class="section-count" id="meal-count">Loading...</span>
     </div>
     <div class="meal-cards-grid" id="meals-container">
       <!-- Character meals injected by JavaScript -->
@@ -496,33 +591,57 @@
       meal.location.park === 'Hollywood Studios'
     );
     
+    // Update stats
+    document.getElementById('ride-stat').textContent = mkRides.length;
+    document.getElementById('meal-stat').textContent = mkMeals.length;
+    
+    // Get sensory tags for display
+    function getSensoryTags(sensory) {
+      const tags = [];
+      if (sensory.dark) tags.push({ label: 'Dark', class: 'tag-sensory-dark' });
+      if (sensory.loud) tags.push({ label: 'Loud', class: 'tag-sensory-loud' });
+      if (sensory.sudden) tags.push({ label: 'Sudden', class: 'tag-sensory-sudden' });
+      if (sensory.enclosed) tags.push({ label: 'Enclosed', class: 'tag-sensory-enclosed' });
+      if (sensory.strobe) tags.push({ label: 'Strobe', class: 'tag-sensory-strobe' });
+      return tags;
+    }
+    
     // Render rides
     function renderRides() {
       const container = document.getElementById('rides-container');
-      document.getElementById('ride-count').textContent = `${mkRides.length} rides`;
       
       container.innerHTML = mkRides.map(ride => {
-        const heightTag = ride.height > 0 
-          ? `<span class="tag tag-height">${ride.height}" height</span>` 
-          : `<span class="tag tag-height">Any height</span>`;
-        
-        const pregnancyTag = ride.pregnant 
-          ? `<span class="tag tag-pregnancy">Pregnancy safe</span>` 
-          : '';
+        const sensoryTags = getSensoryTags(ride.sensory);
         
         return `
           <div class="ride-card">
             <div class="ride-header">
-              <span class="ride-name">${ride.name}</span>
-              <span class="ride-type">${ride.type}</span>
+              <div class="ride-name">${ride.name}</div>
+              <div class="ride-type">${ride.type}</div>
             </div>
             <p class="ride-description">${ride.description}</p>
             <div class="ride-meta">
-              <span class="meta-item">⏱️ ${ride.duration}</span>
+              <div class="meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                ${ride.duration}
+              </div>
+              <div class="meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M9 10h6"></path>
+                  <path d="M9 14h6"></path>
+                </svg>
+                ${ride.wheelchair === 'WAV' ? 'Stay in wheelchair' : ride.wheelchair === 'TAV' ? 'Transfer required' : 'Not accessible'}
+              </div>
             </div>
             <div class="ride-tags">
-              ${heightTag}
-              ${pregnancyTag}
+              ${ride.height > 0 ? `<span class="tag tag-height">${ride.height}" min</span>` : '<span class="tag tag-height">Any height</span>'}
+              ${ride.pregnant ? '<span class="tag tag-pregnancy">Pregnancy safe</span>' : ''}
+              ${sensoryTags.map(tag => `<span class="tag ${tag.class}">${tag.label}</span>`).join('')}
             </div>
           </div>
         `;
@@ -532,7 +651,6 @@
     // Render character meals
     function renderMeals() {
       const container = document.getElementById('meals-container');
-      document.getElementById('meal-count').textContent = `${mkMeals.length} locations`;
       
       if (mkMeals.length === 0) {
         container.innerHTML = '<p style="color:var(--gray-500)">No character dining locations in this park. Check nearby resorts!</p>';
@@ -550,10 +668,11 @@
         const mealsHtml = ['breakfast', 'lunch', 'dinner'].map(time => {
           const mealData = meal.meals[time];
           if (!mealData || !mealData.available) {
-            return `<div class="meal-row">
-              <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
-              <span style="color:var(--gray-400);font-size:0.75rem">Not available</span>
-            </div>`;
+            return `
+              <div class="meal-row">
+                <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
+                <span style="color:var(--gray-400);font-size:0.75rem">Not available</span>
+              </div>`;
           }
           const price = mealData.price ? `$${mealData.price.adult}` : 'Check price';
           return `
