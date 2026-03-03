@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://planyourpark.com/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://planyourpark.com/blog/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://planyourpark.com/blog/best-rides-5-year-olds-disney-world.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/blog/pregnant-moms-guide-magic-kingdom.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/blog/universal-vs-disney-comparison.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://planyourpark.com/blog/toddler-rides-disney-world.html</loc>
     <lastmod>2026-02-27</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
