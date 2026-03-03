@@ -582,14 +582,14 @@
     
     /* Park Hero */
     .park-hero {
-      padding: var(--space-2xl);
-      border-radius: var(--radius-xl);
-      margin-bottom: var(--space-xl);
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-lg);
       background-size: cover;
       background-position: center;
       position: relative;
       color: white;
-      min-height: 300px;
+      min-height: 220px;
       display: flex;
       align-items: flex-end;
     }
@@ -599,7 +599,7 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
-      border-radius: var(--radius-xl);
+      border-radius: var(--radius-lg);
     }
     
     .park-hero-content {
@@ -609,25 +609,25 @@
     }
     
     .park-hero .resort {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       font-weight: 600;
       opacity: 0.9;
-      margin-bottom: var(--space-sm);
+      margin-bottom: var(--space-xs);
     }
     
     .park-hero h1 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       font-weight: 800;
-      margin-bottom: var(--space-lg);
+      margin-bottom: var(--space-md);
     }
     
     .hero-stats-row {
       display: flex;
       align-items: center;
-      gap: var(--space-xl);
+      gap: var(--space-lg);
       flex-wrap: wrap;
     }
     
@@ -638,26 +638,26 @@
     
     .stat-value {
       font-family: var(--font-heading);
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 800;
     }
     
     .stat-label {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       opacity: 0.8;
     }
     
     .affiliate-btn {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-md) var(--space-xl);
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
       background: var(--action-orange);
       color: white;
       text-decoration: none;
       border-radius: var(--radius-full);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.875rem;
       transition: all 0.2s ease;
       box-shadow: var(--shadow-orange);
       border: none;
@@ -740,17 +740,17 @@
     /* Ride Grid */
     .ride-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: var(--space-lg);
-      margin-bottom: var(--space-2xl);
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
     }
     
     /* Ride Cards */
     .ride-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
     }
@@ -762,21 +762,22 @@
     }
     
     .ride-card.unavailable {
-      opacity: 0.6;
+      opacity: 0.5;
       background: var(--gray-100);
+      filter: grayscale(0.5);
     }
     
     .ride-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: var(--space-sm);
-      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+      gap: var(--space-xs);
     }
     
     .ride-name {
       font-family: var(--font-heading);
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--base-dark);
       flex: 1;
@@ -787,7 +788,7 @@
     }
     
     .ride-type {
-      font-size: 0.75rem;
+      font-size: 0.6875rem;
       color: var(--gray-500);
       background: var(--gray-100);
       padding: var(--space-xs) var(--space-sm);
@@ -1317,12 +1318,8 @@
           <h1 id="hero-park-name">Loading...</h1>
           <div class="hero-stats-row">
             <div class="stat">
-              <span class="stat-value" id="hero-ride-count">0</span>
-              <span class="stat-label">Total Rides</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value" id="hero-height-range">Any</span>
-              <span class="stat-label">Height Range</span>
+              <span class="stat-value" id="hero-ride-count">0 of 0</span>
+              <span class="stat-label">Rides Available</span>
             </div>
             <a href="#" class="affiliate-btn" id="hero-ticket-btn" target="_blank" rel="noopener noreferrer">
               Get Tickets
@@ -1788,18 +1785,14 @@
       
       // Get park rides
       const parkRides = rideData.filter(r => r.park === currentPark.name);
-      document.getElementById('hero-ride-count').textContent = parkRides.length;
       
-      // Calculate height range
-      const heights = parkRides.map(r => r.height).filter(h => h > 0);
-      if (heights.length === 0) {
-        document.getElementById('hero-height-range').textContent = 'Any';
-      } else {
-        const minHeight = Math.min(...heights);
-        const maxHeight = Math.max(...heights);
-        document.getElementById('hero-height-range').textContent = 
-          minHeight === maxHeight ? `${minHeight}"` : `${minHeight}" - ${maxHeight}"`;
+      // Calculate available rides based on current filters
+      let availableCount = parkRides.length;
+      if (filters.height > 0) {
+        availableCount = parkRides.filter(r => r.height <= filters.height).length;
       }
+      
+      document.getElementById('hero-ride-count').textContent = `${availableCount} of ${parkRides.length}`;
       
       // Render blog posts
       renderBlogPosts();
@@ -1973,37 +1966,51 @@
     }
     
     function applyFilters() {
-      // Get park rides
-      let filteredRides = rideData.filter(r => r.park === currentPark.name);
+      // Get all park rides (not filtered)
+      const allParkRides = rideData.filter(r => r.park === currentPark.name);
       
-      // Apply height filter
-      if (filters.height > 0) {
-        filteredRides = filteredRides.filter(r => r.height <= filters.height);
-      }
+      // Calculate which rides match filters
+      const matchedRides = new Set();
       
-      // Apply pregnancy filter
-      if (filters.pregnant) {
-        filteredRides = filteredRides.filter(r => r.pregnant === true);
-      }
-      
-      // Apply wheelchair filter
-      if (filters.wheelchair !== 'any') {
-        filteredRides = filteredRides.filter(r => r.wheelchair === filters.wheelchair);
-      }
-      
-      // Apply sensory filters
-      Object.keys(filters.sensory).forEach(key => {
-        if (filters.sensory[key]) {
-          filteredRides = filteredRides.filter(r => !r.sensory[key]);
+      allParkRides.forEach(ride => {
+        let matches = true;
+        
+        // Check height filter
+        if (filters.height > 0 && ride.height > filters.height) {
+          matches = false;
+        }
+        
+        // Check pregnancy filter
+        if (filters.pregnant && !ride.pregnant) {
+          matches = false;
+        }
+        
+        // Check wheelchair filter
+        if (filters.wheelchair !== 'any' && ride.wheelchair !== filters.wheelchair) {
+          matches = false;
+        }
+        
+        // Check sensory filters
+        Object.keys(filters.sensory).forEach(key => {
+          if (filters.sensory[key] && ride.sensory[key]) {
+            matches = false;
+          }
+        });
+        
+        if (matches) {
+          matchedRides.add(ride.id);
         }
       });
       
-      // Render results
-      renderRides(filteredRides);
+      // Render all rides, marking unavailable ones
+      renderRides(allParkRides, matchedRides);
       updateActiveFiltersBar();
       
       // Update results count
-      document.getElementById('results-count').textContent = filteredRides.length;
+      document.getElementById('results-count').textContent = matchedRides.size;
+      
+      // Update hero count
+      document.getElementById('hero-ride-count').textContent = `${matchedRides.size} of ${allParkRides.length}`;
     }
     
     function updateURL() {
@@ -2032,21 +2039,12 @@
     // ============================================
     // RENDER FUNCTIONS
     // ============================================
-    function renderRides(rides) {
+    function renderRides(rides, matchedRides) {
       const grid = document.getElementById('ride-grid');
       
-      if (rides.length === 0) {
-        grid.innerHTML = `
-          <div class="empty-state" style="grid-column: 1 / -1;">
-            <div class="empty-state-icon">🔍</div>
-            <h3>No rides match your filters</h3>
-            <p>Try adjusting your filters to see more results.</p>
-          </div>
-        `;
-        return;
-      }
-      
       grid.innerHTML = rides.map(ride => {
+        const isUnavailable = !matchedRides.has(ride.id);
+        
         const tags = [];
         
         if (ride.height > 0) {
@@ -2073,8 +2071,6 @@
         if (ride.sensory.strobe) {
           tags.push(`<span class="tag tag-sensory-strobe">Strobe</span>`);
         }
-        
-        const isUnavailable = filters.height > 0 && ride.height > filters.height;
         
         return `
           <div class="ride-card ${isUnavailable ? 'unavailable' : ''}">
