@@ -22,7 +22,9 @@ const disneyCharacterMeals = [
         type: "Buffet",
         price: { adult: 58, child: 37 },
         time: "Breakfast",
-        description: "Character breakfast buffet"
+        description: "Character breakfast buffet",
+        valueScore: 7,
+        difficulty: "moderate"
       },
       lunch: {
         available: false
@@ -32,7 +34,9 @@ const disneyCharacterMeals = [
         type: "Buffet", 
         price: { adult: 69, child: 44 },
         time: "Dinner",
-        description: "Character dinner buffet"
+        description: "Character dinner buffet",
+        valueScore: 6,
+        difficulty: "moderate"
       }
     },
     cuisine: "American",
