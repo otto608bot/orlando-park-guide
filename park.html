@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Park Rides & Filters | Plan Your Park</title>
+  <meta name="description" id="page-description" content="Find rides and attractions with filters for height, pregnancy safety, wheelchair accessibility, and sensory preferences.">
+  <link rel="canonical" id="page-canonical" href="https://planyourpark.com/park.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+      --shadow-orange: 0 4px 12px rgba(243,112,33,0.3);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+    }
+    
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .logo { display: flex; align-items: center; }
+    .logo-img { height: 48px; width: auto; }
+    
+    .nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    
+    .nav a {
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    
+    .nav a:hover, .nav a.active { color: var(--action-orange); }
+    
+    /* Park Hero */
+    .park-hero {
+      padding: 4rem 2rem;
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+      margin-bottom: 2rem;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+      min-height: 350px;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .park-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    }
+    
+    .park-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+    
+    .breadcrumb a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+    
+    .breadcrumb a:hover { color: white; }
+    
+    .breadcrumb-separator { color: rgba(255,255,255,0.5); }
+    
+    .park-hero .resort {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+    
+    .park-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .stats-row {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+    
+    .affiliate-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: var(--action-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-orange);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .affiliate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(243,112,33,0.4);
+    }
+    
+    /* Layout */
+    .layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      padding: 0 2rem 3rem;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+    }
+    
+    .filter-panel {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 80px;
+    }
+    
+    .filter-section {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .filter-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .filter-label {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--base-dark);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .filter-label svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gray-500);
+    }
+    
+    /* Height Slider */
+    .height-slider-container {
+      margin-bottom: 0.5rem;
+    }
+    
+    .height-value {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--action-orange);
+      margin-bottom: 0.5rem;
+    }
+    
+    .height-slider {
+      width: 100%;
+      height: 6px;
+      border-radius: var(--radius-full);
+      background: var(--gray-200);
+      outline: none;
+      -webkit-appearance: none;
+    }
+    
+    .height-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--action-orange);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .height-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--action-orange);
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .height-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+    
+    /* Toggle */
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+    
+    .toggle {
+      width: 48px;
+      height: 26px;
+      background: var(--gray-300);
+      border-radius: var(--radius-full);
+      position: relative;
+      transition: background 0.2s;
+    }
+    
+    .toggle.active {
+      background: var(--splash-teal);
+    }
+    
+    .toggle::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: white;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .toggle.active::after {
+      transform: translateX(22px);
+    }
+    
+    .toggle-text {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    
+    /* Select */
+    .filter-select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      background: var(--white);
+      cursor: pointer;
+    }
+    
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--action-orange);
+    }
+    
+    /* Sensory Filters */
+    .sensory-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .sensory-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .sensory-option:hover {
+      background: var(--gray-100);
+    }
+    
+    .sensory-option input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--action-orange);
+    }
+    
+    .sensory-option label {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      flex: 1;
+    }
+    
+    /* Clear Filters */
+    .clear-filters {
+      width: 100%;
+      padding: 0.75rem;
+      background: transparent;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .clear-filters:hover {
+      background: var(--gray-100);
+      border-color: var(--gray-400);
+    }
+    
+    /* Main Content */
+    .main {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    /* Results Bar */
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .results-count {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--base-dark);
+    }
+    
+    .results-count .count {
+      color: var(--action-orange);
+    }
+    
+    /* Active Filters */
+    .active-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(243,112,33,0.1);
+      border: 1px solid rgba(243,112,33,0.2);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      color: var(--action-orange);
+      font-weight: 500;
+    }
+    
+    .filter-chip button {
+      background: none;
+      border: none;
+      color: var(--action-orange);
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .filter-chip button:hover {
+      color: var(--base-dark);
+    }
+    
+    /* Ride Grid */
+    .ride-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .ride-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ride-card:hover {
+      border-color: var(--gray-300);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ride-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      gap: 0.5rem;
+    }
+    
+    .ride-name {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      flex: 1;
+    }
+    
+    .ride-type {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      background: var(--gray-100);
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    .ride-description {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    
+    .ride-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+    
+    .ride-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+    
+    .tag-height {
+      background: rgba(243,112,33,0.1);
+      color: var(--action-orange);
+    }
+    
+    .tag-pregnancy {
+      background: rgba(56,178,172,0.1);
+      color: var(--splash-teal);
+    }
+    
+    .tag-sensory-dark { background: rgba(90,79,207,0.1); color: var(--deep-purple); }
+    .tag-sensory-loud { background: rgba(243,112,33,0.1); color: var(--action-orange); }
+    .tag-sensory-sudden { background: rgba(243,112,33,0.1); color: var(--action-orange); }
+    .tag-sensory-enclosed { background: rgba(45,55,72,0.1); color: var(--base-dark); }
+    .tag-sensory-strobe { background: rgba(243,112,33,0.1); color: var(--action-orange); }
+    
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .empty-state h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--base-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .empty-state p {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Section Headers */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3rem 0 1.5rem;
+    }
+    
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--base-dark);
+    }
+    
+    /* Character Meals */
+    .meal-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .meal-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .meal-card-header {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--gray-50);
+    }
+    
+    .meal-card-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--base-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .meal-card-location {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .location-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+    }
+    
+    .meal-card-body {
+      padding: 1.25rem;
+    }
+    
+    .characters-section, .meals-section {
+      margin-bottom: 1.25rem;
+    }
+    
+    .characters-section:last-child, .meals-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .characters-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .character-chip {
+      font-size: 0.8125rem;
+      padding: 0.375rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-full);
+      color: var(--base-dark);
+    }
+    
+    .meal-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    .meal-row:last-child {
+      border-bottom: none;
+    }
+    
+    .meal-row.available {
+      background: rgba(56,178,172,0.05);
+      margin: 0 -0.5rem;
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+    
+    .meal-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .meal-time {
+      font-weight: 600;
+      color: var(--base-dark);
+      font-size: 0.875rem;
+    }
+    
+    .meal-type {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+    
+    .meal-price {
+      font-weight: 700;
+      color: var(--action-orange);
+      font-size: 0.9375rem;
+    }
+    
+    .meal-card-footer {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .dining-plan-badge {
+      font-size: 0.75rem;
+      color: var(--splash-teal);
+      font-weight: 600;
+    }
+    
+    .book-btn {
+      padding: 0.5rem 1rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .book-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(243,112,33,0.3);
+    }
+    
+    /* Blog Section */
+    .blog-section {
+      margin-top: 3rem;
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gray-300);
+    }
+    
+    .blog-card-image {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .blog-card-content {
+      padding: 1.25rem;
+    }
+    
+    .blog-card-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    
+    .blog-card-excerpt {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+    
+    /* Mobile Filter Toggle */
+    .mobile-filter-toggle {
+      display: none;
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--base-dark);
+      cursor: pointer;
+      margin-bottom: 1rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .layout {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+      }
+      
+      .filter-panel {
+        position: static;
+        display: none;
+      }
+      
+      .filter-panel.active {
+        display: block;
+      }
+      
+      .mobile-filter-toggle {
+        display: flex;
+      }
+      
+      .park-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stats-row {
+        gap: 1.5rem;
+      }
+      
+      .stat-value {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .ride-grid, .meal-cards-grid, .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .results-bar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src="/logo-full.png" alt="Plan Your Park" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="/">Rides</a>
+        <a href="/character-meals.html">Character Meals</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="park-hero" id="park-hero">
+    <div class="park-hero-content">
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <div class="resort" id="park-resort"></div>
+      <h1 id="park-name">Loading...</h1>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-value" id="ride-count">0</span>
+          <span class="stat-label">Total Rides</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="filtered-count">0</span>
+          <span class="stat-label">Matching Filters</span>
+        </div>
+      </div>
+      <a href="#" class="affiliate-btn" id="ticket-link" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+          <path d="M9 12h6"></path>
+          <path d="M12 9v6"></path>
+        </svg>
+        Get Tickets
+      </a>
+    </div>
+  </section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <button class="mobile-filter-toggle" id="mobile-filter-toggle">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Show Filters
+      </button>
+      
+      <div class="filter-panel" id="filter-panel">
+        <div class="filter-section">
+          <div class="filter-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M2 12h20"></path>
+            </svg>
+            Height Requirement
+          </div>
+          <div class="height-slider-container">
+            <div class="height-value"><span id="height-value">Any height</span></div>
+            <input type="range" class="height-slider" id="height-slider" min="0" max="54" value="0" step="1">
+            <div class="height-labels">
+              <span>Any</span>
+              <span>54"</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+            </svg>
+            Pregnancy Safe
+          </div>
+          <label class="toggle-container">
+            <div class="toggle" id="pregnancy-toggle"></div>
+            <span class="toggle-text">Show only pregnancy-safe rides</span>
+          </label>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v8"></path>
+              <path d="M9 10h6"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+            Wheelchair Access
+          </div>
+          <select class="filter-select" id="wheelchair-select">
+            <option value="">Any accessibility</option>
+            <option value="WAV">Stay in wheelchair</option>
+            <option value="TAV">Transfer required</option>
+          </select>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v18M3 12h18"></path>
+            </svg>
+            Sensory Considerations
+          </div>
+          <div class="sensory-options">
+            <label class="sensory-option">
+              <input type="checkbox" value="dark" data-sensory="dark">
+              <label>Dark spaces</label>
+            </label>
+            <label class="sensory-option">
+              <input type="checkbox" value="loud" data-sensory="loud">
+              <label>Loud noises</label>
+            </label>
+            <label class="sensory-option">
+              <input type="checkbox" value="sudden" data-sensory="sudden">
+              <label>Sudden movements</label>
+            </label>
+            <label class="sensory-option">
+              <input type="checkbox" value="enclosed" data-sensory="enclosed">
+              <label>Enclosed spaces</label>
+            </label>
+            <label class="sensory-option">
+              <input type="checkbox" value="strobe" data-sensory="strobe">
+              <label>Strobe lights</label>
+            </label>
+          </div>
+        </div>
+
+        <button class="clear-filters" id="clear-filters">Clear All Filters</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="results-bar">
+        <div class="results-count">
+          <span class="count" id="results-count">0</span> rides match your filters
+        </div>
+      </div>
+
+      <div class="active-filters" id="active-filters"></div>
+
+      <div class="ride-grid" id="rides-container">
+        <!-- Rides injected by JavaScript -->
+      </div>
+
+      <div id="character-meals-section">
+        <div class="section-header">
+          <h2 class="section-title">Character Dining</h2>
+        </div>
+        <div class="meal-cards-grid" id="meals-container">
+          <!-- Character meals injected by JavaScript -->
+        </div>
+      </div>
+
+      <div class="blog-section" id="blog-section">
+        <div class="section-header">
+          <h2 class="section-title">Related Guides</h2>
+        </div>
+        <div class="blog-grid" id="blog-container">
+          <!-- Blog posts injected by JavaScript -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="data/rides.js"></script>
+  <script src="data/character-meal-data.js"></script>
+  <script>
+    // Park configuration
+    const parkConfig = {
+      'magic-kingdom': {
+        name: 'Magic Kingdom',
+        resort: 'Walt Disney World',
+        image: 'Magic Kingdom.webp',
+        ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
+        blogPosts: [
+          { title: "Pregnant Mom's Guide to Magic Kingdom", url: '/blog/pregnant-moms-guide-magic-kingdom.html', image: "/blog/Pregnant Mom's guide to magic kingdom.webp", excerpt: 'Which rides are safe during pregnancy, where to rest, and how to enjoy the park comfortably.' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.' },
+          { title: 'Toddler Rides at Disney World: The Complete Guide', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.' }
+        ]
+      },
+      'epcot': {
+        name: 'EPCOT',
+        resort: 'Walt Disney World',
+        image: 'EPCOT.webp',
+        ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
+        blogPosts: [
+          { title: 'Best Rides for 5 Year Olds at Disney World', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.' },
+          { title: 'Toddler Rides at Disney World: The Complete Guide', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.' },
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.' }
+        ]
+      },
+      'hollywood-studios': {
+        name: 'Hollywood Studios',
+        resort: 'Walt Disney World',
+        image: 'Hollywood Studios.webp',
+        ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
+        blogPosts: [
+          { title: 'Best Rides for 5 Year Olds at Disney World', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.' },
+          { title: 'Toddler Rides at Disney World: The Complete Guide', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.' },
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.' }
+        ]
+      },
+      'animal-kingdom': {
+        name: 'Animal Kingdom',
+        resort: 'Walt Disney World',
+        image: 'Animal Kingdom.webp',
+        ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
+        blogPosts: [
+          { title: 'Best Rides for 5 Year Olds at Disney World', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.' },
+          { title: 'Toddler Rides at Disney World: The Complete Guide', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.' },
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.' }
+        ]
+      },
+      'universal-studios': {
+        name: 'Universal Studios Florida',
+        resort: 'Universal Orlando',
+        image: 'universal studios florida.jpeg',
+        ticketUrl: 'https://www.anrdoezrs.net/click-101693488-12540773',
+        blogPosts: [
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.' }
+        ]
+      },
+      'islands-of-adventure': {
+        name: 'Islands of Adventure',
+        resort: 'Universal Orlando',
+        image: 'islands of adventure.webp',
+        ticketUrl: 'https://www.anrdoezrs.net/click-101693488-12540773',
+        blogPosts: [
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.' }
+        ]
+      },
+      'seaworld': {
+        name: 'SeaWorld Orlando',
+        resort: 'SeaWorld Parks',
+        image: 'sea world.jpeg',
+        ticketUrl: 'https://www.kqzyfj.com/click-101693488-12540778',
+        blogPosts: []
+      },
+      'legoland': {
+        name: 'LEGOLAND Florida',
+        resort: 'Merlin Entertainments',
+        image: 'legoland florida.webp',
+        ticketUrl: 'https://www.tkqlhce.com/click-101693488-12540779',
+        blogPosts: [
+          { title: 'Best Rides for 5 Year Olds at Disney World', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.' },
+          { title: 'Toddler Rides at Disney World: The Complete Guide', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.' }
+        ]
+      }
+    };
+
+    // State
+    let currentPark = null;
+    let filters = {
+      height: 0,
+      pregnant: false,
+      wheelchair: '',
+      sensory: []
+    };
+
+    // Parse URL parameters
+    function parseUrlParams() {
+      const params = new URLSearchParams(window.location.search);
+      const parkId = params.get('park');
+      
+      if (parkId && parkConfig[parkId]) {
+        currentPark = parkConfig[parkId];
+        currentPark.id = parkId;
+      }
+      
+      filters.height = parseInt(params.get('height')) || 0;
+      filters.pregnant = params.get('pregnant') === 'true';
+      filters.wheelchair = params.get('wheelchair') || '';
+      filters.sensory = params.get('sensory') ? params.get('sensory').split(',') : [];
+    }
+
+    // Update URL with current filters
+    function updateUrl() {
+      const params = new URLSearchParams();
+      params.set('park', currentPark.id);
+      
+      if (filters.height > 0) params.set('height', filters.height);
+      if (filters.pregnant) params.set('pregnant', 'true');
+      if (filters.wheelchair) params.set('wheelchair', filters.wheelchair);
+      if (filters.sensory.length > 0) params.set('sensory', filters.sensory.join(','));
+      
+      const newUrl = `${window.location.pathname}?${params.toString()}`;
+      window.history.pushState({}, '', newUrl);
+      
+      // Update canonical
+      document.getElementById('page-canonical').href = `https://planyourpark.com/park.html?park=${currentPark.id}`;
+    }
+
+    // Initialize page
+    function init() {
+      parseUrlParams();
+      
+      if (!currentPark) {
+        document.body.innerHTML = '<div style="padding:4rem;text-align:center;font-family:sans-serif;"><h1>Park Not Found</h1><p>Please <a href="/">return to the rides page</a> and select a park.</p></div>';
+        return;
+      }
+      
+      updatePageMeta();
+      updateUI();
+      setupEventListeners();
+      filterAndRender();
+    }
+
+    // Update page metadata
+    function updatePageMeta() {
+      document.title = `${currentPark.name} Rides & Filters | Plan Your Park`;
+      document.getElementById('page-description').content = `Find rides and attractions at ${currentPark.name} with filters for height, pregnancy safety, wheelchair accessibility, and sensory preferences.`;
+      document.getElementById('page-canonical').href = `https://planyourpark.com/park.html?park=${currentPark.id}`;
+      
+      // Update hero
+      document.getElementById('park-hero').style.backgroundImage = `url('${currentPark.image}')`;
+      document.getElementById('park-resort').textContent = currentPark.resort;
+      document.getElementById('park-name').textContent = currentPark.name;
+      document.getElementById('ticket-link').href = currentPark.ticketUrl;
+      
+      // Update breadcrumb
+      const referrer = document.referrer;
+      let breadcrumbHtml = '<a href="/">Home</a>';
+      
+      if (referrer && referrer.includes('character-meals')) {
+        breadcrumbHtml += ' <span class="breadcrumb-separator">/>/span> <a href="/character-meals.html">Character Meals</a>';
+      }
+      
+      breadcrumbHtml += ` <span class="breadcrumb-separator">/>/span> ${currentPark.name}`;
+      document.getElementById('breadcrumb').innerHTML = breadcrumbHtml;
+    }
+
+    // Update UI with current filter values
+    function updateUI() {
+      document.getElementById('height-slider').value = filters.height;
+      document.getElementById('height-value').textContent = filters.height === 0 ? 'Any height' : `${filters.height}" minimum`;
+      
+      const pregnancyToggle = document.getElementById('pregnancy-toggle');
+      if (filters.pregnant) {
+        pregnancyToggle.classList.add('active');
+      } else {
+        pregnancyToggle.classList.remove('active');
+      }
+      
+      document.getElementById('wheelchair-select').value = filters.wheelchair;
+      
+      document.querySelectorAll('.sensory-option input').forEach(checkbox => {
+        checkbox.checked = filters.sensory.includes(checkbox.value);
+      });
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Height slider
+      document.getElementById('height-slider').addEventListener('input', (e) => {
+        filters.height = parseInt(e.target.value);
+        document.getElementById('height-value').textContent = filters.height === 0 ? 'Any height' : `${filters.height}" minimum`;
+        updateUrl();
+        filterAndRender();
+      });
+      
+      // Pregnancy toggle
+      document.getElementById('pregnancy-toggle').addEventListener('click', () => {
+        filters.pregnant = !filters.pregnant;
+        document.getElementById('pregnancy-toggle').classList.toggle('active');
+        updateUrl();
+        filterAndRender();
+      });
+      
+      // Wheelchair select
+      document.getElementById('wheelchair-select').addEventListener('change', (e) => {
+        filters.wheelchair = e.target.value;
+        updateUrl();
+        filterAndRender();
+      });
+      
+      // Sensory checkboxes
+      document.querySelectorAll('.sensory-option input').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          filters.sensory = Array.from(document.querySelectorAll('.sensory-option input:checked')).map(cb => cb.value);
+          updateUrl();
+          filterAndRender();
+        });
+      });
+      
+      // Clear filters
+      document.getElementById('clear-filters').addEventListener('click', () => {
+        filters = { height: 0, pregnant: false, wheelchair: '', sensory: [] };
+        updateUI();
+        updateUrl();
+        filterAndRender();
+      });
+      
+      // Mobile filter toggle
+      document.getElementById('mobile-filter-toggle').addEventListener('click', () => {
+        document.getElementById('filter-panel').classList.toggle('active');
+      });
+    }
+
+    // Filter rides and render
+    function filterAndRender() {
+      if (!window.rideData) return;
+      
+      // Get rides for this park
+      let parkRides = window.rideData.filter(ride => ride.park === currentPark.name);
+      const totalRides = parkRides.length;
+      
+      // Apply filters
+      if (filters.height > 0) {
+        parkRides = parkRides.filter(ride => ride.height <= filters.height);
+      }
+      
+      if (filters.pregnant) {
+        parkRides = parkRides.filter(ride => ride.pregnant);
+      }
+      
+      if (filters.wheelchair) {
+        parkRides = parkRides.filter(ride => ride.wheelchair === filters.wheelchair);
+      }
+      
+      if (filters.sensory.length > 0) {
+        parkRides = parkRides.filter(ride => {
+          return filters.sensory.some(s => ride.sensory[s]);
+        });
+      }
+      
+      // Update stats
+      document.getElementById('ride-count').textContent = totalRides;
+      document.getElementById('filtered-count').textContent = parkRides.length;
+      document.getElementById('results-count').textContent = parkRides.length;
+      
+      // Render active filters
+      renderActiveFilters();
+      
+      // Render rides
+      renderRides(parkRides);
+      
+      // Render character meals
+      renderCharacterMeals();
+      
+      // Render blog posts
+      renderBlogPosts();
+    }
+
+    // Render active filter chips
+    function renderActiveFilters() {
+      const container = document.getElementById('active-filters');
+      const chips = [];
+      
+      if (filters.height > 0) {
+        chips.push({ label: `Height: ${filters.height}" max`, type: 'height' });
+      }
+      
+      if (filters.pregnant) {
+        chips.push({ label: 'Pregnancy safe', type: 'pregnant' });
+      }
+      
+      if (filters.wheelchair) {
+        const label = filters.wheelchair === 'WAV' ? 'Stay in wheelchair' : 'Transfer required';
+        chips.push({ label: `Wheelchair: ${label}`, type: 'wheelchair' });
+      }
+      
+      filters.sensory.forEach(s => {
+        const labels = { dark: 'Dark', loud: 'Loud', sudden: 'Sudden', enclosed: 'Enclosed', strobe: 'Strobe' };
+        chips.push({ label: labels[s], type: 'sensory', value: s });
+      });
+      
+      container.innerHTML = chips.map(chip => `
+        <span class="filter-chip">
+          ${chip.label}
+          <button onclick="removeFilter('${chip.type}', '${chip.value || ''}')">&times;</button>
+        </span>
+      `).join('');
+    }
+
+    // Remove a filter
+    window.removeFilter = function(type, value) {
+      if (type === 'height') filters.height = 0;
+      if (type === 'pregnant') filters.pregnant = false;
+      if (type === 'wheelchair') filters.wheelchair = '';
+      if (type === 'sensory') {
+        filters.sensory = filters.sensory.filter(s => s !== value);
+      }
+      updateUI();
+      updateUrl();
+      filterAndRender();
+    };
+
+    // Render rides
+    function renderRides(rides) {
+      const container = document.getElementById('rides-container');
+      
+      if (rides.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <h3>No rides match your filters</h3>
+            <p>Try adjusting your filters to see more results.</p>
+            <button class="affiliate-btn" onclick="clearAllFilters()">Clear All Filters</button>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = rides.map(ride => {
+        const sensoryTags = [];
+        if (ride.sensory.dark) sensoryTags.push({ label: 'Dark', class: 'tag-sensory-dark' });
+        if (ride.sensory.loud) sensoryTags.push({ label: 'Loud', class: 'tag-sensory-loud' });
+        if (ride.sensory.sudden) sensoryTags.push({ label: 'Sudden', class: 'tag-sensory-sudden' });
+        if (ride.sensory.enclosed) sensoryTags.push({ label: 'Enclosed', class: 'tag-sensory-enclosed' });
+        if (ride.sensory.strobe) sensoryTags.push({ label: 'Strobe', class: 'tag-sensory-strobe' });
+        
+        return `
+          <div class="ride-card">
+            <div class="ride-header">
+              <div class="ride-name">${ride.name}</div>
+              <div class="ride-type">${ride.type}</div>
+            </div>
+            <p class="ride-description">${ride.description}</p>
+            <div class="ride-meta">
+              <div class="meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                ${ride.duration}
+              </div>
+              <div class="meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v8"></path>
+                  <path d="M9 10h6"></path>
+                  <path d="M9 14h6"></path>
+                </svg>
+                ${ride.wheelchair === 'WAV' ? 'Stay in wheelchair' : ride.wheelchair === 'TAV' ? 'Transfer required' : 'Not accessible'}
+              </div>
+            </div>
+            <div class="ride-tags">
+              ${ride.height > 0 ? `<span class="tag tag-height">${ride.height}" min</span>` : '<span class="tag tag-height">Any height</span>'}
+              ${ride.pregnant ? '<span class="tag tag-pregnancy">Pregnancy safe</span>' : ''}
+              ${sensoryTags.map(tag => `<span class="tag ${tag.class}">${tag.label}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Clear all filters helper
+    window.clearAllFilters = function() {
+      filters = { height: 0, pregnant: false, wheelchair: '', sensory: [] };
+      updateUI();
+      updateUrl();
+      filterAndRender();
+    };
+
+    // Render character meals
+    function renderCharacterMeals() {
+      const section = document.getElementById('character-meals-section');
+      const container = document.getElementById('meals-container');
+      
+      if (!window.disneyCharacterMeals) {
+        section.style.display = 'none';
+        return;
+      }
+      
+      const parkMeals = window.disneyCharacterMeals.filter(meal => 
+        meal.location.park === currentPark.name
+      );
+      
+      if (parkMeals.length === 0) {
+        section.style.display = 'none';
+        return;
+      }
+      
+      section.style.display = 'block';
+      
+      container.innerHTML = parkMeals.map(meal => {
+        const allChars = [
+          ...(meal.characters.breakfast || []),
+          ...(meal.characters.lunch || []),
+          ...(meal.characters.dinner || [])
+        ];
+        const uniqueChars = [...new Set(allChars)];
+        
+        const mealsHtml = ['breakfast', 'lunch', 'dinner'].map(time => {
+          const mealData = meal.meals[time];
+          if (!mealData || !mealData.available) {
+            return `
+              <div class="meal-row">
+                <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
+                <span style="color:var(--gray-400);font-size:0.75rem">Not available</span>
+              </div>`;
+          }
+          const price = mealData.price ? `$${mealData.price.adult}` : 'Check price';
+          return `
+            <div class="meal-row available">
+              <div class="meal-info">
+                <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
+                <span class="meal-type">${mealData.type}</span>
+              </div>
+              <span class="meal-price">${price}</span>
+            </div>
+          `;
+        }).join('');
+        
+        return `
+          <div class="meal-card">
+            <div class="meal-card-header">
+              <div class="meal-card-title">${meal.name}</div>
+              <div class="meal-card-location">
+                <span class="location-badge" style="background:#1a5fb4;color:white;">${currentPark.name}</span>
+              </div>
+            </div>
+            <div class="meal-card-body">
+              <div class="characters-section">
+                <div class="section-label">Characters You'll Meet</div>
+                <div class="characters-list">
+                  ${uniqueChars.slice(0, 6).map(c => 
+                    `<span class="character-chip">${c.split(' ')[0]}</span>`
+                  ).join('')}
+                  ${uniqueChars.length > 6 ? `<span class="character-chip">+${uniqueChars.length - 6} more</span>` : ''}
+                </div>
+              </div>
+              <div class="meals-section">
+                <div class="section-label">Available Meals</div>
+                ${mealsHtml}
+              </div>
+            </div>
+            <div class="meal-card-footer">
+              ${meal.diningPlan ? '<span class="dining-plan-badge">✓ Dining Plan</span>' : '<span></span>'}
+              <a href="https://disneyworld.disney.go.com/dining/${meal.id}/" target="_blank" class="book-btn">Check Availability</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render blog posts
+    function renderBlogPosts() {
+      const container = document.getElementById('blog-container');
+      
+      if (!currentPark.blogPosts || currentPark.blogPosts.length === 0) {
+        document.getElementById('blog-section').style.display = 'none';
+        return;
+      }
+      
+      document.getElementById('blog-section').style.display = 'block';
+      
+      container.innerHTML = currentPark.blogPosts.map(post => `
+        <a href="${post.url}" class="blog-card">
+          <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
+          <div class="blog-card-content">
+            <div class="blog-card-title">${post.title}</div>
+            <div class="blog-card-excerpt">${post.excerpt}</div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
