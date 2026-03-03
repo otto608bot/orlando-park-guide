@@ -114,26 +114,18 @@ const disneyCharacterMeals = [
     },
     characters: {
       breakfast: [],
-      lunch: ["Beast (walk-through only, no table visits)"],
-      dinner: ["Beast (walk-through only, no table visits)"]
+      lunch: [],
+      dinner: []
     },
     meals: {
       breakfast: {
         available: false
       },
       lunch: {
-        available: true,
-        type: "Prix-fixe",
-        price: { adult: 70, child: 41 },
-        time: "Lunch",
-        description: "Quick service turned table service, Beast makes brief appearances"
+        available: false
       },
       dinner: {
-        available: true,
-        type: "Prix-fixe",
-        price: { adult: 70, child: 41 },
-        time: "Dinner",
-        description: "Signature dining, Beast makes brief appearances"
+        available: false
       }
     },
     cuisine: "French",
