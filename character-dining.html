@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Character Meal Matrix - Plan Your Park</title>
+  <title>Character Dining - Plan Your Park</title>
   <meta name="description" content="Find the perfect Disney World character dining experience. Compare characters, prices, and locations across all parks and resorts.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,26 +314,18 @@
     }
     
     .location-park {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      font-weight: 600;
+      color: var(--action-orange);
       text-decoration: none;
-      transition: opacity 0.2s;
+      font-weight: 500;
     }
     
     .location-park:hover {
-      opacity: 0.8;
+      text-decoration: underline;
     }
     
-    .location-park.disney { background: #1a5fb4; color: white; }
-    .location-park.epcot { background: #5A4FCF; color: white; }
-    .location-park.hollywood { background: #c01c28; color: white; }
-    .location-park.animal { background: #26a269; color: white; }
-    .location-park.resort { background: var(--gray-600); color: white; }
+    .location-park.resort {
+      color: var(--gray-500);
+    }
     
     .characters-list {
       display: flex;
@@ -377,7 +369,7 @@
       </a>
       <nav class="nav">
         <a href="/">Rides</a>
-        <a href="/character-meals.html" class="active">Character Meals</a>
+        <a href="/character-dining.html" class="active">Character Dining</a>
         <a href="/blog/">Blog</a>
       </nav>
     </div>
@@ -428,7 +420,7 @@
     <!-- Main Content -->
     <main class="main">
       <div class="hero">
-        <h1>Character Dining <span>Matrix</span></h1>
+        <h1>Character Dining</h1>
         <p>Find where to meet your favorite characters at Disney World</p>
       </div>
       
@@ -473,7 +465,7 @@
     function getParkUrl(parkName) {
       const parkSlugs = {
         'Magic Kingdom': 'magic-kingdom',
-        'EPCOT': 'epcot',
+        'Epcot': 'epcot',
         'Hollywood Studios': 'hollywood-studios',
         'Animal Kingdom': 'animal-kingdom'
       };
@@ -549,30 +541,25 @@
             </thead>
             <tbody>
               ${meals.map(meal => {
-                // Determine park badge
-                let parkClass = 'resort';
+                // Determine park label
                 let parkLabel = meal.location.resort?.replace("Disney's", '') || 'Resort';
                 let parkUrl = null;
                 
                 if (meal.location.park) {
-                  const park = meal.location.park;
-                  parkUrl = getParkUrl(park);
-                  if (park.includes('Magic Kingdom')) { parkClass = 'disney'; parkLabel = 'Magic Kingdom'; }
-                  else if (park.includes('Epcot')) { parkClass = 'epcot'; parkLabel = 'EPCOT'; }
-                  else if (park.includes('Hollywood')) { parkClass = 'hollywood'; parkLabel = 'Hollywood Studios'; }
-                  else if (park.includes('Animal Kingdom')) { parkClass = 'animal'; parkLabel = 'Animal Kingdom'; }
+                  parkUrl = getParkUrl(meal.location.park);
+                  parkLabel = meal.location.park.replace("Disney's ", '');
                 }
                 
-                const parkBadge = parkUrl 
-                  ? `<a href="${parkUrl}" class="location-park ${parkClass}">${parkLabel}</a>`
-                  : `<span class="location-park ${parkClass}">${parkLabel}</span>`;
+                const parkLink = parkUrl 
+                  ? `<a href="${parkUrl}" class="location-park">${parkLabel}</a>`
+                  : `<span class="location-park resort">${parkLabel}</span>`;
                 
                 return `
                   <tr>
                     <td>
                       <div class="location-header">
                         <span class="location-name">${meal.name}</span>
-                        <span class="location-meta">${parkBadge}</span>
+                        <span class="location-meta">${parkLink}</span>
                       </div>
                     </td>
                     ${['breakfast', 'lunch', 'dinner'].map(time => {
