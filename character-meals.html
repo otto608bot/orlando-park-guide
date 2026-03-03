@@ -347,18 +347,18 @@
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      padding: 0.125rem 0.375rem;
+      padding: 0.25rem 0.5rem;
       border-radius: var(--radius-sm);
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      text-transform: uppercase;
     }
     
-    .location-park.mk { background: #1a5fb4; color: white; }
+    .location-park.disney { background: #1a5fb4; color: white; }
+    .location-park.universal { background: #c01c28; color: white; }
     .location-park.epcot { background: #5A4FCF; color: white; }
-    .location-park.hs { background: #c01c28; color: white; }
-    .location-park.ak { background: #26a269; color: white; }
-    .location-park.resort { background: var(--gray-400); color: var(--base-dark); }
+    .location-park.hollywood { background: #c01c28; color: white; }
+    .location-park.animal { background: #26a269; color: white; }
+    .location-park.resort { background: var(--gray-600); color: white; }
     
     /* Card View */
     .cards-grid {
@@ -673,16 +673,19 @@
     
     <div class="legend">
       <div class="legend-item">
-        <span class="legend-dot breakfast"></span>
-        Breakfast
+        <span class="location-park disney" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Magic Kingdom</span>
       </div>
       <div class="legend-item">
-        <span class="legend-dot lunch"></span>
-        Lunch
+        <span class="location-park epcot" style="padding:0.25rem 0.5rem;font-size:0.75rem;">EPCOT</span>
       </div>
       <div class="legend-item">
-        <span class="legend-dot dinner"></span>
-        Dinner
+        <span class="location-park hollywood" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Hollywood Studios</span>
+      </div>
+      <div class="legend-item">
+        <span class="location-park animal" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Animal Kingdom</span>
+      </div>
+      <div class="legend-item">
+        <span class="location-park resort" style="padding:0.25rem 0.5rem;font-size:0.75rem;">Resort Hotel</span>
       </div>
     </div>
     
@@ -872,9 +875,19 @@
             </thead>
             <tbody>
               ${meals.map(meal => {
-                const locationLabel = meal.location.park 
-                  ? `<span class="location-park ${meal.location.park.toLowerCase().replace(/[^a-z]/g, '')}">${meal.location.park}</span>`
-                  : `<span class="location-park resort">${meal.location.resort?.replace("Disney's", '') || 'Resort'}</span>`;
+                // Determine park color class
+                let parkClass = 'resort';
+                let parkLabel = meal.location.resort?.replace("Disney's", '') || 'Resort';
+                if (meal.location.park) {
+                  const park = meal.location.park.toLowerCase();
+                  if (park.includes('magic kingdom')) { parkClass = 'disney'; parkLabel = 'Magic Kingdom'; }
+                  else if (park.includes('epcot')) { parkClass = 'epcot'; parkLabel = 'EPCOT'; }
+                  else if (park.includes('hollywood')) { parkClass = 'hollywood'; parkLabel = 'Hollywood Studios'; }
+                  else if (park.includes('animal kingdom')) { parkClass = 'animal'; parkLabel = 'Animal Kingdom'; }
+                  else if (park.includes('universal')) { parkClass = 'universal'; parkLabel = 'Universal'; }
+                }
+                
+                const locationLabel = `<span class="location-park ${parkClass}">${parkLabel}</span>`;
                 
                 return `
                   <tr>
@@ -897,11 +910,10 @@
                         <td>
                           <div class="characters-list" style="flex-wrap:wrap;gap:0.25rem;">
                             ${chars.map(c => {
-                              const type = getCharacterType(c);
-                              return `<span class="character-chip ${type}" style="font-size:0.75rem;padding:0.25rem 0.5rem;">${c.split(' ')[0]}</span>`;
+                              return `<span class="character-chip" style="font-size:0.75rem;padding:0.25rem 0.5rem;background:var(--gray-100);color:var(--base-dark);border-radius:var(--radius-sm);">${c.split(' ')[0]}</span>`;
                             }).join('')}
                           </div>
-                          ${mealData.price ? `<div class="price-tag" style="margin-top:0.5rem;">$${mealData.price.adult} adult</div>` : ''}
+                          ${mealData.price ? `<div class="price-tag" style="margin-top:0.5rem;font-weight:600;color:var(--action-orange);">$${mealData.price.adult}</div>` : ''}
                         </td>
                       `;
                     }).join('')}
