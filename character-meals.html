@@ -687,8 +687,8 @@
     </div>
     
     <div class="view-toggle">
-      <button class="view-btn active" data-view="cards">Card View</button>
-      <button class="view-btn" data-view="matrix">Matrix View</button>
+      <button class="view-btn" data-view="cards">Card View</button>
+      <button class="view-btn active" data-view="matrix">Matrix View</button>
     </div>
     
     <div id="content-area">
@@ -699,7 +699,7 @@
   <script src="data/character-meal-data.js"></script>
   <script>
     // State
-    let currentView = 'cards';
+    let currentView = 'matrix';
     let filters = {
       location: 'all',
       meal: 'all',
@@ -872,16 +872,16 @@
             </thead>
             <tbody>
               ${meals.map(meal => {
-                const parkBadge = meal.location.park 
+                const locationLabel = meal.location.park 
                   ? `<span class="location-park ${meal.location.park.toLowerCase().replace(/[^a-z]/g, '')}">${meal.location.park}</span>`
-                  : `<span class="location-park resort">Resort</span>`;
+                  : `<span class="location-park resort">${meal.location.resort?.replace("Disney's", '') || 'Resort'}</span>`;
                 
                 return `
                   <tr>
                     <td>
                       <div class="location-header">
                         <span class="location-name">${meal.name}</span>
-                        <span class="location-meta">${parkBadge} ${meal.location.area || ''}</span>
+                        <span class="location-meta">${locationLabel}</span>
                       </div>
                     </td>
                     ${['breakfast', 'lunch', 'dinner'].map(time => {
