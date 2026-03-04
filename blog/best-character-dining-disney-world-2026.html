@@ -253,6 +253,208 @@
       transform: translateY(-1px);
     }
     
+    /* Related Posts */
+    .related-posts {
+      margin: 2.5rem 0;
+    }
+    
+    .related-posts h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--base-dark);
+    }
+    
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .related-card {
+      background: var(--gray-100);
+      padding: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+    
+    .related-card:hover {
+      background: var(--gray-200);
+    }
+    
+    .related-tag {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .related-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: var(--base-dark);
+    }
+    
+    .related-card p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+    
+    /* Email Capture */
+    .email-capture {
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-purple));
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      color: white;
+    }
+    
+    .email-capture-content {
+      text-align: center;
+    }
+    
+    .email-capture h3 {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    .email-capture p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    
+    .email-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .email-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    
+    .email-form button {
+      padding: 0.75rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .email-form button:hover {
+      background: #e05a0f;
+    }
+    
+    .email-disclaimer {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    
+    /* Q&A Section */
+    .qa-section {
+      margin: 2.5rem 0;
+    }
+    
+    .qa-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-intro {
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+    }
+    
+    .qa-form {
+      background: var(--gray-100);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .qa-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .form-row input {
+      flex: 1;
+      padding: 0.625rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-size: 0.9375rem;
+    }
+    
+    .qa-form textarea {
+      padding: 0.625rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-size: 0.9375rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+    
+    .qa-form button {
+      padding: 0.625rem 1.25rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    
+    .qa-form button:hover {
+      background: #e05a0f;
+    }
+    
+    .qa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .qa-item {
+      background: var(--gray-100);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    
+    .qa-question {
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-answer {
+      color: var(--gray-700);
+    }
+    
     /* Quick Tips Box */
     .tips-box {
       background: var(--splash-teal);
@@ -539,6 +741,68 @@
     <p><strong>My recommendation:</strong> Book one or two character meals per trip. Pick based on your kids' current obsessions (princesses, Disney Junior, classic characters) and balance cost with experience quality. Topolino's for food, Chef Mickey's for classic Disney magic, and Cinderella's Royal Table if you have a princess fan.</p>
 
     <p>The rest of your meals? Quick service and snacks. Save the sit-down dining budget for experiences that deliver both food and magic.</p>
+
+    <section class="related-posts">
+      <h3>You Might Also Like</h3>
+      <div class="related-grid">
+        <a href="/blog/toddler-rides-disney-world.html" class="related-card">
+          <span class="related-tag">Disney World</span>
+          <h4>Best Toddler Rides at Disney World</h4>
+          <p>The gentlest, most magical rides for your little ones—no height requirements, just pure Disney joy.</p>
+        </a>
+        <a href="/blog/best-rides-5-year-olds-disney-world.html" class="related-card">
+          <span class="related-tag">Disney World</span>
+          <h4>Best Rides for 5-Year-Olds</h4>
+          <p>The perfect rides for kindergarteners at Disney World—no meltdowns, no scary surprises.</p>
+        </a>
+        <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="related-card">
+          <span class="related-tag">Disney World</span>
+          <h4>Pregnant Mom's Guide to Magic Kingdom</h4>
+          <p>Which rides are safe during pregnancy? Where are the best rest spots? Everything expectant moms need.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="email-capture">
+      <div class="email-capture-content">
+        <h3>Get Disney Tips in Your Inbox</h3>
+        <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
+        <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <input type="hidden" name="source" value="character-dining-post">
+          <button type="submit">Get Tips →</button>
+        </form>
+        <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
+      </div>
+    </section>
+
+    <section class="qa-section">
+      <h3>Questions About Character Dining?</h3>
+      <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
+      
+      <div class="qa-form">
+        <form action="https://formspree.io/f/xwvnjpgd" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email (not published)" required>
+          </div>
+          <textarea name="question" placeholder="What's your question about character dining?" rows="4" required></textarea>
+          <input type="hidden" name="post" value="character-dining-post">
+          <button type="submit">Ask Question</button>
+        </form>
+      </div>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-question"><strong>Q:</strong> What's the best character dining for a 2-year-old?</div>
+          <div class="qa-answer"><strong>A:</strong> Hollywood & Vine for Disney Junior characters, or Crystal Palace for Winnie the Pooh. Both have gentle, familiar characters that won't overwhelm toddlers.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question"><strong>Q:</strong> Is character dining worth it if my kids are scared of characters?</div>
+          <div class="qa-answer"><strong>A:</strong> Probably not. Characters approach every table, so shy kids may feel trapped. Try a casual character meet-and-greet in the parks first to gauge their reaction.</div>
+        </div>
+      </div>
+    </section>
 
     <div class="bottom-cta">
       <h3>Ready to Book Your Disney Trip?</h3>
