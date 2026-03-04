@@ -1569,10 +1569,12 @@
         this.currentPage = page;
         this.setActiveNav(page);
         
-        // Show filter button on pages that need it
+        // Show filter button on pages that need it (mobile only)
         if (page === 'rides' || page === 'dining') {
           const filterBtn = document.getElementById('global-filter-btn');
-          if (filterBtn) filterBtn.style.display = 'flex';
+          if (filterBtn && window.innerWidth <= 1024) {
+            filterBtn.style.display = 'flex';
+          }
         }
       },
       
@@ -1636,6 +1638,14 @@
 
     // Initialize for rides page
     GlobalNav.init('rides');
+    
+    // Handle resize to show/hide filter button
+    window.addEventListener('resize', function() {
+      const filterBtn = document.getElementById('global-filter-btn');
+      if (filterBtn) {
+        filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+      }
+    });
     
     // Connect global filter events to rides page filter functions
     document.addEventListener('global:openFilters', function() {
