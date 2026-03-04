@@ -69,6 +69,11 @@
       gap: 1.5rem;
     }
     
+    .logo { 
+      display: flex;
+      align-items: center;
+    }
+    
     .logo img { height: 64px; width: auto; }
     
     .nav {
@@ -193,6 +198,10 @@
     @media (max-width: 1024px) {
       .header-content {
         justify-content: flex-start;
+        gap: 1rem;
+      }
+      .logo {
+        margin-right: auto;
       }
       .nav { display: none; }
       .mobile-menu-btn { display: flex; }
