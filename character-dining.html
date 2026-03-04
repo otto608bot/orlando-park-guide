@@ -196,6 +196,80 @@
       background: var(--gray-100);
     }
     
+    /* Mobile Filter Sheet */
+    .mobile-filter-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .mobile-filter-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-filter-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      background: var(--white);
+      padding: 1.5rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+    }
+    
+    .mobile-filter-sheet.active .mobile-filter-content {
+      transform: translateX(0);
+    }
+    
+    .mobile-filter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .mobile-filter-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .close-sheet-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-filter-section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .mobile-filter-section h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--base-dark);
+    }
+    
     .nav {
       display: flex;
       gap: 2rem;
@@ -496,7 +570,7 @@
 <body>
   <header class="header">
     <div class="header-content">
-      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open menu">
+      <button class="mobile-menu-btn" onclick="openMobileNav()" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -523,16 +597,35 @@
     </div>  </header>
 
   <!-- Mobile Navigation Sheet -->
-  <div class="mobile-nav-sheet" id="mobileNavSheet" onclick="closeMobileNav(event)">
+  <div class="mobile-nav-sheet" id="mobile-nav-sheet" onclick="closeMobileNav(event)">
     <div class="mobile-nav-content" onclick="event.stopPropagation()">
       <div class="mobile-nav-header">
         <h3>Menu</h3>
-        <button class="close-nav-btn" onclick="toggleMobileNav()">&times;</button>
+        <button class="close-nav-btn" onclick="closeMobileNav()">&times;</button>
       </div>
       <nav class="mobile-nav-links">
-        <a href="/">🏰 Rides</a>
-        <a href="/character-dining.html" class="active">🍽️ Character Dining</a>
-        <a href="/blog/">📝 Blog</a>
+        <a href="/">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" class="active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M12 14v7"></path>
+            <path d="M9 18h6"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
       </nav>
     </div>
   </div>
@@ -772,46 +865,114 @@
       });
     });
     
-    // Mobile Navigation
-    function toggleMobileNav() {
-      const sheet = document.getElementById('mobileNavSheet');
-      sheet.classList.toggle('active');
-      document.body.style.overflow = sheet.classList.contains('active') ? 'hidden' : '';
-    }
-    
-    function closeMobileNav(event) {
-      if (event.target === event.currentTarget) {
-        toggleMobileNav();
+    // Mobile Navigation - Match rides page behavior
+    function openMobileNav() {
+      const sheet = document.getElementById('mobile-nav-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
     }
     
-    // Mobile Filters
+    function closeMobileNav(event) {
+      const sheet = document.getElementById('mobile-nav-sheet');
+      if (!event || event.target === sheet) {
+        if (sheet) {
+          sheet.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+    
+    // Mobile Filters - Match rides page behavior
     function openMobileFilters() {
-      // Scroll to filters or show mobile filter modal
-      const sidebar = document.querySelector('.sidebar');
-      if (sidebar) {
-        sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
-        sidebar.style.position = 'fixed';
-        sidebar.style.top = '80px';
-        sidebar.style.left = '0';
-        sidebar.style.right = '0';
-        sidebar.style.bottom = '0';
-        sidebar.style.zIndex = '150';
-        sidebar.style.background = 'var(--white)';
-        sidebar.style.padding = '1rem';
-        sidebar.style.overflow = 'auto';
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function closeMobileFilters(event) {
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (!event || event.target === sheet) {
+        if (sheet) {
+          sheet.classList.remove('active');
+          document.body.style.overflow = '';
+        }
       }
     }
     
     // Close on escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
-        const sheet = document.getElementById('mobileNavSheet');
-        if (sheet && sheet.classList.contains('active')) {
-          toggleMobileNav();
+        const navSheet = document.getElementById('mobile-nav-sheet');
+        const filterSheet = document.getElementById('mobile-filter-sheet');
+        
+        if (navSheet && navSheet.classList.contains('active')) {
+          closeMobileNav();
+        }
+        if (filterSheet && filterSheet.classList.contains('active')) {
+          closeMobileFilters();
         }
       }
     });
+    
+    // Filter function for mobile
+    function setFilter(type, value) {
+      filters[type] = value;
+      
+      // Update active state on mobile buttons
+      document.querySelectorAll('.mobile-filter-section .filter-chip').forEach(chip => {
+        chip.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Also update desktop filters
+      document.querySelectorAll(`.sidebar .filter-chip[data-${type}]`).forEach(chip => {
+        chip.classList.remove('active');
+        if (chip.dataset[type] === value) {
+          chip.classList.add('active');
+        }
+      });
+      
+      renderMatrix();
+    }
+    
+    // Expose functions globally
+    window.openMobileNav = openMobileNav;
+    window.closeMobileNav = closeMobileNav;
+    window.openMobileFilters = openMobileFilters;
+    window.closeMobileFilters = closeMobileFilters;
   </script>
+
+  <!-- Mobile Filter Sheet -->
+  <div class="mobile-filter-sheet" id="mobile-filter-sheet" onclick="closeMobileFilters(event)">
+    <div class="mobile-filter-content" onclick="event.stopPropagation()">
+      <div class="mobile-filter-header">
+        <h3>Filters</h3>
+        <button class="close-sheet-btn" onclick="closeMobileFilters()">&times;</button>
+      </div>
+      
+      <div class="mobile-filter-section">
+        <h4>Location</h4>
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setFilter('location', 'all')">All Locations</button>
+          <button class="filter-chip" onclick="setFilter('location', 'park')">In-Park Only</button>
+          <button class="filter-chip" onclick="setFilter('location', 'resort')">Resort Hotels</button>
+        </div>
+      </div>
+      
+      <div class="mobile-filter-section">
+        <h4>Meal Time</h4>
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setFilter('meal', 'all')">All Meals</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'breakfast')">Breakfast</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'lunch')">Lunch</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'dinner')">Dinner</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
