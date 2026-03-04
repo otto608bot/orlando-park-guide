@@ -134,10 +134,17 @@
     }
     
     /* Comparison Table */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
     .comparison-table {
       width: 100%;
+      min-width: 600px;
       border-collapse: collapse;
-      margin: 1.5rem 0;
       font-size: 0.9375rem;
     }
     
@@ -147,15 +154,22 @@
       padding: 0.75rem;
       text-align: left;
       font-weight: 600;
+      white-space: nowrap;
     }
     
     .comparison-table td {
       padding: 0.75rem;
       border-bottom: 1px solid var(--gray-200);
+      vertical-align: top;
     }
     
     .comparison-table tr:nth-child(even) {
       background: var(--gray-100);
+    }
+    
+    .comparison-table td:first-child {
+      font-weight: 500;
+      min-width: 140px;
     }
     
     /* Restaurant Cards */
@@ -278,8 +292,9 @@
     @media (max-width: 600px) {
       .article { padding: 1.5rem; }
       .article h1 { font-size: 1.625rem; }
-      .comparison-table { font-size: 0.875rem; }
-      .comparison-table th, .comparison-table td { padding: 0.5rem; }
+      .comparison-table { font-size: 0.8125rem; }
+      .comparison-table th, .comparison-table td { padding: 0.5rem 0.625rem; }
+      .table-wrapper { margin: 1rem -0.5rem; border-radius: 0; }
     }
   </style>
 </head>
@@ -312,6 +327,7 @@
 
     <h2>Quick Comparison: All Disney World Character Dining</h2>
 
+    <div class="table-wrapper">
     <table class="comparison-table">
       <thead>
         <tr>
@@ -395,6 +411,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2>The Best Character Dining Experiences (Ranked)</h2>
 
