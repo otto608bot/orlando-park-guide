@@ -1421,4 +1421,7 @@ const rideData = [
   }
 ];
 
-export default rideData;
+// Make available as global for non-module scripts
+if (typeof window !== 'undefined') {
+  window.rideData = rideData;
+}

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Dining - Plan Your Park</title>
+  <meta name="description" content="Find the perfect Disney World character dining experience. Compare characters, prices, and locations across all parks and resorts.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-orange: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+    }
+    
+    .layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .sidebar-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .sidebar-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .filter-chips {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .filter-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--gray-100);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      transition: all 0.2s;
+      font-family: var(--font-body);
+      text-align: left;
+    }
+    
+    .filter-chip:hover {
+      border-color: var(--gray-300);
+      background: var(--gray-200);
+    }
+    
+    .filter-chip.active {
+      background: rgba(243, 112, 33, 0.1);
+      border-color: var(--action-orange);
+      color: var(--action-orange);
+    }
+    
+    /* Ticket Cards */
+    .ticket-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .ticket-card {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ticket-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ticket-card.disney {
+      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+    }
+    
+    .ticket-card.universal {
+      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
+    }
+    
+    .ticket-card.seaworld {
+      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
+    }
+    
+    .ticket-card.legoland {
+      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
+    }
+    
+    /* Main Content */
+    .main {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 1.5rem 0;
+    }
+    
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .hero h1 span { color: var(--action-orange); }
+    
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+    }
+    
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--action-orange);
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+    }
+    
+    /* Matrix View */
+    .matrix-container {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      overflow-x: auto;
+    }
+    
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 800px;
+    }
+    
+    .matrix-table th {
+      background: var(--gray-100);
+      padding: 1rem;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--base-dark);
+      border-bottom: 2px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .matrix-table th.restaurant-col {
+      width: 250px;
+      min-width: 250px;
+    }
+    
+    .matrix-table th.meal-col {
+      min-width: 200px;
+    }
+    
+    .matrix-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
+      vertical-align: top;
+    }
+    
+    .matrix-table tr:hover td {
+      background: var(--gray-50);
+    }
+    
+    .location-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .location-name {
+      font-weight: 700;
+      color: var(--base-dark);
+      font-size: 0.9375rem;
+      line-height: 1.3;
+    }
+    
+    .location-meta {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+    
+    .location-park {
+      color: var(--action-orange);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .location-park:hover {
+      text-decoration: underline;
+    }
+    
+    .location-park.resort {
+      color: var(--gray-500);
+    }
+    
+    .characters-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    
+    .character-chip {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--gray-100);
+      color: var(--base-dark);
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+    }
+    
+    .price-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--action-orange);
+      margin-top: 0.5rem;
+    }
+    
+    .no-meal {
+      color: var(--gray-300);
+      font-size: 0.875rem;
+    }
+    
+    /* Mobile Filter Sheet - slides up from bottom */
+    .mobile-filter-sheet {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0,0,0,0.5);
+    }
+    
+    .mobile-filter-sheet.active {
+      display: block;
+    }
+    
+    .mobile-filter-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      padding: var(--space-lg);
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    .mobile-filter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .mobile-filter-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .close-sheet-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-filter-section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .mobile-filter-section h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--base-dark);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .layout { flex-direction: column; }
+      .sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Navigation Component -->
+  <style>
+    /* Global Navigation Styles */
+    .global-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    .global-header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .global-logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .global-logo img {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    .global-nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    
+    .global-nav a {
+      color: #718096;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    
+    .global-nav a:hover,
+    .global-nav a.active {
+      color: #F37021;
+    }
+    
+    /* Mobile Menu Button */
+    .global-mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #718096;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-menu-btn:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-menu-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile Filter Button */
+    .global-mobile-filter-btn {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #F37021;
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    /* Mobile Navigation Sheet */
+    .global-mobile-nav-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .global-mobile-nav-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .global-mobile-nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      background: #FFFFFF;
+      padding: 1.5rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .global-mobile-nav-sheet.active .global-mobile-nav-content {
+      transform: translateX(0);
+    }
+    
+    .global-mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    
+    .global-mobile-nav-header h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .global-close-nav-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #718096;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+    
+    .global-mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .global-mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      color: #2D3748;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-nav-links a:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-nav-links a.active {
+      color: #F37021;
+      background: #F7FAFC;
+    }
+    
+    /* Mobile Breakpoint */
+    @media (max-width: 1024px) {
+      .global-header-content {
+        padding: 0.75rem 1rem;
+      }
+      
+      .global-mobile-menu-btn {
+        display: flex;
+      }
+      
+      .global-nav {
+        display: none;
+      }
+      
+      .global-logo img {
+        height: 48px;
+      }
+    }
+    
+    @media (min-width: 1025px) {
+      .global-mobile-menu-btn,
+      .global-mobile-nav-sheet {
+        display: none !important;
+      }
+      
+      .global-nav {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      
+      <nav class="global-nav">
+        <a href="/" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+      </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M12 14v7"></path>
+            <path d="M9 18h6"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="filter-chips">
+          <button class="filter-chip active" data-filter="all">All Locations</button>
+          <button class="filter-chip" data-filter="park">In-Park Only</button>
+          <button class="filter-chip" data-filter="resort">Resort Hotels</button>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Meal Time</h3>
+        <div class="filter-chips">
+          <button class="filter-chip active" data-meal="all">All Meals</button>
+          <button class="filter-chip" data-meal="breakfast">Breakfast</button>
+          <button class="filter-chip" data-meal="lunch">Lunch</button>
+          <button class="filter-chip" data-meal="dinner">Dinner</button>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Get Tickets</h3>
+        <div class="ticket-cards">
+          <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="ticket-card disney">
+            🏰 Disney World
+          </a>
+          <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener noreferrer" class="ticket-card universal">
+            🎢 Universal
+          </a>
+          <a href="https://www.kqzyfj.com/click-101693488-12540778" target="_blank" rel="noopener noreferrer" class="ticket-card seaworld">
+            🐋 SeaWorld
+          </a>
+          <a href="https://www.jdoqocy.com/click-101693488-12540781" target="_blank" rel="noopener noreferrer" class="ticket-card legoland">
+            🧱 LEGOLAND
+          </a>
+        </div>
+        <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: 1rem;">Affiliate links — we earn a commission at no extra cost to you</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="hero">
+        <h1>Character Dining</h1>
+        <p>Find where to meet your favorite characters at Disney World</p>
+      </div>
+      
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-value" id="stat-locations">14</div>
+          <div class="stat-label">Locations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-characters">25+</div>
+          <div class="stat-label">Characters</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-breakfast">10</div>
+          <div class="stat-label">Breakfast Options</div>
+        </div>
+      </div>
+      
+      <div id="content-area">
+        <!-- Matrix injected by JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Filter Sheet -->
+  <div class="mobile-filter-sheet" id="mobile-filter-sheet" onclick="closeMobileFilters(event)">
+    <div class="mobile-filter-content" onclick="event.stopPropagation()">
+      <div class="mobile-filter-header">
+        <h3>Filters</h3>
+        <button class="close-sheet-btn" onclick="closeMobileFilters()">&times;</button>
+      </div>
+      
+      <div class="mobile-filter-section">
+        <h4>Location</h4>
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setFilter('location', 'all')">All Locations</button>
+          <button class="filter-chip" onclick="setFilter('location', 'park')">In-Park Only</button>
+          <button class="filter-chip" onclick="setFilter('location', 'resort')">Resort Hotels</button>
+        </div>
+      </div>
+      
+      <div class="mobile-filter-section">
+        <h4>Meal Time</h4>
+        <div class="filter-chips">
+          <button class="filter-chip active" onclick="setFilter('meal', 'all')">All Meals</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'breakfast')">Breakfast</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'lunch')">Lunch</button>
+          <button class="filter-chip" onclick="setFilter('meal', 'dinner')">Dinner</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/character-meal-data.js"></script>
+  <script>
+    // State
+    let filters = {
+      location: 'all',
+      meal: 'all'
+    };
+    
+    // Park order for sorting
+    const parkOrder = {
+      'Magic Kingdom': 1,
+      'Epcot': 2,
+      'Disney\'s Hollywood Studios': 3,
+      'Disney\'s Animal Kingdom': 4
+    };
+    
+    // Get park URL for linking
+    function getParkUrl(parkName) {
+      const parkSlugs = {
+        'Magic Kingdom': 'magic-kingdom',
+        'Epcot': 'epcot',
+        'Hollywood Studios': 'hollywood-studios',
+        'Animal Kingdom': 'animal-kingdom'
+      };
+      
+      for (const [name, slug] of Object.entries(parkSlugs)) {
+        if (parkName.includes(name)) return `/park.html?park=${slug}`;
+      }
+      return null;
+    }
+    
+    // Sort meals by park order, then alphabetically for resorts
+    function sortMeals(meals) {
+      return meals.sort((a, b) => {
+        const parkA = a.location.park;
+        const parkB = b.location.park;
+        
+        // Both in parks - use park order
+        if (parkA && parkB) {
+          const orderA = parkOrder[parkA] || 99;
+          const orderB = parkOrder[parkB] || 99;
+          if (orderA !== orderB) return orderA - orderB;
+          return a.name.localeCompare(b.name);
+        }
+        
+        // Park comes before resort
+        if (parkA && !parkB) return -1;
+        if (!parkA && parkB) return 1;
+        
+        // Both resorts - alphabetical
+        return a.name.localeCompare(b.name);
+      });
+    }
+    
+    // Filter meals
+    function getFilteredMeals() {
+      let meals = disneyCharacterMeals.filter(meal => {
+        // Location filter
+        if (filters.location === 'park' && !meal.location.park) return false;
+        if (filters.location === 'resort' && meal.location.park) return false;
+        
+        // Meal time filter
+        if (filters.meal !== 'all') {
+          const mealData = meal.meals[filters.meal];
+          if (!mealData || !mealData.available) return false;
+        }
+        
+        return true;
+      });
+      
+      return sortMeals(meals);
+    }
+    
+    // Render matrix view
+    function renderMatrix() {
+      const meals = getFilteredMeals();
+      const container = document.getElementById('content-area');
+      
+      if (meals.length === 0) {
+        container.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--gray-500)">No character meals match your filters.</div>';
+        return;
+      }
+      
+      container.innerHTML = `
+        <div class="matrix-container">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th class="restaurant-col">Restaurant</th>
+                <th class="meal-col">Breakfast</th>
+                <th class="meal-col">Lunch</th>
+                <th class="meal-col">Dinner</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${meals.map(meal => {
+                // Determine park label
+                let parkLabel = meal.location.resort?.replace("Disney's", '') || 'Resort';
+                let parkUrl = null;
+                
+                if (meal.location.park) {
+                  parkUrl = getParkUrl(meal.location.park);
+                  parkLabel = meal.location.park.replace("Disney's ", '');
+                }
+                
+                const parkLink = parkUrl 
+                  ? `<a href="${parkUrl}" class="location-park">${parkLabel}</a>`
+                  : `<span class="location-park resort">${parkLabel}</span>`;
+                
+                return `
+                  <tr>
+                    <td>
+                      <div class="location-header">
+                        <span class="location-name">${meal.name}</span>
+                        <span class="location-meta">${parkLink}</span>
+                      </div>
+                    </td>
+                    ${['breakfast', 'lunch', 'dinner'].map(time => {
+                      const mealData = meal.meals[time];
+                      if (!mealData || !mealData.available) {
+                        return '<td><span class="no-meal">—</span></td>';
+                      }
+                      const chars = meal.characters[time] || [];
+                      if (chars.length === 0) {
+                        return '<td><span class="no-meal">No characters</span></td>';
+                      }
+                      return `
+                        <td>
+                          <div class="characters-list">
+                            ${chars.map(c => `
+                              <span class="character-chip">${c.split(' ')[0]}</span>
+                            `).join('')}
+                          </div>
+                          ${mealData.price ? `<div class="price-tag">$${mealData.price.adult}</div>` : ''}
+                        </td>
+                      `;
+                    }).join('')}
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+    
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMatrix();
+      
+      // Filter chips
+      document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const parent = chip.closest('.filter-chips');
+          parent.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          
+          if (chip.dataset.filter) filters.location = chip.dataset.filter;
+          if (chip.dataset.meal) filters.meal = chip.dataset.meal;
+          
+          renderMatrix();
+        });
+      });
+    });
+    
+    // Mobile Filters - Match rides page behavior
+    function openMobileFilters() {
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function closeMobileFilters(event) {
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (!event || event.target === sheet) {
+        if (sheet) {
+          sheet.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+    
+    // Filter function for mobile
+    function setFilter(type, value) {
+      filters[type] = value;
+      
+      // Update active state on mobile buttons
+      document.querySelectorAll('.mobile-filter-section .filter-chip').forEach(chip => {
+        chip.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Also update desktop filters
+      document.querySelectorAll(`.sidebar .filter-chip[data-${type}]`).forEach(chip => {
+        chip.classList.remove('active');
+        if (chip.dataset[type] === value) {
+          chip.classList.add('active');
+        }
+      });
+      
+      renderMatrix();
+    }
+    
+    // Expose functions globally
+    window.openMobileFilters = openMobileFilters;
+    window.closeMobileFilters = closeMobileFilters;
+    window.setFilter = setFilter;
+  </script>
+
+  <!-- Global Navigation Manager -->
+  <script>
+    // Global Navigation Manager
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        // Show filter button on pages that need it (mobile only)
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn && window.innerWidth <= 1024) {
+            filterBtn.style.display = 'flex';
+          }
+        }
+      },
+      
+      setActiveNav(page) {
+        // Desktop nav
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        // Mobile nav
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        // Set active class
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      openFilters() {
+        // Dispatch event for pages to handle
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+        // Also call the page's own filter function
+        if (typeof openMobileFilters === 'function') {
+          openMobileFilters();
+        }
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      }
+    };
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    // Initialize for dining page
+    GlobalNav.init('dining');
+    
+    // Handle resize to show/hide filter button
+    window.addEventListener('resize', function() {
+      const filterBtn = document.getElementById('global-filter-btn');
+      if (filterBtn) {
+        filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+      }
+    });
+  </script>
+</body>
+</html>
