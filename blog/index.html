@@ -49,165 +49,6 @@
       line-height: 1.6;
     }
     
-    /* Header */
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--shadow-sm);
-    }
-    
-    .header-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    
-    .logo { 
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo img { height: 64px; width: auto; }
-    
-    .nav {
-      display: flex;
-      gap: 2rem;
-      margin-left: auto;
-    }
-    
-    .nav a {
-      color: var(--gray-600);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      transition: color 0.2s;
-    }
-    
-    .nav a:hover, .nav a.active { color: var(--action-orange); }
-    
-    /* Mobile Menu Button */
-    .mobile-menu-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: var(--gray-600);
-    }
-    
-    .mobile-menu-btn svg { width: 24px; height: 24px; }
-    
-    /* Mobile Navigation Sheet */
-    .mobile-nav-sheet {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 200;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-    
-    .mobile-nav-sheet.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .mobile-nav-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 280px;
-      height: 100%;
-      background: var(--white);
-      padding: 1.5rem;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .mobile-nav-sheet.active .mobile-nav-content {
-      transform: translateX(0);
-    }
-    
-    .mobile-nav-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    
-    .mobile-nav-header h3 {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 0;
-    }
-    
-    .close-nav-btn {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--gray-500);
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-    
-    .mobile-nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .mobile-nav-links a {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem;
-      color: var(--base-dark);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.125rem;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    
-    .mobile-nav-links a:hover {
-      background: var(--gray-100);
-    }
-    
-    .mobile-nav-links a.active {
-      color: var(--action-orange);
-      background: var(--gray-100);
-    }
-    
-    @media (max-width: 1024px) {
-      .header-content {
-        justify-content: flex-start;
-        gap: 1rem;
-      }
-      .logo {
-        margin-right: auto;
-      }
-      .nav { display: none; }
-      .mobile-menu-btn { display: flex; }
-      .logo img { height: 48px; }
-    }
-    
     /* Hero */
     .hero {
       background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
@@ -359,7 +200,6 @@
     }
     
     @media (max-width: 768px) {
-      .nav { display: none; }
       .hero h1 { font-size: 1.5rem; }
       .blog-grid { grid-template-columns: 1fr; }
       .affiliate-cta { flex-direction: column; gap: 0.75rem; }
@@ -367,9 +207,222 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-content">
-      <button class="mobile-menu-btn" onclick="openMobileNav()" aria-label="Open menu">
+  <!-- Global Navigation Component -->
+  <style>
+    /* Global Navigation Styles */
+    .global-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    .global-header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .global-logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .global-logo img {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    .global-nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    
+    .global-nav a {
+      color: #718096;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    
+    .global-nav a:hover,
+    .global-nav a.active {
+      color: #F37021;
+    }
+    
+    /* Mobile Menu Button */
+    .global-mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #718096;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-menu-btn:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-menu-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile Filter Button */
+    .global-mobile-filter-btn {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #F37021;
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    /* Mobile Navigation Sheet */
+    .global-mobile-nav-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .global-mobile-nav-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .global-mobile-nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      background: #FFFFFF;
+      padding: 1.5rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .global-mobile-nav-sheet.active .global-mobile-nav-content {
+      transform: translateX(0);
+    }
+    
+    .global-mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    
+    .global-mobile-nav-header h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .global-close-nav-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #718096;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+    
+    .global-mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .global-mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      color: #2D3748;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-nav-links a:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-nav-links a.active {
+      color: #F37021;
+      background: #F7FAFC;
+    }
+    
+    /* Mobile Breakpoint */
+    @media (max-width: 1024px) {
+      .global-header-content {
+        padding: 0.75rem 1rem;
+      }
+      
+      .global-mobile-menu-btn {
+        display: flex;
+      }
+      
+      .global-nav {
+        display: none;
+      }
+      
+      .global-logo img {
+        height: 48px;
+      }
+    }
+    
+    @media (min-width: 1025px) {
+      .global-mobile-menu-btn,
+      .global-mobile-nav-sheet {
+        display: none !important;
+      }
+      
+      .global-nav {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -377,34 +430,42 @@
         </svg>
       </button>
       
-      <a href="/" class="logo">
+      <a href="/" class="global-logo">
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
       
-      <nav class="nav">
-        <a href="/">Rides</a>
-        <a href="/character-dining.html">Character Dining</a>
-        <a href="/blog/" class="active">Blog</a>
+      <nav class="global-nav">
+        <a href="/" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
       </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
     </div>
   </header>
 
   <!-- Mobile Navigation Sheet -->
-  <div class="mobile-nav-sheet" id="mobile-nav-sheet" onclick="closeMobileNav(event)">
-    <div class="mobile-nav-content" onclick="event.stopPropagation()">
-      <div class="mobile-nav-header">
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
         <h3>Menu</h3>
-        <button class="close-nav-btn" onclick="closeMobileNav()">&times;</button>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
-      <nav class="mobile-nav-links">
-        <a href="/">
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-rides">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
           Rides
         </a>
-        <a href="/character-dining.html">
+        <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="8" r="4"></circle>
             <path d="M12 14v7"></path>
@@ -412,7 +473,7 @@
           </svg>
           Character Dining
         </a>
-        <a href="/blog/" class="active">
+        <a href="/blog/" id="mobile-nav-blog">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
@@ -653,39 +714,83 @@
     <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
   </footer>
 
+  <!-- Global Navigation Manager -->
   <script>
-    // Mobile Navigation - Match rides page behavior
-    function openMobileNav() {
-      const sheet = document.getElementById('mobile-nav-sheet');
-      if (sheet) {
-        sheet.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-    
-    function closeMobileNav(event) {
-      const sheet = document.getElementById('mobile-nav-sheet');
-      if (!event || event.target === sheet) {
-        if (sheet) {
-          sheet.classList.remove('active');
-          document.body.style.overflow = '';
+    // Global Navigation Manager
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        // Show filter button on pages that need it
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn) filterBtn.style.display = 'flex';
         }
+      },
+      
+      setActiveNav(page) {
+        // Desktop nav
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        // Mobile nav
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        // Set active class
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      openFilters() {
+        // Dispatch event for pages to handle
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
       }
-    }
-    
+    };
+
     // Close on escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
-        const sheet = document.getElementById('mobile-nav-sheet');
-        if (sheet && sheet.classList.contains('active')) {
-          closeMobileNav();
-        }
+        GlobalNav.closeNav();
       }
     });
-    
-    // Expose functions globally
-    window.openMobileNav = openMobileNav;
-    window.closeMobileNav = closeMobileNav;
+
+    // Initialize for blog page
+    GlobalNav.init('blog');
   </script>
 </body>
 </html>
