@@ -68,7 +68,130 @@
     }
     
     .logo { display: flex; align-items: center; }
-    .logo-img { height: 48px; width: auto; }
+    .logo-img { height: 64px; width: auto; }
+    
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--gray-600);
+      margin-right: var(--space-sm);
+    }
+    
+    .mobile-menu-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile Filter Button */
+    .mobile-filter-btn {
+      display: none;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-orange);
+    }
+    
+    /* Mobile Navigation Sheet */
+    .mobile-nav-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .mobile-nav-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      background: var(--white);
+      padding: var(--space-xl);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .mobile-nav-sheet.active .mobile-nav-content {
+      transform: translateX(0);
+    }
+    
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .mobile-nav-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    
+    .close-nav-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      padding: var(--space-sm);
+    }
+    
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      color: var(--base-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-radius: var(--radius-md);
+      transition: background 0.2s;
+    }
+    
+    .mobile-nav-links a:hover {
+      background: var(--gray-100);
+    }
+    
+    .mobile-nav-links a.active {
+      color: var(--action-orange);
+      background: var(--gray-100);
+    }
     
     .nav {
       display: flex;
@@ -358,22 +481,55 @@
     @media (max-width: 1024px) {
       .layout { flex-direction: column; }
       .sidebar { display: none; }
+      .nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .mobile-filter-btn { display: flex; }
     }
   </style>
 </head>
 <body>
   <header class="header">
     <div class="header-content">
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
       <a href="/" class="logo">
         <img src="/logo-full.png" alt="Plan Your Park" class="logo-img">
       </a>
+      
       <nav class="nav">
         <a href="/">Rides</a>
         <a href="/character-dining.html" class="active">Character Dining</a>
         <a href="/blog/">Blog</a>
       </nav>
+      
+      <button class="mobile-filter-btn" onclick="openMobileFilters()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
+    </div>  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="mobile-nav-sheet" id="mobileNavSheet" onclick="closeMobileNav(event)">
+    <div class="mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="close-nav-btn" onclick="toggleMobileNav()">&times;</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="/">🏰 Rides</a>
+        <a href="/character-dining.html" class="active">🍽️ Character Dining</a>
+        <a href="/blog/">📝 Blog</a>
+      </nav>
     </div>
-  </header>
+  </div>
 
   <div class="layout">
     <!-- Sidebar -->
@@ -608,6 +764,47 @@
           renderMatrix();
         });
       });
+    });
+    
+    // Mobile Navigation
+    function toggleMobileNav() {
+      const sheet = document.getElementById('mobileNavSheet');
+      sheet.classList.toggle('active');
+      document.body.style.overflow = sheet.classList.contains('active') ? 'hidden' : '';
+    }
+    
+    function closeMobileNav(event) {
+      if (event.target === event.currentTarget) {
+        toggleMobileNav();
+      }
+    }
+    
+    // Mobile Filters
+    function openMobileFilters() {
+      // Scroll to filters or show mobile filter modal
+      const sidebar = document.querySelector('.sidebar');
+      if (sidebar) {
+        sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+        sidebar.style.position = 'fixed';
+        sidebar.style.top = '80px';
+        sidebar.style.left = '0';
+        sidebar.style.right = '0';
+        sidebar.style.bottom = '0';
+        sidebar.style.zIndex = '150';
+        sidebar.style.background = 'var(--white)';
+        sidebar.style.padding = '1rem';
+        sidebar.style.overflow = 'auto';
+      }
+    }
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const sheet = document.getElementById('mobileNavSheet');
+        if (sheet && sheet.classList.contains('active')) {
+          toggleMobileNav();
+        }
+      }
     });
   </script>
 </body>
