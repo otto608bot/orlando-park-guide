@@ -120,4 +120,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://planyourpark.com/blog/blog/disney-vs-universal-adults.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
