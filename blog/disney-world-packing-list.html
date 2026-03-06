@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney World Packing List 2026: The Complete Guide | Plan Your Park</title>
+  <meta name="description" content="The ultimate Disney World packing list for 2026. Essentials for adults, kids, toddlers, and babies. Free printable checklist included.">
+  
+  <meta property="og:title" content="Disney World Packing List 2026: The Complete Guide">
+  <meta property="og:description" content="The ultimate Disney World packing list. Free printable checklist included.">
+  <meta property="og:type" content="article">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Calistoga&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --base-dark: #1a1a2e;
+      --action-orange: #ff6b35;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+      --font-heading: 'Calistoga', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--base-dark); line-height: 1.6; }
+    
+    /* Global Navigation */
+    .global-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    .global-header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .global-logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .global-logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    .global-nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    
+    .global-nav a {
+      color: #718096;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    
+    .global-nav a:hover,
+    .global-nav a.active {
+      color: #ff6b35;
+    }
+    
+    .global-mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #718096;
+      border-radius: 8px;
+    }
+    
+    @media (max-width: 1024px) {
+      .global-mobile-menu-btn { display: flex; }
+      .global-nav { display: none; }
+    }
+    
+    article { max-width: 800px; margin: 0 auto; padding: 2rem; background: var(--white); }
+    
+    .article-header { text-align: center; margin-bottom: 2rem; }
+    .article-meta { font-size: 0.875rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+    .article-header h1 { font-family: var(--font-heading); font-size: 2.25rem; line-height: 1.2; margin-bottom: 1rem; }
+    .article-header p { font-size: 1.125rem; color: var(--gray-600); max-width: 600px; margin: 0 auto; }
+    
+    .inline-cta { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin: 1.5rem 0; text-align: center; }
+    .inline-cta a { color: var(--action-orange); font-weight: 600; text-decoration: none; }
+    
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.5rem; margin: 2rem 0 1rem; }
+    .article-content h3 { font-family: var(--font-heading); font-size: 1.25rem; margin: 1.5rem 0 0.75rem; }
+    .article-content p { margin-bottom: 1rem; color: var(--gray-700); }
+    .article-content ul { margin: 1rem 0 1rem 1.5rem; color: var(--gray-700); }
+    .article-content li { margin-bottom: 0.5rem; }
+    
+    .checklist-section {
+      background: var(--gray-50);
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      margin: 1.5rem 0;
+    }
+    
+    .checklist-section h3 {
+      color: var(--base-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0.5rem;
+    }
+    
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--white);
+      border-radius: var(--radius-md);
+    }
+    
+    .checklist-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--action-orange);
+    }
+    
+    .parent-tip { background: #fff7ed; border-left: 4px solid var(--action-orange); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .parent-tip strong { color: var(--action-orange); }
+    
+    .download-box {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .download-box h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 0.5rem;
+    }
+    
+    .download-box p {
+      color: var(--gray-700);
+      margin-bottom: 1rem;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      background: var(--action-orange);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .related-posts { margin: 3rem 0; padding-top: 2rem; border-top: 1px solid var(--gray-200); }
+    .related-posts h3 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .related-card { background: var(--gray-50); padding: 1rem; border-radius: var(--radius-md); text-decoration: none; color: inherit; }
+    .related-tag { font-size: 0.75rem; color: var(--action-orange); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+    .related-card h4 { font-family: var(--font-heading); font-size: 1rem; margin: 0.5rem 0; }
+    
+    .email-capture { background: linear-gradient(135deg, var(--base-dark) 0%, #2d2d44 100%); color: var(--white); padding: 2rem; border-radius: var(--radius-lg); margin: 3rem 0; text-align: center; }
+    .email-capture h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .email-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 1rem auto; flex-wrap: wrap; justify-content: center; }
+    .email-form input { flex: 1; min-width: 200px; padding: 0.75rem 1rem; border: none; border-radius: var(--radius-md); }
+    .email-form button { background: var(--action-orange); color: var(--white); border: none; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; }
+    
+    .bottom-cta { background: linear-gradient(135deg, var(--action-orange) 0%, #ff8c5a 100%); color: var(--white); padding: 2rem; border-radius: var(--radius-lg); text-align: center; margin: 3rem 0; }
+    .bottom-cta a { display: inline-block; background: var(--white); color: var(--action-orange); padding: 0.75rem 2rem; border-radius: var(--radius-md); font-weight: 600; text-decoration: none; }
+    
+    @media (max-width: 640px) {
+      .article-header h1 { font-size: 1.75rem; }
+      .checklist-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      <nav class="global-nav">
+        <a href="/">Rides</a>
+        <a href="/character-dining.html">Character Dining</a>
+        <a href="/blog/" class="active">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <header class="article-header">
+      <div class="article-meta">Planning • March 6, 2026</div>
+      <h1>Disney World Packing List 2026: The Complete Guide</h1>
+      <p>The ultimate packing list for your Disney World vacation. Essentials for adults, kids, toddlers, and babies—plus a free printable checklist.</p>
+    </header>
+
+    <div class="inline-cta">
+      💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through 
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
+    </div>
+
+    <div class="article-content">
+      <p>Packing for Disney World isn't like packing for a typical vacation. Between the Florida heat, unpredictable rain, and 12-hour park days, you need to be strategic about what goes in your suitcase.</p>
+
+      <p>After dozens of Disney trips with my own family—and learning the hard way what we actually needed—I've compiled the ultimate packing list. This covers everything from park bag essentials to things you probably haven't thought of.</p>
+
+      <h2>The Disney World Packing Philosophy</h2>
+
+      <p>Before we dive into the list, here's the mindset: <strong>pack light, but pack smart</strong>. You'll be walking 8-12 miles per day, carrying bags through security, and navigating crowded parks. Every item should earn its place.</p>
+
+      <div class="parent-tip">
+        <strong>Parent tip:</strong> We keep a "park bag" that stays packed with essentials (sunscreen, portable charger, snacks) so we can grab it and go each morning. Game changer.
+      </div>
+
+      <h2>Park Bag Essentials</h2>
+
+      <p>These items go in your daily park bag—the smaller bag you'll carry into the parks:</p>
+
+      <div class="checklist-section">
+        <h3>🎒 Daily Park Bag</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Sunscreen (SPF 30+)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Refillable water bottle</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Lightweight rain poncho</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Hand sanitizer</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Wet wipes</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Snacks (granola bars, crackers)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Blister pads/Band-Aids</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Pain relievers (Tylenol/Advil)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Sunglasses</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Hat or visor</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Disney MagicBand or ticket cards</span></div>
+        </div>
+      </div>
+
+      <h2>Clothing Essentials</h2>
+
+      <p>Florida weather is hot, humid, and prone to afternoon thunderstorms. Pack accordingly:</p>
+
+      <div class="checklist-section">
+        <h3>👕 Clothing</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item"><input type="checkbox"> <span>Moisture-wicking shirts (2 per day)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Comfortable shorts (1 per day)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Lightweight pants (1-2 pairs)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Light jacket or hoodie (for AC)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Swimsuit (resort pools)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Pajamas</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Underwear (1.5x days)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Socks (2 per day)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Comfortable walking shoes (broken in!)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Sandals/water shoes</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Light rain jacket</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Disney-themed shirts (optional)</span></div>
+        </div>
+      </div>
+
+      <div class="parent-tip">
+        <strong>Parent tip:</strong> Pack one "nice" outfit for character dining or Disney Springs. Most of the time you'll be in park clothes, but it's nice to have options.
+      </div>
+
+      <h2>For Kids & Toddlers</h2>
+
+      <p>Traveling with little ones requires extra planning. Here's what to add:</p>
+
+      <div class="checklist-section">
+        <h3>👶 Kids & Toddler Extras</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item"><input type="checkbox"> <span>Stroller (or rent at Disney)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Stroller fan</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Stroller rain cover</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Diapers/wipes (more than you think)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Change of clothes (2 per day)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Favorite snacks</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Small toys/activities for lines</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Glow sticks/light-up toys</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Baby carrier (for infants)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Sippy cups/bottles</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Kid-safe sunscreen</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Autograph book & pen</span></div>
+        </div>
+      </div>
+
+      <h2>What NOT to Pack</h2>
+
+      <p>Just as important as what to bring—here's what to leave home:</p>
+
+      <ul>
+        <li><strong>New shoes</strong> – Break them in first or you'll regret it</li>
+        <li><strong>Heavy jackets</strong> – Even in winter, Florida is mild during the day</li>
+        <li><strong>Valuable jewelry</strong> – Easy to lose on rides</li>
+        <li><strong>Large bags</strong> – You'll carry it all day; keep it minimal</li>
+        <li><strong>Food for the whole trip</strong> – Grocery delivery to your resort is easier</li>
+        <li><strong>Ponchos from home</strong> – Buy cheap ones at the dollar store or at Disney</li>
+      </ul>
+
+      <h2>The "Oh Yeah, That" List</h2>
+
+      <p>The easily forgotten items that you'll definitely need:</p>
+
+      <div class="checklist-section">
+        <h3>📝 Don't Forget</h3>
+        <div class="checklist-grid">
+          <div class="checklist-item"><input type="checkbox"> <span>ID/driver's license</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Travel insurance documents</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Medications (in original bottles)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger (seriously, bring two)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Car rental confirmation</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Disney reservation confirmations</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Cash for tips</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Reusable shopping bag (for souvenirs)</span></div>
+        </div>
+      </div>
+
+      <h2>Final Tips for Packing Success</h2>
+
+      <ol>
+        <li><strong>Roll, don't fold</strong> – Saves space and reduces wrinkles</li>
+        <li><strong>Pack outfits, not items</strong> – Plan what you'll wear each day</li>
+        <li><strong>Leave room for souvenirs</strong> – You'll buy more than you think</li>
+        <li><strong>Ship items ahead</strong> – Amazon can deliver to your Disney resort</li>
+        <li><strong>Pack a "first night" bag</strong> – Essentials in case luggage is delayed</li>
+      </ol>
+
+      <p>Remember: you can buy almost anything at Disney World (for a premium). Don't stress if you forget something—focus on the essentials and the memories you'll make.</p>
+    </div>
+
+    <section class="related-posts">
+      <h3>You Might Also Like</h3>
+      <div class="related-grid">
+        <a href="/blog/disney-vs-universal-adults.html" class="related-card">
+          <span class="related-tag">Comparison</span>
+          <h4>Disney World vs Universal for Adults</h4>
+          <p>Which park is better for grown-up vacations?</p>
+        </a>
+        <a href="/blog/best-rides-teens-islands-of-adventure.html" class="related-card">
+          <span class="related-tag">Ride Guide</span>
+          <h4>Best Rides for Teens at Islands of Adventure</h4>
+          <p>Thrill rides that deliver for teenagers.</p>
+        </a>
+        <a href="/blog/toddler-rides-disney-world.html" class="related-card">
+          <span class="related-tag">Toddlers</span>
+          <h4>Best Toddler Rides at Disney World</h4>
+          <p>Gentle rides perfect for little ones.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="email-capture">
+      <div class="email-capture-content">
+        <h3>Get This List as a Printable PDF</h3>
+        <p>Enter your email and we'll send you a free printable packing checklist—perfect for checking off items as you pack.</p>
+        <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <input type="hidden" name="source" value="packing-list-pdf">
+          <button type="submit">Send Me the Checklist →</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="bottom-cta">
+      <p>Ready to book your Disney trip?</p>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+    </div>
+  </article>
+
+  <footer style="background: var(--base-dark); color: var(--white); padding: 2rem; text-align: center;">
+    <p style="color: #a1a1aa;">© 2026 Plan Your Park. All rights reserved.</p>
+  </footer>
+</body>
+</html>
