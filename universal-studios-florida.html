@@ -524,5 +524,83 @@
       renderRides();
     });
   </script>
+
+  <!-- Related Guides Section -->
+  <style>
+    .related-guides {
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .related-guides h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2D3748;
+    }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .guide-card {
+      background: #FFFFFF;
+      padding: 1.25rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .guide-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .guide-tag {
+      font-size: 0.75rem;
+      color: #F37021;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .guide-card h4 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.125rem;
+      margin: 0.5rem 0;
+      color: #2D3748;
+    }
+    .guide-card p {
+      font-size: 0.9375rem;
+      color: #718096;
+      margin: 0;
+    }
+  </style>
+
+  <section class="related-guides">
+    <h3>Related Guides</h3>
+    <div class="guides-grid">
+      <a href="/blog/disney-vs-universal-adults.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Disney vs Universal for Adults</h4>
+        <p>Which park is better for grown-up vacations?</p>
+      </a>
+      <a href="/blog/universal-vs-disney-comparison.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Universal vs Disney Comparison</h4>
+        <p>Head-to-head comparison of both resorts.</p>
+      </a>
+      <a href="/blog/best-rides-teens-islands-of-adventure.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Best Rides for Teens at Islands of Adventure</h4>
+        <p>Thrill rides across both Universal parks.</p>
+      </a>
+      <a href="/blog/spring-break-disney-world-2026.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Spring Break at Disney World</h4>
+        <p>Orlando vacation planning guide for peak season.</p>
+      </a>
+    </div>
+  </section>
+
 </body>
 </html>
