@@ -36,6 +36,23 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6349270729296966" crossorigin="anonymous"></script>
 
+  <!-- Amazon Native Shopping Ads -->
+  <script type="text/javascript">
+    amzn_assoc_ad_type = "smart";
+    amzn_assoc_tracking_id = "planyourpark-20";
+    amzn_assoc_ad_mode = "search";
+    amzn_assoc_ad_type = "smart";
+    amzn_assoc_marketplace = "amazon";
+    amzn_assoc_region = "US";
+    amzn_assoc_default_search_phrase = "disney park essentials";
+    amzn_assoc_default_category = "All";
+    amzn_assoc_linkid = "d1f9e9f9f9f9f9f9e9f9f9f9f9f9f9f9";
+    amzn_assoc_title = "Shop Park Gear";
+    amzn_assoc_search_bar = "false";
+    amzn_assoc_rows = "2";
+  </script>
+  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
@@ -550,6 +567,17 @@
       border: 1px dashed var(--gray-300);
       border-radius: var(--radius-sm);
       color: var(--gray-400);
+    }
+    
+    /* Amazon Ad Section */
+    .amazon-ad-section {
+      min-height: 250px;
+    }
+    
+    .amazon-ad-section iframe,
+    .amazon-ad-section div[id^="amzn"] {
+      width: 100% !important;
+      max-width: 100%;
     }
     
     /* Park Detail View */
@@ -1295,6 +1323,12 @@
           </a>
         </div>
         <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Affiliate links — we earn a commission at no extra cost to you</p>
+      </div>
+      
+      <div class="sidebar-section amazon-ad-section">
+        <h3 class="sidebar-title">🛒 Park Essentials</h3>
+        <div id="amzn-assoc-ad-search"></div>
+        <p style="font-size: 0.7rem; color: var(--gray-500); margin-top: var(--space-md); text-align: center;">As an Amazon Associate we earn from qualifying purchases</p>
       </div>
     </aside>
 
