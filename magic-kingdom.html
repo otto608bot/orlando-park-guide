@@ -824,5 +824,83 @@
       renderMeals();
     });
   </script>
+
+  <!-- Related Guides Section -->
+  <style>
+    .related-guides {
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .related-guides h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--base-dark);
+    }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .guide-card {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .guide-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .guide-tag {
+      font-size: 0.75rem;
+      color: var(--action-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .guide-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      margin: 0.5rem 0;
+      color: var(--base-dark);
+    }
+    .guide-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+  </style>
+
+  <section class="related-guides">
+    <h3>Related Guides</h3>
+    <div class="guides-grid">
+      <a href="/blog/best-rides-5-year-olds-disney-world.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Best Rides for 5-Year-Olds</h4>
+        <p>Perfect rides for kindergarteners at Magic Kingdom and beyond.</p>
+      </a>
+      <a href="/blog/toddler-rides-disney-world.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Best Toddler Rides</h4>
+        <p>Gentle, magical rides with no height requirements.</p>
+      </a>
+      <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Pregnant Mom's Guide</h4>
+        <p>Safe rides, rest spots, and tips for expectant mothers.</p>
+      </a>
+      <a href="/blog/best-shows-disney-world-ranked.html" class="guide-card">
+        <span class="guide-tag">Blog</span>
+        <h4>Best Shows at Disney World</h4>
+        <p>Ranked list of must-see entertainment across all parks.</p>
+      </a>
+    </div>
+  </section>
+
 </body>
 </html>
