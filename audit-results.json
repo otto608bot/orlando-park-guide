@@ -1,0 +1,171 @@
+{
+  "timestamp": "2026-03-07T00:32:38.189Z",
+  "pages": [
+    {
+      "url": "https://planyourpark.com/",
+      "name": "Homepage",
+      "status": 200,
+      "title": "Plan Your Park - Orlando Ride Guide",
+      "metaDesc": "Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory ",
+      "h1": "Find Rides for Everyone",
+      "affiliateCount": 4,
+      "emailForms": 1,
+      "hasAds": true,
+      "hasGA4": true,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/blog/",
+      "name": "Blog Index",
+      "status": 200,
+      "title": "Blog - Plan Your Park | Orlando Theme Park Guides & Tips",
+      "metaDesc": "Expert tips, guides, and insider secrets for Disney World, Universal Orlando, SeaWorld & LEGOLAND. Plan your perfect park vacation.",
+      "h1": "Orlando Park Tips & Guides",
+      "affiliateCount": 1,
+      "emailForms": 1,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/character-dining.html",
+      "name": "Character Dining",
+      "status": 200,
+      "title": "Character Dining - Plan Your Park",
+      "metaDesc": "Find the perfect Disney World character dining experience. Compare characters, prices, and locations across all parks and resorts.",
+      "h1": "Character Dining",
+      "affiliateCount": 2,
+      "emailForms": 0,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/magic-kingdom.html",
+      "name": "Magic Kingdom",
+      "status": 200,
+      "title": "Magic Kingdom Rides & Character Dining | Plan Your Park",
+      "metaDesc": "Complete guide to Magic Kingdom rides and character dining. Filter by height, pregnancy safety, and find the perfect character meals.",
+      "h1": "Magic Kingdom",
+      "affiliateCount": 1,
+      "emailForms": 0,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/blog/best-character-dining-disney-world-2026.html",
+      "name": "Character Dining Blog",
+      "status": 200,
+      "title": "Best Character Dining at Disney World 2026 | Plan Your Park",
+      "metaDesc": "The ultimate guide to Disney World character dining in 2026. Compare restaurants, prices, characters, and find the perfect meal for your family's magi",
+      "h1": "Best Character Dining at Disney World 2026: The Complete Parent's Guide",
+      "affiliateCount": 2,
+      "emailForms": 2,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/blog/how-to-use-genie-plus-disney-world-2026.html",
+      "name": "Genie+ Blog",
+      "status": 200,
+      "title": "How to Use Genie+ at Disney World 2026 | Plan Your Park",
+      "metaDesc": "Master Disney Genie+ in 2026 with our complete guide. Learn how to book Lightning Lanes, maximize your selections, and save hours of waiting in line.",
+      "h1": "How to Use Genie+ at Disney World 2026: The Complete Guide",
+      "affiliateCount": 2,
+      "emailForms": 2,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    },
+    {
+      "url": "https://planyourpark.com/blog/disney-vs-universal-adults.html",
+      "name": "Disney vs Universal Blog",
+      "status": 200,
+      "title": "Disney World vs Universal for Adults: Which Park Is Better? | Plan Your Park",
+      "metaDesc": "Comparing Disney World vs Universal Orlando for adults: rides, dining, nightlife, and overall experience. Find out which park fits your grown-up vacat",
+      "h1": "Disney World vs Universal for Adults: Which Park Is Better?",
+      "affiliateCount": 2,
+      "emailForms": 2,
+      "hasAds": false,
+      "hasGA4": false,
+      "imagesWithoutAlt": 0
+    }
+  ],
+  "errors": [],
+  "affiliateLinks": [
+    {
+      "text": "🏰 Disney World",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/"
+    },
+    {
+      "text": "🎢 Universal",
+      "href": "https://www.anrdoezrs.net/click-101693488-12540773",
+      "page": "https://planyourpark.com/"
+    },
+    {
+      "text": "🏰 Disney World",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/"
+    },
+    {
+      "text": "🎢 Universal",
+      "href": "https://www.anrdoezrs.net/click-101693488-12540773",
+      "page": "https://planyourpark.com/"
+    },
+    {
+      "text": "Get Discounted Tickets →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/"
+    },
+    {
+      "text": "🏰 Disney World",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/character-dining.html"
+    },
+    {
+      "text": "🎢 Universal",
+      "href": "https://www.anrdoezrs.net/click-101693488-12540773",
+      "page": "https://planyourpark.com/character-dining.html"
+    },
+    {
+      "text": "Get Magic Kingdom Tickets",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/magic-kingdom.html"
+    },
+    {
+      "text": "Undercover Tourist →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/best-character-dining-disney-world-2026.html"
+    },
+    {
+      "text": "Get Discounted Tickets →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/best-character-dining-disney-world-2026.html"
+    },
+    {
+      "text": "Undercover Tourist →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/how-to-use-genie-plus-disney-world-2026.html"
+    },
+    {
+      "text": "Get Discounted Tickets →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/how-to-use-genie-plus-disney-world-2026.html"
+    },
+    {
+      "text": "Undercover Tourist →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/disney-vs-universal-adults.html"
+    },
+    {
+      "text": "Get Discounted Tickets →",
+      "href": "https://www.dpbolvw.net/click-101693488-5527150",
+      "page": "https://planyourpark.com/blog/disney-vs-universal-adults.html"
+    }
+  ],
+  "emailForms": [],
+  "seoIssues": []
+}
