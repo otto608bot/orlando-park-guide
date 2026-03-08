@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Park Gear - Disney World Essentials | Plan Your Park</title>
+  <meta name="description" content="Shop the best Disney World essentials and park gear. Portable chargers, cooling towels, stroller fans, packing cubes, and more. As an Amazon Associate we earn from qualifying purchases.">
+  
+  <meta property="og:title" content="Shop Park Gear - Disney World Essentials">
+  <meta property="og:description" content="The best Amazon products for your Disney World vacation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://planyourpark.com/shop.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/styles/global-nav.css">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-600: #718096;
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-top: 80px;
+    }
+    
+    @media (max-width: 1024px) {
+      .hero { margin-top: 64px; }
+    }
+    
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .disclaimer {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    
+    .category-section {
+      margin-bottom: 3rem;
+    }
+    
+    .category-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--base-dark);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .product-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    
+    .product-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .product-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      color: var(--base-dark);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    
+    .product-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    
+    .product-btn {
+      display: block;
+      width: 100%;
+      padding: 0.875rem;
+      background: var(--action-orange);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    
+    .product-btn:hover {
+      background: #e05a0f;
+    }
+    
+    .footer-ad-section {
+      background: var(--bg-off-white);
+      padding: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.75rem; }
+      .hero p { font-size: 1rem; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Navigation -->
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      
+      <nav class="global-nav">
+        <a href="/" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-rides">Rides</a>
+        <a href="/character-dining.html" id="mobile-nav-dining">Character Dining</a>
+        <a href="/blog/" id="mobile-nav-blog">Blog</a>
+        <a href="/deals.html" id="mobile-nav-deals">Deals</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>🛒 Shop Park Gear</h1>
+    <p>The best Amazon products for your Disney World vacation. We only recommend items we actually use.</p>
+  </section>
+
+  <div class="container">
+    <div class="disclaimer">
+      <strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. 
+      These are products we personally recommend for Disney World trips. Prices are accurate as of our last update.
+    </div>
+
+    <!-- Essential Tech -->
+    <section class="category-section">
+      <h2 class="category-title">🔋 Essential Tech</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">🔌</div>
+          <h3>Charmast Portable Charger with Built-in Cables</h3>
+          <p>10000mAh slim power bank with 6 outputs and 3A fast charging. No extra cables needed—perfect for long park days.</p>
+          <a href="https://amzn.to/46K6ZW7" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">🔋</div>
+          <h3>INIU Portable Charger 45W Fast Charging</h3>
+          <p>Ultra-slim 10000mAh with attached USB-C cable. Flight-safe and perfect for charging on the go.</p>
+          <a href="https://amzn.to/4sSNvHB" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">⚡</div>
+          <h3>Anker PowerCore 10K</h3>
+          <p>Compact travel-ready battery with PowerIQ technology. Reliable, lightweight, and trusted by millions.</p>
+          <a href="https://amzn.to/4lix1Wx" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">📍</div>
+          <h3>Apple AirTag 4-Pack</h3>
+          <p>Track your luggage, stroller, or car in the parks. Simple one-tap setup with iPhone. Essential for peace of mind.</p>
+          <a href="https://amzn.to/4rpYp6l" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beat the Heat -->
+    <section class="category-section">
+      <h2 class="category-title">☀️ Beat the Heat</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">🧊</div>
+          <h3>Sukeen Cooling Towels 4-Pack</h3>
+          <p>40"x12" cooling neck wraps that stay chilled for hours. Just wet, wring, and snap. UPF 50 sun protection included.</p>
+          <a href="https://amzn.to/4s0z7wT" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">💨</div>
+          <h3>AMACOOL Battery Operated Stroller Fan</h3>
+          <p>Rechargeable clip-on fan for strollers, car seats, and wagons. Keep your little one cool during hot Florida days.</p>
+          <a href="https://amzn.to/4bcn87V" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">💧</div>
+          <h3>Nuun Sport Electrolyte Tablets</h3>
+          <p>Stay hydrated with these easy-dissolve tablets. 4-pack with 40 servings. Essential for hot park days.</p>
+          <a href="https://amzn.to/4bevYlN" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Organization -->
+    <section class="category-section">
+      <h2 class="category-title">🎒 Travel Organization</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">📦</div>
+          <h3>OlarHike Compression Packing Cubes 6-Set</h3>
+          <p>Compressible expandable cubes for organizing clothes. Makes packing and unpacking a breeze.</p>
+          <a href="https://amzn.to/4rSRzas" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">👟</div>
+          <h3>Superfeet All-Purpose Wide-Fit Support Insoles</h3>
+          <p>Orthotic arch support for wide footwear. Essential for 10+ miles of walking per day at Disney.</p>
+          <a href="https://amzn.to/4uAtKWX" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">🎒</div>
+          <h3>Clear Stadium Backpack 12x6x12</h3>
+          <p>Disney security-approved clear bag with reinforced straps. Meets all park requirements.</p>
+          <a href="https://amzn.to/4lf69Xf" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strollers -->
+    <section class="category-section">
+      <h2 class="category-title">👶 Strollers & Accessories</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon">✈️</div>
+          <h3>MAMAZING Ultra Air Lightweight Travel Stroller</h3>
+          <p>Carbon fiber frame, only 11.6 lbs. Airplane-friendly with one-handed fold. Perfect for Disney travel.</p>
+          <a href="https://amzn.to/4dglrJg" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">🪝</div>
+          <h3>Stroller Hooks 2-Pack</h3>
+          <p>Large 6.3" stroller clips for hanging bags and shopping. Essential stroller accessory.</p>
+          <a href="https://amzn.to/4sDj73Q" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">👶</div>
+          <h3>Ingenuity 3Dquickclose CS+ Compact Stroller</h3>
+          <p>Lightweight with oversized canopy and extra-large storage. Easy compact fold for travel.</p>
+          <a href="https://amzn.to/4bwngAB" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">👶👶</div>
+          <h3>Mompush Lithe Double Stroller</h3>
+          <p>Side-by-side stroller for newborn and toddler. Easy fold, spacious seats with recline, UPF50+ canopy.</p>
+          <a href="https://amzn.to/4bimzcV" target="_blank" rel="noopener" class="product-btn">View on Amazon →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Ad -->
+  <section class="footer-ad-section">
+    <div class="footer-ad-container">
+      <div class="inline-ad-label">Advertisement</div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6349270729296966"
+           data-ad-slot="4983629986"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </section>
+
+  <script src="/scripts/global-nav.js"></script>
+  <script>GlobalNav.init('deals');</script>
+</body>
+</html>
