@@ -3,26 +3,86 @@
  * Include before closing </body> tag on all pages
  */
 
-function toggleMobileNav() {
-  const sheet = document.getElementById('mobileNavSheet');
-  if (sheet) {
-    sheet.classList.toggle('active');
-    document.body.style.overflow = sheet.classList.contains('active') ? 'hidden' : '';
+window.GlobalNav = {
+  currentPage: '',
+  
+  init(page) {
+    this.currentPage = page;
+    this.setActiveNav(page);
+    
+    // Show filter button on pages that need it (mobile only)
+    if (page === 'rides' || page === 'dining') {
+      const filterBtn = document.getElementById('global-filter-btn');
+      if (filterBtn && window.innerWidth <= 1024) {
+        filterBtn.style.display = 'flex';
+      }
+    }
+  },
+  
+  setActiveNav(page) {
+    // Desktop nav
+    const navIds = {
+      'rides': 'nav-rides',
+      'dining': 'nav-dining',
+      'blog': 'nav-blog',
+      'deals': 'nav-deals'
+    };
+    
+    // Mobile nav
+    const mobileNavIds = {
+      'rides': 'mobile-nav-rides',
+      'dining': 'mobile-nav-dining',
+      'blog': 'mobile-nav-blog',
+      'deals': 'mobile-nav-deals'
+    };
+    
+    // Set active class
+    const activeNav = document.getElementById(navIds[page]);
+    const activeMobileNav = document.getElementById(mobileNavIds[page]);
+    
+    if (activeNav) activeNav.classList.add('active');
+    if (activeMobileNav) activeMobileNav.classList.add('active');
+  },
+  
+  openNav() {
+    const sheet = document.getElementById('global-mobile-nav-sheet');
+    if (sheet) {
+      sheet.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  },
+  
+  closeNav(event) {
+    const sheet = document.getElementById('global-mobile-nav-sheet');
+    if (!event || event.target === sheet) {
+      if (sheet) {
+        sheet.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  },
+  
+  openFilters() {
+    // Dispatch event for pages to handle
+    document.dispatchEvent(new CustomEvent('global:openFilters'));
+  },
+  
+  closeFilters() {
+    document.dispatchEvent(new CustomEvent('global:closeFilters'));
   }
-}
-
-function closeMobileNav(event) {
-  if (event.target === event.currentTarget) {
-    toggleMobileNav();
-  }
-}
+};
 
 // Close on escape key
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    const sheet = document.getElementById('mobileNavSheet');
-    if (sheet && sheet.classList.contains('active')) {
-      toggleMobileNav();
-    }
+    GlobalNav.closeNav();
+  }
+});
+
+// Handle resize to show/hide filter button
+window.addEventListener('resize', function() {
+  const filterBtn = document.getElementById('global-filter-btn');
+  if (filterBtn) {
+    filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
   }
 });
