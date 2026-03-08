@@ -580,6 +580,47 @@
       max-width: 100%;
     }
     
+    /* Google AdSense Section */
+    .ad-section {
+      min-height: 250px;
+    }
+    
+    .ad-section ins.adsbygoogle {
+      display: block;
+      width: 100%;
+    }
+    
+    /* Inline Content Ad */
+    .inline-ad {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-md);
+    }
+    
+    /* Footer Ad Section */
+    .footer-ad-section {
+      background: var(--bg-off-white);
+      padding: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
     /* Park Detail View */
     .park-detail {
       display: none;
@@ -1330,6 +1371,20 @@
         <div id="amzn-assoc-ad-search"></div>
         <p style="font-size: 0.7rem; color: var(--gray-500); margin-top: var(--space-md); text-align: center;">As an Amazon Associate we earn from qualifying purchases</p>
       </div>
+      
+      <!-- Google AdSense Sidebar Ad -->
+      <div class="sidebar-section ad-section">
+        <h3 class="sidebar-title">Sponsored</h3>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6349270729296966"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
     </aside>
 
     <!-- Main Content -->
@@ -1408,6 +1463,20 @@
         
         <div class="parks-grid" id="parks-grid">
           <!-- Park cards injected here -->
+        </div>
+        
+        <!-- Inline Content Ad -->
+        <div class="inline-ad">
+          <div class="inline-ad-label">Advertisement</div>
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-6349270729296966"
+               data-ad-slot="0987654321"
+               data-ad-format="horizontal"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
       </div>
       
@@ -1526,6 +1595,22 @@
         <button type="submit">Subscribe</button>
       </form>
       <p class="email-note">No spam. Unsubscribe anytime. Join 2,000+ parents.</p>
+    </div>
+  </section>
+
+  <!-- Footer Ad -->
+  <section class="footer-ad-section">
+    <div class="footer-ad-container">
+      <div class="inline-ad-label">Advertisement</div>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6349270729296966"
+           data-ad-slot="1122334455"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </section>
 
