@@ -8,14 +8,10 @@
   command = "echo 'Staging deploy'"
 
 [[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/blog/*"
   to = "/blog/:splat.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/character-dining"
@@ -31,6 +27,11 @@
   from = "/park"
   to = "/park.html"
   status = 301
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/.well-known/security.txt"
