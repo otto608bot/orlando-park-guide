@@ -36,23 +36,6 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6349270729296966" crossorigin="anonymous"></script>
 
-  <!-- Amazon Native Shopping Ads -->
-  <script type="text/javascript">
-    amzn_assoc_ad_type = "smart";
-    amzn_assoc_tracking_id = "planyourpark-20";
-    amzn_assoc_ad_mode = "search";
-    amzn_assoc_ad_type = "smart";
-    amzn_assoc_marketplace = "amazon";
-    amzn_assoc_region = "US";
-    amzn_assoc_default_search_phrase = "disney park essentials";
-    amzn_assoc_default_category = "All";
-    amzn_assoc_linkid = "d1f9e9f9f9f9f9f9e9f9f9f9f9f9f9f9";
-    amzn_assoc_title = "Shop Park Gear";
-    amzn_assoc_search_bar = "false";
-    amzn_assoc_rows = "2";
-  </script>
-  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
@@ -578,6 +561,34 @@
     .amazon-ad-section div[id^="amzn"] {
       width: 100% !important;
       max-width: 100%;
+    }
+    
+    /* Amazon Products Section */
+    .amazon-products .product-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .amazon-products .product-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--base-dark);
+      font-size: 0.8125rem;
+      transition: background 0.2s;
+    }
+    
+    .amazon-products .product-link:hover {
+      background: var(--gray-200);
+    }
+    
+    .amazon-products .product-link span {
+      font-size: 1.25rem;
     }
     
     /* Park Detail View */
@@ -1325,9 +1336,22 @@
         <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: var(--space-md);">Affiliate links — we earn a commission at no extra cost to you</p>
       </div>
       
-      <div class="sidebar-section amazon-ad-section">
+      <div class="sidebar-section amazon-products">
         <h3 class="sidebar-title">🛒 Park Essentials</h3>
-        <div id="amzn-assoc-ad-search"></div>
+        <div class="product-links">
+          <a href="https://www.amazon.com/dp/B08P4GRYY8?tag=planyourpark-20" target="_blank" rel="noopener" class="product-link">
+            <span>🎧</span> Kids Headphones
+          </a>
+          <a href="https://www.amazon.com/dp/B07Z7P6ZN9?tag=planyourpark-20" target="_blank" rel="noopener" class="product-link">
+            <span>🔋</span> Portable Charger
+          </a>
+          <a href="https://www.amazon.com/dp/B08F7ZPR7T?tag=planyourpark-20" target="_blank" rel="noopener" class="product-link">
+            <span>☀️</span> Sunscreen Stick
+          </a>
+          <a href="https://www.amazon.com/dp/B09V3KX1YJ?tag=planyourpark-20" target="_blank" rel="noopener" class="product-link">
+            <span>💧</span> Collapsible Water Bottle
+          </a>
+        </div>
         <p style="font-size: 0.7rem; color: var(--gray-500); margin-top: var(--space-md); text-align: center;">As an Amazon Associate we earn from qualifying purchases</p>
       </div>
     </aside>
