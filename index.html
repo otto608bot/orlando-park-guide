@@ -1729,7 +1729,7 @@
         if (mobileHeightSlider) mobileHeightSlider.value = state.height;
         
         // Update height display text
-        const heightText = state.height === 0 ? 'Any <span>height</span>' : state.height + '" <span>or shorter</span>';
+        const heightText = state.height === 0 ? 'Any <span>height</span>' : state.height + '" <span>minimum</span>';
         if (heightDisplay) heightDisplay.innerHTML = heightText;
         if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
         
