@@ -1608,55 +1608,102 @@
 
   <script src="app.js?v=7"></script>
   
-  <!-- Shared Filter Module -->
-  <script src="scripts/filter-module.js"></script>
-  
-  <!-- Filter Integration -->
+  <!-- Simple filter persistence - save on change, load on init -->
   <script>
     (function() {
-      // Initialize shared filter module
-      FilterModule.init(function(filterState) {
-        // Sync with app.js state
-        if (typeof state !== 'undefined' && state.filters) {
-          state.filters.height = filterState.height;
-          state.filters.pregnancy = filterState.pregnancy;
-          state.filters.wheelchair = filterState.wheelchair;
-          state.filters.sensory = filterState.sensory;
-          
-          // Trigger re-render
-          if (typeof render === 'function') render();
-        }
-      });
+      const STORAGE_KEY = 'pyp_filters_v1';
       
-      // Override app.js filter functions to use shared module
+      // Wrap the original functions to save after they execute
+      const originalToggleFilter = window.toggleFilter;
+      const originalUpdateHeight = window.updateHeightFilter;
+      
       window.toggleFilter = function(type) {
-        switch(type) {
-          case 'pregnancy':
-            FilterModule.togglePregnancy();
-            break;
-          case 'wheelchair':
-            FilterModule.toggleWheelchair();
-            break;
-          case 'sensory':
-            FilterModule.toggleSensory();
-            break;
-        }
+        if (originalToggleFilter) originalToggleFilter(type);
+        saveFilters();
       };
       
       window.updateHeightFilter = function(value) {
-        FilterModule.setHeight(value);
+        if (originalUpdateHeight) originalUpdateHeight(value);
+        saveFilters();
       };
       
-      // Mobile filter sheet functions
-      window.openMobileFilters = function() {
-        FilterModule.openMobileSheet();
-      };
+      function saveFilters() {
+        if (typeof state === 'undefined' || !state.filters) return;
+        
+        // Convert index.html format to shared format for park.html compatibility
+        const sharedFormat = {
+          height: state.filters.height,
+          pregnancy: state.filters.pregnancy,
+          // Convert boolean to string for park.html
+          wheelchair: state.filters.wheelchair ? 'WAV' : 'any',
+          // Convert boolean to object for park.html
+          sensory: state.filters.sensory ? 
+            { dark: true, loud: true, sudden: true, enclosed: true, strobe: true } :
+            { dark: false, loud: false, sudden: false, enclosed: false, strobe: false },
+          timestamp: Date.now()
+        };
+        
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(sharedFormat));
+      }
       
-      window.closeMobileFilters = function(event) {
-        if (!event || event.target.id === 'mobile-filter-sheet') {
-          FilterModule.closeMobileSheet();
+      function loadFilters() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (!stored || typeof state === 'undefined' || !state.filters) return;
+          
+          const parsed = JSON.parse(stored);
+          
+          // Update state from shared format
+          state.filters.height = parsed.height || 0;
+          state.filters.pregnancy = parsed.pregnancy || false;
+          
+          // Convert string 'wheelchair' back to boolean
+          // If it's a boolean (old format), use it directly. If string, check if 'WAV'
+          if (typeof parsed.wheelchair === 'boolean') {
+            state.filters.wheelchair = parsed.wheelchair;
+          } else {
+            state.filters.wheelchair = parsed.wheelchair === 'WAV';
+          }
+          
+          // Convert sensory object back to boolean
+          // If it's a boolean (old format), use it directly. If object, check if any are true
+          if (typeof parsed.sensory === 'boolean') {
+            state.filters.sensory = parsed.sensory;
+          } else if (parsed.sensory && typeof parsed.sensory === 'object') {
+            state.filters.sensory = Object.values(parsed.sensory).some(v => v);
+          }
+          
+          // Update UI
+          const heightSlider = document.getElementById('height-slider');
+          const mobileHeightSlider = document.getElementById('mobile-height-slider');
+          if (heightSlider) heightSlider.value = state.filters.height;
+          if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
+          
+          const heightDisplay = document.getElementById('height-display');
+          const mobileHeightDisplay = document.getElementById('mobile-height-display');
+          const text = state.filters.height === 0 ? 'Any <span>height</span>' : state.filters.height + '" <span>minimum</span>';
+          if (heightDisplay) heightDisplay.innerHTML = text;
+          if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = text;
+          
+          ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
+            const chip = document.getElementById('chip-' + type);
+            const mobileChip = document.getElementById('mobile-chip-' + type);
+            if (chip) chip.classList.toggle('active', state.filters[type]);
+            if (mobileChip) mobileChip.classList.toggle('active', state.filters[type]);
+          });
+          
+          if (typeof render === 'function') render();
+        } catch (e) {
+          console.warn('Failed to load filters:', e);
         }
-      };
+      }
+      
+      // Load on init
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadFilters);
+      } else {
+        loadFilters();
+      }
     })();
   </script>
   
@@ -1748,13 +1795,21 @@
       }
     });
     
-    // Connect global filter events to shared filter module
+    // Connect global filter events to rides page filter functions
     document.addEventListener('global:openFilters', function() {
-      FilterModule.openMobileSheet();
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     });
     
     document.addEventListener('global:closeFilters', function() {
-      FilterModule.closeMobileSheet();
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   </script>
 </body>

@@ -2436,91 +2436,107 @@
     
     // Connect global filter events to mobile filter sheet
     document.addEventListener('global:openFilters', function() {
-      FilterModule.openMobileSheet();
+      openMobileFilters();
     });
     
     document.addEventListener('global:closeFilters', function() {
-      FilterModule.closeMobileSheet();
+      closeMobileFilters();
     });
     
     // ============================================
-    // SHARED FILTER MODULE INTEGRATION
+    // FILTER PERSISTENCE
     // ============================================
-    
-    // Initialize shared filter module
-    FilterModule.init(function(filterState) {
-      // Sync shared state to park page filters
-      filters.height = filterState.height;
-      filters.pregnant = filterState.pregnancy;
-      filters.wheelchair = filterState.wheelchair;
+    (function() {
+      const STORAGE_KEY = 'pyp_filters_v1';
       
-      // Sync sensory filters
-      Object.keys(filterState.sensory).forEach(key => {
-        filters.sensory[key] = filterState.sensory[key];
-      });
+      // Load filters from localStorage on init
+      function loadFilters() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (!stored) return;
+          
+          const parsed = JSON.parse(stored);
+          
+          // Update filters object from shared format
+          if (parsed.height !== undefined) filters.height = parsed.height;
+          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
+          
+          // Handle wheelchair - can be boolean (old format) or string (new format)
+          if (typeof parsed.wheelchair === 'boolean') {
+            filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          } else if (typeof parsed.wheelchair === 'string') {
+            filters.wheelchair = ['WAV', 'TAV'].includes(parsed.wheelchair) ? parsed.wheelchair : 'any';
+          }
+          
+          // Handle sensory - can be boolean (old format) or object (new format)
+          if (typeof parsed.sensory === 'boolean') {
+            // Old format - set all to the boolean value
+            Object.keys(filters.sensory).forEach(k => filters.sensory[k] = parsed.sensory);
+          } else if (parsed.sensory && typeof parsed.sensory === 'object') {
+            // New format - copy each property
+            Object.keys(filters.sensory).forEach(k => {
+              filters.sensory[k] = parsed.sensory[k] || false;
+            });
+          }
+          
+          // Update UI
+          initializeFilters();
+          applyFilters();
+        } catch (e) {
+          console.warn('Failed to load filters:', e);
+        }
+      }
       
-      // Update UI and apply filters
-      initializeFilters();
-      applyFilters();
-    });
-    
-    // Override park page filter functions to use shared module
-    window.toggleFilter = function(filterType) {
-      switch(filterType) {
-        case 'pregnancy':
-          FilterModule.togglePregnancy();
-          break;
-        case 'wheelchair':
-          FilterModule.toggleWheelchair();
-          break;
-        case 'sensory':
-          FilterModule.toggleSensory();
-          break;
+      // Save filters to localStorage in shared format
+      function saveFilters() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            height: filters.height,
+            pregnancy: filters.pregnant,
+            wheelchair: filters.wheelchair, // 'any', 'WAV', or 'TAV'
+            sensory: { ...filters.sensory }, // Full object
+            timestamp: Date.now()
+          }));
+        } catch (e) {
+          console.warn('Failed to save filters:', e);
+        }
       }
-    };
-    
-    window.setWheelchairFilter = function(value, update = true) {
-      FilterModule.setWheelchair(value);
-    };
-    
-    window.toggleSensoryFilter = function(type) {
-      FilterModule.toggleSensoryType(type);
-    };
-    
-    window.clearAllFilters = function() {
-      FilterModule.clearAll();
-    };
-    
-    // Mobile filter sheet functions
-    window.openMobileFilters = function() {
-      FilterModule.openMobileSheet();
-    };
-    
-    window.closeMobileFilters = function(event) {
-      if (!event || event.target.id === 'mobile-filter-sheet') {
-        FilterModule.closeMobileSheet();
+      
+      // Wrap toggleFilter to save after
+      const originalToggleFilter = toggleFilter;
+      toggleFilter = function(filterType) {
+        originalToggleFilter(filterType);
+        saveFilters();
+      };
+      
+      // Wrap setWheelchairFilter to save after  
+      const originalSetWheelchair = setWheelchairFilter;
+      setWheelchairFilter = function(value, update = true) {
+        originalSetWheelchair(value, update);
+        if (update) saveFilters();
+      };
+      
+      // Wrap toggleSensoryFilter to save after
+      const originalToggleSensory = toggleSensoryFilter;
+      toggleSensoryFilter = function(type) {
+        originalToggleSensory(type);
+        saveFilters();
+      };
+      
+      // Wrap height slider change
+      const heightSlider = document.getElementById('height-slider');
+      const mobileHeightSlider = document.getElementById('mobile-height-slider');
+      
+      if (heightSlider) {
+        heightSlider.addEventListener('input', saveFilters);
       }
-    };
-    
-    // Update height slider to use shared module
-    const heightSlider = document.getElementById('height-slider');
-    const mobileHeightSlider = document.getElementById('mobile-height-slider');
-    
-    if (heightSlider) {
-      heightSlider.addEventListener('input', function(e) {
-        FilterModule.setHeight(e.target.value);
-      });
-    }
-    if (mobileHeightSlider) {
-      mobileHeightSlider.addEventListener('input', function(e) {
-        FilterModule.setHeight(e.target.value);
-      });
-    }
-  </script>
-  <!-- Shared Filter Module -->
-  <script src="scripts/filter-module.js"></script>
-  <script>
-    // Remove old filter persistence code - now handled by FilterModule
+      if (mobileHeightSlider) {
+        mobileHeightSlider.addEventListener('input', saveFilters);
+      }
+      
+      // Load filters on init
+      loadFilters();
+    })();
   </script>
 <script src="/scripts/global-nav.js"></script>
 <script>GlobalNav.init('rides');</script>
