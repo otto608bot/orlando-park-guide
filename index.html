@@ -1608,96 +1608,78 @@
 
   <script src="app.js?v=7"></script>
   
-  <!-- Simple filter persistence using localStorage directly -->
+  <!-- Simple filter persistence - save on change, load on init -->
   <script>
     (function() {
       const STORAGE_KEY = 'pyp_filters_v1';
       
-      // Load filters from localStorage on page load
+      // Wrap the original functions to save after they execute
+      const originalToggleFilter = window.toggleFilter;
+      const originalUpdateHeight = window.updateHeightFilter;
+      
+      window.toggleFilter = function(type) {
+        if (originalToggleFilter) originalToggleFilter(type);
+        saveFilters();
+      };
+      
+      window.updateHeightFilter = function(value) {
+        if (originalUpdateHeight) originalUpdateHeight(value);
+        saveFilters();
+      };
+      
+      function saveFilters() {
+        if (typeof state === 'undefined' || !state.filters) return;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          height: state.filters.height,
+          pregnancy: state.filters.pregnancy,
+          wheelchair: state.filters.wheelchair === 'WAV',
+          sensory: state.filters.sensory,
+          timestamp: Date.now()
+        }));
+      }
+      
       function loadFilters() {
         try {
           const stored = localStorage.getItem(STORAGE_KEY);
-          if (stored && typeof state !== 'undefined' && state.filters) {
-            const parsed = JSON.parse(stored);
-            // Only apply if values are different from defaults
-            if (parsed.height !== undefined) state.filters.height = parsed.height;
-            if (parsed.pregnancy !== undefined) state.filters.pregnancy = parsed.pregnancy;
-            if (parsed.wheelchair !== undefined) state.filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
-            if (parsed.sensory !== undefined) state.filters.sensory = parsed.sensory;
-            
-            // Update UI to match loaded state
-            updateUIFromState();
-            // Render with loaded filters
-            if (typeof render === 'function') render();
-          }
-        } catch (e) {
-          console.warn('Failed to load filters:', e);
-        }
+          if (!stored || typeof state === 'undefined' || !state.filters) return;
+          
+          const parsed = JSON.parse(stored);
+          
+          // Update state
+          state.filters.height = parsed.height || 0;
+          state.filters.pregnancy = parsed.pregnancy || false;
+          state.filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          state.filters.sensory = parsed.sensory || false;
+          
+          // Update UI
+          const heightSlider = document.getElementById('height-slider');
+          const mobileHeightSlider = document.getElementById('mobile-height-slider');
+          if (heightSlider) heightSlider.value = state.filters.height;
+          if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
+          
+          const heightDisplay = document.getElementById('height-display');
+          const mobileHeightDisplay = document.getElementById('mobile-height-display');
+          const text = state.filters.height === 0 ? 'Any <span>height</span>' : state.filters.height + '" <span>minimum</span>';
+          if (heightDisplay) heightDisplay.innerHTML = text;
+          if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = text;
+          
+          ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
+            const chip = document.getElementById('chip-' + type);
+            const mobileChip = document.getElementById('mobile-chip-' + type);
+            if (chip) chip.classList.toggle('active', state.filters[type]);
+            if (mobileChip) mobileChip.classList.toggle('active', state.filters[type]);
+          });
+          
+          if (typeof render === 'function') render();
+        } catch (e) {}
       }
       
-      // Update UI elements to match current state
-      function updateUIFromState() {
-        if (typeof state === 'undefined') return;
-        
-        // Update height slider
-        const heightSlider = document.getElementById('height-slider');
-        const mobileHeightSlider = document.getElementById('mobile-height-slider');
-        if (heightSlider) heightSlider.value = state.filters.height;
-        if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
-        
-        // Update height display
-        const heightDisplay = document.getElementById('height-display');
-        const mobileHeightDisplay = document.getElementById('mobile-height-display');
-        const heightText = state.filters.height === 0 ? 'Any <span>height</span>' : state.filters.height + '" <span>minimum</span>';
-        if (heightDisplay) heightDisplay.innerHTML = heightText;
-        if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
-        
-        // Update chips
-        ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
-          const desktopChip = document.getElementById('chip-' + type);
-          const mobileChip = document.getElementById('mobile-chip-' + type);
-          const isActive = state.filters[type];
-          if (desktopChip) desktopChip.classList.toggle('active', isActive);
-          if (mobileChip) mobileChip.classList.toggle('active', isActive);
-        });
-      }
-      
-      // Save filters to localStorage
-      function saveFilters() {
-        try {
-          if (typeof state !== 'undefined' && state.filters) {
-            const toSave = {
-              height: state.filters.height,
-              pregnancy: state.filters.pregnancy,
-              wheelchair: state.filters.wheelchair === 'WAV',
-              sensory: state.filters.sensory
-            };
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
-          }
-        } catch (e) {
-          console.warn('Failed to save filters:', e);
-        }
-      }
-      
-      // Load on page load
+      // Load on init
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', loadFilters);
       } else {
         loadFilters();
       }
-      
-      // Save before page unload
-      window.addEventListener('beforeunload', saveFilters);
-      
-      // Also save periodically and on visibility change
-      document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState === 'hidden') {
-          saveFilters();
-        }
-      });
-      
-      // Expose save function for immediate saves
-      window.saveFiltersToStorage = saveFilters;
     })();
   </script>
   
