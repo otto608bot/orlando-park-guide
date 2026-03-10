@@ -15,6 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Calistoga&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/global-nav.css">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  
   <style>
     :root {
       --base-dark: #1a1a2e;
@@ -113,6 +118,12 @@
     .article-content li {
       margin-bottom: 0.5rem;
       color: var(--gray-700);
+    }
+    
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
     
     .inline-cta {
@@ -310,6 +321,7 @@
   </div>
 
 <article>
+  <div class="article-container">
     <header class="article-header">
       <div class="article-meta">Gear Guide • March 9, 2026</div>
       <h1>Best Strollers for Disney World 2026</h1>
@@ -452,6 +464,7 @@
         </a>
       </div>
     </section>
+  </div>
   </article>
 <script src="/scripts/global-nav.js"></script>
 <script>GlobalNav.init('blog');</script>
