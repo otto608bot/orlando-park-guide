@@ -17,6 +17,13 @@ const FilterSystem = (function() {
   
   const STORAGE_KEY = 'pyp_filters_v2';
   
+  // Clear old storage keys on load to prevent conflicts
+  (function cleanupOldStorage() {
+    try {
+      localStorage.removeItem('pyp_filters_v1');
+    } catch (e) {}
+  })();
+  
   // Unified filter state - used by ALL pages
   const defaultState = {
     height: 0,           // 0 = any, or inches (32, 40, 48, 54)
