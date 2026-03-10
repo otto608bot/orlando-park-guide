@@ -1717,7 +1717,7 @@
     // Sync with SharedFilters on page load and save changes back
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof SharedFilters !== 'undefined') {
-        const state = SharedFilters.getState();
+        const sharedState = SharedFilters.getState();
         
         // Sync height slider
         const heightSlider = document.getElementById('height-slider');
@@ -1725,11 +1725,11 @@
         const heightDisplay = document.getElementById('height-display');
         const mobileHeightDisplay = document.getElementById('mobile-height-display');
         
-        if (heightSlider) heightSlider.value = state.height;
-        if (mobileHeightSlider) mobileHeightSlider.value = state.height;
+        if (heightSlider) heightSlider.value = sharedState.height;
+        if (mobileHeightSlider) mobileHeightSlider.value = sharedState.height;
         
         // Update height display text
-        const heightText = state.height === 0 ? 'Any <span>height</span>' : state.height + '" <span>minimum</span>';
+        const heightText = sharedState.height === 0 ? 'Any <span>height</span>' : sharedState.height + '" <span>minimum</span>';
         if (heightDisplay) heightDisplay.innerHTML = heightText;
         if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
         
@@ -1740,15 +1740,22 @@
           const mobileChip = document.getElementById('mobile-chip-' + chip);
           
           if (desktopChip) {
-            desktopChip.classList.toggle('active', state[chip]);
+            desktopChip.classList.toggle('active', sharedState[chip]);
           }
           if (mobileChip) {
-            mobileChip.classList.toggle('active', state[chip]);
+            mobileChip.classList.toggle('active', sharedState[chip]);
           }
         });
         
         // Apply filters if applyFilters function exists
         if (typeof applyFilters === 'function') {
+          // Also update app.js internal state if it exists
+          if (typeof window.state !== 'undefined' && window.state.filters) {
+            window.state.filters.height = sharedState.height;
+            window.state.filters.pregnancy = sharedState.pregnancy;
+            window.state.filters.wheelchair = sharedState.wheelchair ? 'WAV' : 'any';
+            window.state.filters.sensory = sharedState.sensory;
+          }
           applyFilters();
         }
         
