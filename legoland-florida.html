@@ -737,6 +737,33 @@
       .layout { padding: 0 1rem 2rem; }
     }
   </style>
+
+  <style>
+    /* Force filter button visible on mobile */
+    @media (max-width: 1024px) {
+      #global-filter-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: #F37021;
+        color: white;
+        border: none;
+        border-radius: 9999px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+        margin-left: auto;
+      }
+    }
+    @media (min-width: 1025px) {
+      #global-filter-btn {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="global-header">
