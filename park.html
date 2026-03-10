@@ -2436,91 +2436,91 @@
     
     // Connect global filter events to mobile filter sheet
     document.addEventListener('global:openFilters', function() {
-      openMobileFilters();
+      FilterModule.openMobileSheet();
     });
     
     document.addEventListener('global:closeFilters', function() {
-      closeMobileFilters();
+      FilterModule.closeMobileSheet();
     });
     
     // ============================================
-    // FILTER PERSISTENCE
+    // SHARED FILTER MODULE INTEGRATION
     // ============================================
-    (function() {
-      const STORAGE_KEY = 'pyp_filters_v1';
+    
+    // Initialize shared filter module
+    FilterModule.init(function(filterState) {
+      // Sync shared state to park page filters
+      filters.height = filterState.height;
+      filters.pregnant = filterState.pregnancy;
+      filters.wheelchair = filterState.wheelchair;
       
-      // Load filters from localStorage on init
-      function loadFilters() {
-        try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          console.log('Park page loading filters:', stored);
-          if (!stored) return;
-          
-          const parsed = JSON.parse(stored);
-          console.log('Parsed filters:', parsed);
-          
-          // Update filters object
-          if (parsed.height !== undefined) filters.height = parsed.height;
-          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
-          
-          // Handle wheelchair - parsed.wheelchair is a boolean
-          console.log('Wheelchair value from storage:', parsed.wheelchair);
-          if (parsed.wheelchair === true) {
-            filters.wheelchair = 'WAV';
-          } else if (parsed.wheelchair === false) {
-            filters.wheelchair = 'any';
-          }
-          console.log('Set filters.wheelchair to:', filters.wheelchair);
-          // If undefined, leave as default ('any')
-          if (parsed.sensory !== undefined) {
-            // For sensory, we need to set all to false then enable if needed
-            Object.keys(filters.sensory).forEach(k => filters.sensory[k] = false);
-          }
-          
-          // Update UI
-          initializeFilters();
-          applyFilters();
-        } catch (e) {}
+      // Sync sensory filters
+      Object.keys(filterState.sensory).forEach(key => {
+        filters.sensory[key] = filterState.sensory[key];
+      });
+      
+      // Update UI and apply filters
+      initializeFilters();
+      applyFilters();
+    });
+    
+    // Override park page filter functions to use shared module
+    window.toggleFilter = function(filterType) {
+      switch(filterType) {
+        case 'pregnancy':
+          FilterModule.togglePregnancy();
+          break;
+        case 'wheelchair':
+          FilterModule.toggleWheelchair();
+          break;
+        case 'sensory':
+          FilterModule.toggleSensory();
+          break;
       }
-      
-      // Save filters to localStorage
-      function saveFilters() {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify({
-            height: filters.height,
-            pregnancy: filters.pregnant,
-            wheelchair: filters.wheelchair === 'WAV',
-            sensory: false,
-            timestamp: Date.now()
-          }));
-        } catch (e) {}
+    };
+    
+    window.setWheelchairFilter = function(value, update = true) {
+      FilterModule.setWheelchair(value);
+    };
+    
+    window.toggleSensoryFilter = function(type) {
+      FilterModule.toggleSensoryType(type);
+    };
+    
+    window.clearAllFilters = function() {
+      FilterModule.clearAll();
+    };
+    
+    // Mobile filter sheet functions
+    window.openMobileFilters = function() {
+      FilterModule.openMobileSheet();
+    };
+    
+    window.closeMobileFilters = function(event) {
+      if (!event || event.target.id === 'mobile-filter-sheet') {
+        FilterModule.closeMobileSheet();
       }
-      
-      // Wrap toggleFilter to save after
-      const originalToggleFilter = toggleFilter;
-      toggleFilter = function(filterType) {
-        originalToggleFilter(filterType);
-        saveFilters();
-      };
-      
-      // Wrap setWheelchairFilter to save after  
-      const originalSetWheelchair = setWheelchairFilter;
-      setWheelchairFilter = function(value, update = true) {
-        originalSetWheelchair(value, update);
-        if (update) saveFilters();
-      };
-      
-      // Wrap height slider change
-      const heightSlider = document.getElementById('height-slider');
-      const mobileHeightSlider = document.getElementById('mobile-height-slider');
-      
-      if (heightSlider) {
-        heightSlider.addEventListener('change', saveFilters);
-      }
-      if (mobileHeightSlider) {
-        mobileHeightSlider.addEventListener('change', saveFilters);
-      }
-    })();
+    };
+    
+    // Update height slider to use shared module
+    const heightSlider = document.getElementById('height-slider');
+    const mobileHeightSlider = document.getElementById('mobile-height-slider');
+    
+    if (heightSlider) {
+      heightSlider.addEventListener('input', function(e) {
+        FilterModule.setHeight(e.target.value);
+      });
+    }
+    if (mobileHeightSlider) {
+      mobileHeightSlider.addEventListener('input', function(e) {
+        FilterModule.setHeight(e.target.value);
+      });
+    }
+  </script>
+  <!-- Shared Filter Module -->
+  <script src="scripts/filter-module.js"></script>
+  <script>
+    // Remove old filter persistence code - now handled by FilterModule
   </script>
 <script src="/scripts/global-nav.js"></script>
 <script>GlobalNav.init('rides');</script>
