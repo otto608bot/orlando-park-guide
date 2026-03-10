@@ -1747,52 +1747,42 @@
           }
         });
         
-        // Apply filters if applyFilters function exists
-        if (typeof applyFilters === 'function') {
-          // Also update app.js internal state if it exists
-          if (typeof window.state !== 'undefined' && window.state.filters) {
-            window.state.filters.height = sharedState.height;
-            window.state.filters.pregnancy = sharedState.pregnancy;
-            window.state.filters.wheelchair = sharedState.wheelchair ? 'WAV' : 'any';
-            window.state.filters.sensory = sharedState.sensory;
-          }
-          applyFilters();
+        // Sync app.js state with SharedFilters
+        if (typeof window.state !== 'undefined' && window.state.filters) {
+          window.state.filters.height = sharedState.height;
+          window.state.filters.pregnancy = sharedState.pregnancy;
+          window.state.filters.wheelchair = sharedState.wheelchair ? 'WAV' : 'any';
+          window.state.filters.sensory = sharedState.sensory;
         }
         
-        // Override toggleFilter to also save to SharedFilters
+        // Render with synced state
+        if (typeof render === 'function') {
+          render();
+        }
+        
+        // Override toggleFilter to sync both app.js state and SharedFilters
         const originalToggleFilter = window.toggleFilter;
         window.toggleFilter = function(type) {
-          // Call original function
+          // Call original function to update app.js state and UI
           if (originalToggleFilter) {
             originalToggleFilter(type);
           }
-          // Save to SharedFilters
-          if (typeof SharedFilters !== 'undefined') {
-            const chip = document.getElementById('chip-' + type);
-            const isActive = chip && chip.classList.contains('active');
-            SharedFilters.setFilter(type, isActive);
+          // Also save to SharedFilters for cross-page persistence
+          if (typeof SharedFilters !== 'undefined' && typeof window.state !== 'undefined') {
+            SharedFilters.setFilter(type, window.state.filters[type]);
           }
         };
         
-        // Override height slider to save to SharedFilters
-        const heightSliderEl = document.getElementById('height-slider');
-        const mobileHeightSliderEl = document.getElementById('mobile-height-slider');
-        
-        if (heightSliderEl) {
-          heightSliderEl.addEventListener('change', function() {
-            if (typeof SharedFilters !== 'undefined') {
-              SharedFilters.setFilter('height', parseInt(this.value));
-            }
-          });
-        }
-        
-        if (mobileHeightSliderEl) {
-          mobileHeightSliderEl.addEventListener('change', function() {
-            if (typeof SharedFilters !== 'undefined') {
-              SharedFilters.setFilter('height', parseInt(this.value));
-            }
-          });
-        }
+        // Override height slider change handler
+        const originalHeightChange = window.updateHeightFilter;
+        window.updateHeightFilter = function(value) {
+          if (originalHeightChange) {
+            originalHeightChange(value);
+          }
+          if (typeof SharedFilters !== 'undefined') {
+            SharedFilters.setFilter('height', parseInt(value));
+          }
+        };
       }
     });
     
