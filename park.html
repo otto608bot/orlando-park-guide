@@ -2440,20 +2440,24 @@
       function loadFilters() {
         try {
           const stored = localStorage.getItem(STORAGE_KEY);
+          console.log('Park page loading filters:', stored);
           if (!stored) return;
           
           const parsed = JSON.parse(stored);
+          console.log('Parsed filters:', parsed);
           
           // Update filters object
           if (parsed.height !== undefined) filters.height = parsed.height;
           if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
           
           // Handle wheelchair - parsed.wheelchair is a boolean
+          console.log('Wheelchair value from storage:', parsed.wheelchair);
           if (parsed.wheelchair === true) {
             filters.wheelchair = 'WAV';
           } else if (parsed.wheelchair === false) {
             filters.wheelchair = 'any';
           }
+          console.log('Set filters.wheelchair to:', filters.wheelchair);
           // If undefined, leave as default ('any')
           if (parsed.sensory !== undefined) {
             // For sensory, we need to set all to false then enable if needed
