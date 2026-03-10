@@ -1836,7 +1836,20 @@
       
       currentPark = parkConfig[parkId];
       
-      // Parse filter params from URL
+      // Load filters from localStorage FIRST (before URL params, so URL can override)
+      try {
+        const stored = localStorage.getItem('pyp_filters_v1');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.height !== undefined) filters.height = parsed.height;
+          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
+          if (parsed.wheelchair !== undefined) {
+            filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          }
+        }
+      } catch (e) {}
+      
+      // Parse filter params from URL (these override localStorage)
       if (urlParams.has('height')) {
         filters.height = parseInt(urlParams.get('height'), 10) || 0;
       }
@@ -2477,7 +2490,7 @@
             height: filters.height,
             pregnancy: filters.pregnant,
             wheelchair: filters.wheelchair === 'WAV',
-            sensory: false, // Park page doesn't use sensory filter the same way
+            sensory: false,
             timestamp: Date.now()
           }));
         } catch (e) {}
@@ -2507,9 +2520,6 @@
       if (mobileHeightSlider) {
         mobileHeightSlider.addEventListener('change', saveFilters);
       }
-      
-      // Load on init
-      loadFilters();
     })();
   </script>
 <script src="/scripts/global-nav.js"></script>
