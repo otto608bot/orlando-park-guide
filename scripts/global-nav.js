@@ -13,8 +13,13 @@ window.GlobalNav = {
     // Show filter button on pages that need it (mobile only)
     if (page === 'rides' || page === 'dining') {
       const filterBtn = document.getElementById('global-filter-btn');
-      if (filterBtn && window.innerWidth <= 1024) {
-        filterBtn.style.display = 'flex';
+      if (filterBtn) {
+        // Check both initial width and set up resize listener
+        const updateFilterBtn = () => {
+          filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+        };
+        updateFilterBtn();
+        window.addEventListener('resize', updateFilterBtn);
       }
     }
   },
