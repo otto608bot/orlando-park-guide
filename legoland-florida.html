@@ -1166,6 +1166,29 @@
         applyFilters();
       });
     });
+    // Connect global filter events to mobile filter sheet
+    document.addEventListener('global:openFilters', function() {
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    
+    document.addEventListener('global:closeFilters', function() {
+      const sheet = document.getElementById('mobile-filter-sheet');
+      if (sheet) {
+        sheet.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Close mobile filters helper
+    function closeMobileFilters(event) {
+      if (!event || event.target === document.getElementById('mobile-filter-sheet')) {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      }
+    }
   </script>
 
   <script src="/scripts/global-nav.js"></script>
