@@ -983,7 +983,8 @@
     // Park-specific data
     const parkName = 'Universal Studios Florida';
     const parkRides = window.rideData.filter(ride => ride.park === parkName);
-    const parkMeals = window.disneyCharacterMeals.filter(meal => meal.location.park === parkName);
+    // Universal Studios has no character dining
+    const parkMeals = [];
     
     // Get sensory tags for display
     function getSensoryTags(sensory) {

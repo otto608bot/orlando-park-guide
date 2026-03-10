@@ -817,10 +817,6 @@
           <span class="stat-value" id="ride-stat">0</span>
           <span class="stat-label">Rides</span>
         </div>
-        <div class="stat">
-          <span class="stat-value" id="meal-stat">0</span>
-          <span class="stat-label">Character Dining</span>
-        </div>
       </div>
       <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener noreferrer" class="affiliate-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -912,15 +908,6 @@
       <div class="ride-grid" id="rides-container">
         <!-- Rides injected by JavaScript -->
       </div>
-
-      <!-- Character Dining Section -->
-      <div class="section-header">
-        <h2 class="section-title">Character Dining</h2>
-        <span class="results-count" id="meals-count"></span>
-      </div>
-      <div class="meal-cards-grid" id="meals-container">
-        <!-- Character meals injected by JavaScript -->
-      </div>
     </main>
   </div>
 
@@ -983,7 +970,8 @@
     // Park-specific data
     const parkName = 'Islands of Adventure';
     const parkRides = window.rideData.filter(ride => ride.park === parkName);
-    const parkMeals = window.disneyCharacterMeals.filter(meal => meal.location.park === parkName);
+    // Islands of Adventure has no character dining
+    const parkMeals = [];
     
     // Get sensory tags for display
     function getSensoryTags(sensory) {
@@ -1053,99 +1041,15 @@
       }).join('');
     }
     
-    // Render character meals
-    function renderMeals(meals) {
-      const container = document.getElementById('meals-container');
-      const countEl = document.getElementById('meals-count');
-      
-      if (countEl) {
-        countEl.textContent = `${meals.length} location${meals.length !== 1 ? 's' : ''}`;
-      }
-      
-      if (meals.length === 0) {
-        container.innerHTML = `
-          <div class="empty-state">
-            <h3>No character dining found</h3>
-            <p>Check back later for updates.</p>
-          </div>
-        `;
-        return;
-      }
-      
-      container.innerHTML = meals.map(meal => {
-        const allChars = [
-          ...(meal.characters.breakfast || []),
-          ...(meal.characters.lunch || []),
-          ...(meal.characters.dinner || [])
-        ];
-        const uniqueChars = [...new Set(allChars)];
-        
-        const mealsHtml = ['breakfast', 'lunch', 'dinner'].map(time => {
-          const mealData = meal.meals[time];
-          if (!mealData || !mealData.available) {
-            return `
-              <div class="meal-row">
-                <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
-                <span style="color:var(--gray-400);font-size:0.75rem">Not available</span>
-              </div>`;
-          }
-          const price = mealData.price ? `$${mealData.price.adult}` : 'Check price';
-          return `
-            <div class="meal-row available">
-              <div class="meal-info">
-                <span class="meal-time">${time.charAt(0).toUpperCase() + time.slice(1)}</span>
-                <span class="meal-type">${mealData.type}</span>
-              </div>
-              <span class="meal-price">${price}</span>
-            </div>
-          `;
-        }).join('');
-        
-        return `
-          <div class="meal-card" data-meal-id="${meal.id}">
-            <div class="meal-card-header">
-              <div class="meal-card-title">${meal.name}</div>
-              <div class="meal-card-location">
-                <span class="location-badge">&#127984; Islands of Adventure</span>
-              </div>
-            </div>
-            <div class="meal-card-body">
-              <div class="characters-section">
-                <div class="section-label">Characters You'll Meet</div>
-                <div class="characters-list">
-                  ${uniqueChars.slice(0, 6).map(c => 
-                    `<span class="character-chip">${c.split(' ')[0]}</span>`
-                  ).join('')}
-                  ${uniqueChars.length > 6 ? `<span class="character-chip">+${uniqueChars.length - 6} more</span>` : ''}
-                </div>
-              </div>
-              <div class="meals-section">
-                <div class="section-label">Available Meals</div>
-                ${mealsHtml}
-              </div>
-            </div>
-            <div class="meal-card-footer">
-              ${meal.diningPlan ? `<span class="dining-plan-badge">&#10003; Dining Plan</span>` : '<span></span>'}
-              <a href="https://disneyworld.disney.go.com/dining/${meal.id}/" target="_blank" class="book-btn">Check Availability</a>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-    
     // Update stats
     function updateStats() {
       document.getElementById('ride-stat').textContent = parkRides.length;
-      document.getElementById('meal-stat').textContent = parkMeals.length;
     }
     
     // Apply filters and render
     function applyFilters() {
       const filteredRides = SharedFilters.filterRides(parkRides);
       renderRides(filteredRides);
-      
-      const filteredMeals = SharedFilters.filterCharacterMeals(parkMeals);
-      renderMeals(filteredMeals);
     }
     
     // Initialize
