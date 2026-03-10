@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global-nav.css">
   
   <style>
     :root {
@@ -204,221 +205,74 @@
       .blog-grid { grid-template-columns: 1fr; }
       .affiliate-cta { flex-direction: column; gap: 0.75rem; }
     }
-  </style>
+  
+    /* AdSense Ad Styles */
+    .ad-section {
+      min-height: 250px;
+    }
+    
+    .ad-section ins.adsbygoogle {
+      display: block;
+      width: 100%;
+    }
+    
+    .blog-inline-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .blog-inline-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    
+    .above-fold-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    
+    .above-fold-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-ad-section {
+      background: #f9fafb;
+      padding: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+</style>
 </head>
 <body>
-  <!-- Global Navigation Component -->
-  <style>
-    /* Global Navigation Styles */
-    .global-header {
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-    
-    .global-header-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    .global-logo {
-      display: flex;
-      align-items: center;
-    }
-    
-    .global-logo img {
-      height: 64px;
-      width: auto;
-      object-fit: contain;
-    }
-    
-    .global-nav {
-      display: flex;
-      gap: 2rem;
-      margin-left: auto;
-    }
-    
-    .global-nav a {
-      color: #718096;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      transition: color 0.2s;
-    }
-    
-    .global-nav a:hover,
-    .global-nav a.active {
-      color: #F37021;
-    }
-    
-    /* Mobile Menu Button */
-    .global-mobile-menu-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: #718096;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    
-    .global-mobile-menu-btn:hover {
-      background: #F7FAFC;
-    }
-    
-    .global-mobile-menu-btn svg {
-      width: 24px;
-      height: 24px;
-    }
-    
-    /* Mobile Filter Button */
-    .global-mobile-filter-btn {
-      display: none;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #F37021;
-      color: white;
-      border: none;
-      border-radius: 9999px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.875rem;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
-    }
-    
-    /* Mobile Navigation Sheet */
-    .global-mobile-nav-sheet {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 200;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-    
-    .global-mobile-nav-sheet.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .global-mobile-nav-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 280px;
-      height: 100%;
-      background: #FFFFFF;
-      padding: 1.5rem;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
-    }
-    
-    .global-mobile-nav-sheet.active .global-mobile-nav-content {
-      transform: translateX(0);
-    }
-    
-    .global-mobile-nav-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #E2E8F0;
-    }
-    
-    .global-mobile-nav-header h3 {
-      font-family: 'Nunito', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 0;
-    }
-    
-    .global-close-nav-btn {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: #718096;
-      cursor: pointer;
-      padding: 0.5rem;
-      line-height: 1;
-    }
-    
-    .global-mobile-nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .global-mobile-nav-links a {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.875rem 1rem;
-      color: #2D3748;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.125rem;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    
-    .global-mobile-nav-links a:hover {
-      background: #F7FAFC;
-    }
-    
-    .global-mobile-nav-links a.active {
-      color: #F37021;
-      background: #F7FAFC;
-    }
-    
-    /* Mobile Breakpoint */
-    @media (max-width: 1024px) {
-      .global-header-content {
-        padding: 0.75rem 1rem;
-      }
-      
-      .global-mobile-menu-btn {
-        display: flex;
-      }
-      
-      .global-nav {
-        display: none;
-      }
-      
-      .global-logo img {
-        height: 48px;
-      }
-    }
-    
-    @media (min-width: 1025px) {
-      .global-mobile-menu-btn,
-      .global-mobile-nav-sheet {
-        display: none !important;
-      }
-      
-      .global-nav {
-        display: flex !important;
-      }
-    }
-  </style>
 
   <header class="global-header">
     <div class="global-header-content">
@@ -505,6 +359,44 @@
     </div>
 
     <div class="blog-grid">
+      <!-- Best Strollers for Disney World -->
+      <a href="/blog/best-strollers-disney-world.html" class="blog-card">
+        <div class="blog-card-image">
+          <img src="best-strollers-disney-world.webp" alt="Best strollers for Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 9, 2026</span>
+          </div>
+          <h2>Best Strollers for Disney World 2026</h2>
+          <p>Lightweight travel strollers, double strollers, and essential accessories that survive 12-hour park days.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Gear</span>
+            <span class="tag">Essentials</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- How to Use Genie+ -->
+      <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="blog-card">
+        <div class="blog-card-image">
+          <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Genie+ at Disney World 2026">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 8, 2026</span>
+          </div>
+          <h2>How to Use Genie+ at Disney World 2026</h2>
+          <p>Master Disney's paid skip-the-line service with our complete strategy guide. Save hours and maximize every ride.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Planning</span>
+            <span class="tag">Tips</span>
+          </div>
+        </div>
+      </a>
+
       <!-- Spring Break at Disney World 2026 -->
       <a href="/blog/spring-break-disney-world-2026.html" class="blog-card">
         <div class="blog-card-image">
@@ -543,6 +435,25 @@
         </div>
       </a>
 
+      <!-- Disney World Packing List -->
+      <a href="/blog/disney-world-packing-list.html" class="blog-card">
+        <div class="blog-card-image">
+          <img src="disney-world-packing-list.webp" alt="Disney World Packing List">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 6, 2026</span>
+          </div>
+          <h2>Disney World Packing List 2026: The Complete Guide</h2>
+          <p>The ultimate packing list for adults, kids, toddlers, and babies. Free printable checklist included.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Planning</span>
+            <span class="tag">Packing</span>
+          </div>
+        </div>
+      </a>
+
       <!-- Disney World vs Universal for Adults -->
       <a href="/blog/disney-vs-universal-adults.html" class="blog-card">
         <div class="blog-card-image">
@@ -562,42 +473,8 @@
           </div>
         </div>
       </a>
-      <a href="/blog/hollywood-studios-worth-it-kids-under-five.html" class="blog-card">
-        <div class="blog-card-image">
-          <img src="hollywood-studios-under-five.webp" alt="Is Hollywood Studios Worth It with Kids Under 5">
-        </div>
-        <div class="blog-card-content">
-          <div class="blog-card-meta">
-            <span>Hollywood Studios</span>
-            <span>Mar 5, 2026</span>
-          </div>
-          <h2>Is Hollywood Studios Worth It with Kids Under 5?</h2>
-          <p>The honest truth from a parent who's been there: when Disney's smallest park makes sense for your little ones—and when to skip it.</p>
-          <div class="blog-card-tags">
-            <span class="tag">Toddlers</span>
-            <span class="tag">Planning</span>
-          </div>
-        </div>
-      </a>
 
-      <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="blog-card">
-        <div class="blog-card-image">
-          <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Genie+ at Disney World 2026">
-        </div>
-        <div class="blog-card-content">
-          <div class="blog-card-meta">
-            <span>Disney World</span>
-            <span>Mar 8, 2026</span>
-          </div>
-          <h2>How to Use Genie+ at Disney World 2026</h2>
-          <p>Master Disney's paid skip-the-line service with our complete strategy guide. Save hours and maximize every ride.</p>
-          <div class="blog-card-tags">
-            <span class="tag">Planning</span>
-            <span class="tag">Tips</span>
-          </div>
-        </div>
-      </a>
-
+      <!-- Best Rides for Teens at Islands of Adventure -->
       <a href="/blog/best-rides-teens-islands-of-adventure.html" class="blog-card">
         <div class="blog-card-image">
           <img src="best-rides-teens-islands-of-adventure.webp" alt="Best Rides for Teens at Islands of Adventure">
@@ -616,6 +493,26 @@
         </div>
       </a>
 
+      <!-- Is Hollywood Studios Worth It with Kids Under 5 -->
+      <a href="/blog/hollywood-studios-worth-it-kids-under-five.html" class="blog-card">
+        <div class="blog-card-image">
+          <img src="hollywood-studios-under-five.webp" alt="Is Hollywood Studios Worth It with Kids Under 5">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Hollywood Studios</span>
+            <span>Mar 5, 2026</span>
+          </div>
+          <h2>Is Hollywood Studios Worth It with Kids Under 5?</h2>
+          <p>The honest truth from a parent who's been there: when Disney's smallest park makes sense for your little ones—and when to skip it.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Toddlers</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Character Dining at Disney World 2026 -->
       <a href="/blog/best-character-dining-disney-world-2026.html" class="blog-card">
         <div class="blog-card-image">
           <img src="best-character-dining-at-disney-world-2026.webp" alt="Best Character Dining at Disney World">
@@ -634,6 +531,7 @@
         </div>
       </a>
 
+      <!-- Best Toddler Rides at Disney World -->
       <a href="/blog/toddler-rides-disney-world.html" class="blog-card">
         <div class="blog-card-image">
           <img src="toddler-rides-disney-world.webp" alt="Best Toddler Rides at Disney World">
@@ -652,6 +550,7 @@
         </div>
       </a>
 
+      <!-- Best Rides for 5-Year-Olds at Disney World -->
       <a href="/blog/best-rides-5-year-olds-disney-world.html" class="blog-card">
         <div class="blog-card-image">
           <img src="Best%20Rides%20for%205%20Year%20olds.png" alt="Best Rides for 5-Year-Olds">
@@ -670,6 +569,7 @@
         </div>
       </a>
 
+      <!-- Pregnant Mom's Guide to Magic Kingdom -->
       <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="blog-card">
         <div class="blog-card-image">
           <img src="Pregnant%20Mom's%20guide%20to%20magic%20kingdom.png" alt="Pregnant Mom's Guide">
@@ -688,6 +588,7 @@
         </div>
       </a>
 
+      <!-- Universal vs Disney: Which Is Better? -->
       <a href="/blog/universal-vs-disney-comparison.html" class="blog-card">
         <div class="blog-card-image">
           <img src="Universal%20vs%20disney.png" alt="Universal vs Disney">

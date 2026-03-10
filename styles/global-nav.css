@@ -93,6 +93,7 @@
   font-size: 0.875rem;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+  margin-left: auto;
 }
 
 /* Mobile Navigation Sheet */
@@ -201,6 +202,12 @@
   
   .global-logo img {
     height: 48px;
+  }
+  
+  /* Show filter button on mobile - JS will hide on desktop */
+  .global-mobile-filter-btn,
+  #global-filter-btn {
+    display: flex !important;
   }
 }
 

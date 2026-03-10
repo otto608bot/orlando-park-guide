@@ -11,10 +11,12 @@ window.GlobalNav = {
     this.setActiveNav(page);
     
     // Show filter button on pages that need it (mobile only)
+    // CSS handles the visibility, JS just ensures it's in the DOM
     if (page === 'rides' || page === 'dining') {
       const filterBtn = document.getElementById('global-filter-btn');
-      if (filterBtn && window.innerWidth <= 1024) {
-        filterBtn.style.display = 'flex';
+      if (filterBtn) {
+        // Add data attribute for CSS targeting
+        filterBtn.setAttribute('data-show-on-mobile', 'true');
       }
     }
   },
@@ -76,13 +78,5 @@ window.GlobalNav = {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     GlobalNav.closeNav();
-  }
-});
-
-// Handle resize to show/hide filter button
-window.addEventListener('resize', function() {
-  const filterBtn = document.getElementById('global-filter-btn');
-  if (filterBtn) {
-    filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
   }
 });

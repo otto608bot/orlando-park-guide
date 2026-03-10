@@ -12,6 +12,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Calistoga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global-nav.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   
   <style>
     :root {
@@ -34,79 +39,21 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font-body); background: var(--gray-50); color: var(--base-dark); line-height: 1.6; }
     
-    /* Global Navigation */
-    .global-header {
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
     
-    .global-header-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    .global-logo {
-      display: flex;
-      align-items: center;
-    }
-    
-    .global-logo img {
-      height: 48px;
-      width: auto;
-      object-fit: contain;
-    }
-    
-    .global-nav {
-      display: flex;
-      gap: 2rem;
-      margin-left: auto;
-    }
-    
-    .global-nav a {
-      color: #718096;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      transition: color 0.2s;
-    }
-    
-    .global-nav a:hover,
-    .global-nav a.active {
-      color: #ff6b35;
-    }
-    
-    .global-mobile-menu-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: #718096;
-      border-radius: 8px;
-    }
-    
-    @media (max-width: 1024px) {
-      .global-mobile-menu-btn { display: flex; }
-      .global-nav { display: none; }
-    }
-    
-    article { max-width: 800px; margin: 0 auto; padding: 2rem; background: var(--white); }
     
     .article-header { text-align: center; margin-bottom: 2rem; }
     .article-meta { font-size: 0.875rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
     .article-header h1 { font-family: var(--font-heading); font-size: 2.25rem; line-height: 1.2; margin-bottom: 1rem; }
     .article-header p { font-size: 1.125rem; color: var(--gray-600); max-width: 600px; margin: 0 auto; }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: var(--radius-lg);
+      margin: 0 auto 2rem;
+      display: block;
+    }
     
     .inline-cta { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin: 1.5rem 0; text-align: center; }
     .inline-cta a { color: var(--action-orange); font-weight: 600; text-decoration: none; }
@@ -209,8 +156,8 @@
 <body>
   <header class="global-header">
     <div class="global-header-content">
-      <button class="global-mobile-menu-btn" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -220,19 +167,63 @@
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
       <nav class="global-nav">
-        <a href="/">Rides</a>
-        <a href="/character-dining.html">Character Dining</a>
-        <a href="/blog/" class="active">Blog</a>
+        <a href="/" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
     </div>
   </header>
 
-  <article>
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M12 14v7"></path>
+            <path d="M9 18h6"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<article>
     <header class="article-header">
       <div class="article-meta">Planning • March 6, 2026</div>
       <h1>Disney World Packing List 2026: The Complete Guide</h1>
       <p>The ultimate packing list for your Disney World vacation. Essentials for adults, kids, toddlers, and babies—plus a free printable checklist.</p>
     </header>
+
+    <img src="disney-world-packing-list.webp" alt="Disney World Packing List" class="hero-image">
 
     <div class="inline-cta">
       💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through 
@@ -408,5 +399,7 @@
   <footer style="background: var(--base-dark); color: var(--white); padding: 2rem; text-align: center;">
     <p style="color: #a1a1aa;">© 2026 Plan Your Park. All rights reserved.</p>
   </footer>
+<script src="/scripts/global-nav.js"></script>
+<script>GlobalNav.init('blog');</script>
 </body>
 </html>

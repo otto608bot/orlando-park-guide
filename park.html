@@ -44,6 +44,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global-nav.css">
+  
+  <style>
+    /* Force filter button visible on mobile */
+    @media (max-width: 1024px) {
+      #global-filter-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: #F37021;
+        color: white;
+        border: none;
+        border-radius: 9999px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+        margin-left: auto;
+      }
+    }
+    @media (min-width: 1025px) {
+      #global-filter-btn {
+        display: none !important;
+      }
+    }
+  </style>
   
   <style>
     :root {
@@ -1172,27 +1200,93 @@
         margin-right: 0;
       }
     }
-  </style>
+  
+    /* AdSense Ad Styles */
+    .ad-section {
+      min-height: 250px;
+    }
+    
+    .ad-section ins.adsbygoogle {
+      display: block;
+      width: 100%;
+    }
+    
+    .blog-inline-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .blog-inline-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    
+    .above-fold-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    
+    .above-fold-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-ad-section {
+      background: #f9fafb;
+      padding: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+</style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-content">
-      <button class="mobile-menu-btn" onclick="openMobileNav()" aria-label="Open menu">
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
-      <a href="/" class="logo">
-        <img src="logo-full.png" alt="Plan Your Park" class="logo-img">
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
       </a>
-      <nav class="nav">
-        <a href="/">Rides</a>
-        <a href="/character-dining.html">Character Dining</a>
-        <a href="/blog/">Blog</a>
+      <nav class="global-nav">
+        <a href="/" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
-      <button class="mobile-filter-btn" onclick="openMobileFilters()">
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
         </svg>
@@ -1201,7 +1295,48 @@
     </div>
   </header>
 
-  <div class="layout">
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M12 14v7"></path>
+            <path d="M9 18h6"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<div class="layout">
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-section">
@@ -1212,12 +1347,6 @@
           <div class="height-display" id="height-display">Any <span>height</span></div>
           <div class="height-ruler">
             <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
-          </div>
-          <div class="height-ruler-marks">
-            <span>0"</span>
-            <span>18"</span>
-            <span>36"</span>
-            <span>54"</span>
           </div>
         </div>
         
@@ -1384,12 +1513,6 @@
         <div class="height-display" id="mobile-height-display">Any <span>height</span></div>
         <div class="height-ruler">
           <input type="range" id="mobile-height-slider" min="0" max="54" value="0" step="1">
-        </div>
-        <div class="height-ruler-marks">
-          <span>0"</span>
-          <span>18"</span>
-          <span>36"</span>
-          <span>54"</span>
         </div>
       </div>
       
@@ -1605,7 +1728,7 @@
         image: 'Magic Kingdom.webp',
         ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
         blogPosts: [
-          { title: "Pregnant Mom's Guide to Magic Kingdom", excerpt: 'Which rides are safe during pregnancy, where to rest, and how to enjoy the park comfortably.', url: '/blog/pregnant-moms-guide-magic-kingdom.html', image: "/blog/Pregnant Mom's guide to magic kingdom.webp" },
+          { title: "Pregnant Mom's Guide to Magic Kingdom", excerpt: 'Which rides are safe during pregnancy, where to rest, and how to enjoy the park comfortably.', url: '/blog/pregnant-moms-guide-magic-kingdom.html', image: '/blog/Pregnant%20Mom%27s%20guide%20to%20magic%20kingdom.webp' },
           { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' }
         ]
@@ -1713,7 +1836,20 @@
       
       currentPark = parkConfig[parkId];
       
-      // Parse filter params from URL
+      // Load filters from localStorage FIRST (before URL params, so URL can override)
+      try {
+        const stored = localStorage.getItem('pyp_filters_v1');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.height !== undefined) filters.height = parsed.height;
+          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
+          if (parsed.wheelchair !== undefined) {
+            filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          }
+        }
+      } catch (e) {}
+      
+      // Parse filter params from URL (these override localStorage)
       if (urlParams.has('height')) {
         filters.height = parseInt(urlParams.get('height'), 10) || 0;
       }
@@ -2297,6 +2433,96 @@
       initializeFilters();
       applyFilters();
     });
+    
+    // Connect global filter events to mobile filter sheet
+    document.addEventListener('global:openFilters', function() {
+      openMobileFilters();
+    });
+    
+    document.addEventListener('global:closeFilters', function() {
+      closeMobileFilters();
+    });
+    
+    // ============================================
+    // FILTER PERSISTENCE
+    // ============================================
+    (function() {
+      const STORAGE_KEY = 'pyp_filters_v1';
+      
+      // Load filters from localStorage on init
+      function loadFilters() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          console.log('Park page loading filters:', stored);
+          if (!stored) return;
+          
+          const parsed = JSON.parse(stored);
+          console.log('Parsed filters:', parsed);
+          
+          // Update filters object
+          if (parsed.height !== undefined) filters.height = parsed.height;
+          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
+          
+          // Handle wheelchair - parsed.wheelchair is a boolean
+          console.log('Wheelchair value from storage:', parsed.wheelchair);
+          if (parsed.wheelchair === true) {
+            filters.wheelchair = 'WAV';
+          } else if (parsed.wheelchair === false) {
+            filters.wheelchair = 'any';
+          }
+          console.log('Set filters.wheelchair to:', filters.wheelchair);
+          // If undefined, leave as default ('any')
+          if (parsed.sensory !== undefined) {
+            // For sensory, we need to set all to false then enable if needed
+            Object.keys(filters.sensory).forEach(k => filters.sensory[k] = false);
+          }
+          
+          // Update UI
+          initializeFilters();
+          applyFilters();
+        } catch (e) {}
+      }
+      
+      // Save filters to localStorage
+      function saveFilters() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            height: filters.height,
+            pregnancy: filters.pregnant,
+            wheelchair: filters.wheelchair === 'WAV',
+            sensory: false,
+            timestamp: Date.now()
+          }));
+        } catch (e) {}
+      }
+      
+      // Wrap toggleFilter to save after
+      const originalToggleFilter = toggleFilter;
+      toggleFilter = function(filterType) {
+        originalToggleFilter(filterType);
+        saveFilters();
+      };
+      
+      // Wrap setWheelchairFilter to save after  
+      const originalSetWheelchair = setWheelchairFilter;
+      setWheelchairFilter = function(value, update = true) {
+        originalSetWheelchair(value, update);
+        if (update) saveFilters();
+      };
+      
+      // Wrap height slider change
+      const heightSlider = document.getElementById('height-slider');
+      const mobileHeightSlider = document.getElementById('mobile-height-slider');
+      
+      if (heightSlider) {
+        heightSlider.addEventListener('change', saveFilters);
+      }
+      if (mobileHeightSlider) {
+        mobileHeightSlider.addEventListener('change', saveFilters);
+      }
+    })();
   </script>
+<script src="/scripts/global-nav.js"></script>
+<script>GlobalNav.init('rides');</script>
 </body>
 </html>
