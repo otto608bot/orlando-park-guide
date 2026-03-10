@@ -1713,6 +1713,88 @@
         document.body.style.overflow = '';
       }
     });
+    
+    // Sync with SharedFilters on page load and save changes back
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof SharedFilters !== 'undefined') {
+        const state = SharedFilters.getState();
+        
+        // Sync height slider
+        const heightSlider = document.getElementById('height-slider');
+        const mobileHeightSlider = document.getElementById('mobile-height-slider');
+        const heightDisplay = document.getElementById('height-display');
+        const mobileHeightDisplay = document.getElementById('mobile-height-display');
+        
+        if (heightSlider) heightSlider.value = state.height;
+        if (mobileHeightSlider) mobileHeightSlider.value = state.height;
+        
+        // Update height display text
+        const heightText = state.height === 0 ? 'Any <span>height</span>' : state.height + '" <span>or shorter</span>';
+        if (heightDisplay) heightDisplay.innerHTML = heightText;
+        if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
+        
+        // Sync filter chips
+        const chips = ['pregnancy', 'wheelchair', 'sensory'];
+        chips.forEach(chip => {
+          const desktopChip = document.getElementById('chip-' + chip);
+          const mobileChip = document.getElementById('mobile-chip-' + chip);
+          
+          if (desktopChip) {
+            desktopChip.classList.toggle('active', state[chip]);
+          }
+          if (mobileChip) {
+            mobileChip.classList.toggle('active', state[chip]);
+          }
+        });
+        
+        // Apply filters if applyFilters function exists
+        if (typeof applyFilters === 'function') {
+          applyFilters();
+        }
+        
+        // Override toggleFilter to also save to SharedFilters
+        const originalToggleFilter = window.toggleFilter;
+        window.toggleFilter = function(type) {
+          // Call original function
+          if (originalToggleFilter) {
+            originalToggleFilter(type);
+          }
+          // Save to SharedFilters
+          if (typeof SharedFilters !== 'undefined') {
+            const chip = document.getElementById('chip-' + type);
+            const isActive = chip && chip.classList.contains('active');
+            SharedFilters.setFilter(type, isActive);
+          }
+        };
+        
+        // Override height slider to save to SharedFilters
+        const heightSliderEl = document.getElementById('height-slider');
+        const mobileHeightSliderEl = document.getElementById('mobile-height-slider');
+        
+        if (heightSliderEl) {
+          heightSliderEl.addEventListener('change', function() {
+            if (typeof SharedFilters !== 'undefined') {
+              SharedFilters.setFilter('height', parseInt(this.value));
+            }
+          });
+        }
+        
+        if (mobileHeightSliderEl) {
+          mobileHeightSliderEl.addEventListener('change', function() {
+            if (typeof SharedFilters !== 'undefined') {
+              SharedFilters.setFilter('height', parseInt(this.value));
+            }
+          });
+        }
+      }
+    });
+    
+    // Listen for filter changes from other pages
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'pyp_filters_v1') {
+        location.reload();
+      }
+    });
   </script>
 </body>
 </html>
