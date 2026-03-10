@@ -224,9 +224,14 @@ const FilterSystem = (function() {
   // ============================================
   
   function updateHeightUI() {
-    const text = state.height === 0 
-      ? 'Any <span>height</span>' 
-      : state.height + '" <span>minimum</span>';
+    let text;
+    if (state.height === 0) {
+      text = 'All <span>heights</span>';
+    } else if (state.height >= 54) {
+      text = '54" <span>plus</span>';
+    } else {
+      text = state.height + '" <span>minimum</span>';
+    }
     
     document.querySelectorAll('[data-filter-display="height"]').forEach(el => {
       el.innerHTML = text;
