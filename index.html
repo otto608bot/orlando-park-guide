@@ -1666,8 +1666,12 @@
           ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
             const chip = document.getElementById('chip-' + type);
             const mobileChip = document.getElementById('mobile-chip-' + type);
-            if (chip) chip.classList.toggle('active', state.filters[type]);
-            if (mobileChip) mobileChip.classList.toggle('active', state.filters[type]);
+            // For wheelchair, check if it's 'WAV', for others use boolean
+            const isActive = type === 'wheelchair' 
+              ? state.filters[type] === 'WAV' 
+              : state.filters[type];
+            if (chip) chip.classList.toggle('active', isActive);
+            if (mobileChip) mobileChip.classList.toggle('active', isActive);
           });
           
           if (typeof render === 'function') render();
