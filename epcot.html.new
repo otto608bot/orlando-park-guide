@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universal Studios Florida Rides & Character Dining | Plan Your Park</title>
-  <meta name="description" content="Complete guide to Universal Studios Florida rides and character dining. Filter by height, pregnancy safety, and find the perfect character meals.">
+  <title>Magic Kingdom Rides & Character Dining | Plan Your Park</title>
+  <meta name="description" content="Complete guide to Magic Kingdom rides and character dining. Filter by height, pregnancy safety, and find the perfect character meals.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -807,11 +807,11 @@
     </div>
   </div>
 
-  <section class="park-hero" style="background-image: url('Universal Studios Florida.webp');">
+  <section class="park-hero" style="background-image: url('Magic Kingdom.webp');">
     <div class="park-hero-content">
       <a href="/" class="back-btn">&larr; Back to All Parks</a>
       <div class="resort">Walt Disney World</div>
-      <h1>Universal Studios Florida</h1>
+      <h1>Magic Kingdom</h1>
       <div class="stats-row">
         <div class="stat">
           <span class="stat-value" id="ride-stat">0</span>
@@ -828,7 +828,7 @@
           <path d="M9 12h6"></path>
           <path d="M12 9v6"></path>
         </svg>
-        Get Universal Studios Florida Tickets
+        Get Magic Kingdom Tickets
       </a>
     </div>
   </section>
@@ -981,7 +981,7 @@
   <script src="/scripts/shared-filters.js"></script>
   <script>
     // Park-specific data
-    const parkName = 'Universal Studios Florida';
+    const parkName = 'Magic Kingdom';
     const parkRides = window.rideData.filter(ride => ride.park === parkName);
     const parkMeals = window.disneyCharacterMeals.filter(meal => meal.location.park === parkName);
     
@@ -1106,7 +1106,7 @@
             <div class="meal-card-header">
               <div class="meal-card-title">${meal.name}</div>
               <div class="meal-card-location">
-                <span class="location-badge">&#127984; Universal Studios Florida</span>
+                <span class="location-badge">&#127984; Magic Kingdom</span>
               </div>
             </div>
             <div class="meal-card-body">
