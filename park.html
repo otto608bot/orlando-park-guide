@@ -2429,6 +2429,79 @@
     document.addEventListener('global:closeFilters', function() {
       closeMobileFilters();
     });
+    
+    // ============================================
+    // FILTER PERSISTENCE
+    // ============================================
+    (function() {
+      const STORAGE_KEY = 'pyp_filters_v1';
+      
+      // Load filters from localStorage on init
+      function loadFilters() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (!stored) return;
+          
+          const parsed = JSON.parse(stored);
+          
+          // Update filters object
+          if (parsed.height !== undefined) filters.height = parsed.height;
+          if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
+          if (parsed.wheelchair !== undefined) {
+            filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          }
+          if (parsed.sensory !== undefined) {
+            // For sensory, we need to set all to false then enable if needed
+            Object.keys(filters.sensory).forEach(k => filters.sensory[k] = false);
+          }
+          
+          // Update UI
+          initializeFilters();
+          applyFilters();
+        } catch (e) {}
+      }
+      
+      // Save filters to localStorage
+      function saveFilters() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            height: filters.height,
+            pregnancy: filters.pregnant,
+            wheelchair: filters.wheelchair === 'WAV',
+            sensory: false, // Park page doesn't use sensory filter the same way
+            timestamp: Date.now()
+          }));
+        } catch (e) {}
+      }
+      
+      // Wrap toggleFilter to save after
+      const originalToggleFilter = toggleFilter;
+      toggleFilter = function(filterType) {
+        originalToggleFilter(filterType);
+        saveFilters();
+      };
+      
+      // Wrap setWheelchairFilter to save after  
+      const originalSetWheelchair = setWheelchairFilter;
+      setWheelchairFilter = function(value, update = true) {
+        originalSetWheelchair(value, update);
+        if (update) saveFilters();
+      };
+      
+      // Wrap height slider change
+      const heightSlider = document.getElementById('height-slider');
+      const mobileHeightSlider = document.getElementById('mobile-height-slider');
+      
+      if (heightSlider) {
+        heightSlider.addEventListener('change', saveFilters);
+      }
+      if (mobileHeightSlider) {
+        mobileHeightSlider.addEventListener('change', saveFilters);
+      }
+      
+      // Load on init
+      loadFilters();
+    })();
   </script>
 <script src="/scripts/global-nav.js"></script>
 <script>GlobalNav.init('rides');</script>
