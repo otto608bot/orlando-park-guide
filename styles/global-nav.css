@@ -205,7 +205,8 @@
   }
   
   /* Show filter button on mobile - JS will hide on desktop */
-  .global-mobile-filter-btn {
+  .global-mobile-filter-btn,
+  #global-filter-btn {
     display: flex !important;
   }
 }
