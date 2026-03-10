@@ -2447,9 +2447,14 @@
           // Update filters object
           if (parsed.height !== undefined) filters.height = parsed.height;
           if (parsed.pregnancy !== undefined) filters.pregnant = parsed.pregnancy;
-          if (parsed.wheelchair !== undefined) {
-            filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+          
+          // Handle wheelchair - parsed.wheelchair is a boolean
+          if (parsed.wheelchair === true) {
+            filters.wheelchair = 'WAV';
+          } else if (parsed.wheelchair === false) {
+            filters.wheelchair = 'any';
           }
+          // If undefined, leave as default ('any')
           if (parsed.sensory !== undefined) {
             // For sensory, we need to set all to false then enable if needed
             Object.keys(filters.sensory).forEach(k => filters.sensory[k] = false);
