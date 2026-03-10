@@ -1607,7 +1607,99 @@
   </style>
 
   <script src="app.js?v=7"></script>
-  <script src="/scripts/shared-filters.js"></script>
+  
+  <!-- Simple filter persistence using localStorage directly -->
+  <script>
+    (function() {
+      const STORAGE_KEY = 'pyp_filters_v1';
+      
+      // Load filters from localStorage on page load
+      function loadFilters() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (stored && typeof state !== 'undefined' && state.filters) {
+            const parsed = JSON.parse(stored);
+            // Only apply if values are different from defaults
+            if (parsed.height !== undefined) state.filters.height = parsed.height;
+            if (parsed.pregnancy !== undefined) state.filters.pregnancy = parsed.pregnancy;
+            if (parsed.wheelchair !== undefined) state.filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
+            if (parsed.sensory !== undefined) state.filters.sensory = parsed.sensory;
+            
+            // Update UI to match loaded state
+            updateUIFromState();
+            // Render with loaded filters
+            if (typeof render === 'function') render();
+          }
+        } catch (e) {
+          console.warn('Failed to load filters:', e);
+        }
+      }
+      
+      // Update UI elements to match current state
+      function updateUIFromState() {
+        if (typeof state === 'undefined') return;
+        
+        // Update height slider
+        const heightSlider = document.getElementById('height-slider');
+        const mobileHeightSlider = document.getElementById('mobile-height-slider');
+        if (heightSlider) heightSlider.value = state.filters.height;
+        if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
+        
+        // Update height display
+        const heightDisplay = document.getElementById('height-display');
+        const mobileHeightDisplay = document.getElementById('mobile-height-display');
+        const heightText = state.filters.height === 0 ? 'Any <span>height</span>' : state.filters.height + '" <span>minimum</span>';
+        if (heightDisplay) heightDisplay.innerHTML = heightText;
+        if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
+        
+        // Update chips
+        ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
+          const desktopChip = document.getElementById('chip-' + type);
+          const mobileChip = document.getElementById('mobile-chip-' + type);
+          const isActive = state.filters[type];
+          if (desktopChip) desktopChip.classList.toggle('active', isActive);
+          if (mobileChip) mobileChip.classList.toggle('active', isActive);
+        });
+      }
+      
+      // Save filters to localStorage
+      function saveFilters() {
+        try {
+          if (typeof state !== 'undefined' && state.filters) {
+            const toSave = {
+              height: state.filters.height,
+              pregnancy: state.filters.pregnancy,
+              wheelchair: state.filters.wheelchair === 'WAV',
+              sensory: state.filters.sensory
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
+          }
+        } catch (e) {
+          console.warn('Failed to save filters:', e);
+        }
+      }
+      
+      // Load on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadFilters);
+      } else {
+        loadFilters();
+      }
+      
+      // Save before page unload
+      window.addEventListener('beforeunload', saveFilters);
+      
+      // Also save periodically and on visibility change
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') {
+          saveFilters();
+        }
+      });
+      
+      // Expose save function for immediate saves
+      window.saveFiltersToStorage = saveFilters;
+    })();
+  </script>
   
   <!-- Global Navigation Manager -->
   <script>
@@ -1711,85 +1803,6 @@
       if (sheet) {
         sheet.classList.remove('active');
         document.body.style.overflow = '';
-      }
-    });
-    
-    // Sync with SharedFilters on page load and save changes back
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof SharedFilters !== 'undefined') {
-        const sharedState = SharedFilters.getState();
-        
-        // Sync height slider
-        const heightSlider = document.getElementById('height-slider');
-        const mobileHeightSlider = document.getElementById('mobile-height-slider');
-        const heightDisplay = document.getElementById('height-display');
-        const mobileHeightDisplay = document.getElementById('mobile-height-display');
-        
-        if (heightSlider) heightSlider.value = sharedState.height;
-        if (mobileHeightSlider) mobileHeightSlider.value = sharedState.height;
-        
-        // Update height display text
-        const heightText = sharedState.height === 0 ? 'Any <span>height</span>' : sharedState.height + '" <span>minimum</span>';
-        if (heightDisplay) heightDisplay.innerHTML = heightText;
-        if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = heightText;
-        
-        // Sync filter chips
-        const chips = ['pregnancy', 'wheelchair', 'sensory'];
-        chips.forEach(chip => {
-          const desktopChip = document.getElementById('chip-' + chip);
-          const mobileChip = document.getElementById('mobile-chip-' + chip);
-          
-          if (desktopChip) {
-            desktopChip.classList.toggle('active', sharedState[chip]);
-          }
-          if (mobileChip) {
-            mobileChip.classList.toggle('active', sharedState[chip]);
-          }
-        });
-        
-        // Sync app.js state with SharedFilters
-        if (typeof window.state !== 'undefined' && window.state.filters) {
-          window.state.filters.height = sharedState.height;
-          window.state.filters.pregnancy = sharedState.pregnancy;
-          window.state.filters.wheelchair = sharedState.wheelchair ? 'WAV' : 'any';
-          window.state.filters.sensory = sharedState.sensory;
-        }
-        
-        // Render with synced state
-        if (typeof render === 'function') {
-          render();
-        }
-        
-        // Override toggleFilter to sync both app.js state and SharedFilters
-        const originalToggleFilter = window.toggleFilter;
-        window.toggleFilter = function(type) {
-          // Call original function to update app.js state and UI
-          if (originalToggleFilter) {
-            originalToggleFilter(type);
-          }
-          // Also save to SharedFilters for cross-page persistence
-          if (typeof SharedFilters !== 'undefined' && typeof window.state !== 'undefined') {
-            SharedFilters.setFilter(type, window.state.filters[type]);
-          }
-        };
-        
-        // Override height slider change handler
-        const originalHeightChange = window.updateHeightFilter;
-        window.updateHeightFilter = function(value) {
-          if (originalHeightChange) {
-            originalHeightChange(value);
-          }
-          if (typeof SharedFilters !== 'undefined') {
-            SharedFilters.setFilter('height', parseInt(value));
-          }
-        };
-      }
-    });
-    
-    // Listen for filter changes from other pages
-    window.addEventListener('storage', function(e) {
-      if (e.key === 'pyp_filters_v1') {
-        location.reload();
       }
     });
   </script>
