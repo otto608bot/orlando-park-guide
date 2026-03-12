@@ -1777,7 +1777,7 @@ const elements = {
   detailHeightLimit: document.getElementById('detail-height-limit'),
   affiliateContainer: document.getElementById('affiliate-container'),
   rideGrid: document.getElementById('ride-grid'),
-  mobileFilterSheet: document.getElementById('mobile-filter-sheet'),
+  mobileFilterSheet: document.getElementById('filter-mobile-sheet'),
   chips: {
     pregnancy: document.getElementById('chip-pregnancy'),
     wheelchair: document.getElementById('chip-wheelchair'),
