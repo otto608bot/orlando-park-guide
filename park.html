@@ -2381,13 +2381,13 @@
     // MOBILE UI FUNCTIONS
     // ============================================
     function openMobileFilters() {
-      document.getElementById('mobile-filter-sheet').classList.add('active');
+      document.getElementById('filter-mobile-sheet').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
     
     function closeMobileFilters(event) {
-      if (!event || event.target === document.getElementById('mobile-filter-sheet')) {
-        document.getElementById('mobile-filter-sheet').classList.remove('active');
+      if (!event || event.target === document.getElementById('filter-mobile-sheet')) {
+        document.getElementById('filter-mobile-sheet').classList.remove('active');
         document.body.style.overflow = '';
       }
     }

@@ -1749,7 +1749,7 @@
     
     // Connect global filter events to rides page filter functions
     document.addEventListener('global:openFilters', function() {
-      const sheet = document.getElementById('mobile-filter-sheet');
+      const sheet = document.getElementById('filter-mobile-sheet');
       if (sheet) {
         sheet.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -1757,7 +1757,7 @@
     });
     
     document.addEventListener('global:closeFilters', function() {
-      const sheet = document.getElementById('mobile-filter-sheet');
+      const sheet = document.getElementById('filter-mobile-sheet');
       if (sheet) {
         sheet.classList.remove('active');
         document.body.style.overflow = '';
