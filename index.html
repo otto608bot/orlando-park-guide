@@ -1275,14 +1275,14 @@
       <div class="sidebar-section">
         <h3 class="sidebar-title">Filters</h3>
         <div class="height-filter">
-          <div class="height-display" id="height-display">Any <span>height</span></div>
+          <div class="height-display" data-filter-display="height" id="height-display">Any <span>height</span></div>
           <div class="height-ruler">
-            <input type="range" id="height-slider" min="0" max="54" value="0" step="1">
+            <input type="range" data-filter-input="height" id="height-slider" min="0" max="54" value="0" step="1">
           </div>
         </div>
         
         <div class="filter-chips">
-          <button class="filter-chip" id="chip-pregnancy" onclick="toggleFilter('pregnancy')">
+          <button class="filter-chip" data-filter="pregnancy" id="chip-pregnancy">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 4c1.5 0 2.5 1 2.5 2.5S13.5 9 12 9s-2.5-1-2.5-2.5S10.5 4 12 4z"></path>
               <path d="M12 9c2.5 0 4.5 2 4.5 4.5v.5c0 2.5-2 4.5-4.5 4.5s-4.5-2-4.5-4.5v-.5C7.5 11 9.5 9 12 9z"></path>
@@ -1292,7 +1292,7 @@
             Pregnancy Safe
           </button>
           
-          <button class="filter-chip" id="chip-wheelchair" onclick="toggleFilter('wheelchair')">
+          <button class="filter-chip" data-filter="wheelchair" id="chip-wheelchair">
             <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
               <path d="M 73.12 88.75 L 72.18 87.50 L 59.95 58.75 L 32.66 58.61 L 29.97 22.50 L 29.70 20.00 L 28.36 16.94 L 28.36 14.17 L 28.90 12.22 L 31.72 8.75 L 35.22 7.36 L 37.37 7.36 L 39.25 7.92 L 42.34 10.28 L 43.95 13.61 L 43.95 17.50 L 42.88 20.00 L 40.59 22.36 L 36.69 23.89 L 37.90 37.08 L 62.23 37.22 L 62.10 43.19 L 38.44 43.19 L 38.84 51.39 L 64.25 51.53 L 76.21 79.17 L 76.88 79.58 L 83.87 76.53 L 84.68 76.25 L 85.08 76.67 L 87.23 82.22 L 87.10 82.92 L 73.12 88.75 Z" fill="currentColor"/>
               <path d="M 39.52 92.36 L 35.48 92.36 L 31.99 91.81 L 28.49 90.69 L 23.39 87.92 L 20.70 85.69 L 17.34 81.94 L 15.73 79.44 L 13.31 73.61 L 12.50 70.00 L 12.50 62.78 L 14.38 55.83 L 15.73 53.06 L 19.09 48.47 L 23.39 44.58 L 27.42 42.36 L 28.09 43.06 L 28.36 49.72 L 24.60 52.78 L 21.64 56.67 L 20.56 58.89 L 19.22 64.17 L 19.22 68.33 L 20.56 73.61 L 22.72 77.50 L 25.27 80.42 L 28.23 82.64 L 30.91 84.03 L 34.95 85.14 L 40.32 85.14 L 44.35 84.03 L 47.04 82.64 L 51.21 79.17 L 54.44 74.17 L 56.05 68.06 L 55.65 62.36 L 57.93 62.50 L 61.96 71.94 L 61.96 73.61 L 59.81 78.89 L 57.66 82.22 L 54.84 85.42 L 50.54 88.75 L 47.31 90.42 L 43.01 91.81 L 39.52 92.36 Z" fill="currentColor"/>
@@ -1300,7 +1300,7 @@
             Stay in Wheelchair
           </button>
           
-          <button class="filter-chip" id="chip-sensory" onclick="toggleFilter('sensory')">
+          <button class="filter-chip" data-filter="sensory" id="chip-sensory">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="4"></circle>
               <path d="M12 2v2"></path>
@@ -1452,22 +1452,22 @@
   </div>
   
   <!-- Mobile Filter Sheet -->
-  <div class="mobile-filter-sheet" id="mobile-filter-sheet" onclick="closeMobileFilters(event)">
+  <div class="mobile-filter-sheet" id="filter-mobile-sheet" onclick="closeMobileFilters(event)">
     <div class="mobile-filter-content" onclick="event.stopPropagation()">
       <div class="mobile-filter-header">
         <h3>Filters</h3>
-        <button class="close-sheet-btn" onclick="closeMobileFilters()">&times;</button>
+        <button class="close-sheet-btn" data-filter-action="close-sheet" onclick="closeMobileFilters()">&times;</button>
       </div>
       
       <div class="height-filter">
-        <div class="height-display" id="mobile-height-display">Any <span>height</span></div>
+        <div class="height-display" data-filter-display="height" id="mobile-height-display">Any <span>height</span></div>
         <div class="height-ruler">
-          <input type="range" id="mobile-height-slider" min="0" max="54" value="0" step="1">
+          <input type="range" data-filter-input="height" id="mobile-height-slider" min="0" max="54" value="0" step="1">
         </div>
       </div>
       
       <div class="filter-chips" style="margin-top: var(--space-lg);">
-        <button class="filter-chip" id="mobile-chip-pregnancy" onclick="toggleFilter('pregnancy')">
+        <button class="filter-chip" data-filter="pregnancy" id="mobile-chip-pregnancy">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 4c1.5 0 2.5 1 2.5 2.5S13.5 9 12 9s-2.5-1-2.5-2.5S10.5 4 12 4z"></path>
             <path d="M12 9c2.5 0 4.5 2 4.5 4.5v.5c0 2.5-2 4.5-4.5 4.5s-4.5-2-4.5-4.5v-.5C7.5 11 9.5 9 12 9z"></path>
@@ -1477,7 +1477,7 @@
           Pregnancy Safe
         </button>
         
-        <button class="filter-chip" id="mobile-chip-wheelchair" onclick="toggleFilter('wheelchair')">
+        <button class="filter-chip" data-filter="wheelchair" id="mobile-chip-wheelchair">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
             <path d="M 73.12 88.75 L 72.18 87.50 L 59.95 58.75 L 32.66 58.61 L 29.97 22.50 L 29.70 20.00 L 28.36 16.94 L 28.36 14.17 L 28.90 12.22 L 31.72 8.75 L 35.22 7.36 L 37.37 7.36 L 39.25 7.92 L 42.34 10.28 L 43.95 13.61 L 43.95 17.50 L 42.88 20.00 L 40.59 22.36 L 36.69 23.89 L 37.90 37.08 L 62.23 37.22 L 62.10 43.19 L 38.44 43.19 L 38.84 51.39 L 64.25 51.53 L 76.21 79.17 L 76.88 79.58 L 83.87 76.53 L 84.68 76.25 L 85.08 76.67 L 87.23 82.22 L 87.10 82.92 L 73.12 88.75 Z" fill="currentColor"/>
             <path d="M 39.52 92.36 L 35.48 92.36 L 31.99 91.81 L 28.49 90.69 L 23.39 87.92 L 20.70 85.69 L 17.34 81.94 L 15.73 79.44 L 13.31 73.61 L 12.50 70.00 L 12.50 62.78 L 14.38 55.83 L 15.73 53.06 L 19.09 48.47 L 23.39 44.58 L 27.42 42.36 L 28.09 43.06 L 28.36 49.72 L 24.60 52.78 L 21.64 56.67 L 20.56 58.89 L 19.22 64.17 L 19.22 68.33 L 20.56 73.61 L 22.72 77.50 L 25.27 80.42 L 28.23 82.64 L 30.91 84.03 L 34.95 85.14 L 40.32 85.14 L 44.35 84.03 L 47.04 82.64 L 51.21 79.17 L 54.44 74.17 L 56.05 68.06 L 55.65 62.36 L 57.93 62.50 L 61.96 71.94 L 61.96 73.61 L 59.81 78.89 L 57.66 82.22 L 54.84 85.42 L 50.54 88.75 L 47.31 90.42 L 43.01 91.81 L 39.52 92.36 Z" fill="currentColor"/>
@@ -1485,7 +1485,7 @@
           Stay in Wheelchair
         </button>
         
-        <button class="filter-chip" id="mobile-chip-sensory" onclick="toggleFilter('sensory')">
+        <button class="filter-chip" data-filter="sensory" id="mobile-chip-sensory">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2"></path>
@@ -1606,83 +1606,55 @@
     }
   </style>
 
-  <script src="app.js?v=7"></script>
+  <!-- Shared Filter System -->
+  <script src="scripts/filter-system.js"></script>
   
-  <!-- Simple filter persistence - save on change, load on init -->
+  <script src="app.js?v=8"></script>
+  
+  <!-- Filter System Integration -->
   <script>
     (function() {
-      const STORAGE_KEY = 'pyp_filters_v1';
-      
-      // Wrap the original functions to save after they execute
-      const originalToggleFilter = window.toggleFilter;
-      const originalUpdateHeight = window.updateHeightFilter;
-      
-      window.toggleFilter = function(type) {
-        if (originalToggleFilter) originalToggleFilter(type);
-        saveFilters();
-      };
-      
-      window.updateHeightFilter = function(value) {
-        if (originalUpdateHeight) originalUpdateHeight(value);
-        saveFilters();
-      };
-      
-      function saveFilters() {
-        if (typeof state === 'undefined' || !state.filters) return;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({
-          height: state.filters.height,
-          pregnancy: state.filters.pregnancy,
-          wheelchair: state.filters.wheelchair === 'WAV',
-          sensory: state.filters.sensory,
-          timestamp: Date.now()
-        }));
-      }
-      
-      function loadFilters() {
-        try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if (!stored || typeof state === 'undefined' || !state.filters) return;
+      // Initialize FilterSystem and sync with app.js state
+      FilterSystem.init(function(filterState) {
+        // Sync FilterSystem state to app.js state
+        if (typeof state !== 'undefined' && state.filters) {
+          state.filters.height = filterState.height;
+          state.filters.pregnancy = filterState.pregnancy;
+          // Convert 'WAV'/'any' to boolean for app.js
+          state.filters.wheelchair = filterState.wheelchair === 'WAV';
+          // Convert sensory object to boolean for app.js (true if any sensory filter is active)
+          state.filters.sensory = Object.values(filterState.sensory).some(v => v);
           
-          const parsed = JSON.parse(stored);
-          
-          // Update state
-          state.filters.height = parsed.height || 0;
-          state.filters.pregnancy = parsed.pregnancy || false;
-          state.filters.wheelchair = parsed.wheelchair ? 'WAV' : 'any';
-          state.filters.sensory = parsed.sensory || false;
-          
-          // Update UI
-          const heightSlider = document.getElementById('height-slider');
-          const mobileHeightSlider = document.getElementById('mobile-height-slider');
-          if (heightSlider) heightSlider.value = state.filters.height;
-          if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
-          
-          const heightDisplay = document.getElementById('height-display');
-          const mobileHeightDisplay = document.getElementById('mobile-height-display');
-          const text = state.filters.height === 0 ? 'Any <span>height</span>' : state.filters.height + '" <span>minimum</span>';
-          if (heightDisplay) heightDisplay.innerHTML = text;
-          if (mobileHeightDisplay) mobileHeightDisplay.innerHTML = text;
-          
-          ['pregnancy', 'wheelchair', 'sensory'].forEach(type => {
-            const chip = document.getElementById('chip-' + type);
-            const mobileChip = document.getElementById('mobile-chip-' + type);
-            // For wheelchair, check if it's 'WAV', for others use boolean
-            const isActive = type === 'wheelchair' 
-              ? state.filters[type] === 'WAV' 
-              : state.filters[type];
-            if (chip) chip.classList.toggle('active', isActive);
-            if (mobileChip) mobileChip.classList.toggle('active', isActive);
-          });
-          
+          // Trigger re-render
           if (typeof render === 'function') render();
-        } catch (e) {}
-      }
+        }
+      });
       
-      // Load on init
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadFilters);
-      } else {
-        loadFilters();
+      // Wrap app.js toggleFilter to sync back to FilterSystem
+      const originalToggleFilter = window.toggleFilter;
+      window.toggleFilter = function(type) {
+        // Call original function
+        if (originalToggleFilter) originalToggleFilter(type);
+        
+        // Sync to FilterSystem
+        if (type === 'pregnancy') {
+          FilterSystem.togglePregnancy();
+        } else if (type === 'wheelchair') {
+          // Toggle between 'any' and 'WAV'
+          const current = FilterSystem.getState().wheelchair;
+          FilterSystem.setWheelchair(current === 'WAV' ? 'any' : 'WAV');
+        } else if (type === 'sensory') {
+          FilterSystem.toggleAllSensory();
+        }
+      };
+      
+      // Sync initial state from FilterSystem to app.js
+      const initialState = FilterSystem.getState();
+      if (typeof state !== 'undefined' && state.filters) {
+        state.filters.height = initialState.height;
+        state.filters.pregnancy = initialState.pregnancy;
+        state.filters.wheelchair = initialState.wheelchair === 'WAV';
+        state.filters.sensory = Object.values(initialState.sensory).some(v => v);
       }
     })();
   </script>
