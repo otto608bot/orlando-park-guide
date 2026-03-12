@@ -1720,11 +1720,24 @@
       },
       
       openFilters() {
-        // Dispatch event for pages to handle
+        // Open the filter sheet directly
+        const sheet = document.getElementById('filter-mobile-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        // Also dispatch event for any listeners
         document.dispatchEvent(new CustomEvent('global:openFilters'));
       },
       
       closeFilters() {
+        // Close the filter sheet directly
+        const sheet = document.getElementById('filter-mobile-sheet');
+        if (sheet) {
+          sheet.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        // Also dispatch event for any listeners
         document.dispatchEvent(new CustomEvent('global:closeFilters'));
       }
     };
