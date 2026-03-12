@@ -19,11 +19,22 @@ window.GlobalNav = {
         filterBtn.setAttribute('data-show-on-mobile', 'true');
       }
     }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdown = document.getElementById('parks-dropdown');
+      const toggle = document.getElementById('nav-parks');
+      if (dropdown && toggle && !dropdown.contains(e.target) && !toggle.contains(e.target)) {
+        dropdown.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   },
   
   setActiveNav(page) {
     // Desktop nav
     const navIds = {
+      'home': 'nav-home',
       'rides': 'nav-rides',
       'dining': 'nav-dining',
       'blog': 'nav-blog',
@@ -32,6 +43,7 @@ window.GlobalNav = {
     
     // Mobile nav
     const mobileNavIds = {
+      'home': 'mobile-nav-home',
       'rides': 'mobile-nav-rides',
       'dining': 'mobile-nav-dining',
       'blog': 'mobile-nav-blog',
@@ -46,8 +58,18 @@ window.GlobalNav = {
     if (activeMobileNav) activeMobileNav.classList.add('active');
   },
   
+  toggleParksDropdown(event) {
+    event.stopPropagation();
+    const dropdown = document.getElementById('parks-dropdown');
+    const toggle = document.getElementById('nav-parks');
+    if (dropdown && toggle) {
+      const isOpen = dropdown.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen.toString());
+    }
+  },
+  
   openNav() {
-    const sheet = document.getElementById('global-mobile-nav-sheet');
+    const sheet = document.getElementById('global-mobile-nav-sheet') || document.getElementById('mobile-nav-sheet');
     if (sheet) {
       sheet.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -55,7 +77,7 @@ window.GlobalNav = {
   },
   
   closeNav(event) {
-    const sheet = document.getElementById('global-mobile-nav-sheet');
+    const sheet = document.getElementById('global-mobile-nav-sheet') || document.getElementById('mobile-nav-sheet');
     if (!event || event.target === sheet) {
       if (sheet) {
         sheet.classList.remove('active');
@@ -67,6 +89,10 @@ window.GlobalNav = {
   openFilters() {
     // Dispatch event for pages to handle
     document.dispatchEvent(new CustomEvent('global:openFilters'));
+    // Also call the page's own filter function if it exists
+    if (typeof openMobileFilters === 'function') {
+      openMobileFilters();
+    }
   },
   
   closeFilters() {
@@ -78,5 +104,10 @@ window.GlobalNav = {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     GlobalNav.closeNav();
+    // Also close dropdown
+    const dropdown = document.getElementById('parks-dropdown');
+    const toggle = document.getElementById('nav-parks');
+    if (dropdown) dropdown.classList.remove('active');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
   }
 });

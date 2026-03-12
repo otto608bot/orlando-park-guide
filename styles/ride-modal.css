@@ -1,0 +1,296 @@
+/* Ride Detail Modal Styles */
+.ride-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.ride-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ride-modal-content {
+  background: var(--white, #FFFFFF);
+  border-radius: var(--radius-lg, 16px);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.ride-modal-overlay.active .ride-modal-content {
+  transform: scale(1);
+}
+
+.ride-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  background: var(--gray-100, #F7FAFC);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--gray-600, #718096);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.ride-modal-close:hover {
+  background: var(--gray-200, #EDF2F7);
+  color: var(--base-dark, #2D3748);
+}
+
+.ride-modal-header {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-200, #E2E8F0);
+}
+
+.ride-modal-image-placeholder {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--gray-100, #F7FAFC) 0%, var(--gray-200, #EDF2F7) 100%);
+  border-radius: var(--radius-md, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500, #A0AEC0);
+  font-size: 0.875rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.ride-modal-title-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.ride-modal-title-section h2 {
+  font-family: var(--font-heading, 'Nunito', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--base-dark, #2D3748);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+#modal-ride-park {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-500, #A0AEC0);
+  margin-bottom: 0.75rem;
+}
+
+.ride-modal-height {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  background: rgba(243, 112, 33, 0.1);
+  color: var(--action-orange, #F37021);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.ride-modal-body {
+  padding: 1.5rem;
+}
+
+#modal-ride-description {
+  font-size: 1rem;
+  color: var(--gray-600, #718096);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.ride-modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.ride-modal-section:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.ride-modal-section h3 {
+  font-family: var(--font-heading, 'Nunito', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--base-dark, #2D3748);
+  margin: 0 0 0.75rem 0;
+}
+
+#modal-ride-tips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#modal-ride-tips li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--gray-600, #718096);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+#modal-ride-tips li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--action-orange, #F37021);
+  font-weight: bold;
+}
+
+#modal-ride-best-time {
+  font-size: 0.9375rem;
+  color: var(--gray-600, #718096);
+  margin: 0;
+}
+
+#modal-ride-accessibility {
+  font-size: 0.9375rem;
+  color: var(--gray-600, #718096);
+}
+
+#modal-ride-accessibility > div {
+  margin-bottom: 0.5rem;
+}
+
+#modal-wheelchair {
+  font-weight: 600;
+  color: var(--base-dark, #2D3748);
+}
+
+.sensory-warnings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.sensory-warnings span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  background: rgba(90, 79, 207, 0.1);
+  color: var(--deep-purple, #5A4FCF);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+#modal-similar-rides {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#modal-similar-rides button {
+  padding: 0.5rem 1rem;
+  background: var(--gray-100, #F7FAFC);
+  border: 1px solid var(--gray-200, #E2E8F0);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-700, #4A5568);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#modal-similar-rides button:hover {
+  background: var(--gray-200, #EDF2F7);
+  border-color: var(--gray-300, #CBD5E0);
+  color: var(--base-dark, #2D3748);
+}
+
+.ticket-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--action-orange, #F37021);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-full, 9999px);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+}
+
+.ticket-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .ride-modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  
+  .ride-modal-content {
+    max-height: 85vh;
+    border-radius: var(--radius-xl, 24px) var(--radius-xl, 24px) 0 0;
+    transform: translateY(100%);
+  }
+  
+  .ride-modal-overlay.active .ride-modal-content {
+    transform: translateY(0);
+  }
+  
+  .ride-modal-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .ride-modal-image-placeholder {
+    width: 100%;
+    height: 160px;
+  }
+  
+  .ride-modal-title-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .ride-modal-body {
+    padding: 1.25rem;
+  }
+}
+
+/* Make ride cards clickable */
+.ride-card {
+  cursor: pointer;
+}
+
+.ride-card:hover {
+  border-color: var(--action-orange, #F37021);
+}

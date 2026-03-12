@@ -2156,7 +2156,7 @@ function renderParkDetail(parkName) {
     }
 
     return `
-      <div class="ride-card ${isAvailable ? '' : 'unavailable'}">
+      <div class="ride-card ${isAvailable ? '' : 'unavailable'}" onclick="openRideModal('${ride.id}')">
         <div class="ride-header">
           <div class="ride-name">${escapeHtml(ride.name)}</div>
           ${!isAvailable ? `<span class="unavailable-badge">${unavailableReason}</span>` : `<div class="ride-type">${escapeHtml(ride.type)}</div>`}
