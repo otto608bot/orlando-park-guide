@@ -1851,6 +1851,7 @@
       setActiveNav(page) {
         // Desktop nav
         const navIds = {
+          'home': 'nav-home',
           'rides': 'nav-rides',
           'dining': 'nav-dining',
           'blog': 'nav-blog'
@@ -1858,6 +1859,7 @@
         
         // Mobile nav
         const mobileNavIds = {
+          'home': 'mobile-nav-home',
           'rides': 'mobile-nav-rides',
           'dining': 'mobile-nav-dining',
           'blog': 'mobile-nav-blog'
@@ -1928,8 +1930,8 @@
     }
     window.toggleMobileParksSection = toggleMobileParksSection;
 
-    // Initialize for rides page
-    GlobalNav.init('rides');
+    // Initialize for home page
+    GlobalNav.init('home');
     
     // Handle resize to show/hide filter button
     window.addEventListener('resize', function() {

@@ -322,65 +322,134 @@
       font-weight: 600;
     }
     
-    /* Park Jump Navigation */
-    .park-nav {
+    /* Expandable Table Structure */
+    .rides-table-container {
       background: var(--white);
       border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      margin-bottom: var(--space-lg);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--gray-200);
+      overflow: hidden;
     }
-    .park-nav-title {
-      font-family: var(--font-heading);
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-md);
-    }
-    .park-nav-group {
-      margin-bottom: var(--space-md);
-    }
-    .park-nav-group:last-child {
-      margin-bottom: 0;
-    }
-    .park-nav-brand {
-      font-family: var(--font-heading);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: var(--space-sm);
-    }
-    .park-nav-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-    }
-    .park-nav-pill {
-      padding: var(--space-sm) var(--space-md);
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-full);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-600);
+
+    /* Franchise Row Styles */
+    .franchise-row {
+      background: linear-gradient(135deg, #2D3748 0%, #4A5568 100%);
+      color: white;
       cursor: pointer;
       transition: all 0.2s ease;
-      text-decoration: none;
     }
-    .park-nav-pill:hover {
-      background: var(--gray-200);
-      border-color: var(--gray-300);
-      color: var(--base-dark);
+    .franchise-row:hover {
+      background: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
     }
-    .park-nav-pill.active {
-      background: var(--action-orange);
-      border-color: var(--action-orange);
+    .franchise-row td {
+      padding: var(--space-md) var(--space-lg);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .franchise-row-content {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+    .franchise-row .chevron {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .franchise-row.collapsed .chevron {
+      transform: rotate(-90deg);
+    }
+    .franchise-row .ride-count {
+      margin-left: auto;
+      background: rgba(255,255,255,0.2);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Park Row Styles */
+    .park-row {
+      background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .park-row:hover {
+      background: linear-gradient(135deg, #EDF2F7 0%, #E2E8F0 100%);
+    }
+    .park-row td {
+      padding: var(--space-sm) var(--space-lg) var(--space-sm) calc(var(--space-lg) + 24px);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .park-row-content {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+    .park-row .chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .park-row.collapsed .chevron {
+      transform: rotate(-90deg);
+    }
+    .park-row .ride-count {
+      margin-left: auto;
+      background: var(--primary-blue);
       color: white;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Collapsed state - hide child tbody */
+    tbody.collapsed {
+      display: none;
+    }
+
+    /* Ride rows */
+    .ride-row {
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .ride-row:hover {
+      background: var(--gray-100);
+    }
+    .ride-row td {
+      padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 48px);
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 0.9375rem;
+    }
+
+    .ride-name-cell {
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-decoration: underline;
+      text-decoration-color: var(--primary-blue);
+      text-underline-offset: 2px;
+      transition: all 0.2s ease;
+    }
+    .ride-name-cell:hover {
+      color: var(--deep-purple);
+      text-decoration-color: var(--deep-purple);
+    }
+
+    .ride-park-cell { color: var(--gray-600); }
+    .ride-type-cell { color: var(--gray-600); }
+    .ride-height-cell {
+      font-weight: 600;
+      color: var(--action-orange);
     }
     
     /* Rides Table */
@@ -391,9 +460,15 @@
       border: 1px solid var(--gray-200);
       overflow: hidden;
     }
-    
+
+    .rides-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .rides-table {
       width: 100%;
+      min-width: 800px;
       border-collapse: collapse;
     }
     
@@ -770,20 +845,22 @@
       </div>
       
       <div class="rides-table-container">
-        <table class="rides-table">
-          <thead>
-            <tr>
-              <th>Ride</th>
-              <th>Park</th>
-              <th>Type</th>
-              <th>Min Height</th>
-              <th>Features</th>
-            </tr>
-          </thead>
-          <tbody id="rides-tbody">
-            <!-- Rides injected here -->
-          </tbody>
-        </table>
+        <div class="rides-table-wrapper">
+          <table class="rides-table">
+            <thead>
+              <tr>
+                <th>Ride</th>
+                <th>Park</th>
+                <th>Type</th>
+                <th>Min Height</th>
+                <th>Features</th>
+              </tr>
+            </thead>
+            <tbody id="rides-tbody">
+              <!-- Rides injected here -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
   </div>
