@@ -100,6 +100,17 @@ window.GlobalNav = {
   }
 };
 
+// Toggle mobile parks section (for mobile nav expandable sections)
+function toggleMobileParksSection() {
+  const section = document.getElementById('mobile-parks-section');
+  if (section) {
+    section.classList.toggle('expanded');
+  }
+}
+
+// Expose globally
+window.toggleMobileParksSection = toggleMobileParksSection;
+
 // Close on escape key
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {

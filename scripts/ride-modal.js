@@ -149,7 +149,7 @@ function openRideModal(rideId) {
   const similarDiv = document.getElementById('modal-similar-rides');
   const similar = findSimilarRides(ride);
   similarDiv.innerHTML = similar.length ? 
-    similar.map(r => `<button onclick="openRideModal('${r.id}')">${r.name}</button>`).join('') :
+    similar.map(r => `<button class="similar-ride-btn" onclick="openRideModal('${r.id}')">${r.name}</button>`).join('') :
     '<span style="color: var(--gray-500);">No similar rides found</span>';
   
   // Ticket link

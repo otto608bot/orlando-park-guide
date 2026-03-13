@@ -332,9 +332,34 @@
       background: rgba(56, 178, 172, 0.1);
       color: var(--splash-teal);
     }
-    .tag-wheelchair {
+            .tag-wheelchair {
       background: rgba(74, 157, 232, 0.1);
       color: var(--primary-blue);
+    }
+    
+    /* Mobile-friendly similar rides buttons */
+    @media (max-width: 640px) {
+      #modal-similar-rides {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      #modal-similar-rides button {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+        border-radius: var(--radius-md, 12px);
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      #modal-similar-rides button::after {
+        content: '→';
+        font-size: 1.25rem;
+        color: var(--action-orange, #F37021);
+      }
     }
     
     /* Empty State */
@@ -470,16 +495,23 @@
       </div>
       <nav class="global-mobile-nav-links">
         <a href="/" id="mobile-nav-home">Home</a>
-        <div class="mobile-nav-section">
-          <div class="mobile-nav-section-title">Parks</div>
-          <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
-          <a href="/park.html?park=epcot">EPCOT</a>
-          <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
-          <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
-          <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
-          <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
-          <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
-          <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
         </div>
         <a href="/rides.html" id="mobile-nav-rides" class="active">Rides</a>
         <a href="/character-dining.html" id="mobile-nav-dining">Character Dining</a>
@@ -783,6 +815,12 @@
           if (s.dark || s.loud || s.fog || s.sudden || s.enclosed || s.strobe) return false;
         }
         return true;
+      }).sort(function(a, b) {
+        // Sort by park name first
+        if (a.park < b.park) return -1;
+        if (a.park > b.park) return 1;
+        // Then by height (lowest first)
+        return a.height - b.height;
       });
     }
     

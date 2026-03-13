@@ -1111,13 +1111,47 @@
       border-top: 1px solid #E2E8F0;
     }
     
+    .mobile-nav-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .mobile-nav-section-header:hover {
+      background: #F7FAFC;
+    }
+    
     .mobile-nav-section-title {
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #A0AEC0;
-      padding: 0.75rem 1rem 0.5rem;
+    }
+    
+    .mobile-nav-section-toggle {
+      width: 20px;
+      height: 20px;
+      color: #A0AEC0;
+      transition: transform 0.2s;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-toggle {
+      transform: rotate(180deg);
+    }
+    
+    .mobile-nav-section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-content {
+      max-height: 500px;
     }
     
     .mobile-nav-section a {
@@ -1196,6 +1230,8 @@
       transform: translateX(-100%);
       transition: transform 0.3s ease;
       box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     
     .global-mobile-nav-sheet.active .global-mobile-nav-content {
@@ -1352,16 +1388,23 @@
           </svg>
           Home
         </a>
-        <div class="mobile-nav-section">
-          <div class="mobile-nav-section-title">Parks</div>
-          <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
-          <a href="/park.html?park=epcot">EPCOT</a>
-          <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
-          <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
-          <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
-          <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
-          <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
-          <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
         </div>
         <a href="/rides.html" id="mobile-nav-rides">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1389,10 +1432,6 @@
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          Deals
-        </a>
-      </nav>2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
           Deals
         </a>
@@ -1879,6 +1918,15 @@
         GlobalNav.closeNav();
       }
     });
+
+    // Toggle mobile parks section
+    function toggleMobileParksSection() {
+      const section = document.getElementById('mobile-parks-section');
+      if (section) {
+        section.classList.toggle('expanded');
+      }
+    }
+    window.toggleMobileParksSection = toggleMobileParksSection;
 
     // Initialize for rides page
     GlobalNav.init('rides');
