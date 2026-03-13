@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-13T10:45:00Z",
+  "summary": {
+    "totalTargetRides": 27,
+    "successful": 27,
+    "failed": 0
+  },
+  "rides": [
+    {"id": "space-mountain", "name": "Space Mountain", "park": "Magic Kingdom", "filename": "space-mountain.jpg", "sizeKB": 15},
+    {"id": "big-thunder-mountain", "name": "Big Thunder Mountain Railroad", "park": "Magic Kingdom", "filename": "big-thunder-mountain.jpg", "sizeKB": 23},
+    {"id": "haunted-mansion", "name": "Haunted Mansion", "park": "Magic Kingdom", "filename": "haunted-mansion.jpg", "sizeKB": 17},
+    {"id": "pirates-caribbean", "name": "Pirates of the Caribbean", "park": "Magic Kingdom", "filename": "pirates-caribbean.jpg", "sizeKB": 19},
+    {"id": "seven-dwarfs", "name": "Seven Dwarfs Mine Train", "park": "Magic Kingdom", "filename": "seven-dwarfs.jpg", "sizeKB": 21},
+    {"id": "guardians-galaxy", "name": "Guardians of the Galaxy: Cosmic Rewind", "park": "EPCOT", "filename": "guardians-galaxy.jpg", "sizeKB": 29},
+    {"id": "remy", "name": "Remy's Ratatouille Adventure", "park": "EPCOT", "filename": "remy.jpg", "sizeKB": 19},
+    {"id": "test-track", "name": "Test Track", "park": "EPCOT", "filename": "test-track.jpg", "sizeKB": 10},
+    {"id": "soarin", "name": "Soarin'", "park": "EPCOT", "filename": "soarin.jpg", "sizeKB": 18},
+    {"id": "rise-resistance", "name": "Star Wars: Rise of the Resistance", "park": "Hollywood Studios", "filename": "rise-resistance.jpg", "sizeKB": 18},
+    {"id": "slinky-dog", "name": "Slinky Dog Dash", "park": "Hollywood Studios", "filename": "slinky-dog.jpg", "sizeKB": 20},
+    {"id": "tower-terror", "name": "Tower of Terror", "park": "Hollywood Studios", "filename": "tower-terror.jpg", "sizeKB": 17},
+    {"id": "millennium-falcon", "name": "Millennium Falcon: Smugglers Run", "park": "Hollywood Studios", "filename": "millennium-falcon.jpg", "sizeKB": 17},
+    {"id": "avatar-flight", "name": "Avatar Flight of Passage", "park": "Animal Kingdom", "filename": "avatar-flight.jpg", "sizeKB": 25},
+    {"id": "expedition-everest", "name": "Expedition Everest", "park": "Animal Kingdom", "filename": "expedition-everest.jpg", "sizeKB": 16},
+    {"id": "kilimanjaro-safaris", "name": "Kilimanjaro Safaris", "park": "Animal Kingdom", "filename": "kilimanjaro-safaris.jpg", "sizeKB": 15},
+    {"id": "gringotts", "name": "Harry Potter and the Escape from Gringotts", "park": "Universal Studios", "filename": "gringotts.jpg", "sizeKB": 26},
+    {"id": "revenge-mummy", "name": "Revenge of the Mummy", "park": "Universal Studios", "filename": "revenge-mummy.jpg", "sizeKB": 20},
+    {"id": "transformers", "name": "Transformers: The Ride-3D", "park": "Universal Studios", "filename": "transformers.jpg", "sizeKB": 28},
+    {"id": "hagrids", "name": "Hagrid's Magical Creatures Motorbike Adventure", "park": "Islands of Adventure", "filename": "hagrids.jpg", "sizeKB": 30},
+    {"id": "velocicoaster", "name": "Jurassic World VelociCoaster", "park": "Islands of Adventure", "filename": "velocicoaster.jpg", "sizeKB": 24},
+    {"id": "spiderman", "name": "The Amazing Adventures of Spider-Man", "park": "Islands of Adventure", "filename": "spiderman.jpg", "sizeKB": 32},
+    {"id": "mako", "name": "Mako", "park": "SeaWorld", "filename": "mako.jpg", "sizeKB": 16},
+    {"id": "kraken", "name": "Kraken", "park": "SeaWorld", "filename": "kraken.jpg", "sizeKB": 16},
+    {"id": "journey-atlantis", "name": "Journey to Atlantis", "park": "SeaWorld", "filename": "journey-atlantis.jpg", "sizeKB": 21},
+    {"id": "the-dragon", "name": "The Dragon", "park": "LEGOLAND", "filename": "the-dragon.jpg", "sizeKB": 20},
+    {"id": "coastersaurus", "name": "Coastersaurus", "park": "LEGOLAND", "filename": "coastersaurus.jpg", "sizeKB": 18}
+  ],
+  "outputDirectory": "/root/.openclaw/workspace/orlando-park-guide/images/rides",
+  "source": "Wikipedia/Wikimedia Commons (from previous scraping run)",
+  "notes": "Images were sourced from a previous successful scraping run due to rate limiting on official park websites. All 27 target ride images are present with correct naming convention."
+}

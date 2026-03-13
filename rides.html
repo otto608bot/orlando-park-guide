@@ -56,6 +56,7 @@
       --base-dark: #2D3748;
       --bg-off-white: #F8F9FA;
       --white: #FFFFFF;
+      --gray-50: #F9FAFB;
       --gray-100: #F7FAFC;
       --gray-200: #EDF2F7;
       --gray-300: #E2E8F0;
@@ -333,20 +334,20 @@
 
     /* Franchise Row Styles */
     .franchise-row {
-      background: linear-gradient(135deg, #2D3748 0%, #4A5568 100%);
-      color: white;
+      background: var(--white);
       cursor: pointer;
       transition: all 0.2s ease;
+      border-bottom: 1px solid var(--gray-200);
     }
     .franchise-row:hover {
-      background: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
+      background: var(--gray-50);
     }
     .franchise-row td {
-      padding: var(--space-md) var(--space-lg);
+      padding: var(--space-lg) var(--space-xl);
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 1.125rem;
+      border-bottom: 1px solid var(--gray-200);
     }
     .franchise-row-content {
       display: flex;
@@ -358,35 +359,50 @@
       height: 20px;
       transition: transform 0.2s ease;
       flex-shrink: 0;
+      color: var(--gray-400);
     }
     .franchise-row.collapsed .chevron {
       transform: rotate(-90deg);
     }
     .franchise-row .ride-count {
       margin-left: auto;
-      background: rgba(255,255,255,0.2);
+      background: var(--gray-100);
+      color: var(--gray-600);
       padding: var(--space-xs) var(--space-sm);
       border-radius: var(--radius-full);
       font-size: 0.75rem;
       font-weight: 600;
     }
+    
+    /* Franchise Brand Colors */
+    .franchise-row.disney .franchise-row-content > span:last-of-type:not(.ride-count) {
+      color: #1a5fb4;
+    }
+    .franchise-row.universal .franchise-row-content > span:last-of-type:not(.ride-count) {
+      color: #c01c28;
+    }
+    .franchise-row.other .franchise-row-content > span:last-of-type:not(.ride-count) {
+      color: var(--deep-purple);
+    }
 
     /* Park Row Styles */
     .park-row {
-      background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
+      background: var(--white);
       cursor: pointer;
       transition: all 0.2s ease;
+      border-bottom: 1px solid var(--gray-100);
     }
     .park-row:hover {
-      background: linear-gradient(135deg, #EDF2F7 0%, #E2E8F0 100%);
+      background: var(--gray-50);
     }
     .park-row td {
-      padding: var(--space-sm) var(--space-lg) var(--space-sm) calc(var(--space-lg) + 24px);
+      padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 24px);
       font-family: var(--font-heading);
       font-weight: 600;
       font-size: 0.9375rem;
       color: var(--gray-700);
-      border-bottom: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-100);
+      border-left: 3px solid transparent;
     }
     .park-row-content {
       display: flex;
@@ -396,7 +412,7 @@
     .park-row .chevron {
       width: 18px;
       height: 18px;
-      color: var(--gray-500);
+      color: var(--gray-400);
       transition: transform 0.2s ease;
       flex-shrink: 0;
     }
@@ -405,53 +421,24 @@
     }
     .park-row .ride-count {
       margin-left: auto;
-      background: var(--primary-blue);
-      color: white;
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--radius-full);
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    /* Park rows (when inside franchise container) */
-    .park-row td {
-      padding-left: calc(var(--space-lg) + 24px);
-    }
-
-    /* Ride rows */
-    .ride-row {
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .ride-row:hover {
       background: var(--gray-100);
-    }
-    .ride-row td {
-      padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 48px);
-      border-bottom: 1px solid var(--gray-200);
-      font-size: 0.9375rem;
-    }
-
-    .ride-name-cell {
+      color: var(--gray-600);
+      padding: 2px var(--space-sm);
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
       font-weight: 600;
-      color: var(--primary-blue);
-      text-decoration: underline;
-      text-decoration-color: var(--primary-blue);
-      text-underline-offset: 2px;
-      transition: all 0.2s ease;
-    }
-    .ride-name-cell:hover {
-      color: var(--deep-purple);
-      text-decoration-color: var(--deep-purple);
-    }
-
-    .ride-park-cell { color: var(--gray-600); }
-    .ride-type-cell { color: var(--gray-600); }
-    .ride-height-cell {
-      font-weight: 600;
-      color: var(--action-orange);
     }
     
+    /* Park Brand Colors - Left Border */
+    .park-row[data-park="Magic Kingdom"] td { border-left-color: #1a5fb4; }
+    .park-row[data-park="EPCOT"] td { border-left-color: #3584e4; }
+    .park-row[data-park="Hollywood Studios"] td { border-left-color: #8b5cf6; }
+    .park-row[data-park="Animal Kingdom"] td { border-left-color: #26a269; }
+    .park-row[data-park="Universal Studios Florida"] td { border-left-color: #c01c28; }
+    .park-row[data-park="Islands of Adventure"] td { border-left-color: #e66100; }
+    .park-row[data-park="SeaWorld Orlando"] td { border-left-color: #1c71d8; }
+    .park-row[data-park="LEGOLAND Florida"] td { border-left-color: #e3000f; }
+
     /* Rides Table */
     .rides-table-container {
       background: var(--white);
@@ -491,6 +478,40 @@
     
     .rides-table tr:last-child td { border-bottom: none; }
     
+    /* Ride rows */
+    .ride-row {
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .ride-row:hover {
+      background: var(--gray-50);
+    }
+    .ride-row td {
+      padding: var(--space-md) var(--space-lg) var(--space-md) calc(var(--space-lg) + 48px);
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.9375rem;
+    }
+
+    .ride-name-cell {
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-decoration: underline;
+      text-decoration-color: var(--primary-blue);
+      text-underline-offset: 2px;
+      transition: all 0.2s ease;
+    }
+    .ride-name-cell:hover {
+      color: var(--deep-purple);
+      text-decoration-color: var(--deep-purple);
+    }
+
+    .ride-park-cell { color: var(--gray-600); }
+    .ride-type-cell { color: var(--gray-600); }
+    .ride-height-cell {
+      font-weight: 600;
+      color: var(--action-orange);
+    }
+    
     .tag {
       display: inline-flex;
       align-items: center;
@@ -525,63 +546,6 @@
       color: var(--base-dark);
     }
     
-    /* Park Navigation */
-    .park-nav {
-      margin-bottom: var(--space-xl);
-      padding: var(--space-lg);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-200);
-    }
-    .park-nav-title {
-      font-family: var(--font-heading);
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-md);
-    }
-    .park-nav-group {
-      margin-bottom: var(--space-md);
-    }
-    .park-nav-group:last-child {
-      margin-bottom: 0;
-    }
-    .park-nav-brand {
-      font-family: var(--font-heading);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--gray-600);
-      margin-bottom: var(--space-sm);
-    }
-    .park-nav-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-    }
-    .park-nav-pill {
-      padding: var(--space-sm) var(--space-md);
-      background: var(--gray-100);
-      border: 2px solid var(--gray-200);
-      border-radius: var(--radius-full);
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .park-nav-pill:hover {
-      border-color: var(--gray-300);
-      background: var(--gray-200);
-    }
-    .park-nav-pill.active {
-      background: rgba(243, 112, 33, 0.1);
-      border-color: var(--action-orange);
-      color: var(--action-orange);
-    }
     .empty-state {
       text-align: center;
       padding: var(--space-2xl);
@@ -841,34 +805,6 @@
         </div>
       </div>
       
-      <!-- Park Jump Navigation -->
-      <div class="park-nav">
-        <div class="park-nav-title">Jump to Park</div>
-        <div class="park-nav-group">
-          <div class="park-nav-brand">Disney</div>
-          <div class="park-nav-pills">
-            <button class="park-nav-pill" onclick="filterByPark('Magic Kingdom')">Magic Kingdom</button>
-            <button class="park-nav-pill" onclick="filterByPark('EPCOT')">EPCOT</button>
-            <button class="park-nav-pill" onclick="filterByPark('Hollywood Studios')">Hollywood Studios</button>
-            <button class="park-nav-pill" onclick="filterByPark('Animal Kingdom')">Animal Kingdom</button>
-          </div>
-        </div>
-        <div class="park-nav-group">
-          <div class="park-nav-brand">Universal</div>
-          <div class="park-nav-pills">
-            <button class="park-nav-pill" onclick="filterByPark('Universal Studios Florida')">Universal Studios</button>
-            <button class="park-nav-pill" onclick="filterByPark('Islands of Adventure')">Islands of Adventure</button>
-          </div>
-        </div>
-        <div class="park-nav-group">
-          <div class="park-nav-brand">Other</div>
-          <div class="park-nav-pills">
-            <button class="park-nav-pill" onclick="filterByPark('SeaWorld Orlando')">SeaWorld</button>
-            <button class="park-nav-pill" onclick="filterByPark('LEGOLAND Florida')">LEGOLAND</button>
-          </div>
-        </div>
-      </div>
-      
       <div class="rides-table-container">
         <div class="rides-table-wrapper">
           <table class="rides-table">
@@ -1031,7 +967,6 @@
         height: 0,
         pregnancy: false,
         wheelchair: false,
-        park: null,
         sensory: {
           dark: false,
           loud: false,
@@ -1129,30 +1064,11 @@
       render();
     }
     
-    function filterByPark(parkName) {
-      // Toggle park filter
-      if (state.filters.park === parkName) {
-        state.filters.park = null;
-      } else {
-        state.filters.park = parkName;
-      }
-      
-      // Update pill UI
-      document.querySelectorAll('.park-nav-pill').forEach(pill => {
-        pill.classList.toggle('active', pill.textContent.includes(parkName) || 
-          (parkName === 'Hollywood Studios' && pill.textContent.includes('Hollywood')) ||
-          (parkName === 'Universal Studios Florida' && pill.textContent.includes('Universal Studios')));
-      });
-      
-      render();
-    }
-    
     function getFilteredRides() {
       return rideData.filter(function(ride) {
         if (state.filters.height > 0 && ride.height > state.filters.height) return false;
         if (state.filters.pregnancy && !ride.pregnant) return false;
         if (state.filters.wheelchair && ride.wheelchair !== 'WAV') return false;
-        if (state.filters.park && !ride.park.includes(state.filters.park)) return false;
         
         // Check sensory filters - if any selected sensory trigger matches the ride, exclude it
         for (const [key, value] of Object.entries(state.filters.sensory)) {
@@ -1231,7 +1147,7 @@
         
         // Franchise row
         html += `
-          <tr id="franchise-row-${franchiseId}" class="franchise-row ${franchiseExpanded ? '' : 'collapsed'}" onclick="toggleFranchise('${franchise}')">
+          <tr id="franchise-row-${franchiseId}" class="franchise-row ${franchiseId} ${franchiseExpanded ? '' : 'collapsed'}" onclick="toggleFranchise('${franchise}')">
             <td colspan="5">
               <div class="franchise-row-content">
                 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1255,7 +1171,7 @@
             
             // Park row
             html += `
-              <tr id="park-row-${parkId}" class="park-row ${parkExpanded ? '' : 'collapsed'}" onclick="event.stopPropagation(); togglePark('${park}')">
+              <tr id="park-row-${parkId}" class="park-row ${parkExpanded ? '' : 'collapsed'}" data-park="${park}" onclick="event.stopPropagation(); togglePark('${park}')">
                 <td colspan="5">
                   <div class="park-row-content">
                     <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1310,7 +1226,6 @@
     // Expose functions globally
     window.toggleFilter = toggleFilter;
     window.toggleSensoryFilter = toggleSensoryFilter;
-    window.filterByPark = filterByPark;
     window.openMobileFilters = openMobileFilters;
     window.closeMobileFilters = closeMobileFilters;
     window.toggleFranchise = toggleFranchise;
