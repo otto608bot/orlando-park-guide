@@ -49,16 +49,16 @@ const rideImages = {
   'epcot-turtle-talk': '/images/rides/epcot-turtle-talk.jpg',
   
   // HOLLYWOOD STUDIOS
-  'hs-alien-saucers': '/images/rides/hs-slinky.jpg',
-  'hs-runaway-railway': '/images/rides/hs-rise-resistance.jpg',
+  'hs-alien-saucers': '/images/rides/hs-alien-saucers.jpg',
+  'hs-runaway-railway': '/images/rides/hs-runaway-railway.jpg',
   'hs-smugglers-run': '/images/rides/hs-smugglers-run.jpg',
-  'hs-rock-roller': '/images/rides/hs-tower-terror.jpg',
+  'hs-rock-roller': '/images/rides/hs-rock-roller.jpg',
   'hs-slinky': '/images/rides/hs-slinky.jpg',
-  'hs-star-tours': '/images/rides/hs-smugglers-run.jpg',
+  'hs-star-tours': '/images/rides/hs-star-tours.jpg',
   'hs-rise-resistance': '/images/rides/hs-rise-resistance.jpg',
-  'hs-toy-story-mania': '/images/rides/hs-slinky.jpg',
+  'hs-toy-story-mania': '/images/rides/hs-toy-story-mania.jpg',
   'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
-  'hs-muppet-vision': '/images/rides/hs-rise-resistance.jpg',
+  'hs-muppet-vision': '/images/rides/hs-muppet-vision.jpg',
   
   // ANIMAL KINGDOM
   'ak-flight-passage': '/images/rides/ak-avatar.jpg',
