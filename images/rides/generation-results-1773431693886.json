@@ -1,0 +1,38 @@
+[
+  {
+    "rideId": "ak-dinosaur",
+    "success": true,
+    "size": 1961594,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-dinosaur.jpg"
+  },
+  {
+    "rideId": "ak-bug",
+    "success": true,
+    "size": 1989943,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-bug.jpg"
+  },
+  {
+    "rideId": "ak-river-rapids",
+    "success": true,
+    "size": 2234943,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-river-rapids.jpg"
+  },
+  {
+    "rideId": "ak-navi",
+    "success": true,
+    "size": 1815747,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-navi.jpg"
+  },
+  {
+    "rideId": "ak-triceratop",
+    "success": true,
+    "size": 1835831,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-triceratop.jpg"
+  },
+  {
+    "rideId": "ak-wildlife-train",
+    "success": true,
+    "size": 1877686,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-wildlife-train.jpg"
+  }
+]
