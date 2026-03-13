@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hs-alien-saucers",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-alien-saucers.jpg"
+  },
+  {
+    "id": "hs-runaway-railway",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-runaway-railway.jpg"
+  },
+  {
+    "id": "hs-rock-roller",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-rock-roller.jpg"
+  },
+  {
+    "id": "hs-star-tours",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-star-tours.jpg"
+  },
+  {
+    "id": "hs-toy-story-mania",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-toy-story-mania.jpg"
+  },
+  {
+    "id": "hs-muppet-vision",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/hs-muppet-vision.jpg"
+  }
+]

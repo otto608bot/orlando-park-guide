@@ -1,0 +1,52 @@
+[
+  {
+    "id": "epcot-film-festival",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-film-festival.jpg"
+  },
+  {
+    "id": "epcot-frozen",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-frozen.jpg"
+  },
+  {
+    "id": "epcot-gran-fiesta",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-gran-fiesta.jpg"
+  },
+  {
+    "id": "epcot-figment",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-figment.jpg"
+  },
+  {
+    "id": "epcot-living-land",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-living-land.jpg"
+  },
+  {
+    "id": "epcot-mission-green",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-mission-green.jpg"
+  },
+  {
+    "id": "epcot-mission-orange",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-mission-orange.jpg"
+  },
+  {
+    "id": "epcot-nemo",
+    "status": "failed",
+    "error": "No image data in response"
+  },
+  {
+    "id": "epcot-spaceship-earth",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-spaceship-earth.jpg"
+  },
+  {
+    "id": "epcot-turtle-talk",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/epcot-turtle-talk.jpg"
+  }
+]

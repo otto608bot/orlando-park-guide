@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ak-flight-passage",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-flight-passage.jpg"
+  },
+  {
+    "id": "ak-dinosaur",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-dinosaur.jpg"
+  },
+  {
+    "id": "ak-bug",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-bug.jpg"
+  },
+  {
+    "id": "ak-river-rapids",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-river-rapids.jpg"
+  },
+  {
+    "id": "ak-navi",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-navi.jpg"
+  },
+  {
+    "id": "ak-triceratop",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-triceratop.jpg"
+  },
+  {
+    "id": "ak-wildlife-train",
+    "status": "success",
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/ak-wildlife-train.jpg"
+  }
+]
