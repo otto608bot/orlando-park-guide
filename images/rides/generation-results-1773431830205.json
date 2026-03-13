@@ -1,0 +1,49 @@
+[
+  {
+    "rideId": "usf-minion",
+    "success": true,
+    "size": 1730356,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-minion.jpg"
+  },
+  {
+    "rideId": "usf-et",
+    "success": true,
+    "size": 1808089,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-et.jpg"
+  },
+  {
+    "rideId": "usf-fast-furious",
+    "success": true,
+    "size": 1736400,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-fast-furious.jpg"
+  },
+  {
+    "rideId": "usf-hogwarts-express",
+    "success": true,
+    "size": 1873550,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-hogwarts-express.jpg"
+  },
+  {
+    "rideId": "usf-rockit",
+    "success": true,
+    "size": 1482197,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-rockit.jpg"
+  },
+  {
+    "rideId": "usf-mib",
+    "success": true,
+    "size": 1579095,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-mib.jpg"
+  },
+  {
+    "rideId": "usf-jimmy-fallon",
+    "success": false,
+    "error": "No image data in response"
+  },
+  {
+    "rideId": "usf-simpsons",
+    "success": true,
+    "size": 1712637,
+    "path": "/root/.openclaw/workspace/orlando-park-guide/images/rides/usf-simpsons.jpg"
+  }
+]
