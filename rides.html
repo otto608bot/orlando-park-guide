@@ -413,9 +413,9 @@
       font-weight: 600;
     }
 
-    /* Collapsed state - hide child tbody */
-    tbody.collapsed {
-      display: none;
+    /* Park rows (when inside franchise container) */
+    .park-row td {
+      padding-left: calc(var(--space-lg) + 24px);
     }
 
     /* Ride rows */
@@ -486,41 +486,10 @@
     }
     
     .rides-table td {
-      padding: var(--space-md) var(--space-lg);
       border-bottom: 1px solid var(--gray-200);
-      font-size: 0.9375rem;
-    }
-    
-    .rides-table tr {
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    
-    .rides-table tr:hover {
-      background: var(--gray-100);
     }
     
     .rides-table tr:last-child td { border-bottom: none; }
-    
-    .ride-name-cell {
-      font-weight: 600;
-      color: var(--primary-blue);
-      text-decoration: underline;
-      text-decoration-color: var(--primary-blue);
-      text-underline-offset: 2px;
-      transition: all 0.2s ease;
-    }
-    .ride-name-cell:hover {
-      color: var(--deep-purple);
-      text-decoration-color: var(--deep-purple);
-    }
-    
-    .ride-park-cell { color: var(--gray-600); }
-    .ride-type-cell { color: var(--gray-600); }
-    .ride-height-cell {
-      font-weight: 600;
-      color: var(--action-orange);
-    }
     
     .tag {
       display: inline-flex;
@@ -556,7 +525,63 @@
       color: var(--base-dark);
     }
     
-    /* Empty State */
+    /* Park Navigation */
+    .park-nav {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-lg);
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    .park-nav-title {
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+    .park-nav-group {
+      margin-bottom: var(--space-md);
+    }
+    .park-nav-group:last-child {
+      margin-bottom: 0;
+    }
+    .park-nav-brand {
+      font-family: var(--font-heading);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: var(--space-sm);
+    }
+    .park-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .park-nav-pill {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--gray-100);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .park-nav-pill:hover {
+      border-color: var(--gray-300);
+      background: var(--gray-200);
+    }
+    .park-nav-pill.active {
+      background: rgba(243, 112, 33, 0.1);
+      border-color: var(--action-orange);
+      color: var(--action-orange);
+    }
     .empty-state {
       text-align: center;
       padding: var(--space-2xl);
@@ -1015,8 +1040,27 @@
           strobe: false,
           fog: false
         }
+      },
+      expanded: {
+        franchises: { 'Disney': true, 'Universal': true, 'Other': true },
+        parks: { 'Magic Kingdom': true, 'EPCOT': true, 'Hollywood Studios': true, 'Animal Kingdom': true, 'Universal Studios Florida': true, 'Islands of Adventure': true, 'SeaWorld Orlando': true, 'LEGOLAND Florida': true }
       }
     };
+
+    // Franchise mapping
+    const franchiseMap = {
+      'Magic Kingdom': 'Disney',
+      'EPCOT': 'Disney',
+      'Hollywood Studios': 'Disney',
+      'Animal Kingdom': 'Disney',
+      'Universal Studios Florida': 'Universal',
+      'Islands of Adventure': 'Universal',
+      'SeaWorld Orlando': 'Other',
+      'LEGOLAND Florida': 'Other'
+    };
+
+    // Park order within franchises
+    const parkOrder = ['Magic Kingdom', 'EPCOT', 'Hollywood Studios', 'Animal Kingdom', 'Universal Studios Florida', 'Islands of Adventure', 'SeaWorld Orlando', 'LEGOLAND Florida'];
     
     // DOM Elements
     const heightSlider = document.getElementById('height-slider');
@@ -1116,51 +1160,139 @@
         }
         
         return true;
-      }).sort(function(a, b) {
-        // Sort by brand (Disney, Universal, Other)
-        const brandOrder = {
-          'Magic Kingdom': 1, 'EPCOT': 2, 'Hollywood Studios': 3, 'Animal Kingdom': 4,
-          'Universal Studios Florida': 5, 'Islands of Adventure': 6,
-          'SeaWorld Orlando': 7, 'LEGOLAND Florida': 8
-        };
-        const brandA = brandOrder[a.park] || 99;
-        const brandB = brandOrder[b.park] || 99;
-        if (brandA !== brandB) return brandA - brandB;
-        
-        // Then by height (lowest first)
-        return a.height - b.height;
       });
+    }
+
+    function groupRidesByFranchiseAndPark(rides) {
+      const grouped = {};
+      
+      // Initialize franchise structure
+      grouped['Disney'] = { 'Magic Kingdom': [], 'EPCOT': [], 'Hollywood Studios': [], 'Animal Kingdom': [] };
+      grouped['Universal'] = { 'Universal Studios Florida': [], 'Islands of Adventure': [] };
+      grouped['Other'] = { 'SeaWorld Orlando': [], 'LEGOLAND Florida': [] };
+      
+      // Group rides
+      rides.forEach(function(ride) {
+        const franchise = franchiseMap[ride.park];
+        if (franchise && grouped[franchise][ride.park]) {
+          grouped[franchise][ride.park].push(ride);
+        }
+      });
+      
+      return grouped;
+    }
+
+    function toggleFranchise(franchise) {
+      state.expanded.franchises[franchise] = !state.expanded.franchises[franchise];
+      render();
+    }
+
+    function togglePark(park) {
+      state.expanded.parks[park] = !state.expanded.parks[park];
+      render();
+    }
+
+    function renderFeatures(ride) {
+      const features = [];
+      if (ride.pregnant) features.push('<span class="tag tag-pregnancy">Pregnancy Safe</span>');
+      if (ride.wheelchair === 'WAV') features.push('<span class="tag tag-wheelchair">Wheelchair</span>');
+      
+      // Add sensory pills
+      if (ride.sensory.dark) features.push('<span class="tag tag-sensory-dark">Dark</span>');
+      if (ride.sensory.loud) features.push('<span class="tag tag-sensory-loud">Loud</span>');
+      if (ride.sensory.sudden) features.push('<span class="tag tag-sensory-sudden">Sudden</span>');
+      if (ride.sensory.enclosed) features.push('<span class="tag tag-sensory-enclosed">Enclosed</span>');
+      if (ride.sensory.strobe) features.push('<span class="tag tag-sensory-strobe">Strobe</span>');
+      if (ride.sensory.fog) features.push('<span class="tag tag-sensory-fog">Fog</span>');
+      
+      return features.join('');
     }
     
     function render() {
       const filtered = getFilteredRides();
+      const grouped = groupRidesByFranchiseAndPark(filtered);
       
       filteredCount.textContent = filtered.length;
       totalCount.textContent = rideData.length;
       
-      ridesTbody.innerHTML = filtered.map(function(ride) {
-        const features = [];
-        if (ride.pregnant) features.push('<span class="tag tag-pregnancy">Pregnancy Safe</span>');
-        if (ride.wheelchair === 'WAV') features.push('<span class="tag tag-wheelchair">Wheelchair</span>');
+      let html = '';
+      
+      // Render franchises in order
+      const franchiseOrder = ['Disney', 'Universal', 'Other'];
+      
+      franchiseOrder.forEach(function(franchise) {
+        const parks = grouped[franchise];
+        const franchiseRides = Object.values(parks).flat().length;
         
-        // Add sensory pills
-        if (ride.sensory.dark) features.push('<span class="tag tag-sensory-dark">Dark</span>');
-        if (ride.sensory.loud) features.push('<span class="tag tag-sensory-loud">Loud</span>');
-        if (ride.sensory.sudden) features.push('<span class="tag tag-sensory-sudden">Sudden</span>');
-        if (ride.sensory.enclosed) features.push('<span class="tag tag-sensory-enclosed">Enclosed</span>');
-        if (ride.sensory.strobe) features.push('<span class="tag tag-sensory-strobe">Strobe</span>');
-        if (ride.sensory.fog) features.push('<span class="tag tag-sensory-fog">Fog</span>');
+        if (franchiseRides === 0) return; // Skip empty franchises
         
-        return `
-          <tr onclick="openRideModal('${ride.id}')">
-            <td class="ride-name-cell">${ride.name}</td>
-            <td class="ride-park-cell">${ride.park}</td>
-            <td class="ride-type-cell">${ride.type}</td>
-            <td class="ride-height-cell">${ride.height === 0 ? 'Any' : ride.height + '"'}</td>
-            <td>${features.join('')}</td>
+        const franchiseId = franchise.toLowerCase();
+        const franchiseExpanded = state.expanded.franchises[franchise];
+        
+        // Franchise row
+        html += `
+          <tr id="franchise-row-${franchiseId}" class="franchise-row ${franchiseExpanded ? '' : 'collapsed'}" onclick="toggleFranchise('${franchise}')">
+            <td colspan="5">
+              <div class="franchise-row-content">
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <span>${franchise}</span>
+                <span class="ride-count">${franchiseRides} rides</span>
+              </div>
+            </td>
           </tr>
         `;
-      }).join('');
+        
+        // Render parks (only if franchise is expanded)
+        if (franchiseExpanded) {
+          parkOrder.forEach(function(park) {
+            if (!parks[park] || parks[park].length === 0) return;
+            
+            const parkRides = parks[park];
+            const parkId = park.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+            const parkExpanded = state.expanded.parks[park];
+            
+            // Park row
+            html += `
+              <tr id="park-row-${parkId}" class="park-row ${parkExpanded ? '' : 'collapsed'}" onclick="event.stopPropagation(); togglePark('${park}')">
+                <td colspan="5">
+                  <div class="park-row-content">
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <span>${park}</span>
+                    <span class="ride-count">${parkRides.length} rides</span>
+                  </div>
+                </td>
+              </tr>
+            `;
+            
+            // Render ride rows (only if park is expanded)
+            if (parkExpanded) {
+              // Sort rides by height (lowest first)
+              parkRides.sort(function(a, b) {
+                return a.height - b.height;
+              });
+              
+              // Ride rows
+              parkRides.forEach(function(ride) {
+                html += `
+                  <tr class="ride-row" onclick="event.stopPropagation(); openRideModal('${ride.id}')">
+                    <td class="ride-name-cell">${ride.name}</td>
+                    <td class="ride-park-cell">${ride.park}</td>
+                    <td class="ride-type-cell">${ride.type}</td>
+                    <td class="ride-height-cell">${ride.height === 0 ? 'Any' : ride.height + '"'}</td>
+                    <td>${renderFeatures(ride)}</td>
+                  </tr>
+                `;
+              });
+            }
+          });
+        }
+      });
+      
+      ridesTbody.innerHTML = html;
     }
     
     function openMobileFilters() {
@@ -1181,6 +1313,8 @@
     window.filterByPark = filterByPark;
     window.openMobileFilters = openMobileFilters;
     window.closeMobileFilters = closeMobileFilters;
+    window.toggleFranchise = toggleFranchise;
+    window.togglePark = togglePark;
     
     // Initialize
     init();

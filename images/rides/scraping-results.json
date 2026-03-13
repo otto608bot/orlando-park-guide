@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mk-space-mountain",
+    "name": "Space Mountain",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "mk-big-thunder",
+    "name": "Big Thunder Mountain Railroad",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "mk-haunted-mansion",
+    "name": "Haunted Mansion",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "mk-pirates",
+    "name": "Pirates of the Caribbean",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "mk-seven-dwarfs",
+    "name": "Seven Dwarfs Mine Train",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "ak-everest",
+    "name": "Expedition Everest",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "id": "hs-tower-terror",
+    "name": "Tower of Terror",
+    "status": "failed",
+    "error": "HTTP 429"
+  }
+]
