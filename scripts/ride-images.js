@@ -4,33 +4,33 @@
 const rideImages = {
   // MAGIC KINGDOM
   'mk-astro-orbiter': '/images/rides/space-mountain.jpg',
-  'mk-barnstormer': '/images/rides/mk-space-mountain.jpg',
-  'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
-  'mk-buzz': '/images/rides/mk-space-mountain.jpg',
-  'mk-country-bears': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-dumbo': '/images/rides/mk-space-mountain.jpg',
-  'mk-enchanted-tales': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-small-world': '/images/rides/mk-pirates.jpg',
-  'mk-jungle-cruise': '/images/rides/mk-pirates.jpg',
-  'mk-riverboat': '/images/rides/mk-pirates.jpg',
-  'mk-magic-carpets': '/images/rides/mk-space-mountain.jpg',
-  'mk-peter-pan': '/images/rides/mk-seven-dwarfs.jpg',
-  'mk-pirates': '/images/rides/mk-pirates.jpg',
-  'mk-pooh': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-philharmagic': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-tea-cups': '/images/rides/mk-space-mountain.jpg',
-  'mk-carousel': '/images/rides/mk-space-mountain.jpg',
-  'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
-  'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
-  'mk-treehouse': '/images/rides/mk-pirates.jpg',
-  'mk-tiana': '/images/rides/mk-pirates.jpg',
-  'mk-speedway': '/images/rides/mk-space-mountain.jpg',
-  'mk-peoplemover': '/images/rides/mk-space-mountain.jpg',
-  'mk-tron': '/images/rides/mk-space-mountain.jpg',
-  'mk-mermaid': '/images/rides/mk-haunted-mansion.jpg',
-  'mk-railroad': '/images/rides/mk-pirates.jpg',
-  'mk-carousel-progress': '/images/rides/mk-haunted-mansion.jpg',
+  'mk-barnstormer': '/images/rides/space-mountain.jpg',
+  'mk-big-thunder': '/images/rides/big-thunder-mountain.jpg',
+  'mk-buzz': '/images/rides/space-mountain.jpg',
+  'mk-country-bears': '/images/rides/haunted-mansion.jpg',
+  'mk-dumbo': '/images/rides/space-mountain.jpg',
+  'mk-enchanted-tales': '/images/rides/haunted-mansion.jpg',
+  'mk-haunted-mansion': '/images/rides/haunted-mansion.jpg',
+  'mk-small-world': '/images/rides/pirates-caribbean.jpg',
+  'mk-jungle-cruise': '/images/rides/pirates-caribbean.jpg',
+  'mk-riverboat': '/images/rides/pirates-caribbean.jpg',
+  'mk-magic-carpets': '/images/rides/space-mountain.jpg',
+  'mk-peter-pan': '/images/rides/seven-dwarfs.jpg',
+  'mk-pirates': '/images/rides/pirates-caribbean.jpg',
+  'mk-pooh': '/images/rides/haunted-mansion.jpg',
+  'mk-philharmagic': '/images/rides/haunted-mansion.jpg',
+  'mk-tea-cups': '/images/rides/space-mountain.jpg',
+  'mk-carousel': '/images/rides/space-mountain.jpg',
+  'mk-seven-dwarfs': '/images/rides/seven-dwarfs.jpg',
+  'mk-space-mountain': '/images/rides/space-mountain.jpg',
+  'mk-treehouse': '/images/rides/pirates-caribbean.jpg',
+  'mk-tiana': '/images/rides/pirates-caribbean.jpg',
+  'mk-speedway': '/images/rides/space-mountain.jpg',
+  'mk-peoplemover': '/images/rides/space-mountain.jpg',
+  'mk-tron': '/images/rides/space-mountain.jpg',
+  'mk-mermaid': '/images/rides/haunted-mansion.jpg',
+  'mk-railroad': '/images/rides/pirates-caribbean.jpg',
+  'mk-carousel-progress': '/images/rides/haunted-mansion.jpg',
   
   // EPCOT
   'epcot-film-festival': '/images/rides/epcot-guardians.jpg',
@@ -128,7 +128,7 @@ const rideImages = {
 };
 
 // Default image for rides without specific images
-const defaultRideImage = '/images/rides/mk-space-mountain.jpg';
+const defaultRideImage = '/images/rides/space-mountain.jpg';
 
 // Helper function to get image for a ride
 function getRideImage(rideId) {

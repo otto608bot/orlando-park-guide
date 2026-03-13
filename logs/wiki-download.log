@@ -1,0 +1,40 @@
+[2026-03-13 21:35:58] ========================================
+[2026-03-13 21:35:58] Wikipedia Image Downloader Started
+[2026-03-13 21:35:58] Output directory: /root/.openclaw/workspace/orlando-park-guide/images/rides
+[2026-03-13 21:35:58] ========================================
+[2026-03-13 21:35:58] --- Processing: Space Mountain (Magic Kingdom) ---
+[2026-03-13 21:35:58] Image already exists: /root/.openclaw/workspace/orlando-park-guide/images/rides/space-mountain.jpg
+[2026-03-13 21:37:05] ========================================
+[2026-03-13 21:37:05] Wikipedia Image Downloader Started
+[2026-03-13 21:37:05] Output directory: /root/.openclaw/workspace/orlando-park-guide/images/rides
+[2026-03-13 21:37:05] ========================================
+[2026-03-13 21:37:05] --- Processing: Space Mountain (Magic Kingdom) ---
+[2026-03-13 21:37:05] Searching: Space Mountain Magic Kingdom
+[2026-03-13 21:37:05] Found page: Space Mountain (Magic Kingdom)
+[2026-03-13 21:37:05] Getting images from page...
+[2026-03-13 21:37:06] Trying image: File:Magic Kingdom Space Mountain.jpg
+[2026-03-13 21:37:06] API call: Getting image URL for File:Magic Kingdom Space Mountain.jpg
+[2026-03-13 21:37:06] Downloading: [2026-03-13 21:37:06] API call: Getting image URL for File:Magic Kingdom Space Mountain.jpg
+[2026-03-13 21:37:06] ✗ Failed to download: [2026-03-13 21:37:06] API call: Getting image URL for File:Magic Kingdom Space Mountain.jpg
+[2026-03-13 21:37:07] Trying image: File:Space Mountain Imagineers (cropped).jpg
+[2026-03-13 21:37:07] API call: Getting image URL for File:Space Mountain Imagineers (cropped).jpg
+[2026-03-13 21:37:07] Downloading: [2026-03-13 21:37:07] API call: Getting image URL for File:Space Mountain Imagineers (cropped).jpg
+[2026-03-13 21:37:07] ✗ Failed to download: [2026-03-13 21:37:07] API call: Getting image URL for File:Space Mountain Imagineers (cropped).jpg
+[2026-03-13 21:37:08] Trying image: File:Space Mountain in the Magic Kingdom in 2021.jpg
+[2026-03-13 21:37:08] API call: Getting image URL for File:Space Mountain in the Magic Kingdom in 2021.jpg
+[2026-03-13 21:37:09] Downloading: [2026-03-13 21:37:08] API call: Getting image URL for File:Space Mountain in the Magic Kingdom in 2021.jpg
+[2026-03-13 21:37:09] ✗ Failed to download: [2026-03-13 21:37:08] API call: Getting image URL for File:Space Mountain in the Magic Kingdom in 2021.jpg
+[2026-03-13 21:37:10] Trying image: File:Spacemountainkwdw1.jpg
+[2026-03-13 21:37:10] API call: Getting image URL for File:Spacemountainkwdw1.jpg
+[2026-03-13 21:37:10] Downloading: [2026-03-13 21:37:10] API call: Getting image URL for File:Spacemountainkwdw1.jpg
+[2026-03-13 21:37:10] ✗ Failed to download: [2026-03-13 21:37:10] API call: Getting image URL for File:Spacemountainkwdw1.jpg
+[2026-03-13 21:37:11] Trying image: File:WDW SpaceMountain LightsOn.jpg
+[2026-03-13 21:37:11] API call: Getting image URL for File:WDW SpaceMountain LightsOn.jpg
+[2026-03-13 21:37:11] Downloading: [2026-03-13 21:37:11] API call: Getting image URL for File:WDW SpaceMountain LightsOn.jpg
+[2026-03-13 21:37:11] ✗ Failed to download: [2026-03-13 21:37:11] API call: Getting image URL for File:WDW SpaceMountain LightsOn.jpg
+[2026-03-13 21:37:12] ✗ Failed to download any image for: Space Mountain
+[2026-03-13 21:37:12] Trying fallback Commons filename...
+[2026-03-13 21:37:12] --- Trying direct Commons download: Space Mountain ---
+[2026-03-13 21:37:12] API call: Getting image URL for Space_Mountain_(Magic_Kingdom).jpg
+[2026-03-13 21:37:13] Downloading: [2026-03-13 21:37:12] API call: Getting image URL for Space_Mountain_(Magic_Kingdom).jpg
+[2026-03-13 21:37:13] ✗ Failed to download: [2026-03-13 21:37:12] API call: Getting image URL for Space_Mountain_(Magic_Kingdom).jpg
