@@ -1851,7 +1851,7 @@
 
   <script src="data/rides.js?v=2"></script>
   <script src="data/character-meal-data.js?v=2"></script>
-  <script src="scripts/ride-images.js?v=1"></script>
+  <script src="scripts/ride-images.js?v=2"></script>
   <script>
     // ============================================
     // PARK CONFIGURATION
@@ -2312,7 +2312,7 @@
     // ============================================
     // Use the shared rideImages from ride-images.js if available, otherwise use fallback
     const parkRideImages = typeof rideImages !== 'undefined' ? rideImages : {
-      'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
+      'mk-space-mountain': '/images/rides/space-mountain.jpg',
       'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
       'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
       'mk-pirates': '/images/rides/mk-pirates.jpg',
@@ -2325,23 +2325,23 @@
       'hs-slinky': '/images/rides/hs-slinky.jpg',
       'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
       'hs-smugglers-run': '/images/rides/hs-smugglers-run.jpg',
-      'ak-flight-passage': '/images/rides/ak-flight-passage.jpg',
+      'ak-flight-passage': '/images/rides/ak-avatar.jpg',
       'ak-everest': '/images/rides/ak-everest.jpg',
       'ak-safari': '/images/rides/ak-safari.jpg',
-      'usf-gringotts': '/images/rides/usf-gringotts.jpg',
-      'usf-mummy': '/images/rides/usf-mummy.jpg',
-      'usf-transformers': '/images/rides/usf-transformers.jpg',
-      'ioa-hagrid': '/images/rides/ioa-hagrid.jpg',
+      'usf-gringotts': '/images/rides/uo-gringotts.jpg',
+      'usf-mummy': '/images/rides/uo-mummy.jpg',
+      'usf-transformers': '/images/rides/uo-transformers.jpg',
+      'ioa-hagrid': '/images/rides/ioa-hagrids.jpg',
       'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
       'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
       'sw-mako': '/images/rides/sw-mako.jpg',
       'sw-kraken': '/images/rides/sw-kraken.jpg',
-      'sw-journey-atlantis': '/images/rides/sw-journey-atlantis.jpg',
+      'sw-journey-atlantis': '/images/rides/sw-atlantis.jpg',
       'll-dragon': '/images/rides/ll-dragon.jpg',
       'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg'
     };
     
-    const parkDefaultImage = '/images/rides/mk-space-mountain.jpg';
+    const parkDefaultImage = '/images/rides/space-mountain.jpg';
 
     // ============================================
     // RENDER FUNCTIONS
