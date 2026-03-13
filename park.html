@@ -873,9 +873,10 @@
       background: var(--white);
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-md);
-      padding: var(--space-md);
+      overflow: hidden;
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
+      cursor: pointer;
     }
     
     .ride-card:hover {
@@ -888,6 +889,24 @@
       opacity: 0.5;
       background: var(--gray-100);
       filter: grayscale(0.5);
+    }
+    
+    .ride-card-image {
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .ride-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .ride-card-content {
+      padding: var(--space-md);
     }
     
     .ride-header {
@@ -2272,6 +2291,39 @@
     }
     
     // ============================================
+    // RIDE IMAGES MAPPING
+    // ============================================
+    const rideImages = {
+      'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
+      'mk-big-thunder': '/images/rides/mk-big-thunder-mountain.jpg',
+      'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
+      'mk-pirates': '/images/rides/mk-pirates-caribbean.jpg',
+      'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
+      'epcot-guardians': '/images/rides/epcot-guardians-galaxy.jpg',
+      'epcot-remy': '/images/rides/epcot-remy.jpg',
+      'epcot-soarin': '/images/rides/epcot-soarin.jpg',
+      'epcot-test-track': '/images/rides/epcot-test-track.jpg',
+      'hs-rise-resistance': '/images/rides/hs-rise-resistance.jpg',
+      'hs-slinky': '/images/rides/hs-slinky-dog.jpg',
+      'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
+      'hs-smugglers-run': '/images/rides/hs-millennium-falcon.jpg',
+      'ak-avatar': '/images/rides/ak-avatar-flight.jpg',
+      'ak-everest': '/images/rides/ak-expedition-everest.jpg',
+      'ak-safari': '/images/rides/ak-kilimanjaro-safaris.jpg',
+      'usf-gringotts': '/images/rides/usf-gringotts.jpg',
+      'usf-mummy': '/images/rides/usf-revenge-mummy.jpg',
+      'usf-transformers': '/images/rides/usf-transformers.jpg',
+      'ioa-hagrid': '/images/rides/ioa-hagrids.jpg',
+      'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
+      'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
+      'sw-mako': '/images/rides/sw-mako.jpg',
+      'sw-kraken': '/images/rides/sw-kraken.jpg',
+      'sw-atlantis': '/images/rides/sw-journey-atlantis.jpg',
+      'll-dragon': '/images/rides/ll-the-dragon.jpg',
+      'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg'
+    };
+
+    // ============================================
     // RENDER FUNCTIONS
     // ============================================
     function renderRides(rides, matchedRides) {
@@ -2307,32 +2359,41 @@
           tags.push(`<span class="tag tag-sensory-strobe">Strobe</span>`);
         }
         
+        // Get image for this ride
+        const imageUrl = rideImages[ride.id];
+        const imageHtml = imageUrl 
+          ? `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" loading="lazy"></div>`
+          : '';
+        
         return `
           <div class="ride-card ${isUnavailable ? 'unavailable' : ''}" onclick="openRideModal('${ride.id}')">
-            <div class="ride-header">
-              <h3 class="ride-name">${ride.name}</h3>
-              <span class="ride-type">${ride.type}</span>
-            </div>
-            <p class="ride-description">${ride.description}</p>
-            <div class="ride-meta">
-              <span class="meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                ${ride.duration}
-              </span>
-              ${ride.height > 0 ? `
+            ${imageHtml}
+            <div class="ride-card-content">
+              <div class="ride-header">
+                <h3 class="ride-name">${ride.name}</h3>
+                <span class="ride-type">${ride.type}</span>
+              </div>
+              <p class="ride-description">${ride.description}</p>
+              <div class="ride-meta">
                 <span class="meta-item">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2v20M2 12h20"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  ${ride.height}" min height
+                  ${ride.duration}
                 </span>
-              ` : ''}
-            </div>
-            <div class="ride-tags">
-              ${tags.join('')}
+                ${ride.height > 0 ? `
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                    ${ride.height}" min height
+                  </span>
+                ` : ''}
+              </div>
+              <div class="ride-tags">
+                ${tags.join('')}
+              </div>
             </div>
           </div>
         `;

@@ -1,5 +1,62 @@
 // Ride Detail Modal Functionality
 
+// Ride ID to image mapping
+const rideImages = {
+  // Magic Kingdom
+  'mk-space-orbiter': '/images/rides/mk-space-mountain.jpg',
+  'mk-barnstormer': '/images/rides/mk-space-mountain.jpg',
+  'mk-big-thunder': '/images/rides/mk-big-thunder-mountain.jpg',
+  'mk-buzz': '/images/rides/mk-space-mountain.jpg',
+  'mk-dumbo': '/images/rides/mk-space-mountain.jpg',
+  'mk-enchanted-tales': '/images/rides/mk-haunted-mansion.jpg',
+  'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
+  'mk-small-world': '/images/rides/mk-pirates-caribbean.jpg',
+  'mk-jungle-cruise': '/images/rides/mk-pirates-caribbean.jpg',
+  'mk-magic-carpets': '/images/rides/mk-space-mountain.jpg',
+  'mk-peter-pan': '/images/rides/mk-seven-dwarfs.jpg',
+  'mk-pirates': '/images/rides/mk-pirates-caribbean.jpg',
+  'mk-tea-cups': '/images/rides/mk-space-mountain.jpg',
+  'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
+  'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
+  // EPCOT
+  'epcot-guardians': '/images/rides/epcot-guardians-galaxy.jpg',
+  'epcot-remy': '/images/rides/epcot-remy.jpg',
+  'epcot-soarin': '/images/rides/epcot-soarin.jpg',
+  'epcot-test-track': '/images/rides/epcot-test-track.jpg',
+  'epcot-frozen': '/images/rides/epcot-remy.jpg',
+  // Hollywood Studios
+  'hs-rise': '/images/rides/hs-rise-resistance.jpg',
+  'hs-slinky': '/images/rides/hs-slinky-dog.jpg',
+  'hs-tower': '/images/rides/hs-tower-terror.jpg',
+  'hs-smugglers': '/images/rides/hs-millennium-falcon.jpg',
+  'hs-mickey': '/images/rides/hs-rise-resistance.jpg',
+  // Animal Kingdom
+  'ak-avatar': '/images/rides/ak-avatar-flight.jpg',
+  'ak-everest': '/images/rides/ak-expedition-everest.jpg',
+  'ak-safari': '/images/rides/ak-kilimanjaro-safaris.jpg',
+  'ak-dinosaur': '/images/rides/ak-expedition-everest.jpg',
+  // Universal Studios Florida
+  'usf-gringotts': '/images/rides/usf-gringotts.jpg',
+  'usf-mummy': '/images/rides/usf-revenge-mummy.jpg',
+  'usf-transformers': '/images/rides/usf-transformers.jpg',
+  'usf-men-in-black': '/images/rides/usf-transformers.jpg',
+  // Islands of Adventure
+  'ioa-hagrids': '/images/rides/ioa-hagrids.jpg',
+  'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
+  'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
+  'ioa-hulk': '/images/rides/ioa-velocicoaster.jpg',
+  'ioa-forbidden-journey': '/images/rides/ioa-hagrids.jpg',
+  // SeaWorld
+  'sw-mako': '/images/rides/sw-mako.jpg',
+  'sw-kraken': '/images/rides/sw-kraken.jpg',
+  'sw-atlantis': '/images/rides/sw-journey-atlantis.jpg',
+  'sw-manta': '/images/rides/sw-mako.jpg',
+  // LEGOLAND
+  'll-dragon': '/images/rides/ll-the-dragon.jpg',
+  'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg',
+  'll-ninjago': '/images/rides/ll-the-dragon.jpg'
+};
+
 // Ticket links for each park
 const ticketLinks = {
   'Magic Kingdom': 'https://www.dpbolvw.net/click-101693488-5527150',
@@ -112,9 +169,14 @@ function openRideModal(rideId) {
   // Populate modal fields
   document.getElementById('modal-ride-name').textContent = ride.name;
   document.getElementById('modal-ride-park').textContent = ride.park;
-  document.getElementById('modal-ride-height').textContent = 
+  document.getElementById('modal-ride-height').textContent =
     ride.height === 0 ? 'Any height' : ride.height + '" minimum';
   document.getElementById('modal-ride-description').textContent = ride.description;
+
+  // Set ride image
+  const imgContainer = document.querySelector('.ride-modal-image-placeholder');
+  const imagePath = rideImages[ride.id] || '/images/rides/mk-space-mountain.jpg';
+  imgContainer.innerHTML = `<img src="${imagePath}" alt="${ride.name}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md,12px)">`;
   
   // Best time
   const bestTime = bestTimeForRide[ride.type] || 'Morning';

@@ -80,6 +80,14 @@
   font-size: 0.875rem;
   font-weight: 500;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.ride-modal-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md, 12px);
 }
 
 .ride-modal-title-section {
@@ -302,6 +310,10 @@
   .ride-modal-image-placeholder {
     width: 100%;
     height: 160px;
+  }
+  
+  .ride-modal-image-placeholder img {
+    border-radius: var(--radius-md, 12px);
   }
   
   .ride-modal-title-section h2 {
