@@ -1,61 +1,39 @@
 // Ride Detail Modal Functionality
 
-// Ride ID to image mapping
-const rideImages = {
-  // Magic Kingdom
-  'mk-space-orbiter': '/images/rides/space-mountain.jpg',
-  'mk-barnstormer': '/images/rides/space-mountain.jpg',
+// Use the shared ride images mapping if available, otherwise define minimal fallback
+// Note: rideImages should be loaded from ride-images.js before this script
+const modalRideImages = typeof window !== 'undefined' && window.rideImages ? window.rideImages : {
+  // Fallback minimal mapping - full mapping should be loaded from ride-images.js
+  'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
   'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
-  'mk-buzz': '/images/rides/space-mountain.jpg',
-  'mk-dumbo': '/images/rides/space-mountain.jpg',
-  'mk-enchanted-tales': '/images/rides/haunted-mansion.jpg',
-  'mk-haunted-mansion': '/images/rides/haunted-mansion.jpg',
-  'mk-small-world': '/images/rides/pirates-caribbean.jpg',
-  'mk-jungle-cruise': '/images/rides/pirates-caribbean.jpg',
-  'mk-magic-carpets': '/images/rides/space-mountain.jpg',
-  'mk-peter-pan': '/images/rides/seven-dwarfs.jpg',
-  'mk-pirates': '/images/rides/pirates-caribbean.jpg',
-  'mk-tea-cups': '/images/rides/space-mountain.jpg',
-  'mk-seven-dwarfs': '/images/rides/seven-dwarfs.jpg',
-  'mk-space-mountain': '/images/rides/space-mountain.jpg',
-  // EPCOT
-  'epcot-guardians': '/images/rides/guardians-galaxy.jpg',
-  'epcot-remy': '/images/rides/remy.jpg',
-  'epcot-soarin': '/images/rides/soarin.jpg',
-  'epcot-test-track': '/images/rides/test-track.jpg',
-  'epcot-frozen': '/images/rides/remy.jpg',
-  // Hollywood Studios
-  'hs-rise': '/images/rides/rise-resistance.jpg',
-  'hs-slinky': '/images/rides/slinky-dog.jpg',
-  'hs-tower': '/images/rides/tower-terror.jpg',
-  'hs-smugglers': '/images/rides/millennium-falcon.jpg',
-  'hs-mickey': '/images/rides/rise-resistance.jpg',
-  // Animal Kingdom
-  'ak-avatar': '/images/rides/avatar-flight.jpg',
-  'ak-everest': '/images/rides/expedition-everest.jpg',
-  'ak-safari': '/images/rides/kilimanjaro-safaris.jpg',
-  'ak-dinosaur': '/images/rides/expedition-everest.jpg',
-  // Universal Studios Florida
-  'usf-gringotts': '/images/rides/gringotts.jpg',
-  'usf-mummy': '/images/rides/revenge-mummy.jpg',
-  'usf-transformers': '/images/rides/transformers.jpg',
-  'usf-men-in-black': '/images/rides/transformers.jpg',
-  // Islands of Adventure
-  'ioa-hagrids': '/images/rides/hagrids.jpg',
-  'ioa-velocicoaster': '/images/rides/velocicoaster.jpg',
-  'ioa-spiderman': '/images/rides/spiderman.jpg',
-  'ioa-hulk': '/images/rides/velocicoaster.jpg',
-  'ioa-forbidden-journey': '/images/rides/hagrids.jpg',
-  // SeaWorld
-  'sw-mako': '/images/rides/mako.jpg',
-  'sw-kraken': '/images/rides/kraken.jpg',
-  'sw-atlantis': '/images/rides/journey-atlantis.jpg',
-  'sw-manta': '/images/rides/mako.jpg',
-  // LEGOLAND
-  'll-dragon': '/images/rides/the-dragon.jpg',
-  'll-coastersaurus': '/images/rides/coastersaurus.jpg',
-  'll-ninjago': '/images/rides/the-dragon.jpg'
+  'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
+  'mk-pirates': '/images/rides/mk-pirates.jpg',
+  'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
+  'epcot-guardians': '/images/rides/epcot-guardians.jpg',
+  'epcot-remy': '/images/rides/epcot-remy.jpg',
+  'epcot-soarin': '/images/rides/epcot-soarin.jpg',
+  'epcot-test-track': '/images/rides/epcot-test-track.jpg',
+  'hs-rise-resistance': '/images/rides/hs-rise-resistance.jpg',
+  'hs-slinky': '/images/rides/hs-slinky.jpg',
+  'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
+  'hs-smugglers-run': '/images/rides/hs-smugglers-run.jpg',
+  'ak-flight-passage': '/images/rides/ak-flight-passage.jpg',
+  'ak-everest': '/images/rides/ak-everest.jpg',
+  'ak-safari': '/images/rides/ak-safari.jpg',
+  'usf-gringotts': '/images/rides/usf-gringotts.jpg',
+  'usf-mummy': '/images/rides/usf-mummy.jpg',
+  'usf-transformers': '/images/rides/usf-transformers.jpg',
+  'ioa-hagrid': '/images/rides/ioa-hagrid.jpg',
+  'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
+  'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
+  'sw-mako': '/images/rides/sw-mako.jpg',
+  'sw-kraken': '/images/rides/sw-kraken.jpg',
+  'sw-journey-atlantis': '/images/rides/sw-journey-atlantis.jpg',
+  'll-dragon': '/images/rides/ll-dragon.jpg',
+  'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg'
 };
+
+const modalDefaultImage = '/images/rides/mk-space-mountain.jpg';
 
 // Ticket links for each park
 const ticketLinks = {
@@ -175,8 +153,8 @@ function openRideModal(rideId) {
 
   // Set ride image
   const imgContainer = document.querySelector('.ride-modal-image-placeholder');
-  const imagePath = rideImages[ride.id] || '/images/rides/mk-space-mountain.jpg';
-  imgContainer.innerHTML = `<img src="${imagePath}" alt="${ride.name}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md,12px)">`;
+  const imagePath = modalRideImages[ride.id] || modalDefaultImage;
+  imgContainer.innerHTML = `<img src="${imagePath}" alt="${ride.name}" decoding="async" width="120" height="120" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md,12px)" onerror="this.src='${modalDefaultImage}'">`;
   
   // Best time
   const bestTime = bestTimeForRide[ride.type] || 'Morning';

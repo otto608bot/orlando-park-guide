@@ -88,6 +88,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: var(--radius-md, 12px);
+  /* Mobile Safari fix */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .ride-modal-title-section {
@@ -310,10 +313,15 @@
   .ride-modal-image-placeholder {
     width: 100%;
     height: 160px;
+    min-height: 160px;
   }
   
   .ride-modal-image-placeholder img {
     border-radius: var(--radius-md, 12px);
+    min-height: 160px;
+    /* Force hardware acceleration for mobile Safari */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   
   .ride-modal-title-section h2 {

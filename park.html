@@ -44,8 +44,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/global-nav.css">
-  <link rel="stylesheet" href="/styles/ride-modal.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=2">
+  <link rel="stylesheet" href="/styles/ride-modal.css?v=2">
   
   <style>
     /* Nav Dropdown Styles */
@@ -904,6 +904,21 @@
       object-fit: cover;
       display: block;
       pointer-events: none;
+    }
+    
+    /* Mobile image fixes */
+    @media (max-width: 1024px) {
+      .ride-card-image {
+        height: 160px;
+        min-height: 160px;
+      }
+      
+      .ride-card-image img {
+        min-height: 160px;
+        /* Ensure images load on mobile Safari */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
     }
     
     .ride-card-content {
@@ -1834,8 +1849,9 @@
     }
   </style>
 
-  <script src="data/rides.js"></script>
-  <script src="data/character-meal-data.js"></script>
+  <script src="data/rides.js?v=2"></script>
+  <script src="data/character-meal-data.js?v=2"></script>
+  <script src="scripts/ride-images.js?v=1"></script>
   <script>
     // ============================================
     // PARK CONFIGURATION
@@ -2294,35 +2310,38 @@
     // ============================================
     // RIDE IMAGES MAPPING
     // ============================================
-    const rideImages = {
-      'mk-space-mountain': '/images/rides/space-mountain.jpg',
+    // Use the shared rideImages from ride-images.js if available, otherwise use fallback
+    const parkRideImages = typeof rideImages !== 'undefined' ? rideImages : {
+      'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
       'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
-      'mk-haunted-mansion': '/images/rides/haunted-mansion.jpg',
-      'mk-pirates': '/images/rides/pirates-caribbean.jpg',
-      'mk-seven-dwarfs': '/images/rides/seven-dwarfs.jpg',
-      'epcot-guardians': '/images/rides/guardians-galaxy.jpg',
-      'epcot-remy': '/images/rides/remy.jpg',
-      'epcot-soarin': '/images/rides/soarin.jpg',
-      'epcot-test-track': '/images/rides/test-track.jpg',
-      'hs-rise-resistance': '/images/rides/rise-resistance.jpg',
-      'hs-slinky': '/images/rides/slinky-dog.jpg',
-      'hs-tower-terror': '/images/rides/tower-terror.jpg',
-      'hs-smugglers-run': '/images/rides/millennium-falcon.jpg',
-      'ak-avatar': '/images/rides/avatar-flight.jpg',
-      'ak-everest': '/images/rides/expedition-everest.jpg',
-      'ak-safari': '/images/rides/kilimanjaro-safaris.jpg',
-      'usf-gringotts': '/images/rides/gringotts.jpg',
-      'usf-mummy': '/images/rides/revenge-mummy.jpg',
-      'usf-transformers': '/images/rides/transformers.jpg',
-      'ioa-hagrid': '/images/rides/hagrids.jpg',
-      'ioa-velocicoaster': '/images/rides/velocicoaster.jpg',
-      'ioa-spiderman': '/images/rides/spiderman.jpg',
-      'sw-mako': '/images/rides/mako.jpg',
-      'sw-kraken': '/images/rides/kraken.jpg',
-      'sw-atlantis': '/images/rides/journey-atlantis.jpg',
-      'll-dragon': '/images/rides/the-dragon.jpg',
-      'll-coastersaurus': '/images/rides/coastersaurus.jpg'
+      'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
+      'mk-pirates': '/images/rides/mk-pirates.jpg',
+      'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
+      'epcot-guardians': '/images/rides/epcot-guardians.jpg',
+      'epcot-remy': '/images/rides/epcot-remy.jpg',
+      'epcot-soarin': '/images/rides/epcot-soarin.jpg',
+      'epcot-test-track': '/images/rides/epcot-test-track.jpg',
+      'hs-rise-resistance': '/images/rides/hs-rise-resistance.jpg',
+      'hs-slinky': '/images/rides/hs-slinky.jpg',
+      'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
+      'hs-smugglers-run': '/images/rides/hs-smugglers-run.jpg',
+      'ak-flight-passage': '/images/rides/ak-flight-passage.jpg',
+      'ak-everest': '/images/rides/ak-everest.jpg',
+      'ak-safari': '/images/rides/ak-safari.jpg',
+      'usf-gringotts': '/images/rides/usf-gringotts.jpg',
+      'usf-mummy': '/images/rides/usf-mummy.jpg',
+      'usf-transformers': '/images/rides/usf-transformers.jpg',
+      'ioa-hagrid': '/images/rides/ioa-hagrid.jpg',
+      'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
+      'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
+      'sw-mako': '/images/rides/sw-mako.jpg',
+      'sw-kraken': '/images/rides/sw-kraken.jpg',
+      'sw-journey-atlantis': '/images/rides/sw-journey-atlantis.jpg',
+      'll-dragon': '/images/rides/ll-dragon.jpg',
+      'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg'
     };
+    
+    const parkDefaultImage = '/images/rides/mk-space-mountain.jpg';
 
     // ============================================
     // RENDER FUNCTIONS
@@ -2361,10 +2380,8 @@
         }
         
         // Get image for this ride
-        const imageUrl = rideImages[ride.id];
-        const imageHtml = imageUrl 
-          ? `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" loading="lazy"></div>`
-          : '';
+        const imageUrl = parkRideImages[ride.id] || parkDefaultImage;
+        const imageHtml = `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" decoding="async" width="400" height="300" onerror="this.src='${parkDefaultImage}'"></div>`;
         
         return `
           <div class="ride-card ${isUnavailable ? 'unavailable' : ''}" onclick="openRideModal('${ride.id}')">
@@ -2605,7 +2622,7 @@
     });
   </script>
   
-  <script src="scripts/filter-system.js"></script>
+  <script src="scripts/filter-system.js?v=2"></script>
   <script>
     // ============================================
     // FILTER SYSTEM INTEGRATION
@@ -2675,7 +2692,7 @@
     filters.wheelchair = initialState.wheelchair;
     filters.sensory = { ...initialState.sensory };
   </script>
-  <script src="/scripts/global-nav.js"></script>
+  <script src="/scripts/global-nav.js?v=2"></script>
   <script>GlobalNav.init('parks');</script>
   
   <!-- Ride Detail Modal -->
@@ -2723,6 +2740,6 @@
     </div>
   </div>
   
-  <script src="scripts/ride-modal.js"></script>
+  <script src="scripts/ride-modal.js?v=2"></script>
 </body>
 </html>
