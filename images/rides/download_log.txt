@@ -27,3 +27,9 @@ mk-mermaid|OK|  291029|File:Under the Sea Journey of the Little Mermaid - Magic 
 mk-railroad|OK|  190687|File:Walt Disney World Railroad Main Street station.jpg
 mk-carousel-progress|OK|  306676|File:Carousel of Progress 1920.jpg
 epcot-film-festival|OK|  181040|File:Theme Park Tourist - 23564711950.jpg
+epcot-frozen|OK|  278255|File:Frozen Ever After Sign (27803925036).jpg
+epcot-gran-fiesta|OK|  151155|File:Gran Fiesta Tour Starring The Three Caballeros.jpg
+epcot-guardians|OK|  317039|File:Guardians of the Galaxy Cosmic Rewind at EPCOT.jpg
+epcot-figment|OK|  286158|File:Journey into Imagination ride logo.jpg
+epcot-living-land|OK|  172707|File:Living with the Land entrance.jpg
+epcot-mission-green|FAILED|No JPG found
