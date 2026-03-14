@@ -22,7 +22,7 @@ const rideImages = {
   'mk-tea-cups': '/images/rides/mk-tea-cups.jpg',
   'mk-carousel': '/images/rides/mk-carousel.jpg',
   'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
-  'mk-space-mountain': '/images/rides/space-mountain.jpg',
+  'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
   'mk-treehouse': '/images/rides/mk-treehouse.jpg',
   'mk-tiana': '/images/rides/mk-tiana.jpg',
   'mk-speedway': '/images/rides/mk-speedway.jpg',
@@ -140,7 +140,7 @@ const rideImages = {
 };
 
 // Default image for rides without specific images
-const defaultRideImage = '/images/rides/space-mountain.jpg';
+const defaultRideImage = '/images/rides/mk-space-mountain.jpg';
 
 // Helper function to get image for a ride
 function getRideImage(rideId) {
