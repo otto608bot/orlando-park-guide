@@ -51,10 +51,16 @@ window.GlobalNav = {
     };
     
     // Set active class
-    const activeNav = document.getElementById(navIds[page]);
-    const activeMobileNav = document.getElementById(mobileNavIds[page]);
+    if (page === 'parks') {
+      // Parks is a dropdown button, not a regular nav link
+      const parksToggle = document.getElementById('nav-parks');
+      if (parksToggle) parksToggle.classList.add('active');
+    } else {
+      const activeNav = document.getElementById(navIds[page]);
+      if (activeNav) activeNav.classList.add('active');
+    }
     
-    if (activeNav) activeNav.classList.add('active');
+    const activeMobileNav = document.getElementById(mobileNavIds[page]);
     if (activeMobileNav) activeMobileNav.classList.add('active');
   },
   
