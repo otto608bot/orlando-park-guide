@@ -959,6 +959,7 @@
   <script src="data/rides.js?v=2"></script>
   <script src="scripts/ride-images.js?v=3"></script>
   <script src="scripts/ride-modal.js?v=3"></script>
+  <script src="/scripts/filter-system.js?v=2"></script>
   <script src="/scripts/global-nav.js?v=3"></script>
   
   <script>
@@ -1232,8 +1233,95 @@
     window.toggleFranchise = toggleFranchise;
     window.togglePark = togglePark;
     
+    // Sync local state to FilterSystem (shared localStorage persistence)
+    function syncToFilterSystem() {
+      if (typeof FilterSystem !== 'undefined') {
+        FilterSystem.setState({
+          height: state.filters.height,
+          pregnancy: state.filters.pregnancy,
+          wheelchair: state.filters.wheelchair ? 'WAV' : 'any',
+          sensory: { ...state.filters.sensory }
+        });
+      }
+    }
+
+    // Restore filters from FilterSystem on load
+    function restoreFromFilterSystem() {
+      if (typeof FilterSystem === 'undefined') return;
+      var saved = FilterSystem.getState();
+      if (!saved) return;
+
+      state.filters.height = saved.height || 0;
+      state.filters.pregnancy = saved.pregnancy || false;
+      state.filters.wheelchair = saved.wheelchair === 'WAV';
+      if (saved.sensory) {
+        Object.keys(state.filters.sensory).forEach(function(key) {
+          if (saved.sensory.hasOwnProperty(key)) {
+            state.filters.sensory[key] = saved.sensory[key];
+          }
+        });
+      }
+
+      // Sync UI elements
+      if (heightSlider) heightSlider.value = state.filters.height;
+      if (mobileHeightSlider) mobileHeightSlider.value = state.filters.height;
+      updateHeightDisplay(state.filters.height);
+
+      // Update chips
+      var chipPregnancy = document.getElementById('chip-pregnancy');
+      var mobileChipPregnancy = document.getElementById('mobile-chip-pregnancy');
+      if (chipPregnancy) chipPregnancy.classList.toggle('active', state.filters.pregnancy);
+      if (mobileChipPregnancy) mobileChipPregnancy.classList.toggle('active', state.filters.pregnancy);
+
+      var chipWheelchair = document.getElementById('chip-wheelchair');
+      var mobileChipWheelchair = document.getElementById('mobile-chip-wheelchair');
+      if (chipWheelchair) chipWheelchair.classList.toggle('active', state.filters.wheelchair);
+      if (mobileChipWheelchair) mobileChipWheelchair.classList.toggle('active', state.filters.wheelchair);
+
+      // Update sensory filters
+      Object.keys(state.filters.sensory).forEach(function(key) {
+        var el = document.getElementById('sensory-' + key + '-filter');
+        var mobileEl = document.getElementById('mobile-sensory-' + key + '-filter');
+        if (el) el.classList.toggle('active', state.filters.sensory[key]);
+        if (mobileEl) mobileEl.classList.toggle('active', state.filters.sensory[key]);
+      });
+    }
+
+    // Patch filter change functions to sync to FilterSystem
+    var _origToggleFilter = toggleFilter;
+    toggleFilter = function(type) {
+      _origToggleFilter(type);
+      syncToFilterSystem();
+    };
+    window.toggleFilter = toggleFilter;
+
+    var _origToggleSensoryFilter = toggleSensoryFilter;
+    toggleSensoryFilter = function(type) {
+      _origToggleSensoryFilter(type);
+      syncToFilterSystem();
+    };
+    window.toggleSensoryFilter = toggleSensoryFilter;
+
+    var _origHandleHeightChange = handleHeightChange;
+    handleHeightChange = function(e) {
+      _origHandleHeightChange(e);
+      syncToFilterSystem();
+    };
+    heightSlider.removeEventListener('input', _origHandleHeightChange);
+    heightSlider.addEventListener('input', handleHeightChange);
+
+    var _origHandleMobileHeightChange = handleMobileHeightChange;
+    handleMobileHeightChange = function(e) {
+      _origHandleMobileHeightChange(e);
+      syncToFilterSystem();
+    };
+    mobileHeightSlider.removeEventListener('input', _origHandleMobileHeightChange);
+    mobileHeightSlider.addEventListener('input', handleMobileHeightChange);
+
     // Initialize
     init();
+    restoreFromFilterSystem();
+    render();
     
     // Initialize global nav
     GlobalNav.init('rides');
