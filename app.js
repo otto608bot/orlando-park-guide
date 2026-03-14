@@ -1689,7 +1689,7 @@ const parkConfig = {
     id: 'mk',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    image: 'Magic Kingdom.webp',
+    image: 'Magic-Kingdom.webp',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1705,7 +1705,7 @@ const parkConfig = {
     id: 'hs',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    image: 'Hollywood Studios.jpeg',
+    image: 'Hollywood-Studios.jpeg',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1713,7 +1713,7 @@ const parkConfig = {
     id: 'ak',
     resort: 'Walt Disney World',
     parent: 'Disney',
-    image: 'animal kingdom.jpeg',
+    image: 'animal-kingdom.jpeg',
     affiliateLink: 'https://www.dpbolvw.net/click-101693488-5527150',
     affiliateText: 'Get Disney Park Hopper Tickets'
   },
@@ -1721,7 +1721,7 @@ const parkConfig = {
     id: 'usf',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    image: 'universal studios florida.jpeg',
+    image: 'universal-studios-florida.jpeg',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
@@ -1729,7 +1729,7 @@ const parkConfig = {
     id: 'ioa',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    image: 'islands of adventure.webp',
+    image: 'islands-of-adventure.webp',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
@@ -1737,7 +1737,7 @@ const parkConfig = {
     id: 'eu',
     resort: 'Universal Orlando',
     parent: 'Universal',
-    image: 'epic universe.jpeg',
+    image: 'epic-universe.jpeg',
     affiliateLink: 'https://www.anrdoezrs.net/click-101693488-12540773',
     affiliateText: 'Save up to $109 on Universal Tickets'
   },
@@ -1745,7 +1745,7 @@ const parkConfig = {
     id: 'sw',
     resort: 'SeaWorld Parks',
     parent: 'SeaWorld',
-    image: 'sea world.jpeg',
+    image: 'sea-world.jpeg',
     affiliateLink: 'https://www.kqzyfj.com/click-101693488-12540778',
     affiliateText: 'Save up to $88 on SeaWorld Tickets'
   },
@@ -2156,7 +2156,7 @@ function renderParkDetail(parkName) {
     }
 
     return `
-      <div class="ride-card ${isAvailable ? '' : 'unavailable'}">
+      <div class="ride-card ${isAvailable ? '' : 'unavailable'}" onclick="openRideModal('${ride.id}')">
         <div class="ride-header">
           <div class="ride-name">${escapeHtml(ride.name)}</div>
           ${!isAvailable ? `<span class="unavailable-badge">${unavailableReason}</span>` : `<div class="ride-type">${escapeHtml(ride.type)}</div>`}

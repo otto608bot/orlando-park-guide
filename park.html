@@ -44,7 +44,102 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/global-nav.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
+  <link rel="stylesheet" href="/styles/ride-modal.css?v=2">
+  
+  <style>
+    /* Nav Dropdown Styles */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #718096;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+    
+    /* Mobile Navigation Section */
+    .mobile-nav-section {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #E2E8F0;
+    }
+    
+    .mobile-nav-section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #A0AEC0;
+      padding: 0.75rem 1rem 0.5rem;
+    }
+    
+    .mobile-nav-section a {
+      padding-left: 1.5rem;
+      font-size: 0.9375rem;
+    }
+  </style>
   
   <style>
     /* Force filter button visible on mobile */
@@ -778,9 +873,10 @@
       background: var(--white);
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-md);
-      padding: var(--space-md);
+      overflow: hidden;
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
+      cursor: pointer;
     }
     
     .ride-card:hover {
@@ -793,6 +889,40 @@
       opacity: 0.5;
       background: var(--gray-100);
       filter: grayscale(0.5);
+    }
+    
+    .ride-card-image {
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .ride-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+    
+    /* Mobile image fixes */
+    @media (max-width: 1024px) {
+      .ride-card-image {
+        height: 160px;
+        min-height: 160px;
+      }
+      
+      .ride-card-image img {
+        min-height: 160px;
+        /* Ensure images load on mobile Safari */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+    
+    .ride-card-content {
+      padding: var(--space-md);
     }
     
     .ride-header {
@@ -1281,7 +1411,26 @@
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
@@ -1295,46 +1444,6 @@
     </div>
   </header>
 
-  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
-    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
-      <div class="global-mobile-nav-header">
-        <h3>Menu</h3>
-        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
-      </div>
-      <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-          Rides
-        </a>
-        <a href="/character-dining.html" id="mobile-nav-dining">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
-          </svg>
-          Character Dining
-        </a>
-        <a href="/blog/" id="mobile-nav-blog">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          Blog
-        </a>
-        <a href="/deals.html" id="mobile-nav-deals">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          Deals
-        </a>
-      </nav>
-    </div>
-  </div>
 
 <div class="layout">
     <!-- Sidebar -->
@@ -1603,27 +1712,52 @@
         <button class="close-nav-btn" onclick="closeMobileNav()">&times;</button>
       </div>
       <nav class="mobile-nav-links">
-        <a href="/">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section">
+          <div class="mobile-nav-section-title">Parks</div>
+          <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+          <a href="/park.html?park=epcot">EPCOT</a>
+          <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+          <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+          <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+          <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+          <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+          <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
+          </svg>
           Rides
         </a>
-        <a href="/character-dining.html">
+        <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
-        <a href="/blog/">
+        <a href="/blog/" id="mobile-nav-blog">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
           </svg>
           Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
         </a>
       </nav>
     </div>
@@ -1715,8 +1849,9 @@
     }
   </style>
 
-  <script src="data/rides.js"></script>
-  <script src="data/character-meal-data.js"></script>
+  <script src="data/rides.js?v=2"></script>
+  <script src="data/character-meal-data.js?v=2"></script>
+  <script src="scripts/ride-images.js?v=3"></script>
   <script>
     // ============================================
     // PARK CONFIGURATION
@@ -1725,11 +1860,11 @@
       'magic-kingdom': {
         name: 'Magic Kingdom',
         resort: 'Walt Disney World',
-        image: 'Magic Kingdom.webp',
+        image: 'Magic-Kingdom.webp',
         ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
         blogPosts: [
-          { title: "Pregnant Mom's Guide to Magic Kingdom", excerpt: 'Which rides are safe during pregnancy, where to rest, and how to enjoy the park comfortably.', url: '/blog/pregnant-moms-guide-magic-kingdom.html', image: '/blog/Pregnant%20Mom%27s%20guide%20to%20magic%20kingdom.webp' },
-          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
+          { title: "Pregnant Mom's Guide to Magic Kingdom", excerpt: 'Which rides are safe during pregnancy, where to rest, and how to enjoy the park comfortably.', url: '/blog/pregnant-moms-guide-magic-kingdom.html', image: '/blog/pregnant-moms-guide-magic-kingdom.webp' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best-Rides-for-5-Year-olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' }
         ]
       },
@@ -1739,55 +1874,55 @@
         image: 'epcot.jpeg',
         ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
         blogPosts: [
-          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best-Rides-for-5-Year-olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' },
-          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp' }
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal-vs-disney.webp' }
         ]
       },
       'hollywood-studios': {
         name: 'Hollywood Studios',
         resort: 'Walt Disney World',
-        image: 'Hollywood Studios.jpeg',
+        image: 'Hollywood-Studios.jpeg',
         ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
         blogPosts: [
-          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best-Rides-for-5-Year-olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' },
-          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp' }
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal-vs-disney.webp' }
         ]
       },
       'animal-kingdom': {
         name: 'Animal Kingdom',
         resort: 'Walt Disney World',
-        image: 'animal kingdom.jpeg',
+        image: 'animal-kingdom.jpeg',
         ticketUrl: 'https://www.dpbolvw.net/click-101693488-5527150',
         blogPosts: [
-          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best-Rides-for-5-Year-olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' },
-          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp' }
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal-vs-disney.webp' }
         ]
       },
       'universal-studios': {
         name: 'Universal Studios Florida',
         resort: 'Universal Orlando',
-        image: 'universal studios florida.jpeg',
+        image: 'universal-studios-florida.jpeg',
         ticketUrl: 'https://www.anrdoezrs.net/click-101693488-12540773',
         blogPosts: [
-          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp' }
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal-vs-disney.webp' }
         ]
       },
       'islands-of-adventure': {
         name: 'Islands of Adventure',
         resort: 'Universal Orlando',
-        image: 'islands of adventure.webp',
+        image: 'islands-of-adventure.webp',
         ticketUrl: 'https://www.anrdoezrs.net/click-101693488-12540773',
         blogPosts: [
-          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal vs disney.webp' }
+          { title: 'Universal vs Disney: Which Park is Right for Your Family?', excerpt: 'Compare rides, characters, dining, and overall experience to decide where to spend your vacation dollars.', url: '/blog/universal-vs-disney-comparison.html', image: '/blog/Universal-vs-disney.webp' }
         ]
       },
       'seaworld': {
         name: 'SeaWorld Orlando',
         resort: 'SeaWorld Parks',
-        image: 'sea world.jpeg',
+        image: 'sea-world.jpeg',
         ticketUrl: 'https://www.kqzyfj.com/click-101693488-12540778',
         blogPosts: []
       },
@@ -1797,7 +1932,7 @@
         image: 'legoland.jpeg',
         ticketUrl: 'https://www.jdoqocy.com/click-101693488-12540781',
         blogPosts: [
-          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best Rides for 5 Year olds.webp' },
+          { title: 'Best Rides for 5 Year Olds at Disney World', excerpt: 'Discover the perfect attractions for kindergarten-age kids with manageable waits and just-right thrills.', url: '/blog/best-rides-5-year-olds-disney-world.html', image: '/blog/Best-Rides-for-5-Year-olds.webp' },
           { title: 'Toddler Rides at Disney World: The Complete Guide', excerpt: 'Everything you need to know about rides for little ones including height requirements and best parks.', url: '/blog/toddler-rides-disney-world.html', image: '/blog/toddler-rides-disney-world.webp' }
         ]
       }
@@ -2173,6 +2308,42 @@
     }
     
     // ============================================
+    // RIDE IMAGES MAPPING
+    // ============================================
+    // Use the shared rideImages from ride-images.js if available, otherwise use fallback
+    const parkRideImages = typeof rideImages !== 'undefined' ? rideImages : {
+      'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
+      'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
+      'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
+      'mk-pirates': '/images/rides/mk-pirates.jpg',
+      'mk-seven-dwarfs': '/images/rides/mk-seven-dwarfs.jpg',
+      'epcot-guardians': '/images/rides/epcot-guardians.jpg',
+      'epcot-remy': '/images/rides/epcot-remy.jpg',
+      'epcot-soarin': '/images/rides/epcot-soarin.jpg',
+      'epcot-test-track': '/images/rides/epcot-test-track.jpg',
+      'hs-rise-resistance': '/images/rides/hs-rise-resistance.jpg',
+      'hs-slinky': '/images/rides/hs-slinky.jpg',
+      'hs-tower-terror': '/images/rides/hs-tower-terror.jpg',
+      'hs-smugglers-run': '/images/rides/hs-smugglers-run.jpg',
+      'ak-flight-passage': '/images/rides/ak-flight-passage.jpg',
+      'ak-everest': '/images/rides/ak-everest.jpg',
+      'ak-safari': '/images/rides/ak-safari.jpg',
+      'usf-gringotts': '/images/rides/uo-gringotts.jpg',
+      'usf-mummy': '/images/rides/uo-mummy.jpg',
+      'usf-transformers': '/images/rides/uo-transformers.jpg',
+      'ioa-hagrid': '/images/rides/ioa-hagrids.jpg',
+      'ioa-velocicoaster': '/images/rides/ioa-velocicoaster.jpg',
+      'ioa-spiderman': '/images/rides/ioa-spiderman.jpg',
+      'sw-mako': '/images/rides/sw-mako.jpg',
+      'sw-kraken': '/images/rides/sw-kraken.jpg',
+      'sw-journey-atlantis': '/images/rides/sw-atlantis.jpg',
+      'll-dragon': '/images/rides/ll-dragon.jpg',
+      'll-coastersaurus': '/images/rides/ll-coastersaurus.jpg'
+    };
+    
+    const parkDefaultImage = '/images/rides/mk-space-mountain.jpg';
+
+    // ============================================
     // RENDER FUNCTIONS
     // ============================================
     function renderRides(rides, matchedRides) {
@@ -2208,32 +2379,39 @@
           tags.push(`<span class="tag tag-sensory-strobe">Strobe</span>`);
         }
         
+        // Get image for this ride
+        const imageUrl = parkRideImages[ride.id] || parkDefaultImage;
+        const imageHtml = `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" loading="lazy" decoding="async" width="400" height="300" onerror="this.src='${parkDefaultImage}'"></div>`;
+        
         return `
-          <div class="ride-card ${isUnavailable ? 'unavailable' : ''}">
-            <div class="ride-header">
-              <h3 class="ride-name">${ride.name}</h3>
-              <span class="ride-type">${ride.type}</span>
-            </div>
-            <p class="ride-description">${ride.description}</p>
-            <div class="ride-meta">
-              <span class="meta-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                ${ride.duration}
-              </span>
-              ${ride.height > 0 ? `
+          <div class="ride-card ${isUnavailable ? 'unavailable' : ''}" onclick="openRideModal('${ride.id}')">
+            ${imageHtml}
+            <div class="ride-card-content">
+              <div class="ride-header">
+                <h3 class="ride-name">${ride.name}</h3>
+                <span class="ride-type">${ride.type}</span>
+              </div>
+              <p class="ride-description">${ride.description}</p>
+              <div class="ride-meta">
                 <span class="meta-item">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2v20M2 12h20"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  ${ride.height}" min height
+                  ${ride.duration}
                 </span>
-              ` : ''}
-            </div>
-            <div class="ride-tags">
-              ${tags.join('')}
+                ${ride.height > 0 ? `
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                    ${ride.height}" min height
+                  </span>
+                ` : ''}
+              </div>
+              <div class="ride-tags">
+                ${tags.join('')}
+              </div>
             </div>
           </div>
         `;
@@ -2444,7 +2622,7 @@
     });
   </script>
   
-  <script src="scripts/filter-system.js"></script>
+  <script src="scripts/filter-system.js?v=2"></script>
   <script>
     // ============================================
     // FILTER SYSTEM INTEGRATION
@@ -2514,7 +2692,54 @@
     filters.wheelchair = initialState.wheelchair;
     filters.sensory = { ...initialState.sensory };
   </script>
-  <script src="/scripts/global-nav.js"></script>
-<script>GlobalNav.init('rides');</script>
+  <script src="/scripts/global-nav.js?v=3"></script>
+  <script>GlobalNav.init('parks');</script>
+  
+  <!-- Ride Detail Modal -->
+  <div class="ride-modal-overlay" id="ride-modal" onclick="closeRideModal(event)">
+    <div class="ride-modal-content" onclick="event.stopPropagation()">
+      <button class="ride-modal-close" onclick="closeRideModal()">&times;</button>
+      
+      <div class="ride-modal-header">
+        <div class="ride-modal-image-placeholder">[Ride Image]</div>
+        <div class="ride-modal-title-section">
+          <h2 id="modal-ride-name">Ride Name</h2>
+          <span id="modal-ride-park">Park Name</span>
+          <div class="ride-modal-height" id="modal-ride-height">48" minimum</div>
+        </div>
+      </div>
+      
+      <div class="ride-modal-body">
+        <p id="modal-ride-description">Description...</p>
+        
+        <div class="ride-modal-section">
+          <h3>Rider Tips</h3>
+          <ul id="modal-ride-tips"></ul>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Best Time to Ride</h3>
+          <p id="modal-ride-best-time">Morning</p>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Accessibility</h3>
+          <div id="modal-ride-accessibility">
+            <div>Wheelchair: <span id="modal-wheelchair"></span></div>
+            <div id="modal-sensory-warnings"></div>
+          </div>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Similar Rides</h3>
+          <div id="modal-similar-rides"></div>
+        </div>
+        
+        <a id="modal-ticket-link" href="#" class="ticket-button" target="_blank" rel="noopener noreferrer">Get Tickets for [Park]</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="scripts/ride-modal.js?v=3"></script>
 </body>
 </html>

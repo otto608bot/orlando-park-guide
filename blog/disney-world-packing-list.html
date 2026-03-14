@@ -12,7 +12,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Calistoga&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/global-nav.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
@@ -151,7 +151,101 @@
       .article-header h1 { font-size: 1.75rem; }
       .checklist-grid { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Disney World Packing List 2026: The Complete Guide",
+  "description": "The ultimate Disney World packing list for 2026. Essentials for adults, kids, toddlers, and babies. Free printable checklist included.",
+  "image": "https://planyourpark.com/blog/disney-world-packing-list.webp",
+  "datePublished": "2026-03-06",
+  "dateModified": "2026-03-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "mainEntityOfPage": "https://planyourpark.com/blog/disney-world-packing-list.html"
+}
+</script>
 </head>
 <body>
   <header class="global-header">
@@ -163,15 +257,44 @@
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
+      
       <a href="/" class="global-logo">
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
+      
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
     </div>
   </header>
 
@@ -182,18 +305,42 @@
         <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
       <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
           </svg>
           Rides
         </a>
         <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
@@ -225,6 +372,8 @@
 
     <img src="disney-world-packing-list.webp" alt="Disney World Packing List" class="hero-image">
 
+    <p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p>
+
     <div class="inline-cta">
       💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through 
       <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
@@ -240,7 +389,7 @@
       <p>Before we dive into the list, here's the mindset: <strong>pack light, but pack smart</strong>. You'll be walking 8-12 miles per day, carrying bags through security, and navigating crowded parks. Every item should earn its place.</p>
 
       <div class="parent-tip">
-        <strong>Parent tip:</strong> We keep a "park bag" that stays packed with essentials (sunscreen, portable charger, snacks) so we can grab it and go each morning. Game changer.
+        <strong>Parent tip:</strong> We keep a "park bag" that stays packed with essentials (<a href="https://www.amazon.com/dp/B005IHT94S?tag=planyourpark-20" target="_blank" rel="noopener">sunscreen</a>, <a href="https://www.amazon.com/dp/B0CZ9LV3H2?tag=planyourpark-20" target="_blank" rel="noopener">portable charger</a>, snacks) so we can grab it and go each morning. Game changer.
       </div>
 
       <h2>Park Bag Essentials</h2>
@@ -250,10 +399,10 @@
       <div class="checklist-section">
         <h3>🎒 Daily Park Bag</h3>
         <div class="checklist-grid">
-          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Sunscreen (SPF 30+)</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Refillable water bottle</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Lightweight rain poncho</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger <a href="https://www.amazon.com/dp/B0CZ9LV3H2?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Sunscreen (SPF 30+) <a href="https://www.amazon.com/dp/B005IHT94S?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Refillable water bottle <a href="https://www.amazon.com/dp/B006ZT8MKU?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Lightweight rain poncho <a href="https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Hand sanitizer</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Wet wipes</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Snacks (granola bars, crackers)</span></div>
@@ -299,16 +448,16 @@
         <h3>👶 Kids & Toddler Extras</h3>
         <div class="checklist-grid">
           <div class="checklist-item"><input type="checkbox"> <span>Stroller (or rent at Disney)</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Stroller fan</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Stroller fan <a href="https://www.amazon.com/dp/B08866RDYK?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Stroller rain cover</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Diapers/wipes (more than you think)</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Change of clothes (2 per day)</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Favorite snacks</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Small toys/activities for lines</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Glow sticks/light-up toys</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Baby carrier (for infants)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Baby carrier <a href="https://www.amazon.com/dp/B00KC4VPNU?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Sippy cups/bottles</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Kid-safe sunscreen</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Kid-safe sunscreen <a href="https://www.amazon.com/dp/B09MV4618C?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Autograph book & pen</span></div>
         </div>
       </div>
@@ -323,7 +472,7 @@
         <li><strong>Valuable jewelry</strong> – Easy to lose on rides</li>
         <li><strong>Large bags</strong> – You'll carry it all day; keep it minimal</li>
         <li><strong>Food for the whole trip</strong> – Grocery delivery to your resort is easier</li>
-        <li><strong>Ponchos from home</strong> – Buy cheap ones at the dollar store or at Disney</li>
+        <li><strong>Ponchos from home</strong> – Grab a <a href="https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20" target="_blank" rel="noopener">cheap 20-pack on Amazon</a> instead—way cheaper than buying at the parks</li>
       </ul>
 
       <h2>The "Oh Yeah, That" List</h2>
@@ -336,7 +485,7 @@
           <div class="checklist-item"><input type="checkbox"> <span>ID/driver's license</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Travel insurance documents</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Medications (in original bottles)</span></div>
-          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger (seriously, bring two)</span></div>
+          <div class="checklist-item"><input type="checkbox"> <span>Portable phone charger (seriously, bring two) <a href="https://www.amazon.com/dp/B0CZ9LV3H2?tag=planyourpark-20" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #ff6b35;">(Amazon →)</a></span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Car rental confirmation</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Disney reservation confirmations</span></div>
           <div class="checklist-item"><input type="checkbox"> <span>Cash for tips</span></div>
@@ -350,7 +499,7 @@
         <li><strong>Roll, don't fold</strong> – Saves space and reduces wrinkles</li>
         <li><strong>Pack outfits, not items</strong> – Plan what you'll wear each day</li>
         <li><strong>Leave room for souvenirs</strong> – You'll buy more than you think</li>
-        <li><strong>Ship items ahead</strong> – Amazon can deliver to your Disney resort</li>
+        <li><strong>Ship items ahead</strong> – Order your <a href="https://www.amazon.com/dp/B005IHT94S?tag=planyourpark-20" target="_blank" rel="noopener">sunscreen</a>, <a href="https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20" target="_blank" rel="noopener">ponchos</a>, and essentials on Amazon and deliver straight to your Disney resort</li>
         <li><strong>Pack a "first night" bag</strong> – Essentials in case luggage is delayed</li>
       </ol>
 
@@ -399,7 +548,7 @@
   <footer style="background: var(--base-dark); color: var(--white); padding: 2rem; text-align: center;">
     <p style="color: #a1a1aa;">© 2026 Plan Your Park. All rights reserved.</p>
   </footer>
-<script src="/scripts/global-nav.js"></script>
+<script src="/scripts/global-nav.js?v=3"></script>
 <script>GlobalNav.init('blog');</script>
 </body>
 </html>

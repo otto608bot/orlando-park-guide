@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/global-nav.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
   
   <style>
     :root {
@@ -270,6 +270,78 @@
       margin-bottom: 0.75rem;
     }
 
+
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
 </style>
 </head>
 <body>
@@ -289,7 +361,26 @@
       </a>
       
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
@@ -313,18 +404,42 @@
         <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
       <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
           </svg>
           Rides
         </a>
         <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
@@ -359,6 +474,25 @@
     </div>
 
     <div class="blog-grid">
+      <!-- Free Things to Do at Disney World -->
+      <a href="/blog/free-things-disney-world.html" class="blog-card">
+        <div class="blog-card-image">
+          <img src="free-things-disney-world.webp" alt="Free Things to Do at Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 16, 2026</span>
+          </div>
+          <h2>25 Free Things to Do at Disney World (That Are Actually Good)</h2>
+          <p>From fireworks and parades to free souvenirs and resort activities—save money without sacrificing the magic.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Money-Saving</span>
+            <span class="tag">Tips</span>
+          </div>
+        </div>
+      </a>
+
       <!-- Best Strollers for Disney World -->
       <a href="/blog/best-strollers-disney-world.html" class="blog-card">
         <div class="blog-card-image">
@@ -378,17 +512,17 @@
         </div>
       </a>
 
-      <!-- How to Use Genie+ -->
+      <!-- How to Use Lightning Lane -->
       <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="blog-card">
         <div class="blog-card-image">
-          <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Genie+ at Disney World 2026">
+          <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Lightning Lane at Disney World 2026">
         </div>
         <div class="blog-card-content">
           <div class="blog-card-meta">
             <span>Disney World</span>
             <span>Mar 8, 2026</span>
           </div>
-          <h2>How to Use Genie+ at Disney World 2026</h2>
+          <h2>How to Use Lightning Lane at Disney World 2026</h2>
           <p>Master Disney's paid skip-the-line service with our complete strategy guide. Save hours and maximize every ride.</p>
           <div class="blog-card-tags">
             <span class="tag">Planning</span>
@@ -553,7 +687,7 @@
       <!-- Best Rides for 5-Year-Olds at Disney World -->
       <a href="/blog/best-rides-5-year-olds-disney-world.html" class="blog-card">
         <div class="blog-card-image">
-          <img src="Best%20Rides%20for%205%20Year%20olds.png" alt="Best Rides for 5-Year-Olds">
+          <img src="Best-Rides-for-5-Year-olds.png" alt="Best Rides for 5-Year-Olds">
         </div>
         <div class="blog-card-content">
           <div class="blog-card-meta">
@@ -572,7 +706,7 @@
       <!-- Pregnant Mom's Guide to Magic Kingdom -->
       <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="blog-card">
         <div class="blog-card-image">
-          <img src="Pregnant%20Mom's%20guide%20to%20magic%20kingdom.png" alt="Pregnant Mom's Guide">
+          <img src="pregnant-moms-guide-magic-kingdom.png" alt="Pregnant Mom's Guide">
         </div>
         <div class="blog-card-content">
           <div class="blog-card-meta">
@@ -591,7 +725,7 @@
       <!-- Universal vs Disney: Which Is Better? -->
       <a href="/blog/universal-vs-disney-comparison.html" class="blog-card">
         <div class="blog-card-image">
-          <img src="Universal%20vs%20disney.png" alt="Universal vs Disney">
+          <img src="Universal-vs-disney.png" alt="Universal vs Disney">
         </div>
         <div class="blog-card-content">
           <div class="blog-card-meta">

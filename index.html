@@ -44,6 +44,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/ride-modal.css?v=2">
   
   <style>
     :root {
@@ -981,6 +982,20 @@
       }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Plan Your Park",
+  "url": "https://planyourpark.com",
+  "description": "Plan your perfect Orlando theme park vacation. Rides, tips, and guides for Disney World, Universal Orlando, SeaWorld, and more.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  }
+}
+</script>
 </head>
 <body>
   <!-- Global Navigation Component -->
@@ -1017,6 +1032,7 @@
     
     .global-nav {
       display: flex;
+      align-items: center;
       gap: 2rem;
       margin-left: auto;
     }
@@ -1032,6 +1048,130 @@
     .global-nav a:hover,
     .global-nav a.active {
       color: #F37021;
+    }
+    
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-nav-section {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #E2E8F0;
+    }
+    
+    .mobile-nav-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .mobile-nav-section-header:hover {
+      background: #F7FAFC;
+    }
+    
+    .mobile-nav-section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #A0AEC0;
+    }
+    
+    .mobile-nav-section-toggle {
+      width: 20px;
+      height: 20px;
+      color: #A0AEC0;
+      transition: transform 0.2s;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-toggle {
+      transform: rotate(180deg);
+    }
+    
+    .mobile-nav-section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-content {
+      max-height: 500px;
+    }
+    
+    .mobile-nav-section a {
+      padding-left: 1.5rem;
+      font-size: 0.9375rem;
     }
     
     /* Mobile Menu Button */
@@ -1105,6 +1245,8 @@
       transform: translateX(-100%);
       transition: transform 0.3s ease;
       box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     
     .global-mobile-nav-sheet.active .global-mobile-nav-content {
@@ -1211,7 +1353,26 @@
       </a>
       
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
@@ -1235,18 +1396,42 @@
         <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
       <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
           </svg>
           Rides
         </a>
         <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
@@ -1607,9 +1792,9 @@
   </style>
 
   <!-- Shared Filter System -->
-  <script src="scripts/filter-system.js"></script>
+  <script src="scripts/filter-system.js?v=2"></script>
   
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=10"></script>
   
   <!-- Filter System Integration -->
   <script>
@@ -1681,6 +1866,7 @@
       setActiveNav(page) {
         // Desktop nav
         const navIds = {
+          'home': 'nav-home',
           'rides': 'nav-rides',
           'dining': 'nav-dining',
           'blog': 'nav-blog'
@@ -1688,6 +1874,7 @@
         
         // Mobile nav
         const mobileNavIds = {
+          'home': 'mobile-nav-home',
           'rides': 'mobile-nav-rides',
           'dining': 'mobile-nav-dining',
           'blog': 'mobile-nav-blog'
@@ -1749,8 +1936,17 @@
       }
     });
 
-    // Initialize for rides page
-    GlobalNav.init('rides');
+    // Toggle mobile parks section
+    function toggleMobileParksSection() {
+      const section = document.getElementById('mobile-parks-section');
+      if (section) {
+        section.classList.toggle('expanded');
+      }
+    }
+    window.toggleMobileParksSection = toggleMobileParksSection;
+
+    // Initialize for home page
+    GlobalNav.init('home');
     
     // Handle resize to show/hide filter button
     window.addEventListener('resize', function() {
@@ -1777,5 +1973,52 @@
       }
     });
   </script>
+  
+  <!-- Ride Detail Modal -->
+  <div class="ride-modal-overlay" id="ride-modal" onclick="closeRideModal(event)">
+    <div class="ride-modal-content" onclick="event.stopPropagation()">
+      <button class="ride-modal-close" onclick="closeRideModal()">&times;</button>
+      
+      <div class="ride-modal-header">
+        <div class="ride-modal-image-placeholder">[Ride Image]</div>
+        <div class="ride-modal-title-section">
+          <h2 id="modal-ride-name">Ride Name</h2>
+          <span id="modal-ride-park">Park Name</span>
+          <div class="ride-modal-height" id="modal-ride-height">48" minimum</div>
+        </div>
+      </div>
+      
+      <div class="ride-modal-body">
+        <p id="modal-ride-description">Description...</p>
+        
+        <div class="ride-modal-section">
+          <h3>Rider Tips</h3>
+          <ul id="modal-ride-tips"></ul>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Best Time to Ride</h3>
+          <p id="modal-ride-best-time">Morning</p>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Accessibility</h3>
+          <div id="modal-ride-accessibility">
+            <div>Wheelchair: <span id="modal-wheelchair"></span></div>
+            <div id="modal-sensory-warnings"></div>
+          </div>
+        </div>
+        
+        <div class="ride-modal-section">
+          <h3>Similar Rides</h3>
+          <div id="modal-similar-rides"></div>
+        </div>
+        
+        <a id="modal-ticket-link" href="#" class="ticket-button" target="_blank" rel="noopener noreferrer">Get Tickets for [Park]</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="scripts/ride-modal.js?v=2"></script>
 </body>
 </html>

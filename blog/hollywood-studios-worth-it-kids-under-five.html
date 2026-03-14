@@ -11,7 +11,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://planyourpark.com/blog/hollywood-studios-worth-it-kids-under-five.html">
   <meta property="og:image" content="https://planyourpark.com/blog/hollywood-studios-under-five.webp">
-  <link rel="stylesheet" href="/styles/global-nav.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
@@ -246,7 +246,7 @@
       border: 1px solid #E2E8F0;
       border-radius: var(--radius-md);
       font-size: 1rem;
-      font-family: inherit;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     .qa-form textarea {
       resize: vertical;
@@ -386,7 +386,101 @@
       margin-bottom: 0.75rem;
     }
 
+
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Is Hollywood Studios Worth It with Kids Under 5?",
+  "description": "Honest parent review: Is Disney's Hollywood Studios worth it with toddlers and preschoolers? See which rides work, what to skip, and how to make it magical.",
+  "image": "https://planyourpark.com/blog/hollywood-studios-under-five.webp",
+  "datePublished": "2026-03-05",
+  "dateModified": "2026-03-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "mainEntityOfPage": "https://planyourpark.com/blog/hollywood-studios-worth-it-kids-under-five.html"
+}
+</script>
 </head>
 <body>
   <header class="global-header">
@@ -398,15 +492,44 @@
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
+      
       <a href="/" class="global-logo">
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
+      
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
     </div>
   </header>
 
@@ -417,18 +540,42 @@
         <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
       <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
           </svg>
           Rides
         </a>
         <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
@@ -489,7 +636,7 @@
       <p>If your kid loves Woody and Buzz, this is your golden zone. Toy Story Mania is the headliner—a 4D shooting game where you pop balloons and break plates. My 3-year-old couldn't pull the trigger consistently, but he loved wearing the 3D glasses and watching the action. My 4-year-old? Competitive little monster who wanted to ride again immediately.</p>
 
       <div class="parent-tip">
-        <strong>Parent tip:</strong> The standby line for Toy Story Mania is brutal (often 60+ minutes). This is one of those rides where Genie+ is genuinely worth it. Book it first thing in the morning.
+        <strong>Parent tip:</strong> The standby line for Toy Story Mania is brutal (often 60+ minutes). This is one of those rides where Lightning Lane is genuinely worth it. Book it first thing in the morning.
       </div>
 
       <p>Alien Swirling Saucers is the other Toy Story ride for little kids. It's basically the teacups with a space theme. Mild, short, and usually has reasonable waits. My kids enjoyed it but weren't begging for re-rides.</p>
@@ -541,7 +688,7 @@
 
       <ol>
         <li><strong>Arrive at rope drop</strong> (park opening). Head straight to Mickey & Minnie's Runaway Railway.</li>
-        <li><strong>Toy Story Land</strong>—hit Toy Story Mania (with Genie+ if you have it) and Alien Swirling Saucers.</li>
+        <li><strong>Toy Story Land</strong>—hit Toy Story Mania (with Lightning Lane if you have it) and Alien Swirling Saucers.</li>
         <li><strong>Character meet-and-greets</strong> in Toy Story Land while lines are short.</li>
         <li><strong>Disney Junior Dance Party</strong>—check showtimes and plan accordingly.</li>
         <li><strong>Frozen Sing-Along</strong> if your kid is into it.</li>
@@ -629,7 +776,7 @@
       </div>
     </article>
   </div>
-<script src="/scripts/global-nav.js"></script>
+<script src="/scripts/global-nav.js?v=3"></script>
 <script>GlobalNav.init('blog');</script>
 </body>
 </html>

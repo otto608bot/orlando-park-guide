@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Use Genie+ at Disney World 2026 | Plan Your Park</title>
-  <meta name="description" content="Master Disney Genie+ in 2026 with our complete guide. Learn how to book Lightning Lanes, maximize your selections, and save hours of waiting in line.">
+  <title>How to Use Lightning Lane at Disney World 2026 | Plan Your Park</title>
+  <meta name="description" content="Master Disney Lightning Lane in 2026 with our complete guide. Learn how to book Lightning Lanes, maximize your selections, and save hours of waiting in line.">
   <meta name="author" content="PlanYourPark.com">
-  <meta property="og:title" content="How to Use Genie+ at Disney World 2026">
-  <meta property="og:description" content="The ultimate guide to Disney Genie+: tips, tricks, and strategies to skip the lines and maximize your park time.">
+  <meta property="og:title" content="How to Use Lightning Lane at Disney World 2026">
+  <meta property="og:description" content="The ultimate guide to Disney Lightning Lane: tips, tricks, and strategies to skip the lines and maximize your park time.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/global-nav.css">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
   
   <style>
     :root {
@@ -350,7 +350,7 @@
       border-radius: 6px;
       font-size: 0.9375rem;
       resize: vertical;
-      font-family: inherit;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
     .qa-form button {
@@ -513,7 +513,101 @@
       margin-bottom: 0.75rem;
     }
 
+
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Use Lightning Lane at Disney World 2026",
+  "description": "Master Disney Lightning Lane in 2026 with our complete guide. Learn how to book Lightning Lanes, maximize your selections, and save hours of waiting in line.",
+  "image": "https://planyourpark.com/blog/how-to-use-genie-at-disney-world-2026.webp",
+  "datePublished": "2026-03-08",
+  "dateModified": "2026-03-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  },
+  "mainEntityOfPage": "https://planyourpark.com/blog/how-to-use-genie-plus-disney-world-2026.html"
+}
+</script>
 </head>
 <body>
   <header class="global-header">
@@ -525,15 +619,44 @@
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
+      
       <a href="/" class="global-logo">
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
+      
       <nav class="global-nav">
-        <a href="/" id="nav-rides">Rides</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
         <a href="/character-dining.html" id="nav-dining">Character Dining</a>
         <a href="/blog/" id="nav-blog">Blog</a>
         <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
     </div>
   </header>
 
@@ -544,18 +667,42 @@
         <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
       </div>
       <nav class="global-mobile-nav-links">
-        <a href="/" id="mobile-nav-rides">
+        <a href="/" id="mobile-nav-home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
           </svg>
           Rides
         </a>
         <a href="/character-dining.html" id="mobile-nav-dining">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M12 14v7"></path>
-            <path d="M9 18h6"></path>
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
           </svg>
           Character Dining
         </a>
@@ -581,30 +728,32 @@
 <article class="article">
     <header class="article-header">
       <div class="article-meta">March 8, 2026 · Planning Guide</div>
-      <h1>How to Use Genie+ at Disney World 2026: The Complete Guide</h1>
+      <h1>How to Use Lightning Lane at Disney World 2026: The Complete Guide</h1>
     </header>
 
     <picture>
       <source srcset="how-to-use-genie-at-disney-world-2026.webp" type="image/webp">
-      <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Genie+ at Disney World 2026" 
+      <img src="how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Lightning Lane at Disney World 2026" 
            style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block;">
     </picture>
 
-    <p>Disney Genie+ can save you hours of waiting in line—or it can waste your money if you don't know how to use it. At $25-35 per person per day, this paid service isn't cheap, but when used correctly, it's the difference between riding 12 attractions and riding 4.</p>
+    <p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p>
 
-    <p>After multiple trips using Genie+ (and making plenty of mistakes along the way), I've cracked the code. This guide covers everything you need to know: how the system works, which rides to prioritize, and the exact strategy I use to maximize every dollar.</p>
+    <p>Disney Lightning Lane can save you hours of waiting in line—or it can waste your money if you don't know how to use it. At $25-35 per person per day, this paid service isn't cheap, but when used correctly, it's the difference between riding 12 attractions and riding 4.</p>
+
+    <p>After multiple trips using Lightning Lane (and making plenty of mistakes along the way), I've cracked the code. This guide covers everything you need to know: how the system works, which rides to prioritize, and the exact strategy I use to maximize every dollar.</p>
 
     <div class="inline-cta">
       💰 <strong>Save up to $50 on Disney tickets:</strong> Get discounted tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
     </div>
 
-    <h2>What Is Disney Genie+?</h2>
+    <h2>What Is Disney Lightning Lane?</h2>
 
-    <p>Genie+ is Disney's paid skip-the-line service. For a daily fee (varies by date, typically $25-35), you can book access to the Lightning Lane entrance at most attractions—bypassing the regular standby line.</p>
+    <p>Lightning Lane is Disney's paid skip-the-line service. For a daily fee (varies by date, typically $25-35), you can book access to the Lightning Lane entrance at most attractions—bypassing the regular standby line.</p>
 
     <h3>How It Works</h3>
     <ul>
-      <li><strong>Purchase:</strong> Buy Genie+ starting at midnight on your park day through the My Disney Experience app</li>
+      <li><strong>Purchase:</strong> Buy Lightning Lane starting at midnight on your park day through the My Disney Experience app</li>
       <li><strong>First booking:</strong> At 7:00 AM, you can make your first Lightning Lane selection</li>
       <li><strong>Book one at a time:</strong> After using a Lightning Lane (or 2 hours after booking), you can book another</li>
       <li><strong>Keep booking:</strong> Continue throughout the day as availability allows</li>
@@ -615,13 +764,13 @@
       <p>Set an alarm for 6:55 AM every park day. The best Lightning Lane times (especially for popular rides like Rise of the Resistance or Seven Dwarfs Mine Train) disappear within minutes of 7:00 AM.</p>
     </div>
 
-    <h2>Genie+ vs. Individual Lightning Lanes</h2>
+    <h2>Lightning Lane vs. Individual Lightning Lanes</h2>
 
     <p>This confuses everyone. There are actually <em>two</em> paid line-skipping systems at Disney World:</p>
 
-    <p><strong>Genie+ ($25-35/day):</strong> Covers most rides. Book one at a time, unlimited selections throughout the day.</p>
+    <p><strong>Lightning Lane ($25-35/day):</strong> Covers most rides. Book one at a time, unlimited selections throughout the day.</p>
 
-    <p><strong>Individual Lightning Lanes (pay per ride):</strong> For the most popular attractions, you pay separately—usually $10-25 per person per ride. These are NOT included with Genie+.</p>
+    <p><strong>Individual Lightning Lanes (pay per ride):</strong> For the most popular attractions, you pay separately—usually $10-25 per person per ride. These are NOT included with Lightning Lane.</p>
 
     <h3>Individual Lightning Lane Attractions (2026)</h3>
     <ul>
@@ -636,7 +785,7 @@
       <p>If you're only buying one Individual Lightning Lane, make it Rise of the Resistance at Hollywood Studios. The standby line regularly hits 120+ minutes, and this ride is genuinely spectacular—worth the splurge.</p>
     </div>
 
-    <h2>The Best Genie+ Strategy</h2>
+    <h2>The Best Lightning Lane Strategy</h2>
 
     <p>Here's the exact order I book Lightning Lanes to maximize value:</p>
 
@@ -658,14 +807,14 @@
 
     <div class="parent-tip">
       <strong>💡 Parent Tip:</strong>
-      <p>With kids, plan a midday break at your hotel. Book Lightning Lanes for 2:00 PM onward, head back to the park around 2:00 PM refreshed, and ride back-to-back with minimal waiting. This "stacking" strategy is how you maximize Genie+ value.</p>
+      <p>With kids, plan a midday break at your hotel. Book Lightning Lanes for 2:00 PM onward, head back to the park around 2:00 PM refreshed, and ride back-to-back with minimal waiting. This "stacking" strategy is how you maximize Lightning Lane value.</p>
     </div>
 
-    <h2>Is Genie+ Worth It?</h2>
+    <h2>Is Lightning Lane Worth It?</h2>
 
-    <p>For a family of four, Genie+ costs $100-140 per day. That's real money. Here's when it's worth it:</p>
+    <p>For a family of four, Lightning Lane costs $100-140 per day. That's real money. Here's when it's worth it:</p>
 
-    <h3>Definitely Buy Genie+ If:</h3>
+    <h3>Definitely Buy Lightning Lane If:</h3>
     <ul>
       <li>You're visiting during a busy season (spring break, summer, holidays)</li>
       <li>You only have one day per park and want to maximize rides</li>
@@ -673,7 +822,7 @@
       <li>You're at Hollywood Studios (the lines here are brutal without it)</li>
     </ul>
 
-    <h3>You Can Skip Genie+ If:</h3>
+    <h3>You Can Skip Lightning Lane If:</h3>
     <ul>
       <li>You're visiting in January, February, or early September (low crowds)</li>
       <li>You have multiple days per park and can use early entry</li>
@@ -681,34 +830,35 @@
       <li>You're primarily doing shows and dining experiences</li>
     </ul>
 
-    <h2>Common Genie+ Mistakes</h2>
+    <h2>Common Lightning Lane Mistakes</h2>
 
     <div class="tips-box">
       <h3>🚫 Don't Make These Mistakes</h3>
       <ul>
-        <li><strong>Booking at park opening:</strong> Don't waste Genie+ on rides with short morning lines. Use standby for low-wait rides before 11:00 AM.</li>
+        <li><strong>Booking at park opening:</strong> Don't waste Lightning Lane on rides with short morning lines. Use standby for low-wait rides before 11:00 AM.</li>
         <li><strong>Forgetting to book:</strong> Set phone reminders. The 2-hour rule resets even if you haven't used your current Lightning Lane.</li>
         <li><strong>Booking too early:</strong> If you book a 9:00 AM return time, you can't book again until you tap in. Late morning bookings slow down your stacking.</li>
         <li><strong>Not checking for drops:</strong> Lightning Lane times occasionally "drop" throughout the day. Keep checking the app for better times.</li>
-        <li><strong>Buying for everyone:</strong> If you have a toddler who won't ride much, don't buy Genie+ for them. They can accompany parents through Lightning Lanes without their own booking.</li>
+        <li><strong>Dead phone battery:</strong> Lightning Lane runs entirely through the My Disney Experience app. A <a href="https://www.amazon.com/dp/B0CZ9LV3H2?tag=planyourpark-20" target="_blank" rel="noopener">portable charger</a> is non-negotiable—your phone dies, your Lightning Lane access dies with it.</li>
+        <li><strong>Buying for everyone:</strong> If you have a toddler who won't ride much, don't buy Lightning Lane for them. They can accompany parents through Lightning Lanes without their own booking.</li>
       </ul>
     </div>
 
-    <h2>Genie+ by Park: What to Prioritize</h2>
+    <h2>Lightning Lane by Park: What to Prioritize</h2>
 
     <h3>Magic Kingdom</h3>
-    <p>Best value for Genie+ because there are so many included attractions. Prioritize: Jungle Cruise, Peter Pan's Flight, Big Thunder Mountain, Haunted Mansion, and Buzz Lightyear.</p>
+    <p>Best value for Lightning Lane because there are so many included attractions. Prioritize: Jungle Cruise, Peter Pan's Flight, Big Thunder Mountain, Haunted Mansion, and Buzz Lightyear.</p>
 
     <h3>EPCOT</h3>
-    <p>Moderate value. Most rides here have manageable waits. Prioritize: Remy's Ratatouille Adventure, Frozen Ever After, and Test Track. Skip Genie+ if it's a low-crowd day.</p>
+    <p>Moderate value. Most rides here have manageable waits. Prioritize: Remy's Ratatouille Adventure, Frozen Ever After, and Test Track. Skip Lightning Lane if it's a low-crowd day.</p>
 
     <h3>Hollywood Studios</h3>
     <p>Essential. The lines here are consistently long. Prioritize: Slinky Dog Dash, Millennium Falcon, Toy Story Mania, and Tower of Terror. Buy Individual Lightning Lane for Rise of the Resistance separately.</p>
 
     <h3>Animal Kingdom</h3>
-    <p>Lowest Genie+ value. Most families can do everything without it. If you buy, prioritize: Na'vi River Journey and Kilimanjaro Safaris. Buy Individual Lightning Lane for Flight of Passage separately.</p>
+    <p>Lowest Lightning Lane value. Most families can do everything without it. If you buy, prioritize: Na'vi River Journey and Kilimanjaro Safaris. Buy Individual Lightning Lane for Flight of Passage separately.</p>
 
-    <p>Master Genie+ and you'll ride twice as much while waiting half as long. The key is that 7:00 AM alarm and relentless stacking throughout the day. Happy skipping!</p>
+    <p>Master Lightning Lane and you'll ride twice as much while waiting half as long. The key is that 7:00 AM alarm and relentless stacking throughout the day. Happy skipping!</p>
 
     <section class="related-posts">
       <h3>You Might Also Like</h3>
@@ -745,7 +895,7 @@
     </section>
 
     <section class="qa-section">
-      <h3>Questions About Genie+?</h3>
+      <h3>Questions About Lightning Lane?</h3>
       <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
       
       <div class="qa-form">
@@ -754,7 +904,7 @@
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email (not published)" required>
           </div>
-          <textarea name="question" placeholder="What's your question about Genie+?" rows="4" required></textarea>
+          <textarea name="question" placeholder="What's your question about Lightning Lane?" rows="4" required></textarea>
           <input type="hidden" name="post" value="genie-plus-guide">
           <button type="submit">Ask Question</button>
         </form>
@@ -762,8 +912,8 @@
 
       <div class="qa-list">
         <div class="qa-item">
-          <div class="qa-question"><strong>Q:</strong> Can I buy Genie+ for just one person in my group?</div>
-          <div class="qa-answer"><strong>A:</strong> Yes, but everyone who wants to use Lightning Lane together needs their own Genie+. If only one person has it, they can ride alone using Lightning Lane while others wait in standby.</div>
+          <div class="qa-question"><strong>Q:</strong> Can I buy Lightning Lane for just one person in my group?</div>
+          <div class="qa-answer"><strong>A:</strong> Yes, but everyone who wants to use Lightning Lane together needs their own Lightning Lane. If only one person has it, they can ride alone using Lightning Lane while others wait in standby.</div>
         </div>
         <div class="qa-item">
           <div class="qa-question"><strong>Q:</strong> What happens if I miss my Lightning Lane return window?</div>
@@ -774,7 +924,7 @@
 
     <div class="bottom-cta">
       <h3>Ready to Book Your Disney Trip?</h3>
-      <p>Lock in discounted Disney World tickets and save up to $50 per person. The best Genie+ strategy starts with having your tickets ready—book now to secure your spot.</p>
+      <p>Lock in discounted Disney World tickets and save up to $50 per person. The best Lightning Lane strategy starts with having your tickets ready—book now to secure your spot.</p>
       <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
     </div>
   </article>
@@ -782,7 +932,7 @@
   <footer class="footer">
     <p>© 2026 PlanYourPark.com · Helping families plan better Disney vacations</p>
   </footer>
-<script src="/scripts/global-nav.js"></script>
+<script src="/scripts/global-nav.js?v=3"></script>
 <script>GlobalNav.init('blog');</script>
 </body>
 </html>
