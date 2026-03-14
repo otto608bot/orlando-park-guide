@@ -54,7 +54,12 @@ async function generateImage() {
       const imageBytes = generatedImage.image.imageBytes;
       const buffer = Buffer.from(imageBytes, 'base64');
       
-      const outputPath = path.join(BLOG_DIR, outputName);
+      // Support absolute/relative paths directly, or fall back to BLOG_DIR
+      const outputPath = path.isAbsolute(outputName) || outputName.includes('/') 
+        ? path.resolve(outputName) 
+        : path.join(BLOG_DIR, outputName);
+      // Ensure parent directory exists
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
       fs.writeFileSync(outputPath, buffer);
       
       const sizeKB = Math.round(buffer.length / 1024);

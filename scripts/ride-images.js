@@ -124,7 +124,19 @@ const rideImages = {
   'll-fairy-tale-brook': '/images/rides/ll-fairy-tale-brook.jpg',
   'll-merlin': '/images/rides/ll-merlin.jpg',
   'll-lost-kingdom': '/images/rides/ll-lost-kingdom.jpg',
-  'll-ninjago': '/images/rides/ll-ninjago.jpg'
+  'll-ninjago': '/images/rides/ll-ninjago.jpg',
+  
+  // EPIC UNIVERSE (10 rides)
+  'eu-stardust': '/images/rides/eu-stardust.jpg',
+  'eu-constellation': '/images/rides/eu-constellation.jpg',
+  'eu-battle-ministry': '/images/rides/eu-battle-ministry.jpg',
+  'eu-monsters': '/images/rides/eu-monsters.jpg',
+  'eu-werewolf': '/images/rides/eu-werewolf.jpg',
+  'eu-mario-kart': '/images/rides/eu-mario-kart.jpg',
+  'eu-mine-cart': '/images/rides/eu-mine-cart.jpg',
+  'eu-hiccup': '/images/rides/eu-hiccup.jpg',
+  'eu-fyre-drill': '/images/rides/eu-fyre-drill.jpg',
+  'eu-yoshi': '/images/rides/eu-yoshi.jpg'
 };
 
 // Default image for rides without specific images
