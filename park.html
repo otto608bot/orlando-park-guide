@@ -1851,7 +1851,7 @@
 
   <script src="data/rides.js?v=2"></script>
   <script src="data/character-meal-data.js?v=2"></script>
-  <script src="scripts/ride-images.js?v=2"></script>
+  <script src="scripts/ride-images.js?v=3"></script>
   <script>
     // ============================================
     // PARK CONFIGURATION
@@ -2381,7 +2381,7 @@
         
         // Get image for this ride
         const imageUrl = parkRideImages[ride.id] || parkDefaultImage;
-        const imageHtml = `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" decoding="async" width="400" height="300" onerror="this.src='${parkDefaultImage}'"></div>`;
+        const imageHtml = `<div class="ride-card-image"><img src="${imageUrl}" alt="${ride.name}" loading="lazy" decoding="async" width="400" height="300" onerror="this.src='${parkDefaultImage}'"></div>`;
         
         return `
           <div class="ride-card ${isUnavailable ? 'unavailable' : ''}" onclick="openRideModal('${ride.id}')">
@@ -2740,6 +2740,6 @@
     </div>
   </div>
   
-  <script src="scripts/ride-modal.js?v=2"></script>
+  <script src="scripts/ride-modal.js?v=3"></script>
 </body>
 </html>

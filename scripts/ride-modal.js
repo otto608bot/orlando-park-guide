@@ -154,7 +154,7 @@ function openRideModal(rideId) {
   // Set ride image
   const imgContainer = document.querySelector('.ride-modal-image-placeholder');
   const imagePath = modalRideImages[ride.id] || modalDefaultImage;
-  imgContainer.innerHTML = `<img src="${imagePath}" alt="${ride.name}" decoding="async" width="120" height="120" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md,12px)" onerror="this.src='${modalDefaultImage}'">`;
+  imgContainer.innerHTML = `<img src="${imagePath}" alt="${ride.name}" loading="lazy" decoding="async" width="120" height="120" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md,12px)" onerror="this.src='${modalDefaultImage}'">`;
   
   // Best time
   const bestTime = bestTimeForRide[ride.type] || 'Morning';
