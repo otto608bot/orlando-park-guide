@@ -3,9 +3,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setInputDirectory('src');
   eleventyConfig.setOutputDirectory('_site');
 
-  // Passthrough copy for CSS and image assets
-  eleventyConfig.addPassthroughCopy('src/**/*.css');
-  eleventyConfig.addPassthroughCopy('src/**/*.{png,jpg,jpeg,gif,webp,svg}');
+  // Passthrough copy for CSS, Javascript, and all image assets
+  eleventyConfig.addPassthroughCopy('src/styles');
+  eleventyConfig.addPassthroughCopy('src/app.js');
+  eleventyConfig.addPassthroughCopy('src/**/*.png');
+  eleventyConfig.addPassthroughCopy('src/**/*.jpg');
+  eleventyConfig.addPassthroughCopy('src/**/*.jpeg');
+  eleventyConfig.addPassthroughCopy('src/**/*.gif');
+  eleventyConfig.addPassthroughCopy('src/**/*.webp');
+  eleventyConfig.addPassthroughCopy('src/**/*.svg');
 
   // Return configuration options
   return {
