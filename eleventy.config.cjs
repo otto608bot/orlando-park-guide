@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/**/*.webp');
   eleventyConfig.addPassthroughCopy('src/**/*.svg');
 
+  // Copy root directories that are outside src/
+  eleventyConfig.addPassthroughCopy({ 'images': 'images' });
+  eleventyConfig.addPassthroughCopy({ 'scripts': 'scripts' });
+  eleventyConfig.addPassthroughCopy({ 'data': 'data' });
+
   // Return configuration options
   return {
     dir: {
