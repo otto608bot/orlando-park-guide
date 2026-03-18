@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "_site"
 
 [context.production]
   command = "echo 'Production deploy'"

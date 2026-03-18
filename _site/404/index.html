@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Park - 404</title>
+  <meta name="description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://planyourpark.com/404/">
+  <meta property="og:title" content="Plan Your Park - 404">
+  <meta property="og:description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  <meta property="og:image" content="https://planyourpark.com/logo-full.png">
+  <meta property="og:site_name" content="Plan Your Park">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://planyourpark.com/404/">
+  <meta property="twitter:title" content="Plan Your Park - 404">
+  <meta property="twitter:description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  <meta property="twitter:image" content="https://planyourpark.com/logo-full.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://planyourpark.com/404/">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJHPEWNBLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJHPEWNBLS');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6349270729296966" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/ride-modal.css?v=2">
+  
+  <style>
+    :root {
+      /* Brand Colors */
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      
+      /* Typography */
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Spacing */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 3rem;
+      
+      /* Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-orange: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    /* Layout Container */
+    .layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: var(--space-xl);
+      padding: var(--space-xl);
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .sidebar-section {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .sidebar-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: var(--space-md);
+    }
+    
+    /* Height Filter - Visual Ruler */
+    .height-filter {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .height-display {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--action-orange);
+      text-align: center;
+      margin-bottom: var(--space-md);
+    }
+    
+    .height-display span {
+      font-size: 1rem;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    
+    .height-ruler {
+      position: relative;
+      height: 40px;
+      background: linear-gradient(to right, var(--splash-teal) 0%, var(--primary-blue) 50%, var(--action-orange) 100%);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .height-ruler-marks {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 0.625rem;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border-radius: var(--radius-full);
+      outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      border: 3px solid var(--action-orange);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      border: 3px solid var(--action-orange);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* Filter Chips */
+    .filter-chips {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    .filter-chip {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      background: var(--gray-100);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-align: left;
+    }
+    
+    .filter-chip:hover {
+      border-color: var(--gray-300);
+      background: var(--gray-200);
+    }
+    
+    .filter-chip.active {
+      background: rgba(243, 112, 33, 0.1);
+      border-color: var(--action-orange);
+      color: var(--action-orange);
+    }
+    
+    .filter-chip svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    
+    /* Ticket Cards */
+    .ticket-cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    .ticket-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ticket-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ticket-card.disney {
+      background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+    }
+    
+    .ticket-card.universal {
+      background: linear-gradient(135deg, #c01c28 0%, #e66100 100%);
+    }
+    
+    .ticket-card.seaworld {
+      background: linear-gradient(135deg, #26a269 0%, #1c71d8 100%);
+    }
+    
+    .ticket-card.legoland {
+      background: linear-gradient(135deg, #e3000f 0%, #f5c211 100%);
+    }
+    
+    .ticket-card img {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+    }
+    
+    /* Main Content */
+    .main {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      padding: var(--space-lg) 0;
+    }
+    
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: var(--space-xs);
+      color: var(--base-dark);
+    }
+    
+    .hero-title span {
+      color: var(--action-orange);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .total-counter {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--white);
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--radius-full);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .total-counter .label {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    
+    .total-counter .count {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--action-orange);
+    }
+    
+    .total-counter .count.total {
+      color: var(--gray-500);
+      font-size: 1.25rem;
+    }
+    
+    /* Results Bar */
+    .results-bar {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+      background: var(--white);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .results-total {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    
+    .results-total .count {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--action-orange);
+    }
+    
+    .results-total .count.total {
+      color: var(--gray-500);
+      font-size: 1.5rem;
+    }
+    
+    .results-total .label {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    
+    .parent-breakdown {
+      display: flex;
+      gap: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .parent-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .gauge-icon {
+      width: 40px;
+      height: 24px;
+    }
+    
+    .parent-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray-600);
+    }
+    
+    .parent-fraction {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--base-dark);
+    }
+    
+    @media (max-width: 640px) {
+      .parent-breakdown {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }
+    
+    /* Park Grid */
+    .parks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    /* Park Cards */
+    .park-card {
+      display: block;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .park-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gray-300);
+    }
+    
+    .park-card-image {
+      height: 140px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .park-card-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+    }
+    
+    .park-card-content {
+      padding: var(--space-lg);
+    }
+    
+    .park-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .park-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin: 0;
+    }
+    
+    .park-card .resort {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+    }
+    
+    .ride-count-badge {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--action-orange);
+    }
+    
+    .ride-count-badge span {
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      font-weight: 600;
+    }
+    
+    .ride-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    
+    .ride-chip {
+      font-size: 0.75rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      color: var(--gray-600);
+      white-space: nowrap;
+    }
+    
+    .more-rides {
+      font-size: 0.75rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: transparent;
+      border: 1px dashed var(--gray-300);
+      border-radius: var(--radius-sm);
+      color: var(--gray-400);
+    }
+    
+    /* Amazon Ad Section */
+    .amazon-ad-section {
+      min-height: 250px;
+    }
+    
+    .amazon-ad-section iframe,
+    .amazon-ad-section div[id^="amzn"] {
+      width: 100% !important;
+      max-width: 100%;
+    }
+    
+    /* Amazon Products Section */
+    .amazon-products .product-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .amazon-products .product-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--base-dark);
+      font-size: 0.8125rem;
+      transition: background 0.2s;
+    }
+    
+    .amazon-products .product-link:hover {
+      background: var(--gray-200);
+    }
+    
+    .amazon-products .product-link span {
+      font-size: 1.25rem;
+    }
+    
+    /* Park Detail View */
+    .park-detail {
+      display: none;
+    }
+    
+    .park-detail.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-full);
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      cursor: pointer;
+      margin-bottom: var(--space-lg);
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+      font-weight: 500;
+    }
+    
+    .back-btn:hover {
+      background: var(--gray-100);
+      color: var(--base-dark);
+    }
+    
+    .park-hero {
+      padding: var(--space-2xl);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-xl);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+    
+    .park-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      border-radius: var(--radius-xl);
+    }
+    
+    .park-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .park-hero .resort {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .park-hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .stats-row {
+      display: flex;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+    
+    .affiliate-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background: var(--action-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-orange);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    
+    .affiliate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+    }
+    
+    /* Ride Grid */
+    .ride-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    /* Ride Cards */
+    .ride-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .ride-card:hover {
+      border-color: var(--gray-300);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .ride-card.unavailable {
+      opacity: 0.6;
+      background: var(--gray-100);
+    }
+    
+    .ride-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-sm);
+      gap: var(--space-sm);
+    }
+    
+    .ride-name {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      flex: 1;
+    }
+    
+    .ride-card.unavailable .ride-name {
+      color: var(--gray-500);
+    }
+    
+    .ride-type {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      background: var(--gray-100);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    .unavailable-badge {
+      font-size: 0.7rem;
+      padding: var(--space-xs) var(--space-sm);
+      background: rgba(192, 28, 40, 0.1);
+      color: #c01c28;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
+    .ride-description {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-bottom: var(--space-md);
+      line-height: 1.5;
+    }
+    
+    .ride-card.unavailable .ride-description {
+      color: var(--gray-400);
+    }
+    
+    .ride-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+    
+    .ride-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    
+    .tag {
+      font-size: 0.75rem;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+    
+    .tag-height {
+      background: rgba(243, 112, 33, 0.1);
+      color: var(--action-orange);
+    }
+    
+    .tag-pregnancy {
+      background: rgba(56, 178, 172, 0.1);
+      color: var(--splash-teal);
+    }
+    
+    .tag-wheelchair {
+      background: rgba(74, 157, 232, 0.1);
+      color: var(--primary-blue);
+    }
+    
+    .tag-sensory-dark {
+      background: rgba(90, 79, 207, 0.1);
+      color: var(--deep-purple);
+    }
+    
+    .tag-sensory-loud,
+    .tag-sensory-sudden,
+    .tag-sensory-strobe {
+      background: rgba(243, 112, 33, 0.1);
+      color: var(--action-orange);
+    }
+    
+    .tag-sensory-enclosed {
+      background: rgba(45, 55, 72, 0.1);
+      color: var(--base-dark);
+    }
+    
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: var(--space-2xl);
+      color: var(--gray-500);
+    }
+    
+    .empty-state-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-lg);
+      opacity: 0.5;
+    }
+    
+    .empty-state h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+      color: var(--base-dark);
+    }
+    
+    /* Mobile Bottom Sheet */
+    .mobile-filter-sheet {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0,0,0,0.5);
+    }
+    
+    .mobile-filter-sheet.active {
+      display: block;
+    }
+    
+    .mobile-filter-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      padding: var(--space-lg);
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    .mobile-filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .mobile-filter-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    
+    .close-sheet-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--gray-500);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .layout {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        display: none;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .parks-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      
+      .ride-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .layout {
+        padding: var(--space-lg);
+      }
+      
+      .hero {
+        padding: var(--space-lg) 0;
+      }
+      
+      .hero-title {
+        font-size: 1.75rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .park-hero {
+        padding: var(--space-xl);
+      }
+      
+      .park-hero h2 {
+        font-size: 1.75rem;
+      }
+      
+      .stats-row {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+      
+      .parks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Plan Your Park",
+  "url": "https://planyourpark.com",
+  "description": "Plan your perfect Orlando theme park vacation. Rides, tips, and guides for Disney World, Universal Orlando, SeaWorld, and more.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://planyourpark.com/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Global Navigation Component -->
+  <style>
+    /* Global Navigation Styles */
+    .global-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    .global-header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .global-logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .global-logo img {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    .global-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    
+    .global-nav a {
+      color: #718096;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    
+    .global-nav a:hover,
+    .global-nav a.active {
+      color: #F37021;
+    }
+    
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-nav-section {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #E2E8F0;
+    }
+    
+    .mobile-nav-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .mobile-nav-section-header:hover {
+      background: #F7FAFC;
+    }
+    
+    .mobile-nav-section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #A0AEC0;
+    }
+    
+    .mobile-nav-section-toggle {
+      width: 20px;
+      height: 20px;
+      color: #A0AEC0;
+      transition: transform 0.2s;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-toggle {
+      transform: rotate(180deg);
+    }
+    
+    .mobile-nav-section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .mobile-nav-section.expanded .mobile-nav-section-content {
+      max-height: 500px;
+    }
+    
+    .mobile-nav-section a {
+      padding-left: 1.5rem;
+      font-size: 0.9375rem;
+    }
+    
+    /* Mobile Menu Button */
+    .global-mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #718096;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-menu-btn:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-menu-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Mobile Filter Button */
+    .global-mobile-filter-btn {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #F37021;
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    /* Mobile Navigation Sheet */
+    .global-mobile-nav-sheet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .global-mobile-nav-sheet.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .global-mobile-nav-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100%;
+      background: #FFFFFF;
+      padding: 1.5rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .global-mobile-nav-sheet.active .global-mobile-nav-content {
+      transform: translateX(0);
+    }
+    
+    .global-mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    
+    .global-mobile-nav-header h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .global-close-nav-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #718096;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+    
+    .global-mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .global-mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.874rem 1rem;
+      color: #2D3748;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .global-mobile-nav-links a:hover {
+      background: #F7FAFC;
+    }
+    
+    .global-mobile-nav-links a.active {
+      color: #F37021;
+      background: #F7FAFC;
+    }
+    
+    /* Mobile Breakpoint */
+    @media (max-width: 1024px) {
+      .global-header-content {
+        padding: 0.75rem 1rem;
+      }
+      
+      .global-mobile-menu-btn {
+        display: flex;
+      }
+      
+      .global-nav {
+        display: none;
+      }
+      
+      .global-logo img {
+        height: 48px;
+      }
+    }
+    
+    @media (min-width: 1025px) {
+      .global-mobile-menu-btn,
+      .global-mobile-nav-sheet {
+        display: none !important;
+      }
+      
+      .global-nav {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      
+      <nav class="global-nav">
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
+      </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  
+
+
+  <!-- Email Capture Section -->
+  <section class="email-section">
+    <div class="email-section-content">
+      <h3>🏰 Get Weekly Disney Tips</h3>
+      <p>Money-saving hacks, ride guides, and insider secrets delivered to your inbox.</p>
+      <form class="email-form-inline" action="https://formspree.io/f/xpqjewvb" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <input type="hidden" name="source" value="homepage">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="email-note">No spam. Unsubscribe anytime. Join 2,000+ parents.</p>
+    </div>
+  </section>
+
+  <style>
+    .email-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+    }
+    .email-section-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+    .email-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .email-section p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    .email-form-inline {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .email-form-inline input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .email-form-inline button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form-inline button:hover {
+      background: #e05a0f;
+    }
+    .email-note {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      .email-form-inline {
+        flex-direction: column;
+        align-items: center;
+      }
+      .email-form-inline input[type="email"] {
+        width: 100%;
+        max-width: none;
+      }
+      .email-form-inline button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- Shared Filter System -->
+  <script src="/scripts/filter-system.js?v=2"></script>
+  
+  <script src="/app.js?v=10"></script>
+  
+  <!-- Filter System Integration -->
+  <script>
+    (function() {
+      // Initialize FilterSystem and sync with app.js state
+      FilterSystem.init(function(filterState) {
+        // Sync FilterSystem state to app.js state
+        if (typeof state !== 'undefined' && state.filters) {
+          state.filters.height = filterState.height;
+          state.filters.pregnancy = filterState.pregnancy;
+          // Convert 'WAV'/'any' to boolean for app.js
+          state.filters.wheelchair = filterState.wheelchair === 'WAV';
+          // Convert sensory object to boolean for app.js (true if any sensory filter is active)
+          state.filters.sensory = Object.values(filterState.sensory).some(v => v);
+          
+          // Trigger re-render
+          if (typeof render === 'function') render();
+        }
+      });
+      
+      // Wrap app.js toggleFilter to sync back to FilterSystem
+      const originalToggleFilter = window.toggleFilter;
+      window.toggleFilter = function(type) {
+        // Call original function
+        if (originalToggleFilter) originalToggleFilter(type);
+        
+        // Sync to FilterSystem
+        if (type === 'pregnancy') {
+          FilterSystem.togglePregnancy();
+        } else if (type === 'wheelchair') {
+          // Toggle between 'any' and 'WAV'
+          const current = FilterSystem.getState().wheelchair;
+          FilterSystem.setWheelchair(current === 'WAV' ? 'any' : 'WAV');
+        } else if (type === 'sensory') {
+          FilterSystem.toggleAllSensory();
+        }
+      };
+      
+      // Sync initial state from FilterSystem to app.js
+      const initialState = FilterSystem.getState();
+      if (typeof state !== 'undefined' && state.filters) {
+        state.filters.height = initialState.height;
+        state.filters.pregnancy = initialState.pregnancy;
+        state.filters.wheelchair = initialState.wheelchair === 'WAV';
+        state.filters.sensory = Object.values(initialState.sensory).some(v => v);
+      }
+    })();
+  </script>
+  
+  <!-- Global Navigation Manager -->
+  <script>
+    // Global Navigation Manager
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        // Show filter button on pages that need it (mobile only)
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn && window.innerWidth <= 1024) {
+            filterBtn.style.display = 'flex';
+          }
+        }
+      },
+      
+      setActiveNav(page) {
+        // Desktop nav
+        const navIds = {
+          'home': 'nav-home',
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        // Mobile nav
+        const mobileNavIds = {
+          'home': 'mobile-nav-home',
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        // Set active class
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      openFilters() {
+        // Open the filter sheet directly
+        const sheet = document.getElementById('filter-mobile-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        // Also dispatch event for any listeners
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        // Close the filter sheet directly
+        const sheet = document.getElementById('filter-mobile-sheet');
+        if (sheet) {
+          sheet.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        // Also dispatch event for any listeners
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      }
+    };
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    // Toggle mobile parks section
+    function toggleMobileParksSection() {
+      const section = document.getElementById('mobile-parks-section');
+      if (section) {
+        section.classList.toggle('expanded');
+      }
+    }
+    window.toggleMobileParksSection = toggleMobileParksSection;
+    
+    // Initialize for home page
+    GlobalNav.init('home');
+    
+    // Handle resize to show/hide filter button
+    window.addEventListener('resize', function() {
+      const filterBtn = document.getElementById('global-filter-btn');
+      if (filterBtn) {
+        filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+      }
+    });
+    
+    // Connect global filter events to rides page filter functions
+    document.addEventListener('global:openFilters', function() {
+      const sheet = document.getElementById('filter-mobile-sheet');
+      if (sheet) {
+        sheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    
+    document.addEventListener('global:closeFilters', function() {
+      const sheet = document.getElementById('filter-mobile-sheet');
+      if (sheet) {
+        sheet.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
