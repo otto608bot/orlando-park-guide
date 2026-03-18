@@ -1792,15 +1792,28 @@ const elements = {
 
 // Initialize
 function init() {
-  setupEventListeners();
-  render();
+  console.log('App initialization started');
+  try {
+    setupEventListeners();
+    console.log('Event listeners set up');
+    render();
+    console.log('Render completed');
+  } catch (error) {
+    console.error('Error during initialization:', error);
+  }
 }
 
 // Event listeners
 function setupEventListeners() {
-  elements.heightSlider.addEventListener('input', handleHeightChange);
+  if (elements.heightSlider) {
+    elements.heightSlider.addEventListener('input', handleHeightChange);
+  } else {
+    console.warn('Height slider not found in DOM');
+  }
   if (elements.mobileHeightSlider) {
     elements.mobileHeightSlider.addEventListener('input', handleMobileHeightChange);
+  } else {
+    console.warn('Mobile height slider not found in DOM');
   }
 }
 
@@ -2064,20 +2077,14 @@ function renderParksGrid() {
       'EPCOT': 'epcot',
       'Hollywood Studios': 'hollywood-studios',
       'Animal Kingdom': 'animal-kingdom',
-      'Universal Studios Florida': 'universal-studios',
+      'Universal Studios Florida': 'universal-studios-florida',
       'Islands of Adventure': 'islands-of-adventure',
       'Epic Universe': 'epic-universe',
-      'SeaWorld Orlando': 'seaworld',
-      'LEGOLAND Florida': 'legoland'
+      'SeaWorld Orlando': 'seaworld-orlando',
+      'LEGOLAND Florida': 'legoland-florida'
     };
     const parkSlug = parkSlugMap[parkName] || parkName.toLowerCase().replace(/ /g, '-');
-    const params = new URLSearchParams();
-    params.set('park', parkSlug);
-    if (state.filters.height > 0) params.set('height', state.filters.height);
-    if (state.filters.pregnancy) params.set('pregnant', 'true');
-    if (state.filters.wheelchair) params.set('wheelchair', 'WAV');
-    if (state.filters.sensory) params.set('sensory', 'dark,loud,sudden,enclosed,strobe');
-    const parkUrl = '/park.html?' + params.toString();
+    const parkUrl = '/' + parkSlug + '/';
 
     return `
       <a href="${parkUrl}" class="park-card">
