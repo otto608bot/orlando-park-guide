@@ -10,23 +10,28 @@
 
 [[redirects]]
   from = "/blog/*"
-  to = "/blog/:splat.html"
+  to = "/blog/:splat/"
   status = 200
   force = true
 
 [[redirects]]
   from = "/character-dining"
-  to = "/character-dining.html"
+  to = "/character-dining/"
   status = 301
 
 [[redirects]]
   from = "/deals"
-  to = "/deals.html"
+  to = "/deals/"
   status = 301
 
 [[redirects]]
   from = "/park"
-  to = "/park.html"
+  to = "/park/"
+  status = 301
+
+[[redirects]]
+  from = "/rides"
+  to = "/rides/"
   status = 301
 
 [[redirects]]
