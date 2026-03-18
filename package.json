@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8080",
-    "serve": "npx serve ."
+    "serve": "npx serve .",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [
     "orlando",
