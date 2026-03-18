@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com 'unsafe-inline'; frame-src 'self' https://app.netlify.com;">
   <title>{% if title %}{{ title }}{% else %}Plan Your Park - Orlando Ride Guide{% endif %}</title>
-  <meta name="description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Plan your perfect Orlando theme park vacation with guides for Disney World, Universal Orlando, SeaWorld, and more.{% endif %}">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://planyourpark.com{% if page.url %}{{ page.url }}{% endif %}">
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}Plan Your Park - Orlando Ride Guide{% endif %}">
-  <meta property="og:description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Plan your perfect Orlando theme park vacation with guides for Disney World, Universal Orlando, SeaWorld, and more.{% endif %}">
   <meta property="og:image" content="https://planyourpark.com/logo-full.png">
   <meta property="og:site_name" content="Plan Your Park">
   
@@ -18,7 +19,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://planyourpark.com{% if page.url %}{{ page.url }}{% endif %}">
   <meta property="twitter:title" content="{% if title %}{{ title }}{% else %}Plan Your Park - Orlando Ride Guide{% endif %}">
-  <meta property="twitter:description" content="Find perfect rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
+  <meta property="twitter:description" content="{% if description %}{{ description }}{% else %}Plan your perfect Orlando theme park vacation with guides for Disney World, Universal Orlando, SeaWorld, and more.{% endif %}">
   <meta property="twitter:image" content="https://planyourpark.com/logo-full.png">
   
   <!-- Canonical URL -->
@@ -1377,14 +1378,14 @@
             </svg>
           </button>
           <div class="nav-dropdown-menu" id="parks-dropdown">
-            <a href="/park/?park=magic-kingdom">Magic Kingdom</a>
-            <a href="/park/?park=epcot">EPCOT</a>
-            <a href="/park/?park=hollywood-studios">Hollywood Studios</a>
-            <a href="/park/?park=animal-kingdom">Animal Kingdom</a>
-            <a href="/park/?park=universal-studios">Universal Studios Florida</a>
-            <a href="/park/?park=islands-of-adventure">Islands of Adventure</a>
-            <a href="/park/?park=seaworld">SeaWorld Orlando</a>
-            <a href="/park/?park=legoland">LEGOLAND Florida</a>
+            <a href="/magic-kingdom/">Magic Kingdom</a>
+            <a href="/epcot/">EPCOT</a>
+            <a href="/hollywood-studios/">Hollywood Studios</a>
+            <a href="/animal-kingdom/">Animal Kingdom</a>
+            <a href="/universal-studios-florida/">Universal Studios Florida</a>
+            <a href="/islands-of-adventure/">Islands of Adventure</a>
+            <a href="/seaworld-orlando/">SeaWorld Orlando</a>
+            <a href="/legoland-florida/">LEGOLAND Florida</a>
           </div>
         </div>
         <a href="/rides.html" id="nav-rides">Rides</a>
@@ -1426,14 +1427,14 @@
             </svg>
           </div>
           <div class="mobile-nav-section-content">
-            <a href="/park/?park=magic-kingdom">Magic Kingdom</a>
-            <a href="/park/?park=epcot">EPCOT</a>
-            <a href="/park/?park=hollywood-studios">Hollywood Studios</a>
-            <a href="/park/?park=animal-kingdom">Animal Kingdom</a>
-            <a href="/park/?park=universal-studios">Universal Studios Florida</a>
-            <a href="/park/?park=islands-of-adventure">Islands of Adventure</a>
-            <a href="/park/?park=seaworld">SeaWorld Orlando</a>
-            <a href="/park/?park=legoland">LEGOLAND Florida</a>
+            <a href="/magic-kingdom/">Magic Kingdom</a>
+            <a href="/epcot/">EPCOT</a>
+            <a href="/hollywood-studios/">Hollywood Studios</a>
+            <a href="/animal-kingdom/">Animal Kingdom</a>
+            <a href="/universal-studios-florida/">Universal Studios Florida</a>
+            <a href="/islands-of-adventure/">Islands of Adventure</a>
+            <a href="/seaworld-orlando/">SeaWorld Orlando</a>
+            <a href="/legoland-florida/">LEGOLAND Florida</a>
           </div>
         </div>
         <a href="/rides.html" id="mobile-nav-rides">
@@ -1471,12 +1472,36 @@
 
   {{ content | safe }}
 
+  <!-- Fallback Content for Non-Home Pages -->
+  <div id="fallback-content" style="display: none; max-width: 800px; margin: 0 auto; padding: 20px;">
+    <h2>Welcome to Plan Your Park</h2>
+    <p>If you're seeing this message, the dynamic content for this page is not loading correctly. Please use the navigation menu to explore our park guides and resources.</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/rides/">Rides</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <p>We apologize for the inconvenience. For the full experience, please ensure JavaScript is enabled in your browser.</p>
+  </div>
+  <script>
+    // Show fallback content if main content elements are not found or populated
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var mainContent = document.querySelector('#leaderboard-view, #park-detail-view, .article-container');
+        var fallback = document.getElementById('fallback-content');
+        if (!mainContent || mainContent.innerHTML.trim() === '') {
+          if (fallback) fallback.style.display = 'block';
+        }
+      }, 1000); // Delay to allow dynamic content to load
+    });
+  </script>
+
   <!-- Email Capture Section -->
   <section class="email-section">
     <div class="email-section-content">
       <h3>🏰 Get Weekly Disney Tips</h3>
       <p>Money-saving hacks, ride guides, and insider secrets delivered to your inbox.</p>
-      <form class="email-form-inline" action="https://kit.example.com/submit" method="POST">
+      <form class="email-form-inline" action="https://kit.example.com/submit" method="POST"><!-- Replace with actual Kit endpoint during deployment -->
         <input type="email" name="email" placeholder="your@email.com" required>
         <input type="hidden" name="source" value="homepage">
         <button type="submit">Subscribe</button>
