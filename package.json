@@ -4,6 +4,7 @@
   "description": "Family-friendly guide to Orlando theme park rides",
   "type": "module",
   "scripts": {
+    "build": "npx @11ty/eleventy",
     "start": "python3 -m http.server 8080",
     "serve": "npx serve ."
   },

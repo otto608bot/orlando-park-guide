@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Magic Kingdom",
+    "id": "mk",
+    "resort": "Walt Disney World",
+    "parent": "Disney",
+    "image": "Magic-Kingdom.webp",
+    "affiliateLink": "https://www.dpbolvw.net/click-101693488-5527150",
+    "affiliateText": "Get Disney Park Hopper Tickets"
+  },
+  {
+    "name": "EPCOT",
+    "id": "epcot",
+    "resort": "Walt Disney World",
+    "parent": "Disney",
+    "image": "epcot.jpeg",
+    "affiliateLink": "https://www.anrdoezrs.net/click-101693488-12783539",
+    "affiliateText": "Save $53 on 4-Day Park Hopper"
+  },
+  {
+    "name": "Hollywood Studios",
+    "id": "hs",
+    "resort": "Walt Disney World",
+    "parent": "Disney",
+    "image": "Hollywood-Studios.jpeg",
+    "affiliateLink": "https://www.dpbolvw.net/click-101693488-5527150",
+    "affiliateText": "Get Disney Park Hopper Tickets"
+  },
+  {
+    "name": "Animal Kingdom",
+    "id": "ak",
+    "resort": "Walt Disney World",
+    "parent": "Disney",
+    "image": "animal-kingdom.jpeg",
+    "affiliateLink": "https://www.dpbolvw.net/click-101693488-5527150",
+    "affiliateText": "Get Disney Park Hopper Tickets"
+  },
+  {
+    "name": "Universal Studios Florida",
+    "id": "usf",
+    "resort": "Universal Orlando",
+    "parent": "Universal",
+    "image": "universal-studios-florida.jpeg",
+    "affiliateLink": "https://www.anrdoezrs.net/click-101693488-12540773",
+    "affiliateText": "Save up to $109 on Universal Tickets"
+  },
+  {
+    "name": "Islands of Adventure",
+    "id": "ioa",
+    "resort": "Universal Orlando",
+    "parent": "Universal",
+    "image": "islands-of-adventure.webp",
+    "affiliateLink": "https://www.anrdoezrs.net/click-101693488-12540773",
+    "affiliateText": "Save up to $109 on Universal Tickets"
+  },
+  {
+    "name": "Epic Universe",
+    "id": "eu",
+    "resort": "Universal Orlando",
+    "parent": "Universal",
+    "image": "epic-universe.jpeg",
+    "affiliateLink": "https://www.anrdoezrs.net/click-101693488-12540773",
+    "affiliateText": "Save up to $109 on Universal Tickets"
+  },
+  {
+    "name": "SeaWorld Orlando",
+    "id": "sw",
+    "resort": "SeaWorld Parks",
+    "parent": "SeaWorld",
+    "image": "sea-world.jpeg",
+    "affiliateLink": "https://www.kqzyfj.com/click-101693488-12540778",
+    "affiliateText": "Save up to $88 on SeaWorld Tickets"
+  },
+  {
+    "name": "LEGOLAND Florida",
+    "id": "ll",
+    "resort": "LEGOLAND Parks",
+    "parent": "LEGOLAND",
+    "image": "legoland.jpeg",
+    "affiliateLink": "https://www.jdoqocy.com/click-101693488-12540781",
+    "affiliateText": "Save up to $43 on LEGOLAND Tickets"
+  }
+]
