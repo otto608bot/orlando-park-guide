@@ -4,86 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | Plan Your Park</title>
-  <meta name="description" content="{{ description }}">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://planyourpark.com{{ page.url }}">
-  <meta property="og:title" content="{{ title }} | Plan Your Park">
-  <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="https://planyourpark.com/logo-full.png">
-  <meta property="og:site_name" content="Plan Your Park">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://planyourpark.com{{ page.url }}">
-  <meta property="twitter:title" content="{{ title }} | Plan Your Park">
-  <meta property="twitter:description" content="{{ description }}">
-  <meta property="twitter:image" content="https://planyourpark.com/logo-full.png">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="/styles/global-nav.css">
   <link rel="stylesheet" href="/styles/ride-modal.css">
-  
-  <!-- Scripts -->
-  <script src="/scripts/filter-system.js" defer></script>
-  <script src="/scripts/global-nav.js" defer></script>
-  <script src="/scripts/ride-modal.js" defer></script>
-  <script src="/scripts/shared-nav.js" defer></script>
-  <script src="/scripts/ride-images.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav id="global-nav">
-      <div class="nav-container">
-        <a href="/" class="logo">
-          <img src="/logo.png" alt="Plan Your Park" height="50">
-        </a>
-        <div class="nav-links">
-          <div class="dropdown">
-            <button class="dropbtn">Parks</button>
-            <div class="dropdown-content">
-              <a href="/park/">All Parks</a>
-              <div class="dropdown-divider"></div>
-              <strong>Disney World</strong>
-              <a href="/park/magic-kingdom/">Magic Kingdom</a>
-              <a href="/park/epcot/">EPCOT</a>
-              <a href="/park/hollywood-studios/">Hollywood Studios</a>
-              <a href="/park/animal-kingdom/">Animal Kingdom</a>
-              <div class="dropdown-divider"></div>
-              <strong>Universal Orlando</strong>
-              <a href="/park/universal-studios/">Universal Studios</a>
-              <a href="/park/islands-of-adventure/">Islands of Adventure</a>
-              <a href="/park/epic-universe/">Epic Universe (2026)</a>
-              <div class="dropdown-divider"></div>
-              <strong>More Parks</strong>
-              <a href="/park/seaworld/">SeaWorld Orlando</a>
-              <a href="/park/legoland/">LEGOLAND Florida</a>
-            </div>
-          </div>
-          <a href="/rides/">Rides</a>
-          <a href="/character-dining/">Character Dining</a>
-          <a href="/deals/">Deals</a>
-          <a href="/blog/">Blog</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    {{ content | safe }}
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 Plan Your Park. All rights reserved.</p>
-    </div>
-  </footer>
+  {{ content | safe }}
+  <script src="/scripts/shared-nav.js" defer></script>
+  <script src="/scripts/global-nav.js" defer></script>
+  <script src="/scripts/filter-system.js" defer></script>
+  <script src="/scripts/ride-modal.js" defer></script>
+  <script src="/scripts/ride-images.js" defer></script>
+  <script src="/scripts/app.js" defer onload="console.log('App Loaded')"></script>
 </body>
 </html>

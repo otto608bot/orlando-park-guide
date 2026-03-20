@@ -1,44 +1,15 @@
 module.exports = function(eleventyConfig) {
-  // Copy all static files to output
-  // Assets in src/ directory
-  eleventyConfig.addPassthroughCopy("src/images/**/*");
-  eleventyConfig.addPassthroughCopy("src/data/**/*");
-  eleventyConfig.addPassthroughCopy("src/scripts/**/*");
-  eleventyConfig.addPassthroughCopy("src/styles/**/*");
-  
-  // Assets at repo root (not in src/)
-  eleventyConfig.addPassthroughCopy({ "logo*.png": "/" });
-  eleventyConfig.addPassthroughCopy({ "favicon*.png": "/favicon/" });
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/scripts");
+  eleventyConfig.addPassthroughCopy("src/styles");
+  eleventyConfig.addPassthroughCopy("src/data");
+  eleventyConfig.addPassthroughCopy("logo*.png");
+  eleventyConfig.addPassthroughCopy("favicon*.png");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("_redirects");
-  eleventyConfig.addPassthroughCopy("CNAME");
-
-  // Use absolute paths for assets
-  eleventyConfig.addNunjucksFilter("url", function(value) {
-    if (value.startsWith("/")) return value;
-    if (value.startsWith("./")) value = value.slice(2);
-    return `/${value}`;
-  });
-
-  // Set directory URLs for collections
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/**/*.{md,html}");
-  });
-
-  eleventyConfig.addCollection("pages", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/*.{html,md}");
-  });
-
-  // Configure input/output directories
-  return {
-    dir: {
-      input: "src",
-      output: "_site",
-      includes: "_includes",
-      data: "_data"
-    },
+  
+  return { 
+    dir: { input: "src", output: "_site" }, 
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "liquid",
     pathPrefix: "/"
   };
 };
