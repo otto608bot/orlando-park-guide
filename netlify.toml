@@ -2,6 +2,7 @@
   command = "npm run build"
   publish = "_site"
 
+# Main pages without trailing slashes
 [[redirects]]
   from = "/park"
   to = "/park/"
@@ -26,3 +27,23 @@
   from = "/character-dining"
   to = "/character-dining/"
   status = 301
+
+# Legacy .html URLs for blog posts
+[[redirects]]
+  from = "/blog/*.html"
+  to = "/blog/:splat/"
+  status = 301
+
+# Ensure trailing slashes everywhere
+[[redirects]]
+  from = "/*[^/]"
+  to = "/:splat/"
+  status = 301
+  force = true
+
+# Handle old blog URLs
+[[redirects]]
+  from = "/blog/*[^/]"
+  to = "/blog/:splat/"
+  status = 301
+  force = true

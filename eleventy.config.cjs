@@ -5,7 +5,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/data/**/*");
   eleventyConfig.addPassthroughCopy("src/scripts/**/*");
   eleventyConfig.addPassthroughCopy("src/styles/**/*");
-  eleventyConfig.addPassthroughCopy("src/blog/**/*");
   
   // Assets at repo root (not in src/)
   eleventyConfig.addPassthroughCopy({ "logo*.png": "/" });
@@ -19,6 +18,15 @@ module.exports = function(eleventyConfig) {
     if (value.startsWith("/")) return value;
     if (value.startsWith("./")) value = value.slice(2);
     return `/${value}`;
+  });
+
+  // Set directory URLs for collections
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/**/*.{md,html}");
+  });
+
+  eleventyConfig.addCollection("pages", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/*.{html,md}");
   });
 
   // Configure input/output directories
