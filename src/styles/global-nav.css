@@ -1,0 +1,348 @@
+/**
+ * Global Navigation Styles - Plan Your Park
+ * Include this in all pages for consistent navigation
+ */
+
+/* Header */
+.global-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.global-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.global-logo {
+  display: flex;
+  align-items: center;
+}
+
+.global-logo img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop Navigation */
+.global-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.global-nav a {
+  color: #718096;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+
+/* Nav Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  color: #718096;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: color 0.2s;
+  line-height: 1.5;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle.active {
+  color: #F37021;
+}
+
+.nav-dropdown-toggle svg {
+  transition: transform 0.2s;
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s;
+  z-index: 100;
+}
+
+.nav-dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #F7FAFC;
+  color: #F37021;
+}
+
+.global-nav a:hover,
+.global-nav a.active {
+  color: #F37021;
+}
+
+/* Mobile Menu Button */
+.global-mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.global-mobile-menu-btn:hover {
+  background: #F7FAFC;
+}
+
+.global-mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Filter Button */
+.global-mobile-filter-btn {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #F37021;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+  margin-left: auto;
+}
+
+/* Mobile Navigation Sheet */
+.global-mobile-nav-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.global-mobile-nav-sheet.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.global-mobile-nav-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.global-mobile-nav-sheet.active .global-mobile-nav-content {
+  transform: translateX(0);
+}
+
+.global-mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.global-mobile-nav-header h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.global-close-nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.global-mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.global-mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  color: #2D3748;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.global-mobile-nav-links a:hover {
+  background: #F7FAFC;
+}
+
+.global-mobile-nav-links a.active {
+  color: #F37021;
+  background: #F7FAFC;
+}
+
+/* Mobile Nav Expandable Section */
+.mobile-nav-section {
+  border-top: 1px solid #E2E8F0;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.mobile-nav-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.mobile-nav-section-header:hover {
+  background: #F7FAFC;
+}
+
+.mobile-nav-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2D3748;
+}
+
+.mobile-nav-section-toggle {
+  color: #718096;
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-section.expanded .mobile-nav-section-toggle {
+  transform: rotate(180deg);
+}
+
+.mobile-nav-section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-nav-section.expanded .mobile-nav-section-content {
+  max-height: 500px;
+}
+
+.mobile-nav-section a {
+  padding-left: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 1024px) {
+  .global-header-content {
+    padding: 0.75rem 1rem;
+  }
+  
+  .global-mobile-menu-btn {
+    display: flex;
+  }
+  
+  .global-nav {
+    display: none;
+  }
+  
+  .global-logo img {
+    height: 48px;
+  }
+  
+  /* Show filter button on mobile - JS will hide on desktop */
+  .global-mobile-filter-btn,
+  #global-filter-btn {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .global-mobile-menu-btn,
+  .global-mobile-nav-sheet {
+    display: none !important;
+  }
+  
+  .global-nav {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - Plan Your Park</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Find rides for everyone at Disney World, Universal Orlando, SeaWorld & LEGOLAND.">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJHPEWNBLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJHPEWNBLS');
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --white: #FFFFFF;
+      --radius-lg: 16px;
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .logo {
+      margin-bottom: 2rem;
+    }
+    
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+    
+    .error-code {
+      font-family: 'Nunito', sans-serif;
+      font-size: 8rem;
+      font-weight: 800;
+      color: var(--action-orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .error-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--base-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .error-message {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      max-width: 500px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: var(--action-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    }
+    
+    .home-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+    }
+    
+    .home-button svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .fun-fact {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      max-width: 400px;
+    }
+    
+    .fun-fact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .fun-fact-text {
+      font-size: 1rem;
+      color: var(--gray-600);
+      font-style: italic;
+    }
+    
+    @media (max-width: 640px) {
+      .error-code {
+        font-size: 6rem;
+      }
+      
+      .error-title {
+        font-size: 1.5rem;
+      }
+      
+      .error-message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="logo-full.png" alt="Plan Your Park">
+  </div>
+  
+  <div class="error-code">404</div>
+  <h1 class="error-title">Page Not Found</h1>
+  <p class="error-message">
+    Looks like this ride is temporarily closed for maintenance. 
+    Let's get you back to the fun!
+  </p>
+  
+  <a href="/" class="home-button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+    </svg>
+    Back to Home
+  </a>
+  
+  <div class="fun-fact">
+    <div class="fun-fact-label">Did You Know?</div>
+    <div class="fun-fact-text" id="fun-fact">
+      Cinderella Castle at Magic Kingdom is 189 feet tall — just 1 foot under the FAA limit that would require a flashing red light on top.
+    </div>
+  </div>
+  
+  <script>
+    // Random fun facts about Orlando parks
+    const facts = [
+      "Cinderella Castle at Magic Kingdom is 189 feet tall — just 1 foot under the FAA limit that would require a flashing red light on top.",
+      "The Haunted Mansion has 999 happy haunts, but there's always room for one more.",
+      "Space Mountain was the first roller coaster at Walt Disney World.",
+      "The Wizarding World of Harry Potter uses 85,000 pounds of fake snow on the rooftops of Hogsmeade.",
+      "Expedition Everest is the tallest artificial mountain in Florida at 199.5 feet.",
+      "The Hogwarts Express train cars are actual working trains, not just ride vehicles.",
+      "Avatar Flight of Passage has a ride system so complex it took 5 years to develop.",
+      "The Incredible Hulk Coaster launches riders from 0 to 40 mph in 2 seconds."
+    ];
+    
+    document.getElementById('fun-fact').textContent = facts[Math.floor(Math.random() * facts.length)];
+  </script>
+</body>
+</html>
