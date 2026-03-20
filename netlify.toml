@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "_site"
 
-# Exclude asset paths from redirects to prevent breaking files
+# Exclude asset paths
 [[redirects]]
   from = "/images/*"
   to = "/images/:splat"
@@ -30,10 +30,8 @@
   status = 301
   force = true
 
-# Catch-all: Ensure trailing slash for page routes only (skipping assets)
+# Catch-all
 [[redirects]]
   from = "/*"
   to = "/:splat/"
   status = 301
-  conditions = { Path = "/*[^/]" }
-EOF
