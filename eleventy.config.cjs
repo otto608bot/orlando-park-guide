@@ -8,8 +8,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/blog/**/*");
   
   // Assets at repo root (not in src/)
-  eleventyConfig.addPassthroughCopy("logo*.png");
-  eleventyConfig.addPassthroughCopy("favicon*.png");
+  eleventyConfig.addPassthroughCopy({ "logo*.png": "/" });
+  eleventyConfig.addPassthroughCopy({ "favicon*.png": "/favicon/" });
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("CNAME");
