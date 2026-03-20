@@ -2,48 +2,38 @@
   command = "npm run build"
   publish = "_site"
 
-# Main pages without trailing slashes
+# Exclude asset paths from redirects to prevent breaking files
 [[redirects]]
-  from = "/park"
-  to = "/park/"
-  status = 301
+  from = "/images/*"
+  to = "/images/:splat"
+  status = 200
 
 [[redirects]]
-  from = "/rides"
-  to = "/rides/"
-  status = 301
+  from = "/scripts/*"
+  to = "/scripts/:splat"
+  status = 200
 
 [[redirects]]
-  from = "/blog"
-  to = "/blog/"
-  status = 301
+  from = "/styles/*"
+  to = "/styles/:splat"
+  status = 200
 
 [[redirects]]
-  from = "/deals"
-  to = "/deals/"
-  status = 301
+  from = "/data/*"
+  to = "/data/:splat"
+  status = 200
 
-[[redirects]]
-  from = "/character-dining"
-  to = "/character-dining/"
-  status = 301
-
-# Legacy .html URLs for blog posts
+# Legacy .html to clean folder structure
 [[redirects]]
   from = "/blog/*.html"
   to = "/blog/:splat/"
   status = 301
+  force = true
 
-# Ensure trailing slashes everywhere
+# Catch-all: Ensure trailing slash for page routes only (skipping assets)
 [[redirects]]
-  from = "/*[^/]"
+  from = "/*"
   to = "/:splat/"
   status = 301
-  force = true
-
-# Handle old blog URLs
-[[redirects]]
-  from = "/blog/*[^/]"
-  to = "/blog/:splat/"
-  status = 301
-  force = true
+  conditions = { Path = "/*[^/]" }
+EOF
