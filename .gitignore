@@ -1,5 +1,3 @@
-# Local Netlify folder
-.netlify
 node_modules/
-add_global_nav.py
 _site/
+.DS_Store

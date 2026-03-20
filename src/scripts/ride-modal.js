@@ -3,7 +3,7 @@
 // Use the shared ride images mapping if available, otherwise define minimal fallback
 // Note: rideImages should be loaded from ride-images.js before this script
 const modalRideImages = typeof window !== 'undefined' && window.rideImages ? window.rideImages : {
-  // Fallback minimal mapping - full mapping should be loaded from ride-images.js
+  // Fallback minimal mapping with absolute paths
   'mk-space-mountain': '/images/rides/mk-space-mountain.jpg',
   'mk-big-thunder': '/images/rides/mk-big-thunder.jpg',
   'mk-haunted-mansion': '/images/rides/mk-haunted-mansion.jpg',
