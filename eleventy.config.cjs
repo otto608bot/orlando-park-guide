@@ -1,14 +1,18 @@
 module.exports = function(eleventyConfig) {
   // Copy all static files to output
+  // Assets in src/ directory
   eleventyConfig.addPassthroughCopy("src/images/**/*");
   eleventyConfig.addPassthroughCopy("src/data/**/*");
   eleventyConfig.addPassthroughCopy("src/scripts/**/*");
   eleventyConfig.addPassthroughCopy("src/styles/**/*");
-  eleventyConfig.addPassthroughCopy("src/favicon*.png");
-  eleventyConfig.addPassthroughCopy("src/logo*.png");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/_redirects");
-  eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*");
+  
+  // Assets at repo root (not in src/)
+  eleventyConfig.addPassthroughCopy("logo*.png");
+  eleventyConfig.addPassthroughCopy("favicon*.png");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   // Use absolute paths for assets
   eleventyConfig.addNunjucksFilter("url", function(value) {
