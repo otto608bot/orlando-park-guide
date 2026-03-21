@@ -2719,6 +2719,14 @@ permalink: /park.html
   <script src="/scripts/global-nav.js?v=3"></script>
   <script>GlobalNav.init('parks');</script>
   
+  <!-- Show filter button on load if viewport is narrow (mobile/tablet) -->
+  <script>
+    const filterBtn = document.getElementById('global-filter-btn');
+    if (filterBtn) {
+      filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+    }
+  </script>
+  
   <!-- Ride Detail Modal -->
   <div class="ride-modal-overlay" id="ride-modal" onclick="closeRideModal(event)">
     <div class="ride-modal-content" onclick="event.stopPropagation()">

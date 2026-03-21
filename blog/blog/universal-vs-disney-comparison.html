@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal vs Disney: Which Is Better for Your Family? | Plan Your Park</title>
+  <meta name="description" content="Can't decide between Universal Orlando and Disney World? Our honest comparison covers rides, costs, ages, and more to help families choose.">
+  <meta name="author" content="PlanYourPark.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-600: #718096;
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.7;
+    }
+    
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo img { height: 36px; }
+    
+    .nav { display: flex; gap: 1.5rem; }
+    .nav a {
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9375rem;
+    }
+    .nav a:hover { color: var(--action-orange); }
+    
+    .article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--white);
+    }
+    
+    .article-header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .article-meta {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .article h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    
+    .article h2 {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary-blue);
+    }
+    
+    .article h3 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .article p {
+      margin-bottom: 1rem;
+    }
+    
+    .article a {
+      color: var(--action-orange);
+      text-decoration: none;
+    }
+    
+    .article a:hover { text-decoration: underline; }
+    
+    .article strong { color: var(--base-dark); }
+    
+    .article ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    
+    .article li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9375rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .comparison-table th {
+      background: var(--gray-100);
+      font-weight: 600;
+    }
+    
+    .inline-cta {
+      background: var(--gray-100);
+      border-left: 3px solid var(--action-orange);
+      padding: 0.75rem 1rem;
+      margin: 1.5rem 0;
+      font-size: 0.9375rem;
+    }
+    
+    .inline-cta a {
+      color: var(--action-orange);
+      font-weight: 600;
+    }
+    
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .bottom-cta p {
+      margin-bottom: 0.75rem;
+      font-size: 0.9375rem;
+    }
+    
+    .bottom-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--action-orange);
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid var(--gray-200);
+      margin: 2rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .nav { display: none; }
+      .article { padding: 1.5rem; }
+      .article h1 { font-size: 1.625rem; }
+      .comparison-table { font-size: 0.875rem; }
+    }
+  
+    /* AdSense Ad Styles */
+    .ad-section {
+      min-height: 250px;
+    }
+    
+    .ad-section ins.adsbygoogle {
+      display: block;
+      width: 100%;
+    }
+    
+    .blog-inline-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .blog-inline-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    
+    .above-fold-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    
+    .above-fold-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-ad-section {
+      background: #f9fafb;
+      padding: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Universal vs Disney: Which Is Better for Your Family?",
+  "description": "Can't decide between Universal Orlando and Disney World? Our honest comparison covers rides, costs, ages, and more to help families choose.",
+  "image": "https://planyourpark.com/blog/Universal-vs-disney.webp",
+  "datePublished": "2026-02-26",
+  "dateModified": "2026-03-15",
+  "author": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://planyourpark.com/logo-full.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://planyourpark.com/logo-full.png"
+    }
+  },
+  "mainEntityOfPage": "https://planyourpark.com/blog/universal-vs-disney-comparison.html"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://planyourpark.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://planyourpark.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Universal vs Disney: Which Is Better for Your Family?",
+      "item": "https://planyourpark.com/blog/universal-vs-disney-comparison.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      
+      <nav class="global-nav">
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
+      </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
+    </div>
+  </header>
+
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<article class="article">
+    <picture>
+      <source srcset="Universal-vs-disney.webp" type="image/webp">
+      <img src="Universal-vs-disney.png" alt="Universal vs Disney Comparison" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block;">
+    </picture>
+    <header class="article-header">
+      <div class="article-meta">Comparison • February 26, 2026</div>
+      <h1>Universal vs Disney: Which Is Better for Your Family?</h1>
+      <p>Can't decide between Walt Disney World and Universal Orlando? Our honest comparison covers rides, costs, ages, and more to help you choose the perfect park.</p>
+    </header>
+
+    <div class="inline-cta">
+      💰 <strong>Save on both parks:</strong> Compare discounted tickets for <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Disney</a> and <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener">Universal →</a>
+    </div>
+
+    <h2>Quick Comparison</h2>
+
+    <table class="comparison-table">
+      <tr>
+        <th>Feature</th>
+        <th>Disney World</th>
+        <th>Universal Orlando</th>
+      </tr>
+      <tr>
+        <td><strong>Theme Parks</strong></td>
+        <td>4 parks</td>
+        <td>3 parks</td>
+      </tr>
+      <tr>
+        <td><strong>Best For Ages</strong></td>
+        <td>All ages, especially toddlers</td>
+        <td>Tweens, teens, thrill-seekers</td>
+      </tr>
+      <tr>
+        <td><strong>Ride Intensity</strong></td>
+        <td>Gentle to moderate</td>
+        <td>Moderate to intense</td>
+      </tr>
+      <tr>
+        <td><strong>Characters</strong></td>
+        <td>Disney, Pixar, Star Wars, Marvel</td>
+        <td>Harry Potter, Nintendo, Minions</td>
+      </tr>
+    </table>
+
+    <h2>Best for Different Ages</h2>
+
+    <h3>Toddlers & Preschoolers (Ages 2-5)</h3>
+    <p><strong>Winner: Disney World</strong></p>
+    <p>With over 40 attractions that have <strong>no height requirements</strong>, toddlers can experience the magic alongside the whole family. Highlights include Dumbo, It's a Small World, and Winnie the Pooh.</p>
+
+    <h3>Elementary School Kids (Ages 6-11)</h3>
+    <p><strong>Winner: Tie (depends on interests)</strong></p>
+    <p><strong>Choose Disney if:</strong> Your kids love princesses, Star Wars, and gentle storytelling.</p>
+    <p><strong>Choose Universal if:</strong> Your kids love Harry Potter, Nintendo, and slightly more thrilling adventures.</p>
+
+    <h3>Tweens & Teens (Ages 12-17)</h3>
+    <p><strong>Winner: Universal Orlando</strong></p>
+    <p>Universal pulls ahead significantly for this age group. The Wizarding World of Harry Potter feels genuinely magical, and thrill rides like Hagrid's Motorbike Adventure and VelociCoaster are must-dos.</p>
+
+    <h2>Ride Intensity Comparison</h2>
+
+    <h3>Disney World: Gentle Immersion</h3>
+    <p>Disney focuses on <strong>storytelling over thrills</strong>. Even their "scariest" rides are relatively tame. Most attractions have no height requirements and move slowly through immersive scenes.</p>
+
+    <h3>Universal: Thrills and Adventure</h3>
+    <p>Universal embraces <strong>intensity</strong>. Many headline attractions have 40-54 inch height requirements. The trade-off? More exciting experiences for older kids and adults.</p>
+
+    <h2>Cost Comparison</h2>
+
+    <p><strong>Disney World:</strong> Generally more expensive for tickets, food, and hotels. The experience is more immersive but comes at a premium.</p>
+
+    <p><strong>Universal Orlando:</strong> Often slightly less expensive, especially for shorter trips. Express Pass (skip-the-line) is more affordable than Disney's Lightning Lane.</p>
+
+    <div class="inline-cta">
+      💰 <strong>Pro tip:</strong> Both parks offer multi-day discounts. Compare <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Disney ticket prices</a> vs <a href="https://www.anrdoezrs.net/click-101693488-12540773" target="_blank" rel="noopener">Universal ticket prices</a> before deciding.
+    </div>
+
+    <h2>The Verdict</h2>
+
+    <p><strong>Choose Disney World if:</strong> You have young kids, want classic character experiences, prefer gentle rides, or are looking for the most immersive themed environments.</p>
+
+    <p><strong>Choose Universal if:</strong> You have tweens/teens, love Harry Potter or Nintendo, want more thrilling rides, or prefer a more "grown-up" theme park experience.</p>
+
+    <p><strong>Can't decide?</strong> Many families do both! A split stay (3 days Disney, 2 days Universal) gives you the best of both worlds.</p>
+
+    <hr>
+
+    <div class="bottom-cta">
+      <p>Ready to book? Get the best deals on park tickets.</p>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Shop Discounted Tickets →</a>
+    </div>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <h3>You Might Also Like</h3>
+      <div class="related-grid">
+        <a href="/blog/best-rides-5-year-olds-disney-world.html" class="related-card">
+          <span class="related-tag">Disney World</span>
+          <h4>Best Rides for 5-Year-Olds</h4>
+          <p>Perfect rides for kindergarteners across all four parks.</p>
+        </a>
+        <a href="/blog/toddler-rides-disney-world.html" class="related-card">
+          <span class="related-tag">Toddlers</span>
+          <h4>Best Toddler Rides</h4>
+          <p>Gentle rides perfect for 1-3 year olds at Disney World.</p>
+        </a>
+        <a href="/blog/pregnant-moms-guide-magic-kingdom.html" class="related-card">
+          <span class="related-tag">Pregnancy</span>
+          <h4>Pregnant Mom's Guide</h4>
+          <p>Safe rides and comfort tips for expectant mothers.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Email Capture -->
+    <section class="email-capture">
+      <div class="email-capture-content">
+        <h3>Get Disney Tips in Your Inbox</h3>
+        <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
+        <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <input type="hidden" name="source" value="universal-vs-disney-post">
+          <button type="submit">Get Tips →</button>
+        </form>
+        <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
+      </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section class="qa-section">
+      <h3>Questions About Choosing a Park?</h3>
+      <p class="qa-intro">Ask below and we'll answer. Your question might help other families too!</p>
+      
+      <div class="qa-form">
+        <form action="https://formspree.io/f/xwvnjpgd" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email (not published)" required>
+          </div>
+          <textarea name="question" placeholder="What's your question about Disney vs Universal?" rows="4" required></textarea>
+          <input type="hidden" name="post" value="universal-vs-disney">
+          <button type="submit">Ask Question</button>
+        </form>
+      </div>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-question">
+            <strong>Q:</strong> Can we do both parks in one day?
+          </div>
+          <div class="qa-answer">
+            <strong>A:</strong> Technically yes, but we don't recommend it—especially with kids. Each park deserves at least one full day. If you're short on time, pick one park and do it well rather than rushing through both.
+          </div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-question">
+            <strong>Q:</strong> Which park is better for Harry Potter fans?
+          </div>
+          <div class="qa-answer">
+            <strong>A:</strong> Universal wins here—the Wizarding World of Harry Potter is incredibly immersive with two lands (Hogsmeade and Diagon Alley) connected by the Hogwarts Express. Disney has nothing comparable for Potter fans.
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <style>
+    /* Related Posts */
+    .related-posts {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    .related-posts h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--base-dark);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .related-card {
+      background: var(--gray-100);
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .related-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .related-tag {
+      font-size: 0.75rem;
+      color: var(--action-orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .related-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: var(--base-dark);
+    }
+    .related-card p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* Email Capture */
+    .email-capture {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+    }
+    .email-capture h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .email-capture p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    .email-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 400px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .email-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .email-form button {
+      padding: 0.75rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form button:hover {
+      background: #e05a0f;
+    }
+    .email-disclaimer {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    /* Q&A Section */
+    .qa-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    .qa-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .qa-intro {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+    .qa-form {
+      background: var(--gray-100);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (max-width: 480px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .qa-form input,
+    .qa-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.9375rem;
+    }
+    .qa-form textarea {
+      resize: vertical;
+      margin-bottom: 0.75rem;
+    }
+    .qa-form button {
+      padding: 0.75rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .qa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .qa-item {
+      padding: 1.25rem;
+      background: var(--gray-100);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary-blue);
+    }
+    .qa-question {
+      margin-bottom: 0.75rem;
+      color: var(--base-dark);
+    }
+    .qa-answer {
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+  </style>
+<script src="/scripts/global-nav.js?v=3"></script>
+<script>GlobalNav.init('blog');</script>
+</body>
+</html>

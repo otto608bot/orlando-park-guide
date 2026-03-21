@@ -1,0 +1,170 @@
+{
+  "timestamp": "2026-03-13T02:37:45.775Z",
+  "totalTarget": 27,
+  "found": 27,
+  "missing": 0,
+  "rides": [
+    {
+      "id": "space-mountain",
+      "filename": "space-mountain.jpg",
+      "size": "16.0 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "big-thunder-mountain",
+      "filename": "big-thunder-mountain.jpg",
+      "size": "23.9 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "haunted-mansion",
+      "filename": "haunted-mansion.jpg",
+      "size": "17.1 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "pirates-caribbean",
+      "filename": "pirates-caribbean.jpg",
+      "size": "19.9 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "seven-dwarfs",
+      "filename": "seven-dwarfs.jpg",
+      "size": "21.8 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "guardians-galaxy",
+      "filename": "guardians-galaxy.jpg",
+      "size": "29.0 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "remy",
+      "filename": "remy.jpg",
+      "size": "19.8 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "test-track",
+      "filename": "test-track.jpg",
+      "size": "10.2 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "soarin",
+      "filename": "soarin.jpg",
+      "size": "18.2 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "rise-resistance",
+      "filename": "rise-resistance.jpg",
+      "size": "18.4 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "slinky-dog",
+      "filename": "slinky-dog.jpg",
+      "size": "20.6 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "tower-terror",
+      "filename": "tower-terror.jpg",
+      "size": "17.8 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "millennium-falcon",
+      "filename": "millennium-falcon.jpg",
+      "size": "17.9 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "avatar-flight",
+      "filename": "avatar-flight.jpg",
+      "size": "25.1 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "expedition-everest",
+      "filename": "expedition-everest.jpg",
+      "size": "16.9 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "kilimanjaro-safaris",
+      "filename": "kilimanjaro-safaris.jpg",
+      "size": "15.8 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "gringotts",
+      "filename": "gringotts.jpg",
+      "size": "26.1 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "revenge-mummy",
+      "filename": "revenge-mummy.jpg",
+      "size": "20.9 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "transformers",
+      "filename": "transformers.jpg",
+      "size": "28.5 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "hagrids",
+      "filename": "hagrids.jpg",
+      "size": "30.5 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "velocicoaster",
+      "filename": "velocicoaster.jpg",
+      "size": "24.1 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "spiderman",
+      "filename": "spiderman.jpg",
+      "size": "32.6 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "mako",
+      "filename": "mako.jpg",
+      "size": "16.3 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "kraken",
+      "filename": "kraken.jpg",
+      "size": "16.7 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "journey-atlantis",
+      "filename": "journey-atlantis.jpg",
+      "size": "21.0 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "the-dragon",
+      "filename": "the-dragon.jpg",
+      "size": "20.6 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    },
+    {
+      "id": "coastersaurus",
+      "filename": "coastersaurus.jpg",
+      "size": "19.0 KB",
+      "source": "Wikipedia/Wikimedia Commons"
+    }
+  ]
+}

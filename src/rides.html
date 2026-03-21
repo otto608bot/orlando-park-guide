@@ -1356,6 +1356,12 @@ description: Browse all rides at Disney World, Universal Orlando, SeaWorld & LEG
     
     // Initialize global nav
     GlobalNav.init('rides');
+    
+    // Show filter button on load if viewport is narrow (mobile/tablet)
+    const filterBtn = document.getElementById('global-filter-btn');
+    if (filterBtn) {
+      filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+    }
   </script>
 </body>
 </html>
