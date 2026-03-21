@@ -37,9 +37,9 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6349270729296966" crossorigin="anonymous"></script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180x180.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1941,8 +1941,28 @@
         }
         // Also dispatch event for any listeners
         document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      },
+      
+      toggleParksDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('parks-dropdown');
+        const toggle = document.getElementById('nav-parks');
+        if (dropdown && toggle) {
+          const isOpen = dropdown.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen.toString());
+        }
       }
     };
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdown = document.getElementById('parks-dropdown');
+      const toggle = document.getElementById('nav-parks');
+      if (dropdown && toggle && !dropdown.contains(e.target) && !toggle.contains(e.target)) {
+        dropdown.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {

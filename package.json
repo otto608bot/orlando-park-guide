@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8080",
-    "serve": "npx serve ."
+    "serve": "npx serve .",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [
     "orlando",
@@ -28,5 +29,8 @@
   "dependencies": {
     "@google/genai": "^1.45.0",
     "playwright": "^1.58.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
   }
 }

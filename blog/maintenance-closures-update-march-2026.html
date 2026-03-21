@@ -7,6 +7,12 @@
   <meta name="description" content="Stay updated on ride closures and refurbishments at Disney World and Universal Orlando for March 2026. Don't let maintenance ruin your spring break!">
   <meta name="author" content="PlanYourPark.com">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180x180.png">
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -62,18 +68,61 @@
 </script>
 </head>
 <body>
+  <!-- Global Navigation Component -->
+  <style>
+    /* Global Navigation Styles */
+    .global-header { background: #FFFFFF; border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+    .global-header-content { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; gap: 1.5rem; }
+    .global-logo { display: flex; align-items: center; }
+    .global-logo img { height: 64px; width: auto; object-fit: contain; }
+    .global-nav { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
+    .global-nav a { color: #718096; text-decoration: none; font-weight: 500; font-size: 0.9375rem; transition: color 0.2s; }
+    .global-nav a:hover, .global-nav a.active { color: #F37021; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle { display: flex; align-items: center; gap: 0.25rem; background: none; border: none; color: #718096; font-weight: 500; font-size: 0.9375rem; cursor: pointer; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; transition: color 0.2s; }
+    .nav-dropdown-toggle:hover, .nav-dropdown-toggle.active { color: #F37021; }
+    .nav-dropdown-toggle svg { transition: transform 0.2s; }
+    .nav-dropdown-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 0.5rem; background: white; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); padding: 0.5rem; min-width: 200px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.2s; z-index: 100; }
+    .nav-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-dropdown-menu a { display: block; padding: 0.625rem 1rem; border-radius: 8px; font-size: 0.875rem; transition: all 0.2s; }
+    .nav-dropdown-menu a:hover { background: #F7FAFC; color: #F37021; }
+    @media (max-width: 1024px) { .global-header-content { padding: 0.75rem 1rem; } .global-logo img { height: 48px; } }
+    @media (min-width: 1025px) { .global-nav { display: flex !important; } }
+  </style>
+
   <header class="global-header">
     <div class="global-header-content">
       <a href="/" class="global-logo">
         <img src="/logo-full.png" alt="Plan Your Park">
       </a>
       <nav class="global-nav">
-        <a href="/">Home</a>
-        <a href="/rides.html">Rides</a>
-        <a href="/blog/" class="active">Blog</a>
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog" class="active">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
     </div>
   </header>
+  <script src="/scripts/global-nav.js?v=3"></script>
+  <script>GlobalNav.init('blog');</script>
 
   <article class="article">
     <h1>Orlando Ride Closures & Refurbishments: March 2026</h1>
