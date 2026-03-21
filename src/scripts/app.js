@@ -1792,13 +1792,26 @@ const elements = {
 
 // Initialize
 function init() {
+  // Guard: Only run on pages with the required elements
+  if (!elements.parksGrid && !elements.leaderboardView && !elements.rideGrid) {
+    // Not on a page that needs this app, skip initialization
+    return;
+  }
+  
+  // Detect if we're on the rides page
+  if (elements.rideGrid) {
+    state.currentView = 'rides';
+  }
+  
   setupEventListeners();
   render();
 }
 
 // Event listeners
 function setupEventListeners() {
-  elements.heightSlider.addEventListener('input', handleHeightChange);
+  if (elements.heightSlider) {
+    elements.heightSlider.addEventListener('input', handleHeightChange);
+  }
   if (elements.mobileHeightSlider) {
     elements.mobileHeightSlider.addEventListener('input', handleMobileHeightChange);
   }
@@ -1828,11 +1841,13 @@ function handleMobileHeightChange(e) {
 }
 
 function updateHeightDisplay(value) {
+  if (!elements.heightDisplay) return;
   const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
   elements.heightDisplay.innerHTML = displayText + ' <span>height</span>';
 }
 
 function updateMobileHeightDisplay(value) {
+  if (!elements.mobileHeightDisplay) return;
   const displayText = value === 0 ? 'Any' : value >= 54 ? '54+' : value + '"';
   elements.mobileHeightDisplay.innerHTML = displayText + ' <span>height</span>';
 }
@@ -2196,9 +2211,60 @@ function renderParkDetail(parkName) {
 function render() {
   if (state.currentView === 'leaderboard') {
     renderParksGrid();
+  } else if (state.currentView === 'rides') {
+    renderAllRides();
   } else if (state.currentView === 'detail' && state.selectedPark) {
     renderParkDetail(state.selectedPark);
   }
+}
+
+// Render all rides in a grid (for rides.html page)
+function renderAllRides() {
+  const filteredRides = getFilteredRides();
+  
+  // Update counts
+  const shownEl = document.getElementById('shown-rides');
+  const totalEl = document.getElementById('total-rides');
+  if (shownEl) shownEl.textContent = filteredRides.length;
+  if (totalEl) totalEl.textContent = rideData.length;
+  
+  // Render ride cards
+  elements.rideGrid.innerHTML = filteredRides.map(function(ride) {
+    const sensoryTags = getSensoryTags(ride.sensory);
+    
+    return `
+      <div class="ride-card" onclick="openRideModal('${ride.id}')">
+        <div class="ride-header">
+          <div class="ride-name">${escapeHtml(ride.name)}</div>
+          <div class="ride-type">${escapeHtml(ride.type)}</div>
+        </div>
+        <p class="ride-description">${escapeHtml(ride.description)}</p>
+        <div class="ride-meta">
+          <div class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            ${escapeHtml(ride.duration)}
+          </div>
+          <div class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            ${escapeHtml(ride.park)}
+          </div>
+        </div>
+        <div class="ride-tags">
+          ${ride.height > 0 ? '<span class="tag tag-height">' + ride.height + '" min</span>' : ''}
+          ${ride.pregnant ? '<span class="tag tag-pregnancy">Pregnancy safe</span>' : ''}
+          ${sensoryTags.map(function(tag) {
+            return '<span class="tag ' + tag.class + '">' + tag.label + '</span>';
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 // Add logging to verify script loads
