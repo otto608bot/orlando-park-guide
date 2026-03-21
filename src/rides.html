@@ -833,22 +833,24 @@ description: Browse all rides at Disney World, Universal Orlando, SeaWorld & LEG
         </div>
       </div>
       
-      <div class="rides-table-container">
-        <div class="rides-table-wrapper">
-          <table class="rides-table">
-            <thead>
-              <tr>
-                <th>Ride</th>
-                <th>Park</th>
-                <th>Type</th>
-                <th>Min Height</th>
-                <th>Features</th>
-              </tr>
-            </thead>
-            <tbody id="rides-tbody">
-              <!-- Rides injected here -->
-            </tbody>
-          </table>
+      <div id="rides-grid" style="display: contents;">
+        <div class="rides-table-container">
+          <div class="rides-table-wrapper">
+            <table class="rides-table">
+              <thead>
+                <tr>
+                  <th>Ride</th>
+                  <th>Park</th>
+                  <th>Type</th>
+                  <th>Min Height</th>
+                  <th>Features</th>
+                </tr>
+              </thead>
+              <tbody id="rides-tbody">
+                <!-- Rides injected here -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </main>
@@ -989,6 +991,7 @@ description: Browse all rides at Disney World, Universal Orlando, SeaWorld & LEG
   <script src="scripts/ride-modal.js?v=3"></script>
   <script src="/scripts/filter-system.js?v=2"></script>
   <script src="/scripts/global-nav.js?v=3"></script>
+  <script src="/scripts/app.js?v=11"></script>
   
   <script>
     // State
