@@ -1947,8 +1947,28 @@ permalink: /index.html
         }
         // Also dispatch event for any listeners
         document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      },
+      
+      toggleParksDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('parks-dropdown');
+        const toggle = document.getElementById('nav-parks');
+        if (dropdown && toggle) {
+          const isOpen = dropdown.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen.toString());
+        }
       }
     };
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const dropdown = document.getElementById('parks-dropdown');
+      const toggle = document.getElementById('nav-parks');
+      if (dropdown && toggle && !dropdown.contains(e.target) && !toggle.contains(e.target)) {
+        dropdown.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {
