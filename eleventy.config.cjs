@@ -14,6 +14,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.jpg");
   eleventyConfig.addPassthroughCopy("*.png");
   
+  // Copy blog images
+  eleventyConfig.addPassthroughCopy("blog/");
+  
   return { 
     dir: { input: "src", output: "_site" }, 
     htmlTemplateEngine: "njk",
