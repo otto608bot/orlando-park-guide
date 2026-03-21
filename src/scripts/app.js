@@ -1776,7 +1776,7 @@ const elements = {
   detailRideCount: document.getElementById('detail-ride-count'),
   detailHeightLimit: document.getElementById('detail-height-limit'),
   affiliateContainer: document.getElementById('affiliate-container'),
-  rideGrid: document.getElementById('ride-grid'),
+  ridesGrid: document.getElementById('rides-grid'),
   mobileFilterSheet: document.getElementById('filter-mobile-sheet'),
   chips: {
     pregnancy: document.getElementById('chip-pregnancy'),
@@ -1793,13 +1793,13 @@ const elements = {
 // Initialize
 function init() {
   // Guard: Only run on pages with the required elements
-  if (!elements.parksGrid && !elements.leaderboardView && !elements.rideGrid) {
+  if (!elements.parksGrid && !elements.leaderboardView && !elements.ridesGrid) {
     // Not on a page that needs this app, skip initialization
     return;
   }
   
   // Detect if we're on the rides page
-  if (elements.rideGrid) {
+  if (elements.ridesGrid) {
     state.currentView = 'rides';
   }
   
@@ -2147,7 +2147,7 @@ function renderParkDetail(parkName) {
   elements.affiliateContainer.innerHTML = affiliateButton;
 
   // Render all ride cards
-  elements.rideGrid.innerHTML = allRides.map(function(ride) {
+  elements.ridesGrid.innerHTML = allRides.map(function(ride) {
     const isAvailable = filteredRides.some(function(r) { return r.id === ride.id; });
     const sensoryTags = getSensoryTags(ride.sensory);
 
@@ -2229,7 +2229,7 @@ function renderAllRides() {
   if (totalEl) totalEl.textContent = rideData.length;
   
   // Render ride cards
-  elements.rideGrid.innerHTML = filteredRides.map(function(ride) {
+  elements.ridesGrid.innerHTML = filteredRides.map(function(ride) {
     const sensoryTags = getSensoryTags(ride.sensory);
     
     return `
@@ -2272,6 +2272,9 @@ console.log("App loaded");
 
 // Start the app
 init();
+
+// Expose ride data globally for other scripts
+window.rideData = rideData;
 
 // Expose functions to global scope for HTML onclick handlers
 window.toggleFilter = toggleFilter;
