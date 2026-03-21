@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Plan Your Park | Orlando Theme Park Guides & Tips</title>
+  <meta name="description" content="Expert tips, guides, and insider secrets for Disney World, Universal Orlando, SeaWorld & LEGOLAND. Plan your perfect park vacation.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/global-nav.css?v=3">
+  
+  <style>
+    :root {
+      --primary-blue: #4A9DE8;
+      --action-orange: #F37021;
+      --deep-purple: #5A4FCF;
+      --splash-teal: #38B2AC;
+      --base-dark: #2D3748;
+      --bg-off-white: #F8F9FA;
+      --white: #FFFFFF;
+      --gray-100: #F7FAFC;
+      --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
+      --gray-600: #718096;
+      --gray-700: #4A5568;
+      --font-heading: 'Nunito', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-off-white);
+      color: var(--base-dark);
+      line-height: 1.6;
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Blog Grid */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .blog-card-image {
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .blog-card-content {
+      padding: 1.25rem;
+    }
+    
+    .blog-card-meta {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-bottom: 0.5rem;
+    }
+    
+    .blog-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      color: var(--base-dark);
+      line-height: 1.3;
+    }
+    
+    .blog-card p {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    
+    .blog-card-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      color: var(--gray-600);
+    }
+    
+    /* Compact Affiliate CTA */
+    .affiliate-cta {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .affiliate-cta span {
+      font-weight: 600;
+    }
+    
+    .affiliate-cta a {
+      background: white;
+      color: var(--action-orange);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: transform 0.2s;
+    }
+    
+    .affiliate-cta a:hover {
+      transform: translateY(-1px);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--base-dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    
+    .footer p {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.5rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .affiliate-cta { flex-direction: column; gap: 0.75rem; }
+    }
+  
+    /* AdSense Ad Styles */
+    .ad-section {
+      min-height: 250px;
+    }
+    
+    .ad-section ins.adsbygoogle {
+      display: block;
+      width: 100%;
+    }
+    
+    .blog-inline-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .blog-inline-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    
+    .above-fold-ad {
+      background: var(--white, #fff);
+      border: 1px solid var(--gray-200, #e5e7eb);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    
+    .above-fold-ad .ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-ad-section {
+      background: #f9fafb;
+      padding: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .footer-ad-container {
+      max-width: 728px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .inline-ad-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+
+    /* Nav Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+    
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: none;
+      border: none;
+      color: #718096;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: color 0.2s;
+    }
+    
+    .nav-dropdown-toggle:hover,
+    .nav-dropdown-toggle.active {
+      color: #F37021;
+    }
+    
+    .nav-dropdown-toggle svg {
+      transition: transform 0.2s;
+    }
+    
+    .nav-dropdown-toggle[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+    
+    .nav-dropdown-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      color: #2D3748;
+      text-decoration: none;
+    }
+    
+    .nav-dropdown-menu a:hover {
+      background: #F7FAFC;
+      color: #F37021;
+    }
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://planyourpark.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://planyourpark.com/blog/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <header class="global-header">
+    <div class="global-header-content">
+      <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <a href="/" class="global-logo">
+        <img src="/logo-full.png" alt="Plan Your Park">
+      </a>
+      
+      <nav class="global-nav">
+        <a href="/" id="nav-home">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="nav-parks" onclick="GlobalNav.toggleParksDropdown(event)">
+            Parks
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="parks-dropdown">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="nav-rides">Rides</a>
+        <a href="/character-dining.html" id="nav-dining">Character Dining</a>
+        <a href="/blog/" id="nav-blog">Blog</a>
+        <a href="/deals.html" id="nav-deals">Deals</a>
+      </nav>
+      
+      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
+      <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filters
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
+    <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
+      <div class="global-mobile-nav-header">
+        <h3>Menu</h3>
+        <button class="global-close-nav-btn" onclick="GlobalNav.closeNav()">&times;</button>
+      </div>
+      <nav class="global-mobile-nav-links">
+        <a href="/" id="mobile-nav-home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </a>
+        <div class="mobile-nav-section expanded" id="mobile-parks-section">
+          <div class="mobile-nav-section-header" onclick="toggleMobileParksSection()">
+            <span class="mobile-nav-section-title">Parks</span>
+            <svg class="mobile-nav-section-toggle" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="mobile-nav-section-content">
+            <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
+            <a href="/park.html?park=epcot">EPCOT</a>
+            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
+            <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
+            <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
+            <a href="/park.html?park=seaworld">SeaWorld Orlando</a>
+            <a href="/park.html?park=legoland">LEGOLAND Florida</a>
+          </div>
+        </div>
+        <a href="/rides.html" id="mobile-nav-rides">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 6 18 3-9h4"></path>
+          </svg>
+          Rides
+        </a>
+        <a href="/character-dining.html" id="mobile-nav-dining">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+            <path d="M7 2v20"></path>
+            <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+          </svg>
+          Character Dining
+        </a>
+        <a href="/blog/" id="mobile-nav-blog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </a>
+        <a href="/deals.html" id="mobile-nav-deals">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Deals
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>Orlando Park Tips & Guides</h1>
+    <p>Expert advice and money-saving tips for your perfect Disney World, Universal, SeaWorld & LEGOLAND vacation.</p>
+  </section>
+
+  <div class="container">
+    <div class="affiliate-cta">
+      <span>🏰 Save up to $50 on park tickets</span>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Maintenance & Closures Update March 2026 -->
+      <a href="/blog/maintenance-closures-update-march-2026/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/spring-break-disney-world-2026.webp" alt="Maintenance and Closures Update March 2026">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>News</span>
+            <span>Mar 15, 2026</span>
+          </div>
+          <h2>Orlando Ride Closures & Refurbishments: March 2026</h2>
+          <p>Don't let maintenance ruin your Spring Break. Check the latest ride closures at Disney World and Universal Orlando, including major updates at Hollywood Studios.</p>
+          <div class="blog-card-tags">
+            <span class="tag">News</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Universal Epic Universe Rides Guide 2026 -->
+      <a href="/blog/epic-universe-rides-guide-2026/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/epic-universe.jpeg" alt="Universal Epic Universe Rides Guide 2026">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Universal</span>
+            <span>Mar 15, 2026</span>
+          </div>
+          <h2>The Ultimate Guide to Universal Epic Universe Rides (2026)</h2>
+          <p>Explore every confirmed ride and land at the brand new Universal Epic Universe. Height requirements, thrill levels, and expert parent tips.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Epic Universe</span>
+            <span class="tag">Rides</span>
+            <span class="tag">New</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Free Things to Do at Disney World -->
+      <a href="/blog/free-things-disney-world/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/free-things-disney-world.webp" alt="Free Things to Do at Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 16, 2026</span>
+          </div>
+          <h2>25 Free Things to Do at Disney World (That Are Actually Good)</h2>
+          <p>From fireworks and parades to free souvenirs and resort activities—save money without sacrificing the magic.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Money-Saving</span>
+            <span class="tag">Tips</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Strollers for Disney World -->
+      <a href="/blog/best-strollers-disney-world/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/best-strollers-disney-world.webp" alt="Best strollers for Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 9, 2026</span>
+          </div>
+          <h2>Best Strollers for Disney World 2026</h2>
+          <p>Lightweight travel strollers, double strollers, and essential accessories that survive 12-hour park days.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Gear</span>
+            <span class="tag">Essentials</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- How to Use Lightning Lane -->
+      <a href="/blog/how-to-use-genie-plus-disney-world-2026/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/how-to-use-genie-at-disney-world-2026.webp" alt="How to Use Lightning Lane at Disney World 2026">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 8, 2026</span>
+          </div>
+          <h2>How to Use Lightning Lane at Disney World 2026</h2>
+          <p>Master Disney's paid skip-the-line service with our complete strategy guide. Save hours and maximize every ride.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Planning</span>
+            <span class="tag">Tips</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Spring Break at Disney World 2026 -->
+      <a href="/blog/spring-break-disney-world-2026/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/spring-break-disney-world-2026.webp" alt="Spring Break at Disney World 2026">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 7, 2026</span>
+          </div>
+          <h2>Spring Break at Disney World 2026: Complete Survival Guide</h2>
+          <p>Everything you need to know about visiting during peak season—crowd predictions, money-saving strategies, and how to actually enjoy the parks when everyone else is there too.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Spring Break</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Shows at Disney World -->
+      <a href="/blog/best-shows-disney-world-ranked/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/best-shows-disney-world-ranked.webp" alt="Best Shows at Disney World Ranked">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 7, 2026</span>
+          </div>
+          <h2>Best Shows at Disney World (Ranked)</h2>
+          <p>From Festival of the Lion King to Fantasmic!, discover which Disney World shows are must-sees and which you can skip.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Entertainment</span>
+            <span class="tag">Shows</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Disney World Packing List -->
+      <a href="/blog/disney-world-packing-list/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/disney-world-packing-list.webp" alt="Disney World Packing List">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 6, 2026</span>
+          </div>
+          <h2>Disney World Packing List 2026: The Complete Guide</h2>
+          <p>The ultimate packing list for adults, kids, toddlers, and babies. Free printable checklist included.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Planning</span>
+            <span class="tag">Packing</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Disney World vs Universal for Adults -->
+      <a href="/blog/disney-vs-universal-adults/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/disney-vs-universal-adults.webp" alt="Disney World vs Universal Orlando for adults comparison">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Comparison</span>
+            <span>Mar 6, 2026</span>
+          </div>
+          <h2>Disney World vs Universal for Adults: Which Park Is Better?</h2>
+          <p>No kids? No problem. Here's how to choose between Disney World and Universal Orlando for your grown-up vacation, from thrill rides to nightlife.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Disney World</span>
+            <span class="tag">Universal</span>
+            <span class="tag">Adults</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Rides for Teens at Islands of Adventure -->
+      <a href="/blog/best-rides-teens-islands-of-adventure/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/best-rides-teens-islands-of-adventure.webp" alt="Best Rides for Teens at Islands of Adventure">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Islands of Adventure</span>
+            <span>Mar 6, 2026</span>
+          </div>
+          <h2>Best Rides for Teens at Islands of Adventure</h2>
+          <p>The ultimate guide to thrilling attractions for teenagers—from VelociCoaster to Hagrid's Motorbike Adventure.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Teens</span>
+            <span class="tag">Thrill Rides</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Is Hollywood Studios Worth It with Kids Under 5 -->
+      <a href="/blog/hollywood-studios-worth-it-kids-under-five/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/hollywood-studios-under-five.webp" alt="Is Hollywood Studios Worth It with Kids Under 5">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Hollywood Studios</span>
+            <span>Mar 5, 2026</span>
+          </div>
+          <h2>Is Hollywood Studios Worth It with Kids Under 5?</h2>
+          <p>The honest truth from a parent who's been there: when Disney's smallest park makes sense for your little ones—and when to skip it.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Toddlers</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Character Dining at Disney World 2026 -->
+      <a href="/blog/best-character-dining-disney-world-2026/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/best-character-dining-at-disney-world-2026.webp" alt="Best Character Dining at Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 4, 2026</span>
+          </div>
+          <h2>Best Character Dining at Disney World 2026</h2>
+          <p>Compare every character dining experience—prices, characters, food quality, and honest parent reviews. Find the perfect meal for your family.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Character Dining</span>
+            <span class="tag">Dining</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Toddler Rides at Disney World -->
+      <a href="/blog/toddler-rides-disney-world/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/toddler-rides-disney-world.webp" alt="Best Toddler Rides at Disney World">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Mar 1, 2026</span>
+          </div>
+          <h2>Best Toddler Rides at Disney World</h2>
+          <p>A parent-tested guide to the gentlest, most magical rides for your little ones—no height requirements, just pure Disney joy.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Toddlers</span>
+            <span class="tag">Magic Kingdom</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Best Rides for 5-Year-Olds at Disney World -->
+      <a href="/blog/best-rides-5-year-olds-disney-world/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/Best-Rides-for-5-Year-olds.png" alt="Best Rides for 5-Year-Olds">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Best Rides for 5-Year-Olds at Disney World</h2>
+          <p>A parent-tested guide to the perfect rides for kindergarteners—no meltdowns, no scary surprises, just pure magic.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Magic Kingdom</span>
+            <span class="tag">Kids</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Pregnant Mom's Guide to Magic Kingdom -->
+      <a href="/blog/pregnant-moms-guide-magic-kingdom/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/pregnant-moms-guide-magic-kingdom.png" alt="Pregnant Mom's Guide">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Disney World</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Pregnant Mom's Guide to Magic Kingdom</h2>
+          <p>Which rides are safe during pregnancy? Where are the best rest spots? Everything expectant moms need to know.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Pregnancy</span>
+            <span class="tag">Magic Kingdom</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Universal vs Disney: Which Is Better? -->
+      <a href="/blog/universal-vs-disney-comparison/" class="blog-card">
+        <div class="blog-card-image">
+          <img src="/blog/Universal-vs-disney.png" alt="Universal vs Disney">
+        </div>
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>Comparison</span>
+            <span>Feb 26, 2026</span>
+          </div>
+          <h2>Universal vs Disney: Which Is Better?</h2>
+          <p>Head-to-head comparison of rides, costs, and best ages to help you decide where to spend your vacation dollars.</p>
+          <div class="blog-card-tags">
+            <span class="tag">Universal</span>
+            <span class="tag">Disney</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Email Capture Section -->
+    <section class="email-section">
+      <div class="email-section-content">
+        <h3>🏰 Get Weekly Disney Tips</h3>
+        <p>Money-saving hacks, ride guides, and insider secrets delivered to your inbox.</p>
+        <form class="email-form-inline" action="https://formspree.io/f/xpqjewvb" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <input type="hidden" name="source" value="blog-index">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="email-note">No spam. Unsubscribe anytime. Join 2,000+ parents.</p>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .email-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 3rem 2rem;
+      margin-top: 2rem;
+      border-radius: var(--radius-lg);
+    }
+    .email-section-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+    .email-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .email-section p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    .email-form-inline {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .email-form-inline input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .email-form-inline button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form-inline button:hover {
+      background: #e05a0f;
+    }
+    .email-note {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      .email-form-inline {
+        flex-direction: column;
+        align-items: center;
+      }
+      .email-form-inline input[type="email"] {
+        width: 100%;
+        max-width: none;
+      }
+      .email-form-inline button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <footer class="footer">
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
+  </footer>
+
+  <!-- Global Navigation Manager -->
+  <script>
+    // Global Navigation Manager
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        // Show filter button on pages that need it
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn) filterBtn.style.display = 'flex';
+        }
+      },
+      
+      setActiveNav(page) {
+        // Desktop nav
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        // Mobile nav
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        // Set active class
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      openFilters() {
+        // Dispatch event for pages to handle
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      },
+      
+      toggleParksDropdown(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.currentTarget;
+        const dropdown = button.nextElementSibling;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other dropdowns first
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.nav-dropdown-menu').forEach(menu => {
+          menu.classList.remove('active');
+        });
+        
+        // Toggle this dropdown
+        if (!isExpanded && dropdown) {
+          button.setAttribute('aria-expanded', 'true');
+          dropdown.classList.add('active');
+        }
+        
+        // Add outside click handler
+        setTimeout(() => {
+          document.addEventListener('click', this.closeParksDropdown);
+        }, 0);
+      },
+      
+      closeParksDropdown(event) {
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.nav-dropdown-menu').forEach(menu => {
+          menu.classList.remove('active');
+        });
+        document.removeEventListener('click', this.closeParksDropdown);
+      }
+    };
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    // Initialize for blog page
+    GlobalNav.init('blog');
+  </script>
+</body>
+</html>

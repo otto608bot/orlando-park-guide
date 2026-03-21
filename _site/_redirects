@@ -1,0 +1,12 @@
+# Redirect old static park pages to new unified park page
+/magic-kingdom.html /park.html?park=magic-kingdom 301
+/epcot.html /park.html?park=epcot 301
+/hollywood-studios.html /park.html?park=hollywood-studios 301
+/animal-kingdom.html /park.html?park=animal-kingdom 301
+/universal-studios-florida.html /park.html?park=universal-studios 301
+/islands-of-adventure.html /park.html?park=islands-of-adventure 301
+/seaworld-orlando.html /park.html?park=seaworld 301
+/legoland-florida.html /park.html?park=legoland 301
+
+# Redirect old character meals URL to new character dining URL
+/character-meals.html /character-dining.html 301
