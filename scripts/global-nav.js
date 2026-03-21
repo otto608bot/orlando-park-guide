@@ -10,15 +10,13 @@ window.GlobalNav = {
     this.currentPage = page;
     this.setActiveNav(page);
     
-    // Show filter button on pages that have filters (mobile only)
+    // Show filter button on pages that need it (mobile only)
     // CSS handles the visibility, JS just ensures it's in the DOM
-    if (page === 'rides' || page === 'dining' || page === 'home' || page === 'parks') {
+    if (page === 'rides' || page === 'dining') {
       const filterBtn = document.getElementById('global-filter-btn');
       if (filterBtn) {
         // Add data attribute for CSS targeting
         filterBtn.setAttribute('data-show-on-mobile', 'true');
-        // Also set initial visibility based on viewport width
-        filterBtn.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
       }
     }
     

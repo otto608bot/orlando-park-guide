@@ -7,7 +7,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const SITE_DIR = '/Users/rufusbot/.openclaw/workspace/orlando-park-guide';
+const SITE_DIR = '/root/.openclaw/workspace/orlando-park-guide';
 const SITEMAP_PATH = path.join(SITE_DIR, 'sitemap.xml');
 
 function getToday() {
