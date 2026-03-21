@@ -8,6 +8,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon*.png");
   eleventyConfig.addPassthroughCopy("robots.txt");
   
+  // Copy park images (at project root)
+  eleventyConfig.addPassthroughCopy("*.jpeg");
+  eleventyConfig.addPassthroughCopy("*.webp");
+  eleventyConfig.addPassthroughCopy("*.jpg");
+  eleventyConfig.addPassthroughCopy("*.png");
+  
   return { 
     dir: { input: "src", output: "_site" }, 
     htmlTemplateEngine: "njk",
