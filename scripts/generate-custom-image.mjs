@@ -8,7 +8,7 @@ import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
 
-const BLOG_DIR = '/root/.openclaw/workspace/orlando-park-guide/blog';
+const BLOG_DIR = '/Users/rufusbot/.openclaw/workspace/orlando-park-guide/blog';
 
 // Parse arguments
 const args = process.argv.slice(2);
