@@ -2201,6 +2201,9 @@ function render() {
   }
 }
 
+// Add logging to verify script loads
+console.log("App loaded");
+
 // Start the app
 init();
 

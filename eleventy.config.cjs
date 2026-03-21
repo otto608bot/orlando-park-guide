@@ -1,4 +1,5 @@
 module.exports = function(eleventyConfig) {
+  // Passthrough static files
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/scripts");
   eleventyConfig.addPassthroughCopy("src/styles");
