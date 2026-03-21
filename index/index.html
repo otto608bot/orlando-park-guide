@@ -1112,7 +1112,7 @@
       visibility: hidden;
       transform: translateY(-10px);
       transition: all 0.2s;
-      z-index: 200;
+      z-index: 100;
     }
     
     .nav-dropdown-menu.active {
@@ -1806,14 +1806,10 @@
     }
   </style>
 
-  <!-- Global Navigation -->
-  <script src="/scripts/global-nav.js?v=3"></script>
-  
   <!-- Shared Filter System -->
   <script src="/scripts/filter-system.js?v=2"></script>
   
-  <!-- App -->
-  <script src="/scripts/app.js?v=10"></script>
+  <script src="app.js?v=10"></script>
   
   <!-- Filter System Integration -->
   <script>
@@ -1945,28 +1941,8 @@
         }
         // Also dispatch event for any listeners
         document.dispatchEvent(new CustomEvent('global:closeFilters'));
-      },
-      
-      toggleParksDropdown(event) {
-        event.stopPropagation();
-        const dropdown = document.getElementById('parks-dropdown');
-        const toggle = document.getElementById('nav-parks');
-        if (dropdown && toggle) {
-          const isOpen = dropdown.classList.toggle('active');
-          toggle.setAttribute('aria-expanded', isOpen.toString());
-        }
       }
     };
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-      const dropdown = document.getElementById('parks-dropdown');
-      const toggle = document.getElementById('nav-parks');
-      if (dropdown && toggle && !dropdown.contains(e.target) && !toggle.contains(e.target)) {
-        dropdown.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {

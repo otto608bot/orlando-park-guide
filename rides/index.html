@@ -4,24 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Rides | Plan Your Park</title>
-  <meta name="description" content="Browse all rides at Disney World, Universal Orlando, SeaWorld &amp; LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
-  
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180x180.png">
-  
-  <link rel="stylesheet" href="/styles/global-nav.css">
-  <link rel="stylesheet" href="/styles/ride-modal.css">
-</head>
-<body>
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Rides | Plan Your Park</title>
   <meta name="description" content="Browse all rides at Disney World, Universal Orlando, SeaWorld & LEGOLAND. Filter by height, pregnancy safety, wheelchair accessibility, and sensory needs.">
   
   <!-- Open Graph / Facebook -->
@@ -844,24 +826,22 @@
         </div>
       </div>
       
-      <div id="rides-grid" style="display: contents;">
-        <div class="rides-table-container">
-          <div class="rides-table-wrapper">
-            <table class="rides-table">
-              <thead>
-                <tr>
-                  <th>Ride</th>
-                  <th>Park</th>
-                  <th>Type</th>
-                  <th>Min Height</th>
-                  <th>Features</th>
-                </tr>
-              </thead>
-              <tbody id="rides-tbody">
-                <!-- Rides injected here -->
-              </tbody>
-            </table>
-          </div>
+      <div class="rides-table-container">
+        <div class="rides-table-wrapper">
+          <table class="rides-table">
+            <thead>
+              <tr>
+                <th>Ride</th>
+                <th>Park</th>
+                <th>Type</th>
+                <th>Min Height</th>
+                <th>Features</th>
+              </tr>
+            </thead>
+            <tbody id="rides-tbody">
+              <!-- Rides injected here -->
+            </tbody>
+          </table>
         </div>
       </div>
     </main>
@@ -1002,7 +982,6 @@
   <script src="scripts/ride-modal.js?v=3"></script>
   <script src="/scripts/filter-system.js?v=2"></script>
   <script src="/scripts/global-nav.js?v=3"></script>
-  <script src="/scripts/app.js?v=11"></script>
   
   <script>
     // State
@@ -1368,14 +1347,5 @@
     // Initialize global nav
     GlobalNav.init('rides');
   </script>
-</body>
-</html>
-
-  <script src="/scripts/shared-nav.js" defer></script>
-  <script src="/scripts/global-nav.js" defer></script>
-  <script src="/scripts/filter-system.js" defer></script>
-  <script src="/scripts/ride-modal.js" defer></script>
-  <script src="/scripts/ride-images.js" defer></script>
-  <script src="/scripts/app.js" defer onload="console.log('App Loaded')"></script>
 </body>
 </html>
