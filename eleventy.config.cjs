@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("logo*.png");
   eleventyConfig.addPassthroughCopy("favicon*.png");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   
   // Copy park images (at project root)
   eleventyConfig.addPassthroughCopy("*.jpeg");
