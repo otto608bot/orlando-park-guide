@@ -35,9 +35,17 @@
       --gray-100: #F7FAFC;
       --gray-200: #EDF2F7;
       --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
       --gray-600: #718096;
+      --gray-700: #4A5568;
       --font-heading: 'Nunito', sans-serif;
       --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -108,6 +116,342 @@
     
     .article li {
       margin-bottom: 0.5rem;
+    }
+    
+    /* Hero Image */
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+    
+    /* Content */
+    .article-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--base-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .article-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--base-dark);
+      margin: 1.75rem 0 0.75rem;
+    }
+    
+    .article-content p {
+      margin-bottom: 1rem;
+      color: var(--gray-700);
+    }
+    
+    .article-content ul, .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .article-content li {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
+    }
+    
+    .article-content strong {
+      color: var(--base-dark);
+    }
+    
+    /* Parent Tip */
+    .parent-tip {
+      background: linear-gradient(135deg, #E6FFFA 0%, #E0F7FA 100%);
+      border-left: 4px solid var(--splash-teal);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.5rem 0;
+    }
+    
+    .parent-tip strong {
+      color: var(--splash-teal);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    /* Inline CTA */
+    .inline-cta {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .inline-cta a {
+      color: white;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    
+    .inline-cta a:hover {
+      text-decoration: none;
+    }
+    
+    /* Related Posts */
+    .related-posts {
+      margin: 3rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .related-posts h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .related-card {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .related-tag {
+      font-size: 0.75rem;
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .related-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: var(--base-dark);
+    }
+    
+    .related-card p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+    
+    /* Email Capture */
+    .email-capture {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-lg);
+      margin: 3rem 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .email-capture h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .email-capture p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    
+    .email-form {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .email-form input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+    }
+    
+    .email-form button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .email-form button:hover {
+      background: #e05a0f;
+    }
+    
+    .email-disclaimer {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    
+    /* Q&A Section */
+    .qa-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .qa-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-intro {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+    
+    .qa-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .form-row input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+    }
+    
+    .qa-form textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      resize: vertical;
+    }
+    
+    .qa-form button {
+      padding: 0.875rem 1.5rem;
+      background: var(--primary-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .qa-form button:hover {
+      background: #3a8dd8;
+    }
+    
+    .qa-list {
+      margin-top: 2rem;
+    }
+    
+    .qa-item {
+      padding: 1.25rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+    }
+    
+    .qa-question {
+      color: var(--base-dark);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-answer {
+      color: var(--gray-700);
+    }
+    
+    /* Bottom CTA */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--deep-purple) 0%, var(--primary-blue) 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .bottom-cta p {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+    
+    .bottom-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--deep-purple);
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s;
+    }
+    
+    .bottom-cta a:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--base-dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    
+    .footer p {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      .article h1 { font-size: 1.5rem; }
+      .form-row { flex-direction: column; }
+      .email-form input[type="email"] { min-width: 100%; }
     }
     
     /* Closure Alert */
@@ -590,16 +934,24 @@
     </div>
   </div>
 
-<article class="article">
-    <picture>
-      <source srcset="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" type="image/webp">
-      <img src="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" alt="Orlando Theme Park Closures March 2026" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block;">
-    </picture>
-    <header class="article-header">
-      <div class="article-meta">Closures • March 2026</div>
-      <h1>Orlando Ride Closures & Refurbishments: March 2026</h1>
-      <p>Spring Break is one of the busiest times of year in Orlando, but it's also a key time for routine maintenance. Before you head to the gates, check our updated list of closures for Disney World and Universal Orlando Resort.</p>
-    </header>
+<article>
+      <header class="article-header">
+        <div class="article-meta">
+          <span>Closures</span>
+          <span>March 2026</span>
+        </div>
+        <h1>Orlando Ride Closures & Refurbishments: March 2026</h1>
+        <p>Spring Break is one of the busiest times of year in Orlando, but it's also a key time for routine maintenance. Before you head to the gates, check our updated list of closures for Disney World and Universal Orlando Resort.</p>
+      </header>
+      
+      <div class="hero-image">
+        <picture>
+          <source srcset="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" type="image/webp">
+          <img src="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" alt="Orlando Theme Park Closures March 2026">
+        </picture>
+      </div>
+      
+      <div class="article-content">
 
     <div class="inline-cta">
       💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
@@ -662,13 +1014,8 @@
     </ul>
 
     <p>Refurbishment schedules can change without notice. We recommend checking the official park apps on the morning of your visit for the most up-to-the-minute status.</p>
-
-    <hr>
-
-    <div class="bottom-cta">
-      <p>Ready to book your trip? Grab discounted tickets and save money for more park fun.</p>
-      <a href="https://www.undercovertourist.com/" target="_blank" rel="noopener">Get Discounted Tickets →</a>
-    </div>
+      </div>
+    </article>
 
     <!-- Related Posts -->
     <section class="related-posts">
@@ -742,6 +1089,12 @@
         </div>
       </div>
     </section>
+    
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <p>Ready to book your trip? Grab discounted tickets and save money for more park fun.</p>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+    </div>
   </article>
 
 <script src="/scripts/global-nav.js?v=3"></script>
