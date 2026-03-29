@@ -28,6 +28,7 @@
   "homepage": "https://github.com/otto608bot/orlando-park-guide#readme",
   "dependencies": {
     "@google/genai": "^1.45.0",
+    "cheerio": "^1.2.0",
     "playwright": "^1.58.2"
   },
   "devDependencies": {

@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orlando Ride Closures & Refurbishments: March 2026 | Plan Your Park</title>
-  <meta name="description" content="Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!">
-  <meta name="author" content="PlanYourPark.com">
+  <title>{{ title }} | Plan Your Park</title>
+  <meta name="description" content="{{ description }}">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Orlando Ride Closures & Refurbishments: March 2026">
-  <meta property="og:description" content="Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!">
-  <meta property="og:image" content="https://planyourpark.com/blog/orlando-theme-park-ride-closures-and-refurbishment.webp">
-  <meta property="og:url" content="https://planyourpark.com/blog/orlando-closures-march-2026.html">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ hero_image }}">
   <meta property="og:type" content="article">
   
   <!-- Canonical -->
-  <link rel="canonical" href="https://planyourpark.com/blog/orlando-closures-march-2026.html">
+  <link rel="canonical" href="https://planyourpark.com/blog/">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -439,88 +437,6 @@
       .email-form input[type="email"] { min-width: 100%; }
     }
   </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Orlando Ride Closures & Refurbishments: March 2026",
-  "description": "Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!",
-  "image": "https://planyourpark.com/blog/orlando-theme-park-ride-closures-and-refurbishment.webp",
-  "datePublished": "2026-03-01",
-  "dateModified": "2026-03-29",
-  "author": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
-    }
-  },
-  "mainEntityOfPage": "https://planyourpark.com/blog/orlando-closures-march-2026.html"
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://planyourpark.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://planyourpark.com/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Orlando Ride Closures & Refurbishments: March 2026",
-      "item": "https://planyourpark.com/blog/orlando-closures-march-2026.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you need park tickets to do the free activities at Disney resorts?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No! Resort activities like animal viewing at Animal Kingdom Lodge, lobby hopping, and riding the monorail or Skyliner are completely free and don't require park tickets or resort reservations. You can even park for free at resorts for up to 3 hours with a dining reservation, or use Disney's free resort-to-resort transportation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the best free activity for toddlers at Disney World?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Wilderness Explorers at Animal Kingdom is perfect for ages 4-7, but for younger toddlers, I'd recommend the Kidcot Fun Stops at EPCOT. They can collect stamps and stickers at each country, and the cast members are incredibly patient with little ones. The free celebration buttons are also a huge hit—cast members give extra attention to kids wearing them!"
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 
@@ -550,7 +466,7 @@
           <div class="nav-dropdown-menu" id="parks-dropdown">
             <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
             <a href="/park.html?park=epcot">EPCOT</a>
-            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=hollywood-studies">Hollywood Studios</a>
             <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
             <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
             <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
@@ -598,7 +514,7 @@
           <div class="mobile-nav-section-content">
             <a href="/park.html?park=magic-kingdom">Magic Kingdom</a>
             <a href="/park.html?park=epcot">EPCOT</a>
-            <a href="/park.html?park=hollywood-studios">Hollywood Studios</a>
+            <a href="/park.html?park=hollywood-studies">Hollywood Studios</a>
             <a href="/park.html?park=animal-kingdom">Animal Kingdom</a>
             <a href="/park.html?park=universal-studios">Universal Studios Florida</a>
             <a href="/park.html?park=islands-of-adventure">Islands of Adventure</a>
@@ -643,83 +559,24 @@
     <article>
       <header class="article-header">
         <div class="article-meta">
-          <span>Closures</span>
-          <span>March 2026</span>
+          {% for tag in tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+          {% if date %}<span>{{ date }}</span>{% endif %}
         </div>
-        <h1>Orlando Ride Closures & Refurbishments: March 2026</h1>
-        <p>Spring Break is one of the busiest times of year in Orlando, but it's also a key time for routine maintenance. Before you head to the gates, check our updated list of closures for Disney World and Universal Orlando Resort.</p>
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
       </header>
       
       <div class="hero-image">
         <picture>
-          <source srcset="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" type="image/webp">
-          <img src="/blog/orlando-theme-park-ride-closures-and-refurbishment.webp" alt="Orlando Theme Park Closures March 2026">
+          <source srcset="{{ hero_image }}" type="image/webp">
+          <img src="{{ hero_image }}" alt="{{ title }}">
         </picture>
       </div>
       
       <div class="article-content">
-
-        <div class="inline-cta">
-          💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
-        </div>
-
-        <div class="closure-alert">
-          <strong>⚠️ MAJOR ALERT:</strong> Hollywood Studios is losing a headliner this month as Rock 'n' Roller Coaster closes for its massive Muppets-themed reimagining.
-        </div>
-
-        <h2>Walt Disney World Closures</h2>
-        
-        <h3>Magic Kingdom</h3>
-        <ul class="closure-list">
-          <li>
-            <span class="ride-name">Big Thunder Mountain Railroad</span>
-            <span class="closure-dates">Closed through Spring 2026</span>
-          </li>
-          <li>
-            <span class="ride-name">Buzz Lightyear's Space Ranger Spin</span>
-            <span class="closure-dates">Closed through Spring 2026</span>
-          </li>
-        </ul>
-
-        <h3>Disney's Hollywood Studios</h3>
-        <ul class="closure-list">
-          <li>
-            <div>
-              <span class="ride-name">Rock 'n' Roller Coaster Starring Aerosmith</span>
-              <span class="tag-new">New Closure</span>
-            </div>
-            <span class="closure-dates">Closing March 2, 2026</span>
-          </li>
-        </ul>
-        <p><em>Note: This attraction is being rethemed to the Muppets and is expected to reopen in Summer 2026.</em></p>
-
-        <h3>Disney's Animal Kingdom</h3>
-        <ul class="closure-list">
-          <li>
-            <span class="ride-name">Wildlife Express Train / Rafiki's Planet Watch</span>
-            <span class="closure-dates">Closed (Replaced by Bluey Experience)</span>
-          </li>
-        </ul>
-
-        <h2>Universal Orlando Resort Closures</h2>
-        
-        <h3>Universal Islands of Adventure</h3>
-        <ul class="closure-list">
-          <li>
-            <span class="ride-name">Popeye & Bluto's Bilge-Rat Barges</span>
-            <span class="closure-dates">Closed March 2026 (Seasonal)</span>
-          </li>
-        </ul>
-
-        <h3>Universal Studios Florida</h3>
-        <ul class="closure-list">
-          <li>
-            <span class="ride-name">Jurassic Park River Adventure</span>
-            <span class="closure-dates">Closed through Nov 19, 2026</span>
-          </li>
-        </ul>
-
-        <p>Refurbishment schedules can change without notice. We recommend checking the official park apps on the morning of your visit for the most up-to-the-minute status.</p>
+        {{ content | safe }}
       </div>
     </article>
     
@@ -752,7 +609,7 @@
         <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
         <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
           <input type="email" name="email" placeholder="your@email.com" required>
-          <input type="hidden" name="source" value="orlando-closures-march-2026">
+          <input type="hidden" name="source" value="blog">
           <button type="submit">Get Tips →</button>
         </form>
         <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
@@ -761,7 +618,7 @@
     
     <!-- Q&A Section -->
     <section class="qa-section">
-      <h3>Questions About Free Disney Activities?</h3>
+      <h3>Questions About Disney World?</h3>
       <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
       
       <div class="qa-form">
@@ -770,21 +627,10 @@
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email (not published)" required>
           </div>
-          <textarea name="question" placeholder="What's your question about free things to do at Disney World?" rows="4" required></textarea>
-          <input type="hidden" name="post" value="free-things-disney-world">
+          <textarea name="question" placeholder="What's your question about Disney World?" rows="4" required></textarea>
+          <input type="hidden" name="post" value="{{ page.fileSlug }}">
           <button type="submit">Ask Question</button>
         </form>
-      </div>
-
-      <div class="qa-list">
-        <div class="qa-item">
-          <div class="qa-question"><strong>Q:</strong> Do you need park tickets to do the free activities at Disney resorts?</div>
-          <div class="qa-answer"><strong>A:</strong> No! Resort activities like animal viewing at Animal Kingdom Lodge, lobby hopping, and riding the monorail or Skyliner are completely free and don't require park tickets or resort reservations. You can even park for free at resorts for up to 3 hours with a dining reservation, or use Disney's free resort-to-resort transportation.</div>
-        </div>
-        <div class="qa-item">
-          <div class="qa-question"><strong>Q:</strong> What's the best free activity for toddlers at Disney World?</div>
-          <div class="qa-answer"><strong>A:</strong> Wilderness Explorers at Animal Kingdom is perfect for ages 4-7, but for younger toddlers, I'd recommend the Kidcot Fun Stops at EPCOT. They can collect stamps and stickers at each country, and the cast members are incredibly patient with little ones. The free celebration buttons are also a huge hit—cast members give extra attention to kids wearing them!</div>
-        </div>
       </div>
     </section>
     
