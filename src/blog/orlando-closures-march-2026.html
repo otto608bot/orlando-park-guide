@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orlando Theme Park Maintenance & Closures Update: March 2026 | Plan Your Park</title>
-  <meta name="description" content="Stay updated on ride closures and refurbishments at Disney World and Universal Orlando for March 2026. Don't let maintenance ruin your spring break!">
+  <title>Orlando Ride Closures & Refurbishments: March 2026 | Plan Your Park</title>
+  <meta name="description" content="Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!">
   <meta name="author" content="PlanYourPark.com">
-  <meta property="og:title" content="Orlando Theme Park Maintenance & Closures Update: March 2026">
-  <meta property="og:description" content="Stay updated on ride closures and refurbishments at Disney World and Universal Orlando for March 2026. Don't let maintenance ruin your spring break!">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Orlando Ride Closures & Refurbishments: March 2026">
+  <meta property="og:description" content="Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!">
   <meta property="og:image" content="https://planyourpark.com/blog/orlando-theme-park-ride-closures-and-refurbishment.webp">
-  <meta property="og:url" content="https://planyourpark.com/blog/maintenance-closures-update-march-2026.html">
+  <meta property="og:url" content="https://planyourpark.com/blog/orlando-closures-march-2026.html">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://planyourpark.com/blog/maintenance-closures-update-march-2026.html">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://planyourpark.com/blog/orlando-closures-march-2026.html">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,68 +58,49 @@
       font-family: var(--font-body);
       background: var(--bg-off-white);
       color: var(--base-dark);
-      line-height: 1.7;
+      line-height: 1.6;
     }
     
-    .article {
-      max-width: 680px;
+    .container {
+      max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
-      background: var(--white);
     }
     
+    /* Article Header */
     .article-header {
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     
     .article-meta {
-      color: var(--gray-600);
       font-size: 0.875rem;
+      color: var(--gray-500);
       margin-bottom: 0.75rem;
     }
     
-    .article h1 {
+    .article-meta span {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      margin-right: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .article-header h1 {
       font-family: var(--font-heading);
       font-size: 2rem;
-      line-height: 1.25;
+      color: var(--base-dark);
+      line-height: 1.3;
       margin-bottom: 1rem;
     }
     
-    .article h2 {
-      font-family: var(--font-heading);
-      font-size: 1.375rem;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      color: var(--primary-blue);
-    }
-    
-    .article h3 {
-      font-family: var(--font-heading);
+    .article-header p {
       font-size: 1.125rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .article p {
-      margin-bottom: 1rem;
-    }
-    
-    .article a {
-      color: var(--action-orange);
-      text-decoration: none;
-    }
-    
-    .article a:hover {
-      text-decoration: underline;
-    }
-    
-    .article ul {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    
-    .article li {
-      margin-bottom: 0.5rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
     }
     
     /* Hero Image */
@@ -449,349 +434,43 @@
     }
     
     @media (max-width: 768px) {
-      .article h1 { font-size: 1.5rem; }
+      .article-header h1 { font-size: 1.5rem; }
       .form-row { flex-direction: column; }
       .email-form input[type="email"] { min-width: 100%; }
     }
-    
-    /* Closure Alert */
-    .closure-alert {
-      background: #fff5f5;
-      border-left: 5px solid #fc8181;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 4px;
-    }
-    
-    .closure-list {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .closure-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #edf2f7;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .ride-name {
-      font-weight: 600;
-    }
-    
-    .closure-dates {
-      color: #718096;
-      font-size: 0.9rem;
-    }
-    
-    .tag-new {
-      background: #fed7d7;
-      color: #9b2c2c;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      margin-left: 0.5rem;
-    }
-    
-    /* Inline CTA */
-    .inline-cta {
-      background: var(--gray-100);
-      border-left: 3px solid var(--action-orange);
-      padding: 0.75rem 1rem;
-      margin: 1.5rem 0;
-      font-size: 0.9375rem;
-    }
-    
-    .inline-cta a {
-      color: var(--action-orange);
-      font-weight: 600;
-    }
-    
-    /* Bottom CTA */
-    .bottom-cta {
-      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
-      color: white;
-      padding: 1.25rem;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    
-    .bottom-cta p {
-      margin-bottom: 0.75rem;
-      font-size: 0.9375rem;
-    }
-    
-    .bottom-cta a {
-      display: inline-block;
-      background: white;
-      color: var(--action-orange);
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-    
-    hr {
-      border: none;
-      border-top: 1px solid var(--gray-200);
-      margin: 2rem 0;
-    }
-    
-    /* Nav Dropdown */
-    .nav-dropdown {
-      position: relative;
-    }
-    
-    .nav-dropdown-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      background: none;
-      border: none;
-      color: #718096;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      cursor: pointer;
-      padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      transition: color 0.2s;
-    }
-    
-    .nav-dropdown-toggle:hover,
-    .nav-dropdown-toggle.active {
-      color: #F37021;
-    }
-    
-    .nav-dropdown-toggle svg {
-      transition: transform 0.2s;
-    }
-    
-    .nav-dropdown-toggle[aria-expanded="true"] svg {
-      transform: rotate(180deg);
-    }
-    
-    .nav-dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      margin-top: 0.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      padding: 0.5rem;
-      min-width: 200px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.2s;
-      z-index: 100;
-    }
-    
-    .nav-dropdown-menu.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 0.625rem 1rem;
-      border-radius: 8px;
-      font-size: 0.875rem;
-      transition: all 0.2s;
-      color: #2D3748;
-      text-decoration: none;
-    }
-    
-    .nav-dropdown-menu a:hover {
-      background: #F7FAFC;
-      color: #F37021;
-    }
-
-    /* Related Posts */
-    .related-posts {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--gray-200);
-    }
-    .related-posts h3 {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      color: var(--base-dark);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .related-card {
-      background: var(--gray-100);
-      padding: 1.25rem;
-      border-radius: 8px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .related-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .related-tag {
-      font-size: 0.75rem;
-      color: var(--action-orange);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .related-card h4 {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      margin: 0.5rem 0;
-      color: var(--base-dark);
-    }
-    .related-card p {
-      font-size: 0.875rem;
-      color: var(--gray-600);
-      margin: 0;
-    }
-
-    /* Email Capture */
-    .email-capture {
-      margin-top: 3rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
-      border-radius: 12px;
-      color: white;
-      text-align: center;
-    }
-    .email-capture h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .email-capture p {
-      opacity: 0.9;
-      margin-bottom: 1.25rem;
-    }
-    .email-form {
-      display: flex;
-      gap: 0.75rem;
-      max-width: 400px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-    .email-form input[type="email"] {
-      flex: 1;
-      min-width: 200px;
-      padding: 0.75rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    .email-form button {
-      padding: 0.75rem 1.5rem;
-      background: var(--action-orange);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .email-form button:hover {
-      background: #e05a0f;
-    }
-    .email-disclaimer {
-      font-size: 0.8125rem;
-      opacity: 0.7;
-      margin-top: 0.75rem;
-      margin-bottom: 0;
-    }
-
-    /* Q&A Section */
-    .qa-section {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--gray-200);
-    }
-    .qa-section h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .qa-intro {
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
-    }
-    .qa-form {
-      background: var(--gray-100);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    @media (max-width: 480px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-    .qa-form input,
-    .qa-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--gray-300);
-      border-radius: 6px;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 0.9375rem;
-    }
-    .qa-form textarea {
-      resize: vertical;
-      margin-bottom: 0.75rem;
-    }
-    .qa-form button {
-      padding: 0.75rem 1.5rem;
-      background: var(--action-orange);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .qa-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .qa-item {
-      padding: 1.25rem;
-      background: var(--gray-100);
-      border-radius: 8px;
-      border-left: 3px solid var(--primary-blue);
-    }
-    .qa-question {
-      margin-bottom: 0.75rem;
-      color: var(--base-dark);
-    }
-    .qa-answer {
-      color: var(--gray-700);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 640px) {
-      .article { padding: 1.5rem; }
-      .article h1 { font-size: 1.625rem; }
-    }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Orlando Ride Closures & Refurbishments: March 2026",
+  "description": "Spring Break is one of the busiest times of year in Orlando. Check our updated list of closures for Disney World and Universal Orlando before you go!",
+  "image": "https://planyourpark.com/blog/orlando-theme-park-ride-closures-and-refurbishment.webp",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-29",
+  "author": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://planyourpark.com/logo-full.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan Your Park",
+    "url": "https://planyourpark.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://planyourpark.com/logo-full.png"
+    }
+  },
+  "mainEntityOfPage": "https://planyourpark.com/blog/orlando-closures-march-2026.html"
+}
+</script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -812,14 +491,39 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Orlando Theme Park Maintenance & Closures Update: March 2026",
-      "item": "https://planyourpark.com/blog/maintenance-closures-update-march-2026.html"
+      "name": "Orlando Ride Closures & Refurbishments: March 2026",
+      "item": "https://planyourpark.com/blog/orlando-closures-march-2026.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you need park tickets to do the free activities at Disney resorts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! Resort activities like animal viewing at Animal Kingdom Lodge, lobby hopping, and riding the monorail or Skyliner are completely free and don't require park tickets or resort reservations. You can even park for free at resorts for up to 3 hours with a dining reservation, or use Disney's free resort-to-resort transportation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best free activity for toddlers at Disney World?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wilderness Explorers at Animal Kingdom is perfect for ages 4-7, but for younger toddlers, I'd recommend the Kidcot Fun Stops at EPCOT. They can collect stamps and stickers at each country, and the cast members are incredibly patient with little ones. The free celebration buttons are also a huge hit—cast members give extra attention to kids wearing them!"
+      }
     }
   ]
 }
 </script>
 </head>
 <body>
+
   <header class="global-header">
     <div class="global-header-content">
       <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
@@ -869,6 +573,7 @@
     </div>
   </header>
 
+  <!-- Mobile Navigation Sheet -->
   <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
     <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
       <div class="global-mobile-nav-header">
@@ -954,110 +659,110 @@
       
       <div class="article-content">
 
-    <div class="inline-cta">
-      💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
-    </div>
-
-    <div class="closure-alert">
-      <strong>⚠️ MAJOR ALERT:</strong> Hollywood Studios is losing a headliner this month as Rock 'n' Roller Coaster closes for its massive Muppets-themed reimagining.
-    </div>
-
-    <h2>Walt Disney World Closures</h2>
-    
-    <h3>Magic Kingdom</h3>
-    <ul class="closure-list">
-      <li>
-        <span class="ride-name">Big Thunder Mountain Railroad</span>
-        <span class="closure-dates">Closed through Spring 2026</span>
-      </li>
-      <li>
-        <span class="ride-name">Buzz Lightyear's Space Ranger Spin</span>
-        <span class="closure-dates">Closed through Spring 2026</span>
-      </li>
-    </ul>
-
-    <h3>Disney's Hollywood Studios</h3>
-    <ul class="closure-list">
-      <li>
-        <div>
-          <span class="ride-name">Rock 'n' Roller Coaster Starring Aerosmith</span>
-          <span class="tag-new">New Closure</span>
+        <div class="inline-cta">
+          💰 <strong>Save up to $50:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
         </div>
-        <span class="closure-dates">Closing March 2, 2026</span>
-      </li>
-    </ul>
-    <p><em>Note: This attraction is being rethemed to the Muppets and is expected to reopen in Summer 2026.</em></p>
 
-    <h3>Disney's Animal Kingdom</h3>
-    <ul class="closure-list">
-      <li>
-        <span class="ride-name">Wildlife Express Train / Rafiki's Planet Watch</span>
-        <span class="closure-dates">Closed (Replaced by Bluey Experience)</span>
-      </li>
-    </ul>
+        <div class="closure-alert">
+          <strong>⚠️ MAJOR ALERT:</strong> Hollywood Studios is losing a headliner this month as Rock 'n' Roller Coaster closes for its massive Muppets-themed reimagining.
+        </div>
 
-    <h2>Universal Orlando Resort Closures</h2>
-    
-    <h3>Universal Islands of Adventure</h3>
-    <ul class="closure-list">
-      <li>
-        <span class="ride-name">Popeye & Bluto's Bilge-Rat Barges</span>
-        <span class="closure-dates">Closed March 2026 (Seasonal)</span>
-      </li>
-    </ul>
+        <h2>Walt Disney World Closures</h2>
+        
+        <h3>Magic Kingdom</h3>
+        <ul class="closure-list">
+          <li>
+            <span class="ride-name">Big Thunder Mountain Railroad</span>
+            <span class="closure-dates">Closed through Spring 2026</span>
+          </li>
+          <li>
+            <span class="ride-name">Buzz Lightyear's Space Ranger Spin</span>
+            <span class="closure-dates">Closed through Spring 2026</span>
+          </li>
+        </ul>
 
-    <h3>Universal Studios Florida</h3>
-    <ul class="closure-list">
-      <li>
-        <span class="ride-name">Jurassic Park River Adventure</span>
-        <span class="closure-dates">Closed through Nov 19, 2026</span>
-      </li>
-    </ul>
+        <h3>Disney's Hollywood Studios</h3>
+        <ul class="closure-list">
+          <li>
+            <div>
+              <span class="ride-name">Rock 'n' Roller Coaster Starring Aerosmith</span>
+              <span class="tag-new">New Closure</span>
+            </div>
+            <span class="closure-dates">Closing March 2, 2026</span>
+          </li>
+        </ul>
+        <p><em>Note: This attraction is being rethemed to the Muppets and is expected to reopen in Summer 2026.</em></p>
 
-    <p>Refurbishment schedules can change without notice. We recommend checking the official park apps on the morning of your visit for the most up-to-the-minute status.</p>
+        <h3>Disney's Animal Kingdom</h3>
+        <ul class="closure-list">
+          <li>
+            <span class="ride-name">Wildlife Express Train / Rafiki's Planet Watch</span>
+            <span class="closure-dates">Closed (Replaced by Bluey Experience)</span>
+          </li>
+        </ul>
+
+        <h2>Universal Orlando Resort Closures</h2>
+        
+        <h3>Universal Islands of Adventure</h3>
+        <ul class="closure-list">
+          <li>
+            <span class="ride-name">Popeye & Bluto's Bilge-Rat Barges</span>
+            <span class="closure-dates">Closed March 2026 (Seasonal)</span>
+          </li>
+        </ul>
+
+        <h3>Universal Studios Florida</h3>
+        <ul class="closure-list">
+          <li>
+            <span class="ride-name">Jurassic Park River Adventure</span>
+            <span class="closure-dates">Closed through Nov 19, 2026</span>
+          </li>
+        </ul>
+
+        <p>Refurbishment schedules can change without notice. We recommend checking the official park apps on the morning of your visit for the most up-to-the-minute status.</p>
       </div>
     </article>
-
+    
     <!-- Related Posts -->
     <section class="related-posts">
       <h3>You Might Also Like</h3>
       <div class="related-grid">
-        <a href="/blog/spring-break-disney-world-2026.html" class="related-card">
+        <a href="/blog/disney-world-packing-list.html" class="related-card">
           <span class="related-tag">Planning</span>
-          <h4>Spring Break Guide</h4>
-          <p>Everything you need to know for surviving Spring Break at Disney World.</p>
+          <h4>Disney World Packing List 2026</h4>
+          <p>The ultimate packing list with free printable checklist included.</p>
         </a>
-        <a href="/blog/best-rides-5-year-olds-disney-world.html" class="related-card">
-          <span class="related-tag">Family</span>
-          <h4>Best Rides for 5-Year-Olds</h4>
-          <p>Parent-tested ride recommendations for kindergarteners.</p>
+        <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="related-card">
+          <span class="related-tag">Tips</span>
+          <h4>How to Use Lightning Lane</h4>
+          <p>Master Disney's skip-the-line service and maximize every ride.</p>
         </a>
-        <a href="/blog/disney-vs-universal-comparison.html" class="related-card">
-          <span class="related-tag">Comparison</span>
-          <h4>Disney vs Universal</h4>
-          <p>Which park is right for your family's vacation?</p>
+        <a href="/blog/best-character-dining-disney-world-2026.html" class="related-card">
+          <span class="related-tag">Dining</span>
+          <h4>Best Character Dining 2026</h4>
+          <p>Compare every character meal—prices, characters, and honest reviews.</p>
         </a>
       </div>
     </section>
-
+    
     <!-- Email Capture -->
     <section class="email-capture">
       <div class="email-capture-content">
-        <h3>Get Park Updates in Your Inbox</h3>
-        <p>Weekly tips, closure updates, and money-saving hacks—no spam, unsubscribe anytime.</p>
+        <h3>Get Disney Tips in Your Inbox</h3>
+        <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
         <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
           <input type="email" name="email" placeholder="your@email.com" required>
-          <input type="hidden" name="source" value="closures-march-2026">
-          <button type="submit">Get Updates →</button>
+          <input type="hidden" name="source" value="orlando-closures-march-2026">
+          <button type="submit">Get Tips →</button>
         </form>
         <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
       </div>
     </section>
-
+    
     <!-- Q&A Section -->
     <section class="qa-section">
-      <h3>Questions About Ride Closures?</h3>
-      <p class="qa-intro">Ask below and we'll answer. Your question might help other visitors too!</p>
+      <h3>Questions About Free Disney Activities?</h3>
+      <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
       
       <div class="qa-form">
         <form action="https://formspree.io/f/xwvnjpgd" method="POST">
@@ -1065,40 +770,123 @@
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email (not published)" required>
           </div>
-          <textarea name="question" placeholder="What's your question about ride closures?" rows="4" required></textarea>
-          <input type="hidden" name="post" value="closures-march-2026">
+          <textarea name="question" placeholder="What's your question about free things to do at Disney World?" rows="4" required></textarea>
+          <input type="hidden" name="post" value="free-things-disney-world">
           <button type="submit">Ask Question</button>
         </form>
       </div>
 
       <div class="qa-list">
         <div class="qa-item">
-          <div class="qa-question">
-            <strong>Q:</strong> How do I know if a ride is open when I get to the park?
-          </div>
-          <div class="qa-answer">
-            <strong>A:</strong> Download the official Disney World and Universal Orlando apps before your trip. They show real-time wait times and ride status. We also recommend checking the morning of your visit—refurbishments can sometimes end early or get extended without notice.
-          </div>
+          <div class="qa-question"><strong>Q:</strong> Do you need park tickets to do the free activities at Disney resorts?</div>
+          <div class="qa-answer"><strong>A:</strong> No! Resort activities like animal viewing at Animal Kingdom Lodge, lobby hopping, and riding the monorail or Skyliner are completely free and don't require park tickets or resort reservations. You can even park for free at resorts for up to 3 hours with a dining reservation, or use Disney's free resort-to-resort transportation.</div>
         </div>
         <div class="qa-item">
-          <div class="qa-question">
-            <strong>Q:</strong> Are there any rides that are rarely closed for refurbishment?
-          </div>
-          <div class="qa-answer">
-            <strong>A:</strong> Popular headliners like Avatar Flight of Passage, Seven Dwarfs Mine Train, and Harry Potter and the Forbidden Journey tend to have shorter maintenance windows and are rarely closed for extended periods. However, even these can close unexpectedly, so always check the app on your visit day.
-          </div>
+          <div class="qa-question"><strong>Q:</strong> What's the best free activity for toddlers at Disney World?</div>
+          <div class="qa-answer"><strong>A:</strong> Wilderness Explorers at Animal Kingdom is perfect for ages 4-7, but for younger toddlers, I'd recommend the Kidcot Fun Stops at EPCOT. They can collect stamps and stickers at each country, and the cast members are incredibly patient with little ones. The free celebration buttons are also a huge hit—cast members give extra attention to kids wearing them!</div>
         </div>
       </div>
     </section>
     
     <!-- Bottom CTA -->
     <div class="bottom-cta">
-      <p>Ready to book your trip? Grab discounted tickets and save money for more park fun.</p>
+      <p>Ready to book your Disney World adventure?</p>
       <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
     </div>
-  </article>
+  </div>
 
-<script src="/scripts/global-nav.js?v=3"></script>
-<script>GlobalNav.init('blog');</script>
+  <footer class="footer">
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
+  </footer>
+
+  <!-- Global Navigation Manager -->
+  <script>
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn) filterBtn.style.display = 'flex';
+        }
+      },
+      
+      setActiveNav(page) {
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      toggleParksDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('parks-dropdown');
+        const toggle = document.getElementById('nav-parks');
+        
+        if (dropdown) {
+          dropdown.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+        }
+        
+        document.addEventListener('click', function closeDropdown(e) {
+          if (!dropdown.contains(e.target) && e.target !== toggle) {
+            dropdown.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeDropdown);
+          }
+        });
+      },
+      
+      openFilters() {
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      }
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    GlobalNav.init('blog');
+  </script>
 </body>
 </html>
