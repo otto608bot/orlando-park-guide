@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Rides for Teens at Islands of Adventure 2026 | Plan Your Park</title>
-  <meta name="description" content="The ultimate guide to the best rides for teens at Universal's Islands of Adventure. From VelociCoaster to Hagrid's Motorbike Adventure, discover which attractions will thrill your teenagers.">
-  <meta name="author" content="PlanYourPark.com">
-  <meta property="og:title" content="Best Rides for Teens at Islands of Adventure 2026">
-  <meta property="og:description" content="Discover the most thrilling rides for teenagers at Islands of Adventure - coaster rankings, height requirements, and parent tips">
+  <title>Best Rides for Teens at Islands of Adventure: The 2026 Parent&#39;s Guide | Plan Your Park</title>
+  <meta name="description" content="The ultimate guide to the best rides for teens at Universal&#39;s Islands of Adventure. From VelociCoaster to Hagrid&#39;s Motorbike Adventure, discover which attractions will thrill your teenagers.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Best Rides for Teens at Islands of Adventure: The 2026 Parent&#39;s Guide">
+  <meta property="og:description" content="The ultimate guide to the best rides for teens at Universal&#39;s Islands of Adventure. From VelociCoaster to Hagrid&#39;s Motorbike Adventure, discover which attractions will thrill your teenagers.">
+  <meta property="og:image" content="/blog/best-rides-teens-islands-of-adventure.webp">
+  <meta property="og:type" content="article">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -31,9 +34,17 @@
       --gray-100: #F7FAFC;
       --gray-200: #EDF2F7;
       --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
       --gray-600: #718096;
+      --gray-700: #4A5568;
       --font-heading: 'Nunito', sans-serif;
       --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,242 +53,147 @@
       font-family: var(--font-body);
       background: var(--bg-off-white);
       color: var(--base-dark);
-      line-height: 1.7;
+      line-height: 1.6;
     }
     
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .header-content {
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .logo img { height: 36px; }
-    
-    .nav { display: flex; gap: 1.5rem; }
-    .nav a {
-      color: var(--gray-600);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9375rem;
-    }
-    .nav a:hover { color: var(--action-orange); }
-    
-    .article {
-      max-width: 680px;
-      margin: 0 auto;
       padding: 2rem;
-      background: var(--white);
     }
     
+    /* Article Header */
     .article-header {
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     
     .article-meta {
-      color: var(--gray-600);
       font-size: 0.875rem;
+      color: var(--gray-500);
       margin-bottom: 0.75rem;
     }
     
-    .article h1 {
+    .article-meta span {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      margin-right: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .article-header h1 {
       font-family: var(--font-heading);
       font-size: 2rem;
-      line-height: 1.25;
+      color: var(--base-dark);
+      line-height: 1.3;
       margin-bottom: 1rem;
     }
     
-    .article h2 {
-      font-family: var(--font-heading);
-      font-size: 1.375rem;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      color: var(--primary-blue);
-    }
-    
-    .article h3 {
-      font-family: var(--font-heading);
+    .article-header p {
       font-size: 1.125rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
     }
     
-    .article p {
+    /* Hero Image */
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+    
+    /* Content */
+    .article-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--base-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .article-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--base-dark);
+      margin: 1.75rem 0 0.75rem;
+    }
+    
+    .article-content p {
       margin-bottom: 1rem;
+      color: var(--gray-700);
     }
     
-    .article a {
-      color: var(--action-orange);
-      text-decoration: none;
-    }
-    
-    .article a:hover { text-decoration: underline; }
-    
-    .article strong { color: var(--base-dark); }
-    
-    .article ul {
-      margin-bottom: 1rem;
+    .article-content ul, .article-content ol {
+      margin-bottom: 1.5rem;
       padding-left: 1.5rem;
     }
     
-    .article li {
-      margin-bottom: 0.5rem;
-    }
-    
-    /* Comparison Table */
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    
-    .comparison-table {
-      width: 100%;
-      min-width: 600px;
-      border-collapse: collapse;
-      font-size: 0.9375rem;
-    }
-    
-    .comparison-table th {
-      background: var(--primary-blue);
-      color: white;
-      padding: 0.75rem;
-      text-align: left;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    
-    .comparison-table td {
-      padding: 0.75rem;
-      border-bottom: 1px solid var(--gray-200);
-      vertical-align: top;
-    }
-    
-    .comparison-table tr:nth-child(even) {
-      background: var(--gray-100);
-    }
-    
-    .comparison-table td:first-child {
-      font-weight: 500;
-      min-width: 140px;
-    }
-    
-    /* Ride Cards */
-    .ride-card {
-      background: var(--gray-100);
-      border-radius: 8px;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      border-left: 4px solid var(--action-orange);
-    }
-    
-    .ride-card h3 {
-      margin-top: 0;
-      color: var(--base-dark);
-    }
-    
-    .ride-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.875rem;
-      color: var(--gray-600);
+    .article-content li {
       margin-bottom: 0.75rem;
+      color: var(--gray-700);
     }
     
-    .ride-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
+    .article-content strong {
+      color: var(--base-dark);
     }
     
     /* Parent Tip */
     .parent-tip {
-      background: var(--splash-teal);
-      color: white;
+      background: linear-gradient(135deg, #E6FFFA 0%, #E0F7FA 100%);
+      border-left: 4px solid var(--splash-teal);
       padding: 1rem 1.25rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-      font-size: 0.9375rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.5rem 0;
     }
     
     .parent-tip strong {
-      color: white;
+      color: var(--splash-teal);
+      display: block;
+      margin-bottom: 0.25rem;
     }
     
     /* Inline CTA */
     .inline-cta {
-      background: var(--gray-100);
-      border-left: 3px solid var(--action-orange);
-      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
       margin: 1.5rem 0;
-      font-size: 0.9375rem;
     }
     
     .inline-cta a {
-      color: var(--action-orange);
+      color: white;
+      text-decoration: underline;
       font-weight: 600;
     }
     
-    /* Bottom CTA */
-    .bottom-cta {
-      background: linear-gradient(135deg, var(--primary-blue), var(--deep-purple));
-      color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-      margin-top: 2.5rem;
-    }
-    
-    .bottom-cta h3 {
-      font-family: var(--font-heading);
-      font-size: 1.375rem;
-      margin-bottom: 0.75rem;
-      color: white;
-    }
-    
-    .bottom-cta p {
-      margin-bottom: 1rem;
-      opacity: 0.95;
-    }
-    
-    .bottom-cta a {
-      display: inline-block;
-      background: white;
-      color: var(--action-orange) !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
+    .inline-cta a:hover {
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.875rem;
-      transition: transform 0.2s;
-    }
-    
-    .bottom-cta a:hover {
-      transform: translateY(-1px);
     }
     
     /* Related Posts */
     .related-posts {
-      margin: 2.5rem 0;
+      margin: 3rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-200);
     }
     
     .related-posts h3 {
       font-family: var(--font-heading);
       font-size: 1.25rem;
       margin-bottom: 1rem;
-      color: var(--base-dark);
     }
     
     .related-grid {
@@ -287,23 +203,25 @@
     }
     
     .related-card {
-      background: var(--gray-100);
+      background: var(--white);
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: var(--radius-md);
       text-decoration: none;
       color: inherit;
-      transition: background 0.2s;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     
     .related-card:hover {
-      background: var(--gray-200);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
     
     .related-tag {
       font-size: 0.75rem;
-      color: var(--gray-600);
+      color: var(--primary-blue);
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
     
     .related-card h4 {
@@ -321,54 +239,51 @@
     
     /* Email Capture */
     .email-capture {
-      background: linear-gradient(135deg, var(--primary-blue), var(--deep-purple));
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem 0;
-      color: white;
-    }
-    
-    .email-capture-content {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-lg);
+      margin: 3rem 0;
       text-align: center;
+      color: white;
     }
     
     .email-capture h3 {
       font-family: var(--font-heading);
-      font-size: 1.375rem;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
-      color: white;
     }
     
     .email-capture p {
       opacity: 0.9;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
     
     .email-form {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.75rem;
       justify-content: center;
       flex-wrap: wrap;
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
     }
     
     .email-form input[type="email"] {
       flex: 1;
-      min-width: 200px;
-      padding: 0.75rem 1rem;
+      min-width: 250px;
+      padding: 0.875rem 1rem;
       border: none;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-size: 1rem;
     }
     
     .email-form button {
-      padding: 0.75rem 1.5rem;
+      padding: 0.875rem 1.5rem;
       background: var(--action-orange);
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
       transition: background 0.2s;
     }
@@ -386,7 +301,11 @@
     
     /* Q&A Section */
     .qa-section {
-      margin: 2.5rem 0;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
     }
     
     .qa-section h3 {
@@ -397,72 +316,67 @@
     
     .qa-intro {
       color: var(--gray-600);
-      margin-bottom: 1rem;
-    }
-    
-    .qa-form {
-      background: var(--gray-100);
-      padding: 1.25rem;
-      border-radius: 8px;
       margin-bottom: 1.5rem;
     }
     
     .qa-form form {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1rem;
     }
     
     .form-row {
       display: flex;
-      gap: 0.75rem;
+      gap: 1rem;
     }
     
     .form-row input {
       flex: 1;
-      padding: 0.625rem;
+      padding: 0.75rem 1rem;
       border: 1px solid var(--gray-300);
-      border-radius: 6px;
-      font-size: 0.9375rem;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
     }
     
     .qa-form textarea {
-      padding: 0.625rem;
+      padding: 0.75rem 1rem;
       border: 1px solid var(--gray-300);
-      border-radius: 6px;
-      font-size: 0.9375rem;
-      resize: vertical;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      resize: vertical;
     }
     
     .qa-form button {
-      padding: 0.625rem 1.25rem;
-      background: var(--action-orange);
+      padding: 0.875rem 1.5rem;
+      background: var(--primary-blue);
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      align-self: flex-start;
+      transition: background 0.2s;
     }
     
     .qa-form button:hover {
-      background: #e05a0f;
+      background: #3a8dd8;
     }
     
     .qa-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      margin-top: 2rem;
     }
     
     .qa-item {
+      padding: 1.25rem;
       background: var(--gray-100);
-      padding: 1rem;
-      border-radius: 8px;
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
     }
     
     .qa-question {
+      color: var(--base-dark);
+      font-weight: 500;
       margin-bottom: 0.5rem;
     }
     
@@ -470,268 +384,59 @@
       color: var(--gray-700);
     }
     
-    /* Thrill Level Tags */
-    .thrill-tag {
+    /* Bottom CTA */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--deep-purple) 0%, var(--primary-blue) 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .bottom-cta p {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+    
+    .bottom-cta a {
       display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-right: 0.5rem;
-    }
-    
-    .thrill-extreme {
-      background: rgba(243, 112, 33, 0.15);
-      color: var(--action-orange);
-    }
-    
-    .thrill-high {
-      background: rgba(90, 79, 207, 0.15);
+      background: white;
       color: var(--deep-purple);
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s;
     }
     
-    .thrill-moderate {
-      background: rgba(56, 178, 172, 0.15);
-      color: var(--splash-teal);
+    .bottom-cta a:hover {
+      transform: translateY(-2px);
     }
     
     /* Footer */
     .footer {
-      text-align: center;
+      background: var(--base-dark);
+      color: white;
       padding: 2rem;
-      color: var(--gray-600);
+      text-align: center;
       font-size: 0.875rem;
     }
     
-    @media (max-width: 600px) {
-      .article { padding: 1.5rem; }
-      .article h1 { font-size: 1.625rem; }
-      .comparison-table { font-size: 0.8125rem; }
-      .comparison-table th, .comparison-table td { padding: 0.5rem 0.625rem; }
-      .table-wrapper { margin: 1rem -0.5rem; border-radius: 0; }
-    }
-  
-    /* AdSense Ad Styles */
-    .ad-section {
-      min-height: 250px;
+    .footer p {
+      opacity: 0.8;
     }
     
-    .ad-section ins.adsbygoogle {
-      display: block;
-      width: 100%;
+    @media (max-width: 768px) {
+      .article-header h1 { font-size: 1.5rem; }
+      .form-row { flex-direction: column; }
+      .email-form input[type="email"] { min-width: 100%; }
     }
-    
-    .blog-inline-ad {
-      background: var(--white, #fff);
-      border: 1px solid var(--gray-200, #e5e7eb);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-    
-    .blog-inline-ad .ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-    
-    .above-fold-ad {
-      background: var(--white, #fff);
-      border: 1px solid var(--gray-200, #e5e7eb);
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-    
-    .above-fold-ad .ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.75rem;
-    }
-    
-    .footer-ad-section {
-      background: #f9fafb;
-      padding: 2rem;
-      border-top: 1px solid #e5e7eb;
-    }
-    
-    .footer-ad-container {
-      max-width: 728px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .inline-ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.75rem;
-    }
-
-
-    /* Nav Dropdown */
-    .nav-dropdown {
-      position: relative;
-    }
-    
-    .nav-dropdown-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      background: none;
-      border: none;
-      color: #718096;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      cursor: pointer;
-      padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      transition: color 0.2s;
-    }
-    
-    .nav-dropdown-toggle:hover,
-    .nav-dropdown-toggle.active {
-      color: #F37021;
-    }
-    
-    .nav-dropdown-toggle svg {
-      transition: transform 0.2s;
-    }
-    
-    .nav-dropdown-toggle[aria-expanded="true"] svg {
-      transform: rotate(180deg);
-    }
-    
-    .nav-dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      margin-top: 0.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      padding: 0.5rem;
-      min-width: 200px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.2s;
-      z-index: 100;
-    }
-    
-    .nav-dropdown-menu.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 0.625rem 1rem;
-      border-radius: 8px;
-      font-size: 0.875rem;
-      transition: all 0.2s;
-      color: #2D3748;
-      text-decoration: none;
-    }
-    
-    .nav-dropdown-menu a:hover {
-      background: #F7FAFC;
-      color: #F37021;
-    }
-
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Best Rides for Teens at Islands of Adventure 2026",
-  "description": "The ultimate guide to the best rides for teens at Universal's Islands of Adventure. From VelociCoaster to Hagrid's Motorbike Adventure, discover which attractions will thrill your teenagers.",
-  "image": "https://planyourpark.com/blog/best-rides-teens-islands-of-adventure.webp",
-  "datePublished": "2026-03-06",
-  "dateModified": "2026-03-15",
-  "author": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
-    }
-  },
-  "mainEntityOfPage": "https://planyourpark.com/blog/best-rides-teens-islands-of-adventure.html"
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://planyourpark.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://planyourpark.com/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Best Rides for Teens at Islands of Adventure 2026",
-      "item": "https://planyourpark.com/blog/best-rides-teens-islands-of-adventure.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What's the best ride for a teen who's never been on a big roller coaster?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with Spider-Man or Flight of the Hippogriff to test their comfort level. If they enjoy those, move up to Hagrid's Motorbike Adventure, which is thrilling but not as intense as VelociCoaster or Hulk."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can my 13-year-old ride alone while I wait?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Universal allows teens to ride alone, and many use the single rider lines to get on faster. Just establish a meeting point after the ride. Most queues have exits for non-riders to wait near the loading area."
-      }
-    }
-  ]
-}
-</script>
+  </style>
 </head>
 <body>
+
   <header class="global-header">
     <div class="global-header-content">
       <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
@@ -772,7 +477,6 @@
         <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
       
-      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
       <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -782,6 +486,7 @@
     </div>
   </header>
 
+  <!-- Mobile Navigation Sheet -->
   <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
     <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
       <div class="global-mobile-nav-header">
@@ -847,258 +552,245 @@
     </div>
   </div>
 
-<article class="article">
-    <header class="article-header">
-      <div class="article-meta">March 6, 2026 · Ride Guide</div>
-      <h1>Best Rides for Teens at Islands of Adventure: The 2026 Parent's Guide</h1>
-    </header>
-
-    <picture>
-      <source srcset="best-rides-teens-islands-of-adventure.webp" type="image/webp">
-      <img src="best-rides-teens-islands-of-adventure.webp" alt="Best Rides for Teens at Islands of Adventure" 
-           style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block;">
-    </picture>
-
-    <p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p>
-
-    <p>Let's be honest: teenagers can be impossible to impress. But Islands of Adventure? It's basically designed to blow their minds. With some of the most intense roller coasters in Florida, immersive Harry Potter experiences, and Marvel superhero attractions, this park delivers thrills that will actually get your teen to look up from their phone.</p>
-
-    <p>After multiple trips with my own thrill-seeking teenagers (and their very different tolerance levels), I've ranked every must-do ride at Islands of Adventure for teens. This guide covers height requirements, intensity levels, and the strategic order to hit them for maximum fun and minimum complaining.</p>
-
-    <div class="inline-cta">
-      💰 <strong>Save up to $50 on Universal tickets:</strong> Get discounted tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
-    </div>
-
-    <h2>Quick Comparison: Best Teen Rides at Islands of Adventure</h2>
-
-    <div class="table-wrapper">
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Ride</th>
-          <th>Thrill Level</th>
-          <th>Height Req</th>
-          <th>Type</th>
-          <th>Best For</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Jurassic World VelociCoaster</strong></td>
-          <td><span class="thrill-tag thrill-extreme">Extreme</span></td>
-          <td>51"</td>
-          <td>Coaster</td>
-          <td>Thrill seekers</td>
-        </tr>
-        <tr>
-          <td><strong>Hagrid's Motorbike Adventure</strong></td>
-          <td><span class="thrill-tag thrill-high">High</span></td>
-          <td>48"</td>
-          <td>Coaster</td>
-          <td>Harry Potter fans</td>
-        </tr>
-        <tr>
-          <td><strong>The Incredible Hulk Coaster</strong></td>
-          <td><span class="thrill-tag thrill-extreme">Extreme</span></td>
-          <td>54"</td>
-          <td>Coaster</td>
-          <td>Adrenaline junkies</td>
-        </tr>
-        <tr>
-          <td><strong>Harry Potter Forbidden Journey</strong></td>
-          <td><span class="thrill-tag thrill-high">High</span></td>
-          <td>48"</td>
-          <td>Dark Ride</td>
-          <td>Immersive experience</td>
-        </tr>
-        <tr>
-          <td><strong>Spider-Man Adventure</strong></td>
-          <td><span class="thrill-tag thrill-moderate">Moderate</span></td>
-          <td>40"</td>
-          <td>3D Dark Ride</td>
-          <td>Marvel fans</td>
-        </tr>
-        <tr>
-          <td><strong>Dudley Do-Right's Ripsaw Falls</strong></td>
-          <td><span class="thrill-tag thrill-moderate">Moderate</span></td>
-          <td>44"</td>
-          <td>Water Ride</td>
-          <td>Summer cooldown</td>
-        </tr>
-        <tr>
-          <td><strong>Jurassic Park River Adventure</strong></td>
-          <td><span class="thrill-tag thrill-moderate">Moderate</span></td>
-          <td>42"</td>
-          <td>Water Ride</td>
-          <td>Dinosaur fans</td>
-        </tr>
-        <tr>
-          <td><strong>Doctor Doom's Fearfall</strong></td>
-          <td><span class="thrill-tag thrill-high">High</span></td>
-          <td>52"</td>
-          <td>Drop Tower</td>
-          <td>Drop ride lovers</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-    <h2>The Best Rides for Teens (Ranked)</h2>
-
-    <h3>1. Jurassic World VelociCoaster — The Ultimate Thrill</h3>
-    
-    <div class="ride-card">
-      <h3>🦖 Jurassic World VelociCoaster</h3>
-      <div class="ride-meta">
-        <span>📍 Jurassic Park</span>
-        <span>📏 51" minimum height</span>
-        <span>⚡ 70 mph top speed</span>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <div class="article-meta">
+          
+          
+          <span>Ride Guide</span>
+          
+          
+          
+        </div>
+        <h1>Best Rides for Teens at Islands of Adventure: The 2026 Parent&#39;s Guide</h1>
+        <p>The ultimate guide to the best rides for teens at Universal&#39;s Islands of Adventure. From VelociCoaster to Hagrid&#39;s Motorbike Adventure, discover which attractions will thrill your teenagers.</p>
+      </header>
+      
+      <div class="hero-image">
+        <picture>
+          <source srcset="/blog/best-rides-teens-islands-of-adventure.webp" type="image/webp">
+          <img src="/blog/best-rides-teens-islands-of-adventure.webp" alt="Best Rides for Teens at Islands of Adventure: The 2026 Parent&#39;s Guide">
+        </picture>
       </div>
-      <p><strong>The experience:</strong> Consistently ranked as one of the best roller coasters in the world, VelociCoaster is the crown jewel of Islands of Adventure. With speeds up to 70 mph, a 155-foot-tall top hat, and four inversions (including a zero-gravity stall over the lagoon), this is the ride your teen will talk about for years.</p>
-      <p><strong>What makes it special:</strong> Unlike many coasters that just focus on speed, VelociCoaster combines intense thrills with incredible theming. You'll "race" alongside velociraptors through the paddock, and the launches are genuinely explosive.</p>
-      <p><strong>Parent tip:</strong> This ride often has the longest lines in the park. Get here at rope drop or use single rider if your teen is comfortable riding alone. The queue is partially outdoors with minimal shade—bring water.</p>
-    </div>
+      
+      <div class="article-content">
+        <p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p>
+<p><p>Let's be honest: teenagers can be impossible to impress. But Islands of Adventure? It's basically designed to blow their minds. With some of the most intense roller coasters in Florida, immersive Harry Potter experiences, and Marvel superhero attractions, this park delivers thrills that will actually get your teen to look up from their phone.</p></p>
+<p><p>After multiple trips with my own thrill-seeking teenagers (and their very different tolerance levels), I've ranked every must-do ride at Islands of Adventure for teens. This guide covers height requirements, intensity levels, and the strategic order to hit them for maximum fun and minimum complaining.</p></p>
+<p><div class="inline-cta">
+💰 <strong>Save up to $50 on Universal tickets:</strong> Get discounted tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
+</div></p>
+<p><h2>Quick Comparison: Best Teen Rides at Islands of Adventure</h2></p>
+<p><div class="table-wrapper">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Ride</th>
+<th>Thrill Level</th>
+<th>Height Req</th>
+<th>Type</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Jurassic World VelociCoaster</strong></td>
+<td><span class="thrill-tag thrill-extreme">Extreme</span></td>
+<td>51&quot;</td>
+<td>Coaster</td>
+<td>Thrill seekers</td>
+</tr>
+<tr>
+<td><strong>Hagrid's Motorbike Adventure</strong></td>
+<td><span class="thrill-tag thrill-high">High</span></td>
+<td>48&quot;</td>
+<td>Coaster</td>
+<td>Harry Potter fans</td>
+</tr>
+<tr>
+<td><strong>The Incredible Hulk Coaster</strong></td>
+<td><span class="thrill-tag thrill-extreme">Extreme</span></td>
+<td>54&quot;</td>
+<td>Coaster</td>
+<td>Adrenaline junkies</td>
+</tr>
+<tr>
+<td><strong>Harry Potter Forbidden Journey</strong></td>
+<td><span class="thrill-tag thrill-high">High</span></td>
+<td>48&quot;</td>
+<td>Dark Ride</td>
+<td>Immersive experience</td>
+</tr>
+<tr>
+<td><strong>Spider-Man Adventure</strong></td>
+<td><span class="thrill-tag thrill-moderate">Moderate</span></td>
+<td>40&quot;</td>
+<td>3D Dark Ride</td>
+<td>Marvel fans</td>
+</tr>
+<tr>
+<td><strong>Dudley Do-Right's Ripsaw Falls</strong></td>
+<td><span class="thrill-tag thrill-moderate">Moderate</span></td>
+<td>44&quot;</td>
+<td>Water Ride</td>
+<td>Summer cooldown</td>
+</tr>
+<tr>
+<td><strong>Jurassic Park River Adventure</strong></td>
+<td><span class="thrill-tag thrill-moderate">Moderate</span></td>
+<td>42&quot;</td>
+<td>Water Ride</td>
+<td>Dinosaur fans</td>
+</tr>
+<tr>
+<td><strong>Doctor Doom's Fearfall</strong></td>
+<td><span class="thrill-tag thrill-high">High</span></td>
+<td>52&quot;</td>
+<td>Drop Tower</td>
+<td>Drop ride lovers</td>
+</tr>
+</tbody>
+</table>
+</div></p>
+<p><h2>The Best Rides for Teens (Ranked)</h2></p>
+<p><h3>1. Jurassic World VelociCoaster — The Ultimate Thrill</h3></p>
+<p><div class="ride-card">
+<h3>🦖 Jurassic World VelociCoaster</h3>
+<div class="ride-meta">
+<span>📍 Jurassic Park</span>
+<span>📏 51&quot; minimum height</span>
+<span>⚡ 70 mph top speed</span>
+</div>
+<p><strong>The experience:</strong> Consistently ranked as one of the best roller coasters in the world, VelociCoaster is the crown jewel of Islands of Adventure. With speeds up to 70 mph, a 155-foot-tall top hat, and four inversions (including a zero-gravity stall over the lagoon), this is the ride your teen will talk about for years.</p>
+<p><strong>What makes it special:</strong> Unlike many coasters that just focus on speed, VelociCoaster combines intense thrills with incredible theming. You'll &quot;race&quot; alongside velociraptors through the paddock, and the launches are genuinely explosive.</p>
+<p><strong>Parent tip:</strong> This ride often has the longest lines in the park. Get here at rope drop or use single rider if your teen is comfortable riding alone. The queue is partially outdoors with minimal shade—bring water.</p>
+</div></p>
+<p><div class="parent-tip">
+<strong>Parent tip:</strong> If your teen is on the fence about intense coasters, VelociCoaster is actually smoother than Hulk. The restraints are comfortable and the ride feels secure despite the intensity.
+</div></p>
+<p><h3>2. Hagrid's Magical Creatures Motorbike Adventure — Best Overall Experience</h3></p>
+<p><div class="ride-card">
+<h3>🏍️ Hagrid's Magical Creatures Motorbike Adventure</h3>
+<div class="ride-meta">
+<span>📍 The Wizarding World of Harry Potter — Hogsmeade</span>
+<span>📏 48&quot; minimum height</span>
+<span>🎢 7 launches, vertical drop</span>
+</div>
+<p><strong>The experience:</strong> Hailed by many as the best ride in Florida (if not the world), Hagrid's combines storytelling with serious thrills. Seven launches, a vertical drop, and the chance to ride either a motorcycle or sidecar through the Forbidden Forest make this truly unique.</p>
+<p><strong>What makes it special:</strong> Unlike any other coaster, you actually feel like you're flying through the Forbidden Forest on Hagrid's motorbike. The animatronics are stunning, and there are multiple surprises I won't spoil. Even teens who aren't huge Potter fans love this ride.</p>
+<p><strong>Parent tip:</strong> Lines can exceed 2 hours during peak times. This is worth using Early Park Admission for if you're staying at a Universal hotel. The motorbike seat offers a more intense experience than the sidecar—have your teen try both!</p>
+</div></p>
+<p><h3>3. The Incredible Hulk Coaster — Classic Adrenaline</h3></p>
+<p><div class="ride-card">
+<h3>🟢 The Incredible Hulk Coaster</h3>
+<div class="ride-meta">
+<span>📍 Marvel Super Hero Island</span>
+<span>📏 54&quot; minimum height</span>
+<span>⚡ 0-40 mph in 2 seconds</span>
+</div>
+<p><strong>The experience:</strong> This launch coaster rockets you from 0 to 40 mph in two seconds flat, with seven inversions and speeds up to 67 mph. The iconic green track dominates the skyline of Marvel Super Hero Island, and the roar of the launch is impossible to miss.</p>
+<p><strong>What makes it special:</strong> The launch is genuinely intense—you're accelerated out of a tunnel with incredible force. The ride has been recently refurbished and runs smoother than in previous years. For coaster enthusiasts, this is a must-do.</p>
+<p><strong>Parent tip:</strong> The 54&quot; height requirement is stricter than most rides here—measure your teen before promising this one. Single rider line moves quickly if your teen doesn't mind splitting up.</p>
+</div></p>
+<p><div class="parent-tip">
+<strong>Parent tip:</strong> Hulk is rougher than VelociCoaster. If your teen has motion sensitivity or is prone to headaches, suggest they skip this one or take motion sickness medication beforehand.
+</div></p>
+<p><h3>4. Harry Potter and the Forbidden Journey — Immersive Magic</h3></p>
+<p><div class="ride-card">
+<h3>⚡ Harry Potter and the Forbidden Journey</h3>
+<div class="ride-meta">
+<span>📍 Hogwarts Castle</span>
+<span>📏 48&quot; minimum height</span>
+<span>🎢 Robotic arm dark ride</span>
+</div>
+<p><strong>The experience:</strong> Located inside Hogwarts Castle, this groundbreaking ride combines physical sets with projection domes and robotics. You'll fly with Harry, encounter Dementors, escape giant spiders, and play Quidditch—all while being moved by a robotic arm system.</p>
+<p><strong>What makes it special:</strong> The queue alone is worth the wait. You'll walk through Hogwarts Castle, seeing Dumbledore's office, the Defense Against the Dark Arts classroom, and the Sorting Hat. For Potter fans, it's pure magic.</p>
+<p><strong>Parent tip:</strong> This ride can cause motion sickness due to the screen-based sections. Have your teen ride before eating, and skip it if they're prone to nausea. The castle walkthrough is available as a &quot;tour only&quot; option for those who don't want to ride.</p>
+</div></p>
+<p><h3>5. The Amazing Adventures of Spider-Man — 3D Action</h3></p>
+<p><div class="ride-card">
+<h3>🕷️ The Amazing Adventures of Spider-Man</h3>
+<div class="ride-meta">
+<span>📍 Marvel Super Hero Island</span>
+<span>📏 40&quot; minimum height</span>
+<span>🎮 3D motion simulator</span>
+</div>
+<p><strong>The experience:</strong> Considered one of the best dark rides ever created, Spider-Man combines physical sets with 3D projection for an immersive superhero adventure. You'll help Spidey catch villains who've stolen the Statue of Liberty.</p>
+<p><strong>What makes it special:</strong> The ride seamlessly blends real sets with 3D screens in a way that still impresses despite being older technology. The simulated 400-foot &quot;freefall&quot; at the end is a highlight.</p>
+<p><strong>Parent tip:</strong> This is a great &quot;warm-up&quot; ride for teens who want to ease into the bigger thrills. The 40&quot; height requirement means most teens can ride, and it's a good test of how they handle motion simulation.</p>
+</div></p>
+<p><h2>Best Water Rides for Hot Days</h2></p>
+<p><h3>Dudley Do-Right's Ripsaw Falls</h3></p>
+<p><p>A log flume ride with personality. The drop is significant (75 feet), and you will get soaked—especially if you sit in the front. The theming is charmingly retro, and the view of Hogwarts Castle from the top of the lift hill is unbeatable. Height requirement: 44&quot;.</p></p>
+<p><h3>Popeye &amp; Bluto's Bilge-Rat Barges</h3></p>
+<p><p>If your teen wants to get absolutely drenched, this is the ride. Unlike other river rapids rides, Bilge-Rat Barges has multiple waterfalls and water cannons that will leave no dry spots. Bring a change of clothes or plan this as your last ride of the day. Height requirement: 42&quot;.</p></p>
+<p><div class="parent-tip">
+<strong>Parent tip:</strong> Islands of Adventure has three water rides that will soak you. If visiting on a hot day (which is most days in Orlando), plan to hit these in the afternoon when you need cooling off. A <a href="https://www.amazon.com/dp/B074M4PQ1K?tag=planyourpark-20" target="_blank" rel="noopener">waterproof phone case</a> is a must—way cheaper than a locker rental every time. Bring flip-flops and <a href="https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20" target="_blank" rel="noopener">cheap ponchos</a> if you don't want to walk around soaked.
+</div></p>
+<p><h2>Strategic Ride Order for Maximum Fun</h2></p>
+<p><p>Here's the order I recommend for teens who want to hit the best rides with minimal waiting:</p></p>
+<p><ol>
+<li><strong>Rope drop Hagrid's Motorbike Adventure</strong> — This line gets absurdly long. Be at the park 30 minutes before opening.</li>
+<li><strong>VelociCoaster</strong> — Head here immediately after Hagrid's while the park is still quiet.</li>
+<li><strong>Harry Potter and the Forbidden Journey</strong> — The line moves steadily, and you're indoors.</li>
+<li><strong>The Incredible Hulk Coaster</strong> — Single rider line is your friend here.</li>
+<li><strong>Spider-Man</strong> — Good midday option when outdoor lines are brutal.</li>
+<li><strong>Water rides</strong> — Save Dudley Do-Right and Bilge-Rat Barges for the hot afternoon.</li>
+</ol></p>
+<p><h2>Is Islands of Adventure Better Than Disney for Teens?</h2></p>
+<p><p>In my experience, yes—especially for teens aged 13-17. Here's why:</p></p>
+<p><ul>
+<li><strong>More intense thrills:</strong> Disney's coasters (like <a href="/park.html?park=magic-kingdom">Space Mountain</a> and <a href="/park.html?park=hollywood-studios">Rock 'n' Roller Coaster</a>) are fun, but they don't match the intensity of VelociCoaster or Hulk.</li>
+<li><strong>Relevant IPs:</strong> Harry Potter, Marvel, and Jurassic World resonate more with teens than princesses and classic Disney characters.</li>
+<li><strong>Less &quot;kiddie&quot; stuff:</strong> While Islands has Seuss Landing for little ones, the overall vibe is more mature.</li>
+<li><strong>Single rider lines:</strong> Universal embraces single rider lines, which teens love because they can ride more with less waiting.</li>
+</ul></p>
+<p><p>That said, Disney still wins for overall theming, parades, and nighttime spectaculars. My recommendation? Do both if you can, but prioritize Islands of Adventure if you have thrill-seeking teens.</p></p>
 
-    <div class="parent-tip">
-      <strong>Parent tip:</strong> If your teen is on the fence about intense coasters, VelociCoaster is actually smoother than Hulk. The restraints are comfortable and the ride feels secure despite the intensity.
-    </div>
-
-    <h3>2. Hagrid's Magical Creatures Motorbike Adventure — Best Overall Experience</h3>
-    
-    <div class="ride-card">
-      <h3>🏍️ Hagrid's Magical Creatures Motorbike Adventure</h3>
-      <div class="ride-meta">
-        <span>📍 The Wizarding World of Harry Potter — Hogsmeade</span>
-        <span>📏 48" minimum height</span>
-        <span>🎢 7 launches, vertical drop</span>
       </div>
-      <p><strong>The experience:</strong> Hailed by many as the best ride in Florida (if not the world), Hagrid's combines storytelling with serious thrills. Seven launches, a vertical drop, and the chance to ride either a motorcycle or sidecar through the Forbidden Forest make this truly unique.</p>
-      <p><strong>What makes it special:</strong> Unlike any other coaster, you actually feel like you're flying through the Forbidden Forest on Hagrid's motorbike. The animatronics are stunning, and there are multiple surprises I won't spoil. Even teens who aren't huge Potter fans love this ride.</p>
-      <p><strong>Parent tip:</strong> Lines can exceed 2 hours during peak times. This is worth using Early Park Admission for if you're staying at a Universal hotel. The motorbike seat offers a more intense experience than the sidecar—have your teen try both!</p>
-    </div>
-
-    <h3>3. The Incredible Hulk Coaster — Classic Adrenaline</h3>
+    </article>
     
-    <div class="ride-card">
-      <h3>🟢 The Incredible Hulk Coaster</h3>
-      <div class="ride-meta">
-        <span>📍 Marvel Super Hero Island</span>
-        <span>📏 54" minimum height</span>
-        <span>⚡ 0-40 mph in 2 seconds</span>
-      </div>
-      <p><strong>The experience:</strong> This launch coaster rockets you from 0 to 40 mph in two seconds flat, with seven inversions and speeds up to 67 mph. The iconic green track dominates the skyline of Marvel Super Hero Island, and the roar of the launch is impossible to miss.</p>
-      <p><strong>What makes it special:</strong> The launch is genuinely intense—you're accelerated out of a tunnel with incredible force. The ride has been recently refurbished and runs smoother than in previous years. For coaster enthusiasts, this is a must-do.</p>
-      <p><strong>Parent tip:</strong> The 54" height requirement is stricter than most rides here—measure your teen before promising this one. Single rider line moves quickly if your teen doesn't mind splitting up.</p>
-    </div>
-
-    <div class="parent-tip">
-      <strong>Parent tip:</strong> Hulk is rougher than VelociCoaster. If your teen has motion sensitivity or is prone to headaches, suggest they skip this one or take motion sickness medication beforehand.
-    </div>
-
-    <h3>4. Harry Potter and the Forbidden Journey — Immersive Magic</h3>
-    
-    <div class="ride-card">
-      <h3>⚡ Harry Potter and the Forbidden Journey</h3>
-      <div class="ride-meta">
-        <span>📍 Hogwarts Castle</span>
-        <span>📏 48" minimum height</span>
-        <span>🎢 Robotic arm dark ride</span>
-      </div>
-      <p><strong>The experience:</strong> Located inside Hogwarts Castle, this groundbreaking ride combines physical sets with projection domes and robotics. You'll fly with Harry, encounter Dementors, escape giant spiders, and play Quidditch—all while being moved by a robotic arm system.</p>
-      <p><strong>What makes it special:</strong> The queue alone is worth the wait. You'll walk through Hogwarts Castle, seeing Dumbledore's office, the Defense Against the Dark Arts classroom, and the Sorting Hat. For Potter fans, it's pure magic.</p>
-      <p><strong>Parent tip:</strong> This ride can cause motion sickness due to the screen-based sections. Have your teen ride before eating, and skip it if they're prone to nausea. The castle walkthrough is available as a "tour only" option for those who don't want to ride.</p>
-    </div>
-
-    <h3>5. The Amazing Adventures of Spider-Man — 3D Action</h3>
-    
-    <div class="ride-card">
-      <h3>🕷️ The Amazing Adventures of Spider-Man</h3>
-      <div class="ride-meta">
-        <span>📍 Marvel Super Hero Island</span>
-        <span>📏 40" minimum height</span>
-        <span>🎮 3D motion simulator</span>
-      </div>
-      <p><strong>The experience:</strong> Considered one of the best dark rides ever created, Spider-Man combines physical sets with 3D projection for an immersive superhero adventure. You'll help Spidey catch villains who've stolen the Statue of Liberty.</p>
-      <p><strong>What makes it special:</strong> The ride seamlessly blends real sets with 3D screens in a way that still impresses despite being older technology. The simulated 400-foot "freefall" at the end is a highlight.</p>
-      <p><strong>Parent tip:</strong> This is a great "warm-up" ride for teens who want to ease into the bigger thrills. The 40" height requirement means most teens can ride, and it's a good test of how they handle motion simulation.</p>
-    </div>
-
-    <h2>Best Water Rides for Hot Days</h2>
-
-    <h3>Dudley Do-Right's Ripsaw Falls</h3>
-    
-    <p>A log flume ride with personality. The drop is significant (75 feet), and you will get soaked—especially if you sit in the front. The theming is charmingly retro, and the view of Hogwarts Castle from the top of the lift hill is unbeatable. Height requirement: 44".</p>
-
-    <h3>Popeye & Bluto's Bilge-Rat Barges</h3>
-    
-    <p>If your teen wants to get absolutely drenched, this is the ride. Unlike other river rapids rides, Bilge-Rat Barges has multiple waterfalls and water cannons that will leave no dry spots. Bring a change of clothes or plan this as your last ride of the day. Height requirement: 42".</p>
-
-    <div class="parent-tip">
-      <strong>Parent tip:</strong> Islands of Adventure has three water rides that will soak you. If visiting on a hot day (which is most days in Orlando), plan to hit these in the afternoon when you need cooling off. A <a href="https://www.amazon.com/dp/B074M4PQ1K?tag=planyourpark-20" target="_blank" rel="noopener">waterproof phone case</a> is a must—way cheaper than a locker rental every time. Bring flip-flops and <a href="https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20" target="_blank" rel="noopener">cheap ponchos</a> if you don't want to walk around soaked.
-    </div>
-
-    <h2>Strategic Ride Order for Maximum Fun</h2>
-
-    <p>Here's the order I recommend for teens who want to hit the best rides with minimal waiting:</p>
-
-    <ol>
-      <li><strong>Rope drop Hagrid's Motorbike Adventure</strong> — This line gets absurdly long. Be at the park 30 minutes before opening.</li>
-      <li><strong>VelociCoaster</strong> — Head here immediately after Hagrid's while the park is still quiet.</li>
-      <li><strong>Harry Potter and the Forbidden Journey</strong> — The line moves steadily, and you're indoors.</li>
-      <li><strong>The Incredible Hulk Coaster</strong> — Single rider line is your friend here.</li>
-      <li><strong>Spider-Man</strong> — Good midday option when outdoor lines are brutal.</li>
-      <li><strong>Water rides</strong> — Save Dudley Do-Right and Bilge-Rat Barges for the hot afternoon.</li>
-    </ol>
-
-    <h2>Is Islands of Adventure Better Than Disney for Teens?</h2>
-
-    <p>In my experience, yes—especially for teens aged 13-17. Here's why:</p>
-
-    <ul>
-      <li><strong>More intense thrills:</strong> Disney's coasters (like <a href="/park.html?park=magic-kingdom">Space Mountain</a> and <a href="/park.html?park=hollywood-studios">Rock 'n' Roller Coaster</a>) are fun, but they don't match the intensity of VelociCoaster or Hulk.</li>
-      <li><strong>Relevant IPs:</strong> Harry Potter, Marvel, and Jurassic World resonate more with teens than princesses and classic Disney characters.</li>
-      <li><strong>Less "kiddie" stuff:</strong> While Islands has Seuss Landing for little ones, the overall vibe is more mature.</li>
-      <li><strong>Single rider lines:</strong> Universal embraces single rider lines, which teens love because they can ride more with less waiting.</li>
-    </ul>
-
-    <p>That said, Disney still wins for overall theming, parades, and nighttime spectaculars. My recommendation? Do both if you can, but prioritize Islands of Adventure if you have thrill-seeking teens.</p>
-
+    <!-- Related Posts -->
+    &quot;&lt;p class=&#92;&quot;affiliate-note&#92;&quot; style=&#92;&quot;font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;&#92;&quot;&gt;As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.&lt;/p&gt;&#92;n&lt;p&gt;&lt;p&gt;Let&#39;s...
     <section class="related-posts">
       <h3>You Might Also Like</h3>
       <div class="related-grid">
-        <a href="/blog/universal-vs-disney-comparison.html" class="related-card">
-          <span class="related-tag">Comparison</span>
-          <h4>Universal vs Disney: Which Is Better?</h4>
-          <p>Head-to-head comparison of rides, costs, and best ages to help you decide where to spend your vacation dollars.</p>
+        <a href="/blog/disney-world-packing-list.html" class="related-card">
+          <span class="related-tag">Planning</span>
+          <h4>Disney World Packing List 2026</h4>
+          <p>The ultimate packing list with free printable checklist included.</p>
+        </a>
+        <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="related-card">
+          <span class="related-tag">Tips</span>
+          <h4>How to Use Lightning Lane</h4>
+          <p>Master Disney's skip-the-line service and maximize every ride.</p>
         </a>
         <a href="/blog/best-character-dining-disney-world-2026.html" class="related-card">
-          <span class="related-tag">Disney World</span>
-          <h4>Best Character Dining at Disney World</h4>
-          <p>Compare every character dining experience—prices, characters, food quality, and honest parent reviews.</p>
-        </a>
-        <a href="/blog/toddler-rides-disney-world.html" class="related-card">
-          <span class="related-tag">Disney World</span>
-          <h4>Best Toddler Rides at Disney World</h4>
-          <p>The gentlest, most magical rides for your little ones—no height requirements, just pure Disney joy.</p>
+          <span class="related-tag">Dining</span>
+          <h4>Best Character Dining 2026</h4>
+          <p>Compare every character meal—prices, characters, and honest reviews.</p>
         </a>
       </div>
     </section>
-
+    
+    <!-- Email Capture -->
     <section class="email-capture">
       <div class="email-capture-content">
-        <h3>Get Universal Tips in Your Inbox</h3>
+        <h3>Get Disney Tips in Your Inbox</h3>
         <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
         <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
           <input type="email" name="email" placeholder="your@email.com" required>
-          <input type="hidden" name="source" value="teen-rides-islands-adventure">
+          <input type="hidden" name="source" value="blog">
           <button type="submit">Get Tips →</button>
         </form>
         <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
       </div>
     </section>
-
+    
+    <!-- Q&A Section -->
     <section class="qa-section">
-      <h3>Questions About Islands of Adventure?</h3>
+      <h3>Questions About This Topic?</h3>
       <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
       
       <div class="qa-form">
@@ -1107,35 +799,111 @@
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email (not published)" required>
           </div>
-          <textarea name="question" placeholder="What's your question about Islands of Adventure rides?" rows="4" required></textarea>
-          <input type="hidden" name="post" value="teen-rides-islands-adventure">
+          <textarea name="question" placeholder="What's your question?" rows="4" required></textarea>
           <button type="submit">Ask Question</button>
         </form>
       </div>
-
-      <div class="qa-list">
-        <div class="qa-item">
-          <div class="qa-question"><strong>Q:</strong> What's the best ride for a teen who's never been on a big roller coaster?</div>
-          <div class="qa-answer"><strong>A:</strong> Start with <a href="/park.html?park=islands-of-adventure">Spider-Man</a> or Flight of the Hippogriff to test their comfort level. If they enjoy those, move up to Hagrid's Motorbike Adventure, which is thrilling but not as intense as VelociCoaster or Hulk.</div>
-        </div>
-        <div class="qa-item">
-          <div class="qa-question"><strong>Q:</strong> Can my 13-year-old ride alone while I wait?</div>
-          <div class="qa-answer"><strong>A:</strong> Yes! Universal allows teens to ride alone, and many use the single rider lines to get on faster. Just establish a meeting point after the ride. Most queues have exits for non-riders to wait near the loading area.</div>
-        </div>
-      </div>
     </section>
-
+    
+    <!-- Bottom CTA -->
     <div class="bottom-cta">
-      <h3>Ready to Book Your Universal Trip?</h3>
-      <p>Lock in discounted Universal Orlando tickets and save up to $50 per person. Islands of Adventure is included with all multi-park tickets.</p>
+      <p>Ready to book your Disney World adventure?</p>
       <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
     </div>
-  </article>
+  </div>
 
   <footer class="footer">
-    <p>© 2026 PlanYourPark.com · Helping families plan better theme park vacations</p>
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
   </footer>
-<script src="/scripts/global-nav.js?v=3"></script>
-<script>GlobalNav.init('blog');</script>
+
+  <!-- Global Navigation Manager -->
+  <script>
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn) filterBtn.style.display = 'flex';
+        }
+      },
+      
+      setActiveNav(page) {
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      toggleParksDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('parks-dropdown');
+        const toggle = document.getElementById('nav-parks');
+        
+        if (dropdown) {
+          dropdown.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+        }
+        
+        document.addEventListener('click', function closeDropdown(e) {
+          if (!dropdown.contains(e.target) && e.target !== toggle) {
+            dropdown.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeDropdown);
+          }
+        });
+      },
+      
+      openFilters() {
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
+      }
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    GlobalNav.init('blog');
+  </script>
 </body>
 </html>

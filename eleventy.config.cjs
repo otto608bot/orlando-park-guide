@@ -15,12 +15,15 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.jpg");
   eleventyConfig.addPassthroughCopy("*.png");
   
-  // Copy blog images
-  eleventyConfig.addPassthroughCopy("blog/");
-  
+  // Blog posts: output with .html extension to match original canonical URLs
+  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date);
+  });
+
   return { 
     dir: { input: "src", output: "_site" }, 
     htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
     pathPrefix: "/"
   };
 };

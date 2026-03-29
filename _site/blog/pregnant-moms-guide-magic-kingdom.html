@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pregnant Mom's Guide to Magic Kingdom | Plan Your Park</title>
+  <title>Pregnant Mom&#39;s Guide to Magic Kingdom | Plan Your Park</title>
   <meta name="description" content="Discover pregnancy-safe rides at Magic Kingdom, rides to avoid, comfort tips, and how to make the most of your Disney World visit while expecting.">
-  <meta name="author" content="PlanYourPark.com">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pregnant Mom&#39;s Guide to Magic Kingdom">
+  <meta property="og:description" content="Discover pregnancy-safe rides at Magic Kingdom, rides to avoid, comfort tips, and how to make the most of your Disney World visit while expecting.">
+  <meta property="og:image" content="/blog/pregnant-moms-guide-magic-kingdom.webp">
+  <meta property="og:type" content="article">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,9 +33,18 @@
       --white: #FFFFFF;
       --gray-100: #F7FAFC;
       --gray-200: #EDF2F7;
+      --gray-300: #E2E8F0;
+      --gray-400: #CBD5E0;
+      --gray-500: #A0AEC0;
       --gray-600: #718096;
+      --gray-700: #4A5568;
       --font-heading: 'Nunito', sans-serif;
       --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,344 +53,390 @@
       font-family: var(--font-body);
       background: var(--bg-off-white);
       color: var(--base-dark);
-      line-height: 1.7;
+      line-height: 1.6;
     }
     
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .header-content {
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .logo img { height: 36px; }
-    
-    .nav { display: flex; gap: 1.5rem; }
-    .nav a {
-      color: var(--gray-600);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9375rem;
-    }
-    .nav a:hover { color: var(--action-orange); }
-    
-    .article {
-      max-width: 680px;
-      margin: 0 auto;
       padding: 2rem;
-      background: var(--white);
     }
     
+    /* Article Header */
     .article-header {
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     
     .article-meta {
-      color: var(--gray-600);
       font-size: 0.875rem;
+      color: var(--gray-500);
       margin-bottom: 0.75rem;
     }
     
-    .article h1 {
+    .article-meta span {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      margin-right: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .article-header h1 {
       font-family: var(--font-heading);
       font-size: 2rem;
-      line-height: 1.25;
+      color: var(--base-dark);
+      line-height: 1.3;
       margin-bottom: 1rem;
     }
     
-    .article h2 {
-      font-family: var(--font-heading);
-      font-size: 1.375rem;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      color: var(--primary-blue);
-    }
-    
-    .article h3 {
-      font-family: var(--font-heading);
+    .article-header p {
       font-size: 1.125rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
     }
     
-    .article p {
+    /* Hero Image */
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+    
+    /* Content */
+    .article-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--base-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    
+    .article-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--base-dark);
+      margin: 1.75rem 0 0.75rem;
+    }
+    
+    .article-content p {
       margin-bottom: 1rem;
+      color: var(--gray-700);
     }
     
-    .article a {
-      color: var(--action-orange);
-      text-decoration: none;
-    }
-    
-    .article a:hover { text-decoration: underline; }
-    
-    .article strong { color: var(--base-dark); }
-    
-    .article ul {
-      margin-bottom: 1rem;
+    .article-content ul, .article-content ol {
+      margin-bottom: 1.5rem;
       padding-left: 1.5rem;
     }
     
-    .article li {
-      margin-bottom: 0.5rem;
+    .article-content li {
+      margin-bottom: 0.75rem;
+      color: var(--gray-700);
     }
     
-    .inline-cta {
-      background: var(--gray-100);
-      border-left: 3px solid var(--action-orange);
-      padding: 0.75rem 1rem;
+    .article-content strong {
+      color: var(--base-dark);
+    }
+    
+    /* Parent Tip */
+    .parent-tip {
+      background: linear-gradient(135deg, #E6FFFA 0%, #E0F7FA 100%);
+      border-left: 4px solid var(--splash-teal);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       margin: 1.5rem 0;
-      font-size: 0.9375rem;
+    }
+    
+    .parent-tip strong {
+      color: var(--splash-teal);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    /* Inline CTA */
+    .inline-cta {
+      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin: 1.5rem 0;
     }
     
     .inline-cta a {
-      color: var(--action-orange);
+      color: white;
+      text-decoration: underline;
       font-weight: 600;
     }
     
-    .bottom-cta {
-      background: linear-gradient(135deg, var(--action-orange) 0%, #e85a1a 100%);
-      color: white;
-      padding: 1.25rem;
-      border-radius: 8px;
+    .inline-cta a:hover {
+      text-decoration: none;
+    }
+    
+    /* Related Posts */
+    .related-posts {
+      margin: 3rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .related-posts h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .related-card {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .related-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .related-tag {
+      font-size: 0.75rem;
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .related-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      color: var(--base-dark);
+    }
+    
+    .related-card p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+    
+    /* Email Capture */
+    .email-capture {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-lg);
+      margin: 3rem 0;
       text-align: center;
+      color: white;
+    }
+    
+    .email-capture h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .email-capture p {
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+    
+    .email-form {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .email-form input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 0.875rem 1rem;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+    }
+    
+    .email-form button {
+      padding: 0.875rem 1.5rem;
+      background: var(--action-orange);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .email-form button:hover {
+      background: #e05a0f;
+    }
+    
+    .email-disclaimer {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+    
+    /* Q&A Section */
+    .qa-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .qa-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-intro {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+    
+    .qa-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .form-row input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+    }
+    
+    .qa-form textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      resize: vertical;
+    }
+    
+    .qa-form button {
+      padding: 0.875rem 1.5rem;
+      background: var(--primary-blue);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .qa-form button:hover {
+      background: #3a8dd8;
+    }
+    
+    .qa-list {
       margin-top: 2rem;
     }
     
+    .qa-item {
+      padding: 1.25rem;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+    }
+    
+    .qa-question {
+      color: var(--base-dark);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    .qa-answer {
+      color: var(--gray-700);
+    }
+    
+    /* Bottom CTA */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--deep-purple) 0%, var(--primary-blue) 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
     .bottom-cta p {
-      margin-bottom: 0.75rem;
-      font-size: 0.9375rem;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
     }
     
     .bottom-cta a {
       display: inline-block;
       background: white;
-      color: var(--action-orange);
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
+      color: var(--deep-purple);
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius-sm);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.875rem;
-    }
-    
-    hr {
-      border: none;
-      border-top: 1px solid var(--gray-200);
-      margin: 2rem 0;
-    }
-    
-    @media (max-width: 640px) {
-      .nav { display: none; }
-      .article { padding: 1.5rem; }
-      .article h1 { font-size: 1.625rem; }
-    }
-  
-    /* AdSense Ad Styles */
-    .ad-section {
-      min-height: 250px;
-    }
-    
-    .ad-section ins.adsbygoogle {
-      display: block;
-      width: 100%;
-    }
-    
-    .blog-inline-ad {
-      background: var(--white, #fff);
-      border: 1px solid var(--gray-200, #e5e7eb);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-    
-    .blog-inline-ad .ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-    
-    .above-fold-ad {
-      background: var(--white, #fff);
-      border: 1px solid var(--gray-200, #e5e7eb);
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-    
-    .above-fold-ad .ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.75rem;
-    }
-    
-    .footer-ad-section {
-      background: #f9fafb;
-      padding: 2rem;
-      border-top: 1px solid #e5e7eb;
-    }
-    
-    .footer-ad-container {
-      max-width: 728px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .inline-ad-label {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.75rem;
-    }
-
-
-    /* Nav Dropdown */
-    .nav-dropdown {
-      position: relative;
-    }
-    
-    .nav-dropdown-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      background: none;
-      border: none;
-      color: #718096;
-      font-weight: 500;
-      font-size: 0.9375rem;
-      cursor: pointer;
-      padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      transition: color 0.2s;
-    }
-    
-    .nav-dropdown-toggle:hover,
-    .nav-dropdown-toggle.active {
-      color: #F37021;
-    }
-    
-    .nav-dropdown-toggle svg {
+      font-size: 1rem;
       transition: transform 0.2s;
     }
     
-    .nav-dropdown-toggle[aria-expanded="true"] svg {
-      transform: rotate(180deg);
+    .bottom-cta a:hover {
+      transform: translateY(-2px);
     }
     
-    .nav-dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      margin-top: 0.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      padding: 0.5rem;
-      min-width: 200px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.2s;
-      z-index: 100;
-    }
-    
-    .nav-dropdown-menu.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 0.625rem 1rem;
-      border-radius: 8px;
+    /* Footer */
+    .footer {
+      background: var(--base-dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
       font-size: 0.875rem;
-      transition: all 0.2s;
-      color: #2D3748;
-      text-decoration: none;
     }
     
-    .nav-dropdown-menu a:hover {
-      background: #F7FAFC;
-      color: #F37021;
+    .footer p {
+      opacity: 0.8;
     }
-
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Pregnant Mom's Guide to Magic Kingdom",
-  "description": "Discover pregnancy-safe rides at Magic Kingdom, rides to avoid, comfort tips, and how to make the most of your Disney World visit while expecting.",
-  "image": "https://planyourpark.com/blog/pregnant-moms-guide-magic-kingdom.webp",
-  "datePublished": "2026-02-26",
-  "dateModified": "2026-03-15",
-  "author": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
+    
+    @media (max-width: 768px) {
+      .article-header h1 { font-size: 1.5rem; }
+      .form-row { flex-direction: column; }
+      .email-form input[type="email"] { min-width: 100%; }
     }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Plan Your Park",
-    "url": "https://planyourpark.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://planyourpark.com/logo-full.png"
-    }
-  },
-  "mainEntityOfPage": "https://planyourpark.com/blog/pregnant-moms-guide-magic-kingdom.html"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://planyourpark.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://planyourpark.com/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Pregnant Mom's Guide to Magic Kingdom",
-      "item": "https://planyourpark.com/blog/pregnant-moms-guide-magic-kingdom.html"
-    }
-  ]
-}
-</script>
+  </style>
 </head>
 <body>
+
   <header class="global-header">
     <div class="global-header-content">
       <button class="global-mobile-menu-btn" onclick="GlobalNav.openNav()" aria-label="Open menu">
@@ -417,7 +477,6 @@
         <a href="/deals.html" id="nav-deals">Deals</a>
       </nav>
       
-      <!-- Mobile filter button (shown via JS for rides/dining pages) -->
       <button class="global-mobile-filter-btn" id="global-filter-btn" onclick="GlobalNav.openFilters()" style="display: none;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -427,6 +486,7 @@
     </div>
   </header>
 
+  <!-- Mobile Navigation Sheet -->
   <div class="global-mobile-nav-sheet" id="global-mobile-nav-sheet" onclick="GlobalNav.closeNav(event)">
     <div class="global-mobile-nav-content" onclick="event.stopPropagation()">
       <div class="global-mobile-nav-header">
@@ -492,94 +552,99 @@
     </div>
   </div>
 
-<article class="article">
-    <picture>
-      <source srcset="pregnant-moms-guide-magic-kingdom.webp" type="image/webp">
-      <img src="pregnant-moms-guide-magic-kingdom.png" alt="Pregnant Mom's Guide to Magic Kingdom" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 1.5rem; display: block;">
-    </picture>
-    <header class="article-header">
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <div class="article-meta">
+          
+          
+          <span>Disney World •</span>
+          
+          
+          
+          <span>2026-02-26</span>
+          
+        </div>
+        <h1>Pregnant Mom&#39;s Guide to Magic Kingdom</h1>
+        <p>Discover pregnancy-safe rides at Magic Kingdom, rides to avoid, comfort tips, and how to make the most of your Disney World visit while expecting.</p>
+      </header>
+      
+      <div class="hero-image">
+        <picture>
+          <source srcset="/blog/pregnant-moms-guide-magic-kingdom.webp" type="image/webp">
+          <img src="/blog/pregnant-moms-guide-magic-kingdom.webp" alt="Pregnant Mom&#39;s Guide to Magic Kingdom">
+        </picture>
+      </div>
+      
+      <div class="article-content">
+        <header class="article-header">
       <div class="article-meta">Disney World • February 26, 2026</div>
       <h1>Pregnant Mom's Guide to Magic Kingdom</h1>
       <p>Yes, you can absolutely enjoy Magic Kingdom while pregnant! Here's everything you need to know about pregnancy-safe rides, attractions to avoid, and comfort tips.</p>
     </header>
+<p><p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p></p>
+<p><div class="inline-cta">
+💰 <strong>Save on tickets:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
+</div></p>
+<p><h2>Pregnancy-Safe Rides at Magic Kingdom</h2>
+<p><strong>The general rule:</strong> If a ride has no height requirement, it's typically safe for pregnant women. These gentle attractions are designed for guests of all ages.</p></p>
+<p><h3>Fantasyland Favorites</h3></p>
+<p><p><strong>&quot;it's a small world&quot;</strong> — This iconic boat ride is the definition of pregnancy-friendly. Glide through scenes representing cultures from around the world.</p></p>
+<p><p><strong>The Many Adventures of Winnie the Pooh</strong> — Hop into a honey pot and journey through the Hundred Acre Wood. Gentle movements and charming scenes.</p></p>
+<p><p><strong>Peter Pan's Flight</strong> — Soar over London and Neverland in your own pirate ship. The movement is slow and smooth with no sudden drops.</p></p>
+<p><p><strong>Under the Sea ~ Journey of The Little Mermaid</strong> — Clam-shell vehicles take you through Ariel's underwater world. Entirely smooth with no drops.</p></p>
+<p><h3>Tomorrowland Treasures</h3></p>
+<p><p><strong>Tomorrowland Transit Authority PeopleMover</strong> — This elevated tram ride is a pregnant mom's best friend. A 10-minute break off your feet with scenic views.</p></p>
+<p><p><strong>Buzz Lightyear's Space Ranger Spin</strong> — Help Buzz defeat Emperor Zurg. You control the spinning, so keep it minimal if needed.</p></p>
+<p><h2>Rides to Avoid While Pregnant</h2></p>
+<p><p>According to Disney's official guidelines, expectant mothers should <strong>not ride</strong>:</p></p>
+<p><ul>
+<li><strong>Space Mountain</strong> — High speeds, sharp turns, sudden drops</li>
+<li><strong>Big Thunder Mountain Railroad</strong> — Sharp turns and drops</li>
+<li><strong>Seven Dwarfs Mine Train</strong> — Swinging cars and drops</li>
+<li><strong>TRON Lightcycle / Run</strong> — High-speed launch coaster</li>
+<li><strong>Tiana's Bayou Adventure</strong> — Multiple drops including 50-foot plunge</li>
+</ul></p>
+<p><h2>Comfort Tips for Pregnant Moms</h2></p>
+<p><h3>Stay Hydrated and Fueled</h3>
+<p>Florida heat and pregnancy are challenging. Bring a <a href="https://www.amazon.com/dp/B006ZT8MKU?tag=planyourpark-20" target="_blank" rel="noopener">refillable water bottle</a> and get free ice water at any quick-service restaurant. A <a href="https://www.amazon.com/dp/B001B5I57I?tag=planyourpark-20" target="_blank" rel="noopener">cooling towel</a> around your neck is a lifesaver in the Florida heat. Pack pregnancy-friendly snacks.</p></p>
+<p><h3>Use Baby Care Centers</h3>
+<p>Magic Kingdom's Baby Care Center (between Casey's Corner and The Crystal Palace) offers private nursing rooms, changing stations, and quiet air-conditioned space to rest.</p></p>
+<p><h3>Use Rider Swap</h3>
+<p>Your travel companions don't have to miss out. Use <a href="https://www.undercovertourist.com/blog/disney-rider-switch/">Rider Swap</a> — one parent rides while the other waits with you, then you swap without waiting again.</p></p>
+<p><hr></p>
+<p><div class="bottom-cta">
+<p>Ready to plan your magical pregnancy-friendly Disney trip?</p>
+<a href="https://www.undercovertourist.com/" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+</div></p>
+<p><!-- Related Posts --></p>
 
-    <p class="affiliate-note" style="font-size: 0.8rem; color: #6b7280; text-align: center; margin: 1rem 0;">As an Amazon Associate, Plan Your Park earns from qualifying purchases. Links may earn us a commission at no extra cost to you.</p>
-
-    <div class="inline-cta">
-      💰 <strong>Save on tickets:</strong> Get discounted Disney tickets through <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Undercover Tourist →</a>
-    </div>
-
-    <h2>Pregnancy-Safe Rides at Magic Kingdom</h2>
-    <p><strong>The general rule:</strong> If a ride has no height requirement, it's typically safe for pregnant women. These gentle attractions are designed for guests of all ages.</p>
-
-    <h3>Fantasyland Favorites</h3>
+      </div>
+    </article>
     
-    <p><strong>"it's a small world"</strong> — This iconic boat ride is the definition of pregnancy-friendly. Glide through scenes representing cultures from around the world.</p>
-
-    <p><strong>The Many Adventures of Winnie the Pooh</strong> — Hop into a honey pot and journey through the Hundred Acre Wood. Gentle movements and charming scenes.</p>
-
-    <p><strong>Peter Pan's Flight</strong> — Soar over London and Neverland in your own pirate ship. The movement is slow and smooth with no sudden drops.</p>
-
-    <p><strong>Under the Sea ~ Journey of The Little Mermaid</strong> — Clam-shell vehicles take you through Ariel's underwater world. Entirely smooth with no drops.</p>
-
-    <h3>Tomorrowland Treasures</h3>
-
-    <p><strong>Tomorrowland Transit Authority PeopleMover</strong> — This elevated tram ride is a pregnant mom's best friend. A 10-minute break off your feet with scenic views.</p>
-
-    <p><strong>Buzz Lightyear's Space Ranger Spin</strong> — Help Buzz defeat Emperor Zurg. You control the spinning, so keep it minimal if needed.</p>
-
-    <h2>Rides to Avoid While Pregnant</h2>
-
-    <p>According to Disney's official guidelines, expectant mothers should <strong>not ride</strong>:</p>
-
-    <ul>
-      <li><strong>Space Mountain</strong> — High speeds, sharp turns, sudden drops</li>
-      <li><strong>Big Thunder Mountain Railroad</strong> — Sharp turns and drops</li>
-      <li><strong>Seven Dwarfs Mine Train</strong> — Swinging cars and drops</li>
-      <li><strong>TRON Lightcycle / Run</strong> — High-speed launch coaster</li>
-      <li><strong>Tiana's Bayou Adventure</strong> — Multiple drops including 50-foot plunge</li>
-    </ul>
-
-    <h2>Comfort Tips for Pregnant Moms</h2>
-
-    <h3>Stay Hydrated and Fueled</h3>
-    <p>Florida heat and pregnancy are challenging. Bring a <a href="https://www.amazon.com/dp/B006ZT8MKU?tag=planyourpark-20" target="_blank" rel="noopener">refillable water bottle</a> and get free ice water at any quick-service restaurant. A <a href="https://www.amazon.com/dp/B001B5I57I?tag=planyourpark-20" target="_blank" rel="noopener">cooling towel</a> around your neck is a lifesaver in the Florida heat. Pack pregnancy-friendly snacks.</p>
-
-    <h3>Use Baby Care Centers</h3>
-    <p>Magic Kingdom's Baby Care Center (between Casey's Corner and The Crystal Palace) offers private nursing rooms, changing stations, and quiet air-conditioned space to rest.</p>
-
-    <h3>Use Rider Swap</h3>
-    <p>Your travel companions don't have to miss out. Use <a href="https://www.undercovertourist.com/blog/disney-rider-switch/">Rider Swap</a> — one parent rides while the other waits with you, then you swap without waiting again.</p>
-
-    <hr>
-
-    <div class="bottom-cta">
-      <p>Ready to plan your magical pregnancy-friendly Disney trip?</p>
-      <a href="https://www.undercovertourist.com/" target="_blank" rel="noopener">Get Discounted Tickets →</a>
-    </div>
-
     <!-- Related Posts -->
+    &quot;&lt;header class=&#92;&quot;article-header&#92;&quot;&gt;&#92;n      &lt;div class=&#92;&quot;article-meta&#92;&quot;&gt;Disney World • February 26, 2026&lt;/div&gt;&#92;n      &lt;h1&gt;Pregnant Mom&#39;s Guide to Magic Kingdom&lt;/h1&gt;&#92;n      &lt;p&gt;Yes, you can absolutely enjoy Magic Kingdom while pregnant! Here&#39;s everything you...
     <section class="related-posts">
       <h3>You Might Also Like</h3>
       <div class="related-grid">
-        <a href="/blog/best-rides-5-year-olds-disney-world.html" class="related-card">
-          <span class="related-tag">Kids</span>
-          <h4>Best Rides for 5-Year-Olds</h4>
-          <p>Perfect rides for kindergarteners across all four parks.</p>
+        <a href="/blog/disney-world-packing-list.html" class="related-card">
+          <span class="related-tag">Planning</span>
+          <h4>Disney World Packing List 2026</h4>
+          <p>The ultimate packing list with free printable checklist included.</p>
         </a>
-        <a href="/blog/toddler-rides-disney-world.html" class="related-card">
-          <span class="related-tag">Toddlers</span>
-          <h4>Best Toddler Rides</h4>
-          <p>Gentle rides perfect for 1-3 year olds at Disney World.</p>
+        <a href="/blog/how-to-use-genie-plus-disney-world-2026.html" class="related-card">
+          <span class="related-tag">Tips</span>
+          <h4>How to Use Lightning Lane</h4>
+          <p>Master Disney's skip-the-line service and maximize every ride.</p>
         </a>
-        <a href="/blog/universal-vs-disney-comparison.html" class="related-card">
-          <span class="related-tag">Comparison</span>
-          <h4>Universal vs Disney</h4>
-          <p>Which park is right for your family vacation?</p>
+        <a href="/blog/best-character-dining-disney-world-2026.html" class="related-card">
+          <span class="related-tag">Dining</span>
+          <h4>Best Character Dining 2026</h4>
+          <p>Compare every character meal—prices, characters, and honest reviews.</p>
         </a>
       </div>
     </section>
-
+    
     <!-- Email Capture -->
     <section class="email-capture">
       <div class="email-capture-content">
@@ -587,17 +652,17 @@
         <p>Weekly park guides, money-saving hacks, and insider secrets—no spam, unsubscribe anytime.</p>
         <form class="email-form" action="https://formspree.io/f/xpqjewvb" method="POST">
           <input type="email" name="email" placeholder="your@email.com" required>
-          <input type="hidden" name="source" value="pregnant-moms-post">
+          <input type="hidden" name="source" value="blog">
           <button type="submit">Get Tips →</button>
         </form>
         <p class="email-disclaimer">Join 2,000+ parents planning magical trips.</p>
       </div>
     </section>
-
+    
     <!-- Q&A Section -->
     <section class="qa-section">
-      <h3>Questions About Disney While Pregnant?</h3>
-      <p class="qa-intro">Ask below and we'll answer. Your question might help other expectant moms too!</p>
+      <h3>Questions About This Topic?</h3>
+      <p class="qa-intro">Ask below and we'll answer. Your question might help other parents too!</p>
       
       <div class="qa-form">
         <form action="https://formspree.io/f/xwvnjpgd" method="POST">
@@ -605,210 +670,111 @@
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email (not published)" required>
           </div>
-          <textarea name="question" placeholder="What's your question about visiting Disney while pregnant?" rows="4" required></textarea>
-          <input type="hidden" name="post" value="pregnant-moms-guide">
+          <textarea name="question" placeholder="What's your question?" rows="4" required></textarea>
           <button type="submit">Ask Question</button>
         </form>
       </div>
-
-      <div class="qa-list">
-        <div class="qa-item">
-          <div class="qa-question">
-            <strong>Q:</strong> Can I ride Pirates of the Caribbean while pregnant?
-          </div>
-          <div class="qa-answer">
-            <strong>A:</strong> Disney officially advises against it due to the small drop. While many pregnant women do ride it without issues, we recommend checking with your doctor and following Disney's guidelines. There are plenty of other gentle rides to enjoy!
-          </div>
-        </div>
-        <div class="qa-item">
-          <div class="qa-question">
-            <strong>Q:</strong> What's the best time to visit while pregnant?
-          </div>
-          <div class="qa-answer">
-            <strong>A:</strong> Second trimester (weeks 14-27) is ideal—you're past morning sickness but not yet in the uncomfortable third trimester. Avoid peak summer heat (June-August) and go for cooler months or early morning/evening park hours.
-          </div>
-        </div>
-      </div>
     </section>
-  </article>
+    
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <p>Ready to book your Disney World adventure?</p>
+      <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener">Get Discounted Tickets →</a>
+    </div>
+  </div>
 
-  <style>
-    /* Related Posts */
-    .related-posts {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--gray-200);
-    }
-    .related-posts h3 {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      color: var(--base-dark);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .related-card {
-      background: var(--gray-100);
-      padding: 1.25rem;
-      border-radius: 8px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .related-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .related-tag {
-      font-size: 0.75rem;
-      color: var(--action-orange);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .related-card h4 {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      margin: 0.5rem 0;
-      color: var(--base-dark);
-    }
-    .related-card p {
-      font-size: 0.875rem;
-      color: var(--gray-600);
-      margin: 0;
-    }
+  <footer class="footer">
+    <p>&copy; 2026 PlanYourPark.com | Affiliate links help support our site</p>
+  </footer>
 
-    /* Email Capture */
-    .email-capture {
-      margin-top: 3rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-purple) 100%);
-      border-radius: 12px;
-      color: white;
-      text-align: center;
-    }
-    .email-capture h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .email-capture p {
-      opacity: 0.9;
-      margin-bottom: 1.25rem;
-    }
-    .email-form {
-      display: flex;
-      gap: 0.75rem;
-      max-width: 400px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-    .email-form input[type="email"] {
-      flex: 1;
-      min-width: 200px;
-      padding: 0.75rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    .email-form button {
-      padding: 0.75rem 1.5rem;
-      background: var(--action-orange);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .email-form button:hover {
-      background: #e05a0f;
-    }
-    .email-disclaimer {
-      font-size: 0.8125rem;
-      opacity: 0.7;
-      margin-top: 0.75rem;
-      margin-bottom: 0;
-    }
-
-    /* Q&A Section */
-    .qa-section {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--gray-200);
-    }
-    .qa-section h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .qa-intro {
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
-    }
-    .qa-form {
-      background: var(--gray-100);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    @media (max-width: 480px) {
-      .form-row {
-        grid-template-columns: 1fr;
+  <!-- Global Navigation Manager -->
+  <script>
+    window.GlobalNav = {
+      currentPage: '',
+      
+      init(page) {
+        this.currentPage = page;
+        this.setActiveNav(page);
+        
+        if (page === 'rides' || page === 'dining') {
+          const filterBtn = document.getElementById('global-filter-btn');
+          if (filterBtn) filterBtn.style.display = 'flex';
+        }
+      },
+      
+      setActiveNav(page) {
+        const navIds = {
+          'rides': 'nav-rides',
+          'dining': 'nav-dining',
+          'blog': 'nav-blog'
+        };
+        
+        const mobileNavIds = {
+          'rides': 'mobile-nav-rides',
+          'dining': 'mobile-nav-dining',
+          'blog': 'mobile-nav-blog'
+        };
+        
+        const activeNav = document.getElementById(navIds[page]);
+        const activeMobileNav = document.getElementById(mobileNavIds[page]);
+        
+        if (activeNav) activeNav.classList.add('active');
+        if (activeMobileNav) activeMobileNav.classList.add('active');
+      },
+      
+      openNav() {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (sheet) {
+          sheet.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      },
+      
+      closeNav(event) {
+        const sheet = document.getElementById('global-mobile-nav-sheet');
+        if (!event || event.target === sheet) {
+          if (sheet) {
+            sheet.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      },
+      
+      toggleParksDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('parks-dropdown');
+        const toggle = document.getElementById('nav-parks');
+        
+        if (dropdown) {
+          dropdown.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+        }
+        
+        document.addEventListener('click', function closeDropdown(e) {
+          if (!dropdown.contains(e.target) && e.target !== toggle) {
+            dropdown.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeDropdown);
+          }
+        });
+      },
+      
+      openFilters() {
+        document.dispatchEvent(new CustomEvent('global:openFilters'));
+      },
+      
+      closeFilters() {
+        document.dispatchEvent(new CustomEvent('global:closeFilters'));
       }
-    }
-    .qa-form input,
-    .qa-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--gray-300);
-      border-radius: 6px;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 0.9375rem;
-    }
-    .qa-form textarea {
-      resize: vertical;
-      margin-bottom: 0.75rem;
-    }
-    .qa-form button {
-      padding: 0.75rem 1.5rem;
-      background: var(--action-orange);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .qa-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .qa-item {
-      padding: 1.25rem;
-      background: var(--gray-100);
-      border-radius: 8px;
-      border-left: 3px solid var(--primary-blue);
-    }
-    .qa-question {
-      margin-bottom: 0.75rem;
-      color: var(--base-dark);
-    }
-    .qa-answer {
-      color: var(--gray-700);
-      line-height: 1.6;
-    }
-  </style>
-<script src="/scripts/global-nav.js?v=3"></script>
-<script>GlobalNav.init('blog');</script>
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        GlobalNav.closeNav();
+      }
+    });
+
+    GlobalNav.init('blog');
+  </script>
 </body>
 </html>
