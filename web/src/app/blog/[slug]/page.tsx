@@ -472,7 +472,62 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           )}
 
-          {/* Newsletter */}
+          {/* Q&A Section with Formspree */}
+          {post.engagement?.enableQA && (
+            <section className="mt-12 bg-[#F7FAFC] rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-[#2D3748] mb-4 font-[family-name:var(--font-nunito)]">
+                Have a Question?
+              </h2>
+              <p className="text-[#718096] mb-6">
+                Ask us about this post and we'll answer below!
+              </p>
+              
+              {/* Display existing Q&A */}
+              {post.engagement.qaSection?.length > 0 && (
+                <div className="qa-list mb-8 space-y-4">
+                  {post.engagement.qaSection.map((qa: { question: string; answer?: string; author?: { name: string } }, idx: number) => (
+                    <div key={idx} className="qa-item border border-[#E2E8F0] rounded-lg p-4">
+                      <p className="font-medium text-[#2D3748]">Q: {qa.question}</p>
+                      {qa.answer && (
+                        <p className="text-[#4A5568] mt-2">A: {qa.answer}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              {/* Formspree Question Form */}
+              <form
+                action="https://formspree.io/f/xwvnjpgd"
+                method="POST"
+                className="flex flex-col gap-3"
+              >
+                <input type="hidden" name="post_slug" value={slug} />
+                <input
+                  type="text"
+                  name="question"
+                  placeholder="Your question..."
+                  required
+                  className="w-full px-4 py-2 border border-[#E2E8F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F37021]"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com (for answer notification)"
+                  required
+                  className="w-full px-4 py-2 border border-[#E2E8F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F37021]"
+                />
+                <button
+                  type="submit"
+                  className="bg-[#F37021] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#e85a1a] transition-colors"
+                >
+                  Ask Question
+                </button>
+              </form>
+            </section>
+          )}
+
+          {/* Newsletter with Formspree */}
           {post.engagement?.enableNewsletter && (
             <section className="mt-12 bg-[#FFF7ED] rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold text-[#2D3748] mb-2 font-[family-name:var(--font-nunito)]">
@@ -483,10 +538,16 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.engagement.newsletterConfig?.subheading ||
                   "Weekly tips, deals, and itineraries for your Orlando trip."}
               </p>
-              <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <form
+                action="https://formspree.io/f/xpqjewvb"
+                method="POST"
+                className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+              >
                 <input
                   type="email"
+                  name="email"
                   placeholder="your@email.com"
+                  required
                   className="flex-1 px-4 py-2 border border-[#E2E8F0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F37021]"
                 />
                 <button

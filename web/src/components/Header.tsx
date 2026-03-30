@@ -1,10 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-export default function Header() {
+interface HeaderProps {
+  showFilterButton?: boolean
+}
+
+export default function Header({ showFilterButton = true }: HeaderProps) {
   const [parksOpen, setParksOpen] = useState(false)
+  const pathname = usePathname()
+  
+  // Determine if filter button should show - default to false on blog pages
+  const shouldShowFilter = showFilterButton && !pathname?.startsWith('/blog')
 
   return (
     <header className="global-header">
@@ -61,12 +70,14 @@ export default function Header() {
           <Link href="/deals">Deals</Link>
         </nav>
 
-        <button className="global-mobile-filter-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-          </svg>
-          Filters
-        </button>
+        {shouldShowFilter && (
+          <button className="global-mobile-filter-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Filters
+          </button>
+        )}
       </div>
     </header>
   )
