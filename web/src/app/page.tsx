@@ -1,66 +1,67 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import "./blog.css";
+
+export const metadata: Metadata = {
+  title: "Plan Your Park | Orlando Theme Park Planning Guide",
+  description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld & more!",
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="blog-container" style={{ maxWidth: '960px' }}>
+      <header className="blog-header">
+        <h1>Orlando Theme Park Guide</h1>
+        <p className="excerpt">The ultimate resource for planning your perfect Orlando vacation — from Disney World to Universal, SeaWorld, and beyond.</p>
+      </header>
+      
+      {/* Quick Links */}
+      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+        <Link href="/park" style={{ display: 'block', padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '12px', textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>🎢 Parks</h3>
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-medium)' }}>All Orlando parks</p>
+        </Link>
+        <Link href="/rides" style={{ display: 'block', padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '12px', textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>⭐ Rides</h3>
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-medium)' }}>Ride rankings & wait times</p>
+        </Link>
+        <Link href="/deals" style={{ display: 'block', padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '12px', textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>💰 Deals</h3>
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-medium)' }}>Tickets & discounts</p>
+        </Link>
+        <Link href="/blog" style={{ display: 'block', padding: '1.5rem', background: 'white', border: '1px solid var(--border)', borderRadius: '12px', textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>📝 Blog</h3>
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-medium)' }}>Tips & updates</p>
+        </Link>
+      </section>
+      
+      {/* Featured Articles */}
+      <section style={{ marginBottom: '2.5rem' }}>
+        <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '1.25rem' }}>Latest Articles</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <Link href="/blog/orlando-closures-march-2026" style={{ display: 'block', padding: '1.25rem', background: 'white', border: '1px solid var(--border)', borderRadius: '8px', textDecoration: 'none', color: 'inherit' }}>
+            <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.375rem' }}>Orlando Theme Park Closures & Refurbs: March 2026</h4>
+            <span style={{ fontSize: '0.8125rem', color: 'var(--text-light)' }}>5 min read • News</span>
+          </Link>
+          <Link href="/blog/free-things-disney-world" style={{ display: 'block', padding: '1.25rem', background: 'white', border: '1px solid var(--border)', borderRadius: '8px', textDecoration: 'none', color: 'inherit' }}>
+            <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.375rem' }}>25 Free Things to Do at Disney World</h4>
+            <span style={{ fontSize: '0.8125rem', color: 'var(--text-light)' }}>12 min read • Disney World</span>
+          </Link>
+          <Link href="/blog/disney-world-guide" style={{ display: 'block', padding: '1.25rem', background: 'white', border: '1px solid var(--border)', borderRadius: '8px', textDecoration: 'none', color: 'inherit' }}>
+            <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text-dark)', marginBottom: '0.375rem' }}>Complete Disney World Planning Guide</h4>
+            <span style={{ fontSize: '0.8125rem', color: 'var(--text-light)' }}>18 min read • Guides</span>
+          </Link>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+      
+      {/* Mobile Filter Button - Hidden on blog pages via CSS */}
+      <style>{`
+        @media (max-width: 640px) {
+          .mobile-filter-btn {
+            display: none !important;
+          }
+        }
+      `}</style>
+    </main>
   );
 }

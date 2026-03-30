@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getSamplePostSlugs } from "@/lib/sample-data";
+import EmailForm from "@/components/EmailForm";
 
 export const metadata: Metadata = {
   title: "Blog | Plan Your Park",
@@ -21,9 +22,16 @@ export default function BlogPage() {
         {slugs.map((slug) => (
           <Link key={slug} href={`/blog/${slug}`} style={{ display: 'block', padding: '1rem', background: 'white', borderRadius: '8px', marginBottom: '1rem', textDecoration: 'none', color: 'inherit' }}>
             <h3 style={{ fontFamily: 'var(--font-heading)', marginBottom: '0.5rem' }}>{slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
-            <p style={{ color: 'var(--text-medium)', fontSize: '0.875rem' }}>Click to read →</p>
+            <p style={{ color: 'var(--text-medium)', fontSize: '0.875rem' }}>Click to read</p>
           </Link>
         ))}
+      </div>
+      
+      {/* Email Capture */}
+      <div className="blog-email-capture">
+        <h3>Get Park Updates in Your Inbox</h3>
+        <p>Closures, new rides, and deals — delivered weekly.</p>
+        <EmailForm />
       </div>
     </main>
   );
