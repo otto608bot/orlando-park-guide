@@ -9,6 +9,7 @@ npm run build
 
 echo "=== Building Next.js blog (static export) ==="
 cd web
+npm install
 npm run build
 cd ..
 
