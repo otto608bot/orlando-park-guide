@@ -33,6 +33,13 @@ export default function BlogPage() {
         <p>Closures, new rides, and deals — delivered weekly.</p>
         <EmailForm />
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .mobile-filter-btn {
+            display: none !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }
