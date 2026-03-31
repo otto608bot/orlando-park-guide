@@ -42,7 +42,7 @@ export default async function HomePage() {
       {/* Main Content */}
       <div className="home-main">
         {/* Hero Callout */}
-        <HomepageHeader totalRides={totalRides} />
+        <HomepageHeader totalRides={totalRides} allRides={allRides} />
 
         {/* Park Cards with Filters */}
         <section className="rides-browser">

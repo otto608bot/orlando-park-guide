@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 
@@ -31,6 +31,19 @@ export default function Header() {
     searchParams.get('calm') ||
     searchParams.get('parks')
   );
+
+  const parksDropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (parksDropdownRef.current && !parksDropdownRef.current.contains(e.target as Node)) {
+        setParksDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const parks = [
     { name: 'Magic Kingdom', href: '/parks/magic-kingdom' },
@@ -73,8 +86,7 @@ export default function Header() {
 
           <div
             className="nav-dropdown"
-            onMouseEnter={() => setParksDropdownOpen(true)}
-            onMouseLeave={() => setParksDropdownOpen(false)}
+            ref={parksDropdownRef}
           >
             <button
               className={`nav-link dropdown-trigger nav-parks-btn ${isActive('/parks') ? 'active' : ''}`}

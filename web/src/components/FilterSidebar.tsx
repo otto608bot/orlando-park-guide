@@ -264,7 +264,7 @@ export default function FilterSidebar() {
             </span>
           </a>
           <a
-            href="https://www.amazon.com/disney-world-tickets/s?k=disney+world+tickets&tag=planyourpark-20"
+            href="https://www.dpbolvw.net/click-101693488-5527150"
             target="_blank"
             rel="noopener noreferrer"
             className="ticket-btn"
@@ -272,11 +272,11 @@ export default function FilterSidebar() {
             <span className="ticket-icon">🎠</span>
             <span className="ticket-text">
               <strong>Universal Orlando</strong>
-              <small>via Amazon</small>
+              <small>via Undercover Tourist</small>
             </span>
           </a>
           <a
-            href="https://www.amazon.com/seaworld-orlando-tickets/s?k=seaworld+orlando+tickets&tag=planyourpark-20"
+            href="https://www.dpbolvw.net/click-101693488-5527150"
             target="_blank"
             rel="noopener noreferrer"
             className="ticket-btn"
@@ -284,7 +284,7 @@ export default function FilterSidebar() {
             <span className="ticket-icon">🐬</span>
             <span className="ticket-text">
               <strong>SeaWorld Orlando</strong>
-              <small>via Amazon</small>
+              <small>via Undercover Tourist</small>
             </span>
           </a>
         </div>

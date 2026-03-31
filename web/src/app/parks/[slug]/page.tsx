@@ -151,6 +151,14 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
               {rides.length} Rides & Attractions
             </span>
           </div>
+          <a
+            href="https://www.dpbolvw.net/click-101693488-5527150"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-buy-tickets-btn"
+          >
+            Buy Tickets — Save Up to 20%
+          </a>
         </div>
       </div>
 
@@ -287,6 +295,27 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-weight: 600;
           border-radius: 9999px;
           border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .hero-buy-tickets-btn {
+          display: inline-block;
+          margin-top: 0.5rem;
+          padding: 0.625rem 1.5rem;
+          background: linear-gradient(135deg, #F37021 0%, #E85A1A 100%);
+          color: white;
+          font-weight: 700;
+          font-size: 0.9375rem;
+          border-radius: 8px;
+          text-decoration: none;
+          box-shadow: 0 3px 12px rgba(243,112,33,0.4);
+          transition: all 0.2s;
+          text-align: center;
+        }
+
+        .hero-buy-tickets-btn:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 16px rgba(243,112,33,0.5);
+          background: linear-gradient(135deg, #E85A1A 0%, #d44f15 100%);
         }
 
         .park-content {
