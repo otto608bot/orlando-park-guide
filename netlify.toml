@@ -1,38 +1,14 @@
 [build]
-  command = "cd web && npm install && npm run build"
-  publish = "web/out"
+  command = "cd web && npm run build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "18"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
-  from = "/park.html"
-  to = "/parks"
-  status = 301
-
-[[redirects]]
-  from = "/rides.html"
-  to = "/rides"
-  status = 301
-
-[[redirects]]
-  from = "/character-dining.html"
-  to = "/character-dining"
-  status = 301
-
-[[redirects]]
-  from = "/deals.html"
-  to = "/deals"
-  status = 301
-
-[[redirects]]
-  from = "/blog/*.html"
-  to = "/blog/:splat"
-  status = 301
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
