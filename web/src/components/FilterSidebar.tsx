@@ -54,15 +54,6 @@ export default function FilterSidebar() {
 
   return (
     <aside className="filter-sidebar">
-      {/* Mobile: Filter trigger button */}
-      <button 
-        className="mobile-filter-trigger"
-        onClick={() => setMobileDrawerOpen(true)}
-      >
-        <span>🔍</span> Filters
-        {hasActiveFilters && <span className="filter-active-dot" />}
-      </button>
-
       {/* Mobile: Backdrop */}
       {mobileDrawerOpen && (
         <div 
@@ -575,40 +566,6 @@ export default function FilterSidebar() {
           }
         }
 
-        /* Mobile Filter Trigger Button */
-        .mobile-filter-trigger {
-          display: none;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          width: 100%;
-          padding: 0.75rem 1rem;
-          background: var(--bg-white);
-          border: 1.5px solid var(--primary);
-          border-radius: 10px;
-          font-size: 0.9375rem;
-          font-weight: 600;
-          color: var(--primary);
-          cursor: pointer;
-          margin-bottom: 1rem;
-          position: relative;
-          transition: all 0.15s;
-        }
-
-        .mobile-filter-trigger:hover {
-          background: rgba(243, 112, 33, 0.06);
-        }
-
-        .filter-active-dot {
-          width: 8px;
-          height: 8px;
-          background: var(--primary);
-          border-radius: 50%;
-          position: absolute;
-          top: 8px;
-          right: 8px;
-        }
-
         /* Mobile Drawer Backdrop */
         .filter-drawer-backdrop {
           display: none;
@@ -716,10 +673,6 @@ export default function FilterSidebar() {
         }
 
         @media (max-width: 900px) {
-          .mobile-filter-trigger {
-            display: flex;
-          }
-
           .filter-drawer-backdrop {
             display: block;
           }

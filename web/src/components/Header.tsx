@@ -23,6 +23,15 @@ export default function Header() {
   // Pages that have filters
   const hasFilters = pathname === '/' || pathname === '/rides' || pathname.startsWith('/parks');
 
+  // Check if any filters are active (from URL params)
+  const hasActiveFilters = hasFilters && (
+    searchParams.get('height') ||
+    searchParams.get('pregnancySafe') ||
+    searchParams.get('wheelchair') ||
+    searchParams.get('calm') ||
+    searchParams.get('parks')
+  );
+
   const parks = [
     { name: 'Magic Kingdom', href: '/parks/magic-kingdom' },
     { name: 'EPCOT', href: '/parks/epcot' },
@@ -39,8 +48,8 @@ export default function Header() {
     <header className="site-header">
       <div className="header-inner">
         {/* Mobile: Hamburger on LEFT */}
-        <button 
-          className="mobile-menu-btn mobile-menu-btn-left"
+        <button
+          className="mobile-menu-btn"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -50,18 +59,18 @@ export default function Header() {
             <span></span>
           </span>
         </button>
-        
-        {/* Logo in CENTER */}
+
+        {/* Logo — centered on mobile, left on desktop */}
         <Link href="/" className="logo">
           <img src="/logo-full.png" alt="Plan Your Park" />
         </Link>
-        
+
         {/* Desktop Nav (hidden on mobile) */}
         <nav className="main-nav desktop-nav">
           <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
             Home
           </Link>
-          
+
           <div
             className="nav-dropdown"
             onMouseEnter={() => setParksDropdownOpen(true)}
@@ -76,15 +85,15 @@ export default function Header() {
               Parks
               <span className="dropdown-arrow">▾</span>
             </button>
-            
+
             {parksDropdownOpen && (
               <div className="dropdown-menu">
                 <div className="dropdown-section">
                   <span className="dropdown-section-label">Walt Disney World</span>
                   {parks.filter(p => p.name.includes('Magic') || p.name.includes('EPCOT') || p.name.includes('Hollywood') || p.name.includes('Animal')).map(park => (
-                    <Link 
-                      key={park.href} 
-                      href={buildParkHref(park.href)} 
+                    <Link
+                      key={park.href}
+                      href={buildParkHref(park.href)}
                       className="dropdown-item"
                     >
                       {park.name}
@@ -94,9 +103,9 @@ export default function Header() {
                 <div className="dropdown-section">
                   <span className="dropdown-section-label">Universal Orlando</span>
                   {parks.filter(p => p.name.includes('Universal') || p.name.includes('Islands') || p.name.includes('Epic')).map(park => (
-                    <Link 
-                      key={park.href} 
-                      href={buildParkHref(park.href)} 
+                    <Link
+                      key={park.href}
+                      href={buildParkHref(park.href)}
                       className="dropdown-item"
                     >
                       {park.name}
@@ -106,9 +115,9 @@ export default function Header() {
                 <div className="dropdown-section">
                   <span className="dropdown-section-label">Other Parks</span>
                   {parks.filter(p => p.name.includes('SeaWorld') || p.name.includes('LEGOLAND')).map(park => (
-                    <Link 
-                      key={park.href} 
-                      href={buildParkHref(park.href)} 
+                    <Link
+                      key={park.href}
+                      href={buildParkHref(park.href)}
                       className="dropdown-item"
                     >
                       {park.name}
@@ -118,28 +127,28 @@ export default function Header() {
               </div>
             )}
           </div>
-          
+
           <Link href="/rides" className={`nav-link ${isActive('/rides') ? 'active' : ''}`}>
             Rides
           </Link>
-          
+
           <Link href="/character-dining" className={`nav-link ${isActive('/character-dining') ? 'active' : ''}`}>
             Character Dining
           </Link>
-          
+
           <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active' : ''}`}>
             Blog
           </Link>
-          
+
           <Link href="/deals" className={`nav-link ${isActive('/deals') ? 'active' : ''}`}>
             Deals
           </Link>
         </nav>
-        
+
         {/* Mobile: Filter button on RIGHT (only on filterable pages) */}
         {hasFilters && (
-          <button 
-            className="mobile-filter-btn"
+          <button
+            className={`mobile-filter-btn ${hasActiveFilters ? 'active' : ''}`}
             onClick={() => {
               const event = new CustomEvent('openMobileFilters');
               window.dispatchEvent(event);
@@ -152,20 +161,20 @@ export default function Header() {
           </button>
         )}
       </div>
-      
+
       {/* Mobile Nav Backdrop */}
       {mobileMenuOpen && (
-        <div 
+        <div
           className="mobile-nav-backdrop"
           onClick={() => setMobileMenuOpen(false)}
         />
       )}
-      
+
       {/* Mobile Nav Side Sheet */}
       <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-header">
           <span className="mobile-nav-title">Menu</span>
-          <button 
+          <button
             className="mobile-nav-close"
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close menu"
@@ -175,9 +184,9 @@ export default function Header() {
         </div>
         <div className="mobile-nav-items">
           <Link href="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          
+
           <div className="mobile-nav-expandable">
-            <button 
+            <button
               className={`mobile-nav-link mobile-nav-expand-btn ${isActive('/parks') ? 'active' : ''}`}
               onClick={() => setParksDropdownOpen(!parksDropdownOpen)}
             >
@@ -188,9 +197,9 @@ export default function Header() {
               <div className="mobile-nav-sub-items">
                 <span className="mobile-nav-section-label">Walt Disney World</span>
                 {parks.filter(p => p.name.includes('Magic') || p.name.includes('EPCOT') || p.name.includes('Hollywood') || p.name.includes('Animal')).map(park => (
-                  <Link 
-                    key={park.href} 
-                    href={buildParkHref(park.href)} 
+                  <Link
+                    key={park.href}
+                    href={buildParkHref(park.href)}
                     onClick={() => setMobileMenuOpen(false)}
                     className="mobile-nav-sub-link"
                   >
@@ -199,9 +208,9 @@ export default function Header() {
                 ))}
                 <span className="mobile-nav-section-label" style={{marginTop:'0.75rem'}}>Universal Orlando</span>
                 {parks.filter(p => p.name.includes('Universal') || p.name.includes('Islands') || p.name.includes('Epic')).map(park => (
-                  <Link 
-                    key={park.href} 
-                    href={buildParkHref(park.href)} 
+                  <Link
+                    key={park.href}
+                    href={buildParkHref(park.href)}
                     onClick={() => setMobileMenuOpen(false)}
                     className="mobile-nav-sub-link"
                   >
@@ -210,9 +219,9 @@ export default function Header() {
                 ))}
                 <span className="mobile-nav-section-label" style={{marginTop:'0.75rem'}}>Other Parks</span>
                 {parks.filter(p => p.name.includes('SeaWorld') || p.name.includes('LEGOLAND')).map(park => (
-                  <Link 
-                    key={park.href} 
-                    href={buildParkHref(park.href)} 
+                  <Link
+                    key={park.href}
+                    href={buildParkHref(park.href)}
                     onClick={() => setMobileMenuOpen(false)}
                     className="mobile-nav-sub-link"
                   >
@@ -222,14 +231,14 @@ export default function Header() {
               </div>
             )}
           </div>
-          
+
           <Link href="/rides" className={`mobile-nav-link ${isActive('/rides') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Rides</Link>
           <Link href="/character-dining" className={`mobile-nav-link ${isActive('/character-dining') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Character Dining</Link>
           <Link href="/blog" className={`mobile-nav-link ${isActive('/blog') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
           <Link href="/deals" className={`mobile-nav-link ${isActive('/deals') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Deals</Link>
         </div>
       </nav>
-      
+
       <style>{`
         .site-header {
           background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.97) 100%);
@@ -245,14 +254,12 @@ export default function Header() {
           padding: 0.75rem 1.5rem;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          position: relative;
+          /* Desktop: hamburger and filter are hidden, logo left, nav right */
         }
 
         .logo {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+          /* On desktop: left-aligned. On mobile: centered via media query */
+          flex-shrink: 0;
         }
 
         .logo img {
@@ -265,6 +272,7 @@ export default function Header() {
           display: flex;
           align-items: center;
           gap: 0.25rem;
+          margin-left: auto;
         }
 
         .nav-link {
@@ -381,6 +389,7 @@ export default function Header() {
           cursor: pointer;
           padding: 8px;
           z-index: 10;
+          margin-right: 0.5rem;
         }
 
         .hamburger {
@@ -418,11 +427,22 @@ export default function Header() {
           color: var(--text-dark);
           z-index: 10;
           border-radius: 6px;
-          transition: background 0.15s;
+          transition: background 0.15s, color 0.15s;
+          margin-left: 0.5rem;
         }
 
         .mobile-filter-btn:hover {
           background: var(--bg-light);
+        }
+
+        .mobile-filter-btn.active {
+          color: var(--primary);
+          background: rgba(243, 112, 33, 0.1);
+        }
+
+        .mobile-filter-btn.active svg {
+          fill: var(--primary);
+          stroke: var(--primary);
         }
 
         /* Mobile Nav Backdrop */
@@ -564,8 +584,10 @@ export default function Header() {
           color: var(--primary) !important;
         }
 
-        /* Mobile: Show hamburger left, filter right, logo center */
-        @media (max-width: 900px) {
+        /* ============================================
+           MOBILE: ≤768px — hamburger left, logo center, filter right
+           ============================================ */
+        @media (max-width: 768px) {
           .desktop-nav {
             display: none !important;
           }
@@ -582,19 +604,32 @@ export default function Header() {
             display: block;
           }
 
+          .header-inner {
+            justify-content: space-between;
+          }
+
+          /* Center the logo on mobile */
           .logo {
-            position: static;
-            transform: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
           }
         }
 
-        @media (min-width: 901px) {
+        /* Desktop: ≥769px — logo left, nav right */
+        @media (min-width: 769px) {
           .mobile-nav {
             display: none !important;
           }
 
           .mobile-nav-backdrop {
             display: none !important;
+          }
+
+          .logo {
+            position: static;
+            transform: none;
           }
         }
       `}</style>

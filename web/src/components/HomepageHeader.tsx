@@ -10,13 +10,8 @@ export default function HomepageHeader({ totalRides }: HomepageHeaderProps) {
   return (
     <>
       <header className="home-header">
-        <div className="callout-wrapper">
+        <div className="home-header-inner">
           <h1 className="home-title">Find Rides for Everyone</h1>
-        </div>
-        <p className="home-subtitle">
-          Browse {totalRides} rides across Orlando&apos;s top theme parks
-        </p>
-        <div className="home-cta-wrap">
           <Link href="/rides" className="home-cta-btn">
             Browse All Rides
           </Link>
@@ -25,11 +20,10 @@ export default function HomepageHeader({ totalRides }: HomepageHeaderProps) {
 
       <style>{`
         .home-header {
-          text-align: center;
-          margin-bottom: 1.5rem;
-          padding: 1rem 2rem;
+          margin-bottom: 1rem;
+          padding: 0.625rem 1rem;
           background: linear-gradient(135deg, #F37021 0%, #E85A1A 100%);
-          border-radius: 12px;
+          border-radius: 10px;
           position: relative;
           overflow: hidden;
         }
@@ -43,54 +37,52 @@ export default function HomepageHeader({ totalRides }: HomepageHeaderProps) {
           pointer-events: none;
         }
 
-        .callout-wrapper {
+        .home-header-inner {
           position: relative;
-          display: inline-block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          flex-wrap: wrap;
         }
 
         .home-title {
           font-family: var(--font-heading);
-          font-size: clamp(1.25rem, 3vw, 1.75rem);
+          font-size: 1rem;
           font-weight: 800;
           color: white;
           margin: 0;
           line-height: 1.2;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        .home-subtitle {
-          font-size: 0.9375rem;
-          color: rgba(255,255,255,0.88);
-          margin: 0.5rem auto 0;
-          max-width: 420px;
-        }
-
-        .home-cta-wrap {
-          margin-top: 1rem;
+          text-shadow: 0 1px 4px rgba(0,0,0,0.15);
         }
 
         .home-cta-btn {
           display: inline-block;
           background: white;
           color: #E85A1A;
-          padding: 0.625rem 1.5rem;
-          border-radius: 8px;
+          padding: 0.4rem 1rem;
+          border-radius: 6px;
           text-decoration: none;
           font-weight: 700;
-          font-size: 0.875rem;
+          font-size: 0.8125rem;
           transition: all 0.2s ease;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          white-space: nowrap;
         }
 
         .home-cta-btn:hover {
           transform: translateY(-1px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+          box-shadow: 0 3px 8px rgba(0,0,0,0.15);
           background: #fff5f0;
         }
 
         @media (max-width: 640px) {
           .home-header {
-            padding: 0.875rem 1rem;
+            padding: 0.5rem 0.875rem;
+          }
+
+          .home-title {
+            font-size: 0.9375rem;
           }
         }
       `}</style>
