@@ -20,6 +20,9 @@ export default function Header() {
     return pathname.startsWith(path);
   };
 
+  // Pages that have filters
+  const hasFilters = pathname === '/' || pathname === '/rides' || pathname.startsWith('/parks');
+
   const parks = [
     { name: 'Magic Kingdom', href: '/parks/magic-kingdom' },
     { name: 'EPCOT', href: '/parks/epcot' },
@@ -33,21 +36,27 @@ export default function Header() {
   ];
 
   return (
-    <>
-      {/* Promo Top Bar */}
-      <div className="promo-bar">
-        <a href="/parks/epic-universe" className="promo-bar-link">
-          🎢 Epic Universe Opens May 22! Plan your trip →
-        </a>
-      </div>
-
     <header className="site-header">
       <div className="header-inner">
+        {/* Mobile: Hamburger on LEFT */}
+        <button 
+          className="mobile-menu-btn mobile-menu-btn-left"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        
+        {/* Logo in CENTER */}
         <Link href="/" className="logo">
           <img src="/logo-full.png" alt="Plan Your Park" />
         </Link>
         
-        {/* Desktop Nav */}
+        {/* Desktop Nav (hidden on mobile) */}
         <nav className="main-nav desktop-nav">
           <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
             Home
@@ -127,18 +136,21 @@ export default function Header() {
           </Link>
         </nav>
         
-        {/* Mobile Menu Button */}
-        <button 
-          className="mobile-menu-btn"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
+        {/* Mobile: Filter button on RIGHT (only on filterable pages) */}
+        {hasFilters && (
+          <button 
+            className="mobile-filter-btn"
+            onClick={() => {
+              const event = new CustomEvent('openMobileFilters');
+              window.dispatchEvent(event);
+            }}
+            aria-label="Open filters"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+          </button>
+        )}
       </div>
       
       {/* Mobile Nav Backdrop */}
@@ -164,7 +176,6 @@ export default function Header() {
         <div className="mobile-nav-items">
           <Link href="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           
-          {/* Parks expandable section */}
           <div className="mobile-nav-expandable">
             <button 
               className={`mobile-nav-link mobile-nav-expand-btn ${isActive('/parks') ? 'active' : ''}`}
@@ -220,24 +231,6 @@ export default function Header() {
       </nav>
       
       <style>{`
-        .promo-bar {
-          background: linear-gradient(90deg, #F37021 0%, #e85a1a 100%);
-          text-align: center;
-          padding: 0.5rem 1rem;
-        }
-
-        .promo-bar-link {
-          color: white;
-          font-size: 0.875rem;
-          font-weight: 600;
-          text-decoration: none;
-          transition: opacity 0.15s;
-        }
-
-        .promo-bar-link:hover {
-          opacity: 0.85;
-        }
-
         .site-header {
           background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.97) 100%);
           border-bottom: 1px solid var(--border);
@@ -253,6 +246,13 @@ export default function Header() {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          position: relative;
+        }
+
+        .logo {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         .logo img {
@@ -373,13 +373,14 @@ export default function Header() {
           background: var(--bg-light);
         }
 
-        /* Mobile Menu */
+        /* Mobile Menu Button */
         .mobile-menu-btn {
           display: none;
           background: none;
           border: none;
           cursor: pointer;
           padding: 8px;
+          z-index: 10;
         }
 
         .hamburger {
@@ -406,6 +407,23 @@ export default function Header() {
         .hamburger.open span:nth-child(1) { transform: rotate(45deg); top: 8px; }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg); top: 8px; }
+
+        /* Mobile Filter Button */
+        .mobile-filter-btn {
+          display: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 8px;
+          color: var(--text-dark);
+          z-index: 10;
+          border-radius: 6px;
+          transition: background 0.15s;
+        }
+
+        .mobile-filter-btn:hover {
+          background: var(--bg-light);
+        }
 
         /* Mobile Nav Backdrop */
         .mobile-nav-backdrop {
@@ -546,17 +564,27 @@ export default function Header() {
           color: var(--primary) !important;
         }
 
+        /* Mobile: Show hamburger left, filter right, logo center */
         @media (max-width: 900px) {
           .desktop-nav {
-            display: none;
+            display: none !important;
           }
 
           .mobile-menu-btn {
             display: block;
           }
 
+          .mobile-filter-btn {
+            display: block;
+          }
+
           .mobile-nav-backdrop {
             display: block;
+          }
+
+          .logo {
+            position: static;
+            transform: none;
           }
         }
 
@@ -571,6 +599,5 @@ export default function Header() {
         }
       `}</style>
     </header>
-    </>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useFilters } from '@/context/FiltersContext';
 
 const PARKS = [
@@ -16,9 +17,25 @@ const PARKS = [
 ];
 
 export default function FilterSidebar() {
+  const searchParams = useSearchParams();
   const { filters, setHeight, setPregnancySafe, setWheelchairAccessible, setCalmExperience, setSelectedParks, clearFilters } = useFilters();
-  const [localHeight, setLocalHeight] = useState(filters.height);
+  
+  // Initialize from URL params directly for immediate consistency
+  const urlHeight = parseInt(searchParams.get('height') || '0', 10);
+  const [localHeight, setLocalHeight] = useState(isNaN(urlHeight) ? 0 : urlHeight);
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+
+  // Sync local state with filters context when it changes
+  useEffect(() => {
+    setLocalHeight(filters.height);
+  }, [filters.height]);
+
+  // Listen for the mobile filter button event from Header
+  useEffect(() => {
+    const handleOpenFilters = () => setMobileDrawerOpen(true);
+    window.addEventListener('openMobileFilters', handleOpenFilters);
+    return () => window.removeEventListener('openMobileFilters', handleOpenFilters);
+  }, []);
 
   const handleHeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value, 10);
