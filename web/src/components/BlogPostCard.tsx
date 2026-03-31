@@ -25,15 +25,31 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     });
   };
 
+  // Category-based fallback images
+  const getCategoryImage = () => {
+    const cats = post.categories || [];
+    const catTitles = cats.map((c: any) => c.title || '').join(' ').toLowerCase();
+    if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood studios') || catTitles.includes('animal kingdom')) {
+      return '/Disney-World.webp';
+    }
+    if (catTitles.includes('universal')) {
+      return '/Universal-Studios.jpeg';
+    }
+    if (catTitles.includes('news') || catTitles.includes('update')) {
+      return '/Magic-Kingdom.webp';
+    }
+    return '/epcot.jpeg';
+  };
+
+  const fallbackImage = getCategoryImage();
+
   return (
     <Link href={`/blog/${post.slug.current}`} className="blog-post-card">
       <div className="blog-post-card-image">
         {post.heroImage?.asset?.url ? (
           <img src={post.heroImage.asset.url} alt={post.heroImage.alt || post.title} />
         ) : (
-          <div className="blog-post-card-fallback">
-            <span>🎢</span>
-          </div>
+          <img src={fallbackImage} alt={post.title} className="blog-post-fallback-img" />
         )}
       </div>
       <div className="blog-post-card-content">
@@ -89,6 +105,13 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           justify-content: center;
           background: #F1F5F9;
           font-size: 2.5rem;
+        }
+
+        .blog-post-fallback-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.85;
         }
         
         .blog-post-card-content {

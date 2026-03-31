@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
-import RideCard from "@/components/RideCard";
+import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 
 interface ParkPageProps {
@@ -162,14 +162,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         {/* Rides Cards Grid */}
         <section className="park-rides">
           <h2>Rides &amp; Attractions</h2>
-          <div className="rides-grid">
-            {rides.map((ride: any) => (
-              <RideCard key={ride._id} ride={ride} />
-            ))}
-          </div>
-          {rides.length === 0 && (
-            <p className="no-rides">No rides found for this park.</p>
-          )}
+          <ParkRidesGrid rides={rides} parkName={park.name} />
         </section>
 
         {/* Character Dining Section */}

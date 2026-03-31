@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
 import { useFilters } from '@/context/FiltersContext';
+import RideModal from './RideModal';
 
 interface RidesTableProps {
   rides: Ride[];
@@ -90,6 +91,7 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
   const { filters } = useFilters();
   const [sortField, setSortField] = useState<SortField>('name');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
+  const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
 
   const filteredAndSortedRides = useMemo(() => {
     let result = [...rides];
@@ -219,7 +221,7 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
               const calm = isCalmExperience(ride);
 
               return (
-                <tr key={ride._id} className={ride.isClosed ? 'ride-closed' : ''}>
+                <tr key={ride._id} className={`ride-row ${ride.isClosed ? 'ride-closed' : ''}`} onClick={() => setSelectedRide(ride)} style={{ cursor: 'pointer' }}>
                   <td className="td-image">
                     <div className="ride-thumb">
                       {imageSrc ? (
@@ -273,6 +275,8 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
           <p>No rides match your filters. Try adjusting your criteria.</p>
         </div>
       )}
+
+      <RideModal ride={selectedRide} onClose={() => setSelectedRide(null)} />
 
       <style>{`
         .rides-table-wrapper {

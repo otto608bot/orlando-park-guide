@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
+import RideModal from './RideModal';
 
 interface RideCardProps {
   ride: Ride;
@@ -72,6 +74,7 @@ function isCalmExperience(ride: Ride): boolean {
 }
 
 export default function RideCard({ ride, showPark = false }: RideCardProps) {
+  const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
   const imageSrc = getRideImageSrc(ride);
   const parkSlug = getParkSlug(ride.park);
   const thrill = thrillClass(ride.thrillLevel);
@@ -81,7 +84,15 @@ export default function RideCard({ ride, showPark = false }: RideCardProps) {
   const calm = isCalmExperience(ride);
 
   return (
-    <div className={`ride-card ${ride.isClosed ? 'ride-closed' : ''}`}>
+    <>
+    <div
+      className={`ride-card ${ride.isClosed ? 'ride-closed' : ''}`}
+      onClick={() => setSelectedRide(ride)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedRide(ride); }}
+      style={{ cursor: 'pointer' }}
+    >
       <div className="ride-card-image">
         {imageSrc ? (
           <img src={imageSrc} alt={ride.name} />
@@ -292,7 +303,13 @@ export default function RideCard({ ride, showPark = false }: RideCardProps) {
         .access-no {
           opacity: 0.5;
         }
+
+        .ride-row:hover td {
+          background: var(--bg-light) !important;
+        }
       `}</style>
     </div>
+    <RideModal ride={selectedRide} onClose={() => setSelectedRide(null)} />
+    </>
   );
 }

@@ -27,6 +27,14 @@ export default function Header() {
   ];
 
   return (
+    <>
+      {/* Promo Top Bar */}
+      <div className="promo-bar">
+        <a href="/parks/epic-universe" className="promo-bar-link">
+          🎢 Epic Universe Opens May 22! Plan your trip →
+        </a>
+      </div>
+
     <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="logo">
@@ -39,18 +47,20 @@ export default function Header() {
             Home
           </Link>
           
-          <div 
+          <div
             className="nav-dropdown"
             onMouseEnter={() => setParksDropdownOpen(true)}
             onMouseLeave={() => setParksDropdownOpen(false)}
           >
-            <Link 
-              href="/parks" 
-              className={`nav-link dropdown-trigger ${isActive('/parks') ? 'active' : ''}`}
+            <button
+              className={`nav-link dropdown-trigger nav-parks-btn ${isActive('/parks') ? 'active' : ''}`}
+              onClick={() => setParksDropdownOpen(s => !s)}
+              aria-haspopup="true"
+              aria-expanded={parksDropdownOpen}
             >
               Parks
               <span className="dropdown-arrow">▾</span>
-            </Link>
+            </button>
             
             {parksDropdownOpen && (
               <div className="dropdown-menu">
@@ -148,8 +158,26 @@ export default function Header() {
       </nav>
       
       <style>{`
+        .promo-bar {
+          background: linear-gradient(90deg, #F37021 0%, #e85a1a 100%);
+          text-align: center;
+          padding: 0.5rem 1rem;
+        }
+
+        .promo-bar-link {
+          color: white;
+          font-size: 0.875rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: opacity 0.15s;
+        }
+
+        .promo-bar-link:hover {
+          opacity: 0.85;
+        }
+
         .site-header {
-          background: var(--bg-white);
+          background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.97) 100%);
           border-bottom: 1px solid var(--border);
           position: sticky;
           top: 0;
@@ -196,6 +224,32 @@ export default function Header() {
         }
 
         .nav-link.active {
+          color: var(--primary);
+          background: rgba(243, 112, 33, 0.08);
+        }
+
+        .nav-parks-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-family: inherit;
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          padding: 0.5rem 0.875rem;
+          font-size: 0.9375rem;
+          font-weight: 500;
+          color: var(--text-medium);
+          border-radius: 8px;
+          transition: all 0.15s;
+        }
+
+        .nav-parks-btn:hover {
+          color: var(--text-dark);
+          background: var(--bg-light);
+        }
+
+        .nav-parks-btn.active {
           color: var(--primary);
           background: rgba(243, 112, 33, 0.08);
         }
@@ -352,5 +406,6 @@ export default function Header() {
         }
       `}</style>
     </header>
+    </>
   );
 }

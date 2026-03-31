@@ -271,8 +271,8 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
         }
 
         .park-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 0 12px 35px rgba(0,0,0,0.12);
           border-color: var(--primary);
         }
 

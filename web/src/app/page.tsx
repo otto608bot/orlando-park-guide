@@ -55,10 +55,11 @@ export default async function HomePage() {
 
         {/* Email Signup */}
         <section className="email-signup-section">
-          <div className="email-signup-content">
-            <h3>Get Exclusive Park Deals</h3>
-            <p>Subscribe for weekly updates on closures, new rides, and money-saving discounts.</p>
-            <EmailForm buttonText="Get Updates" />
+          <div className="email-signup-inner">
+            <div className="email-signup-icon">🏰</div>
+            <h3>Get Weekly Disney Tips</h3>
+            <p>Closures, new rides, and money-saving tips — delivered every Tuesday.</p>
+            <EmailForm buttonText="Subscribe — It's Free" />
           </div>
         </section>
       </div>
@@ -104,25 +105,30 @@ export default async function HomePage() {
         }
 
         .email-signup-section {
-          background: var(--bg-white);
-          border: 1px solid var(--border);
+          background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+          border: 1px solid #FED7AA;
           border-radius: 16px;
           padding: 2.5rem 2rem;
           text-align: center;
         }
 
-        .email-signup-content h3 {
+        .email-signup-inner h3 {
           font-family: var(--font-heading);
           font-size: 1.5rem;
-          font-weight: 700;
+          font-weight: 800;
           color: var(--text-dark);
           margin-bottom: 0.5rem;
         }
 
-        .email-signup-content p {
+        .email-signup-inner p {
           font-size: 1rem;
           color: var(--text-medium);
           margin-bottom: 1.5rem;
+        }
+
+        .email-signup-icon {
+          font-size: 2.5rem;
+          margin-bottom: 0.75rem;
         }
 
         @media (max-width: 900px) {

@@ -90,15 +90,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       normal: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
     },
     marks: {
+      strong: ({ children }: { children?: React.ReactNode }) => <strong style={{ color: 'var(--text-dark)', fontWeight: 700 }}>{children}</strong>,
       link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => {
         const isExternal = value?.blank;
         return isExternal ? (
-          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-link">{children}</a>
+          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-cta">{children}</a>
         ) : (
-          <a href={value?.href}>{children}</a>
+          <a href={value?.href} className="inline-link">{children}</a>
         );
       },
     },
+    list: {
+      bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul">{children}</ul>,
+      number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
+    },
+    listItem: {
+      bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+      number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+    },
+  };
+
+  // Fallback hero image based on category
+  const getFallbackHero = () => {
+    const cats = post.categories || [];
+    const catTitles = (cats.map((c: any) => c.title || '').join(' ').toLowerCase());
+    if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood') || catTitles.includes('animal')) {
+      return '/Disney-World.webp';
+    }
+    if (catTitles.includes('universal')) {
+      return '/Universal-Studios.jpeg';
+    }
+    if (catTitles.includes('news') || catTitles.includes('update')) {
+      return '/Magic-Kingdom.webp';
+    }
+    return '/epcot.jpeg';
   };
 
   // JSON-LD structured data
@@ -136,9 +161,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </header>
         
-        {post.heroImage?.asset?.url && (
+        {(post.heroImage?.asset?.url || true) && (
           <div className="blog-hero">
-            <img src={post.heroImage.asset.url} alt={post.heroImage.alt || post.title} />
+            <img
+              src={post.heroImage?.asset?.url || getFallbackHero()}
+              alt={post.heroImage?.alt || post.title}
+            />
           </div>
         )}
         
