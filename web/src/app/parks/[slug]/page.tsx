@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+export const revalidate = 60;
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import ParkRidesGrid from "@/components/ParkRidesGrid";

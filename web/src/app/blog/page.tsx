@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import BlogPostCard from "@/components/BlogPostCard";
 import EmailForm from "@/components/EmailForm";
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Blog",

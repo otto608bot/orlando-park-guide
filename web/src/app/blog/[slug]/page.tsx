@@ -1,4 +1,5 @@
 import { PortableText } from "@portabletext/react";
+export const revalidate = 60;
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
@@ -57,7 +58,7 @@ async function getPostData(slug: string) {
     `),
   ]);
   
-  const related = allPosts.filter((p: any) => p.slug.current !== slug).slice(0, 2);
+  const related = allPosts.filter((p: any) => p.slug?.current && p.slug.current !== slug).slice(0, 2);
   return { post, related };
 }
 
@@ -148,7 +149,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="blog-header">
           {post.categories?.length > 0 && (
             <div className="blog-categories">
-              {post.categories.map((cat: any) => <span key={cat.slug.current}>{cat.title}</span>)}
+              {post.categories.map((cat: any) => <span key={cat.slug?.current}>{cat.title}</span>)}
             </div>
           )}
           <h1>{post.title}</h1>
@@ -196,7 +197,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <h2>Keep Reading</h2>
             <div className="related-posts">
               {related.map((r: any) => (
-                <Link key={r.slug.current} href={`/blog/${r.slug.current}`} className="related-post">
+                <Link key={r.slug?.current} href={`/blog/${r.slug?.current}`} className="related-post">
                   <h4>{r.title}</h4>
                   <span>{r.readTime} min read</span>
                 </Link>

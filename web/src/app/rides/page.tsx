@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+export const revalidate = 60;
 import { sanityClient } from "@/lib/sanity";
 import RidesClient from "./RidesClient";
 
