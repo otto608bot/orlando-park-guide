@@ -1,36 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import EmailForm from "@/components/EmailForm";
+import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Orlando Theme Park Deals & Discounts",
   description: "Save money on your Orlando vacation with exclusive ticket discounts and package deals.",
 };
-
-const deals = [
-  {
-    id: "undercover-tourist",
-    category: "Tickets",
-    title: "Undercover Tourist",
-    description: "Official Disney & Universal ticket reseller with competitive prices and instant e-ticket delivery. Save up to 20% vs. gate prices on multi-day tickets.",
-    icon: "🎢",
-    ctaText: "Get Tickets",
-    ctaUrl: "https://www.dpbolvw.net/click-101693488-5527150",
-    badge: "Best Savings",
-    featured: true,
-  },
-  {
-    id: "amazon-gear",
-    category: "Gear & Accessories",
-    title: "Amazon Park Gear",
-    description: "Skip the park shops — order ahead and save. Backpacks, ponchos, cooling towels, and more delivered to your hotel or home.",
-    icon: "🎒",
-    ctaText: "Shop Amazon",
-    ctaUrl: "https://www.amazon.com/s?k=disney+world+accessories&tag=planyourpark-20",
-    badge: "Quick Delivery",
-    featured: false,
-  },
-];
 
 const gearItems = [
   {
@@ -79,6 +55,37 @@ const tips = [
   { icon: "🎒", tip: "Order park accessories on Amazon before your trip — often 40% cheaper than park gift shops", highlight: false },
 ];
 
+const attractionTickets = [
+  {
+    name: "SeaWorld Orlando",
+    description: "Experience incredible marine life shows, up-close animal encounters, and thrilling rides.",
+    icon: "🐬",
+    link: AFFILIATE_LINKS.seaworld,
+    linkText: "Get SeaWorld Tickets",
+  },
+  {
+    name: "LEGOLAND Florida",
+    description: "A kid-focused theme park built entirely with LEGO bricks — perfect for families with young children.",
+    icon: "🧱",
+    link: AFFILIATE_LINKS.legoland,
+    linkText: "Get LEGOLAND Tickets",
+  },
+  {
+    name: "Discovery Cove",
+    description: "An all-inclusive day resort where you can swim with dolphins, snorkel with rays, and relax in paradise.",
+    icon: "🐠",
+    link: AFFILIATE_LINKS.discoveryCove,
+    linkText: "Get Discovery Cove Tickets",
+  },
+  {
+    name: "Gatorland",
+    description: "The 'Alligator Capital of the World' — budget-friendly Florida wildlife park with shows and encounters.",
+    icon: "🐊",
+    link: AFFILIATE_LINKS.gatorland,
+    linkText: "Get Gatorland Tickets",
+  },
+];
+
 export default function DealsPage() {
   return (
     <div className="deals-page">
@@ -89,25 +96,54 @@ export default function DealsPage() {
         </p>
       </header>
 
-      {/* Deals Grid */}
-      <section className="deals-grid">
-        {deals.map(deal => (
-          <div key={deal.id} className={`deal-card ${deal.featured ? 'deal-card--featured' : ''}`}>
-            {deal.featured && <div className="deal-card-featured-badge">{deal.badge}</div>}
-            <div className="deal-card-icon">{deal.icon}</div>
-            <div className="deal-card-category">{deal.category}</div>
-            <h2 className="deal-card-title">{deal.title}</h2>
-            <p className="deal-card-desc">{deal.description}</p>
-            <a
-              href={deal.ctaUrl}
-              target="_blank"
-              rel="noopener"
-              className={`deal-card-cta ${deal.featured ? 'deal-card-cta--primary' : ''}`}
-            >
-              {deal.ctaText} →
-            </a>
+      {/* Full-width Undercover Tourist Banner */}
+      <a
+        href={AFFILIATE_LINKS.ucDealsPage}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="uc-banner"
+      >
+        <div className="uc-banner-inner">
+          <div className="uc-banner-icon">🎢</div>
+          <div className="uc-banner-content">
+            <span className="uc-banner-tag">Limited Time</span>
+            <span className="uc-banner-title">Save up to 20% on theme park tickets</span>
+            <span className="uc-banner-sub">Disney, Universal, SeaWorld & more — via Undercover Tourist</span>
           </div>
-        ))}
+          <span className="uc-banner-cta">
+            Get Tickets
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      {/* Orlando Attraction Tickets Section */}
+      <section className="attractions-section">
+        <div className="attractions-header">
+          <h2>Orlando Attraction Tickets</h2>
+          <p>Great parks beyond Disney and Universal — book direct and save.</p>
+        </div>
+        <div className="attractions-grid">
+          {attractionTickets.map(ticket => (
+            <a
+              key={ticket.name}
+              href={ticket.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="attraction-card"
+            >
+              <div className="attraction-icon">{ticket.icon}</div>
+              <div className="attraction-info">
+                <h3>{ticket.name}</h3>
+                <p>{ticket.description}</p>
+              </div>
+              <span className="attraction-cta">{ticket.linkText} →</span>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* Amazon Gear Section */}
@@ -166,7 +202,7 @@ export default function DealsPage() {
 
         .deals-header {
           text-align: center;
-          margin-bottom: 3rem;
+          margin-bottom: 2rem;
         }
 
         .deals-header h1 {
@@ -184,112 +220,160 @@ export default function DealsPage() {
           margin: 0 auto;
         }
 
-        /* Deals Grid */
-        .deals-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.25rem;
+        /* Undercover Tourist Banner */
+        .uc-banner {
+          display: block;
+          background: linear-gradient(135deg, #F37021 0%, #E85A1A 100%);
+          border-radius: 14px;
+          padding: 1.25rem 1.5rem;
           margin-bottom: 3rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 16px rgba(243,112,33,0.3);
         }
 
-        .deal-card {
-          background: var(--bg-white);
-          border: 1px solid var(--border);
-          border-radius: 14px;
-          padding: 1.5rem;
+        .uc-banner:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(243,112,33,0.4);
+        }
+
+        .uc-banner-inner {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          flex-wrap: wrap;
+        }
+
+        .uc-banner-icon {
+          font-size: 2.5rem;
+          flex-shrink: 0;
+        }
+
+        .uc-banner-content {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
-          position: relative;
-          transition: all 0.2s ease;
+          gap: 0.25rem;
+          flex: 1;
+          min-width: 200px;
         }
 
-        .deal-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-        }
-
-        .deal-card--featured {
-          background: linear-gradient(145deg, #FFF7ED 0%, #FFFFFF 100%);
-          border: 2px solid var(--primary);
-        }
-
-        .deal-card-featured-badge {
+        .uc-banner-tag {
           display: inline-block;
-          background: var(--primary);
+          background: rgba(255,255,255,0.25);
           color: white;
           font-size: 0.6875rem;
           font-weight: 700;
-          padding: 0.25rem 0.625rem;
+          padding: 0.2rem 0.625rem;
           border-radius: 9999px;
+          width: fit-content;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          width: fit-content;
-          margin-bottom: 0.25rem;
         }
 
-        .deal-card-icon {
-          font-size: 2.25rem;
-          margin-bottom: 0.25rem;
-        }
-
-        .deal-card-category {
-          font-size: 0.6875rem;
-          font-weight: 700;
-          color: var(--primary);
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-        }
-
-        .deal-card-title {
+        .uc-banner-title {
           font-family: var(--font-heading);
-          font-size: 1.125rem;
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: white;
+          line-height: 1.2;
+        }
+
+        .uc-banner-sub {
+          font-size: 0.8125rem;
+          color: rgba(255,255,255,0.85);
+        }
+
+        .uc-banner-cta {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: white;
+          color: #E85A1A;
+          font-weight: 700;
+          font-size: 0.9375rem;
+          padding: 0.625rem 1.25rem;
+          border-radius: 8px;
+          white-space: nowrap;
+          transition: background 0.15s;
+        }
+
+        .uc-banner:hover .uc-banner-cta {
+          background: #fff5f0;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+          margin-bottom: 3rem;
+        }
+
+        .attractions-header {
+          margin-bottom: 1.5rem;
+        }
+
+        .attractions-header h2 {
+          font-family: var(--font-heading);
+          font-size: 1.5rem;
           font-weight: 700;
           color: var(--text-dark);
-          line-height: 1.3;
-          margin-bottom: 0.25rem;
-        }
-
-        .deal-card-desc {
-          font-size: 0.875rem;
-          color: var(--text-medium);
-          line-height: 1.55;
-          flex: 1;
           margin-bottom: 0.5rem;
         }
 
-        .deal-card-cta {
-          display: block;
-          width: 100%;
-          padding: 0.75rem;
-          text-align: center;
-          border-radius: 8px;
+        .attractions-header p {
+          font-size: 1rem;
+          color: var(--text-medium);
+        }
+
+        .attractions-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .attraction-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          padding: 1.25rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 12px;
           text-decoration: none;
+          color: inherit;
+          transition: all 0.2s ease;
+        }
+
+        .attraction-card:hover {
+          border-color: var(--primary);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .attraction-icon {
+          font-size: 2rem;
+        }
+
+        .attraction-info h3 {
+          font-family: var(--font-heading);
+          font-size: 1rem;
           font-weight: 700;
-          font-size: 0.875rem;
-          transition: all 0.2s;
-          background: var(--bg-light);
           color: var(--text-dark);
-          border: 1.5px solid var(--border);
+          margin-bottom: 0.375rem;
+        }
+
+        .attraction-info p {
+          font-size: 0.8125rem;
+          color: var(--text-medium);
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        .attraction-cta {
+          font-size: 0.8125rem;
+          font-weight: 600;
+          color: var(--primary);
           margin-top: auto;
         }
 
-        .deal-card-cta:hover {
-          border-color: var(--primary);
-          color: var(--primary);
-        }
-
-        .deal-card-cta--primary {
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
-          color: white !important;
-          border: none !important;
-        }
-
-        .deal-card-cta--primary:hover {
-          opacity: 0.9;
-        }
-
-        /* Tips Section */
         /* Gear Section */
         .gear-section {
           margin-bottom: 3rem;
@@ -447,19 +531,27 @@ export default function DealsPage() {
         }
 
         @media (max-width: 768px) {
-          .deals-grid {
-            grid-template-columns: 1fr;
-          }
           .tips-grid {
             grid-template-columns: 1fr;
           }
           .gear-grid {
             grid-template-columns: repeat(2, 1fr);
           }
+          .attractions-grid {
+            grid-template-columns: 1fr;
+          }
         }
 
         @media (max-width: 640px) {
           .deals-page { padding: 1.5rem 1rem 3rem; }
+          .uc-banner-inner {
+            flex-direction: column;
+            text-align: center;
+          }
+          .uc-banner-cta {
+            width: 100%;
+            justify-content: center;
+          }
         }
       `}</style>
     </div>

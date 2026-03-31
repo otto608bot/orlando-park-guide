@@ -141,7 +141,7 @@ export default function ParkRidesGrid({ rides, parkName }: ParkRidesGridProps) {
       {showFilters && (
         <div className="park-mini-filters">
           <div className="mini-filter-group">
-            <label>My Height: <strong>{filters.height === 0 ? 'Any' : `${filters.height}"`}</strong></label>
+            <label>Minimum Height: <strong>{filters.height === 0 ? 'Any' : `${filters.height}"`}</strong></label>
           </div>
           <div className="mini-filter-toggles">
             {filters.pregnancySafe && <span className="mini-pill">🤰 Pregnancy Safe</span>}

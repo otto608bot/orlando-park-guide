@@ -5,6 +5,7 @@ import { sanityClient } from "@/lib/sanity";
 import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 import FilterSidebar from "@/components/FilterSidebar";
+import { getParkTicketLink } from "@/config/affiliate-links";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
@@ -38,7 +39,7 @@ const parkImages: Record<string, string> = {
   'epcot': 'epcot.jpeg',
   'hollywood-studios': 'Hollywood-Studios.jpeg',
   'animal-kingdom': 'animal-kingdom.jpeg',
-  'universal-studios-florida': 'Universal-Studios-Florida.jpeg',
+  'universal-studios-florida': 'Universal-Studios.jpeg',
   'islands-of-adventure': 'islands-of-adventure.webp',
   'epic-universe': 'epic-universe.jpeg',
   'seaworld-orlando': 'sea-world.jpeg',
@@ -152,7 +153,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             </span>
           </div>
           <a
-            href="https://www.dpbolvw.net/click-101693488-5527150"
+            href={getParkTicketLink(park.name)}
             target="_blank"
             rel="noopener noreferrer"
             className="hero-buy-tickets-btn"
@@ -202,7 +203,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             Browse All Rides
           </Link>
           <a
-            href="https://www.dpbolvw.net/click-101693488-5527150"
+            href={getParkTicketLink(park.name)}
             target="_blank"
             rel="noopener"
             className="cta-primary"

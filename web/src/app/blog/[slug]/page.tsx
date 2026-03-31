@@ -5,6 +5,7 @@ import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import EmailForm from "@/components/EmailForm";
 import QuestionForm from "@/components/QuestionForm";
+import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -180,7 +181,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <h2>Plan Your Perfect Orlando Trip</h2>
           <p>Get exclusive deals and tips delivered to your inbox.</p>
           <div className="cta-buttons">
-            <a href="https://www.dpbolvw.net/click-101693488-5527150" target="_blank" rel="noopener" className="primary">Get Tickets</a>
+            <a href={AFFILIATE_LINKS.ucDealsPage} target="_blank" rel="noopener" className="primary">Get Tickets</a>
             <a href="/blog" className="secondary">More Articles</a>
           </div>
         </div>

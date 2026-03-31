@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import type { Ride } from '@/lib/sanity-types';
+import { AFFILIATE_LINKS } from '@/config/affiliate-links';
 
 interface RideModalProps {
   ride: Ride | null;
@@ -210,7 +211,7 @@ export default function RideModal({ ride, onClose }: RideModalProps) {
           {/* CTA */}
           <div className="ride-modal-cta">
             <a
-              href={`https://www.dpbolvw.net/click-101693488-5527150`}
+              href={AFFILIATE_LINKS.ucDealsPage}
               target="_blank"
               rel="noopener"
               className="modal-cta-btn"

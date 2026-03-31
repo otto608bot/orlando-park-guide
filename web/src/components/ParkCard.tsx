@@ -19,7 +19,7 @@ export default function ParkCard({ park }: ParkCardProps) {
     'epcot': 'epcot.jpeg',
     'hollywood-studios': 'Hollywood-Studios.jpeg',
     'animal-kingdom': 'animal-kingdom.jpeg',
-    'universal-studios-florida': 'Universal-Studios-Florida.jpeg',
+    'universal-studios-florida': 'Universal-Studios.jpeg',
     'islands-of-adventure': 'islands-of-adventure.webp',
     'epic-universe': 'epic-universe.jpeg',
     'seaworld-orlando': 'sea-world.jpeg',

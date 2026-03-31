@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useFilters } from '@/context/FiltersContext';
+import { AFFILIATE_LINKS, PARK_TICKET_LINKS } from '@/config/affiliate-links';
 
 const PARKS = [
   { name: 'Magic Kingdom', slug: 'magic-kingdom' },
@@ -78,7 +79,7 @@ export default function FilterSidebar() {
           {/* Height Slider */}
           <div className="drawer-filter-group">
             <label className="filter-label">
-              My Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+              Minimum Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
             </label>
             <input
               type="range"
@@ -170,7 +171,7 @@ export default function FilterSidebar() {
         {/* Height Slider - TOP */}
         <div className="filter-group">
           <label className="filter-label">
-            My Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+            Minimum Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
           </label>
           <input
             type="range"
@@ -252,7 +253,7 @@ export default function FilterSidebar() {
         <p className="ticket-intro">Buy from trusted sellers and support Plan Your Park.</p>
         <div className="ticket-buttons">
           <a
-            href="https://www.dpbolvw.net/click-101693488-5527150"
+            href={AFFILIATE_LINKS.disney4DayParkHopper}
             target="_blank"
             rel="noopener noreferrer"
             className="ticket-btn"
@@ -264,7 +265,7 @@ export default function FilterSidebar() {
             </span>
           </a>
           <a
-            href="https://www.dpbolvw.net/click-101693488-5527150"
+            href={AFFILIATE_LINKS.universal2Park2Day}
             target="_blank"
             rel="noopener noreferrer"
             className="ticket-btn"
@@ -276,7 +277,7 @@ export default function FilterSidebar() {
             </span>
           </a>
           <a
-            href="https://www.dpbolvw.net/click-101693488-5527150"
+            href={AFFILIATE_LINKS.seaworld}
             target="_blank"
             rel="noopener noreferrer"
             className="ticket-btn"
