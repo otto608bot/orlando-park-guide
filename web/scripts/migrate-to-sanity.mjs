@@ -33,15 +33,15 @@ function rideToSanity(ride) {
   else if (ride.height >= 42) thrillLevel = 4;
   else if (ride.height >= 38) thrillLevel = 3;
   else if (ride.height >= 35 || ride.type === 'Coaster') thrillLevel = 2;
-  
+
   // Build accessibility tags
   const accessibility = [];
   if (ride.wheelchair === 'WAV') accessibility.push('wheelchair-accessible');
   else if (ride.wheelchair === 'TAV') accessibility.push('transfer-accessible');
   else if (ride.wheelchair === 'NO') accessibility.push('not-accessible');
-  
+
   if (ride.pregnant === false) accessibility.push('not-pregnant-safe');
-  
+
   const sensory = ride.sensory || {};
   if (sensory.dark) accessibility.push('dark-ride');
   if (sensory.loud) accessibility.push('loud-audio');
@@ -50,10 +50,17 @@ function rideToSanity(ride) {
   if (sensory.sudden) accessibility.push('sudden-movements');
   if (sensory.enclosed) accessibility.push('enclosed-space');
 
+  // Derive slug from ride ID
+  const slug = ride.id || ride.name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, '-');
+
   return {
     _type: 'ride',
     name: ride.name,
     park: ride.park,
+    slug: { _type: 'slug', current: slug },
     description: ride.description || '',
     heightRequirement: ride.height || 0,
     thrillLevel,
