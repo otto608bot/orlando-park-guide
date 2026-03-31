@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ParkPageProps): Promise<Metad
       description
     }
   `, { slug });
-  
+
   if (!park) return { title: "Park Not Found" };
   return {
     title: park.name,
@@ -40,6 +40,18 @@ const parkImages: Record<string, string> = {
   'epic-universe': 'epic-universe.jpeg',
   'seaworld-orlando': 'sea-world.jpeg',
   'legoland-florida': 'legoland.jpeg',
+};
+
+const parkColors: Record<string, string> = {
+  'magic-kingdom': '#4A9DE8',
+  'epcot': '#8B5CF6',
+  'hollywood-studios': '#EF4444',
+  'animal-kingdom': '#10B981',
+  'universal-studios-florida': '#F59E0B',
+  'islands-of-adventure': '#06B6D4',
+  'epic-universe': '#8B5CF6',
+  'seaworld-orlando': '#3B82F6',
+  'legoland-florida': '#F97316',
 };
 
 async function getParkData(slug: string) {
@@ -68,7 +80,7 @@ async function getParkData(slug: string) {
       }
     `, { parkName: slugToParkName(slug) }),
   ]);
-  
+
   return { park, rides };
 }
 
@@ -90,7 +102,7 @@ function slugToParkName(slug: string): string {
 export default async function ParkDetailPage({ params }: ParkPageProps) {
   const { slug } = await params;
   const { park, rides } = await getParkData(slug);
-  
+
   if (!park) {
     return (
       <div className="park-detail-container">
@@ -102,25 +114,39 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
   }
 
   const imageSrc = park.image?.asset?.url || `/${parkImages[slug] || 'Disney-World.webp'}`;
+  const accentColor = parkColors[slug] || '#F37021';
 
   return (
     <div className="park-detail-container">
-      <div className="park-hero">
-        <img src={imageSrc} alt={park.image?.alt || park.name} />
-        <div className="park-hero-overlay">
+      {/* Hero Section */}
+      <div className="park-hero" style={{ '--park-accent': accentColor } as React.CSSProperties}>
+        <img src={imageSrc} alt={park.image?.alt || park.name} className="park-hero-img" />
+        <div className="park-hero-overlay" />
+        <div className="park-hero-content">
+          <Link href="/parks" className="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            All Parks
+          </Link>
           <h1>{park.name}</h1>
+          <div className="park-hero-meta">
+            <span className="ride-count-badge">
+              {rides.length} Rides & Attractions
+            </span>
+          </div>
         </div>
       </div>
-      
+
       <div className="park-content">
         {park.description && (
           <section className="park-description">
             <p>{park.description}</p>
           </section>
         )}
-        
+
         <section className="park-rides">
-          <h2>Rides & Attractions ({rides.length})</h2>
+          <h2>Rides &amp; Attractions</h2>
           <div className="rides-grid">
             {rides.map((ride: any) => (
               <RideCard key={ride._id} ride={ride} />
@@ -130,12 +156,14 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             <p className="no-rides">No rides found for this park.</p>
           )}
         </section>
-        
+
         <div className="park-cta">
-          <Link href="/rides" className="cta-secondary">Browse All Rides</Link>
-          <a 
-            href="https://www.dpbolvw.net/click-101693488-5527150" 
-            target="_blank" 
+          <Link href="/rides" className="cta-secondary">
+            Browse All Rides
+          </Link>
+          <a
+            href="https://www.dpbolvw.net/click-101693488-5527150"
+            target="_blank"
             rel="noopener"
             className="cta-primary"
           >
@@ -143,59 +171,107 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           </a>
         </div>
       </div>
-      
+
       <style>{`
         .park-detail-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 0 4rem;
         }
-        
+
         .park-hero {
           position: relative;
           width: 100%;
-          height: 300px;
+          height: 380px;
           overflow: hidden;
           background: var(--bg-light);
         }
-        
-        .park-hero img {
+
+        .park-hero-img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        
+
         .park-hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.1) 40%,
+            rgba(0,0,0,0.65) 100%
+          );
+        }
+
+        .park-hero-content {
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
           padding: 2rem 1.5rem;
-          background: linear-gradient(transparent, rgba(0,0,0,0.7));
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
         }
-        
-        .park-hero-overlay h1 {
+
+        .back-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.375rem;
+          color: rgba(255,255,255,0.85);
+          font-size: 0.875rem;
+          font-weight: 500;
+          text-decoration: none;
+          transition: color 0.15s;
+        }
+
+        .back-link:hover {
+          color: white;
+        }
+
+        .park-hero-content h1 {
           font-family: var(--font-heading);
-          font-size: clamp(1.75rem, 5vw, 2.5rem);
+          font-size: clamp(1.75rem, 5vw, 2.75rem);
           font-weight: 800;
           color: white;
           margin: 0;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        
+
+        .park-hero-meta {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .ride-count-badge {
+          display: inline-block;
+          padding: 0.3rem 0.875rem;
+          background: rgba(255,255,255,0.2);
+          backdrop-filter: blur(8px);
+          color: white;
+          font-size: 0.8125rem;
+          font-weight: 600;
+          border-radius: 9999px;
+          border: 1px solid rgba(255,255,255,0.3);
+        }
+
         .park-content {
-          padding: 2rem 1.5rem;
+          padding: 2.5rem 1.5rem;
         }
-        
+
         .park-description {
-          margin-bottom: 2.5rem;
+          margin-bottom: 3rem;
+          max-width: 720px;
         }
-        
+
         .park-description p {
           font-size: 1.0625rem;
           color: var(--text-medium);
-          line-height: 1.7;
+          line-height: 1.75;
         }
-        
+
         .park-rides h2 {
           font-family: var(--font-heading);
           font-size: 1.5rem;
@@ -203,19 +279,29 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           color: var(--text-dark);
           margin-bottom: 1.5rem;
         }
-        
+
         .rides-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 1rem;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
         }
-        
+
+        @media (max-width: 900px) {
+          .rides-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+          .park-hero { height: 240px; }
+          .park-content { padding: 1.5rem 1rem; }
+          .rides-grid { grid-template-columns: 1fr; }
+        }
+
         .no-rides {
           color: var(--text-light);
           text-align: center;
-          padding: 2rem;
+          padding: 3rem 1rem;
         }
-        
+
         .park-cta {
           display: flex;
           gap: 1rem;
@@ -223,7 +309,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           margin-top: 3rem;
           flex-wrap: wrap;
         }
-        
+
         .cta-primary {
           display: inline-block;
           background: var(--primary);
@@ -234,11 +320,11 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-weight: 600;
           transition: background 0.2s;
         }
-        
+
         .cta-primary:hover {
           background: #e85a1a;
         }
-        
+
         .cta-secondary {
           display: inline-block;
           background: var(--bg-white);
@@ -250,16 +336,10 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           border: 1px solid var(--border);
           transition: all 0.2s;
         }
-        
+
         .cta-secondary:hover {
           border-color: var(--primary);
           color: var(--primary);
-        }
-        
-        @media (max-width: 640px) {
-          .park-hero { height: 200px; }
-          .park-content { padding: 1.5rem 1rem; }
-          .rides-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </div>

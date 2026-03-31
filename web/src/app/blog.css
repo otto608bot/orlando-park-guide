@@ -9,7 +9,241 @@
   --border: #E2E8F0;
   --font-heading: var(--font-nunito), 'Nunito', sans-serif;
   --font-body: var(--font-inter), 'Inter', sans-serif;
+
+  /* Park Color System */
+  --park-magic-kingdom: #4A9DE8;
+  --park-epcot: #8B5CF6;
+  --park-hollywood-studios: #EF4444;
+  --park-animal-kingdom: #10B981;
+  --park-universal-studios: #F59E0B;
+  --park-islands-of-adventure: #06B6D4;
+  --park-epic-universe: #8B5CF6;
+  --park-seaworld: #3B82F6;
+  --park-legoland: #F97316;
+
+  /* Thrill Level Colors */
+  --thrill-family: #10B981;
+  --thrill-medium: #F59E0B;
+  --thrill-high: #EF4444;
+
+  /* Card Hover Effect */
+  --card-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  --card-shadow-hover: 0 12px 35px rgba(0,0,0,0.15);
 }
+
+/* Global Card Styles */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+/* Park Badge Colors */
+.park-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.park-badge--magic-kingdom { background-color: var(--park-magic-kingdom); }
+.park-badge--epcot { background-color: var(--park-epcot); }
+.park-badge--hollywood-studios { background-color: var(--park-hollywood-studios); }
+.park-badge--animal-kingdom { background-color: var(--park-animal-kingdom); }
+.park-badge--universal-studios-florida { background-color: var(--park-universal-studios); }
+.park-badge--islands-of-adventure { background-color: var(--park-islands-of-adventure); }
+.park-badge--epic-universe { background-color: var(--park-epic-universe); }
+.park-badge--seaworld-orlando { background-color: var(--park-seaworld); }
+.park-badge--legoland-florida { background-color: var(--park-legoland); }
+
+/* Thrill Level Badges */
+.thrill-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.thrill-badge--family { background-color: var(--thrill-family); }
+.thrill-badge--medium { background-color: var(--thrill-medium); }
+.thrill-badge--high { background-color: var(--thrill-high); }
+
+/* Ride Type Pill */
+.ride-type-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: var(--bg-light);
+  color: var(--text-medium);
+  border: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Image Placeholder Colors by Park */
+.img-placeholder--magic-kingdom { background: linear-gradient(135deg, #4A9DE8, #2563EB); }
+.img-placeholder--epcot { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+.img-placeholder--hollywood-studios { background: linear-gradient(135deg, #EF4444, #DC2626); }
+.img-placeholder--animal-kingdom { background: linear-gradient(135deg, #10B981, #059669); }
+.img-placeholder--universal-studios-florida { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.img-placeholder--islands-of-adventure { background: linear-gradient(135deg, #06B6D4, #0891B2); }
+.img-placeholder--epic-universe { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+.img-placeholder--seaworld-orlando { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+.img-placeholder--legoland-florida { background: linear-gradient(135deg, #F97316, #EA580C); }
+
+/* Pill / Chip Filter Styles */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1.5px solid transparent;
+  background: var(--bg-white);
+  color: var(--text-medium);
+  border-color: var(--border);
+}
+
+.filter-pill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.filter-pill.active:hover {
+  background: #e85a1a;
+  border-color: #e85a1a;
+}
+
+/* Park-colored pills */
+.filter-pill.park-magic-kingdom.active { background: var(--park-magic-kingdom); border-color: var(--park-magic-kingdom); }
+.filter-pill.park-epcot.active { background: var(--park-epcot); border-color: var(--park-epcot); }
+.filter-pill.park-hollywood-studios.active { background: var(--park-hollywood-studios); border-color: var(--park-hollywood-studios); }
+.filter-pill.park-animal-kingdom.active { background: var(--park-animal-kingdom); border-color: var(--park-animal-kingdom); }
+.filter-pill.park-universal-studios-florida.active { background: var(--park-universal-studios); border-color: var(--park-universal-studios); }
+.filter-pill.park-islands-of-adventure.active { background: var(--park-islands-of-adventure); border-color: var(--park-islands-of-adventure); }
+.filter-pill.park-epic-universe.active { background: var(--park-epic-universe); border-color: var(--park-epic-universe); }
+.filter-pill.park-seaworld-orlando.active { background: var(--park-seaworld); border-color: var(--park-seaworld); }
+.filter-pill.park-legoland-florida.active { background: var(--park-legoland); border-color: var(--park-legoland); }
+
+.filter-pill.thrill-family.active { background: var(--thrill-family); border-color: var(--thrill-family); }
+.filter-pill.thrill-medium.active { background: var(--thrill-medium); border-color: var(--thrill-medium); }
+.filter-pill.thrill-high.active { background: var(--thrill-high); border-color: var(--thrill-high); }
+
+.filter-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: transparent;
+  color: var(--text-light);
+  border: 1.5px solid var(--border);
+}
+
+.filter-clear-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.filter-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 0.35rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: var(--primary);
+  color: white;
+}
+
+/* Grid Layouts */
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .grid-3col { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid-3col, .grid-2col { grid-template-columns: 1fr; }
+}
+
+/* Results count */
+.results-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.results-count-bar .count-text {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.results-count-bar .count-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* No results state */
+.no-results-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--text-light);
+}
+
+.no-results-state p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ========== EXISTING BLOG STYLES ========== */
 
 body {
   font-family: var(--font-body);

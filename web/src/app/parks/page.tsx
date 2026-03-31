@@ -27,28 +27,28 @@ export default async function ParksPage() {
       <header className="parks-header">
         <h1>Orlando Theme Parks</h1>
         <p className="parks-subtitle">
-          From Disney magic to Universal thrills, discover all the parks that make Orlando the world's vacation capital.
+          From Disney magic to Universal thrills, discover all the parks that make Orlando the world&apos;s vacation capital.
         </p>
       </header>
-      
+
       <div className="parks-grid-full">
         {parks.map((park: any) => (
           <ParkCard key={park._id} park={park} />
         ))}
       </div>
-      
+
       <style>{`
         .parks-page-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 2rem 1.5rem 4rem;
         }
-        
+
         .parks-header {
           text-align: center;
           margin-bottom: 3rem;
         }
-        
+
         .parks-header h1 {
           font-family: var(--font-heading);
           font-size: clamp(1.75rem, 5vw, 2.5rem);
@@ -56,20 +56,25 @@ export default async function ParksPage() {
           color: var(--text-dark);
           margin-bottom: 1rem;
         }
-        
+
         .parks-subtitle {
           font-size: 1.125rem;
           color: var(--text-medium);
           max-width: 600px;
           margin: 0 auto;
+          line-height: 1.7;
         }
-        
+
         .parks-grid-full {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 1.5rem;
         }
-        
+
+        @media (max-width: 900px) {
+          .parks-grid-full { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 640px) {
           .parks-page-container { padding: 1.5rem 1rem 3rem; }
           .parks-grid-full { grid-template-columns: 1fr; }

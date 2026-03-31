@@ -6,18 +6,19 @@ import type { Ride } from '@/lib/sanity-types';
 interface RideFiltersProps {
   rides: Ride[];
   onFilter: (filtered: Ride[]) => void;
+  totalCount: number;
 }
 
 const ALL_PARKS = [
-  'Magic Kingdom',
-  'EPCOT',
-  'Hollywood Studios',
-  'Animal Kingdom',
-  'Universal Studios Florida',
-  'Islands of Adventure',
-  'Epic Universe',
-  'SeaWorld Orlando',
-  'LEGOLAND Florida',
+  { name: 'Magic Kingdom', slug: 'magic-kingdom' },
+  { name: 'EPCOT', slug: 'epcot' },
+  { name: 'Hollywood Studios', slug: 'hollywood-studios' },
+  { name: 'Animal Kingdom', slug: 'animal-kingdom' },
+  { name: 'Universal Studios Florida', slug: 'universal-studios-florida' },
+  { name: 'Islands of Adventure', slug: 'islands-of-adventure' },
+  { name: 'Epic Universe', slug: 'epic-universe' },
+  { name: 'SeaWorld Orlando', slug: 'seaworld-orlando' },
+  { name: 'LEGOLAND Florida', slug: 'legoland-florida' },
 ];
 
 const RIDE_TYPES = [
@@ -38,14 +39,14 @@ const RIDE_TYPES = [
 ];
 
 const THRILL_LEVELS = [
-  { value: 1, label: 'Family' },
-  { value: 2, label: 'Low Thrill' },
-  { value: 3, label: 'Medium Thrill' },
-  { value: 4, label: 'High Thrill' },
-  { value: 5, label: 'Extreme' },
+  { value: 1, label: 'Family', class: 'thrill-family' },
+  { value: 2, label: 'Low Thrill', class: 'thrill-family' },
+  { value: 3, label: 'Medium', class: 'thrill-medium' },
+  { value: 4, label: 'High Thrill', class: 'thrill-high' },
+  { value: 5, label: 'Extreme', class: 'thrill-high' },
 ];
 
-export default function RideFilters({ rides, onFilter }: RideFiltersProps) {
+export default function RideFilters({ rides, onFilter, totalCount }: RideFiltersProps) {
   const [selectedPark, setSelectedPark] = useState<string>('');
   const [selectedThrill, setSelectedThrill] = useState<number | null>(null);
   const [selectedType, setSelectedType] = useState<string>('');
@@ -85,171 +86,207 @@ export default function RideFilters({ rides, onFilter }: RideFiltersProps) {
     setSelectedHeight('');
   };
 
-  const hasFilters = selectedPark || selectedThrill || selectedType || selectedHeight;
+  const activeCount = [selectedPark, selectedThrill, selectedType, selectedHeight].filter(Boolean).length;
 
   return (
     <div className="ride-filters">
-      <button 
-        className="mobile-filter-toggle"
-        onClick={() => setMobileOpen(!mobileOpen)}
-      >
-        {mobileOpen ? 'Hide Filters' : 'Show Filters'}
-        {hasFilters && <span className="filter-badge">•</span>}
-      </button>
+      <div className="filters-header">
+        <button
+          className="mobile-filter-toggle"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+            <line x1="11" y1="18" x2="13" y2="18"/>
+          </svg>
+          {mobileOpen ? 'Hide Filters' : 'Show Filters'}
+          {activeCount > 0 && (
+            <span className="filter-count-badge">{activeCount}</span>
+          )}
+        </button>
 
-      <div className={`filters-container ${mobileOpen ? 'open' : ''}`}>
-        <div className="filter-group">
-          <label>Park</label>
-          <select 
-            value={selectedPark} 
-            onChange={(e) => setSelectedPark(e.target.value)}
-          >
-            <option value="">All Parks</option>
-            {ALL_PARKS.map(park => (
-              <option key={park} value={park}>{park}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="filter-group">
-          <label>Thrill Level</label>
-          <select 
-            value={selectedThrill || ''} 
-            onChange={(e) => setSelectedThrill(e.target.value ? Number(e.target.value) : null)}
-          >
-            <option value="">Any Level</option>
-            {THRILL_LEVELS.map(level => (
-              <option key={level.value} value={level.value}>{level.label}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="filter-group">
-          <label>Ride Type</label>
-          <select 
-            value={selectedType} 
-            onChange={(e) => setSelectedType(e.target.value)}
-          >
-            <option value="">All Types</option>
-            {RIDE_TYPES.map(type => (
-              <option key={type} value={type}>{type}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="filter-group">
-          <label>Height Requirement</label>
-          <select 
-            value={selectedHeight} 
-            onChange={(e) => setSelectedHeight(e.target.value)}
-          >
-            <option value="">Any Height</option>
-            <option value="any">No Height Req.</option>
-            <option value="42">42"+ (Most Thrills)</option>
-          </select>
-        </div>
-
-        {hasFilters && (
-          <button className="clear-filters" onClick={clearFilters}>
-            Clear All
+        {activeCount > 0 && (
+          <button className="filter-clear-btn" onClick={clearFilters}>
+            Clear all
+            <span className="filter-count-badge">{activeCount}</span>
           </button>
         )}
       </div>
 
+      <div className={`filters-body ${mobileOpen ? 'open' : ''}`}>
+        {/* Park Filters */}
+        <div className="filter-section">
+          <span className="filter-section-label">Park</span>
+          <div className="filter-pills">
+            {ALL_PARKS.map(park => (
+              <button
+                key={park.slug}
+                className={`filter-pill park-${park.slug} ${selectedPark === park.name ? 'active' : ''}`}
+                onClick={() => setSelectedPark(selectedPark === park.name ? '' : park.name)}
+              >
+                {park.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Thrill Level Filters */}
+        <div className="filter-section">
+          <span className="filter-section-label">Thrill Level</span>
+          <div className="filter-pills">
+            {THRILL_LEVELS.map(level => (
+              <button
+                key={level.value}
+                className={`filter-pill ${level.class} ${selectedThrill === level.value ? 'active' : ''}`}
+                onClick={() => setSelectedThrill(selectedThrill === level.value ? null : level.value)}
+              >
+                {level.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Ride Type Filters */}
+        <div className="filter-section">
+          <span className="filter-section-label">Ride Type</span>
+          <div className="filter-pills">
+            {RIDE_TYPES.map(type => (
+              <button
+                key={type}
+                className={`filter-pill ${selectedType === type ? 'active' : ''}`}
+                onClick={() => setSelectedType(selectedType === type ? '' : type)}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Height Filters */}
+        <div className="filter-section">
+          <span className="filter-section-label">Height</span>
+          <div className="filter-pills">
+            <button
+              className={`filter-pill ${selectedHeight === 'any' ? 'active' : ''}`}
+              onClick={() => setSelectedHeight(selectedHeight === 'any' ? '' : 'any')}
+            >
+              No Height Req.
+            </button>
+            <button
+              className={`filter-pill ${selectedHeight === '42' ? 'active' : ''}`}
+              onClick={() => setSelectedHeight(selectedHeight === '42' ? '' : '42')}
+            >
+              42&quot;+ (Most Thrills)
+            </button>
+          </div>
+        </div>
+      </div>
+
       <style>{`
         .ride-filters {
-          margin-bottom: 1.5rem;
-        }
-        
-        .mobile-filter-toggle {
-          display: none;
-          width: 100%;
-          padding: 0.75rem 1rem;
           background: var(--bg-white);
           border: 1px solid var(--border);
-          border-radius: 8px;
+          border-radius: 12px;
+          overflow: hidden;
+          margin-bottom: 1.5rem;
+        }
+
+        .filters-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.875rem 1rem;
+          gap: 0.75rem;
+          border-bottom: 1px solid var(--border);
+          flex-wrap: wrap;
+        }
+
+        .mobile-filter-toggle {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          background: var(--bg-light);
+          border: 1px solid var(--border);
+          border-radius: 9999px;
           font-size: 0.875rem;
           font-weight: 500;
           color: var(--text-dark);
           cursor: pointer;
-          margin-bottom: 1rem;
+          transition: all 0.15s ease;
         }
-        
-        @media (max-width: 768px) {
-          .mobile-filter-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-          }
-          
-          .filters-container {
-            display: none;
-          }
-          
-          .filters-container.open {
-            display: block;
-          }
-        }
-        
-        .filter-badge {
-          color: var(--primary);
-          font-size: 1.25rem;
-        }
-        
-        .filters-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-          gap: 1rem;
-          background: var(--bg-white);
-          padding: 1rem;
-          border: 1px solid var(--border);
-          border-radius: 8px;
-        }
-        
-        .filter-group {
-          display: flex;
-          flex-direction: column;
-          gap: 0.375rem;
-        }
-        
-        .filter-group label {
-          font-size: 0.75rem;
-          font-weight: 600;
-          color: var(--text-medium);
-          text-transform: uppercase;
-        }
-        
-        .filter-group select {
-          padding: 0.5rem 0.75rem;
-          border: 1px solid var(--border);
-          border-radius: 6px;
-          font-size: 0.875rem;
-          color: var(--text-dark);
-          background: var(--bg-light);
-          cursor: pointer;
-        }
-        
-        .filter-group select:focus {
-          outline: none;
+
+        .mobile-filter-toggle:hover {
           border-color: var(--primary);
+          color: var(--primary);
         }
-        
-        .clear-filters {
-          grid-column: 1 / -1;
-          padding: 0.5rem;
+
+        .filter-clear-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.375rem;
+          padding: 0.5rem 1rem;
           background: transparent;
           border: 1px solid var(--border);
-          border-radius: 6px;
+          border-radius: 9999px;
           font-size: 0.8125rem;
+          font-weight: 500;
           color: var(--text-medium);
           cursor: pointer;
-          transition: all 0.2s;
+          transition: all 0.15s ease;
         }
-        
-        .clear-filters:hover {
-          background: var(--bg-light);
-          color: var(--primary);
+
+        .filter-clear-btn:hover {
+          color: #EF4444;
+          border-color: #EF4444;
+        }
+
+        .filters-body {
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .filters-body .filter-count-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 18px;
+          height: 18px;
+          padding: 0 0.3rem;
+          border-radius: 9999px;
+          font-size: 0.625rem;
+          font-weight: 700;
+          background: var(--primary);
+          color: white;
+        }
+
+        @media (max-width: 768px) {
+          .filters-body {
+            display: none;
+          }
+          .filters-body.open {
+            display: flex;
+          }
+          .filters-header {
+            flex-wrap: wrap;
+          }
+        }
+
+        .filter-section {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .filter-section-label {
+          font-size: 0.6875rem;
+          font-weight: 700;
+          color: var(--text-light);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
         }
       `}</style>
     </div>
