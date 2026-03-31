@@ -3,6 +3,7 @@ import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
+import FilterSidebar from "@/components/FilterSidebar";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
@@ -162,7 +163,12 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         {/* Rides Cards Grid */}
         <section className="park-rides">
           <h2>Rides &amp; Attractions</h2>
-          <ParkRidesGrid rides={rides} parkName={park.name} />
+          <div className="park-rides-layout">
+            <FilterSidebar />
+            <div className="park-rides-main">
+              <ParkRidesGrid rides={rides} parkName={park.name} />
+            </div>
+          </div>
         </section>
 
         {/* Character Dining Section */}
@@ -313,6 +319,17 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           margin-bottom: 1.5rem;
         }
 
+        .park-rides-layout {
+          display: flex;
+          gap: 2rem;
+          align-items: flex-start;
+        }
+
+        .park-rides-main {
+          flex: 1;
+          min-width: 0;
+        }
+
         .rides-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -387,6 +404,12 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         @media (max-width: 640px) {
           .park-hero { height: 240px; }
           .park-content { padding: 1.5rem 1rem; }
+        }
+
+        @media (max-width: 900px) {
+          .park-rides-layout {
+            flex-direction: column;
+          }
         }
       `}</style>
     </div>

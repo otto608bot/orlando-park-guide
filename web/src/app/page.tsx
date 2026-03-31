@@ -4,6 +4,7 @@ import { sanityClient } from "@/lib/sanity";
 import FilterSidebar from "@/components/FilterSidebar";
 import EmailForm from "@/components/EmailForm";
 import HomepageRides from "@/components/HomepageRides";
+import HomepageHeader from "@/components/HomepageHeader";
 
 export const metadata: Metadata = {
   title: "Plan Your Park | Orlando Theme Park Planning Guide",
@@ -40,13 +41,8 @@ export default async function HomePage() {
 
       {/* Main Content */}
       <div className="home-main">
-        {/* Clean Header */}
-        <header className="home-header">
-          <h1 className="home-title">Find Rides for Everyone</h1>
-          <p className="home-subtitle">
-            Browse {totalRides} rides across Orlando&apos;s top theme parks
-          </p>
-        </header>
+        {/* Hero Callout */}
+        <HomepageHeader totalRides={totalRides} />
 
         {/* Park Cards with Filters */}
         <section className="rides-browser">
@@ -76,28 +72,6 @@ export default async function HomePage() {
         .home-main {
           flex: 1;
           min-width: 0;
-        }
-
-        .home-header {
-          text-align: center;
-          margin-bottom: 2rem;
-          padding: 2rem;
-          background: var(--bg-white);
-          border: 1px solid var(--border);
-          border-radius: 16px;
-        }
-
-        .home-title {
-          font-family: var(--font-heading);
-          font-size: clamp(1.75rem, 5vw, 2.5rem);
-          font-weight: 800;
-          color: var(--text-dark);
-          margin-bottom: 0.5rem;
-        }
-
-        .home-subtitle {
-          font-size: 1rem;
-          color: var(--text-medium);
         }
 
         .rides-browser {

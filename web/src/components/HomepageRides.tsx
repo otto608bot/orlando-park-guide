@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import type { Ride } from '@/lib/sanity-types';
 import { useFilters } from '@/context/FiltersContext';
 
@@ -43,6 +44,7 @@ const PARK_ORG: Record<string, string> = {
 
 export default function HomepageRides({ allRides, totalCount }: HomepageRidesProps) {
   const { filters } = useFilters();
+  const searchParams = useSearchParams();
 
   // Compute filtered rides for the count
   const filteredCount = useMemo(() => {
@@ -156,6 +158,12 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
 
   const displayCount = hasActiveFilters ? filteredCount : totalCount;
 
+  // Build href with preserved search params for park links
+  const buildParkHref = (parkSlug: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    return `/parks/${parkSlug}${params.toString() ? `?${params.toString()}` : ''}`;
+  };
+
   return (
     <>
       {/* Ride Count Banner */}
@@ -176,7 +184,7 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
       {/* Park Cards Grid */}
       <div className="park-cards-grid">
         {parkCards.map(park => (
-          <Link key={park.slug} href={`/parks/${park.slug}`} className="park-card">
+          <Link key={park.slug} href={buildParkHref(park.slug)} className="park-card">
             <div className="park-card-image">
               <img src={`/${PARK_MAP[park.name]?.image || 'Disney-World.webp'}`} alt={park.name} />
               <div className="park-card-overlay" />

@@ -30,16 +30,43 @@ const deals = [
     badge: "Quick Delivery",
     featured: false,
   },
+];
+
+const gearItems = [
   {
-    id: "hotel-deals",
-    category: "Hotels",
-    title: "Orlando Hotel Deals",
-    description: "Stay off-property and save hundreds. Many hotels near Disney offer free shuttles, complimentary breakfast, and significantly lower costs than Disney resorts.",
-    icon: "🏨",
-    ctaText: "Compare Hotels",
-    ctaUrl: "https://www.amazon.com/s?k=orlando+florida+hotel&tag=planyourpark-20",
-    badge: "Save Big",
-    featured: false,
+    id: "travel-adapter",
+    name: "Travel Adapter",
+    description: "Universal adapter for international devices — works at Disney resorts and parks.",
+    asin: "B00BWPQCRC",
+    icon: "🔌",
+  },
+  {
+    id: "phone-charger",
+    name: "Portable Phone Charger",
+    description: "20000mAh power bank to keep your phone charged all day in the parks.",
+    asin: "B07YNMW3CX",
+    icon: "🔋",
+  },
+  {
+    id: "sunscreen-spray",
+    name: "Sunscreen Spray",
+    description: "Easy spray-on SPF 50 sunscreen — Florida sun is no joke at the parks.",
+    asin: "B07JZGYJCL",
+    icon: "☀️",
+  },
+  {
+    id: "water-bottle",
+    name: "Insulated Water Bottle",
+    description: "Keeps water ice-cold for hours. Disney allows reusable bottles — fill up for free.",
+    asin: "B09KV1QTQ8",
+    icon: "💧",
+  },
+  {
+    id: "mini-fan",
+    name: "Mini Fan",
+    description: "USB rechargeable handheld fan — a lifesaver in the Florida summer heat.",
+    asin: "B0BZN1JZNL",
+    icon: "🌀",
   },
 ];
 
@@ -81,6 +108,32 @@ export default function DealsPage() {
             </a>
           </div>
         ))}
+      </section>
+
+      {/* Amazon Gear Section */}
+      <section className="gear-section">
+        <div className="gear-header">
+          <h2>Park-Ready Gear</h2>
+          <p>Order ahead and save — delivered to your hotel or home before your trip.</p>
+        </div>
+        <div className="gear-grid">
+          {gearItems.map(item => (
+            <a
+              key={item.id}
+              href={`https://www.amazon.com/dp/${item.asin}?tag=planyourpark-20`}
+              target="_blank"
+              rel="noopener"
+              className="gear-card"
+            >
+              <div className="gear-icon">{item.icon}</div>
+              <div className="gear-info">
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+              </div>
+              <span className="gear-cta">View on Amazon →</span>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* Money-Saving Tips */}
@@ -237,6 +290,80 @@ export default function DealsPage() {
         }
 
         /* Tips Section */
+        /* Gear Section */
+        .gear-section {
+          margin-bottom: 3rem;
+        }
+
+        .gear-header {
+          margin-bottom: 1.5rem;
+        }
+
+        .gear-header h2 {
+          font-family: var(--font-heading);
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin-bottom: 0.5rem;
+        }
+
+        .gear-header p {
+          font-size: 1rem;
+          color: var(--text-medium);
+        }
+
+        .gear-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 1rem;
+        }
+
+        .gear-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          padding: 1.25rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.2s ease;
+        }
+
+        .gear-card:hover {
+          border-color: var(--primary);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .gear-icon {
+          font-size: 2rem;
+        }
+
+        .gear-info h3 {
+          font-family: var(--font-heading);
+          font-size: 0.9375rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin-bottom: 0.375rem;
+        }
+
+        .gear-info p {
+          font-size: 0.8125rem;
+          color: var(--text-medium);
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        .gear-cta {
+          font-size: 0.8125rem;
+          font-weight: 600;
+          color: var(--primary);
+          margin-top: auto;
+        }
+
+        /* Tips Section */
         .deals-tips {
           background: var(--bg-white);
           border: 1px solid var(--border);
@@ -325,6 +452,9 @@ export default function DealsPage() {
           }
           .tips-grid {
             grid-template-columns: 1fr;
+          }
+          .gear-grid {
+            grid-template-columns: repeat(2, 1fr);
           }
         }
 

@@ -2,12 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [parksDropdownOpen, setParksDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const buildParkHref = (parkPath: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    return `${parkPath}${params.toString() ? `?${params.toString()}` : ''}`;
+  };
 
   const isActive = (path: string) => {
     if (path === '/') return pathname === '/';
@@ -69,7 +75,7 @@ export default function Header() {
                   {parks.filter(p => p.name.includes('Magic') || p.name.includes('EPCOT') || p.name.includes('Hollywood') || p.name.includes('Animal')).map(park => (
                     <Link 
                       key={park.href} 
-                      href={park.href} 
+                      href={buildParkHref(park.href)} 
                       className="dropdown-item"
                     >
                       {park.name}
@@ -81,7 +87,7 @@ export default function Header() {
                   {parks.filter(p => p.name.includes('Universal') || p.name.includes('Islands') || p.name.includes('Epic')).map(park => (
                     <Link 
                       key={park.href} 
-                      href={park.href} 
+                      href={buildParkHref(park.href)} 
                       className="dropdown-item"
                     >
                       {park.name}
@@ -93,7 +99,7 @@ export default function Header() {
                   {parks.filter(p => p.name.includes('SeaWorld') || p.name.includes('LEGOLAND')).map(park => (
                     <Link 
                       key={park.href} 
-                      href={park.href} 
+                      href={buildParkHref(park.href)} 
                       className="dropdown-item"
                     >
                       {park.name}
@@ -135,26 +141,82 @@ export default function Header() {
         </button>
       </div>
       
-      {/* Mobile Nav */}
+      {/* Mobile Nav Backdrop */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-nav-backdrop"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      
+      {/* Mobile Nav Side Sheet */}
       <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <div className="mobile-nav-section">
-          <span className="mobile-nav-section-title">Parks</span>
-          {parks.map(park => (
-            <Link 
-              key={park.href} 
-              href={park.href} 
-              onClick={() => setMobileMenuOpen(false)}
-              className="mobile-nav-sub"
-            >
-              {park.name}
-            </Link>
-          ))}
+        <div className="mobile-nav-header">
+          <span className="mobile-nav-title">Menu</span>
+          <button 
+            className="mobile-nav-close"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
         </div>
-        <Link href="/rides" onClick={() => setMobileMenuOpen(false)}>Rides</Link>
-        <Link href="/character-dining" onClick={() => setMobileMenuOpen(false)}>Character Dining</Link>
-        <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-        <Link href="/deals" onClick={() => setMobileMenuOpen(false)}>Deals</Link>
+        <div className="mobile-nav-items">
+          <Link href="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          
+          {/* Parks expandable section */}
+          <div className="mobile-nav-expandable">
+            <button 
+              className={`mobile-nav-link mobile-nav-expand-btn ${isActive('/parks') ? 'active' : ''}`}
+              onClick={() => setParksDropdownOpen(!parksDropdownOpen)}
+            >
+              Parks
+              <span className={`mobile-nav-expand-arrow ${parksDropdownOpen ? 'open' : ''}`}>▸</span>
+            </button>
+            {parksDropdownOpen && (
+              <div className="mobile-nav-sub-items">
+                <span className="mobile-nav-section-label">Walt Disney World</span>
+                {parks.filter(p => p.name.includes('Magic') || p.name.includes('EPCOT') || p.name.includes('Hollywood') || p.name.includes('Animal')).map(park => (
+                  <Link 
+                    key={park.href} 
+                    href={buildParkHref(park.href)} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="mobile-nav-sub-link"
+                  >
+                    {park.name}
+                  </Link>
+                ))}
+                <span className="mobile-nav-section-label" style={{marginTop:'0.75rem'}}>Universal Orlando</span>
+                {parks.filter(p => p.name.includes('Universal') || p.name.includes('Islands') || p.name.includes('Epic')).map(park => (
+                  <Link 
+                    key={park.href} 
+                    href={buildParkHref(park.href)} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="mobile-nav-sub-link"
+                  >
+                    {park.name}
+                  </Link>
+                ))}
+                <span className="mobile-nav-section-label" style={{marginTop:'0.75rem'}}>Other Parks</span>
+                {parks.filter(p => p.name.includes('SeaWorld') || p.name.includes('LEGOLAND')).map(park => (
+                  <Link 
+                    key={park.href} 
+                    href={buildParkHref(park.href)} 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="mobile-nav-sub-link"
+                  >
+                    {park.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          
+          <Link href="/rides" className={`mobile-nav-link ${isActive('/rides') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Rides</Link>
+          <Link href="/character-dining" className={`mobile-nav-link ${isActive('/character-dining') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Character Dining</Link>
+          <Link href="/blog" className={`mobile-nav-link ${isActive('/blog') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+          <Link href="/deals" className={`mobile-nav-link ${isActive('/deals') ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>Deals</Link>
+        </div>
       </nav>
       
       <style>{`
@@ -345,48 +407,143 @@ export default function Header() {
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg); top: 8px; }
 
-        .mobile-nav {
+        /* Mobile Nav Backdrop */
+        .mobile-nav-backdrop {
           display: none;
-          flex-direction: column;
-          padding: 0 1rem 1rem;
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 149;
+          animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        /* Mobile Nav Side Sheet */
+        .mobile-nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 280px;
+          height: 100vh;
           background: var(--bg-white);
-          border-top: 1px solid var(--border);
+          z-index: 150;
+          display: flex;
+          flex-direction: column;
+          transform: translateX(-100%);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+          overflow-y: auto;
         }
 
         .mobile-nav.open {
-          display: flex;
+          transform: translateX(0);
         }
 
-        .mobile-nav a {
-          padding: 0.75rem 0;
+        .mobile-nav-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem 1.25rem;
+          border-bottom: 1px solid var(--border);
+          flex-shrink: 0;
+        }
+
+        .mobile-nav-title {
+          font-size: 0.875rem;
+          font-weight: 700;
+          color: var(--text-dark);
+        }
+
+        .mobile-nav-close {
+          background: none;
+          border: none;
+          font-size: 1.125rem;
+          color: var(--text-medium);
+          cursor: pointer;
+          padding: 0.25rem 0.5rem;
+          border-radius: 6px;
+          transition: background 0.15s;
+        }
+
+        .mobile-nav-close:hover {
+          background: var(--bg-light);
+        }
+
+        .mobile-nav-items {
+          display: flex;
+          flex-direction: column;
+          padding: 0.5rem 0;
+          flex: 1;
+        }
+
+        .mobile-nav-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.875rem 1.25rem;
           color: var(--text-medium);
           font-weight: 500;
+          font-size: 0.9375rem;
           text-decoration: none;
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-family: inherit;
+          width: 100%;
+          text-align: left;
+          transition: background 0.15s, color 0.15s;
           border-bottom: 1px solid var(--border);
         }
 
-        .mobile-nav a:last-child {
-          border-bottom: none;
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+          color: var(--primary);
+          background: rgba(243, 112, 33, 0.06);
         }
 
-        .mobile-nav-section {
-          padding: 0.75rem 0;
-          border-bottom: 1px solid var(--border);
+        .mobile-nav-expand-btn {
+          justify-content: space-between;
         }
 
-        .mobile-nav-section-title {
+        .mobile-nav-expand-arrow {
+          font-size: 0.75rem;
+          transition: transform 0.2s;
+        }
+
+        .mobile-nav-expand-arrow.open {
+          transform: rotate(90deg);
+        }
+
+        .mobile-nav-sub-items {
+          display: flex;
+          flex-direction: column;
+          background: var(--bg-light);
+          padding: 0.5rem 0;
+        }
+
+        .mobile-nav-section-label {
           display: block;
-          font-size: 0.6875rem;
+          font-size: 0.625rem;
           font-weight: 700;
           color: var(--text-light);
           text-transform: uppercase;
           letter-spacing: 0.08em;
-          margin-bottom: 0.5rem;
+          padding: 0.5rem 1.5rem 0.25rem;
         }
 
-        .mobile-nav-sub {
-          padding-left: 1rem !important;
+        .mobile-nav-sub-link {
+          padding: 0.625rem 1.5rem 0.625rem 2rem !important;
           font-size: 0.875rem !important;
+          color: var(--text-medium) !important;
+          border-bottom: none !important;
+        }
+
+        .mobile-nav-sub-link:hover {
+          color: var(--primary) !important;
         }
 
         @media (max-width: 900px) {
@@ -397,10 +554,18 @@ export default function Header() {
           .mobile-menu-btn {
             display: block;
           }
+
+          .mobile-nav-backdrop {
+            display: block;
+          }
         }
 
         @media (min-width: 901px) {
           .mobile-nav {
+            display: none !important;
+          }
+
+          .mobile-nav-backdrop {
             display: none !important;
           }
         }

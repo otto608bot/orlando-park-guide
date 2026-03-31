@@ -18,6 +18,7 @@ const PARKS = [
 export default function FilterSidebar() {
   const { filters, setHeight, setPregnancySafe, setWheelchairAccessible, setCalmExperience, setSelectedParks, clearFilters } = useFilters();
   const [localHeight, setLocalHeight] = useState(filters.height);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const handleHeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value, 10);
@@ -36,6 +37,125 @@ export default function FilterSidebar() {
 
   return (
     <aside className="filter-sidebar">
+      {/* Mobile: Filter trigger button */}
+      <button 
+        className="mobile-filter-trigger"
+        onClick={() => setMobileDrawerOpen(true)}
+      >
+        <span>🔍</span> Filters
+        {hasActiveFilters && <span className="filter-active-dot" />}
+      </button>
+
+      {/* Mobile: Backdrop */}
+      {mobileDrawerOpen && (
+        <div 
+          className="filter-drawer-backdrop"
+          onClick={() => setMobileDrawerOpen(false)}
+        />
+      )}
+
+      {/* Mobile: Bottom Drawer */}
+      <div className={`filter-drawer ${mobileDrawerOpen ? 'open' : ''}`}>
+        <div className="filter-drawer-header">
+          <span className="filter-drawer-title">Filter Rides</span>
+          <button 
+            className="filter-drawer-close"
+            onClick={() => setMobileDrawerOpen(false)}
+            aria-label="Close filters"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="filter-drawer-content">
+          {/* Height Slider */}
+          <div className="drawer-filter-group">
+            <label className="filter-label">
+              My Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+            </label>
+            <input
+              type="range"
+              min="0"
+              max="60"
+              step="2"
+              value={localHeight}
+              onChange={handleHeightChange}
+              className="height-slider"
+            />
+            <div className="slider-labels">
+              <span>Any</span>
+              <span>60&quot;</span>
+            </div>
+          </div>
+
+          {/* Park Filter */}
+          <div className="drawer-filter-group">
+            <label className="filter-label">Parks</label>
+            <div className="park-filter-list">
+              {PARKS.map(park => (
+                <label key={park.slug} className="park-checkbox">
+                  <input
+                    type="checkbox"
+                    checked={filters.selectedParks.includes(park.name)}
+                    onChange={() => handleParkToggle(park.name)}
+                  />
+                  <span className="park-checkmark"></span>
+                  <span className="park-name">{park.name}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Accessibility Toggles */}
+          <div className="drawer-filter-group">
+            <label className="filter-label">Accessibility</label>
+            <div className="toggle-list">
+              <label className={`toggle-item ${filters.pregnancySafe ? 'active' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={filters.pregnancySafe}
+                  onChange={(e) => setPregnancySafe(e.target.checked)}
+                />
+                <span className="toggle-switch"></span>
+                <span className="toggle-text">🤰 Pregnancy Safe</span>
+              </label>
+              <label className={`toggle-item ${filters.wheelchairAccessible ? 'active' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={filters.wheelchairAccessible}
+                  onChange={(e) => setWheelchairAccessible(e.target.checked)}
+                />
+                <span className="toggle-switch"></span>
+                <span className="toggle-text">♿ Wheelchair Accessible</span>
+              </label>
+              <label className={`toggle-item ${filters.calmExperience ? 'active' : ''}`}>
+                <input
+                  type="checkbox"
+                  checked={filters.calmExperience}
+                  onChange={(e) => setCalmExperience(e.target.checked)}
+                />
+                <span className="toggle-switch"></span>
+                <span className="toggle-text">😌 Calm Experience</span>
+              </label>
+            </div>
+          </div>
+
+          {hasActiveFilters && (
+            <button className="clear-filters-btn" onClick={clearFilters}>
+              Clear All Filters
+            </button>
+          )}
+        </div>
+        <div className="filter-drawer-footer">
+          <button 
+            className="apply-filters-btn"
+            onClick={() => setMobileDrawerOpen(false)}
+          >
+            Apply Filters
+          </button>
+        </div>
+      </div>
+
+      {/* Desktop: Inline sidebar sections */}
       <div className="sidebar-section">
         <h3 className="sidebar-title">Filter Rides</h3>
 
@@ -435,6 +555,164 @@ export default function FilterSidebar() {
         @media (max-width: 900px) {
           .filter-sidebar {
             width: 100%;
+          }
+        }
+
+        /* Mobile Filter Trigger Button */
+        .mobile-filter-trigger {
+          display: none;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.75rem 1rem;
+          background: var(--bg-white);
+          border: 1.5px solid var(--primary);
+          border-radius: 10px;
+          font-size: 0.9375rem;
+          font-weight: 600;
+          color: var(--primary);
+          cursor: pointer;
+          margin-bottom: 1rem;
+          position: relative;
+          transition: all 0.15s;
+        }
+
+        .mobile-filter-trigger:hover {
+          background: rgba(243, 112, 33, 0.06);
+        }
+
+        .filter-active-dot {
+          width: 8px;
+          height: 8px;
+          background: var(--primary);
+          border-radius: 50%;
+          position: absolute;
+          top: 8px;
+          right: 8px;
+        }
+
+        /* Mobile Drawer Backdrop */
+        .filter-drawer-backdrop {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: 198;
+          animation: drawerFadeIn 0.2s ease;
+        }
+
+        @keyframes drawerFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        /* Mobile Bottom Drawer */
+        .filter-drawer {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: var(--bg-white);
+          border-radius: 16px 16px 0 0;
+          z-index: 199;
+          max-height: 85vh;
+          flex-direction: column;
+          transform: translateY(100%);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 -4px 24px rgba(0,0,0,0.15);
+        }
+
+        .filter-drawer.open {
+          transform: translateY(0);
+        }
+
+        .filter-drawer-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem 1.25rem;
+          border-bottom: 1px solid var(--border);
+          flex-shrink: 0;
+        }
+
+        .filter-drawer-title {
+          font-family: var(--font-heading);
+          font-size: 1rem;
+          font-weight: 700;
+          color: var(--text-dark);
+        }
+
+        .filter-drawer-close {
+          background: none;
+          border: none;
+          font-size: 1.125rem;
+          color: var(--text-medium);
+          cursor: pointer;
+          padding: 0.25rem 0.5rem;
+          border-radius: 6px;
+          transition: background 0.15s;
+        }
+
+        .filter-drawer-close:hover {
+          background: var(--bg-light);
+        }
+
+        .filter-drawer-content {
+          overflow-y: auto;
+          padding: 1rem 1.25rem;
+          flex: 1;
+        }
+
+        .drawer-filter-group {
+          margin-bottom: 1.25rem;
+          padding-bottom: 1.25rem;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .drawer-filter-group:last-of-type {
+          border-bottom: none;
+        }
+
+        .filter-drawer-footer {
+          padding: 0.875rem 1.25rem;
+          border-top: 1px solid var(--border);
+          flex-shrink: 0;
+        }
+
+        .apply-filters-btn {
+          width: 100%;
+          padding: 0.875rem;
+          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+          color: white;
+          border: none;
+          border-radius: 10px;
+          font-size: 1rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: opacity 0.15s;
+        }
+
+        .apply-filters-btn:hover {
+          opacity: 0.9;
+        }
+
+        @media (max-width: 900px) {
+          .mobile-filter-trigger {
+            display: flex;
+          }
+
+          .filter-drawer-backdrop {
+            display: block;
+          }
+
+          .filter-drawer {
+            display: flex;
+          }
+
+          .sidebar-section {
+            display: none;
           }
         }
       `}</style>
