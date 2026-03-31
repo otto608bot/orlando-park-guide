@@ -382,17 +382,20 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
           align-items: center;
           justify-content: center;
           font-size: 1.25rem;
+          background: #F1F5F9;
         }
 
-        .img-placeholder--magic-kingdom { background: #4A9DE8; color: white; }
-        .img-placeholder--epcot { background: #8B5CF6; color: white; }
-        .img-placeholder--hollywood-studios { background: #EF4444; color: white; }
-        .img-placeholder--animal-kingdom { background: #10B981; color: white; }
-        .img-placeholder--universal-studios-florida { background: #F59E0B; color: white; }
-        .img-placeholder--islands-of-adventure { background: #06B6D4; color: white; }
-        .img-placeholder--epic-universe { background: #8B5CF6; color: white; }
-        .img-placeholder--seaworld-orlando { background: #3B82F6; color: white; }
-        .img-placeholder--legoland-florida { background: #F97316; color: white; }
+        .img-placeholder--magic-kingdom,
+        .img-placeholder--epcot,
+        .img-placeholder--hollywood-studios,
+        .img-placeholder--animal-kingdom,
+        .img-placeholder--universal-studios-florida,
+        .img-placeholder--islands-of-adventure,
+        .img-placeholder--epic-universe,
+        .img-placeholder--seaworld-orlando,
+        .img-placeholder--legoland-florida {
+          background: #F1F5F9;
+        }
 
         /* Name Column */
         .ride-name-cell {

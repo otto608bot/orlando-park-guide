@@ -44,10 +44,11 @@ export default function Footer() {
       
       <style>{`
         .site-footer {
-          background: var(--text-dark);
-          color: white;
+          background: #F8FAFC;
+          color: var(--text-medium);
           padding: 3rem 1.5rem 2rem;
           margin-top: 4rem;
+          border-top: 1px solid var(--border);
         }
         
         .footer-inner {
@@ -63,11 +64,10 @@ export default function Footer() {
           height: 32px;
           width: auto;
           margin-bottom: 0.5rem;
-          filter: brightness(0) invert(1);
         }
         
         .footer-tagline {
-          color: rgba(255,255,255,0.6);
+          color: var(--text-light);
           font-size: 0.875rem;
         }
 
@@ -77,7 +77,7 @@ export default function Footer() {
           gap: 2rem;
           margin-bottom: 2rem;
           padding-bottom: 2rem;
-          border-bottom: 1px solid rgba(255,255,255,0.1);
+          border-bottom: 1px solid var(--border);
         }
 
         .footer-col {
@@ -90,21 +90,21 @@ export default function Footer() {
           font-family: var(--font-heading);
           font-size: 0.8125rem;
           font-weight: 700;
-          color: white;
+          color: var(--text-dark);
           text-transform: uppercase;
           letter-spacing: 0.08em;
           margin-bottom: 0.5rem;
         }
 
         .footer-col a {
-          color: rgba(255,255,255,0.6);
+          color: var(--text-medium);
           text-decoration: none;
           font-size: 0.875rem;
           transition: color 0.15s;
         }
 
         .footer-col a:hover {
-          color: white;
+          color: var(--primary);
         }
 
         .footer-bottom {
@@ -114,13 +114,13 @@ export default function Footer() {
         }
         
         .footer-disclaimer {
-          color: rgba(255,255,255,0.4);
+          color: var(--text-light);
           font-size: 0.75rem;
           line-height: 1.5;
         }
         
         .footer-copyright {
-          color: rgba(255,255,255,0.4);
+          color: var(--text-light);
           font-size: 0.75rem;
         }
 

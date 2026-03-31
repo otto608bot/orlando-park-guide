@@ -92,15 +92,17 @@
 }
 
 /* Image Placeholder Colors by Park */
-.img-placeholder--magic-kingdom { background: linear-gradient(135deg, #4A9DE8, #2563EB); }
-.img-placeholder--epcot { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
-.img-placeholder--hollywood-studios { background: linear-gradient(135deg, #EF4444, #DC2626); }
-.img-placeholder--animal-kingdom { background: linear-gradient(135deg, #10B981, #059669); }
-.img-placeholder--universal-studios-florida { background: linear-gradient(135deg, #F59E0B, #D97706); }
-.img-placeholder--islands-of-adventure { background: linear-gradient(135deg, #06B6D4, #0891B2); }
-.img-placeholder--epic-universe { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
-.img-placeholder--seaworld-orlando { background: linear-gradient(135deg, #3B82F6, #2563EB); }
-.img-placeholder--legoland-florida { background: linear-gradient(135deg, #F97316, #EA580C); }
+.img-placeholder--magic-kingdom,
+.img-placeholder--epcot,
+.img-placeholder--hollywood-studios,
+.img-placeholder--animal-kingdom,
+.img-placeholder--universal-studios-florida,
+.img-placeholder--islands-of-adventure,
+.img-placeholder--epic-universe,
+.img-placeholder--seaworld-orlando,
+.img-placeholder--legoland-florida {
+  background: #F1F5F9;
+}
 
 /* Pill / Chip Filter Styles */
 .filter-pills {

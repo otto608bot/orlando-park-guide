@@ -87,7 +87,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+          background: #F1F5F9;
           font-size: 2.5rem;
         }
         
