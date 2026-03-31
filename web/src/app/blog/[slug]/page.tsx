@@ -90,9 +90,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       normal: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
     },
     marks: {
-      link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => (
-        <a href={value?.href} target={value?.blank ? "_blank" : undefined} rel={value?.blank ? "noopener noreferrer" : undefined}>{children}</a>
-      ),
+      link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => {
+        const isExternal = value?.blank;
+        return isExternal ? (
+          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-link">{children}</a>
+        ) : (
+          <a href={value?.href}>{children}</a>
+        );
+      },
     },
   };
 

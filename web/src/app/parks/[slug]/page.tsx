@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
-import RidesTable from "@/components/RidesTable";
+import RideCard from "@/components/RideCard";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 
 interface ParkPageProps {
@@ -76,6 +76,7 @@ async function getParkData(slug: string) {
         thrillLevel,
         rideType,
         accessibility,
+        slug,
         image { asset-> { url }, alt },
         isClosed,
         closureNote
@@ -158,10 +159,17 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           </section>
         )}
 
-        {/* Rides Table Section */}
+        {/* Rides Cards Grid */}
         <section className="park-rides">
           <h2>Rides &amp; Attractions</h2>
-          <RidesTable rides={rides} showParkColumn={false} compact={true} />
+          <div className="rides-grid">
+            {rides.map((ride: any) => (
+              <RideCard key={ride._id} ride={ride} />
+            ))}
+          </div>
+          {rides.length === 0 && (
+            <p className="no-rides">No rides found for this park.</p>
+          )}
         </section>
 
         {/* Character Dining Section */}
@@ -310,6 +318,20 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-weight: 700;
           color: var(--text-dark);
           margin-bottom: 1.5rem;
+        }
+
+        .rides-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+        }
+
+        .no-rides {
+          text-align: center;
+          color: var(--text-light);
+          padding: 2rem;
+          background: var(--bg-white);
+          border-radius: 12px;
         }
 
         .park-blog p {

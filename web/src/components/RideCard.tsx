@@ -1,24 +1,22 @@
+import Link from 'next/link';
+import type { Ride } from '@/lib/sanity-types';
+
 interface RideCardProps {
-  ride: {
-    _id: string;
-    name: string;
-    park: string;
-    description?: string;
-    heightRequirement?: number;
-    thrillLevel?: number;
-    rideType?: string;
-    accessibility?: string[];
-    image?: {
-      asset: { url?: string };
-      alt?: string;
-    };
-    isClosed?: boolean;
-    closureNote?: string;
-  };
+  ride: Ride;
+  showPark?: boolean;
 }
 
-/* Map park names to CSS class suffixes */
-function parkSlug(park: string): string {
+function getRideImageSrc(ride: Ride): string | null {
+  if (ride.image?.asset?.url) {
+    return ride.image.asset.url;
+  }
+  if (ride.slug?.current) {
+    return `/images/rides/${ride.slug.current}.jpg`;
+  }
+  return null;
+}
+
+function getParkSlug(park: string): string {
   const map: Record<string, string> = {
     'Magic Kingdom': 'magic-kingdom',
     'EPCOT': 'epcot',
@@ -33,101 +31,98 @@ function parkSlug(park: string): string {
   return map[park] || '';
 }
 
-function thrillClass(level?: number): string {
-  if (!level) return '';
-  if (level >= 4) return 'thrill-high';
-  if (level >= 3) return 'thrill-medium';
-  return 'thrill-family';
-}
-
 function thrillLabel(level?: number): string {
-  if (!level) return '';
+  if (!level) return 'Family';
   if (level >= 4) return 'High Thrill';
   if (level >= 3) return 'Medium';
   if (level >= 2) return 'Low Thrill';
   return 'Family';
 }
 
-/* SVG icon for a park when no image is available */
-function ParkPlaceholderSVG({ park }: { park: string }) {
-  const slug = parkSlug(park);
-  const colors: Record<string, string> = {
-    'magic-kingdom': '#4A9DE8',
-    'epcot': '#8B5CF6',
-    'hollywood-studios': '#EF4444',
-    'animal-kingdom': '#10B981',
-    'universal-studios-florida': '#F59E0B',
-    'islands-of-adventure': '#06B6D4',
-    'epic-universe': '#8B5CF6',
-    'seaworld-orlando': '#3B82F6',
-    'legoland-florida': '#F97316',
-  };
-  const color = colors[slug] || '#F37021';
-  return (
-    <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
-      <rect width="400" height="240" fill={color} />
-      <text x="200" y="110" textAnchor="middle" fill="white" fontSize="14" fontWeight="700" fontFamily="sans-serif">PLAN YOUR PARK</text>
-      <text x="200" y="135" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11" fontWeight="500" fontFamily="sans-serif">{park}</text>
-      <circle cx="200" cy="175" r="20" fill="rgba(255,255,255,0.2)" />
-      <text x="200" y="180" textAnchor="middle" fill="white" fontSize="10" fontWeight="700" fontFamily="sans-serif">RIDE</text>
-    </svg>
+function thrillClass(level?: number): string {
+  if (!level) return 'thrill-family';
+  if (level >= 4) return 'thrill-high';
+  if (level >= 3) return 'thrill-medium';
+  return 'thrill-family';
+}
+
+function isPregnancySafe(ride: Ride): boolean {
+  if (!ride.accessibility) return true;
+  return !ride.accessibility.some(a =>
+    a?.toLowerCase().includes('pregnancy') ||
+    a?.toLowerCase().includes('expectant')
   );
 }
 
-export default function RideCard({ ride }: RideCardProps) {
-  const ps = parkSlug(ride.park);
+function isWheelchairAccessible(ride: Ride): boolean {
+  if (!ride.accessibility) return true;
+  return ride.accessibility.some(a =>
+    a?.toLowerCase().includes('wheelchair') ||
+    a?.toLowerCase().includes('wav') ||
+    a?.toLowerCase().includes('ecv')
+  );
+}
+
+function isCalmExperience(ride: Ride): boolean {
+  if (!ride.accessibility) return false;
+  const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
+  return ride.accessibility.some(a =>
+    calmIndicators.some(ci => a?.toLowerCase().includes(ci))
+  );
+}
+
+export default function RideCard({ ride, showPark = false }: RideCardProps) {
+  const imageSrc = getRideImageSrc(ride);
+  const parkSlug = getParkSlug(ride.park);
   const thrill = thrillClass(ride.thrillLevel);
   const thrillLbl = thrillLabel(ride.thrillLevel);
-  const hasImage = ride.image?.asset?.url;
+  const pregnancyOk = isPregnancySafe(ride);
+  const wheelchairOk = isWheelchairAccessible(ride);
+  const calm = isCalmExperience(ride);
 
   return (
-    <div className={`ride-card card ${ride.isClosed ? 'ride-card--closed' : ''}`}>
+    <div className={`ride-card ${ride.isClosed ? 'ride-closed' : ''}`}>
       <div className="ride-card-image">
-        {hasImage ? (
-          <img src={ride.image!.asset.url!} alt={ride.image!.alt || ride.name} />
+        {imageSrc ? (
+          <img src={imageSrc} alt={ride.name} />
         ) : (
-          <div className={`ride-card-placeholder img-placeholder--${ps}`}>
-            <ParkPlaceholderSVG park={ride.park} />
+          <div className={`ride-image-placeholder img-placeholder--${parkSlug}`}>
+            <span>🎢</span>
           </div>
         )}
         {ride.isClosed && (
-          <div className="ride-card-closed-overlay">
-            <span>Currently Closed</span>
+          <div className="closed-overlay">
+            <span>CLOSED</span>
           </div>
         )}
       </div>
 
-      <div className="ride-card-body">
-        <div className="ride-card-top">
-          <h3 className="ride-name">{ride.name}</h3>
-          <span className={`park-badge park-badge--${ps}`}>{ride.park}</span>
+      <div className="ride-card-content">
+        <div className="ride-card-badges">
+          <span className={`thrill-badge thrill-badge--${thrill}`}>{thrillLbl}</span>
+          {ride.rideType && <span className="type-pill">{ride.rideType}</span>}
         </div>
 
-        <div className="ride-card-meta">
-          {ride.rideType && (
-            <span className="ride-type-pill">{ride.rideType}</span>
-          )}
-          {thrill && (
-            <span className={`thrill-badge thrill-badge--${thrill}`}>{thrillLbl}</span>
-          )}
-        </div>
-
-        {ride.heightRequirement !== undefined && ride.heightRequirement > 0 && (
-          <div className="ride-height">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2v20M2 12h20"/>
-            </svg>
-            <span>{ride.heightRequirement}&quot;+ height required</span>
-          </div>
-        )}
+        <h3 className="ride-card-name">{ride.name}</h3>
 
         {ride.description && (
-          <p className="ride-desc">{ride.description}</p>
+          <p className="ride-card-desc">{ride.description}</p>
         )}
 
-        {ride.isClosed && ride.closureNote && (
-          <p className="closure-note">{ride.closureNote}</p>
-        )}
+        <div className="ride-card-meta">
+          {ride.heightRequirement && ride.heightRequirement > 0 ? (
+            <span className="height-req">Min: {ride.heightRequirement}&quot;</span>
+          ) : (
+            <span className="height-req height-none">No height requirement</span>
+          )}
+        </div>
+
+        <div className="ride-card-access">
+          {pregnancyOk && <span title="Pregnancy Safe" className="access-icon">🤰</span>}
+          {wheelchairOk && <span title="Wheelchair Accessible" className="access-icon">♿</span>}
+          {calm && <span title="Calm Experience" className="access-icon">😌</span>}
+          {!pregnancyOk && <span title="Not Recommended for Pregnancy" className="access-icon access-no">🚫</span>}
+        </div>
       </div>
 
       <style>{`
@@ -136,18 +131,17 @@ export default function RideCard({ ride }: RideCardProps) {
           border: 1px solid var(--border);
           border-radius: 12px;
           overflow: hidden;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .ride-card--closed {
-          opacity: 0.8;
+          transition: all 0.2s ease;
         }
 
         .ride-card:hover {
-          transform: translateY(-3px);
-          box-shadow: var(--card-shadow);
-          border-color: var(--border);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+          border-color: var(--primary);
+        }
+
+        .ride-closed {
+          opacity: 0.7;
         }
 
         .ride-card-image {
@@ -156,7 +150,6 @@ export default function RideCard({ ride }: RideCardProps) {
           overflow: hidden;
           background: var(--bg-light);
           position: relative;
-          flex-shrink: 0;
         }
 
         .ride-card-image img {
@@ -165,12 +158,26 @@ export default function RideCard({ ride }: RideCardProps) {
           object-fit: cover;
         }
 
-        .ride-card-placeholder {
+        .ride-image-placeholder {
           width: 100%;
           height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
         }
 
-        .ride-card-closed-overlay {
+        .img-placeholder--magic-kingdom { background: linear-gradient(135deg, #4A9DE8, #2563EB); }
+        .img-placeholder--epcot { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+        .img-placeholder--hollywood-studios { background: linear-gradient(135deg, #EF4444, #DC2626); }
+        .img-placeholder--animal-kingdom { background: linear-gradient(135deg, #10B981, #059669); }
+        .img-placeholder--universal-studios-florida { background: linear-gradient(135deg, #F59E0B, #D97706); }
+        .img-placeholder--islands-of-adventure { background: linear-gradient(135deg, #06B6D4, #0891B2); }
+        .img-placeholder--epic-universe { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+        .img-placeholder--seaworld-orlando { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+        .img-placeholder--legoland-florida { background: linear-gradient(135deg, #F97316, #EA580C); }
+
+        .closed-overlay {
           position: absolute;
           inset: 0;
           background: rgba(0,0,0,0.5);
@@ -179,80 +186,108 @@ export default function RideCard({ ride }: RideCardProps) {
           justify-content: center;
         }
 
-        .ride-card-closed-overlay span {
+        .closed-overlay span {
           background: #EF4444;
           color: white;
           font-size: 0.75rem;
           font-weight: 700;
           padding: 0.375rem 0.875rem;
-          border-radius: 9999px;
+          border-radius: 4px;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
 
-        .ride-card-body {
+        .ride-card-content {
           padding: 1rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.625rem;
-          flex: 1;
         }
 
-        .ride-card-top {
+        .ride-card-badges {
           display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 0.5rem;
           flex-wrap: wrap;
+          gap: 0.375rem;
+          margin-bottom: 0.5rem;
         }
 
-        .ride-name {
+        .thrill-badge {
+          display: inline-block;
+          font-size: 0.625rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          letter-spacing: 0.03em;
+        }
+
+        .thrill-badge--thrill-high {
+          background: #FEE2E2;
+          color: #DC2626;
+        }
+
+        .thrill-badge--thrill-medium {
+          background: #FEF3C7;
+          color: #D97706;
+        }
+
+        .thrill-badge--thrill-family {
+          background: #D1FAE5;
+          color: #059669;
+        }
+
+        .type-pill {
+          display: inline-block;
+          font-size: 0.625rem;
+          font-weight: 500;
+          color: var(--text-medium);
+          background: var(--bg-light);
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+        }
+
+        .ride-card-name {
           font-family: var(--font-heading);
           font-size: 1rem;
           font-weight: 700;
           color: var(--text-dark);
-          margin: 0;
+          margin-bottom: 0.375rem;
           line-height: 1.3;
         }
 
-        .ride-card-meta {
-          display: flex;
-          gap: 0.375rem;
-          flex-wrap: wrap;
-          align-items: center;
-        }
-
-        .ride-height {
-          display: flex;
-          align-items: center;
-          gap: 0.375rem;
-          color: var(--text-light);
-          font-size: 0.8125rem;
-        }
-
-        .ride-height svg {
-          flex-shrink: 0;
-          color: var(--text-light);
-        }
-
-        .ride-desc {
+        .ride-card-desc {
           font-size: 0.8125rem;
           color: var(--text-medium);
           line-height: 1.5;
-          margin: 0;
+          margin-bottom: 0.5rem;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
 
-        .closure-note {
-          font-size: 0.75rem;
-          color: #EF4444;
-          background: #FEF2F2;
-          padding: 0.375rem 0.625rem;
-          border-radius: 6px;
-          margin: 0;
+        .ride-card-meta {
+          margin-bottom: 0.5rem;
+        }
+
+        .height-req {
+          font-size: 0.8125rem;
+          font-weight: 500;
+          color: var(--text-medium);
+        }
+
+        .height-none {
+          color: var(--text-light);
+        }
+
+        .ride-card-access {
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .access-icon {
+          font-size: 1rem;
+        }
+
+        .access-no {
+          opacity: 0.5;
         }
       `}</style>
     </div>

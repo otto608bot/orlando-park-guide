@@ -19,6 +19,10 @@ function getRideImageSrc(ride: Ride): string | null {
   if (ride.image?.asset?.url) {
     return ride.image.asset.url;
   }
+  // Use the slug field to derive the local image path
+  if (ride.slug?.current) {
+    return `/images/rides/${ride.slug.current}.jpg`;
+  }
   return null;
 }
 
@@ -95,10 +99,10 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
       result = result.filter(r => filters.selectedParks.includes(r.park));
     }
 
-    // Apply height filter
+    // Apply height filter: show rides the user can ride (height req <= user's height)
     if (filters.height > 0) {
       result = result.filter(r => 
-        r.heightRequirement && r.heightRequirement >= filters.height
+        !r.heightRequirement || r.heightRequirement <= filters.height
       );
     }
 
@@ -332,6 +336,10 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
 
         .rides-table tbody tr:last-child td {
           border-bottom: none;
+        }
+
+        .rides-table tbody tr:nth-child(even) {
+          background: #fafbfc;
         }
 
         .rides-table tbody tr:hover {

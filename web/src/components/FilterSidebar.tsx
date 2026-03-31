@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { useFilters } from '@/context/FiltersContext';
 
 const PARKS = [
@@ -40,6 +39,26 @@ export default function FilterSidebar() {
       <div className="sidebar-section">
         <h3 className="sidebar-title">Filter Rides</h3>
 
+        {/* Height Slider - TOP */}
+        <div className="filter-group">
+          <label className="filter-label">
+            My Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+          </label>
+          <input
+            type="range"
+            min="0"
+            max="60"
+            step="2"
+            value={localHeight}
+            onChange={handleHeightChange}
+            className="height-slider"
+          />
+          <div className="slider-labels">
+            <span>Any</span>
+            <span>60&quot;</span>
+          </div>
+        </div>
+
         {/* Park Filter */}
         <div className="filter-group">
           <label className="filter-label">Parks</label>
@@ -55,26 +74,6 @@ export default function FilterSidebar() {
                 <span className="park-name">{park.name}</span>
               </label>
             ))}
-          </div>
-        </div>
-
-        {/* Height Slider */}
-        <div className="filter-group">
-          <label className="filter-label">
-            Min Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
-          </label>
-          <input
-            type="range"
-            min="0"
-            max="60"
-            step="2"
-            value={localHeight}
-            onChange={handleHeightChange}
-            className="height-slider"
-          />
-          <div className="slider-labels">
-            <span>Any</span>
-            <span>60&quot;</span>
           </div>
         </div>
 
@@ -128,7 +127,7 @@ export default function FilterSidebar() {
             href="https://www.dpbolvw.net/click-101693488-5527150"
             target="_blank"
             rel="noopener noreferrer"
-            className="ticket-btn ticket-btn--disney"
+            className="ticket-btn"
           >
             <span className="ticket-icon">🎢</span>
             <span className="ticket-text">
@@ -140,11 +139,11 @@ export default function FilterSidebar() {
             href="https://www.amazon.com/disney-world-tickets/s?k=disney+world+tickets&tag=planyourpark-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="ticket-btn ticket-btn--universal"
+            className="ticket-btn"
           >
             <span className="ticket-icon">🎠</span>
             <span className="ticket-text">
-              <strong>Universal</strong>
+              <strong>Universal Orlando</strong>
               <small>via Amazon</small>
             </span>
           </a>
@@ -152,23 +151,11 @@ export default function FilterSidebar() {
             href="https://www.amazon.com/seaworld-orlando-tickets/s?k=seaworld+orlando+tickets&tag=planyourpark-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="ticket-btn ticket-btn--seaworld"
+            className="ticket-btn"
           >
             <span className="ticket-icon">🐬</span>
             <span className="ticket-text">
-              <strong>SeaWorld</strong>
-              <small>via Amazon</small>
-            </span>
-          </a>
-          <a
-            href="https://www.amazon.com/legoland-florida-tickets/s?k=legoland+florida+tickets&tag=planyourpark-20"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ticket-btn ticket-btn--legoland"
-          >
-            <span className="ticket-icon">🧱</span>
-            <span className="ticket-text">
-              <strong>LEGOLAND</strong>
+              <strong>SeaWorld Orlando</strong>
               <small>via Amazon</small>
             </span>
           </a>
@@ -221,6 +208,48 @@ export default function FilterSidebar() {
           color: var(--primary);
         }
 
+        /* Height Slider */
+        .height-slider {
+          width: 100%;
+          height: 6px;
+          -webkit-appearance: none;
+          appearance: none;
+          background: var(--bg-light);
+          border-radius: 3px;
+          outline: none;
+          cursor: pointer;
+        }
+
+        .height-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 18px;
+          height: 18px;
+          background: var(--primary);
+          border-radius: 50%;
+          cursor: pointer;
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+
+        .height-slider::-moz-range-thumb {
+          width: 18px;
+          height: 18px;
+          background: var(--primary);
+          border-radius: 50%;
+          cursor: pointer;
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+
+        .slider-labels {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 0.375rem;
+          font-size: 0.6875rem;
+          color: var(--text-light);
+        }
+
         /* Park Checkboxes */
         .park-filter-list {
           display: flex;
@@ -267,48 +296,6 @@ export default function FilterSidebar() {
 
         .park-name {
           flex: 1;
-        }
-
-        /* Height Slider */
-        .height-slider {
-          width: 100%;
-          height: 6px;
-          -webkit-appearance: none;
-          appearance: none;
-          background: var(--bg-light);
-          border-radius: 3px;
-          outline: none;
-          cursor: pointer;
-        }
-
-        .height-slider::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 18px;
-          height: 18px;
-          background: var(--primary);
-          border-radius: 50%;
-          cursor: pointer;
-          border: 2px solid white;
-          box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-        }
-
-        .height-slider::-moz-range-thumb {
-          width: 18px;
-          height: 18px;
-          background: var(--primary);
-          border-radius: 50%;
-          cursor: pointer;
-          border: 2px solid white;
-          box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-        }
-
-        .slider-labels {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 0.375rem;
-          font-size: 0.6875rem;
-          color: var(--text-light);
         }
 
         /* Toggle Switches */
@@ -390,17 +377,13 @@ export default function FilterSidebar() {
 
         /* Ticket Section */
         .ticket-section {
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
-          border: none;
-        }
-
-        .ticket-section .sidebar-title {
-          color: white;
+          background: var(--bg-light);
+          border: 1px solid var(--border);
         }
 
         .ticket-intro {
           font-size: 0.8125rem;
-          color: rgba(255,255,255,0.85);
+          color: var(--text-medium);
           margin-bottom: 1rem;
           line-height: 1.4;
         }
@@ -408,27 +391,28 @@ export default function FilterSidebar() {
         .ticket-buttons {
           display: flex;
           flex-direction: column;
-          gap: 0.625rem;
+          gap: 0.5rem;
         }
 
         .ticket-btn {
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          padding: 0.75rem;
-          background: rgba(255,255,255,0.95);
+          padding: 0.625rem 0.75rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
           border-radius: 8px;
           text-decoration: none;
           transition: all 0.2s;
         }
 
         .ticket-btn:hover {
-          background: white;
-          transform: translateX(4px);
+          border-color: var(--primary);
+          background: var(--bg-white);
         }
 
         .ticket-icon {
-          font-size: 1.25rem;
+          font-size: 1.125rem;
           flex-shrink: 0;
         }
 
@@ -438,7 +422,7 @@ export default function FilterSidebar() {
         }
 
         .ticket-text strong {
-          font-size: 0.875rem;
+          font-size: 0.8125rem;
           font-weight: 700;
           color: var(--text-dark);
         }

@@ -245,11 +245,11 @@
 
 /* ========== EXISTING BLOG STYLES ========== */
 
-body {
-  font-family: var(--font-body);
+/* Blog pages use light background, other pages use white */
+.blog-page-container,
+.blog-container {
   background: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
+  min-height: 60vh;
 }
 
 .blog-container {
@@ -337,6 +337,28 @@ body {
 .blog-content p { margin-bottom: 1.25rem; }
 .blog-content ul, .blog-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
 .blog-content li { margin-bottom: 0.5rem; }
+.blog-content a { color: var(--primary); text-decoration: underline; }
+.blog-content a:hover { color: #e85a1a; }
+
+/* Affiliate Links as CTA Boxes */
+.blog-content .affiliate-link,
+.blog-content a[target="_blank"] {
+  display: inline-block;
+  background: var(--primary);
+  color: white !important;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin: 0.5rem 0;
+  transition: background 0.2s;
+}
+.blog-content .affiliate-link:hover,
+.blog-content a[target="_blank"]:hover {
+  background: #e85a1a;
+  color: white !important;
+}
 
 .blog-cta {
   background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);

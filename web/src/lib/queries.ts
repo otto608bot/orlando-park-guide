@@ -91,6 +91,7 @@ export async function getAllRides(): Promise<Ride[]> {
       thrillLevel,
       rideType,
       accessibility,
+      slug,
       image {
         asset-> { url },
         alt
@@ -115,6 +116,7 @@ export async function getRidesByPark(parkName: string): Promise<Ride[]> {
       thrillLevel,
       rideType,
       accessibility,
+      slug,
       image {
         asset-> { url },
         alt

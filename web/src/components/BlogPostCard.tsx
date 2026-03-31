@@ -27,11 +27,15 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
 
   return (
     <Link href={`/blog/${post.slug.current}`} className="blog-post-card">
-      {post.heroImage?.asset?.url && (
-        <div className="blog-post-card-image">
+      <div className="blog-post-card-image">
+        {post.heroImage?.asset?.url ? (
           <img src={post.heroImage.asset.url} alt={post.heroImage.alt || post.title} />
-        </div>
-      )}
+        ) : (
+          <div className="blog-post-card-fallback">
+            <span>🎢</span>
+          </div>
+        )}
+      </div>
       <div className="blog-post-card-content">
         {post.categories && post.categories.length > 0 && (
           <span className="blog-post-category">{post.categories[0].title}</span>
@@ -75,6 +79,16 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        .blog-post-card-fallback {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+          font-size: 2.5rem;
         }
         
         .blog-post-card-content {

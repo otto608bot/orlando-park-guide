@@ -3,6 +3,7 @@ import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import FilterSidebar from "@/components/FilterSidebar";
 import EmailForm from "@/components/EmailForm";
+import HomepageRides from "@/components/HomepageRides";
 
 export const metadata: Metadata = {
   title: "Plan Your Park | Orlando Theme Park Planning Guide",
@@ -45,10 +46,18 @@ async function getHomePageData() {
       }
     `),
     sanityClient.fetch(`
-      *[_type == "ride"] {
+      *[_type == "ride"] | order(park asc, thrillLevel desc, name asc) {
         _id,
         name,
-        park
+        park,
+        slug,
+        description,
+        heightRequirement,
+        thrillLevel,
+        rideType,
+        accessibility,
+        image { asset-> { url }, alt },
+        isClosed
       }
     `),
   ]);
@@ -75,11 +84,11 @@ async function getHomePageData() {
     }
   });
 
-  return { parks, rideCounts, sampleRides, totalRides: allRides.length };
+  return { parks, rideCounts, sampleRides, allRides, totalRides: allRides.length };
 }
 
 export default async function HomePage() {
-  const { parks, rideCounts, sampleRides, totalRides } = await getHomePageData();
+  const { parks, rideCounts, sampleRides, allRides, totalRides } = await getHomePageData();
 
   return (
     <div className="home-layout">
@@ -88,19 +97,18 @@ export default async function HomePage() {
 
       {/* Main Content */}
       <div className="home-main">
+        {/* Clean Header */}
         <header className="home-header">
           <h1 className="home-title">Find Rides for Everyone</h1>
-          <div className="ride-count-display">
-            <span className="count-number">{totalRides}</span>
-            <span className="count-label">OF {totalRides} RIDES</span>
-          </div>
-          <div className="park-group-breakdown">
-            <span className="breakdown-item">🐭 Disney World: {Object.keys(rideCounts).filter(p => p.includes('Magic') || p.includes('EPCOT') || p.includes('Hollywood') || p.includes('Animal')).reduce((sum, p) => sum + (rideCounts[p] || 0), 0)}</span>
-            <span className="breakdown-item">🎢 Universal: {Object.keys(rideCounts).filter(p => p.includes('Universal') || p.includes('Islands') || p.includes('Epic')).reduce((sum, p) => sum + (rideCounts[p] || 0), 0)}</span>
-            <span className="breakdown-item">🐬 SeaWorld: {Object.keys(rideCounts).filter(p => p.includes('SeaWorld')).reduce((sum, p) => sum + (rideCounts[p] || 0), 0)}</span>
-            <span className="breakdown-item">🧱 LEGOLAND: {Object.keys(rideCounts).filter(p => p.includes('LEGOLAND')).reduce((sum, p) => sum + (rideCounts[p] || 0), 0)}</span>
-          </div>
+          <p className="home-subtitle">
+            Browse {totalRides} rides across Orlando&apos;s top theme parks
+          </p>
         </header>
+
+        {/* Ride Browser with Filters */}
+        <section className="rides-browser">
+          <HomepageRides allRides={allRides} totalCount={totalRides} />
+        </section>
 
         {/* Parks Grid */}
         <section className="parks-section">
@@ -170,56 +178,29 @@ export default async function HomePage() {
 
         .home-header {
           text-align: center;
-          margin-bottom: 2.5rem;
+          margin-bottom: 2rem;
           padding: 2rem;
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+          background: var(--bg-white);
+          border: 1px solid var(--border);
           border-radius: 16px;
-          color: white;
         }
 
         .home-title {
           font-family: var(--font-heading);
           font-size: clamp(1.75rem, 5vw, 2.5rem);
           font-weight: 800;
-          color: white;
-          margin-bottom: 1rem;
+          color: var(--text-dark);
+          margin-bottom: 0.5rem;
         }
 
-        .ride-count-display {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: 1rem;
+        .home-subtitle {
+          font-size: 1rem;
+          color: var(--text-medium);
         }
 
-        .count-number {
-          font-family: var(--font-heading);
-          font-size: 3rem;
-          font-weight: 800;
-          line-height: 1;
-        }
-
-        .count-label {
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          opacity: 0.9;
-        }
-
-        .park-group-breakdown {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.75rem;
-          justify-content: center;
-          margin-top: 1rem;
-        }
-
-        .breakdown-item {
-          font-size: 0.8125rem;
-          font-weight: 500;
-          background: rgba(255,255,255,0.15);
-          padding: 0.375rem 0.75rem;
-          border-radius: 9999px;
+        /* Ride Browser */
+        .rides-browser {
+          margin-bottom: 2.5rem;
         }
 
         /* Parks Grid */
@@ -354,24 +335,24 @@ export default async function HomePage() {
 
         /* Email Signup */
         .email-signup-section {
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+          background: var(--bg-white);
+          border: 1px solid var(--border);
           border-radius: 16px;
           padding: 2.5rem 2rem;
           text-align: center;
-          color: white;
         }
 
         .email-signup-content h3 {
           font-family: var(--font-heading);
           font-size: 1.5rem;
           font-weight: 700;
-          color: white;
+          color: var(--text-dark);
           margin-bottom: 0.5rem;
         }
 
         .email-signup-content p {
           font-size: 1rem;
-          opacity: 0.9;
+          color: var(--text-medium);
           margin-bottom: 1.5rem;
         }
 
@@ -388,10 +369,6 @@ export default async function HomePage() {
         @media (max-width: 640px) {
           .home-layout {
             padding: 1rem;
-          }
-
-          .park-group-breakdown {
-            display: none;
           }
         }
       `}</style>

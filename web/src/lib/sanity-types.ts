@@ -40,6 +40,7 @@ export interface Ride {
   thrillLevel?: number; // 1-5
   rideType?: string;
   accessibility?: string[]; // tags like 'wheelchair', 'sensory', etc.
+  slug?: SanitySlug;
   image?: SanityImage & { alt?: string };
   waitTimeAvg?: number; // minutes
   rating?: number; // 1-5
