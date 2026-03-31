@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
-import RideCard from "@/components/RideCard";
+import RidesTable from "@/components/RidesTable";
+import CharacterDiningTable from "@/components/CharacterDiningTable";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
@@ -55,7 +56,7 @@ const parkColors: Record<string, string> = {
 };
 
 async function getParkData(slug: string) {
-  const [park, rides] = await Promise.all([
+  const [park, rides, dining] = await Promise.all([
     sanityClient.fetch(`
       *[_type == "park" && slug.current == $slug][0] {
         _id,
@@ -75,13 +76,25 @@ async function getParkData(slug: string) {
         thrillLevel,
         rideType,
         accessibility,
+        image { asset-> { url }, alt },
         isClosed,
         closureNote
       }
     `, { parkName: slugToParkName(slug) }),
+    sanityClient.fetch(`
+      *[_type == "characterDining" && park == $parkName] | order(name asc) {
+        _id,
+        name,
+        park,
+        characters,
+        mealType,
+        priceRange,
+        description
+      }
+    `, { parkName: slugToParkName(slug) }),
   ]);
 
-  return { park, rides };
+  return { park, rides, dining };
 }
 
 function slugToParkName(slug: string): string {
@@ -101,7 +114,7 @@ function slugToParkName(slug: string): string {
 
 export default async function ParkDetailPage({ params }: ParkPageProps) {
   const { slug } = await params;
-  const { park, rides } = await getParkData(slug);
+  const { park, rides, dining } = await getParkData(slug);
 
   if (!park) {
     return (
@@ -145,16 +158,27 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           </section>
         )}
 
+        {/* Rides Table Section */}
         <section className="park-rides">
           <h2>Rides &amp; Attractions</h2>
-          <div className="rides-grid">
-            {rides.map((ride: any) => (
-              <RideCard key={ride._id} ride={ride} />
-            ))}
-          </div>
-          {rides.length === 0 && (
-            <p className="no-rides">No rides found for this park.</p>
-          )}
+          <RidesTable rides={rides} showParkColumn={false} compact={true} />
+        </section>
+
+        {/* Character Dining Section */}
+        {dining.length > 0 && (
+          <section className="park-dining">
+            <h2>Character Dining at {park.name}</h2>
+            <CharacterDiningTable diningList={dining} />
+          </section>
+        )}
+
+        {/* Related Blog Posts */}
+        <section className="park-blog">
+          <h2>Planning Tips for {park.name}</h2>
+          <p>Check our blog for the latest on closures, new attractions, and money-saving tips.</p>
+          <Link href="/blog" className="blog-link">
+            Browse All Articles →
+          </Link>
         </section>
 
         <div className="park-cta">
@@ -272,7 +296,15 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           line-height: 1.75;
         }
 
-        .park-rides h2 {
+        .park-rides,
+        .park-dining,
+        .park-blog {
+          margin-bottom: 3rem;
+        }
+
+        .park-rides h2,
+        .park-dining h2,
+        .park-blog h2 {
           font-family: var(--font-heading);
           font-size: 1.5rem;
           font-weight: 700;
@@ -280,26 +312,21 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           margin-bottom: 1.5rem;
         }
 
-        .rides-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.25rem;
+        .park-blog p {
+          font-size: 1rem;
+          color: var(--text-medium);
+          margin-bottom: 1rem;
         }
 
-        @media (max-width: 900px) {
-          .rides-grid { grid-template-columns: repeat(2, 1fr); }
+        .blog-link {
+          display: inline-block;
+          color: var(--primary);
+          font-weight: 500;
+          text-decoration: none;
         }
 
-        @media (max-width: 640px) {
-          .park-hero { height: 240px; }
-          .park-content { padding: 1.5rem 1rem; }
-          .rides-grid { grid-template-columns: 1fr; }
-        }
-
-        .no-rides {
-          color: var(--text-light);
-          text-align: center;
-          padding: 3rem 1rem;
+        .blog-link:hover {
+          text-decoration: underline;
         }
 
         .park-cta {
@@ -340,6 +367,11 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         .cta-secondary:hover {
           border-color: var(--primary);
           color: var(--primary);
+        }
+
+        @media (max-width: 640px) {
+          .park-hero { height: 240px; }
+          .park-content { padding: 1.5rem 1rem; }
         }
       `}</style>
     </div>

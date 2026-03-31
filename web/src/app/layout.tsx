@@ -5,6 +5,8 @@ import "./globals.css";
 import "./blog.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { FiltersProvider } from "@/context/FiltersContext";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito", weight: ["400", "600", "700", "800"] });
@@ -24,6 +26,18 @@ export const metadata: Metadata = {
   },
 };
 
+function FiltersLoader() {
+  return (
+    <div style={{ display: 'flex', gap: '2rem', maxWidth: '1400px', margin: '0 auto', padding: '2rem 1.5rem' }}>
+      <div style={{ width: '280px', height: '400px', background: 'var(--bg-light)', borderRadius: '12px' }} />
+      <div style={{ flex: 1 }}>
+        <div style={{ height: '200px', background: 'var(--bg-light)', borderRadius: '12px', marginBottom: '1rem' }} />
+        <div style={{ height: '100px', background: 'var(--bg-light)', borderRadius: '12px' }} />
+      </div>
+    </div>
+  );
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${nunito.variable}`}>
@@ -32,13 +46,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
+        <link rel="apple-touch-icon" href="/favicon-180x180.png" />
       </head>
       <body>
-        <Header />
-        <main className="main-content">
-          {children}
-        </main>
-        <Footer />
+        <Suspense fallback={<FiltersLoader />}>
+          <FiltersProvider>
+            <Header />
+            <main className="main-content">
+              {children}
+            </main>
+            <Footer />
+          </FiltersProvider>
+        </Suspense>
         
         {/* Google Analytics */}
         <Script 
