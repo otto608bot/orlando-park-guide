@@ -13,11 +13,13 @@ async function getAllRides() {
       _id,
       name,
       park,
+      slug,
       description,
       heightRequirement,
       thrillLevel,
       rideType,
       accessibility,
+      image { asset-> { url }, alt },
       isClosed,
       closureNote
     }

@@ -22,7 +22,7 @@ const PARK_MAP: Record<string, { slug: string; image: string }> = {
   'EPCOT': { slug: 'epcot', image: 'epcot.jpeg' },
   'Hollywood Studios': { slug: 'hollywood-studios', image: 'Hollywood-Studios.jpeg' },
   'Animal Kingdom': { slug: 'animal-kingdom', image: 'animal-kingdom.jpeg' },
-  'Universal Studios Florida': { slug: 'universal-studios-florida', image: 'Universal-Studios-Florida.jpeg' },
+  'Universal Studios Florida': { slug: 'universal-studios-florida', image: 'Universal-Studios.jpeg' },
   'Islands of Adventure': { slug: 'islands-of-adventure', image: 'islands-of-adventure.webp' },
   'Epic Universe': { slug: 'epic-universe', image: 'epic-universe.jpeg' },
   'SeaWorld Orlando': { slug: 'seaworld-orlando', image: 'sea-world.jpeg' },
