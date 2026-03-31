@@ -7,8 +7,8 @@
   --bg-light: #F7FAFC;
   --bg-white: #FFFFFF;
   --border: #E2E8F0;
-  --font-heading: 'Nunito', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: var(--font-nunito), 'Nunito', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
 }
 
 body {

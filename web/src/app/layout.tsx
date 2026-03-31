@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "./blog.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito", weight: ["400", "600", "700", "800"] });
 
 export const metadata: Metadata = {
-  title: "Plan Your Park | Orlando Theme Park Planning Guide",
-  description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld & more!",
+  title: {
+    default: "Plan Your Park | Orlando Theme Park Planning Guide",
+    template: "%s | Plan Your Park",
+  },
+  description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld, LEGOLAND & more!",
+  keywords: ["Orlando theme parks", "Disney World", "Universal Orlando", "SeaWorld", "theme park planning", "Orlando vacation"],
+  openGraph: {
+    title: "Plan Your Park | Orlando Theme Park Planning Guide",
+    description: "Your ultimate guide to Orlando theme parks",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,21 +34,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
-        <header className="site-header">
-          <div className="header-inner">
-            <a href="/" className="logo"><img src="/logo-full.png" alt="Plan Your Park" /></a>
-            <nav className="main-nav">
-              <a href="/">Home</a>
-              <a href="/blog">Blog</a>
-              <a href="/park">Parks</a>
-              <a href="/rides">Rides</a>
-            </nav>
-          </div>
-        </header>
-        {children}
-        <footer className="site-footer">
-          <p>© {new Date().getFullYear()} PlanYourPark.com — Affiliate links help support our site</p>
-        </footer>
+        <Header />
+        <main className="main-content">
+          {children}
+        </main>
+        <Footer />
+        
+        {/* Google Analytics */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-SJHPEWNBLS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SJHPEWNBLS');
+          `}
+        </Script>
       </body>
     </html>
   );

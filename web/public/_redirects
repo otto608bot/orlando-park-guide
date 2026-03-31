@@ -1,0 +1,25 @@
+# Redirect old static HTML pages to new Next.js routes
+/park.html /parks 301
+/rides.html /rides 301
+/character-dining.html /character-dining 301
+/deals.html /deals 301
+
+# Redirect old park pages to new park routes
+/magic-kingdom /parks/magic-kingdom 301
+/epcot /parks/epcot 301
+/hollywood-studios /parks/hollywood-studios 301
+/animal-kingdom /parks/animal-kingdom 301
+/universal-studios-florida /parks/universal-studios-florida 301
+/islands-of-adventure /parks/islands-of-adventure 301
+/seaworld-orlando /parks/seaworld-orlando 301
+/legoland-florida /parks/legoland-florida 301
+
+# Legacy HTML redirects
+/magic-kingdom.html /parks/magic-kingdom 301
+/epcot.html /parks/epcot 301
+/hollywood-studios.html /parks/hollywood-studios 301
+/animal-kingdom.html /parks/animal-kingdom 301
+/universal-studios-florida.html /parks/universal-studios-florida 301
+/islands-of-adventure.html /parks/islands-of-adventure 301
+/seaworld-orlando.html /parks/seaworld-orlando 301
+/legoland-florida.html /parks/legoland-florida 301

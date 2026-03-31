@@ -1,3 +1,9 @@
 [build]
   command = "cd web && npm run build"
   publish = "web/out"
+
+[build.environment]
+  # Set these in Netlify UI or use --env flag
+  # NEXT_PUBLIC_SANITY_PROJECT_ID
+  # NEXT_PUBLIC_SANITY_DATASET
+  # SANITY_API_TOKEN
