@@ -1,9 +1,38 @@
 [build]
-  command = "cd web && npm run build"
+  command = "cd web && npm install && npm run build"
   publish = "web/out"
 
 [build.environment]
-  # Set these in Netlify UI or use --env flag
-  # NEXT_PUBLIC_SANITY_PROJECT_ID
-  # NEXT_PUBLIC_SANITY_DATASET
-  # SANITY_API_TOKEN
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/park.html"
+  to = "/parks"
+  status = 301
+
+[[redirects]]
+  from = "/rides.html"
+  to = "/rides"
+  status = 301
+
+[[redirects]]
+  from = "/character-dining.html"
+  to = "/character-dining"
+  status = 301
+
+[[redirects]]
+  from = "/deals.html"
+  to = "/deals"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*.html"
+  to = "/blog/:splat"
+  status = 301
