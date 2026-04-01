@@ -1,3 +1,4 @@
+import React, { type ReactNode } from 'react';
 import { PortableText } from "@portabletext/react";
 export const revalidate = 60;
 import type { Metadata } from "next";
@@ -6,6 +7,7 @@ import { sanityClient } from "@/lib/sanity";
 import EmailForm from "@/components/EmailForm";
 import QuestionForm from "@/components/QuestionForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
+import { processTextWithAffiliates } from "@/components/blogAffiliates";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -89,7 +91,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     block: {
       h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
       h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
-      normal: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
+      normal: ({ children }: { children?: React.ReactNode }) => {
+        // Process string children to inject affiliate links
+        const processed = Array.isArray(children)
+          ? children.map((child) => typeof child === 'string' ? processTextWithAffiliates(child) : child)
+          : typeof children === 'string' ? processTextWithAffiliates(children) : children;
+        return <p>{processed}</p>;
+      },
     },
     marks: {
       strong: ({ children }: { children?: React.ReactNode }) => <strong style={{ color: 'var(--text-dark)', fontWeight: 700 }}>{children}</strong>,
