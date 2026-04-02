@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import BlogPostCard from "@/components/BlogPostCard";
-import TallyNewsletter from "@/components/TallyNewsletter";
+import NewsletterForm from "@/components/NewsletterForm";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default async function BlogPage() {
       <div className="blog-email-capture">
         <h3>Get Park Updates in Your Inbox</h3>
         <p>Closures, new rides, and deals — delivered weekly.</p>
-        <TallyNewsletter />
+        <NewsletterForm />
       </div>
       
       <style>{`

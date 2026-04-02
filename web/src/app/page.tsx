@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import FilterSidebar from "@/components/FilterSidebar";
-import TallyNewsletter from "@/components/TallyNewsletter";
+import NewsletterForm from "@/components/NewsletterForm";
 import HomepageRides from "@/components/HomepageRides";
 import HomepageHeader from "@/components/HomepageHeader";
 
@@ -55,7 +55,7 @@ export default async function HomePage() {
             <div className="email-signup-icon">🏰</div>
             <h3>Get Weekly Disney Tips</h3>
             <p>Closures, new rides, and money-saving tips — delivered every Tuesday.</p>
-            <TallyNewsletter />
+            <NewsletterForm />
           </div>
         </section>
       </div>
