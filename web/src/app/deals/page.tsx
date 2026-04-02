@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import EmailForm from "@/components/EmailForm";
+import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 export const metadata: Metadata = {
@@ -190,7 +190,7 @@ export default function DealsPage() {
         <div className="deals-email-icon">🏰</div>
         <h2>Get Weekly Disney Tips</h2>
         <p>Closures, new rides, and money-saving tips — delivered every Tuesday.</p>
-        <EmailForm buttonText="Subscribe — It's Free" />
+        <NewsletterForm />
       </section>
 
       <style>{`

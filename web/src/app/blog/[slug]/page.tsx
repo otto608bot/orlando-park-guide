@@ -4,8 +4,8 @@ export const revalidate = 60;
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
-import EmailForm from "@/components/EmailForm";
 import QuestionForm from "@/components/QuestionForm";
+import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
 
@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="blog-email-capture">
           <h3>Get Park Updates in Your Inbox</h3>
           <p>Closures, new rides, and deals — delivered weekly.</p>
-          <EmailForm />
+          <NewsletterForm />
         </div>
       </main>
     </>
