@@ -25,6 +25,9 @@ export const AFFILIATE_LINKS = {
 
   // General deals page
   ucDealsPage: 'https://www.dpbolvw.net/click-101693488-10723176',
+
+  // Viator (comparison/marketplace — add affiliate tag when available)
+  viator: 'https://www.viator.com',
 } as const;
 
 /**

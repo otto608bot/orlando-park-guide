@@ -55,6 +55,61 @@ const tips = [
   { icon: "🎒", tip: "Order park accessories on Amazon before your trip — often 40% cheaper than park gift shops", highlight: false },
 ];
 
+const disneyTickets = [
+  {
+    name: "Magic Kingdom",
+    description: "Iconic castle, fireworks, and the most beloved rides in Walt Disney World.",
+    icon: "🏰",
+    link: AFFILIATE_LINKS.disney4DayParkHopper,
+    linkText: "Get Magic Kingdom Tickets",
+  },
+  {
+    name: "EPCOT",
+    description: "Future World innovations and World Showcase — food, drinks, and culture from 11 countries.",
+    icon: "🌍",
+    link: AFFILIATE_LINKS.disney4DayParkHopper,
+    linkText: "Get EPCOT Tickets",
+  },
+  {
+    name: "Hollywood Studios",
+    description: "Star Wars: Galaxy's Edge, Toy Story Land, and live-action show experiences.",
+    icon: "🎬",
+    link: AFFILIATE_LINKS.disney4DayParkHopper,
+    linkText: "Get Hollywood Studios Tickets",
+  },
+  {
+    name: "Animal Kingdom",
+    description: "Wildlife encounters, Avatar Flight of Passage, and the Tree of Life at dusk.",
+    icon: "🦁",
+    link: AFFILIATE_LINKS.disney4DayParkHopper,
+    linkText: "Get Animal Kingdom Tickets",
+  },
+];
+
+const universalTickets = [
+  {
+    name: "Universal Studios Florida",
+    description: "Hogwarts Express, Revenge of the Mummy, and immersive movie-themed attractions.",
+    icon: "🎥",
+    link: AFFILIATE_LINKS.universal2Park2Day,
+    linkText: "Get Universal Studios Tickets",
+  },
+  {
+    name: "Islands of Adventure",
+    description: "Jurassic World VelociCoaster, Hagrid's Magical Creatures, and Marvel superhero lands.",
+    icon: "🦖",
+    link: AFFILIATE_LINKS.universal2Park2Day,
+    linkText: "Get Islands of Adventure Tickets",
+  },
+  {
+    name: "Epic Universe",
+    description: "Universal's newest park — Super Nintendo World, How to Train Your Dragon, and Dark Universe.",
+    icon: "🪄",
+    link: AFFILIATE_LINKS.universal3Park3Day,
+    linkText: "Get Epic Universe Tickets",
+  },
+];
+
 const attractionTickets = [
   {
     name: "SeaWorld Orlando",
@@ -119,6 +174,81 @@ export default function DealsPage() {
           </span>
         </div>
       </a>
+
+      {/* Disney World Ticket Deals */}
+      <section className="ticket-deals-section">
+        <div className="ticket-deals-header">
+          <h2>Disney World Tickets</h2>
+          <p>Park-hopper and base ticket options — verified current pricing via Undercover Tourist.</p>
+        </div>
+        <div className="ticket-deals-grid">
+          {disneyTickets.map(ticket => (
+            <a
+              key={ticket.name}
+              href={ticket.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ticket-deal-card"
+            >
+              <div className="ticket-deal-icon">{ticket.icon}</div>
+              <div className="ticket-deal-info">
+                <h3>{ticket.name}</h3>
+                <p>{ticket.description}</p>
+              </div>
+              <span className="ticket-deal-cta">{ticket.linkText} →</span>
+            </a>
+          ))}
+        </div>
+        <p className="ticket-deals-note">
+          💳 Save up to <strong>$30 per ticket</strong> vs. gate pricing — Park Hopper upgrades available at checkout.
+        </p>
+      </section>
+
+      {/* Universal Orlando Ticket Deals */}
+      <section className="ticket-deals-section">
+        <div className="ticket-deals-header">
+          <h2>Universal Orlando Tickets</h2>
+          <p>Two-park, three-park, and four-park base tickets — includes Volcano Bay at select tiers.</p>
+        </div>
+        <div className="ticket-deals-grid">
+          {universalTickets.map(ticket => (
+            <a
+              key={ticket.name}
+              href={ticket.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ticket-deal-card"
+            >
+              <div className="ticket-deal-icon">{ticket.icon}</div>
+              <div className="ticket-deal-info">
+                <h3>{ticket.name}</h3>
+                <p>{ticket.description}</p>
+              </div>
+              <span className="ticket-deal-cta">{ticket.linkText} →</span>
+            </a>
+          ))}
+        </div>
+        <p className="ticket-deals-note">
+          🎢 <strong>Epic Universe</strong> is Universal's newest park — book multi-day tickets early for the best availability.
+        </p>
+      </section>
+
+      {/* Viator Comparison CTA */}
+      <div className="viator-cta">
+        <div className="viator-cta-icon">🔍</div>
+        <div className="viator-cta-text">
+          <strong>Compare prices across multiple sellers</strong>
+          <span>Check Viator, GetYourGuide, and other marketplaces before you buy.</span>
+        </div>
+        <a
+          href={AFFILIATE_LINKS.viator}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="viator-cta-btn"
+        >
+          Compare Tickets →
+        </a>
+      </div>
 
       {/* Orlando Attraction Tickets Section */}
       <section className="attractions-section">
@@ -218,6 +348,140 @@ export default function DealsPage() {
           color: var(--text-medium);
           max-width: 600px;
           margin: 0 auto;
+        }
+
+        /* Ticket Deals Section */
+        .ticket-deals-section {
+          margin-bottom: 3rem;
+        }
+
+        .ticket-deals-header {
+          margin-bottom: 1.25rem;
+        }
+
+        .ticket-deals-header h2 {
+          font-family: var(--font-heading);
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin-bottom: 0.375rem;
+        }
+
+        .ticket-deals-header p {
+          font-size: 0.9375rem;
+          color: var(--text-medium);
+        }
+
+        .ticket-deals-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1rem;
+        }
+
+        .ticket-deal-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          padding: 1.25rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.2s ease;
+        }
+
+        .ticket-deal-card:hover {
+          border-color: var(--primary);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .ticket-deal-icon {
+          font-size: 2rem;
+        }
+
+        .ticket-deal-info h3 {
+          font-family: var(--font-heading);
+          font-size: 0.9375rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin-bottom: 0.375rem;
+        }
+
+        .ticket-deal-info p {
+          font-size: 0.8125rem;
+          color: var(--text-medium);
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        .ticket-deal-cta {
+          font-size: 0.8125rem;
+          font-weight: 600;
+          color: var(--primary);
+          margin-top: auto;
+        }
+
+        .ticket-deals-note {
+          margin-top: 0.875rem;
+          font-size: 0.875rem;
+          color: var(--text-medium);
+          text-align: center;
+          background: var(--bg-light);
+          border-radius: 8px;
+          padding: 0.75rem 1rem;
+        }
+
+        /* Viator CTA */
+        .viator-cta {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          background: #F0F4FF;
+          border: 1px solid #DDE6FF;
+          border-radius: 12px;
+          padding: 1rem 1.25rem;
+          margin-bottom: 3rem;
+        }
+
+        .viator-cta-icon {
+          font-size: 1.5rem;
+          flex-shrink: 0;
+        }
+
+        .viator-cta-text {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.125rem;
+        }
+
+        .viator-cta-text strong {
+          font-size: 0.9375rem;
+          color: var(--text-dark);
+        }
+
+        .viator-cta-text span {
+          font-size: 0.8125rem;
+          color: var(--text-medium);
+        }
+
+        .viator-cta-btn {
+          background: #4B63FF;
+          color: white;
+          font-weight: 600;
+          font-size: 0.875rem;
+          padding: 0.625rem 1.125rem;
+          border-radius: 8px;
+          text-decoration: none;
+          white-space: nowrap;
+          transition: background 0.15s;
+          flex-shrink: 0;
+        }
+
+        .viator-cta-btn:hover {
+          background: #3A52CC;
         }
 
         /* Undercover Tourist Banner */
@@ -538,6 +802,23 @@ export default function DealsPage() {
             grid-template-columns: repeat(2, 1fr);
           }
           .attractions-grid {
+            grid-template-columns: 1fr;
+          }
+          .ticket-deals-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .viator-cta {
+            flex-direction: column;
+            text-align: center;
+          }
+          .viator-cta-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .ticket-deals-grid {
             grid-template-columns: 1fr;
           }
         }
