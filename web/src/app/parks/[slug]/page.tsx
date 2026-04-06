@@ -196,7 +196,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         {dining.length > 0 && (
           <section className="park-dining">
             <h2>Character Dining at {park.name}</h2>
-            <CharacterDiningTable diningList={dining} />
+            <CharacterDiningTable diningList={dining} showFilters={false} />
           </section>
         )}
 

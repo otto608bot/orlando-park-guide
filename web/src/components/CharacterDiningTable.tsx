@@ -5,6 +5,9 @@ import Link from 'next/link';
 import type { CharacterDining } from '@/lib/sanity-types';
 
 interface CharacterDiningTableProps {
+  showFilters?: boolean;
+  parkContext?: string;
+
   diningList: CharacterDining[];
 }
 
@@ -80,7 +83,7 @@ function formatCharacters(chars: string[] | undefined): string {
   return chars.slice(0, 3).join(', ') + (chars.length > 3 ? ` +${chars.length - 3}` : '');
 }
 
-export default function CharacterDiningTable({ diningList }: CharacterDiningTableProps) {
+export default function CharacterDiningTable({ diningList, showFilters = true, parkContext }: CharacterDiningTableProps) {
   const [mealFilter, setMealFilter] = useState<MealType>('all');
   const [locationFilter, setLocationFilter] = useState<LocationType>('all');
   const [searchChar, setSearchChar] = useState('');
@@ -113,7 +116,7 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
 
   return (
     <div className="dining-table-wrapper">
-      {/* Filter Pills */}
+      {showFilters && (
       <div className="dining-filters">
         <div className="filter-group">
           <span className="filter-label">Meal</span>
@@ -185,6 +188,7 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
           </div>
         </div>
       </div>
+      )}
 
       <div className="results-count-bar">
         <p className="count-text">
