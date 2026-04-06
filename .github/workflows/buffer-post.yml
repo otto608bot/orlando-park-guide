@@ -1,0 +1,77 @@
+name: Post to Buffer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  buffer-post:
+    runs-on: ubuntu-latest
+    if: github.event.commits[0] != ''
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for pending Buffer posts
+        id: check
+        run: |
+          if [ -f "buffer-pending.json" ]; then
+            echo "Found pending Buffer posts"
+            cat buffer-pending.json
+            echo "pending=true" >> $GITHUB_OUTPUT
+          else
+            echo "No pending Buffer posts"
+            echo "pending=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post to Buffer
+        if: steps.check.outputs.pending == 'true'
+        run: |
+          # Read post data from buffer-pending.json (supports array or single post)
+          python3 << 'EOF'
+          import json
+          import subprocess
+          import os
+
+          with open('buffer-pending.json') as f:
+            data = json.load(f)
+
+          # Handle both single post and array of posts
+          posts = data if isinstance(data, list) else [data]
+
+          for post in posts:
+            title = post.get('title', 'New Plan Your Park Post')
+            url = post.get('url', '')
+            image = post.get('hero_image', '')
+
+            print(f"Posting: {title}")
+
+            # Facebook
+            cmd = f'python3 scripts/buffer_api.py facebook "🎢 {title}" "{image}" "{url}"'
+            subprocess.run(cmd, shell=True)
+
+            # Instagram
+            cmd = f'python3 scripts/buffer_api.py instagram "🎢 {title}" "{image}"'
+            subprocess.run(cmd, shell=True)
+
+            # Pinterest
+            cmd = f'python3 scripts/buffer_api.py pinterest "{title} | Plan Your Park" "{image}" "{url}" "{title}"'
+            subprocess.run(cmd, shell=True)
+
+            print(f"✅ Posted: {title}")
+          EOF
+
+      - name: Clear pending posts file
+        if: steps.check.outputs.pending == 'true'
+        run: |
+          rm buffer-pending.json
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -m "chore: clear Buffer pending posts [skip ci]" || true
+          git push
+
+      - name: Report
+        if: steps.check.outputs.pending == 'true'
+        run: |
+          echo "✅ Buffer posts created"
