@@ -284,8 +284,11 @@ export default function DealsPage() {
         </div>
         <div className="gear-grid">
           {gearItems.map(item => (
-            <div
+            <a
               key={item.id}
+              href={`https://www.amazon.com/dp/${item.asin}?tag=planyourpark-20`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="gear-card"
             >
               <div className="gear-icon">{item.icon}</div>
@@ -293,8 +296,8 @@ export default function DealsPage() {
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
               </div>
-              <span className="gear-cta">Order on Amazon</span>
-            </div>
+              <span className="gear-cta">Order on Amazon →</span>
+            </a>
           ))}
         </div>
       </section>
