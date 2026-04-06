@@ -413,9 +413,15 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
 
         .park-blog-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 1rem;
           margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+          .park-blog-grid {
+            grid-template-columns: 1fr;
+          }
         }
 
         .park-blog-card {
