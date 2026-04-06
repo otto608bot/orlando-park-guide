@@ -132,7 +132,7 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
                   <span className="park-org">{PARK_ORG[park.slug] || ''}</span>
                 </div>
                 <div className="ride-count-badge">
-                  <span className="count">{hasActiveFilters ? park.rideCount : allRides.filter(r => r.park === park.name).length}</span>
+                  <span className="count">{park.rideCount}</span>
                   <span className="label">of {allRides.filter(r => r.park === park.name).length} Rides</span>
                 </div>
                 {park.sampleRides.length > 0 && (

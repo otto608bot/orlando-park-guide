@@ -107,7 +107,7 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
             <div className="home-title-row">
               <h1 className="home-title">Find Rides for Everyone</h1>
               <span className="total-rides-badge">
-                {hasActiveFilters ? allRides.length : totalRides} of {totalRides} rides
+                {hasActiveFilters ? franchiseData.reduce((sum, f) => sum + f.visible, 0) : totalRides} of {totalRides} rides
               </span>
             </div>
             <Link href="/rides" className="home-cta-btn">
