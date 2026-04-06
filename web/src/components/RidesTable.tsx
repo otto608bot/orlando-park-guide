@@ -89,7 +89,7 @@ function isCalmExperience(ride: Ride): boolean {
 
 export default function RidesTable({ rides, showParkColumn = true, compact = false }: RidesTableProps) {
   const { filters } = useFilters();
-  const [sortField, setSortField] = useState<SortField>('name');
+  const [sortField, setSortField] = useState<SortField>('park');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
   const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
 

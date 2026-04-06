@@ -133,7 +133,7 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
                 </div>
                 <div className="ride-count-badge">
                   <span className="count">{hasActiveFilters ? park.rideCount : allRides.filter(r => r.park === park.name).length}</span>
-                  <span className="label">Rides</span>
+                  <span className="label">of {allRides.filter(r => r.park === park.name).length} Rides</span>
                 </div>
                 {park.sampleRides.length > 0 && (
                   <div className="sample-rides">
@@ -266,19 +266,19 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
         .park-card-tickets-btn {
           display: block;
           width: 100%;
-          padding: 0.625rem;
-          background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
-          color: white;
-          font-weight: 700;
-          font-size: 0.875rem;
+          padding: 0.5rem;
+          background: var(--bg-white);
+          color: var(--primary);
+          font-weight: 600;
+          font-size: 0.8125rem;
           text-align: center;
           text-decoration: none;
           border-top: 1px solid var(--border);
-          transition: opacity 0.2s;
+          transition: background 0.2s;
         }
 
         .park-card-tickets-btn:hover {
-          opacity: 0.9;
+          background: var(--bg-light);
         }
 
         @media (max-width: 600px) {

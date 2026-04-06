@@ -47,7 +47,7 @@ const gearItems = [
 ];
 
 const tips = [
-  { icon: "📅", tip: "Visit mid-week (Tuesday–Thursday) for the shortest lines at Disney", highlight: true },
+  { icon: "📅", tip: "Visit mid-week (Tuesday–Thursday) for the shortest lines at Disney", highlight: false },
   { icon: "🍪", tip: "Bring your own snacks — Disney allows outside food and drinks", highlight: false },
   { icon: "🗓️", tip: "Book dining reservations 60 days in advance for popular restaurants", highlight: false },
   { icon: "💳", tip: "Use a credit card with no foreign transaction fees if buying international tickets", highlight: false },
@@ -284,11 +284,8 @@ export default function DealsPage() {
         </div>
         <div className="gear-grid">
           {gearItems.map(item => (
-            <a
+            <div
               key={item.id}
-              href={`https://www.amazon.com/dp/${item.asin}?tag=planyourpark-20`}
-              target="_blank"
-              rel="noopener"
               className="gear-card"
             >
               <div className="gear-icon">{item.icon}</div>
@@ -296,8 +293,8 @@ export default function DealsPage() {
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
               </div>
-              <span className="gear-cta">View on Amazon →</span>
-            </a>
+              <span className="gear-cta">Order on Amazon</span>
+            </div>
           ))}
         </div>
       </section>

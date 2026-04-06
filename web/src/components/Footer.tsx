@@ -6,135 +6,91 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <img src="/logo-full.png" alt="Plan Your Park" className="footer-logo" />
-          <p className="footer-tagline">
-            Your ultimate guide to Orlando theme parks
-          </p>
         </div>
-        
+
         <nav className="footer-links">
-          <div className="footer-col">
-            <h4>Explore</h4>
-            <Link href="/parks">All Parks</Link>
-            <Link href="/rides">Rides & Attractions</Link>
-            <Link href="/character-dining">Character Dining</Link>
-            <Link href="/deals">Deals & Discounts</Link>
-          </div>
-          <div className="footer-col">
-            <h4>Resources</h4>
-            <Link href="/blog">Blog</Link>
-            <a href="/closures" target="_blank" rel="noopener">Park Closures</a>
-            <a href="/sitemap.xml">Sitemap</a>
-          </div>
-          <div className="footer-col">
-            <h4>Company</h4>
-            <a href="/about" target="_blank" rel="noopener">About Us</a>
-            <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-          </div>
+          <Link href="/parks">Parks</Link>
+          <Link href="/rides">Rides</Link>
+          <Link href="/character-dining">Character Dining</Link>
+          <Link href="/deals">Deals</Link>
+          <Link href="/blog">Blog</Link>
+          <a href="/sitemap.xml">Sitemap</a>
         </nav>
-        
+
         <div className="footer-bottom">
           <p className="footer-disclaimer">
-            As an Amazon Associate and Undercover Tourist affiliate, we may earn from qualifying purchases at no extra cost to you.
+            As an Amazon Associate and Undercover Tourist affiliate, we may earn from qualifying purchases.
           </p>
           <p className="footer-copyright">
-            © {new Date().getFullYear()} PlanYourPark.com — All rights reserved.
+            © {new Date().getFullYear()} PlanYourPark.com
           </p>
         </div>
       </div>
-      
+
       <style>{`
         .site-footer {
           background: #F8FAFC;
           color: var(--text-medium);
-          padding: 3rem 1.5rem 2rem;
+          padding: 2rem 1.5rem 1.5rem;
           margin-top: 4rem;
           border-top: 1px solid var(--border);
         }
-        
+
         .footer-inner {
           max-width: 1200px;
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.25rem;
+          text-align: center;
         }
 
         .footer-brand {
-          margin-bottom: 2rem;
+          display: flex;
+          align-items: center;
         }
 
         .footer-logo {
-          height: 32px;
+          height: 28px;
           width: auto;
-          margin-bottom: 0.5rem;
-        }
-        
-        .footer-tagline {
-          color: var(--text-light);
-          font-size: 0.875rem;
         }
 
         .footer-links {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-          margin-bottom: 2rem;
-          padding-bottom: 2rem;
-          border-bottom: 1px solid var(--border);
-        }
-
-        .footer-col {
           display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
+          flex-wrap: wrap;
+          gap: 0.25rem 1.5rem;
+          justify-content: center;
         }
 
-        .footer-col h4 {
-          font-family: var(--font-heading);
-          font-size: 0.8125rem;
-          font-weight: 700;
-          color: var(--text-dark);
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          margin-bottom: 0.5rem;
-        }
-
-        .footer-col a {
+        .footer-links a {
           color: var(--text-medium);
           text-decoration: none;
           font-size: 0.875rem;
           transition: color 0.15s;
         }
 
-        .footer-col a:hover {
+        .footer-links a:hover {
           color: var(--primary);
         }
 
         .footer-bottom {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 0.375rem;
+          align-items: center;
         }
-        
+
         .footer-disclaimer {
           color: var(--text-light);
           font-size: 0.75rem;
-          line-height: 1.5;
+          line-height: 1.4;
+          max-width: 480px;
         }
-        
+
         .footer-copyright {
           color: var(--text-light);
           font-size: 0.75rem;
-        }
-
-        @media (max-width: 640px) {
-          .footer-links {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-          }
-        }
-
-        @media (max-width: 400px) {
-          .footer-links {
-            grid-template-columns: 1fr;
-          }
         }
       `}</style>
     </footer>

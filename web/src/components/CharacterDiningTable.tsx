@@ -24,11 +24,45 @@ function getParkSlug(park: string | undefined): string {
     'SeaWorld Orlando': 'seaworld-orlando',
     'LEGOLAND Florida': 'legoland-florida',
   };
-  // Check if it's a Disney resort
-  if (park.includes('Resort') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian')) {
-    return 'resort';
-  }
   return map[park] || 'other';
+}
+
+function getParkColor(park: string | undefined): string {
+  if (!park) return '#718096';
+  const colorMap: Record<string, string> = {
+    'magic-kingdom': '#4A9DE8',
+    'epcot': '#8B5CF6',
+    'hollywood-studios': '#EF4444',
+    'animal-kingdom': '#10B981',
+    'universal-studios-florida': '#F59E0B',
+    'islands-of-adventure': '#06B6D4',
+    'epic-universe': '#8B5CF6',
+    'seaworld-orlando': '#3B82F6',
+    'legoland-florida': '#F97316',
+    'resort': '#EC4899',
+    'other': '#718096',
+  };
+  const slug = getParkSlug(park);
+  return colorMap[slug] || '#718096';
+}
+
+function getLocationLabel(park: string | undefined, itemName: string | undefined): string {
+  if (!park) return 'Orlando Area';
+  // If it's a known in-park location, show park name
+  const inParkMap: Record<string, string> = {
+    'Magic Kingdom': 'Magic Kingdom',
+    'EPCOT': 'EPCOT',
+    'Hollywood Studios': 'Hollywood Studios',
+    'Animal Kingdom': 'Animal Kingdom',
+    'Universal Studios Florida': 'Universal Studios Florida',
+    'Islands of Adventure': 'Islands of Adventure',
+    'Epic Universe': 'Epic Universe',
+    'SeaWorld Orlando': 'SeaWorld Orlando',
+    'LEGOLAND Florida': 'LEGOLAND Florida',
+  };
+  if (inParkMap[park]) return inParkMap[park];
+  // Otherwise show the specific resort name (item.park from Sanity)
+  return park;
 }
 
 function isInPark(park: string | undefined): boolean {
@@ -187,8 +221,14 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
                   <td className="td-restaurant">
                     <div className="restaurant-info">
                       <h3 className="restaurant-name">{item.name}</h3>
-                      <span className={`location-badge location-${parkSlug}`}>
-                        {item.park || 'Orlando Area'}
+                      <span
+                        className={`location-badge location-${parkSlug}`}
+                        style={{
+                          color: getParkColor(item.park),
+                          backgroundColor: getParkColor(item.park) + '1A',
+                        }}
+                      >
+                        {getLocationLabel(item.park, item.name)}
                       </span>
                       {item.priceRange && (
                         <span className="price-badge">{item.priceRange}</span>
@@ -428,11 +468,9 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
         .location-badge {
           display: inline-block;
           font-size: 0.6875rem;
-          font-weight: 500;
+          font-weight: 600;
           padding: 0.2rem 0.5rem;
           border-radius: 4px;
-          background: var(--bg-light);
-          color: var(--text-medium);
           width: fit-content;
         }
 

@@ -288,6 +288,18 @@ export default function FilterSidebar() {
               <small>via Undercover Tourist</small>
             </span>
           </a>
+          <a
+            href={AFFILIATE_LINKS.legoland}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ticket-btn"
+          >
+            <span className="ticket-icon">🧱</span>
+            <span className="ticket-text">
+              <strong>LEGOLAND Florida</strong>
+              <small>via Undercover Tourist</small>
+            </span>
+          </a>
         </div>
       </div>
 

@@ -183,6 +183,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <article className="blog-content">
           <PortableText value={post.body} components={components} />
         </article>
+
+        {/* Buy Tickets CTA */}
+        <div className="blog-buy-tickets">
+          <h2>Get Your Tickets</h2>
+          <p>Buy from trusted sellers and save up to 20% vs. gate pricing.</p>
+          <div className="buy-tickets-grid">
+            <a href={AFFILIATE_LINKS.disney4DayParkHopper} target="_blank" rel="noopener" className="buy-ticket-btn disney">
+              <span>🏰</span>
+              <div>
+                <strong>Disney World</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+            <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener" className="buy-ticket-btn universal">
+              <span>🪄</span>
+              <div>
+                <strong>Universal Orlando</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+            <a href={AFFILIATE_LINKS.seaworld} target="_blank" rel="noopener" className="buy-ticket-btn seaworld">
+              <span>🐬</span>
+              <div>
+                <strong>SeaWorld Orlando</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+          </div>
+        </div>
         
         {/* Bottom CTA */}
         <div className="blog-bottom-cta">
