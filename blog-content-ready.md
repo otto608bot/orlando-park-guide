@@ -177,3 +177,14 @@
 ## Affiliate Disclosure Template
 
 *Disclosure: This post contains affiliate links. If you purchase tickets or make reservations through our links, we may earn a small commission at no additional cost to you. This helps support Plan Your Park and allows us to continue providing free family-friendly content.*
+
+## PYP Fixes Applied 2026-04-07
+
+The following posts were updated in Sanity (not in local files) to address content gaps:
+
+1. epic-universe-tickets-guide (blogPost-epic-universe-tickets-guide) — Added inline ticket buying affiliate links (Undercover Tourist) throughout ticket tier sections
+2. epic-universe-rides-ranked-guide (blogPost-epic-universe-rides-ranked-guide) — Major rewrite: all 13 rides across 5 lands now covered with accurate names, thrill levels, height requirements, descriptions, and full ranking
+3. free-things-disney-world (RLBxGAumPb4EPh1Y0BD8NU) — Expanded from ~10 items to 25 free things organized by category
+4. disney-world-packing-list (disney-world-packing-list) — Expanded from ~6 items to 50+ essentials across 7 categories
+
+These are Sanity CMS updates only — no local file changes. Netlify rebuild triggered to regenerate static export.
