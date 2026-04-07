@@ -13,36 +13,71 @@ const gearItems = [
     id: "travel-adapter",
     name: "Travel Adapter",
     description: "Universal adapter for international devices — works at Disney resorts and parks.",
-    asin: "B00BWPQCRC",
+    url: "https://www.amazon.com/s?k=universal+travel+adapter+international&tag=planyourpark-20",
     icon: "🔌",
   },
   {
     id: "phone-charger",
     name: "Portable Phone Charger",
     description: "20000mAh power bank to keep your phone charged all day in the parks.",
-    asin: "B07YNMW3CX",
+    url: "https://www.amazon.com/s?k=portable+phone+charger+20000mah+disney&tag=planyourpark-20",
     icon: "🔋",
   },
   {
     id: "sunscreen-spray",
     name: "Sunscreen Spray",
     description: "Easy spray-on SPF 50 sunscreen — Florida sun is no joke at the parks.",
-    asin: "B07JZGYJCL",
+    url: "https://www.amazon.com/s?k=sunscreen+spf+50+spray+disney&tag=planyourpark-20",
     icon: "☀️",
   },
   {
     id: "water-bottle",
     name: "Insulated Water Bottle",
     description: "Keeps water ice-cold for hours. Disney allows reusable bottles — fill up for free.",
-    asin: "B09KV1QTQ8",
+    url: "https://www.amazon.com/s?k=insulated+water+bottle+32oz+disney&tag=planyourpark-20",
     icon: "💧",
   },
   {
     id: "mini-fan",
     name: "Mini Fan",
     description: "USB rechargeable handheld fan — a lifesaver in the Florida summer heat.",
-    asin: "B0BZN1JZNL",
+    url: "https://www.amazon.com/s?k=usb+handheld+fan+disney+world&tag=planyourpark-20",
     icon: "🌀",
+  },
+  {
+    id: "cooling-towel",
+    name: "Cooling Towel",
+    description: "Soak in cold water and drape around your neck. Magic in the Florida heat.",
+    url: "https://www.amazon.com/s?k=cooling+towel+disney+world&tag=planyourpark-20",
+    icon: "❄️",
+  },
+  {
+    id: "poncho",
+    name: "Rain Ponchos (20-Pack)",
+    description: "Pack 20 so the whole family stays dry when Florida thunderstorms roll through.",
+    url: "https://www.amazon.com/s?k=rain+poncho+20+pack+disney&tag=planyourpark-20",
+    icon: "🌧️",
+  },
+  {
+    id: "stroller-fan",
+    name: "Stroller Fan",
+    description: "Clip-on USB rechargeable fan for your stroller. Keeps little ones comfortable.",
+    url: "https://www.amazon.com/s?k=stroller+fan+usb+disney&tag=planyourpark-20",
+    icon: "👶",
+  },
+  {
+    id: "waterproof-pouch",
+    name: "Waterproof Phone Pouch",
+    description: "Keep your phone dry on water rides and in the rain. Floats if dropped in water.",
+    url: "https://www.amazon.com/s?k=waterproof+phone+pouch+disney&tag=planyourpark-20",
+    icon: "📱",
+  },
+  {
+    id: "backpack",
+    name: "Lightweight Daypack",
+    description: "Compact backpack for park essentials. Folds into its own pocket for travel.",
+    url: "https://www.amazon.com/s?k=lightweight+daypack+travel+disney&tag=planyourpark-20",
+    icon: "🎒",
   },
 ];
 
@@ -286,7 +321,7 @@ export default function DealsPage() {
           {gearItems.map(item => (
             <a
               key={item.id}
-              href={`https://www.amazon.com/dp/${item.asin}?tag=planyourpark-20`}
+              href={item.url}
               target="_blank"
               rel="noopener noreferrer"
               className="gear-card"
