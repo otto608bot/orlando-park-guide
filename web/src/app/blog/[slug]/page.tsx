@@ -1,4 +1,5 @@
 import React, { type ReactNode } from 'react';
+import Script from 'next/script';
 import { PortableText } from "@portabletext/react";
 export const revalidate = 60;
 import type { Metadata } from "next";
@@ -183,6 +184,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <article className="blog-content">
           <PortableText value={post.body} components={components} />
         </article>
+
+        {/* Affiliatematic Amazon Affiliate Widget */}
+        <div
+          id="affiliatematic-amazon"
+          data-tag="planyourpark-20"
+          data-marketplace="amazon.com"
+          data-asin="B09KV1QTQ8,B07YNMW3CX,B005IHT94S,B018THPISO,B0B5H2R1KL,B07TS2HMH1,B001B5I57I,B074M4PQ1K,B00KC4VPNU,B00E6RW2F0,B07Q1OZ7ZY,B07TYSWSP3,B07YP9X2WL,B00VW2LHZK"
+        ></div>
+        <Script
+          src="//affiliatematic.com/amazon-widget.iife.js"
+          strategy="lazyOnload"
+        />
 
         {/* Buy Tickets CTA */}
         <div className="blog-buy-tickets">
