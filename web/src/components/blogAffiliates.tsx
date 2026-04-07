@@ -65,7 +65,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['snacks', 'granola bars', 'protein bars', 'goldfish'],
-    url: 'https://www.amazon.com/dp/B08XY2C1VW?tag=planyourpark-20',
+    url: 'https://www.amazon.com/s?k=travel+snacks+granola+bars&tag=planyourpark-20',
   },
 ];
 
