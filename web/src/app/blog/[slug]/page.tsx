@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   const slugs = await sanityClient.fetch(`
     *[_type == "blogPost"].slug.current
   `);
-  return slugs.map((slug: string) => ({ slug }));
+  // Filter out null/malformed slugs before generating params
+  return (slugs as string[]).filter((slug): slug is string => !!slug).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
