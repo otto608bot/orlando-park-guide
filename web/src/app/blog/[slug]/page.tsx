@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => {
         const isExternal = value?.blank;
         return isExternal ? (
-          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-cta">{children}</a>
+          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-link">{children}</a>
         ) : (
           <a href={value?.href} className="inline-link">{children}</a>
         );
