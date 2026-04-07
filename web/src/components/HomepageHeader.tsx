@@ -104,7 +104,12 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
       <header className="home-header">
         <div className="home-header-inner">
           <div className="home-header-top">
-            <h1 className="home-title">Find Rides for Everyone</h1>
+            <div className="home-title-row">
+              <h1 className="home-title">Find Rides for Everyone</h1>
+              <span className="total-rides-badge">
+                {hasActiveFilters ? franchiseData.reduce((sum, f) => sum + f.visible, 0) : totalRides} of {totalRides} rides
+              </span>
+            </div>
             <Link href="/rides" className="home-cta-btn">
               Browse All Rides
             </Link>
@@ -176,6 +181,25 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
           margin: 0;
           line-height: 1.2;
           text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+        }
+
+        .home-title-row {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          flex-wrap: wrap;
+        }
+
+        .total-rides-badge {
+          display: inline-block;
+          background: rgba(255,255,255,0.2);
+          color: white;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.25rem 0.75rem;
+          border-radius: 9999px;
+          border: 1px solid rgba(255,255,255,0.3);
+          white-space: nowrap;
         }
 
         .home-cta-btn {

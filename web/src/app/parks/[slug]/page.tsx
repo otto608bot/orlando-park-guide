@@ -59,7 +59,8 @@ const parkColors: Record<string, string> = {
 };
 
 async function getParkData(slug: string) {
-  const [park, rides, dining] = await Promise.all([
+  const parkName = slugToParkName(slug);
+  const [park, rides, dining, blogPosts] = await Promise.all([
     sanityClient.fetch(`
       *[_type == "park" && slug.current == $slug][0] {
         _id,
@@ -84,7 +85,7 @@ async function getParkData(slug: string) {
         isClosed,
         closureNote
       }
-    `, { parkName: slugToParkName(slug) }),
+    `, { parkName }),
     sanityClient.fetch(`
       *[_type == "characterDining" && park == $parkName] | order(name asc) {
         _id,
@@ -95,10 +96,20 @@ async function getParkData(slug: string) {
         priceRange,
         description
       }
-    `, { parkName: slugToParkName(slug) }),
+    `, { parkName }),
+    sanityClient.fetch(`
+      *[_type == "blogPost" && (title match $parkName || categories[]->title match $parkName)] | order(publishedAt desc) [0..2] {
+        _id,
+        title,
+        slug,
+        excerpt,
+        readTime,
+        heroImage { asset-> { url }, alt }
+      }
+    `, { parkName }),
   ]);
 
-  return { park, rides, dining };
+  return { park, rides, dining, blogPosts };
 }
 
 function slugToParkName(slug: string): string {
@@ -118,7 +129,7 @@ function slugToParkName(slug: string): string {
 
 export default async function ParkDetailPage({ params }: ParkPageProps) {
   const { slug } = await params;
-  const { park, rides, dining } = await getParkData(slug);
+  const { park, rides, dining, blogPosts } = await getParkData(slug);
 
   if (!park) {
     return (
@@ -185,14 +196,33 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         {dining.length > 0 && (
           <section className="park-dining">
             <h2>Character Dining at {park.name}</h2>
-            <CharacterDiningTable diningList={dining} />
+            <CharacterDiningTable diningList={dining} showFilters={false} />
           </section>
         )}
 
         {/* Related Blog Posts */}
         <section className="park-blog">
           <h2>Planning Tips for {park.name}</h2>
-          <p>Check our blog for the latest on closures, new attractions, and money-saving tips.</p>
+          {blogPosts && blogPosts.length > 0 ? (
+            <div className="park-blog-grid">
+              {blogPosts.map((post: any) => (
+                <Link key={post._id} href={`/blog/${post.slug?.current}`} className="park-blog-card">
+                  {post.heroImage?.asset?.url && (
+                    <div className="park-blog-img">
+                      <img src={post.heroImage.asset.url} alt={post.heroImage.alt || post.title} />
+                    </div>
+                  )}
+                  <div className="park-blog-info">
+                    <h3>{post.title}</h3>
+                    {post.excerpt && <p>{post.excerpt}</p>}
+                    {post.readTime && <span className="blog-read-time">{post.readTime} min read</span>}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <p>Check our blog for the latest on closures, new attractions, and money-saving tips.</p>
+          )}
           <Link href="/blog" className="blog-link">
             Browse All Articles →
           </Link>
@@ -379,6 +409,83 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-size: 1rem;
           color: var(--text-medium);
           margin-bottom: 1rem;
+        }
+
+        .park-blog-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+          .park-blog-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .park-blog-card {
+          display: flex;
+          flex-direction: column;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          overflow: hidden;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.2s;
+        }
+
+        .park-blog-card:hover {
+          border-color: var(--primary);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .park-blog-img {
+          height: 120px;
+          overflow: hidden;
+          background: var(--bg-light);
+        }
+
+        .park-blog-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .park-blog-info {
+          padding: 0.875rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.375rem;
+          flex: 1;
+        }
+
+        .park-blog-info h3 {
+          font-family: var(--font-heading);
+          font-size: 0.9375rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .park-blog-info p {
+          font-size: 0.8125rem;
+          color: var(--text-medium);
+          margin: 0;
+          line-height: 1.4;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .blog-read-time {
+          font-size: 0.75rem;
+          color: var(--text-light);
+          margin-top: auto;
         }
 
         .blog-link {

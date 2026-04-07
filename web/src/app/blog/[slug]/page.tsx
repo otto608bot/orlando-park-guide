@@ -8,6 +8,7 @@ import QuestionForm from "@/components/QuestionForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
+import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -104,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => {
         const isExternal = value?.blank;
         return isExternal ? (
-          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-cta">{children}</a>
+          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-link">{children}</a>
         ) : (
           <a href={value?.href} className="inline-link">{children}</a>
         );
@@ -180,9 +181,38 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
         
-        <article className="blog-content">
+        <BlogContentUrlProcessor>
           <PortableText value={post.body} components={components} />
-        </article>
+        </BlogContentUrlProcessor>
+
+        {/* Buy Tickets CTA */}
+        <div className="blog-buy-tickets">
+          <h2>Get Your Tickets</h2>
+          <p>Buy from trusted sellers and save up to 20% vs. gate pricing.</p>
+          <div className="buy-tickets-grid">
+            <a href={AFFILIATE_LINKS.disney4DayParkHopper} target="_blank" rel="noopener" className="buy-ticket-btn disney">
+              <span>🏰</span>
+              <div>
+                <strong>Disney World</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+            <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener" className="buy-ticket-btn universal">
+              <span>🪄</span>
+              <div>
+                <strong>Universal Orlando</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+            <a href={AFFILIATE_LINKS.seaworld} target="_blank" rel="noopener" className="buy-ticket-btn seaworld">
+              <span>🐬</span>
+              <div>
+                <strong>SeaWorld Orlando</strong>
+                <small>via Undercover Tourist</small>
+              </div>
+            </a>
+          </div>
+        </div>
         
         {/* Bottom CTA */}
         <div className="blog-bottom-cta">

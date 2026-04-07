@@ -5,6 +5,9 @@ import Link from 'next/link';
 import type { CharacterDining } from '@/lib/sanity-types';
 
 interface CharacterDiningTableProps {
+  showFilters?: boolean;
+  parkContext?: string;
+
   diningList: CharacterDining[];
 }
 
@@ -24,11 +27,52 @@ function getParkSlug(park: string | undefined): string {
     'SeaWorld Orlando': 'seaworld-orlando',
     'LEGOLAND Florida': 'legoland-florida',
   };
-  // Check if it's a Disney resort
-  if (park.includes('Resort') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian')) {
+  if (map[park]) return map[park];
+  // Check if it's a resort/hotel location
+  if (park.includes('Resort') || park.includes('Hotel') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian') || park.includes('Villa')) {
     return 'resort';
   }
-  return map[park] || 'other';
+  return 'other';
+}
+
+function getParkColor(park: string | undefined): string {
+  if (!park) return '#718096';
+  const colorMap: Record<string, string> = {
+    'magic-kingdom': '#4A9DE8',
+    'epcot': '#8B5CF6',
+    'hollywood-studios': '#EF4444',
+    'animal-kingdom': '#10B981',
+    'universal-studios-florida': '#F59E0B',
+    'islands-of-adventure': '#06B6D4',
+    'epic-universe': '#8B5CF6',
+    'seaworld-orlando': '#3B82F6',
+    'legoland-florida': '#F97316',
+    'resort': '#EC4899',
+    'other': '#718096',
+  };
+  const slug = getParkSlug(park);
+  return colorMap[slug] || '#718096';
+}
+
+function getLocationLabel(park: string | undefined, itemName: string | undefined): string {
+  if (!park) return 'Orlando Area';
+  // If it's a known in-park location, show park name
+  const inParkMap: Record<string, string> = {
+    'Magic Kingdom': 'Magic Kingdom',
+    'EPCOT': 'EPCOT',
+    'Hollywood Studios': 'Hollywood Studios',
+    'Animal Kingdom': 'Animal Kingdom',
+    'Universal Studios Florida': 'Universal Studios Florida',
+    'Islands of Adventure': 'Islands of Adventure',
+    'Epic Universe': 'Epic Universe',
+    'SeaWorld Orlando': 'SeaWorld Orlando',
+    'LEGOLAND Florida': 'LEGOLAND Florida',
+  };
+  if (inParkMap[park]) return inParkMap[park];
+  // For resort/hotel locations, show the restaurant name as the primary label
+  if (itemName) return itemName;
+  // Otherwise show the specific resort name (item.park from Sanity)
+  return park;
 }
 
 function isInPark(park: string | undefined): boolean {
@@ -46,7 +90,7 @@ function formatCharacters(chars: string[] | undefined): string {
   return chars.slice(0, 3).join(', ') + (chars.length > 3 ? ` +${chars.length - 3}` : '');
 }
 
-export default function CharacterDiningTable({ diningList }: CharacterDiningTableProps) {
+export default function CharacterDiningTable({ diningList, showFilters = true, parkContext }: CharacterDiningTableProps) {
   const [mealFilter, setMealFilter] = useState<MealType>('all');
   const [locationFilter, setLocationFilter] = useState<LocationType>('all');
   const [searchChar, setSearchChar] = useState('');
@@ -79,7 +123,7 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
 
   return (
     <div className="dining-table-wrapper">
-      {/* Filter Pills */}
+      {showFilters && (
       <div className="dining-filters">
         <div className="filter-group">
           <span className="filter-label">Meal</span>
@@ -151,6 +195,7 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
           </div>
         </div>
       </div>
+      )}
 
       <div className="results-count-bar">
         <p className="count-text">
@@ -187,9 +232,18 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
                   <td className="td-restaurant">
                     <div className="restaurant-info">
                       <h3 className="restaurant-name">{item.name}</h3>
-                      <span className={`location-badge location-${parkSlug}`}>
-                        {item.park || 'Orlando Area'}
-                      </span>
+                      <div className="location-row">
+                        <span
+                          className={`location-badge park-badge--${parkSlug}`}
+                        >
+                          {getLocationLabel(item.park, item.name)}
+                        </span>
+                        {isInPark(item.park) && (
+                          <span className="in-park-indicator">
+                            📍 {item.park}
+                          </span>
+                        )}
+                      </div>
                       {item.priceRange && (
                         <span className="price-badge">{item.priceRange}</span>
                       )}
@@ -425,28 +479,40 @@ export default function CharacterDiningTable({ diningList }: CharacterDiningTabl
           margin: 0;
         }
 
+        .location-row {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.375rem;
+        }
+
         .location-badge {
           display: inline-block;
-          font-size: 0.6875rem;
-          font-weight: 500;
+          font-size: 0.75rem;
+          font-weight: 600;
           padding: 0.2rem 0.5rem;
           border-radius: 4px;
-          background: var(--bg-light);
-          color: var(--text-medium);
           width: fit-content;
         }
 
-        .location-magic-kingdom { color: #4A9DE8; background: #EFF6FF; }
-        .location-epcot { color: #8B5CF6; background: #F5F3FF; }
-        .location-hollywood-studios { color: #EF4444; background: #FEF2F2; }
-        .location-animal-kingdom { color: #10B981; background: #ECFDF5; }
-        .location-universal-studios-florida { color: #F59E0B; background: #FFFBEB; }
-        .location-islands-of-adventure { color: #06B6D4; background: #ECFEFF; }
-        .location-epic-universe { color: #8B5CF6; background: #F5F3FF; }
-        .location-seaworld-orlando { color: #3B82F6; background: #EFF6FF; }
-        .location-legoland-florida { color: #F97316; background: #FFF7ED; }
-        .location-resort { color: #EC4899; background: #FDF2F8; }
-        .location-other { color: var(--text-medium); }
+        .in-park-indicator {
+          font-size: 0.6875rem;
+          font-weight: 500;
+          color: var(--text-light);
+        }
+
+        /* Park badge colors matching RidesTable */
+        .park-badge--magic-kingdom { color: #4A9DE8; background: #EFF6FF; }
+        .park-badge--epcot { color: #8B5CF6; background: #F5F3FF; }
+        .park-badge--hollywood-studios { color: #EF4444; background: #FEF2F2; }
+        .park-badge--animal-kingdom { color: #10B981; background: #ECFDF5; }
+        .park-badge--universal-studios-florida { color: #F59E0B; background: #FFFBEB; }
+        .park-badge--islands-of-adventure { color: #06B6D4; background: #ECFEFF; }
+        .park-badge--epic-universe { color: #8B5CF6; background: #F5F3FF; }
+        .park-badge--seaworld-orlando { color: #3B82F6; background: #EFF6FF; }
+        .park-badge--legoland-florida { color: #F97316; background: #FFF7ED; }
+        .park-badge--resort { color: #EC4899; background: #FDF2F8; }
+        .park-badge--other { color: var(--text-medium); background: var(--bg-light); }
 
         .price-badge {
           font-size: 0.6875rem;

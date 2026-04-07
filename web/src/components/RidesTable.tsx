@@ -87,9 +87,21 @@ function isCalmExperience(ride: Ride): boolean {
   );
 }
 
+const PARK_SORT_ORDER = [
+  'Magic Kingdom',
+  'EPCOT',
+  'Hollywood Studios',
+  'Animal Kingdom',
+  'Universal Studios Florida',
+  'Islands of Adventure',
+  'Epic Universe',
+  'SeaWorld Orlando',
+  'LEGOLAND Florida',
+];
+
 export default function RidesTable({ rides, showParkColumn = true, compact = false }: RidesTableProps) {
   const { filters } = useFilters();
-  const [sortField, setSortField] = useState<SortField>('name');
+  const [sortField, setSortField] = useState<SortField>('park');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
   const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
 
@@ -134,8 +146,11 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
           bVal = b.name || '';
           break;
         case 'park':
-          aVal = a.park || '';
-          bVal = b.park || '';
+          aVal = PARK_SORT_ORDER.indexOf(a.park);
+          bVal = PARK_SORT_ORDER.indexOf(b.park);
+          // Fall back to alphabetical if park not in order list
+          if (aVal === -1) aVal = a.park || '';
+          if (bVal === -1) bVal = b.park || '';
           break;
         case 'thrillLevel':
           aVal = a.thrillLevel || 0;
