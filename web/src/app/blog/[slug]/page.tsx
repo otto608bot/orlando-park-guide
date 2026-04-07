@@ -8,6 +8,7 @@ import QuestionForm from "@/components/QuestionForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
+import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -180,9 +181,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
         
-        <article className="blog-content">
+        <BlogContentUrlProcessor>
           <PortableText value={post.body} components={components} />
-        </article>
+        </BlogContentUrlProcessor>
 
         {/* Buy Tickets CTA */}
         <div className="blog-buy-tickets">
