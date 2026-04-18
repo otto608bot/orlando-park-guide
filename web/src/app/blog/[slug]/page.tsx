@@ -94,34 +94,41 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
       h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
       normal: ({ children }: { children?: React.ReactNode }) => {
-        // Handle ticket button paragraphs like "[ Buy 1-Park Epic Universe Tickets → ]"
+        // children is React.ReactNode — can be a string, an array with one span, or an array of mixed content
+        // Extract the ticket button text if present
+        let ticketText: string | null = null;
         if (typeof children === 'string') {
-          const match = children.match(/^\[ Buy (.+?) → \]$/);
-          if (match) {
-            const label = match[1];
-            // Map each ticket type to the correct affiliate URL
-            let url: string = AFFILIATE_LINKS.universal3Park3Day;
-            if (label.toLowerCase().includes('1-park epic universe')) {
-              url = AFFILIATE_LINKS.universal1Park1DayEpic;
-            } else if (label.toLowerCase().includes('2-park')) {
-              url = AFFILIATE_LINKS.universal2Park2Day;
-            } else if (label.toLowerCase().includes('3-park')) {
-              url = AFFILIATE_LINKS.universal3Park3Day;
-            } else if (label.toLowerCase().includes('express pass')) {
-              url = AFFILIATE_LINKS.universal3Park3Day;
-            } else if (label.toLowerCase().includes('direct from universal')) {
-              url = AFFILIATE_LINKS.universalOrlandoDirect;
-            } else if (label.toLowerCase().includes('undercover tourist')) {
-              url = AFFILIATE_LINKS.universal3Park3Day;
-            }
-            return (
-              <p>
-                <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
-                  Buy {label} →
-                </a>
-              </p>
-            );
+          const match = (children as string).match(/^\[ Buy (.+?) → \]$/);
+          if (match) ticketText = match[1];
+        } else if (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string') {
+          // children is an array wrapping a single plain string like ["[ Buy X → ]"]
+          const match = (children[0] as string).match(/^\[ Buy (.+?) → \]$/);
+          if (match) ticketText = match[1];
+        }
+        if (ticketText) {
+          // Map each ticket type to the correct affiliate URL
+          let url: string = AFFILIATE_LINKS.universal3Park3Day;
+          const labelLower = ticketText.toLowerCase();
+          if (labelLower.includes('1-park epic universe')) {
+            url = AFFILIATE_LINKS.universal1Park1DayEpic;
+          } else if (labelLower.includes('2-park')) {
+            url = AFFILIATE_LINKS.universal2Park2Day;
+          } else if (labelLower.includes('3-park')) {
+            url = AFFILIATE_LINKS.universal3Park3Day;
+          } else if (labelLower.includes('express pass')) {
+            url = AFFILIATE_LINKS.universal3Park3Day;
+          } else if (labelLower.includes('direct from universal')) {
+            url = AFFILIATE_LINKS.universalOrlandoDirect;
+          } else if (labelLower.includes('undercover tourist')) {
+            url = AFFILIATE_LINKS.universal3Park3Day;
           }
+          return (
+            <p>
+              <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+                Buy {ticketText} →
+              </a>
+            </p>
+          );
         }
         // Process string children to inject affiliate links
         const processed = Array.isArray(children)
@@ -168,7 +175,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   };
 
-  const processTicketButtonInline = (text: string): React.ReactNode => {
+  const processTicketButtonsInline = (text: string): React.ReactNode => {
     const match = text.match(/^\[ Buy (.+?) → \]$/);
     if (match) {
       const label = match[1];
