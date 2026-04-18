@@ -94,6 +94,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
       h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
       normal: ({ children }: { children?: React.ReactNode }) => {
+        // Handle ticket button paragraphs like "[ Buy 1-Park Epic Universe Tickets → ]"
+        if (typeof children === 'string') {
+          const match = children.match(/^\[ Buy (.+?) → \]$/);
+          if (match) {
+            return (
+              <p>
+                <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+                  Buy {match[1]} →
+                </a>
+              </p>
+            );
+          }
+        }
         // Process string children to inject affiliate links
         const processed = Array.isArray(children)
           ? children.map((child) => typeof child === 'string' ? processTextWithAffiliates(child) : child)
@@ -120,6 +133,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
       number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
     },
+    // Handle plain text ticket buttons like "[ Buy 1-Park Epic Universe Tickets → ]"
+    types: {
+      span: ({ value }: { value?: { text?: string } }) => {
+        const text = value?.text || '';
+        const ticketMatch = text.match(/^\[ Buy (.+?) → \]$/);
+        if (ticketMatch) {
+          const label = ticketMatch[1];
+          const url = AFFILIATE_LINKS.universal3Park3Day;
+          return (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+              Buy {label} →
+            </a>
+          );
+        }
+        return text;
+      },
+    },
+  };
+
+  const processTicketButtonInline = (text: string): React.ReactNode => {
+    const match = text.match(/^\[ Buy (.+?) → \]$/);
+    if (match) {
+      const label = match[1];
+      return (
+        <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+          Buy {label} →
+        </a>
+      );
+    }
+    return null;
+  };
+
+  // Also handle paragraphs that are entirely ticket button text
+  const processTicketButtons = (text: string): React.ReactNode[] => {
+    const parts: React.ReactNode[] = [];
+    const regex = /\[ Buy (.+?) → \]/g;
+    let lastIndex = 0;
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+      const label = match[1];
+      const url = AFFILIATE_LINKS.universal3Park3Day;
+      parts.push(
+        <a key={match.index} href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+          Buy {label} →
+        </a>
+      );
+      lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+    return parts.length > 0 ? parts : [];
   };
 
   // Fallback hero image based on category
@@ -166,9 +234,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="excerpt">{post.excerpt}</p>}
           <div className="blog-meta">
-            <span>By {post.author?.name}</span>
+            <span>By {post.author?.name || "Plan Your Park"}</span>
             <span>•</span>
-            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt || new Date().toISOString())}</time>
             {post.readTime && <><span>•</span><span>{post.readTime} min read</span></>}
           </div>
         </header>

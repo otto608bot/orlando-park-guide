@@ -347,6 +347,27 @@
 .inline-link { color: var(--primary); text-decoration: underline; }
 .inline-link:hover { color: #e85a1a; }
 
+/* Ticket CTA button style - renders "[ Buy X → ]" as a styled button */
+.ticket-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary) 0%, #e85a1a 100%);
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  margin: 0.75rem 0;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(243, 112, 33, 0.3);
+}
+.ticket-cta-btn:hover {
+  background: linear-gradient(135deg, #e85a1a 0%, var(--primary) 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(243, 112, 33, 0.4);
+}
+
 /* Affiliate CTA Button Style */
 .affiliate-cta {
   display: inline-block;
