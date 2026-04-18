@@ -18,11 +18,15 @@ export const metadata: Metadata = {
   },
   description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld, LEGOLAND & more!",
   keywords: ["Orlando theme parks", "Disney World", "Universal Orlando", "SeaWorld", "theme park planning", "Orlando vacation"],
+  alternates: {
+    canonical: "https://planyourpark.com",
+  },
   openGraph: {
     title: "Plan Your Park | Orlando Theme Park Planning Guide",
     description: "Your ultimate guide to Orlando theme parks",
     type: "website",
     locale: "en_US",
+    url: "https://planyourpark.com",
   },
   icons: {
     icon: [
