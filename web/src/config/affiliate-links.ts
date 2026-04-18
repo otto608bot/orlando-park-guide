@@ -13,6 +13,8 @@ export const AFFILIATE_LINKS = {
   universal3Park3Day: 'https://www.dpbolvw.net/click-101693488-12983229',
   universal3DayBaseVolcanoBay: 'https://www.tkqlhce.com/click-101693488-12834933',
   universal4DayBase: 'https://www.tkqlhce.com/click-101693488-12983232',
+  universal1Park1DayEpic: 'https://www.tkqlhce.com/click-101693488-12834895',
+  universalOrlandoDirect: 'https://www.universalorlando.com',
 
   // Individual parks
   seaworld: 'https://www.tkqlhce.com/click-101693488-12540778',
