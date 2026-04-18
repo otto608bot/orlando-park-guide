@@ -69,9 +69,8 @@ function getLocationLabel(park: string | undefined, itemName: string | undefined
     'LEGOLAND Florida': 'LEGOLAND Florida',
   };
   if (inParkMap[park]) return inParkMap[park];
-  // For resort/hotel locations, show the restaurant name as the primary label
-  if (itemName) return itemName;
-  // Otherwise show the specific resort name (item.park from Sanity)
+  // For resort/hotel locations, show the resort/hotel name as the badge label
+  // (the restaurant name is already shown in the restaurant-info section below)
   return park;
 }
 
