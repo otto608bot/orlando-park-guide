@@ -38,6 +38,11 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     if (catTitles.includes('news') || catTitles.includes('update')) {
       return '/Magic-Kingdom.webp';
     }
+    // Slug-specific overrides for posts without categories
+    const slug = post.slug?.current || '';
+    if (slug === 'epic-universe-tickets-guide') {
+      return '/epic-universe.jpeg';
+    }
     return '/epcot.jpeg';
   };
 

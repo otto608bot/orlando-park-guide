@@ -98,10 +98,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         if (typeof children === 'string') {
           const match = children.match(/^\[ Buy (.+?) → \]$/);
           if (match) {
+            const label = match[1];
+            // Map each ticket type to the correct affiliate URL
+            let url: string = AFFILIATE_LINKS.universal3Park3Day;
+            if (label.toLowerCase().includes('1-park epic universe')) {
+              url = AFFILIATE_LINKS.universal1Park1DayEpic;
+            } else if (label.toLowerCase().includes('2-park')) {
+              url = AFFILIATE_LINKS.universal2Park2Day;
+            } else if (label.toLowerCase().includes('3-park')) {
+              url = AFFILIATE_LINKS.universal3Park3Day;
+            } else if (label.toLowerCase().includes('express pass')) {
+              url = AFFILIATE_LINKS.universal3Park3Day;
+            } else if (label.toLowerCase().includes('direct from universal')) {
+              url = AFFILIATE_LINKS.universalOrlandoDirect;
+            } else if (label.toLowerCase().includes('undercover tourist')) {
+              url = AFFILIATE_LINKS.universal3Park3Day;
+            }
             return (
               <p>
-                <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
-                  Buy {match[1]} →
+                <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+                  Buy {label} →
                 </a>
               </p>
             );
@@ -226,15 +242,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       
       <main className="blog-container">
         <header className="blog-header">
-          {post.categories?.length > 0 && (
+          {post.categories?.length > 0 ? (
             <div className="blog-categories">
               {post.categories.map((cat: any) => <span key={cat.slug?.current}>{cat.title}</span>)}
+            </div>
+          ) : (
+            // Fallback category for posts without categories (e.g., epic-universe-tickets-guide)
+            <div className="blog-categories">
+              <span>Epic Universe</span>
             </div>
           )}
           <h1>{post.title}</h1>
           {post.excerpt && <p className="excerpt">{post.excerpt}</p>}
           <div className="blog-meta">
-            <span>By {post.author?.name || "Plan Your Park"}</span>
+            <span>By {post.author?.name ? post.author.name : "Plan Your Park"}</span>
             <span>•</span>
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt || new Date().toISOString())}</time>
             {post.readTime && <><span>•</span><span>{post.readTime} min read</span></>}
