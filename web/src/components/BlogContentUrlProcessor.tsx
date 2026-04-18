@@ -50,14 +50,25 @@ export default function BlogContentUrlProcessor({ children }: { children: React.
             fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
           }
           
-          // Add the URL as a link
+          // Add the URL as a link with clean display text
           const url = match[1];
           const link = document.createElement('a');
           link.href = url;
           link.target = '_blank';
           link.rel = 'noopener noreferrer';
           link.className = 'inline-link';
-          link.textContent = url;
+          // Use clean display text for Amazon URLs, otherwise show clean truncated URL
+          if (url.includes('amazon.com')) {
+            link.textContent = 'Get it on Amazon';
+          } else {
+            // Truncate long URLs for display (e.g. URL parameters with tracking)
+            try {
+              const parsed = new URL(url);
+              link.textContent = parsed.hostname + (parsed.pathname.length > 20 ? parsed.pathname.slice(0, 20) + '…' : parsed.pathname);
+            } catch {
+              link.textContent = url.length > 40 ? url.slice(0, 40) + '…' : url;
+            }
+          }
           fragment.appendChild(link);
           
           lastIndex = match.index + url.length;
