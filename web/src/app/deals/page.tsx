@@ -776,6 +776,16 @@ export default function DealsPage() {
           padding: 0.875rem 1rem;
           background: var(--bg-light);
           border-radius: 10px;
+          transition: background 0.15s;
+        }
+
+        .tip-item:hover {
+          background: var(--bg-white);
+        }
+
+        .tip-item:focus-within {
+          outline: 2px solid var(--primary);
+          outline-offset: 1px;
         }
 
         .tip-item--highlight {

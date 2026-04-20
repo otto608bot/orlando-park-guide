@@ -31,7 +31,7 @@ export default function Footer() {
         .site-footer {
           background: #F8FAFC;
           color: var(--text-medium);
-          padding: 2rem 1.5rem 1.5rem;
+          padding: 1.25rem 1.5rem 1rem;
           margin-top: 4rem;
           border-top: 1px solid var(--border);
         }
@@ -42,7 +42,7 @@ export default function Footer() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 1.25rem;
+          gap: 0.75rem;
           text-align: center;
         }
 
@@ -52,21 +52,21 @@ export default function Footer() {
         }
 
         .footer-logo {
-          height: 28px;
+          height: 22px;
           width: auto;
         }
 
         .footer-links {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.25rem 1.5rem;
+          gap: 0.25rem 1.25rem;
           justify-content: center;
         }
 
         .footer-links a {
           color: var(--text-medium);
           text-decoration: none;
-          font-size: 0.875rem;
+          font-size: 0.8125rem;
           transition: color 0.15s;
         }
 
@@ -77,20 +77,20 @@ export default function Footer() {
         .footer-bottom {
           display: flex;
           flex-direction: column;
-          gap: 0.375rem;
+          gap: 0.25rem;
           align-items: center;
         }
 
         .footer-disclaimer {
           color: var(--text-light);
-          font-size: 0.75rem;
+          font-size: 0.6875rem;
           line-height: 1.4;
           max-width: 480px;
         }
 
         .footer-copyright {
           color: var(--text-light);
-          font-size: 0.75rem;
+          font-size: 0.6875rem;
         }
       `}</style>
     </footer>
