@@ -27,12 +27,35 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = await sanityClient.fetch(`
     *[_type == "blogPost" && slug.current == $slug][0] {
       title,
-      excerpt
+      excerpt,
+      tags,
+      categories[] { title, slug }
     }
   `, { slug });
   
   if (!post) return { title: "Post Not Found" };
-  return { title: post.title, description: post.excerpt };
+  
+  // Build keywords from tags, fallback to excerpt-based
+  const keywords = post.tags?.length > 0
+    ? post.tags.join(", ")
+    : "Disney World packing list, Orlando theme parks, family travel";
+  
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      locale: "en_US",
+      url: `https://planyourpark.com/blog/${slug}`,
+      siteName: "Plan Your Park",
+    },
+    alternates: {
+      canonical: `https://planyourpark.com/blog/${slug}`,
+    },
+  };
 }
 
 async function getPostData(slug: string) {
