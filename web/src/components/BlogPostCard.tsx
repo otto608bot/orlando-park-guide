@@ -25,11 +25,26 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     });
   };
 
-  // Category-based fallback images
+  // Category-based fallback images (mirrors blog/[slug]/page.tsx fallback logic)
   const getCategoryImage = () => {
     const cats = post.categories || [];
     const catTitles = cats.map((c: any) => c.title || '').join(' ').toLowerCase();
-    if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood studios') || catTitles.includes('animal kingdom')) {
+    const slug = post.slug?.current || '';
+    const slugLower = slug.toLowerCase();
+    
+    // Slug-based detection first (same as individual post page)
+    if (slugLower.includes('epic-universe')) {
+      return '/epic-universe.jpeg';
+    }
+    if (slugLower.includes('universal')) {
+      return '/Universal-Studios.jpeg';
+    }
+    if (slugLower.includes('packing') || slugLower.includes('best-time-visit-disney')) {
+      return '/Disney-World.webp';
+    }
+    
+    // Category-based detection
+    if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood') || catTitles.includes('animal')) {
       return '/Disney-World.webp';
     }
     if (catTitles.includes('universal')) {
@@ -37,11 +52,6 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     }
     if (catTitles.includes('news') || catTitles.includes('update')) {
       return '/Magic-Kingdom.webp';
-    }
-    // Slug-specific overrides for posts without categories
-    const slug = post.slug?.current || '';
-    if (slug === 'epic-universe-tickets-guide') {
-      return '/epic-universe.jpeg';
     }
     return '/epcot.jpeg';
   };
