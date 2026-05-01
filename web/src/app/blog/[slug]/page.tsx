@@ -236,18 +236,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     return parts.length > 0 ? parts : [];
   };
 
-  // Fallback hero image based on category
+  // Fallback hero image based on category or slug
   const getFallbackHero = () => {
     const cats = post.categories || [];
     const catTitles = (cats.map((c: any) => c.title || '').join(' ').toLowerCase());
+    const slugLower = (post.slug?.current || '').toLowerCase();
+    // Check slug directly since categories may not be resolved
+    if (slugLower.includes('epic-universe')) {
+      return '/epic-universe.jpeg';
+    }
     if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood') || catTitles.includes('animal')) {
       return '/Disney-World.webp';
     }
-    if (catTitles.includes('universal')) {
+    if (catTitles.includes('universal') || slugLower.includes('universal')) {
       return '/Universal-Studios.jpeg';
     }
     if (catTitles.includes('news') || catTitles.includes('update')) {
       return '/Magic-Kingdom.webp';
+    }
+    if (slugLower.includes('disney-world-packing') || slugLower.includes('best-time-visit-disney')) {
+      return '/Disney-World.webp';
     }
     return '/epcot.jpeg';
   };
