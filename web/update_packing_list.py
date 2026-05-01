@@ -47,9 +47,9 @@ def li(text):   return block(text, style="normal", list_item="bullet")
 body = [
     h2("What to Pack for Disney World in 2026 — The Complete Checklist"),
 
-    p("Most Disney World packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by locals who've done this dozens of times, updated for 2026 park policies, Genie+ changes, and current Florida weather patterns."),
+    p("Most Disney World packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by locals who've done this dozens of times, updated for 2026 park policies, Lightning Lane changes, and current Florida weather patterns."),
 
-    p("If you're wondering what to bring to Disney World in 2026, this page covers everything: electronics, sun protection, clothing, comfort items, family essentials, and a dedicated 2026-specific section covering the Disney app, park reservation system, and Genie+ requirements that actually matter when you're standing in line."),
+    p("If you're wondering what to bring to Disney World in 2026, this page covers everything: electronics, sun protection, clothing, comfort items, family essentials, and a dedicated 2026-specific section covering the Disney app, park reservation system, and Lightning Lane requirements that actually matter when you're standing in line."),
 
     h2("2026 Disney World: What Changed and What It Means for Your Packing List"),
 
@@ -57,7 +57,7 @@ body = [
 
     li("The My Disney Experience app is now required for Lightning Lane bookings at all four parks — your phone is not optional, it's your primary access tool"),
     li("Park reservations are no longer required for standard ticket holders, but date-based ticketing remains in effect for peak days — link your ticket to your app before you leave home"),
-    li("Genie+ continues to evolve; the service works via the app only, so a backup phone charger is no longer optional — if your phone dies you can't book Lightning Lanes"),
+    li("Lightning Lane continues to evolve; the service works via the app only, so a backup phone charger is no longer optional — if your phone dies you can't book Lightning Lanes"),
     li("Disney has expanded mobile ordering at quick-service restaurants — you need a charged phone to place and pick up mobile orders"),
     li("Some locker policies at thrill rides have changed — small daypacks that fit in ride lockers are now preferred over large bags"),
 
@@ -65,12 +65,12 @@ body = [
 
     p("Your phone is the single most important item you bring to Disney World in 2026. It serves as your ticket, your Lightning Lane booking device, your map, your mobile food ordering system, and your camera. Here's what you need:"),
 
-    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Genie+ bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpark-20"),
+    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Lightning Lane bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpark-20"),
     li("USB Charging Cables (2+) — Backup cables for the whole family. Park benches have USB ports at some locations."),
     li("Car Charger — If you're driving to the parks, keep devices charged between destinations."),
     li("USB Charging Cube (Wall Adapter) — Pack a dual-port wall adapter so you can charge two devices simultaneously from your resort room outlet. Most resort rooms have limited outlets near the vanity, not the bed."),
     li("Portable Power Bank (Small, Pocket Size) — A smaller backup charger (5,000–10,000mAh) that fits in your pocket for afternoon park time when your main bank is in the locker or stroller."),
-    li("E-Reader or Tablet — A dedicated device for waiting in line keeps phones free for Genie+ and photos. Load it with movies, books, or games before you leave home."),
+    li("E-Reader or Tablet — A dedicated device for waiting in line keeps phones free for Lightning Lane and photos. Load it with movies, books, or games before you leave home."),
     li("Over-Ear, Noise-Canceling Headphones — Lines are loud, waits are long, and noise-canceling headphones turn a 45-minute wait for Remy's Ratatouille Adventure into a peaceful movie break."),
     li("My Disney Experience App — Downloaded and logged in before you arrive. Not something to pack, but essential to set up the night before. Verify your tickets are linked, your hotel is connected, and your credit card is on file for mobile ordering."),
 
@@ -208,9 +208,9 @@ body = [
 
     p("Winter Disney World (December–February) daytime temps run 60–75°F, but buildings are aggressively air-conditioned. Pack layers: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still necessary — Orlando winter sun is strong enough to burn."),
 
-    h3("Is Genie+ still worth it in 2026?"),
+    h3("Is Lightning Lane still worth it in 2026?"),
 
-    p("Genie+ remains one of the best value purchases at Disney World in 2026. It allows you to book Lightning Lane entrances at most attractions, dramatically reducing wait times. The service works exclusively through the My Disney Experience app — this is why a working, charged phone is non-negotiable. At $15–$25 per person per day, it pays for itself after two or three Lightning Lane uses versus standby lines."),
+    p("Lightning Lane remains one of the best value purchases at Disney World in 2026. It allows you to book Lightning Lane entrances at most attractions, dramatically reducing wait times. The service works exclusively through the My Disney Experience app — this is why a working, charged phone is non-negotiable. At $15–$25 per person per day, it pays for itself after two or three Lightning Lane uses versus standby lines."),
 
     h3("Do I need a stroller for Disney World?"),
 
@@ -230,9 +230,9 @@ document = {
     "title": "The Complete Disney World Packing List (2026) — 65+ Essentials From Locals",
     "slug": {"_type": "slug", "current": "disney-world-packing-list"},
     "body": body,
-    "excerpt": "Save time and money with this expert Disney World packing list — 65+ verified essentials, 2026-specific tips for Genie+ and the Disney app, what to buy on Amazon vs. what to skip, and a free printable checklist. Updated for 2026.",
+    "excerpt": "Save time and money with this expert Disney World packing list — 65+ verified essentials, 2026-specific tips for Lightning Lane and the Disney app, what to buy on Amazon vs. what to skip, and a free printable checklist. Updated for 2026.",
     "readTime": 12,
-    "tags": ["packing list", "disney world", "checklist", "2026", "essentials", "what to pack", "genie+", "disney app"],
+    "tags": ["packing list", "disney world", "checklist", "2026", "essentials", "what to pack", "lightning lane", "disney app"],
     "publishedAt": "2026-03-01T00:00:00Z",
     "categories": [{"_ref": "q5bQv6QFqWcAZeLNacathw", "_type": "reference"}],
 }
