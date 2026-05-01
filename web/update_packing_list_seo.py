@@ -11,7 +11,7 @@ import urllib.error
 
 SANITY_PROJECT_ID = "hd7qwtcq"
 SANITY_DATASET = "production"
-SANITY_TOKEN = "skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj"
+SANITY_TOKEN = "skChJStc0ZNCgsgO1WcF3RvcoOBTNIkselecOgAqjXqas4GTOAeu803htxITdghyjw08UFYBioQWSEs1fVmiQx8vEkdVT1EePNhKehbQAmj3LEprKCTsq1emTHarjvUy6tQSKW7IxkuDoPJ8iPg6iXvyqeAy2IKdn3pSF4uBvswz7BiTFKeV"
 SANITY_URL = f"https://{SANITY_PROJECT_ID}.api.sanity.io/v2024-01-01/data/mutate/{SANITY_DATASET}"
 
 DOC_ID = "disney-world-packing-list"
@@ -53,7 +53,7 @@ def li(text):   return block(text, style="normal", list_item="bullet")
 body = [
     h2("What to Pack for Disney World With Kids in 2026 — The Complete Family Checklist"),
 
-    p("If you're Googling 'what to pack for Disney World vacation with kids 2026,' you're in the right place. Most packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by Orlando locals who've done this dozens of times with their own kids, updated specifically for 2026 park policies, Genie+ requirements, and current Florida weather patterns."),
+    p("If you're Googling 'what to pack for Disney World vacation with kids 2026,' you're in the right place. Most packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by Orlando locals who've done this dozens of times with their own kids, updated specifically for 2026 park policies, Lightning Lane requirements, and current Florida weather patterns."),
 
     p("This guide covers everything your family needs: electronics, sun protection, clothing, comfort items, baby and toddler essentials, school-age kid gear, and a dedicated 2026-specific section covering the Disney app, Lightning Lane system, and park reservation changes that actually matter when you're standing in line with restless kids."),
 
@@ -63,7 +63,7 @@ body = [
 
     li("The My Disney Experience app is now required for Lightning Lane bookings at all four parks — your phone is your primary access tool, not optional"),
     li("Park reservations are no longer required for standard ticket holders, but date-based ticketing remains in effect on peak days — link every family member's ticket to the app before you leave home"),
-    li("Genie+ works via the app only — if your phone dies, you can't book Lightning Lanes for your kids"),
+    li("Lightning Lane works via the app only — if your phone dies, you can't book Lightning Lanes for your kids"),
     li("Mobile ordering has expanded at quick-service restaurants — you need a charged phone to place and pick up orders for hungry kids"),
     li("Some thrill rides now require smaller bags for lockers — a compact daypack is preferred over large rolling bags when traveling with kids"),
     li("Stroller size limits remain enforced (31\" wide, 52\" long max) — measure before you pack"),
@@ -72,12 +72,12 @@ body = [
 
     p("Your phone is the single most important item you bring to Disney World in 2026. It serves as your ticket, your Lightning Lane booking device, your map, your mobile food ordering system, and your camera. For families, you need backup plans:"),
 
-    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Genie+ bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days for the whole family. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpark-20"),
+    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Lightning Lane bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days for the whole family. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpark-20"),
     li("USB Charging Cables (2+ per adult) — Backup cables for the whole family. Park benches have USB ports at some locations."),
     li("Car Charger — If you're driving to the parks, keep everyone's devices charged between destinations."),
     li("USB Charging Cube (Dual-Port Wall Adapter) — Pack a dual-port wall adapter so you can charge two devices simultaneously from your resort room outlet. Most resort rooms have limited outlets near the vanity, not the bed."),
     li("Portable Power Bank (Small, Pocket Size) — A smaller backup charger (5,000–10,000mAh) that fits in your pocket for afternoon park time when your main bank is in the stroller."),
-    li("E-Reader or Tablet — A dedicated device for waiting in line keeps phones free for Genie+ and photos. Load it with movies, books, or games before you leave home — ideal for kids who get antsy in long lines."),
+    li("E-Reader or Tablet — A dedicated device for waiting in line keeps phones free for Lightning Lane and photos. Load it with movies, books, or games before you leave home — ideal for kids who get antsy in long lines."),
     li("Over-Ear, Noise-Canceling Headphones — Lines are loud, waits are long, and noise-canceling headphones turn a 45-minute wait into a peaceful movie break for your kids."),
     li("My Disney Experience App — Downloaded, logged in, and tickets linked for every family member before you arrive. Verify everything the night before."),
 
@@ -184,7 +184,7 @@ body = [
     li("Disposable Rain Ponchos — Lighter and more packable than adult versions. Great for unexpected Florida showers."),
     li("Small Cash Pouch or Wallet — Give kids a small amount of money for souvenirs, pin trading, or a special treat. Teaches money management and reduces constant requests."),
     li("Sibling Trading Pins — If you have multiple kids, pack some cheap Disney pins for siblings to trade with each other — keeps them engaged in lines."),
-    li("Charged Tablet or Handheld Game — For long waits in line. Keep phones free for Genie+ bookings."),
+    li("Charged Tablet or Handheld Game — For long waits in line. Keep phones free for Lightning Lane bookings."),
     li("Reusable Water Bottle with Carrying Strap — Easier for kids to carry than adults' bottles. Find one with a strap that fits onto strollers."),
 
     h2("What NOT to Pack for Disney World With Kids in 2026"),
@@ -227,9 +227,9 @@ body = [
 
     p("Winter Disney World (December–February) daytime temps run 60–75°F, but buildings are aggressively air-conditioned. Pack layers for everyone: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still necessary — Orlando winter sun is strong enough to burn kids' exposed skin."),
 
-    h3("Is Genie+ still worth it for families in 2026?"),
+    h3("Is Lightning Lane still worth it for families in 2026?"),
 
-    p("Genie+ remains one of the best value purchases at Disney World in 2026, especially for families with kids who can't handle long standby lines. It allows you to book Lightning Lane entrances at most attractions, dramatically reducing wait times. The service works exclusively through the My Disney Experience app — this is why a working, charged phone is non-negotiable. At $15–$25 per person per day, it pays for itself after two or three Lightning Lane uses versus standby lines."),
+    p("Lightning Lane remains one of the best value purchases at Disney World in 2026, especially for families with kids who can't handle long standby lines. It allows you to book Lightning Lane entrances at most attractions, dramatically reducing wait times. The service works exclusively through the My Disney Experience app — this is why a working, charged phone is non-negotiable. At $15–$25 per person per day, it pays for itself after two or three Lightning Lane uses versus standby lines."),
 
     h3("Do I need a stroller for Disney World with my kids?"),
 
@@ -250,9 +250,9 @@ document = {
     "title": "What to Pack for Disney World With Kids (2026) — 65+ Essentials for Families",
     "slug": {"_type": "slug", "current": "disney-world-packing-list"},
     "body": body,
-    "excerpt": "Complete Disney World packing list for families with kids in 2026. 65+ verified essentials including what to pack for babies, toddlers, and school-age kids. Updated for Genie+, the Disney app, and Florida weather. Free checklist inside.",
+    "excerpt": "Complete Disney World packing list for families with kids in 2026. 65+ verified essentials including what to pack for babies, toddlers, and school-age kids. Updated for Lightning Lane, the Disney app, and Florida weather. Free checklist inside.",
     "readTime": 14,
-    "tags": ["packing list", "disney world", "checklist", "2026", "essentials", "what to pack", "genie+", "disney app", "family", "kids", "family travel", "with kids", "toddlers", "babies"],
+    "tags": ["packing list", "disney world", "checklist", "2026", "essentials", "what to pack", "lightning lane", "disney app", "family", "kids", "family travel", "with kids", "toddlers", "babies"],
     "publishedAt": "2026-03-01T00:00:00Z",
     "categories": [{"_ref": "q5bQv6QFqWcAZeLNacathw", "_type": "reference"}],
 }

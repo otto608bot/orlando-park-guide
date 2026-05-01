@@ -46,7 +46,7 @@
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Jungle Cruise – Guided boat tour with terrible jokes. Kids love the 'wild' animals."}]},
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Country Bear Jamboree – Animated bears singing. Weirdly beloved by a certain age group."}]},
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "The Magic Carpets of Aladdin – Spinning carpet ride. You can make it go up and down."}]},
-  {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Dumbo the Flying Elephant – Classic spinning ride. The queues here can get long—use Genie+."}]},
+  {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Dumbo the Flying Elephant – Classic spinning ride. The queues here can get long—use Lightning Lane."}]},
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "The Barnstormer – Small coaster with no inversions. Great first 'big kid' coaster at 35\"+."}]},
   {"_type": "block", "style": "h3", "children": [{"_type": "span", "text": "Rides at 38-40 Inches"}]},
   {"_type": "block", "style": "normal", "children": [{"_type": "span", "text": "These rides require kids to be between 38-40 inches, which puts them right at the edge of what your little one might be able to do:"}]},
@@ -54,7 +54,7 @@
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Tomorrowland Speedway – 32\" to ride alone, any height with another rider. Go-karts at Disney!"}]},
   {"_type": "block", "style": "normal", "listItem": "bullet", "children": [{"_type": "span", "text": "Space Mountain – 44\" is the official requirement, but at 40\" some kids are ready for the dark indoor coaster."}]},
   {"_type": "block", "style": "h2", "children": [{"_type": "span", "text": "My Touring Plan for Short Kids at Magic Kingdom"}]},
-  {"_type": "block", "style": "normal", "children": [{"_type": "span", "text": "Here's what actually works when you're touring Magic Kingdom with a child under 40 inches. Arrive at opening and head straight to Fantasyland—that's where the highest concentration of no-height-limit rides lives. Do Peter Pan's Flight first (it books up fast on Genie+), then move to It's a Small World, followed by The Many Adventures of Winnie the Pooh. By then you'll have done the core Fantasyland classics before the crowd really builds."}]},
+  {"_type": "block", "style": "normal", "children": [{"_type": "span", "text": "Here's what actually works when you're touring Magic Kingdom with a child under 40 inches. Arrive at opening and head straight to Fantasyland—that's where the highest concentration of no-height-limit rides lives. Do Peter Pan's Flight first (it books up fast on Lightning Lane), then move to It's a Small World, followed by The Many Adventures of Winnie the Pooh. By then you'll have done the core Fantasyland classics before the crowd really builds."}]},
   {"_type": "block", "style": "normal", "children": [{"_type": "span", "text": "After Fantasyland, move to Adventureland for Pirates of the Caribbean and Jungle Cruise—both usually have reasonable waits mid-morning. Save The Haunted Mansion for early afternoon when the Florida heat peaks and indoor rides are welcome. End your day with the evening parade and fireworks. Your short kid will have done more rides than kids twice their height."}]},
   {"_type": "block", "style": "h2", "children": [{"_type": "span", "text": "What About the Rides My Child Can't Ride Yet?"}]},
   {"_type": "block", "style": "normal", "children": [{"_type": "span", "text": "If your child is under 38 inches, there are some rides they genuinely can't do yet: Big Thunder Mountain Railroad (40\"), Splash Mountain (40\"), TRON Lightcycle Run (48\"), and Space Mountain (44\"). Here's my advice: don't fight it. Some of our best Magic Kingdom memories with our under-40-inch kids involved one parent doing the 'big kid' rides while the other parent did every single ride in Fantasyland with our kids. We switched off, and both kids felt like they got the full experience."}]},
@@ -75,12 +75,12 @@
 **Slug:** disney-world-with-baby-toddler
 **Read Time:** 11 min
 **Categories:** Disney World
-**Tags:** baby, toddler, planning, kids, genie-plus, stroller, napping
+**Tags:** baby, toddler, planning, kids, lightning-lane, stroller, napping
 **Excerpt:** Disney World with a baby or toddler? It's absolutely doable—and honestly, magical. Here's everything you need to know about strollers, naps, feeding, and maximizing the magic when your little one is under 3.
 
 **Hero Image:** disney-world-with-baby-toddler.jpg
 
-**Body Content:** Full guide covering stroller strategy, nap logistics (in-park vs. back to hotel), baby care centers, Genie+ strategy with toddlers, character meet tips, sample itineraries, etc.
+**Body Content:** Full guide covering stroller strategy, nap logistics (in-park vs. back to hotel), baby care centers, Lightning Lane strategy with toddlers, character meet tips, sample itineraries, etc.
 
 ---
 
@@ -108,7 +108,7 @@
 
 **Hero Image:** beat-disney-world-crowds.jpg
 
-**Body Content:** Crowd calendar breakdown, rope drop strategy, midday break philosophy, late afternoon/evening strategy, Genie+ optimization, park hopping timing, which days are actually crowded vs. quiet.
+**Body Content:** Crowd calendar breakdown, rope drop strategy, midday break philosophy, late afternoon/evening strategy, Lightning Lane optimization, park hopping timing, which days are actually crowded vs. quiet.
 
 ---
 
@@ -136,7 +136,7 @@
 
 **Hero Image:** epic-universe-touring-plan.jpg
 
-**Body Content:** Early entry strategy, ride priorities (Celestial Park, Super Nintendo World, Dark Universe, etc.), Genie+ and Universal Express strategy, dining recommendations within the park, which rides to prioritize based on height, sample hour-by-hour itinerary.
+**Body Content:** Early entry strategy, ride priorities (Celestial Park, Super Nintendo World, Dark Universe, etc.), Lightning Lane and Universal Express strategy, dining recommendations within the park, which rides to prioritize based on height, sample hour-by-hour itinerary.
 
 ---
 
@@ -150,7 +150,7 @@
 
 **Hero Image:** disney-vs-universal.jpg
 
-**Body Content:** Head-to-head comparison across 10 categories: rides for young kids, thrill rides, food quality, value, Genie+ vs. Express Pass, character experiences, park size, multi-day requirements, what each does better, and our overall recommendation based on family type.
+**Body Content:** Head-to-head comparison across 10 categories: rides for young kids, thrill rides, food quality, value, Lightning Lane vs. Express Pass, character experiences, park size, multi-day requirements, what each does better, and our overall recommendation based on family type.
 
 ---
 

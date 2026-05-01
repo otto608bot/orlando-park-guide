@@ -27,7 +27,7 @@ async function getAllBlogPosts() {
 }
 
 export default async function BlogPage() {
-  const posts = await getAllBlogPosts();
+  const posts = (await getAllBlogPosts()).filter((p: any) => p.slug?.current);
 
   return (
     <div className="blog-page-container">
