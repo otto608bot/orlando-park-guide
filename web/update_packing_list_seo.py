@@ -11,7 +11,7 @@ import urllib.error
 
 SANITY_PROJECT_ID = "hd7qwtcq"
 SANITY_DATASET = "production"
-SANITY_TOKEN = "skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj"
+SANITY_TOKEN = "skChJStc0ZNCgsgO1WcF3RvcoOBTNIkselecOgAqjXqas4GTOAeu803htxITdghyjw08UFYBioQWSEs1fVmiQx8vEkdVT1EePNhKehbQAmj3LEprKCTsq1emTHarjvUy6tQSKW7IxkuDoPJ8iPg6iXvyqeAy2IKdn3pSF4uBvswz7BiTFKeV"
 SANITY_URL = f"https://{SANITY_PROJECT_ID}.api.sanity.io/v2024-01-01/data/mutate/{SANITY_DATASET}"
 
 DOC_ID = "disney-world-packing-list"
