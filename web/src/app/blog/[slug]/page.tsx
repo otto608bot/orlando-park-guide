@@ -159,6 +159,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           : typeof children === 'string' ? processTextWithAffiliates(children) : children;
         return <p>{processed}</p>;
       },
+      blockquote: ({ children }: { children?: React.ReactNode }) => {
+        const processed = Array.isArray(children)
+          ? children.map((child) => typeof child === 'string' ? processTextWithAffiliates(child) : child)
+          : typeof children === 'string' ? processTextWithAffiliates(children) : children;
+        return <blockquote><p>{processed}</p></blockquote>;
+      },
     },
     marks: {
       strong: ({ children }: { children?: React.ReactNode }) => <strong style={{ color: 'var(--text-dark)', fontWeight: 700 }}>{children}</strong>,

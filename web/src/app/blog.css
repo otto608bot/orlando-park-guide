@@ -317,6 +317,23 @@
   display: block;
 }
 
+.blog-content blockquote {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFFBF5 100%);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(243, 112, 33, 0.08);
+}
+.blog-content blockquote p { margin-bottom: 0; }
+.blog-content blockquote strong { color: var(--primary); }
+
+/* Parent tip callouts - blockquotes with special styling */
+.blog-content blockquote:has(strong:first-child) {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFFBF5 100%);
+  border-left: 4px solid var(--primary);
+}
+
 .blog-content { font-size: 1.0625rem; color: var(--text-medium); }
 .blog-content h2 {
   font-family: var(--font-heading);
