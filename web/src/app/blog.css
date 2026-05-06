@@ -328,7 +328,7 @@
 .blog-content blockquote p { margin-bottom: 0; }
 .blog-content blockquote strong { color: var(--primary); }
 
-/* Parent tip callouts - blockquotes with special styling */
+/* Parent tip callouts - special highlight treatment */
 .blog-content blockquote:has(strong:first-child) {
   background: linear-gradient(135deg, #FFF7ED 0%, #FFFBF5 100%);
   border-left: 4px solid var(--primary);
