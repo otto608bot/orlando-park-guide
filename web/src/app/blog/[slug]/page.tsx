@@ -187,14 +187,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     // Handle plain text ticket buttons like "[ Buy 1-Park Epic Universe Tickets → ]"
     types: {
+      block: (props: { value?: unknown; children?: ReactNode }) => {
+        return <>{props.children}</>;
+      },
       span: ({ value }: { value?: { text?: string } }) => {
         const text = value?.text || '';
         const ticketMatch = text.match(/^\[ Buy (.+?) → \]$/);
         if (ticketMatch) {
           const label = ticketMatch[1];
-          const url = AFFILIATE_LINKS.universal3Park3Day;
           return (
-            <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+            <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
               Buy {label} →
             </a>
           );
