@@ -182,8 +182,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
     },
     listItem: {
-      bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
-      number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+      bullet: ({ children }: { children?: React.ReactNode }) => {
+        if (Array.isArray(children)) {
+          return children.map((child, i) => <li key={i}>{child}</li>);
+        }
+        return <li>{children}</li>;
+      },
+      number: ({ children }: { children?: React.ReactNode }) => {
+        if (Array.isArray(children)) {
+          return children.map((child, i) => <li key={i}>{child}</li>);
+        }
+        return <li>{children}</li>;
+      },
     },
 
   };

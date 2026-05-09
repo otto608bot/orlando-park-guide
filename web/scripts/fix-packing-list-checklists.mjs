@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 /**
- * Patch script: Fix remaining 9 bullet list blocks in disney-world-packing-list-kids
- * These blocks have style="bullet" but missing listItem="bullet"
+ * Fix list rendering in blog posts: group consecutive listItem blocks into
+ * single blocks so PortableText renders them as one <ol>/<ul> with proper numbering.
  * 
- * These are the Toddler Checklist (blocks 90-102) and Early Elementary Checklist (blocks 104-117)
- * that were NOT fixed in the earlier patch (which only fixed "1. text" pattern paragraphs)
- * 
- * IMPORTANT: This script is for the PR only. DO NOT run directly against production.
- * The actual patch will be reviewed and merged via PR to trigger one rebuild.
+ * Problem: Each listItem block renders as its own <ol> with one <li> → all show "1."
+ * Fix: Merge consecutive blocks with same listItem type into one block with
+ *       children = concatenated children array. The PortableText renderer then
+ *       receives all items as children of a single <ol> → proper numbering.
  */
 
 import { createClient } from '@sanity/client';
@@ -23,25 +22,82 @@ const client = createClient({
   token: TOKEN,
 });
 
-function fixQuickChecklists(body) {
-  return body.map(block => {
-    if (block.style === 'bullet' && !block.listItem) {
-      return {
-        _type: 'block',
-        style: 'normal',
-        listItem: 'bullet',
-        _key: block._key,
-        children: block.children || []
-      };
+function groupConsecutiveListItems(blocks) {
+  const result = [];
+  let i = 0;
+  
+  while (i < blocks.length) {
+    const block = blocks[i];
+    const listItem = block.listItem;
+    
+    // Not a list item — emit as-is
+    if (!listItem) {
+      result.push(block);
+      i++;
+      continue;
+    }
+    
+    // Collect ALL consecutive blocks with the same listItem type
+    const groupChildren = [];
+    const groupKey = block._key;
+    
+    while (i < blocks.length && blocks[i].listItem === listItem) {
+      // Append all children from this block to the group's children array
+      const children = blocks[i].children || [];
+      groupChildren.push(...children);
+      i++;
+    }
+    
+    // Emit one block representing the entire group
+    result.push({
+      _type: 'block',
+      style: 'normal',
+      listItem: listItem,
+      _key: groupKey,
+      children: groupChildren
+    });
+  }
+  
+  return result;
+}
+
+function fixPackingListKids(body) {
+  // First pass: fix malformed blocks (style="normal" paragraphs with "1. text" pattern)
+  let blocks = body.map(block => {
+    const text = (block.children?.[0]?.text || '').trim();
+    
+    // Skip separator
+    if (text === '---') return block;
+    
+    const numMatch = text.match(/^(\d+)\.\s+(.+)/);
+    const notMatch = text.match(/^❌\s+(.+)/);
+    
+    if (numMatch && block.style === 'normal' && !block.listItem) {
+      return { _type: 'block', style: 'normal', listItem: 'number', _key: block._key, children: [{ _type: 'span', text: numMatch[2], marks: [] }] };
+    } else if (notMatch && block.style === 'normal' && !block.listItem) {
+      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: block._key, children: [{ _type: 'span', text: notMatch[1], marks: [] }] };
+    } else if (block.style === 'bullet' && !block.listItem) {
+      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: block._key, children: block.children || [] };
     }
     return block;
   });
+  
+  // Second pass: group consecutive listItem blocks of the same type
+  blocks = groupConsecutiveListItems(blocks);
+  
+  return blocks;
 }
 
 async function main() {
+  const slug = process.argv[2] || 'disney-world-packing-list-kids';
+  const dryRun = process.argv.includes('--dry');
+  const patch = process.argv.includes('--patch');
+  
+  console.log(`Fetching post: ${slug}...`);
+  
   const doc = await client.fetch(
-    `*[_type == "blogPost" && slug.current == "disney-world-packing-list-kids"][0]{_id, _rev, body}`,
-    {}
+    `*[_type == "blogPost" && slug.current == $slug][0]{_id, _rev, body, title}`,
+    { slug }
   );
   
   if (!doc) {
@@ -49,27 +105,52 @@ async function main() {
     return;
   }
   
-  const fixed = fixQuickChecklists(doc.body);
+  console.log(`Post: ${doc.title}`);
+  console.log(`Original block count: ${doc.body.length}`);
   
-  // Count changes
-  let changes = 0;
-  for (let i = 0; i < doc.body.length; i++) {
-    if (doc.body[i].style === 'bullet' && !doc.body[i].listItem) {
-      changes++;
+  const fixed = fixPackingListKids(doc.body);
+  console.log(`Fixed block count: ${fixed.length}`);
+  
+  if (dryRun || !patch) {
+    // Show what changed
+    const changes = [];
+    let prevListItem = null;
+    for (let i = 0; i < fixed.length; i++) {
+      const orig = doc.body[i];
+      const newb = fixed[i];
+      if (JSON.stringify(orig) !== JSON.stringify(newb)) {
+        const origText = (orig?.children?.[0]?.text || '').slice(0, 40);
+        const newChildCount = newb.children?.length || 0;
+        const origChildCount = orig?.children?.length || 0;
+        changes.push(`[${i}] listItem=${newb.listItem || '-'}, children: ${origChildCount} → ${newChildCount} ("${origText}")`);
+      }
     }
+    console.log(`\n${changes.length} blocks changed. First 15:`);
+    changes.slice(0, 15).forEach(c => console.log(' ', c));
+    
+    // Show which list groups were formed
+    let groups = 0;
+    let mergedItems = 0;
+    for (const b of fixed) {
+      if (b.listItem && b.children?.length > 1) {
+        groups++;
+        mergedItems += b.children.length;
+      }
+    }
+    console.log(`\nList groups formed: ${groups}`);
+    console.log(`Total list items in groups: ${mergedItems}`);
   }
   
-  console.log(`Found ${changes} blocks to fix`);
-  console.log(`Post _id: ${doc._id}`);
-  console.log(`Current _rev: ${doc._rev}`);
-  
-  // Apply patch
-  const result = await client
-    .patch(doc._id, { body: fixed })
-    .commit();
-  
-  console.log(`Patched. New _rev: ${result._rev}`);
-  console.log('Now trigger Netlify rebuild from the PR merge.');
+  if (patch) {
+    console.log('\nApplying patch to Sanity...');
+    const result = await client
+      .patch(doc._id, { body: fixed })
+      .commit();
+    console.log(`Patched. New rev: ${result._rev}`);
+    console.log('Commit the PR to trigger Netlify rebuild.');
+  } else if (!dryRun) {
+    console.log('\nDry run complete. Run with --patch to apply to Sanity.');
+  }
 }
 
 main().catch(console.error);
