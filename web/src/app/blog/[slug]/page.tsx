@@ -185,63 +185,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
       number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
     },
-    // Handle plain text ticket buttons like "[ Buy 1-Park Epic Universe Tickets → ]"
-    types: {
-      block: (props: { value?: unknown; children?: ReactNode }) => {
-        return <>{props.children}</>;
-      },
-      span: ({ value }: { value?: { text?: string } }) => {
-        const text = value?.text || '';
-        const ticketMatch = text.match(/^\[ Buy (.+?) → \]$/);
-        if (ticketMatch) {
-          const label = ticketMatch[1];
-          return (
-            <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
-              Buy {label} →
-            </a>
-          );
-        }
-        return text;
-      },
-    },
-  };
 
-  const processTicketButtonsInline = (text: string): React.ReactNode => {
-    const match = text.match(/^\[ Buy (.+?) → \]$/);
-    if (match) {
-      const label = match[1];
-      return (
-        <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
-          Buy {label} →
-        </a>
-      );
-    }
-    return null;
-  };
-
-  // Also handle paragraphs that are entirely ticket button text
-  const processTicketButtons = (text: string): React.ReactNode[] => {
-    const parts: React.ReactNode[] = [];
-    const regex = /\[ Buy (.+?) → \]/g;
-    let lastIndex = 0;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-      if (match.index > lastIndex) {
-        parts.push(text.slice(lastIndex, match.index));
-      }
-      const label = match[1];
-      const url = AFFILIATE_LINKS.universal3Park3Day;
-      parts.push(
-        <a key={match.index} href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
-          Buy {label} →
-        </a>
-      );
-      lastIndex = match.index + match[0].length;
-    }
-    if (lastIndex < text.length) {
-      parts.push(text.slice(lastIndex));
-    }
-    return parts.length > 0 ? parts : [];
   };
 
   // Fallback hero image based on category or slug
