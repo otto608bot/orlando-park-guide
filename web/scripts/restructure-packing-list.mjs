@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 /**
- * Restructure disney-world-packing-list-kids body:
- * Move description paragraphs AFTER the list blocks they follow.
- * This keeps all listItem blocks consecutive so they render in ONE <ol>.
+ * Restructure disney-world-packing-list-kids — merge descriptions INTO listItem blocks.
  * 
- * Before: [paragraph] [listItem] [description] [listItem] [description] [listItem]
- * After:  [paragraph] [listItem] [listItem] [listItem] [description] [description]
+ * Strategy: Attach each description paragraph (the explanatory text between numbered
+ * items) as a trailing span inside the listItem block that precedes it.
+ * This makes listItem blocks truly consecutive → they group into one <ol> → counter works.
  * 
- * The groupConsecutiveLists() function then merges them into single grouped blocks.
+ * Before: [listItem "Sunscreen"] [description "Florida sun is no joke..."] [listItem "Water"]
+ * After:  [listItem "Sunscreen\n[desc: Florida sun is no joke...]"] [listItem "Water"]
+ * 
+ * The description spans get special styling in the renderer (smaller font, indented, italic).
  * 
  * Usage:
- *   node scripts/restructure-packing-list.mjs disney-world-packing-list-kids --dry
- *   node scripts/restructure-packing-list.mjs disney-world-packing-list-kids --patch
+ *   node scripts/restructure-packing-list.mjs --dry
+ *   node scripts/restructure-packing-list.mjs --patch
  */
 
 import { createClient } from '@sanity/client';
@@ -28,33 +30,30 @@ const client = createClient({
 });
 
 function restructure(body) {
-  // First pass: fix any malformed paragraphs into proper listItem blocks
+  // Pass 1: fix malformed blocks
   let blocks = body.map((block, idx) => {
     const text = (block.children?.[0]?.text || '').trim();
     if (text === '---') return block;
     
-    // "1. Some text" stored as plain paragraph → convert to listItem
     const numMatch = text.match(/^(\d+)\.\s+(.+)/);
     if (numMatch && block.style === 'normal' && !block.listItem) {
-      return { _type: 'block', style: 'normal', listItem: 'number', _key: `restructured-${idx}`, children: [{ _type: 'span', text: numMatch[2], marks: [] }] };
+      return { _type: 'block', style: 'normal', listItem: 'number', _key: `r-${idx}`, children: [{ _type: 'span', text: numMatch[2], marks: [] }] };
     }
     
-    // "❌ X" → bullet item
     const notMatch = text.match(/^❌\s+(.+)/);
     if (notMatch && block.style === 'normal' && !block.listItem) {
-      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: `restructured-${idx}`, children: [{ _type: 'span', text: notMatch[1], marks: [] }] };
+      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: `r-${idx}`, children: [{ _type: 'span', text: notMatch[1], marks: [] }] };
     }
     
-    // style="bullet" without listItem → listItem="bullet"
     if (block.style === 'bullet' && !block.listItem) {
-      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: block._key || `restructured-${idx}`, children: block.children || [] };
+      return { _type: 'block', style: 'normal', listItem: 'bullet', _key: block._key || `r-${idx}`, children: block.children || [] };
     }
     
     return block;
   });
   
-  // Second pass: move description paragraphs AFTER their preceding listItem blocks
-  // A "description" = a normal paragraph that follows a listItem block
+  // Pass 2: merge description paragraphs into preceding listItem blocks
+  // A description = normal paragraph block that follows a listItem block
   const result = [];
   let i = 0;
   
@@ -62,22 +61,43 @@ function restructure(body) {
     const block = blocks[i];
     
     if (block.listItem) {
-      // Collect all consecutive listItem blocks (of any type)
-      const group = [block];
-      i++;
+      // Collect this listItem and any descriptions that follow
+      const listItemGroups = [];
+      const descriptions = [];
+      
+      // Collect listItem blocks
       while (i < blocks.length && blocks[i].listItem) {
-        group.push(blocks[i]);
+        listItemGroups.push(blocks[i]);
         i++;
       }
-      // Emit all listItem blocks consecutively
-      result.push(...group);
-      // Now collect descriptions that belong to this group
-      // A description is a normal paragraph that immediately follows the last listItem
-      // and describes it (not another listItem)
-      while (i < blocks.length && !blocks[i].listItem && blocks[i].style === 'normal') {
-        result.push(blocks[i]);
+      
+      // Collect description paragraphs (normal style, not h2/h3, not separator)
+      while (i < blocks.length && blocks[i].style === 'normal' && !blocks[i].listItem) {
+        const text = (blocks[i].children?.[0]?.text || '').trim();
+        if (text !== '---' && !text.match(/^\[ Buy /)) {
+          descriptions.push(blocks[i]);
+        }
         i++;
       }
+      
+      // Merge descriptions into the LAST listItem block of this group
+      if (listItemGroups.length > 0 && descriptions.length > 0) {
+        const lastItem = listItemGroups[listItemGroups.length - 1];
+        // Convert description blocks to span children added to the last listItem
+        const descSpans = descriptions.map((d, idx) => ({
+          _type: 'span',
+          text: '\n' + (d.children?.[0]?.text || ''),
+          marks: ['description']  // special mark for styling
+        }));
+        lastItem.children = [...lastItem.children, ...descSpans];
+      }
+      
+      // Emit listItem blocks (last one now has descriptions merged in)
+      result.push(...listItemGroups);
+      
+      // Any non-description paragraphs that weren't merged go back as regular paragraphs
+      // Actually they were consumed. Descriptions are now in the listItem.
+      // The loop already advanced i past them.
     } else {
       result.push(block);
       i++;
@@ -93,19 +113,16 @@ function groupConsecutiveLists(blocks) {
   
   while (i < blocks.length) {
     const block = blocks[i];
-    const listItem = block.listItem;
-    
-    if (!listItem) {
+    if (!block.listItem) {
       result.push(block);
       i++;
       continue;
     }
     
-    // Collect ALL consecutive blocks with same listItem type
     const groupChildren = [];
     const groupKey = block._key;
     
-    while (i < blocks.length && blocks[i].listItem === listItem) {
+    while (i < blocks.length && blocks[i].listItem === block.listItem) {
       groupChildren.push(...(blocks[i].children || []));
       i++;
     }
@@ -113,7 +130,7 @@ function groupConsecutiveLists(blocks) {
     result.push({
       _type: 'block',
       style: 'normal',
-      listItem: listItem,
+      listItem: block.listItem,
       _key: groupKey,
       children: groupChildren
     });
@@ -141,28 +158,29 @@ async function main() {
   const grouped = groupConsecutiveLists(restructured);
   console.log(`After restructure+group: ${grouped.length}`);
   
-  // Count groups
-  let groups = 0;
-  let itemsInGroups = 0;
+  // Show merged groups
   for (const b of grouped) {
-    if (b.listItem && b.children?.length > 0) {
-      groups++;
-      itemsInGroups += b.children.length;
-    }
-  }
-  console.log(`List groups: ${groups}, total items: ${itemsInGroups}`);
-  
-  if (dryRun) {
-    // Show first few grouped blocks
-    for (const b of grouped.slice(0, 20)) {
-      if (b.listItem) {
-        console.log(`  GROUP listItem=${b.listItem} items=${b.children.length}`);
-      } else {
-        const text = (b.children?.[0]?.text || '').slice(0, 60);
-        console.log(`  PARAGRAPH: ${text}`);
+    if (b.listItem && b.children?.length > 1) {
+      console.log(`\nMERGED: listItem=${b.listItem}, ${b.children.length} children`);
+      for (let c = 0; c < Math.min(b.children.length, 4); c++) {
+        const text = (b.children[c].text || '').slice(0, 70);
+        const hasDesc = b.children[c].marks?.includes('description');
+        console.log(`  [${c}] ${hasDesc ? '(desc) ' : ''}${text}`);
       }
+      if (b.children.length > 4) console.log(`  ... +${b.children.length - 4} more`);
     }
   }
+  
+  let singleItem = 0;
+  let multiItem = 0;
+  for (const b of grouped) {
+    if (b.listItem) {
+      if (b.children?.length > 1) multiItem++;
+      else singleItem++;
+    }
+  }
+  console.log(`\nSingle-item groups: ${singleItem}`);
+  console.log(`Multi-item groups: ${multiItem}`);
   
   if (patch) {
     console.log('\nPatching Sanity...');

@@ -176,6 +176,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <a href={value?.href} className="inline-link">{children}</a>
         );
       },
+      description: ({ children }: { children?: React.ReactNode }) => <span className="li-description">{children}</span>,
     },
     list: {
       bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul">{children}</ul>,
