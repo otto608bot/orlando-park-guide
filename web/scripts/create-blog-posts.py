@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 import urllib.request
 import json
+import os
+import sys
+from pathlib import Path
 
-TOKEN = "skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj"
+if "--patch" not in sys.argv:
+    print("Dry run guard: create-blog-posts.py writes production Sanity documents.")
+    print("Re-run with --patch only after engineering review.")
+    sys.exit(0)
+
+TOKEN = os.environ.get("SANITY_TOKEN") or Path("/Users/rufusbot/.sanity_token").read_text().strip()
 PROJECT = "hd7qwtcq"
 ENDPOINT = f"https://{PROJECT}.api.sanity.io/v2024-01-01/data/mutate/production"
 

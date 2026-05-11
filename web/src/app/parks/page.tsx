@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { sanityClient } from "@/lib/sanity";
 import ParkCard from "@/components/ParkCard";
+import type { Park } from "@/lib/sanity-types";
 
 export const metadata: Metadata = {
   title: "All Orlando Parks",
   description: "Explore all Orlando theme parks - Disney World, Universal Orlando, SeaWorld, LEGOLAND, and more.",
 };
 
-async function getAllParks() {
-  return sanityClient.fetch(`
+async function getAllParks(): Promise<Park[]> {
+  return sanityClient.fetch<Park[]>(`
     *[_type == "park"] | order(name asc) {
       _id,
       name,
@@ -32,7 +33,7 @@ export default async function ParksPage() {
       </header>
 
       <div className="parks-grid-full">
-        {parks.map((park: any) => (
+        {parks.map((park) => (
           <ParkCard key={park._id} park={park} />
         ))}
       </div>

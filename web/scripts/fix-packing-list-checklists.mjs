@@ -114,7 +114,6 @@ async function main() {
   if (dryRun || !patch) {
     // Show what changed
     const changes = [];
-    let prevListItem = null;
     for (let i = 0; i < fixed.length; i++) {
       const orig = doc.body[i];
       const newb = fixed[i];

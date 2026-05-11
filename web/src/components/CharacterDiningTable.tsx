@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import Link from 'next/link';
 import type { CharacterDining } from '@/lib/sanity-types';
 
 interface CharacterDiningTableProps {
@@ -35,26 +34,7 @@ function getParkSlug(park: string | undefined): string {
   return 'other';
 }
 
-function getParkColor(park: string | undefined): string {
-  if (!park) return '#718096';
-  const colorMap: Record<string, string> = {
-    'magic-kingdom': '#4A9DE8',
-    'epcot': '#8B5CF6',
-    'hollywood-studios': '#EF4444',
-    'animal-kingdom': '#10B981',
-    'universal-studios-florida': '#F59E0B',
-    'islands-of-adventure': '#06B6D4',
-    'epic-universe': '#8B5CF6',
-    'seaworld-orlando': '#3B82F6',
-    'legoland-florida': '#F97316',
-    'resort': '#EC4899',
-    'other': '#718096',
-  };
-  const slug = getParkSlug(park);
-  return colorMap[slug] || '#718096';
-}
-
-function getLocationLabel(park: string | undefined, itemName: string | undefined): string {
+function getLocationLabel(park: string | undefined): string {
   if (!park) return 'Orlando Area';
   // If it's a known in-park location, show park name
   const inParkMap: Record<string, string> = {
@@ -84,12 +64,7 @@ function isResort(park: string | undefined): boolean {
   return park.includes('Resort') || park.includes('Hotel') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian');
 }
 
-function formatCharacters(chars: string[] | undefined): string {
-  if (!chars || chars.length === 0) return 'N/A';
-  return chars.slice(0, 3).join(', ') + (chars.length > 3 ? ` +${chars.length - 3}` : '');
-}
-
-export default function CharacterDiningTable({ diningList, showFilters = true, parkContext }: CharacterDiningTableProps) {
+export default function CharacterDiningTable({ diningList, showFilters = true }: CharacterDiningTableProps) {
   const [mealFilter, setMealFilter] = useState<MealType>('all');
   const [locationFilter, setLocationFilter] = useState<LocationType>('all');
   const [searchChar, setSearchChar] = useState('');
@@ -235,7 +210,7 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
                         <span
                           className={`location-badge park-badge--${parkSlug}`}
                         >
-                          {getLocationLabel(item.park, item.name)}
+                          {getLocationLabel(item.park)}
                         </span>
                         {isInPark(item.park) && (
                           <span className="in-park-indicator">

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
@@ -264,7 +263,7 @@ export default function DealsPage() {
           ))}
         </div>
         <p className="ticket-deals-note">
-          🎢 <strong>Epic Universe</strong> is Universal's newest park — book multi-day tickets early for the best availability.
+          🎢 <strong>Epic Universe</strong> is Universal&apos;s newest park — book multi-day tickets early for the best availability.
         </p>
       </section>
 

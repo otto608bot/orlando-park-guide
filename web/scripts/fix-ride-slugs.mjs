@@ -7,8 +7,8 @@
  *
  * Usage:
  *   cd web/
- *   node scripts/fix-ride-slugs.mjs          # interactive (asks for confirmation)
- *   node scripts/fix-ride-slugs.mjs --yes    # non-interactive, applies changes
+ *   node scripts/fix-ride-slugs.mjs          # dry run
+ *   node scripts/fix-ride-slugs.mjs --patch  # applies changes
  */
 
 import { createClient } from '@sanity/client';
@@ -18,14 +18,15 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
-const autoConfirm = args.includes('--yes') || args.includes('-y');
+const shouldPatch = args.includes('--patch');
+const sanityToken = process.env.SANITY_TOKEN || readFileSync('/Users/rufusbot/.sanity_token', 'utf8').trim();
 
 async function main() {
   // ── Sanity client ──────────────────────────────────────────────────────────
   const client = createClient({
     projectId: 'hd7qwtcq',
     dataset: 'production',
-    token: 'skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj',
+    token: sanityToken,
     apiVersion: '2024-01-01',
     useCdn: false,
   });
@@ -104,8 +105,8 @@ async function main() {
     console.log(`  "${r.name}": "${r.currentSlug}" → "${r.targetSlug}"`)
   );
 
-  if (!autoConfirm) {
-    console.log('\nRe-run with --yes to apply changes automatically.');
+  if (!shouldPatch) {
+    console.log('\nDry run complete. Re-run with --patch to apply changes to Sanity.');
     process.exit(0);
   }
 

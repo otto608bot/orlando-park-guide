@@ -1,5 +1,5 @@
-import React, { type ReactNode } from 'react';
-import { PortableText } from "@portabletext/react";
+import React from 'react';
+import { PortableText, type PortableTextReactComponents } from "@portabletext/react";
 export const revalidate = 60;
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,9 +9,37 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
+import type { BlogPost, SanitySlug } from "@/lib/sanity-types";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
+}
+
+interface BlogCategory {
+  title?: string;
+  slug?: SanitySlug;
+}
+
+type BlogPostDetail = Omit<BlogPost, 'author' | 'categories' | 'slug'> & {
+  slug?: SanitySlug;
+  author?: { name?: string };
+  categories?: BlogCategory[];
+};
+
+interface RelatedPost {
+  _id: string;
+  title: string;
+  slug?: SanitySlug;
+  excerpt?: string;
+  readTime?: number;
+}
+
+function getPortableTextValueText(value: unknown): string | null {
+  if (value && typeof value === 'object' && 'text' in value) {
+    const text = (value as { text?: unknown }).text;
+    return typeof text === 'string' ? text : null;
+  }
+  return null;
 }
 
 export async function generateStaticParams() {
@@ -19,13 +47,14 @@ export async function generateStaticParams() {
     *[_type == "blogPost"].slug.current
   `);
   // Filter out null/malformed slugs before generating params
-  return (slugs as string[]).filter((slug): slug is string => !!slug).map((slug) => ({ slug }));
+  return [...new Set((slugs as string[]).filter((slug): slug is string => !!slug))]
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await sanityClient.fetch(`
-    *[_type == "blogPost" && slug.current == $slug][0] {
+  const post = await sanityClient.fetch<Pick<BlogPostDetail, 'title' | 'excerpt' | 'tags' | 'categories'> | null>(`
+    *[_type == "blogPost" && slug.current == $slug] | order(_updatedAt desc) [0] {
       title,
       excerpt,
       tags,
@@ -36,7 +65,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (!post) return { title: "Post Not Found" };
   
   // Build keywords from tags, fallback to excerpt-based
-  const keywords = post.tags?.length > 0
+  const keywords = post.tags && post.tags.length > 0
     ? post.tags.join(", ")
     : "Disney World packing list, Orlando theme parks, family travel";
   
@@ -60,8 +89,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 async function getPostData(slug: string) {
   const [post, allPosts] = await Promise.all([
-    sanityClient.fetch(`
-      *[_type == "blogPost" && slug.current == $slug][0] {
+    sanityClient.fetch<BlogPostDetail | null>(`
+      *[_type == "blogPost" && slug.current == $slug] | order(_updatedAt desc) [0] {
         _id,
         title,
         slug,
@@ -75,7 +104,7 @@ async function getPostData(slug: string) {
         readTime
       }
     `, { slug }),
-    sanityClient.fetch(`
+    sanityClient.fetch<RelatedPost[]>(`
       *[_type == "blogPost"] | order(publishedAt desc) [0...4] {
         _id,
         title,
@@ -86,7 +115,7 @@ async function getPostData(slug: string) {
     `),
   ]);
   
-  const related = allPosts.filter((p: any) => p.slug?.current && p.slug.current !== slug).slice(0, 2);
+  const related = allPosts.filter((p) => p.slug?.current && p.slug.current !== slug).slice(0, 2);
   return { post, related };
 }
 
@@ -111,11 +140,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     month: "long", 
     day: "numeric" 
   });
+  const categories = post.categories ?? [];
+  const tags = post.tags ?? [];
 
-  const components = {
+  const components: Partial<PortableTextReactComponents> = {
+    types: {
+      span: ({ value }) => {
+        const text = getPortableTextValueText(value);
+        return text ? <p>{processTextWithAffiliates(text)}</p> : null;
+      },
+    },
     block: {
       h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
       h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
+      bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul"><li>{children}</li></ul>,
+      number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol"><li>{children}</li></ol>,
       normal: ({ children }: { children?: React.ReactNode }) => {
         // children is React.ReactNode — can be a string, an array with one span, or an array of mixed content
         // Extract the ticket button text if present
@@ -178,6 +217,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       },
       description: ({ children }: { children?: React.ReactNode }) => <span className="li-description">{children}</span>,
     },
+    unknownMark: ({ children }: { children?: React.ReactNode }) => <>{children}</>,
+    unknownType: ({ value }) => {
+      const text = getPortableTextValueText(value);
+      return text ? <p>{processTextWithAffiliates(text)}</p> : null;
+    },
+    unknownBlockStyle: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
     list: {
       bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul">{children}</ul>,
       number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
@@ -196,13 +241,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         return <li>{children}</li>;
       },
     },
-
   };
 
   // Fallback hero image based on category or slug
   const getFallbackHero = () => {
-    const cats = post.categories || [];
-    const catTitles = (cats.map((c: any) => c.title || '').join(' ').toLowerCase());
+    const catTitles = (categories.map((c) => c.title || '').join(' ').toLowerCase());
     const slugLower = (post.slug?.current || '').toLowerCase();
     // Check slug directly since categories may not be resolved
     if (slugLower.includes('epic-universe')) {
@@ -243,9 +286,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       
       <main className="blog-container">
         <header className="blog-header">
-          {post.categories?.length > 0 ? (
+          {categories.length > 0 ? (
             <div className="blog-categories">
-              {post.categories.map((cat: any) => <span key={cat.slug?.current}>{cat.title}</span>)}
+              {categories.map((cat) => <span key={cat.slug?.current || cat.title}>{cat.title}</span>)}
             </div>
           ) : (
             // Fallback category for posts without categories (e.g., epic-universe-tickets-guide)
@@ -273,7 +316,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
         
         <BlogContentUrlProcessor>
-          <PortableText value={post.body} components={components} />
+          <PortableText value={post.body} components={components} onMissingComponent={false} />
         </BlogContentUrlProcessor>
 
         {/* Buy Tickets CTA */}
@@ -311,13 +354,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p>Get exclusive deals and tips delivered to your inbox.</p>
           <div className="cta-buttons">
             <a href={AFFILIATE_LINKS.ucDealsPage} target="_blank" rel="noopener" className="primary">Get Tickets</a>
-            <a href="/blog" className="secondary">More Articles</a>
+            <Link href="/blog" className="secondary">More Articles</Link>
           </div>
         </div>
         
-        {post.tags?.length > 0 && (
+        {tags.length > 0 && (
           <div className="blog-tags">
-            {post.tags.map((tag: string) => <span key={tag}>#{tag}</span>)}
+            {tags.map((tag) => <span key={tag}>#{tag}</span>)}
           </div>
         )}
         
@@ -326,7 +369,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="blog-related">
             <h2>Keep Reading</h2>
             <div className="related-posts">
-              {related.map((r: any) => (
+              {related.map((r) => (
                 <Link key={r.slug?.current} href={`/blog/${r.slug?.current}`} className="related-post">
                   <h4>{r.title}</h4>
                   <span>{r.readTime} min read</span>

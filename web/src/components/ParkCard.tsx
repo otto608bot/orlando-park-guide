@@ -7,7 +7,7 @@ interface ParkCardProps {
     slug: { current: string };
     description?: string;
     image?: {
-      asset: { url: string };
+      asset?: { url?: string };
       alt?: string;
     };
   };

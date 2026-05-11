@@ -67,7 +67,7 @@ export default function QuestionForm({ title = "Have a Question?" }: QuestionFor
   }
 
   return (
-    <form onSubmit={handleSubmit} className="question-form">
+    <form onSubmit={handleSubmit} className="question-form" aria-label={title}>
       <input 
         type="email" 
         name="email"
