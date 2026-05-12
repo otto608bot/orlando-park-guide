@@ -16,7 +16,6 @@ interface ParkInfo {
 
 interface HomepageRidesProps {
   allRides: Ride[];
-  totalCount: number;
 }
 
 const PARK_MAP: Record<string, { slug: string; image: string }> = {
@@ -43,7 +42,7 @@ const PARK_ORG: Record<string, string> = {
   'legoland-florida': 'Merlin Entertainments',
 };
 
-export default function HomepageRides({ allRides, totalCount }: HomepageRidesProps) {
+export default function HomepageRides({ allRides }: HomepageRidesProps) {
   const { filters } = useFilters();
   const searchParams = useSearchParams();
 
@@ -104,10 +103,6 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
       };
     }).filter(Boolean) as ParkInfo[];
   }, [allRides, filters]);
-
-  const hasActiveFilters = filters.height > 0 || filters.pregnancySafe ||
-    filters.wheelchairAccessible || filters.calmExperience ||
-    filters.selectedParks.length > 0;
 
   // Build href with preserved search params for park links
   const buildParkHref = (parkSlug: string) => {

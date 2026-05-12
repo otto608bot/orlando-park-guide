@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 /**
  * Migration script: Import data from rides.js and character-meal-data.js into Sanity
- * Run with: node migrate-to-sanity.mjs
+ *
+ * This script writes production Sanity documents. It exits unless --patch is
+ * supplied so it cannot be run accidentally by automation.
+ *
+ * Run with: node migrate-to-sanity.mjs --patch
  */
 
 import { createClient } from '@sanity/client';
@@ -15,7 +19,8 @@ const __dirname = dirname(__filename);
 // Sanity config
 const projectId = 'hd7qwtcq';
 const dataset = 'production';
-const token = 'skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj';
+const token = process.env.SANITY_TOKEN || readFileSync('/Users/rufusbot/.sanity_token', 'utf8').trim();
+const shouldPatch = process.argv.includes('--patch');
 
 const client = createClient({
   projectId,
@@ -144,11 +149,6 @@ async function migrateRides() {
   
   for (let i = 0; i < ridesData.length; i += batchSize) {
     const batch = ridesData.slice(i, i + batchSize);
-    const mutations = batch.map((ride, idx) => ({
-      _key: ride.id,
-      ...rideToSanity(ride),
-    }));
-    
     try {
       // Check if ride already exists
       for (const ride of batch) {
@@ -162,7 +162,7 @@ async function migrateRides() {
           continue;
         }
         
-        const result = await client.create({
+        await client.create({
           _type: 'ride',
           ...rideToSanity(ride),
         });
@@ -201,7 +201,7 @@ async function migrateCharacterDining() {
         continue;
       }
       
-      const result = await client.create(mealToSanity(meal));
+      await client.create(mealToSanity(meal));
       console.log(`  Created: ${meal.name}`);
       created++;
     } catch (err) {
@@ -281,7 +281,7 @@ async function migrateParks() {
         continue;
       }
       
-      const result = await client.create({
+      await client.create({
         _type: 'park',
         name: park.name,
         slug: { _type: 'slug', current: park.slug },
@@ -380,7 +380,7 @@ async function migrateBlogPosts() {
         continue;
       }
       
-      const result = await client.create({
+      await client.create({
         _type: 'blogPost',
         title: post.title,
         slug: { _type: 'slug', current: slug },
@@ -404,6 +404,12 @@ async function migrateBlogPosts() {
 }
 
 async function main() {
+  if (!shouldPatch) {
+    console.log('Dry run guard: migrate-to-sanity writes production Sanity documents.');
+    console.log('Re-run with --patch only after engineering review.');
+    return;
+  }
+
   console.log('Starting migration to Sanity...');
   console.log(`Project: ${projectId}`);
   console.log(`Dataset: ${dataset}`);

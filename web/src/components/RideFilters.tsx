@@ -6,7 +6,6 @@ import type { Ride } from '@/lib/sanity-types';
 interface RideFiltersProps {
   rides: Ride[];
   onFilter: (filtered: Ride[]) => void;
-  totalCount: number;
 }
 
 const ALL_PARKS = [
@@ -46,7 +45,7 @@ const THRILL_LEVELS = [
   { value: 5, label: 'Extreme', class: 'thrill-high' },
 ];
 
-export default function RideFilters({ rides, onFilter, totalCount }: RideFiltersProps) {
+export default function RideFilters({ rides, onFilter }: RideFiltersProps) {
   const [selectedPark, setSelectedPark] = useState<string>('');
   const [selectedThrill, setSelectedThrill] = useState<number | null>(null);
   const [selectedType, setSelectedType] = useState<string>('');

@@ -39,36 +39,27 @@ const FiltersContext = createContext<FiltersContextType>({
   clearFilters: () => {},
 });
 
+function parseFilters(searchParams: URLSearchParams | ReturnType<typeof useSearchParams>): FilterState {
+  const height = parseInt(searchParams.get('height') || '0', 10);
+  const parksParam = searchParams.get('parks');
+
+  return {
+    height: isNaN(height) ? 0 : height,
+    pregnancySafe: searchParams.get('pregnancySafe') === 'true',
+    wheelchairAccessible: searchParams.get('wheelchair') === 'true',
+    calmExperience: searchParams.get('calm') === 'true',
+    selectedParks: parksParam ? parksParam.split(',') : [],
+  };
+}
+
 export function FiltersProvider({ children }: { children: ReactNode }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const [initialized, setInitialized] = useState(false);
-  const [filters, setFilters] = useState<FilterState>(defaultFilters);
-
-  // Initialize filters from URL params
-  useEffect(() => {
-    const height = parseInt(searchParams.get('height') || '0', 10);
-    const pregnancySafe = searchParams.get('pregnancySafe') === 'true';
-    const wheelchairAccessible = searchParams.get('wheelchair') === 'true';
-    const calmExperience = searchParams.get('calm') === 'true';
-    const parksParam = searchParams.get('parks');
-    const selectedParks = parksParam ? parksParam.split(',') : [];
-
-    setFilters({
-      height: isNaN(height) ? 0 : height,
-      pregnancySafe,
-      wheelchairAccessible,
-      calmExperience,
-      selectedParks,
-    });
-    setInitialized(true);
-  }, [searchParams]);
+  const [filters, setFilters] = useState<FilterState>(() => parseFilters(searchParams));
 
   // Update URL when filters change
   useEffect(() => {
-    if (!initialized) return;
-
     const params = new URLSearchParams();
     if (filters.height > 0) params.set('height', filters.height.toString());
     if (filters.pregnancySafe) params.set('pregnancySafe', 'true');
@@ -79,7 +70,7 @@ export function FiltersProvider({ children }: { children: ReactNode }) {
     const queryString = params.toString();
     const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
     router.replace(newUrl, { scroll: false });
-  }, [filters, initialized, pathname, router]);
+  }, [filters, pathname, router]);
 
   const setHeight = (height: number) => {
     setFilters(prev => ({ ...prev, height }));

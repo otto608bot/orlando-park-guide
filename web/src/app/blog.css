@@ -7,8 +7,8 @@
   --bg-light: #F7FAFC;
   --bg-white: #FFFFFF;
   --border: #E2E8F0;
-  --font-heading: var(--font-nunito), 'Nunito', sans-serif;
-  --font-body: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Park Color System */
   --park-magic-kingdom: #4A9DE8;
@@ -358,6 +358,24 @@
 .blog-content li { margin-bottom: 0.5rem; line-height: 1.6; }
 .blog-ul { list-style-type: disc; }
 .blog-ol { list-style-type: decimal; }
+.blog-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+.blog-checklist li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+.blog-checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+.description { color: var(--text-medium); font-size: 0.9rem; font-style: italic; display: block; margin-top: 0.25rem; line-height: 1.5; }
+.li-description { color: var(--text-medium); font-size: 0.9rem; font-style: italic; display: block; margin-top: 0.25rem; }
 .blog-content a { color: var(--primary); text-decoration: underline; }
 .blog-content a:hover { color: #e85a1a; }
 

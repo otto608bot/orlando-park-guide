@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import FilterSidebar from "@/components/FilterSidebar";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -46,7 +45,7 @@ export default async function HomePage() {
 
         {/* Park Cards with Filters */}
         <section className="rides-browser">
-          <HomepageRides allRides={allRides} totalCount={totalRides} />
+          <HomepageRides allRides={allRides} />
         </section>
 
         {/* Email Signup */}

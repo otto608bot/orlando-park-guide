@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import BlogPostCard from "@/components/BlogPostCard";
 import NewsletterForm from "@/components/NewsletterForm";
+import type { BlogPost } from "@/lib/sanity-types";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
@@ -11,10 +11,31 @@ export const metadata: Metadata = {
   description: "Tips, guides, and news for your Orlando theme park vacation.",
 };
 
-async function getAllBlogPosts() {
-  return sanityClient.fetch(`
+type BlogPostListItem = BlogPost & {
+  _updatedAt?: string;
+};
+
+function dedupePostsBySlug(posts: BlogPostListItem[]): BlogPostListItem[] {
+  const bySlug = new Map<string, BlogPostListItem>();
+
+  for (const post of posts) {
+    const slug = post.slug?.current;
+    if (!slug) continue;
+
+    const current = bySlug.get(slug);
+    if (!current || (post._updatedAt || '') > (current._updatedAt || '')) {
+      bySlug.set(slug, post);
+    }
+  }
+
+  return [...bySlug.values()];
+}
+
+async function getAllBlogPosts(): Promise<BlogPostListItem[]> {
+  return sanityClient.fetch<BlogPostListItem[]>(`
     *[_type == "blogPost"] | order(publishedAt desc) {
       _id,
+      _updatedAt,
       title,
       slug,
       excerpt,
@@ -27,7 +48,7 @@ async function getAllBlogPosts() {
 }
 
 export default async function BlogPage() {
-  const posts = (await getAllBlogPosts()).filter((p: any) => p.slug?.current);
+  const posts = dedupePostsBySlug(await getAllBlogPosts());
 
   return (
     <div className="blog-page-container">
@@ -39,7 +60,7 @@ export default async function BlogPage() {
       </header>
       
       <div className="blog-posts-grid">
-        {posts.map((post: any) => (
+        {posts.map((post) => (
           <BlogPostCard key={post._id} post={post} />
         ))}
       </div>

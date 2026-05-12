@@ -14,6 +14,7 @@ interface RidesTableProps {
 
 type SortField = 'name' | 'park' | 'thrillLevel' | 'heightRequirement' | 'rideType';
 type SortDirection = 'asc' | 'desc';
+type SortValue = string | number;
 
 function getRideImageSrc(ride: Ride): string | null {
   // Try to use the Sanity image if available
@@ -99,6 +100,28 @@ const PARK_SORT_ORDER = [
   'LEGOLAND Florida',
 ];
 
+function getSortValue(ride: Ride, sortField: SortField): SortValue {
+  switch (sortField) {
+    case 'name':
+      return ride.name || '';
+    case 'park': {
+      const order = PARK_SORT_ORDER.indexOf(ride.park);
+      return order === -1 ? ride.park || '' : order;
+    }
+    case 'thrillLevel':
+      return ride.thrillLevel || 0;
+    case 'heightRequirement':
+      return ride.heightRequirement || 0;
+    case 'rideType':
+      return ride.rideType || '';
+  }
+}
+
+function renderSortIcon(field: SortField, sortField: SortField, sortDirection: SortDirection) {
+  if (sortField !== field) return <span className="sort-icon">↕</span>;
+  return <span className="sort-icon sort-active">{sortDirection === 'asc' ? '↑' : '↓'}</span>;
+}
+
 export default function RidesTable({ rides, showParkColumn = true, compact = false }: RidesTableProps) {
   const { filters } = useFilters();
   const [sortField, setSortField] = useState<SortField>('park');
@@ -137,41 +160,16 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
 
     // Apply sorting
     result.sort((a, b) => {
-      let aVal: any = '';
-      let bVal: any = '';
-
-      switch (sortField) {
-        case 'name':
-          aVal = a.name || '';
-          bVal = b.name || '';
-          break;
-        case 'park':
-          aVal = PARK_SORT_ORDER.indexOf(a.park);
-          bVal = PARK_SORT_ORDER.indexOf(b.park);
-          // Fall back to alphabetical if park not in order list
-          if (aVal === -1) aVal = a.park || '';
-          if (bVal === -1) bVal = b.park || '';
-          break;
-        case 'thrillLevel':
-          aVal = a.thrillLevel || 0;
-          bVal = b.thrillLevel || 0;
-          break;
-        case 'heightRequirement':
-          aVal = a.heightRequirement || 0;
-          bVal = b.heightRequirement || 0;
-          break;
-        case 'rideType':
-          aVal = a.rideType || '';
-          bVal = b.rideType || '';
-          break;
-      }
+      const aVal = getSortValue(a, sortField);
+      const bVal = getSortValue(b, sortField);
 
       if (typeof aVal === 'string') {
         return sortDirection === 'asc' 
-          ? aVal.localeCompare(bVal)
-          : bVal.localeCompare(aVal);
+          ? aVal.localeCompare(String(bVal))
+          : String(bVal).localeCompare(aVal);
       }
-      return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+      const numericB = typeof bVal === 'number' ? bVal : 0;
+      return sortDirection === 'asc' ? aVal - numericB : numericB - aVal;
     });
 
     return result;
@@ -184,11 +182,6 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
       setSortField(field);
       setSortDirection('asc');
     }
-  };
-
-  const SortIcon = ({ field }: { field: SortField }) => {
-    if (sortField !== field) return <span className="sort-icon">↕</span>;
-    return <span className="sort-icon sort-active">{sortDirection === 'asc' ? '↑' : '↓'}</span>;
   };
 
   return (
@@ -205,21 +198,21 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
             <tr>
               <th className="th-image">Image</th>
               <th className="th-name sortable" onClick={() => handleSort('name')}>
-                Ride Name <SortIcon field="name" />
+                Ride Name {renderSortIcon('name', sortField, sortDirection)}
               </th>
               {showParkColumn && (
                 <th className="th-park sortable" onClick={() => handleSort('park')}>
-                  Park <SortIcon field="park" />
+                  Park {renderSortIcon('park', sortField, sortDirection)}
                 </th>
               )}
               <th className="th-thrill sortable" onClick={() => handleSort('thrillLevel')}>
-                Thrill <SortIcon field="thrillLevel" />
+                Thrill {renderSortIcon('thrillLevel', sortField, sortDirection)}
               </th>
               <th className="th-height sortable" onClick={() => handleSort('heightRequirement')}>
-                Height <SortIcon field="heightRequirement" />
+                Height {renderSortIcon('heightRequirement', sortField, sortDirection)}
               </th>
               <th className="th-type sortable" onClick={() => handleSort('rideType')}>
-                Type <SortIcon field="rideType" />
+                Type {renderSortIcon('rideType', sortField, sortDirection)}
               </th>
               <th className="th-access">Access</th>
             </tr>

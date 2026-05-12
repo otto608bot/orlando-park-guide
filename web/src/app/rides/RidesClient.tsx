@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import type { Ride } from '@/lib/sanity-types';
 import FilterSidebar from '@/components/FilterSidebar';
 import RidesTable from '@/components/RidesTable';

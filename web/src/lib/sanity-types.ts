@@ -88,6 +88,9 @@ export interface PortableTextBlock {
   _type: string;
   _key?: string;
   style?: string;
+  listItem?: 'bullet' | 'number' | string;
+  listStart?: number;
+  listVariant?: 'checklist' | string;
   children?: Array<{
     _type: 'span';
     _key?: string;
