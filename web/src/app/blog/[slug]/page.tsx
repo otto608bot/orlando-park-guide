@@ -34,12 +34,55 @@ interface RelatedPost {
   readTime?: number;
 }
 
+const PACKING_LIST_RESOURCE_LINKS: Record<string, string> = {
+  "2026 Disney World Ticket Guide": "/deals",
+  "Best Disney World Rides for Toddlers": "/blog/best-magic-kingdom-rides-kids-under-40-inches",
+  "Lightning Lane Strategy for Families": "/blog/beat-disney-world-crowds",
+};
+
 function getPortableTextValueText(value: unknown): string | null {
   if (value && typeof value === 'object' && 'text' in value) {
     const text = (value as { text?: unknown }).text;
     return typeof text === 'string' ? text : null;
   }
   return null;
+}
+
+function getBlockText(block: PortableTextBlock): string {
+  return block.children?.map((child) => child.text ?? '').join('').trim() ?? '';
+}
+
+function withResourceLink(block: PortableTextBlock): PortableTextBlock {
+  if (!block.children) return block;
+
+  const nextChildren = block.children.map((child, childIndex) => {
+    const href = child.text ? PACKING_LIST_RESOURCE_LINKS[child.text.trim()] : undefined;
+    if (!href) return child;
+
+    const markKey = `resource-link-${childIndex}`;
+    return {
+      ...child,
+      marks: [...(child.marks ?? []), markKey],
+    };
+  });
+
+  const linkMarkDefs = nextChildren.flatMap((child, childIndex) => {
+    const text = child.text?.trim();
+    const href = text ? PACKING_LIST_RESOURCE_LINKS[text] : undefined;
+    if (!href) return [];
+
+    return [{
+      _type: 'link',
+      _key: `resource-link-${childIndex}`,
+      href,
+    }];
+  });
+
+  return {
+    ...block,
+    children: nextChildren,
+    markDefs: [...(block.markDefs ?? []), ...linkMarkDefs],
+  };
 }
 
 function splitGroupedListBlock(block: PortableTextBlock, blockIndex: number): PortableTextBlock[] {
@@ -84,8 +127,51 @@ function splitGroupedListBlock(block: PortableTextBlock, blockIndex: number): Po
   return items.length > 0 ? items : [block];
 }
 
-function normalizePortableTextBody(body: PortableTextBlock[] = []): PortableTextBlock[] {
-  return body.flatMap((block, blockIndex) => splitGroupedListBlock(block, blockIndex));
+function normalizePortableTextBody(body: PortableTextBlock[] = [], slug?: string): PortableTextBlock[] {
+  const splitBlocks = body.flatMap((block, blockIndex) => splitGroupedListBlock(block, blockIndex));
+  if (slug !== 'disney-world-packing-list-kids') return splitBlocks;
+
+  let currentH2 = '';
+  let currentH3 = '';
+
+  return splitBlocks.map((block) => {
+    if (block.style === 'h2') {
+      currentH2 = getBlockText(block);
+      currentH3 = '';
+      return block;
+    }
+
+    if (block.style === 'h3') {
+      currentH3 = getBlockText(block);
+      return block;
+    }
+
+    if (!block.listItem) return block;
+
+    let nextBlock = block;
+
+    if (block.listItem === 'number' && currentH3.includes('Ages 2–4')) {
+      nextBlock = { ...nextBlock, listStart: 16 };
+    }
+
+    if (block.listItem === 'number' && currentH3.includes('Ages 5–8')) {
+      nextBlock = { ...nextBlock, listStart: 21 };
+    }
+
+    if (currentH2.includes('Packing Hacks')) {
+      nextBlock = { ...nextBlock, listItem: 'bullet' };
+    }
+
+    if (currentH2.includes('Quick Checklist')) {
+      nextBlock = { ...nextBlock, listVariant: 'checklist' };
+    }
+
+    if (currentH2.includes('Plan Your Disney World Trip')) {
+      nextBlock = withResourceLink(nextBlock);
+    }
+
+    return nextBlock;
+  });
 }
 
 export async function generateStaticParams() {
@@ -188,7 +274,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   });
   const categories = post.categories ?? [];
   const tags = post.tags ?? [];
-  const normalizedBody = normalizePortableTextBody(post.body);
+  const normalizedBody = normalizePortableTextBody(post.body, post.slug?.current);
 
   const components: Partial<PortableTextReactComponents> = {
     types: {
@@ -271,8 +357,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     unknownBlockStyle: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
     list: {
-      bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul">{children}</ul>,
-      number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
+      bullet: ({ children, value }) => {
+        const firstItem = (value as { children?: Array<{ listVariant?: string }> }).children?.[0];
+        const className = firstItem?.listVariant === 'checklist' ? 'blog-checklist' : 'blog-ul';
+        return <ul className={className}>{children}</ul>;
+      },
+      number: ({ children, value }) => {
+        const start = (value as { children?: Array<{ listStart?: number }> }).children?.[0]?.listStart;
+        return <ol className="blog-ol" start={start}>{children}</ol>;
+      },
     },
     listItem: {
       bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
