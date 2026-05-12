@@ -9,7 +9,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
-import type { BlogPost, SanitySlug } from "@/lib/sanity-types";
+import type { BlogPost, PortableTextBlock, SanitySlug } from "@/lib/sanity-types";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -40,6 +40,52 @@ function getPortableTextValueText(value: unknown): string | null {
     return typeof text === 'string' ? text : null;
   }
   return null;
+}
+
+function splitGroupedListBlock(block: PortableTextBlock, blockIndex: number): PortableTextBlock[] {
+  if (!block.listItem || !block.children || block.children.length <= 1) {
+    return [block];
+  }
+
+  const items: PortableTextBlock[] = [];
+  let currentChildren: NonNullable<PortableTextBlock['children']> = [];
+
+  const flushItem = () => {
+    if (currentChildren.length === 0) return;
+    items.push({
+      ...block,
+      _key: `${block._key ?? `list-${blockIndex}`}-${items.length}`,
+      children: currentChildren,
+    });
+    currentChildren = [];
+  };
+
+  block.children.forEach((child) => {
+    const isMarkedDescription = child.marks?.includes('description');
+    const isInlineDescription = /^\s*:\s*[—-]?\s*/.test(child.text ?? '');
+    const isDescription = isMarkedDescription || isInlineDescription;
+    if (!isDescription) {
+      flushItem();
+    }
+    currentChildren.push({
+      ...child,
+      marks: isInlineDescription && !isMarkedDescription
+        ? [...(child.marks ?? []), 'description']
+        : child.marks,
+      text: isMarkedDescription
+        ? child.text?.replace(/^\n+/, '')
+        : isInlineDescription
+          ? child.text?.replace(/^\s*:\s*[—-]?\s*/, '')
+          : child.text,
+    });
+  });
+
+  flushItem();
+  return items.length > 0 ? items : [block];
+}
+
+function normalizePortableTextBody(body: PortableTextBlock[] = []): PortableTextBlock[] {
+  return body.flatMap((block, blockIndex) => splitGroupedListBlock(block, blockIndex));
 }
 
 export async function generateStaticParams() {
@@ -142,6 +188,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   });
   const categories = post.categories ?? [];
   const tags = post.tags ?? [];
+  const normalizedBody = normalizePortableTextBody(post.body);
 
   const components: Partial<PortableTextReactComponents> = {
     types: {
@@ -228,18 +275,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
     },
     listItem: {
-      bullet: ({ children }: { children?: React.ReactNode }) => {
-        if (Array.isArray(children)) {
-          return children.map((child, i) => <li key={i}>{child}</li>);
-        }
-        return <li>{children}</li>;
-      },
-      number: ({ children }: { children?: React.ReactNode }) => {
-        if (Array.isArray(children)) {
-          return children.map((child, i) => <li key={i}>{child}</li>);
-        }
-        return <li>{children}</li>;
-      },
+      bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+      number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
     },
   };
 
@@ -316,7 +353,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
         
         <BlogContentUrlProcessor>
-          <PortableText value={post.body} components={components} onMissingComponent={false} />
+          <PortableText value={normalizedBody} components={components} onMissingComponent={false} />
         </BlogContentUrlProcessor>
 
         {/* Buy Tickets CTA */}
