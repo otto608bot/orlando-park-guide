@@ -1,7 +1,15 @@
 #!/bin/bash
 # Create blog posts in Sanity
 
-TOKEN="skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj"
+set -euo pipefail
+
+if [[ "${1:-}" != "--patch" ]]; then
+  echo "Dry run guard: create-blog-posts.sh writes production Sanity documents."
+  echo "Re-run with --patch only after engineering review."
+  exit 0
+fi
+
+TOKEN="${SANITY_TOKEN:-$(tr -d '\n' < /Users/rufusbot/.sanity_token)}"
 PROJECT="hd7qwtcq"
 DATASET="production"
 ENDPOINT="https://${PROJECT}.api.sanity.io/v2024-01-01/data/mutate/${DATASET}"

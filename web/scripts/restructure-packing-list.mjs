@@ -120,7 +120,6 @@ function groupConsecutiveLists(blocks) {
 
 async function main() {
   const slug = process.argv[2] || 'disney-world-packing-list-kids';
-  const dryRun = process.argv.includes('--dry');
   const patch = process.argv.includes('--patch');
   
   console.log(`Fetching ${slug}...`);

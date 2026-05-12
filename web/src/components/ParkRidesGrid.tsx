@@ -69,14 +69,9 @@ function getParkSlug(park: string): string {
   return map[park] || '';
 }
 
-type SortF = 'name' | 'thrillLevel' | 'heightRequirement' | 'rideType';
-type SortD = 'asc' | 'desc';
-
-export default function ParkRidesGrid({ rides, parkName }: ParkRidesGridProps) {
+export default function ParkRidesGrid({ rides }: ParkRidesGridProps) {
   const { filters } = useFilters();
   const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
-  const [sortField, setSortField] = useState<SortF>('thrillLevel');
-  const [sortDir, setSortDir] = useState<SortD>('desc');
   const [showFilters, setShowFilters] = useState(false);
 
   const { filtered, total } = useMemo(() => {
@@ -96,27 +91,14 @@ export default function ParkRidesGrid({ rides, parkName }: ParkRidesGridProps) {
       result = result.filter(r => isCalmExperience(r));
     }
 
-    // Sort
+    // Default card order: highest-thrill rides first, then alphabetical.
     result.sort((a, b) => {
-      let aVal: any = '';
-      let bVal: any = '';
-      switch (sortField) {
-        case 'name': aVal = a.name || ''; bVal = b.name || ''; break;
-        case 'thrillLevel': aVal = a.thrillLevel || 0; bVal = b.thrillLevel || 0; break;
-        case 'heightRequirement': aVal = a.heightRequirement || 0; bVal = b.heightRequirement || 0; break;
-        case 'rideType': aVal = a.rideType || ''; bVal = b.rideType || ''; break;
-      }
-      if (typeof aVal === 'string') return sortDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-      return sortDir === 'asc' ? aVal - bVal : bVal - aVal;
+      const thrillDelta = (b.thrillLevel || 0) - (a.thrillLevel || 0);
+      return thrillDelta || (a.name || '').localeCompare(b.name || '');
     });
 
     return { filtered: result, total: rides.length };
-  }, [rides, filters, sortField, sortDir]);
-
-  const handleSort = (field: SortF) => {
-    if (sortField === field) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
-    else { setSortField(field); setSortDir('asc'); }
-  };
+  }, [rides, filters]);
 
   const hasFilters = filters.height > 0 || filters.pregnancySafe || filters.wheelchairAccessible || filters.calmExperience;
 

@@ -1,20 +1,21 @@
 #!/usr/bin/env node
 /**
  * Add slug field to existing ride documents in Sanity
- * Run with: node add-slugs-to-rides.mjs
+ *
+ * Dry-run by default:
+ *   node scripts/add-slugs-to-rides.mjs
+ *
+ * Apply changes:
+ *   node scripts/add-slugs-to-rides.mjs --patch
  */
 
 import { createClient } from '@sanity/client';
 import { readFileSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const projectId = 'hd7qwtcq';
 const dataset = 'production';
-const token = 'skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj';
+const token = process.env.SANITY_TOKEN || readFileSync('/Users/rufusbot/.sanity_token', 'utf8').trim();
+const shouldPatch = process.argv.includes('--patch');
 
 const client = createClient({
   projectId,
@@ -67,6 +68,11 @@ async function addSlugsToRides() {
   let updated = 0;
   for (const ride of rides) {
     const slugValue = deriveSlug(ride.name, ride.park);
+
+    if (!shouldPatch) {
+      console.log(`  Would update: ${ride.name} (${ride.park}) -> ${slugValue}`);
+      continue;
+    }
     
     try {
       await client.patch(ride._id).set({
@@ -80,7 +86,11 @@ async function addSlugsToRides() {
     }
   }
 
-  console.log(`\nUpdated ${updated} rides with slug fields`);
+  if (shouldPatch) {
+    console.log(`\nUpdated ${updated} rides with slug fields`);
+  } else {
+    console.log('\nDry run complete. Re-run with --patch to apply changes to Sanity.');
+  }
 }
 
 async function main() {

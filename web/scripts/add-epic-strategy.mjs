@@ -47,7 +47,7 @@ async function main() {
   // Find the "How To Epic Universe — Ride Strategy" section and the blockquote after it
   // We want to insert numbered list items AFTER the intro paragraph (block 46) and BEFORE the blockquote (block 47)
   // But we need to check the current structure
-  const h2Index = doc.body.findIndex((b, i) => 
+  const h2Index = doc.body.findIndex((b) =>
     b.style === 'h2' && b.children?.[0]?.text?.includes('How To Epic Universe')
   );
   console.log(`"How To Epic Universe" h2 at block index: ${h2Index}`);

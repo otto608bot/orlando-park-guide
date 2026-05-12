@@ -10,7 +10,7 @@ interface BlogPostCardProps {
     readTime?: number;
     categories?: Array<{ title: string }>;
     heroImage?: {
-      asset: { url: string };
+      asset?: { url?: string };
       alt?: string;
     };
   };
@@ -28,7 +28,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
   // Category-based fallback images (mirrors blog/[slug]/page.tsx fallback logic)
   const getCategoryImage = () => {
     const cats = post.categories || [];
-    const catTitles = cats.map((c: any) => c.title || '').join(' ').toLowerCase();
+    const catTitles = cats.map((c) => c.title || '').join(' ').toLowerCase();
     const slug = post.slug?.current || '';
     const slugLower = slug.toLowerCase();
     

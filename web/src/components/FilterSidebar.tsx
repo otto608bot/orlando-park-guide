@@ -1,9 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { useFilters } from '@/context/FiltersContext';
-import { AFFILIATE_LINKS, PARK_TICKET_LINKS } from '@/config/affiliate-links';
+import { AFFILIATE_LINKS } from '@/config/affiliate-links';
 
 const PARKS = [
   { name: 'Magic Kingdom', slug: 'magic-kingdom' },
@@ -18,18 +17,8 @@ const PARKS = [
 ];
 
 export default function FilterSidebar() {
-  const searchParams = useSearchParams();
   const { filters, setHeight, setPregnancySafe, setWheelchairAccessible, setCalmExperience, setSelectedParks, clearFilters } = useFilters();
-  
-  // Initialize from URL params directly for immediate consistency
-  const urlHeight = parseInt(searchParams.get('height') || '0', 10);
-  const [localHeight, setLocalHeight] = useState(isNaN(urlHeight) ? 0 : urlHeight);
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-
-  // Sync local state with filters context when it changes
-  useEffect(() => {
-    setLocalHeight(filters.height);
-  }, [filters.height]);
 
   // Listen for the mobile filter button event from Header
   useEffect(() => {
@@ -40,7 +29,6 @@ export default function FilterSidebar() {
 
   const handleHeightChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value, 10);
-    setLocalHeight(val);
     setHeight(val);
   };
 
@@ -79,14 +67,14 @@ export default function FilterSidebar() {
           {/* Height Slider */}
           <div className="drawer-filter-group">
             <label className="filter-label">
-              Minimum Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+              Minimum Height: <strong>{filters.height === 0 ? 'Any' : `${filters.height}"`}</strong>
             </label>
             <input
               type="range"
               min="0"
               max="60"
               step="2"
-              value={localHeight}
+              value={filters.height}
               onChange={handleHeightChange}
               className="height-slider"
             />
@@ -171,14 +159,14 @@ export default function FilterSidebar() {
         {/* Height Slider - TOP */}
         <div className="filter-group">
           <label className="filter-label">
-            Minimum Height: <strong>{localHeight === 0 ? 'Any' : `${localHeight}"`}</strong>
+            Minimum Height: <strong>{filters.height === 0 ? 'Any' : `${filters.height}"`}</strong>
           </label>
           <input
             type="range"
             min="0"
             max="60"
             step="2"
-            value={localHeight}
+            value={filters.height}
             onChange={handleHeightChange}
             className="height-slider"
           />

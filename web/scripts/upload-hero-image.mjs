@@ -6,21 +6,8 @@
  * Example: node scripts/upload-hero-image.mjs /path/to/hero.webp "Family at Magic Kingdom"
  */
 
-import { createClient } from '@sanity/client';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Sanity config from environment / config
-const client = createClient({
-  projectId: process.env.SANITY_PROJECT_ID || 'hd7qwtcq',
-  dataset: process.env.SANITY_DATASET || 'production',
-  apiVersion: '2024-01-01',
-  token: process.env.SANITY_TOKEN,
-  useCdn: false,
-});
 
 async function uploadImage(imagePath, alt = 'Plan Your Park hero image') {
   if (!fs.existsSync(imagePath)) {

@@ -6,9 +6,22 @@ import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 import FilterSidebar from "@/components/FilterSidebar";
 import { getParkTicketLink } from "@/config/affiliate-links";
+import type { SanitySlug } from "@/lib/sanity-types";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
+}
+
+interface ParkBlogPost {
+  _id: string;
+  title: string;
+  slug?: SanitySlug;
+  excerpt?: string;
+  readTime?: number;
+  heroImage?: {
+    asset?: { url?: string };
+    alt?: string;
+  };
 }
 
 export async function generateStaticParams() {
@@ -205,7 +218,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           <h2>Planning Tips for {park.name}</h2>
           {blogPosts && blogPosts.length > 0 ? (
             <div className="park-blog-grid">
-              {blogPosts.map((post: any) => (
+              {(blogPosts as ParkBlogPost[]).map((post) => (
                 <Link key={post._id} href={`/blog/${post.slug?.current}`} className="park-blog-card">
                   {post.heroImage?.asset?.url && (
                     <div className="park-blog-img">

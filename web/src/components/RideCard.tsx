@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
 import RideModal from './RideModal';
 
@@ -112,6 +111,7 @@ export default function RideCard({ ride, showPark = false }: RideCardProps) {
         <div className="ride-card-badges">
           <span className={`thrill-badge thrill-badge--${thrill}`}>{thrillLbl}</span>
           {ride.rideType && <span className="type-pill">{ride.rideType}</span>}
+          {showPark && <span className={`type-pill park-pill park-pill--${parkSlug}`}>{ride.park}</span>}
         </div>
 
         <h3 className="ride-card-name">{ride.name}</h3>
