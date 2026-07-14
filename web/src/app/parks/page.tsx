@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { sanityClient } from "@/lib/sanity";
 import ParkCard from "@/components/ParkCard";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "All Orlando Parks",
   description: "Explore all Orlando theme parks - Disney World, Universal Orlando, SeaWorld, LEGOLAND, and more.",
-};
+  path: "/parks",
+});
 
 async function getAllParks() {
   return sanityClient.fetch(`

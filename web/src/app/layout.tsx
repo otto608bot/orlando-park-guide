@@ -7,26 +7,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FiltersProvider } from "@/context/FiltersContext";
 import { Suspense } from "react";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito", weight: ["400", "600", "700", "800"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Plan Your Park | Orlando Theme Park Planning Guide",
-    template: "%s | Plan Your Park",
+    default: `${SITE_NAME} | Orlando Theme Park Planning Guide`,
+    template: `%s | ${SITE_NAME}`,
   },
   description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld, LEGOLAND & more!",
   keywords: ["Orlando theme parks", "Disney World", "Universal Orlando", "SeaWorld", "theme park planning", "Orlando vacation"],
-  alternates: {
-    canonical: "https://planyourpark.com",
-  },
   openGraph: {
-    title: "Plan Your Park | Orlando Theme Park Planning Guide",
-    description: "Your ultimate guide to Orlando theme parks",
+    siteName: SITE_NAME,
     type: "website",
     locale: "en_US",
-    url: "https://planyourpark.com",
   },
   icons: {
     icon: [

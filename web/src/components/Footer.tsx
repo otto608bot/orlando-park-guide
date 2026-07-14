@@ -14,6 +14,11 @@ export default function Footer() {
           <Link href="/character-dining">Character Dining</Link>
           <Link href="/deals">Deals</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
           <a href="/sitemap.xml">Sitemap</a>
         </nav>
 

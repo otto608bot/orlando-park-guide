@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Orlando Theme Park Deals & Discounts",
   description: "Save money on your Orlando vacation with exclusive ticket discounts and package deals.",
-};
+  path: "/deals",
+});
 
 const gearItems = [
   {

@@ -4,14 +4,14 @@ interface BlogPostCardProps {
   post: {
     _id: string;
     title: string;
-    slug: { current: string };
+    slug: { current?: string };
     excerpt?: string;
     publishedAt?: string;
     readTime?: number;
-    categories?: Array<{ title: string }>;
+    categories?: Array<{ title?: string | null }>;
     heroImage?: {
-      asset: { url: string };
-      alt?: string;
+      asset?: { url?: string | null };
+      alt?: string | null;
     };
   };
 }

@@ -1,0 +1,314 @@
+const AFFILIATE_LINKS = {
+  disney4DayParkHopper: "https://www.tkqlhce.com/click-101693488-12783539",
+  universal3Park3Day: "https://www.dpbolvw.net/click-101693488-12983229",
+  universal1Park1DayEpic: "https://www.tkqlhce.com/click-101693488-12834895",
+  seaworld: "https://www.tkqlhce.com/click-101693488-12540778",
+  legoland: "https://www.anrdoezrs.net/click-101693488-12540781",
+} as const;
+
+type SlugValue = { current?: string | null } | string | null | undefined;
+type Category = { title?: string | null; slug?: SlugValue };
+type MarkDef = { _key?: string; _type?: string; href?: string; [key: string]: unknown };
+type PortableTextChild = {
+  _type?: string;
+  text?: string;
+  marks?: Array<string | { _type?: string; href?: string; [key: string]: unknown }>;
+  [key: string]: unknown;
+};
+
+type PortableTextBlock = {
+  _type?: string;
+  style?: string;
+  listItem?: string;
+  level?: number;
+  children?: PortableTextChild[];
+  markDefs?: MarkDef[];
+  [key: string]: unknown;
+};
+
+export interface BlogPostLike {
+  _id?: string;
+  title?: string;
+  slug?: SlugValue;
+  excerpt?: string;
+  publishedAt?: string;
+  readTime?: number;
+  categories?: Category[];
+  tags?: string[];
+}
+
+export interface ContextualLink {
+  href: string;
+  label: string;
+  description: string;
+}
+
+export interface ContextualTicketCta {
+  href: string;
+  label: string;
+  description: string;
+  supportingLabel: string;
+}
+
+const BUILT_IN_MARKS = new Set(["strong", "em", "code", "underline", "description"]);
+const DESTINATION_KEYWORDS = {
+  disney: ["disney", "magic kingdom", "epcot", "hollywood studios", "animal kingdom"],
+  universal: ["universal", "islands of adventure", "hogwarts"],
+  epic: ["epic universe", "dark universe", "super nintendo", "how to train your dragon"],
+  seaworld: ["seaworld"],
+  legoland: ["legoland"],
+} as const;
+
+function slugFrom(post: BlogPostLike): string {
+  const slug = post.slug;
+  if (typeof slug === "string") return slug.trim();
+  return slug?.current?.trim() || "";
+}
+
+function normalizeText(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getCategoryTitles(post: BlogPostLike): string[] {
+  return (post.categories || [])
+    .map((category) => category.title?.trim())
+    .filter((value): value is string => Boolean(value));
+}
+
+function getSignals(post: BlogPostLike): Set<string> {
+  const haystack = normalizeText(
+    [post.title, slugFrom(post), ...(post.tags || []), ...getCategoryTitles(post)].filter(Boolean).join(" "),
+  );
+  const signals = new Set<string>();
+
+  for (const [signal, keywords] of Object.entries(DESTINATION_KEYWORDS)) {
+    if (keywords.some((keyword) => haystack.includes(normalizeText(keyword)))) {
+      signals.add(signal);
+    }
+  }
+
+  return signals;
+}
+
+function getTitleTokens(post: BlogPostLike): Set<string> {
+  return new Set(
+    normalizeText(`${post.title || ""} ${slugFrom(post)}`)
+      .split(" ")
+      .filter((token) => token.length >= 4),
+  );
+}
+
+function sharedCount(left: Iterable<string>, right: Iterable<string>): number {
+  const rightSet = new Set(right);
+  let count = 0;
+  for (const value of left) {
+    if (rightSet.has(value)) count += 1;
+  }
+  return count;
+}
+
+export function dedupePostsBySlug<T extends BlogPostLike>(posts: T[]): T[] {
+  const seen = new Set<string>();
+  const deduped: T[] = [];
+
+  for (const post of posts) {
+    const slug = slugFrom(post);
+    if (!slug || seen.has(slug)) continue;
+    seen.add(slug);
+    deduped.push(post);
+  }
+
+  return deduped;
+}
+
+export function normalizePortableTextBlocks(blocks: PortableTextBlock[] | null | undefined): PortableTextBlock[] {
+  if (!Array.isArray(blocks)) return [];
+
+  return blocks.map((block, blockIndex) => {
+    if (block?._type !== "block") return block;
+
+    const markDefs: MarkDef[] = Array.isArray(block.markDefs) ? [...block.markDefs] : [];
+    const markKeys = new Set(markDefs.map((def) => def._key).filter((value): value is string => Boolean(value)));
+
+    const children = Array.isArray(block.children)
+      ? block.children.map((child, childIndex) => {
+          const nextMarks: string[] = [];
+
+          for (const [markIndex, mark] of (child.marks || []).entries()) {
+            if (typeof mark === "string") {
+              if (BUILT_IN_MARKS.has(mark) || markKeys.has(mark)) {
+                nextMarks.push(mark);
+              }
+              continue;
+            }
+
+            if (mark?._type === "link" && typeof mark.href === "string" && mark.href.trim()) {
+              const syntheticKey = `generated-link-${blockIndex}-${childIndex}-${markIndex}`;
+              markDefs.push({ _key: syntheticKey, _type: "link", href: mark.href });
+              markKeys.add(syntheticKey);
+              nextMarks.push(syntheticKey);
+            }
+          }
+
+          return {
+            ...child,
+            marks: nextMarks,
+          };
+        })
+      : [];
+
+    const style = block.style === "bullet" || block.style === "number" ? "normal" : block.style;
+    const listItem = block.listItem || (block.style === "bullet" || block.style === "number" ? block.style : undefined);
+
+    return {
+      ...block,
+      style,
+      ...(listItem ? { listItem } : {}),
+      children,
+      markDefs,
+    };
+  });
+}
+
+function scoreRelatedPost(currentPost: BlogPostLike, candidate: BlogPostLike): number {
+  const currentCategoryTitles = getCategoryTitles(currentPost).map(normalizeText);
+  const candidateCategoryTitles = getCategoryTitles(candidate).map(normalizeText);
+  const currentTags = (currentPost.tags || []).map(normalizeText);
+  const candidateTags = (candidate.tags || []).map(normalizeText);
+  const currentSignals = getSignals(currentPost);
+  const candidateSignals = getSignals(candidate);
+  const currentTokens = getTitleTokens(currentPost);
+  const candidateTokens = getTitleTokens(candidate);
+
+  return (
+    sharedCount(currentCategoryTitles, candidateCategoryTitles) * 4 +
+    sharedCount(currentTags, candidateTags) * 3 +
+    sharedCount(currentSignals, candidateSignals) * 3 +
+    sharedCount(currentTokens, candidateTokens) * 1
+  );
+}
+
+export function getRelatedPosts<T extends BlogPostLike>(currentPost: T, posts: T[], limit = 3): T[] {
+  const currentSlug = slugFrom(currentPost);
+
+  return dedupePostsBySlug(posts)
+    .filter((post) => slugFrom(post) && slugFrom(post) !== currentSlug)
+    .map((post) => ({ post, score: scoreRelatedPost(currentPost, post) }))
+    .sort((left, right) => {
+      if (right.score !== left.score) return right.score - left.score;
+      return (right.post.publishedAt || "").localeCompare(left.post.publishedAt || "");
+    })
+    .slice(0, limit)
+    .map(({ post }) => post);
+}
+
+export function getContextualTicketCta(post: BlogPostLike): ContextualTicketCta {
+  const signals = getSignals(post);
+
+  if (signals.has("epic")) {
+    return {
+      href: AFFILIATE_LINKS.universal1Park1DayEpic,
+      label: "See Epic Universe ticket options",
+      description: "Best for single-park Epic Universe coverage and fast price checking.",
+      supportingLabel: "Universal Orlando partner pricing",
+    };
+  }
+
+  if (signals.has("universal")) {
+    return {
+      href: AFFILIATE_LINKS.universal3Park3Day,
+      label: "Compare Universal Orlando ticket deals",
+      description: "Useful when the article is helping readers choose multi-day Universal plans.",
+      supportingLabel: "Includes Epic Universe eligible bundles",
+    };
+  }
+
+  if (signals.has("seaworld")) {
+    return {
+      href: AFFILIATE_LINKS.seaworld,
+      label: "Check SeaWorld Orlando ticket deals",
+      description: "Quick path to current partner pricing for SeaWorld Orlando visitors.",
+      supportingLabel: "SeaWorld Orlando tickets",
+    };
+  }
+
+  if (signals.has("legoland")) {
+    return {
+      href: AFFILIATE_LINKS.legoland,
+      label: "Check LEGOLAND Florida ticket deals",
+      description: "Helpful for younger-family trip planning and side-trip comparisons.",
+      supportingLabel: "LEGOLAND Florida tickets",
+    };
+  }
+
+  return {
+    href: AFFILIATE_LINKS.disney4DayParkHopper,
+    label: "Compare Disney World ticket deals",
+    description: "Best fit for Disney planning guides, packing lists, and itinerary posts.",
+    supportingLabel: "Disney World tickets via Undercover Tourist",
+  };
+}
+
+export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLike[]): ContextualLink[] {
+  const signals = getSignals(post);
+  const links: ContextualLink[] = [];
+  const relatedPosts = getRelatedPosts(post, allPosts, 2);
+
+  if (signals.has("disney")) {
+    links.push(
+      {
+        href: "/rides",
+        label: "Browse Disney-friendly rides by height and thrill level",
+        description: "Use the ride filters to avoid walking into lines your kids cannot ride.",
+      },
+      {
+        href: "/deals",
+        label: "Compare Disney and Orlando ticket deals",
+        description: "Helpful when the article moves readers from planning to booking.",
+      },
+    );
+  } else if (signals.has("universal") || signals.has("epic")) {
+    links.push(
+      {
+        href: "/parks",
+        label: "Compare Universal, Epic Universe, and the rest of Orlando",
+        description: "Useful for readers still deciding which park deserves a day.",
+      },
+      {
+        href: "/deals",
+        label: "See current Universal and Orlando ticket deal options",
+        description: "A booking-oriented next step without cluttering the article body.",
+      },
+    );
+  } else {
+    links.push(
+      {
+        href: "/parks",
+        label: "Compare Orlando parks side by side",
+        description: "A strong next step for top-of-funnel planning content.",
+      },
+      {
+        href: "/rides",
+        label: "Browse rides by thrill level and height requirement",
+        description: "Good for turning broad inspiration into an actual park plan.",
+      },
+    );
+  }
+
+  for (const relatedPost of relatedPosts) {
+    const slug = slugFrom(relatedPost);
+    if (!slug) continue;
+    links.push({
+      href: `/blog/${slug}`,
+      label: relatedPost.title || "Related guide",
+      description: relatedPost.excerpt || "Another closely related planning guide.",
+    });
+  }
+
+  return links.slice(0, 4);
+}

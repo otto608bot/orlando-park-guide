@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { sanityClient } from "@/lib/sanity";
 import CharacterDiningClient from "./CharacterDiningClient";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Character Dining",
   description: "Find the best character dining experiences at Disney World and Universal Orlando.",
-};
+  path: "/character-dining",
+});
 
 async function getAllCharacterDining() {
   return sanityClient.fetch(`

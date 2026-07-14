@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 import { sanityClient } from "@/lib/sanity";
 import RidesClient from "./RidesClient";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "All Rides & Attractions",
   description: "Browse all Orlando theme park rides with filters for thrill level, height requirements, and more.",
-};
+  path: "/rides",
+});
 
 async function getAllRides() {
   return sanityClient.fetch(`
