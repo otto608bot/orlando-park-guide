@@ -6,6 +6,7 @@ import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 import FilterSidebar from "@/components/FilterSidebar";
 import { getParkTicketLink } from "@/config/affiliate-links";
+import { createPageMetadata } from "@/lib/seo";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
@@ -28,10 +29,11 @@ export async function generateMetadata({ params }: ParkPageProps): Promise<Metad
   `, { slug });
 
   if (!park) return { title: "Park Not Found" };
-  return {
+  return createPageMetadata({
     title: park.name,
-    description: park.description,
-  };
+    description: park.description || `Plan rides, dining, and trip details for ${park.name}.`,
+    path: `/parks/${slug}`,
+  });
 }
 
 const parkImages: Record<string, string> = {

@@ -5,11 +5,13 @@ import FilterSidebar from "@/components/FilterSidebar";
 import NewsletterForm from "@/components/NewsletterForm";
 import HomepageRides from "@/components/HomepageRides";
 import HomepageHeader from "@/components/HomepageHeader";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Plan Your Park | Orlando Theme Park Planning Guide",
+export const metadata: Metadata = createPageMetadata({
+  title: "Orlando Theme Park Planning Guide",
   description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld & more!",
-};
+  path: "/",
+});
 
 async function getHomePageData() {
   const allRides = await sanityClient.fetch(`

@@ -1,100 +1,197 @@
-import React, { type ReactNode } from 'react';
+import React, { type ReactNode } from "react";
 import { PortableText } from "@portabletext/react";
-export const revalidate = 60;
 import type { Metadata } from "next";
 import Link from "next/link";
-import { sanityClient } from "@/lib/sanity";
-import QuestionForm from "@/components/QuestionForm";
+
 import NewsletterForm from "@/components/NewsletterForm";
-import { AFFILIATE_LINKS } from "@/config/affiliate-links";
-import { processTextWithAffiliates } from "@/components/blogAffiliates";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
+import QuestionForm from "@/components/QuestionForm";
+import { AFFILIATE_LINKS } from "@/config/affiliate-links";
+import {
+  dedupePostsBySlug,
+  getContextualTicketCta,
+  getHelpfulInternalLinks,
+  getRelatedPosts,
+  normalizePortableTextBlocks,
+  type BlogPostLike,
+} from "@/lib/blog";
+import { sanityClient } from "@/lib/sanity";
+
+export const revalidate = 60;
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+interface BlogPostRecord extends BlogPostLike {
+  body?: any[];
+  heroImage?: { asset?: { url?: string | null }; alt?: string | null };
+  author?: { name?: string | null };
+  _updatedAt?: string;
+}
+
 export async function generateStaticParams() {
-  const slugs = await sanityClient.fetch(`
-    *[_type == "blogPost"].slug.current
+  const slugs = await sanityClient.fetch<string[]>(`
+    *[_type == "blogPost" && defined(slug.current)].slug.current
   `);
-  // Filter out null/malformed slugs before generating params
-  return (slugs as string[]).filter((slug): slug is string => !!slug).map((slug) => ({ slug }));
+
+  return [...new Set((slugs || []).filter(Boolean))].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await sanityClient.fetch(`
-    *[_type == "blogPost" && slug.current == $slug][0] {
-      title,
-      excerpt,
-      tags,
-      categories[] { title, slug }
-    }
-  `, { slug });
-  
-  if (!post) return { title: "Post Not Found" };
-  
-  // Build keywords from tags, fallback to excerpt-based
-  const keywords = post.tags?.length > 0
-    ? post.tags.join(", ")
-    : "Disney World packing list, Orlando theme parks, family travel";
-  
+  const post = await sanityClient.fetch<BlogPostRecord | null>(
+    `
+      *[_type == "blogPost" && slug.current == $slug][0] {
+        title,
+        excerpt,
+        tags,
+        categories[] { title, slug },
+        heroImage { asset-> { url }, alt },
+        author { name },
+        publishedAt,
+        _updatedAt
+      }
+    `,
+    { slug },
+  );
+
+  if (!post) {
+    return { title: "Post Not Found" };
+  }
+
+  const keywords = post.tags?.length
+    ? post.tags
+    : ["Orlando theme parks", "Disney World planning", "Universal Orlando tips"];
+
+  const canonicalPath = `/blog/${slug}`;
+  const image = post.heroImage?.asset?.url;
+
   return {
     title: post.title,
     description: post.excerpt,
     keywords,
+    authors: post.author?.name ? [{ name: post.author.name }] : [{ name: "Plan Your Park" }],
+    alternates: {
+      canonical: canonicalPath,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       locale: "en_US",
-      url: `https://planyourpark.com/blog/${slug}`,
+      url: canonicalPath,
       siteName: "Plan Your Park",
+      publishedTime: post.publishedAt,
+      modifiedTime: post._updatedAt,
+      ...(image ? { images: [{ url: image, alt: post.heroImage?.alt || post.title || "Plan Your Park blog" }] } : {}),
     },
-    alternates: {
-      canonical: `https://planyourpark.com/blog/${slug}`,
+    twitter: {
+      card: image ? "summary_large_image" : "summary",
+      title: post.title,
+      description: post.excerpt,
+      ...(image ? { images: [image] } : {}),
     },
   };
 }
 
 async function getPostData(slug: string) {
-  const [post, allPosts] = await Promise.all([
-    sanityClient.fetch(`
-      *[_type == "blogPost" && slug.current == $slug][0] {
+  const [post, allPostsRaw] = await Promise.all([
+    sanityClient.fetch<BlogPostRecord | null>(
+      `
+        *[_type == "blogPost" && slug.current == $slug][0] {
+          _id,
+          title,
+          slug,
+          body,
+          excerpt,
+          heroImage { asset-> { url }, alt },
+          author { name },
+          categories[] { title, slug },
+          tags,
+          publishedAt,
+          readTime,
+          _updatedAt
+        }
+      `,
+      { slug },
+    ),
+    sanityClient.fetch<BlogPostRecord[]>(`
+      *[_type == "blogPost" && defined(slug.current)] | order(publishedAt desc) {
         _id,
         title,
         slug,
-        body,
         excerpt,
-        heroImage { asset-> { url }, alt },
-        author { name },
-        categories[] { title, slug },
-        tags,
+        readTime,
         publishedAt,
-        readTime
-      }
-    `, { slug }),
-    sanityClient.fetch(`
-      *[_type == "blogPost"] | order(publishedAt desc) [0...4] {
-        _id,
-        title,
-        slug,
-        excerpt,
-        readTime
+        categories[] { title, slug },
+        tags
       }
     `),
   ]);
-  
-  const related = allPosts.filter((p: any) => p.slug?.current && p.slug.current !== slug).slice(0, 2);
-  return { post, related };
+
+  const allPosts = dedupePostsBySlug(allPostsRaw || []);
+
+  if (!post) {
+    return { post: null, related: [], helpfulLinks: [], contextualTicketCta: null };
+  }
+
+  const normalizedPost = {
+    ...post,
+    body: normalizePortableTextBlocks(post.body),
+  };
+
+  return {
+    post: normalizedPost,
+    related: getRelatedPosts(normalizedPost, allPosts, 3),
+    helpfulLinks: getHelpfulInternalLinks(normalizedPost, allPosts),
+    contextualTicketCta: getContextualTicketCta(normalizedPost),
+  };
+}
+
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+function getFallbackHero(post: BlogPostRecord) {
+  const categoryText = (post.categories || []).map((category) => category.title || "").join(" ").toLowerCase();
+  const slug = typeof post.slug === "string"
+    ? post.slug.toLowerCase()
+    : post.slug?.current?.toLowerCase() || "";
+
+  if (slug.includes("epic-universe")) return "/epic-universe.jpeg";
+  if (categoryText.includes("disney") || slug.includes("disney")) return "/Disney-World.webp";
+  if (categoryText.includes("universal") || slug.includes("universal")) return "/Universal-Studios.jpeg";
+  if (categoryText.includes("seaworld") || slug.includes("seaworld")) return "/seaworld.jpg";
+  return "/epcot.jpeg";
+}
+
+function getTicketButtonHref(ticketText: string) {
+  const label = ticketText.toLowerCase();
+
+  if (label.includes("1-park epic universe")) return AFFILIATE_LINKS.universal1Park1DayEpic;
+  if (label.includes("2-park")) return AFFILIATE_LINKS.universal2Park2Day;
+  if (label.includes("3-park")) return AFFILIATE_LINKS.universal3Park3Day;
+  if (label.includes("direct from universal")) return AFFILIATE_LINKS.universalOrlandoDirect;
+  if (label.includes("disney")) return AFFILIATE_LINKS.disney4DayParkHopper;
+  return AFFILIATE_LINKS.ucDealsPage;
+}
+
+function renderProcessedText(children?: ReactNode) {
+  return Array.isArray(children)
+    ? children
+    : children;
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const { post, related } = await getPostData(slug);
-  
-  if (!post) {
+  const { post, related, helpfulLinks, contextualTicketCta } = await getPostData(slug);
+
+  if (!post || !contextualTicketCta) {
     return (
       <main className="blog-container">
         <article className="blog-content">
@@ -105,247 +202,217 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </main>
     );
   }
-  
-  const formatDate = (date: string) => new Date(date).toLocaleDateString("en-US", { 
-    year: "numeric", 
-    month: "long", 
-    day: "numeric" 
-  });
 
   const components = {
     block: {
-      h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
-      h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
-      normal: ({ children }: { children?: React.ReactNode }) => {
-        // children is React.ReactNode — can be a string, an array with one span, or an array of mixed content
-        // Extract the ticket button text if present
+      h2: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
+      h3: ({ children }: { children?: ReactNode }) => <h3>{children}</h3>,
+      normal: ({ children }: { children?: ReactNode }) => {
         let ticketText: string | null = null;
-        if (typeof children === 'string') {
-          const match = (children as string).match(/^\[ Buy (.+?) → \]$/);
+
+        if (typeof children === "string") {
+          const match = children.match(/^\[ Buy (.+?) → \]$/);
           if (match) ticketText = match[1];
-        } else if (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string') {
-          // children is an array wrapping a single plain string like ["[ Buy X → ]"]
-          const match = (children[0] as string).match(/^\[ Buy (.+?) → \]$/);
+        } else if (Array.isArray(children) && children.length === 1 && typeof children[0] === "string") {
+          const match = children[0].match(/^\[ Buy (.+?) → \]$/);
           if (match) ticketText = match[1];
         }
+
         if (ticketText) {
-          // Map each ticket type to the correct affiliate URL
-          let url: string = AFFILIATE_LINKS.universal3Park3Day;
-          const labelLower = ticketText.toLowerCase();
-          if (labelLower.includes('1-park epic universe')) {
-            url = AFFILIATE_LINKS.universal1Park1DayEpic;
-          } else if (labelLower.includes('2-park')) {
-            url = AFFILIATE_LINKS.universal2Park2Day;
-          } else if (labelLower.includes('3-park')) {
-            url = AFFILIATE_LINKS.universal3Park3Day;
-          } else if (labelLower.includes('express pass')) {
-            url = AFFILIATE_LINKS.universal3Park3Day;
-          } else if (labelLower.includes('direct from universal')) {
-            url = AFFILIATE_LINKS.universalOrlandoDirect;
-          } else if (labelLower.includes('undercover tourist')) {
-            url = AFFILIATE_LINKS.universal3Park3Day;
-          }
           return (
             <p>
-              <a href={url} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
+              <a href={getTicketButtonHref(ticketText)} target="_blank" rel="noopener noreferrer" className="ticket-cta-btn">
                 Buy {ticketText} →
               </a>
             </p>
           );
         }
-        // Process string children to inject affiliate links
-        const processed = Array.isArray(children)
-          ? children.map((child) => typeof child === 'string' ? processTextWithAffiliates(child) : child)
-          : typeof children === 'string' ? processTextWithAffiliates(children) : children;
-        return <p>{processed}</p>;
+
+        return <p>{renderProcessedText(children)}</p>;
       },
-      blockquote: ({ children }: { children?: React.ReactNode }) => {
-        const processed = Array.isArray(children)
-          ? children.map((child) => typeof child === 'string' ? processTextWithAffiliates(child) : child)
-          : typeof children === 'string' ? processTextWithAffiliates(children) : children;
-        return <blockquote><p>{processed}</p></blockquote>;
-      },
+      blockquote: ({ children }: { children?: ReactNode }) => <blockquote><p>{children}</p></blockquote>,
     },
     marks: {
-      strong: ({ children }: { children?: React.ReactNode }) => <strong style={{ color: 'var(--text-dark)', fontWeight: 700 }}>{children}</strong>,
-      link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string; blank?: boolean } }) => {
-        const isExternal = value?.blank;
-        return isExternal ? (
-          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="affiliate-link">{children}</a>
+      strong: ({ children }: { children?: ReactNode }) => <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{children}</strong>,
+      description: ({ children }: { children?: ReactNode }) => <span className="blog-inline-note">{children}</span>,
+      link: ({ children, value }: { children?: ReactNode; value?: { href?: string } }) => {
+        const href = value?.href?.trim();
+        if (!href) return <>{children}</>;
+
+        const isInternal = href.startsWith("/") || href.startsWith("https://planyourpark.com") || href.startsWith("http://planyourpark.com");
+        const cleanHref = href.replace(/^https?:\/\/planyourpark\.com/, "");
+
+        return isInternal ? (
+          <Link href={cleanHref || href} className="inline-link">
+            {children}
+          </Link>
         ) : (
-          <a href={value?.href} className="inline-link">{children}</a>
+          <a href={href} target="_blank" rel="noopener noreferrer" className="affiliate-link">
+            {children}
+          </a>
         );
       },
     },
     list: {
-      bullet: ({ children }: { children?: React.ReactNode }) => <ul className="blog-ul">{children}</ul>,
-      number: ({ children }: { children?: React.ReactNode }) => <ol className="blog-ol">{children}</ol>,
+      bullet: ({ children }: { children?: ReactNode }) => <ul className="blog-ul">{children}</ul>,
+      number: ({ children }: { children?: ReactNode }) => <ol className="blog-ol">{children}</ol>,
     },
     listItem: {
-      bullet: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
-      number: ({ children }: { children?: React.ReactNode }) => <li>{children}</li>,
+      bullet: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
+      number: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
     },
-
+    types: {
+      span: ({ value }: { value?: { text?: string } }) => value?.text ? <p>{value.text}</p> : null,
+    },
   };
 
-  // Fallback hero image based on category or slug
-  const getFallbackHero = () => {
-    const cats = post.categories || [];
-    const catTitles = (cats.map((c: any) => c.title || '').join(' ').toLowerCase());
-    const slugLower = (post.slug?.current || '').toLowerCase();
-    // Check slug directly since categories may not be resolved
-    if (slugLower.includes('epic-universe')) {
-      return '/epic-universe.jpeg';
-    }
-    if (catTitles.includes('disney') || catTitles.includes('magic kingdom') || catTitles.includes('epcot') || catTitles.includes('hollywood') || catTitles.includes('animal')) {
-      return '/Disney-World.webp';
-    }
-    if (catTitles.includes('universal') || slugLower.includes('universal')) {
-      return '/Universal-Studios.jpeg';
-    }
-    if (catTitles.includes('news') || catTitles.includes('update')) {
-      return '/Magic-Kingdom.webp';
-    }
-    if (slugLower.includes('disney-world-packing') || slugLower.includes('best-time-visit-disney')) {
-      return '/Disney-World.webp';
-    }
-    return '/epcot.jpeg';
-  };
-
-  // JSON-LD structured data
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
+    dateModified: post._updatedAt || post.publishedAt,
+    mainEntityOfPage: `https://planyourpark.com/blog/${slug}`,
+    image: [post.heroImage?.asset?.url || `https://planyourpark.com${getFallbackHero(post)}`],
     author: { "@type": "Person", name: post.author?.name || "Plan Your Park" },
     publisher: { "@type": "Organization", name: "Plan Your Park", url: "https://planyourpark.com" },
+    keywords: post.tags,
+    articleSection: post.categories?.map((category) => category.title).filter(Boolean),
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://planyourpark.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://planyourpark.com/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://planyourpark.com/blog/${slug}` },
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+
       <main className="blog-container">
+        <nav className="blog-breadcrumbs" aria-label="Breadcrumb">
+          <Link href="/">Home</Link>
+          <span>/</span>
+          <Link href="/blog">Blog</Link>
+          <span>/</span>
+          <span aria-current="page">{post.title}</span>
+        </nav>
+
         <header className="blog-header">
-          {post.categories?.length > 0 ? (
+          {post.categories?.length ? (
             <div className="blog-categories">
-              {post.categories.map((cat: any) => <span key={cat.slug?.current}>{cat.title}</span>)}
+              {post.categories.map((category) => {
+                const categoryKey = typeof category.slug === "string" ? category.slug : category.slug?.current;
+                return <span key={categoryKey || category.title}>{category.title}</span>;
+              })}
             </div>
-          ) : (
-            // Fallback category for posts without categories (e.g., epic-universe-tickets-guide)
-            <div className="blog-categories">
-              <span>Epic Universe</span>
-            </div>
-          )}
+          ) : null}
           <h1>{post.title}</h1>
-          {post.excerpt && <p className="excerpt">{post.excerpt}</p>}
+          {post.excerpt ? <p className="excerpt">{post.excerpt}</p> : null}
           <div className="blog-meta">
-            <span>By {post.author?.name ? post.author.name : "Plan Your Park"}</span>
+            <span>By {post.author?.name || "Plan Your Park"}</span>
             <span>•</span>
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt || new Date().toISOString())}</time>
-            {post.readTime && <><span>•</span><span>{post.readTime} min read</span></>}
+            {post.readTime ? <><span>•</span><span>{post.readTime} min read</span></> : null}
           </div>
         </header>
-        
-        {(post.heroImage?.asset?.url || true) && (
-          <div className="blog-hero">
-            <img
-              src={post.heroImage?.asset?.url || getFallbackHero()}
-              alt={post.heroImage?.alt || post.title}
-            />
-          </div>
-        )}
-        
+
+        <div className="blog-hero">
+          <img src={post.heroImage?.asset?.url || getFallbackHero(post)} alt={post.heroImage?.alt || post.title || "Plan Your Park blog hero"} />
+        </div>
+
         <BlogContentUrlProcessor>
-          <PortableText value={post.body} components={components} />
+          <PortableText value={post.body as any} components={components} />
         </BlogContentUrlProcessor>
 
-        {/* Buy Tickets CTA */}
-        <div className="blog-buy-tickets">
-          <h2>Get Your Tickets</h2>
-          <p>Buy from trusted sellers and save up to 20% vs. gate pricing.</p>
-          <div className="buy-tickets-grid">
-            <a href={AFFILIATE_LINKS.disney4DayParkHopper} target="_blank" rel="noopener" className="buy-ticket-btn disney">
-              <span>🏰</span>
-              <div>
-                <strong>Disney World</strong>
-                <small>via Undercover Tourist</small>
-              </div>
-            </a>
-            <a href={AFFILIATE_LINKS.universal3Park3Day} target="_blank" rel="noopener" className="buy-ticket-btn universal">
-              <span>🪄</span>
-              <div>
-                <strong>Universal Orlando</strong>
-                <small>via Undercover Tourist</small>
-              </div>
-            </a>
-            <a href={AFFILIATE_LINKS.seaworld} target="_blank" rel="noopener" className="buy-ticket-btn seaworld">
-              <span>🐬</span>
-              <div>
-                <strong>SeaWorld Orlando</strong>
-                <small>via Undercover Tourist</small>
-              </div>
-            </a>
+        <section className="blog-helpful-links">
+          <div className="blog-helpful-links-header">
+            <h2>Plan your next step</h2>
+            <p>Use these related tools and guides to keep planning without starting from scratch.</p>
           </div>
-        </div>
-        
-        {/* Bottom CTA */}
-        <div className="blog-bottom-cta">
-          <h2>Plan Your Perfect Orlando Trip</h2>
-          <p>Get exclusive deals and tips delivered to your inbox.</p>
-          <div className="cta-buttons">
-            <a href={AFFILIATE_LINKS.ucDealsPage} target="_blank" rel="noopener" className="primary">Get Tickets</a>
-            <a href="/blog" className="secondary">More Articles</a>
+          <div className="blog-helpful-links-grid">
+            {helpfulLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="blog-helpful-link-card">
+                <strong>{link.label}</strong>
+                <span>{link.description}</span>
+              </Link>
+            ))}
           </div>
-        </div>
-        
-        {post.tags?.length > 0 && (
+        </section>
+
+        <section className="blog-primary-cta">
+          <div>
+            <p className="blog-primary-cta-kicker">Booking support</p>
+            <h2>{contextualTicketCta.label}</h2>
+            <p>{contextualTicketCta.description}</p>
+            <p className="blog-monetization-note">
+              If you book through a partner link, Plan Your Park may earn a commission at no extra cost to you. We keep these links limited to genuinely helpful next steps.
+            </p>
+          </div>
+          <div className="blog-primary-cta-actions">
+            <a href={contextualTicketCta.href} target="_blank" rel="noopener noreferrer" className="primary">
+              {contextualTicketCta.supportingLabel}
+            </a>
+            <Link href="/deals" className="secondary">See all Orlando deal options</Link>
+          </div>
+        </section>
+
+        {post.tags?.length ? (
           <div className="blog-tags">
-            {post.tags.map((tag: string) => <span key={tag}>#{tag}</span>)}
+            {post.tags.map((tag) => <span key={tag}>#{tag}</span>)}
           </div>
-        )}
-        
-        {/* Related Posts */}
-        {related.length > 0 && (
-          <div className="blog-related">
-            <h2>Keep Reading</h2>
+        ) : null}
+
+        {related.length ? (
+          <section className="blog-related">
+            <h2>Keep reading</h2>
             <div className="related-posts">
-              {related.map((r: any) => (
-                <Link key={r.slug?.current} href={`/blog/${r.slug?.current}`} className="related-post">
-                  <h4>{r.title}</h4>
-                  <span>{r.readTime} min read</span>
-                </Link>
-              ))}
+              {related.map((relatedPost) => {
+                const slugValue = relatedPost.slug;
+                const relatedSlug = typeof slugValue === "string" ? slugValue : slugValue?.current;
+                if (!relatedSlug) return null;
+                return (
+                  <Link key={relatedSlug} href={`/blog/${relatedSlug}`} className="related-post">
+                    <h4>{relatedPost.title}</h4>
+                    <p>{relatedPost.excerpt || "Another practical Orlando planning guide."}</p>
+                    <span>{relatedPost.readTime ? `${relatedPost.readTime} min read` : "Read guide"}</span>
+                  </Link>
+                );
+              })}
             </div>
-          </div>
-        )}
-        
-        {/* Q&A Section */}
-        <div className="blog-qa">
-          <h2>Frequently Asked Questions</h2>
+          </section>
+        ) : null}
+
+        <section className="blog-qa">
+          <h2>Planning questions</h2>
           <div className="qa-item">
-            <h4>When do parks typically close for refurbishment?</h4>
-            <p>Most refurbishments happen during slower seasons — typically January through March and September through mid-November. Check our closures page for the latest updates.</p>
-          </div>
-          <div className="qa-item">
-            <h4>How can I stay updated on park closures?</h4>
-            <p>Subscribe to our newsletter below for weekly updates on closures, new ride openings, and exclusive deals.</p>
+            <h4>How current is this guide?</h4>
+            <p>
+              We publish against the current Sanity content feed and rebuild locally with real validation. For time-sensitive pricing or refurbishments, compare this guide with our deals page and latest blog updates.
+            </p>
           </div>
           <div className="qa-item">
-            <h4>Do you have a question about your upcoming trip?</h4>
+            <h4>What should I do next if I&apos;m narrowing a trip plan?</h4>
+            <p>
+              Start with the helpful links above, then compare parks, browse rides by height requirement, and check current ticket options before booking.
+            </p>
+          </div>
+          <div className="qa-item">
+            <h4>Need a family-specific recommendation?</h4>
             <QuestionForm />
           </div>
-        </div>
-        
-        {/* Email Capture */}
+        </section>
+
         <div className="blog-email-capture">
-          <h3>Get Park Updates in Your Inbox</h3>
-          <p>Closures, new rides, and deals — delivered weekly.</p>
+          <h3>Get park updates in your inbox</h3>
+          <p>Closures, new rides, and practical money-saving tips — delivered weekly.</p>
           <NewsletterForm />
         </div>
       </main>
