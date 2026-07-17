@@ -1,5 +1,9 @@
 # Plan Your Park — Automated AI Business Operating Plan
 
+> **Status:** **APPROVED by Bennett 2026-07-17** (Telegram: “I approve pyp plan”).  
+> Section 10 defaults accepted unless later overridden. Stage A autonomy remains.  
+> Immediate follow-through: deploy pending redirects + Sanity integrity rebuild; continue Phase 1→2 loops via daily workforce.
+
 > **For Hermes:** This is an operating-system + phased build plan, not a single feature PR. Implement in phases; require Bennett approval on any public/external action.
 
 **Goal:** Run Plan Your Park as a mostly automated content + product + revenue business where Hermes researches, drafts, builds, and measures continuously, and Bennett only reviews/approves critical actions.

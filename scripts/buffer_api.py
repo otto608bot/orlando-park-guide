@@ -93,10 +93,23 @@ mutation CreatePost($input: CreatePostInput!) {
 CREATE_IDEA_MUTATION = '''
 mutation CreateIdea($input: CreateIdeaInput!) {
     createIdea(input: $input) {
-        ... on IdeaActionSuccess {
-            idea { id }
+        ... on Idea {
+            id
         }
-        ... on MutationError {
+        ... on IdeaResponse {
+            idea { id }
+            refreshIdeas
+        }
+        ... on InvalidInputError {
+            message
+        }
+        ... on UnauthorizedError {
+            message
+        }
+        ... on UnexpectedError {
+            message
+        }
+        ... on LimitReachedError {
             message
         }
     }
@@ -292,13 +305,15 @@ def post_to_all(text, image_url, pinterest_title=None, pinterest_url='https://pl
     return results
 
 
-def create_idea(text, organization_id=None):
+def create_idea(text, organization_id=None, title=None):
     """Create a Buffer Idea (content in the ideas board)."""
-    # Introspect CreateIdeaInput if needed; keeping simple for now
+    content = {'text': text}
+    if title:
+        content['title'] = title
     result = buffer_query(CREATE_IDEA_MUTATION, {
         'input': {
             'organizationId': organization_id or ORG_ID,
-            'content': {'text': text}
+            'content': content
         }
     })
     return result

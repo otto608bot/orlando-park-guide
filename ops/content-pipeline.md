@@ -6,12 +6,13 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 | Slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
-| parks hub (refresh) | published (deploy 2026-07-17) | 400 impr; all-parks queries | tickets | https://planyourpark.com/parks/ |
-| epic-universe-rides-ranked-guide (title/excerpt + body integrity) | published (deploy 2026-07-17) | 497 impr / ~0 CTR | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |
-| disney-world-packing-list-kids (title/excerpt) | published (deploy 2026-07-17) | pos ~7.6 weak CTR | Amazon | https://planyourpark.com/blog/disney-world-packing-list-kids/ |
-| universal-orlando-height-requirements (title/excerpt) | published (deploy 2026-07-17) | pos ~11.8 | tool + tickets | https://planyourpark.com/blog/universal-orlando-height-requirements/ |
-| epic-universe-1-day-plan + tickets-guide body integrity | published (deploy 2026-07-17) | trust/conversion | tickets | https://planyourpark.com/blog/epic-universe-1-day-plan/ |
-| epic-universe-1-day-plan (amplify) | published | best CTR | tickets | https://planyourpark.com/blog/epic-universe-1-day-plan/ |
+| parks hub (refresh) | published (deploy 2026-07-17) | 409 impr; all-parks queries | tickets | https://planyourpark.com/parks/ |
+| epic-universe-rides-ranked-guide | published | 503 impr / ~0 CTR — titles live | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |
+| disney-world-packing-list-kids | published | pos ~7.5 weak CTR | Amazon | https://planyourpark.com/blog/disney-world-packing-list-kids/ |
+| universal-orlando-height-requirements | published | pos ~10.6 | tool + tickets | https://planyourpark.com/blog/universal-orlando-height-requirements/ |
+| epic-universe-1-day-plan | published + Sanity integrity patch (awaiting rebuild) | **best CTR** 3.85% | tickets | https://planyourpark.com/blog/epic-universe-1-day-plan/ |
+| epic-universe-tickets-guide | published + Sanity integrity patch (awaiting rebuild) | conversion trust | tickets | https://planyourpark.com/blog/epic-universe-tickets-guide/ |
+| Phase 1 Buffer packs | ideas in Buffer (review) | distribution | — | Buffer Ideas board |
 | best-magic-kingdom-rides-kids-under-40-inches | published | core ICP | tickets | https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/ |
 
 ## Dual QA checklist (every draft)
@@ -23,3 +24,4 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Meta title/description CTR-oriented
 - [x] No contradictory family lore
 - [x] Second QA pass on titles/excerpts + parks copy
+- [x] Content integrity script clean on all 14 posts (2026-07-17 after Sanity patches)

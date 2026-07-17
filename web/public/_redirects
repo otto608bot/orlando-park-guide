@@ -23,3 +23,17 @@
 /islands-of-adventure.html /parks/islands-of-adventure 301
 /seaworld-orlando.html /parks/seaworld-orlando 301
 /legoland-florida.html /parks/legoland-florida 301
+
+# Short / alias park paths (GSC + typed URLs)
+/parks/legoland /parks/legoland-florida 301
+/parks/legoland/ /parks/legoland-florida/ 301
+/parks/universal /parks/universal-studios-florida 301
+/parks/universal/ /parks/universal-studios-florida/ 301
+/parks/ioa /parks/islands-of-adventure 301
+/parks/ioa/ /parks/islands-of-adventure/ 301
+/parks/seaworld /parks/seaworld-orlando 301
+/parks/seaworld/ /parks/seaworld-orlando/ 301
+
+# Blog aliases → best family landing for intent
+/blog/epic-universe /blog/epic-universe-1-day-plan 301
+/blog/epic-universe/ /blog/epic-universe-1-day-plan/ 301
