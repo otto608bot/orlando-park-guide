@@ -15,6 +15,9 @@
 - Secrets under `.hermes/`
 
 ## Verify after Netlify ready
-- `https://planyourpark.com/parks/legoland` → legoland-florida
-- `https://planyourpark.com/blog/epic-universe/` → epic-universe-1-day-plan
-- 1-day plan body contains pre-park checklist / evening content
+- Netlify: **ready** commit `53ae25e` (2026-07-17)
+- `https://planyourpark.com/parks/legoland` → **301** `/parks/legoland-florida` ✅
+- `https://planyourpark.com/blog/epic-universe/` → **301** `/blog/epic-universe-1-day-plan` ✅
+- `https://planyourpark.com/parks/ioa` → **301** `/parks/islands-of-adventure` ✅
+- 1-day plan live body: checklist / evening / Sample Schedule / Mario Kart / Pre-park ✅
+- tickets guide: Express / “does not include” ✅
