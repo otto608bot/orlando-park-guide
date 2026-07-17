@@ -32,12 +32,39 @@ Key schema notes (discovered 2026-04-02):
 """
 import urllib.request
 import json
+import os
 import time
 import sys
+from pathlib import Path
 
 BUFFER_API_URL = 'https://api.buffer.com/graphql'
-TOKEN = 'wBgUrT5K8PFeFpuVAJU5NqYKQ1uyW-NOh-97YcB030o'
 ORG_ID = '69ce9c55b5725a6caf7701c8'
+
+# Prefer env / local secret file over any hard-coded key.
+_ROOT = Path(__file__).resolve().parents[1]
+_SECRET_CANDIDATES = [
+    Path(os.environ['BUFFER_API_KEY_FILE']) if os.environ.get('BUFFER_API_KEY_FILE') else None,
+    _ROOT / '.hermes' / 'buffer_api_key',
+    Path.home() / '.hermes' / 'buffer_api_key',
+]
+
+
+def _load_token() -> str:
+    env_token = os.environ.get('BUFFER_API_KEY') or os.environ.get('BUFFER_ACCESS_TOKEN')
+    if env_token:
+        return env_token.strip()
+    for path in _SECRET_CANDIDATES:
+        if path and path.exists():
+            value = path.read_text().strip()
+            if value:
+                return value
+    raise RuntimeError(
+        'Missing Buffer API key. Create one at https://publish.buffer.com/settings/api '
+        'then save it to .hermes/buffer_api_key or export BUFFER_API_KEY.'
+    )
+
+
+TOKEN = _load_token()
 
 # Channel IDs
 FACEBOOK_CHANNEL = '69ce9c97af47dacb69807866'

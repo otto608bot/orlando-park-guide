@@ -1,0 +1,7 @@
+{
+  "site_url": "https://planyourpark.com",
+  "search_console_site_url": "sc-domain:planyourpark.com",
+  "ga4_measurement_id": "G-SJHPEWNBLS",
+  "ga4_property_id": "525883145",
+  "notes": "ga4_property_id is the numeric GA4 property (properties/XXXXXXXXX). GSC uses domain property sc-domain:planyourpark.com."
+}

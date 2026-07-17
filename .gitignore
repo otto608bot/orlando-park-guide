@@ -1,3 +1,9 @@
 node_modules/
 _site/
 .DS_Store
+.venv-analytics/
+.hermes/google_seo_token.json
+.hermes/google_seo_oauth_pending.json
+.hermes/buffer_api_key
+.hermes/netlify_auth_token
+.hermes/netlify_site_id
