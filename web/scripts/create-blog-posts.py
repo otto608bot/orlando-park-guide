@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import urllib.request
 import json
+import os
 
-TOKEN = "skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj"
+TOKEN = os.environ.get("SANITY_API_TOKEN")
+if not TOKEN:
+    raise RuntimeError("SANITY_API_TOKEN must be set before running this script.")
 PROJECT = "hd7qwtcq"
 ENDPOINT = f"https://{PROJECT}.api.sanity.io/v2024-01-01/data/mutate/production"
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import NewsletterForm from "@/components/NewsletterForm";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
+import { processTextWithAffiliates } from "@/components/blogAffiliates";
 import QuestionForm from "@/components/QuestionForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import {
@@ -182,9 +183,7 @@ function getTicketButtonHref(ticketText: string) {
 }
 
 function renderProcessedText(children?: ReactNode) {
-  return Array.isArray(children)
-    ? children
-    : children;
+  return processTextWithAffiliates(children);
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

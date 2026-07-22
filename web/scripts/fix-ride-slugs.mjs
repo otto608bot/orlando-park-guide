@@ -21,11 +21,15 @@ const args = process.argv.slice(2);
 const autoConfirm = args.includes('--yes') || args.includes('-y');
 
 async function main() {
+  if (!process.env.SANITY_API_TOKEN) {
+    throw new Error('SANITY_API_TOKEN must be set before running this script.');
+  }
+
   // ── Sanity client ──────────────────────────────────────────────────────────
   const client = createClient({
     projectId: 'hd7qwtcq',
     dataset: 'production',
-    token: 'skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj',
+    token: process.env.SANITY_API_TOKEN,
     apiVersion: '2024-01-01',
     useCdn: false,
   });

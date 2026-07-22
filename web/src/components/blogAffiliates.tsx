@@ -195,6 +195,12 @@ function segmentize(text: string): Segment[] {
 export function processTextWithAffiliates(
   children: React.ReactNode
 ): React.ReactNode {
+  if (Array.isArray(children)) {
+    return children.map((child, index) => (
+      <React.Fragment key={index}>{processTextWithAffiliates(child)}</React.Fragment>
+    ));
+  }
+
   // If it's a string, process it directly
   if (typeof children === 'string') {
     const segments = segmentize(children);

@@ -8,7 +8,11 @@ const { createClient } = require('@sanity/client');
 
 const projectId = 'hd7qwtcq';
 const dataset = 'production';
-const token = 'skQUXzNOvcWakM2LokLf7LCcxBI2ooAQwIo0r9zIIQWDrQqBhYniPpeRFWnVFfn2XdMAqWwyqgCMPaSzskCDCM43Q2g3ASzR5AxEap7ypBPFOdvko7ajkDBLmDBSIsvY6yfAUUzQHKeAMcOO2FhmJHPa5kraCuFjSuv06XuuqvAcJIb3lxuj';
+const token = process.env.SANITY_API_TOKEN;
+
+if (!token) {
+  throw new Error('SANITY_API_TOKEN must be set before running this script.');
+}
 
 const client = createClient({
   projectId,

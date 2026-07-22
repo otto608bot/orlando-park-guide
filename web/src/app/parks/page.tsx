@@ -6,11 +6,12 @@ import { createPageMetadata } from "@/lib/seo";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "All Orlando Theme Parks Compared — Which Is Best for Your Kids?",
+  title: "All Parks in Orlando for Families (2026) — Disney, Universal & More",
   description:
-    "Compare every major Orlando theme park for families: Disney World, Universal (including Epic Universe), SeaWorld, and LEGOLAND. Quick picks by kid age, height, thrills, and ticket strategy.",
+    "Full list of Orlando theme parks for families: Disney World, Universal (Epic Universe), SeaWorld, and LEGOLAND. Compare by kid age, height, thrills, and tickets.",
   path: "/parks",
   keywords: [
+    "all parks in orlando",
     "all orlando theme parks",
     "orlando parks",
     "best orlando park for kids",
@@ -37,9 +38,9 @@ export default async function ParksPage() {
   return (
     <div className="parks-page-container">
       <header className="parks-header">
-        <h1>All Orlando Theme Parks — Which One Fits Your Kids?</h1>
+        <h1>All Parks in Orlando — Which One Fits Your Kids?</h1>
         <p className="parks-subtitle">
-          Orlando has world-class parks for every family style. Use this hub to compare Disney World,
+          Looking for all parks in Orlando in one place? Use this hub to compare Disney World,
           Universal Orlando (including Epic Universe), SeaWorld, and LEGOLAND — then jump into ride
           lists filtered by height, thrills, and accessibility.
         </p>
