@@ -32,3 +32,4 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Ops review 2026-07-20 — 28d GSC held at 3 clicks as impressions eased to 1,433; GA4 rose to 32 sessions / 28 users. Phase 1 now shifts from completed internal-link amplification to CTR/conversion-CTA audit.
 - Daily 2026-07-20 — analytics remained at 3 GSC clicks / 1,433 impressions and 32 GA4 sessions. Production affiliate audit verified ticket CTA + disclosure coverage on five priority pages; a build-verified Amazon-renderer wiring fix is staged, not deployed.
 - Daily 2026-07-21 — GSC 3/1,399 / 0.21%; GA4 35 sessions. Shipped dual-QA CTR package (Sanity titles/excerpts + parks hub meta/H1) for the four highest-leverage URLs; 4 Buffer ideas; local build verified. Awaiting deploy approval.
+- Deploy 2026-07-22 — CTR v2 + Amazon renderer live (`60dc2d9`); 15 Buffer posts queued (FB/IG/Pinterest). See `weekly/2026-07-22-deploy-ctr-amazon-social.md`.

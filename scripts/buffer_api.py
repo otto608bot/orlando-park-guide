@@ -27,7 +27,7 @@ Key schema notes (discovered 2026-04-02):
   - Facebook requires metadata.facebook.type ("post"|"story"|"reel")
   - Instagram requires metadata.instagram.type + shouldShareToFeed + an image/video asset
   - Pinterest requires metadata.pinterest.boardServiceId + an image asset
-  - Assets are passed via assets.images[].url (must be publicly accessible, direct URL)
+  - Assets are passed via assets.image.url (singular; must be publicly accessible, direct URL)
   - Image URLs must respond with proper Content-Type headers (Buffer fetches dimensions)
 """
 import urllib.request
@@ -215,7 +215,7 @@ def post_to_facebook(text, image_url=None, mode='addToQueue'):
     }
     if image_url:
         input_data['assets'] = {
-            'images': [{'url': image_url}]
+            'image': {'url': image_url}
         }
     return buffer_query(CREATE_POST_MUTATION, {'input': input_data})
 
@@ -242,7 +242,7 @@ def post_to_instagram(text, image_url, mode='addToQueue'):
             }
         },
         'assets': {
-            'images': [{'url': image_url}]
+            'image': {'url': image_url}
         }
     }
     return buffer_query(CREATE_POST_MUTATION, {'input': input_data})
@@ -275,7 +275,7 @@ def post_to_pinterest(text, image_url, destination_url='https://planyourpark.com
             }
         },
         'assets': {
-            'images': [{'url': image_url}]
+            'image': {'url': image_url}
         }
     }
     return buffer_query(CREATE_POST_MUTATION, {'input': input_data})
@@ -322,7 +322,7 @@ def create_idea(text, organization_id=None, title=None):
 def delete_post(post_id):
     """Delete a post by ID."""
     return buffer_query(DELETE_POST_MUTATION, {
-        'input': {'postId': post_id}
+        'input': {'id': post_id}
     })
 
 
