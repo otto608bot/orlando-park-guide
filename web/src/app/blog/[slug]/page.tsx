@@ -204,8 +204,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const components = {
     block: {
-      h2: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
-      h3: ({ children }: { children?: ReactNode }) => <h3>{children}</h3>,
+      // Headings + lists carry most packing/gear product phrases — process them too.
+      h2: ({ children }: { children?: ReactNode }) => <h2>{renderProcessedText(children)}</h2>,
+      h3: ({ children }: { children?: ReactNode }) => <h3>{renderProcessedText(children)}</h3>,
       normal: ({ children }: { children?: ReactNode }) => {
         let ticketText: string | null = null;
 
@@ -229,11 +230,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         return <p>{renderProcessedText(children)}</p>;
       },
-      blockquote: ({ children }: { children?: ReactNode }) => <blockquote><p>{children}</p></blockquote>,
+      blockquote: ({ children }: { children?: ReactNode }) => (
+        <blockquote>
+          <p>{renderProcessedText(children)}</p>
+        </blockquote>
+      ),
     },
     marks: {
-      strong: ({ children }: { children?: ReactNode }) => <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{children}</strong>,
-      description: ({ children }: { children?: ReactNode }) => <span className="blog-inline-note">{children}</span>,
+      strong: ({ children }: { children?: ReactNode }) => (
+        <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{renderProcessedText(children)}</strong>
+      ),
+      description: ({ children }: { children?: ReactNode }) => (
+        <span className="blog-inline-note">{renderProcessedText(children)}</span>
+      ),
       link: ({ children, value }: { children?: ReactNode; value?: { href?: string } }) => {
         const href = value?.href?.trim();
         if (!href) return <>{children}</>;
@@ -257,11 +266,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       number: ({ children }: { children?: ReactNode }) => <ol className="blog-ol">{children}</ol>,
     },
     listItem: {
-      bullet: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
-      number: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
+      bullet: ({ children }: { children?: ReactNode }) => <li>{renderProcessedText(children)}</li>,
+      number: ({ children }: { children?: ReactNode }) => <li>{renderProcessedText(children)}</li>,
     },
     types: {
-      span: ({ value }: { value?: { text?: string } }) => value?.text ? <p>{value.text}</p> : null,
+      span: ({ value }: { value?: { text?: string } }) =>
+        value?.text ? <p>{renderProcessedText(value.text)}</p> : null,
     },
   };
 

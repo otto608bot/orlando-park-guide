@@ -24,6 +24,8 @@ export function createPageMetadata({
   openGraphType = "website",
 }: PageMetadataInput): Metadata {
   const canonical = normalizePath(path);
+  // Default share image for utility pages without a CMS hero (social + messengers).
+  const defaultImage = `${SITE_URL}/Disney-World.webp`;
 
   return {
     title,
@@ -39,6 +41,13 @@ export function createPageMetadata({
       siteName: SITE_NAME,
       locale: "en_US",
       type: openGraphType,
+      images: [{ url: defaultImage, alt: `${SITE_NAME} — Orlando parks for families` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [defaultImage],
     },
   };
 }

@@ -254,56 +254,136 @@ export function getContextualTicketCta(post: BlogPostLike): ContextualTicketCta 
   };
 }
 
+function postHaystack(post: BlogPostLike): string {
+  return normalizeText(
+    [post.title, slugFrom(post), post.excerpt, ...(post.tags || []), ...getCategoryTitles(post)]
+      .filter(Boolean)
+      .join(" "),
+  );
+}
+
+/** Prefer high-CTR / conversion guides when the article is about short riders or young kids. */
+function getPriorityGuideLinks(post: BlogPostLike): ContextualLink[] {
+  const haystack = postHaystack(post);
+  const slug = slugFrom(post);
+  const links: ContextualLink[] = [];
+
+  const isHeightOrYoungKids =
+    haystack.includes("height") ||
+    haystack.includes("under 40") ||
+    haystack.includes("toddler") ||
+    haystack.includes("baby") ||
+    haystack.includes("preschool") ||
+    haystack.includes("kids");
+
+  if (isHeightOrYoungKids && slug !== "best-magic-kingdom-rides-kids-under-40-inches") {
+    links.push({
+      href: "/blog/best-magic-kingdom-rides-kids-under-40-inches",
+      label: "Magic Kingdom rides under 40 inches",
+      description: "Our best-CTR short-rider list — what kids can actually ride before the big coasters.",
+    });
+  }
+
+  if (
+    (haystack.includes("height") || haystack.includes("universal") || haystack.includes("epic")) &&
+    slug !== "universal-orlando-height-requirements"
+  ) {
+    links.push({
+      href: "/blog/universal-orlando-height-requirements",
+      label: "Universal Orlando height requirements",
+      description: "Full height chart across Islands of Adventure, Universal Studios, and Epic Universe.",
+    });
+  }
+
+  if (
+    (haystack.includes("disney") || haystack.includes("magic kingdom") || haystack.includes("packing")) &&
+    slug !== "disney-world-packing-list-kids" &&
+    slug !== "disney-world-packing-list"
+  ) {
+    links.push({
+      href: "/blog/disney-world-packing-list-kids",
+      label: "Disney World kids packing list",
+      description: "25 essentials families with ages 2–8 actually use on park days.",
+    });
+  }
+
+  if (haystack.includes("epic") && slug !== "epic-universe-1-day-plan") {
+    links.push({
+      href: "/blog/epic-universe-1-day-plan",
+      label: "Epic Universe 1-day plan",
+      description: "Best-CTR touring plan — amplify after height checks.",
+    });
+  }
+
+  return links;
+}
+
 export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLike[]): ContextualLink[] {
   const signals = getSignals(post);
   const links: ContextualLink[] = [];
+  const seen = new Set<string>();
+  const haystack = postHaystack(post);
   const relatedPosts = getRelatedPosts(post, allPosts, 2);
 
+  const push = (link: ContextualLink) => {
+    if (!link.href || seen.has(link.href)) return;
+    seen.add(link.href);
+    links.push(link);
+  };
+
+  // Product tool first for height/family intent
+  if (haystack.includes("height") || haystack.includes("under 40") || haystack.includes("ride")) {
+    push({
+      href: "/rides/?height=40",
+      label: "Open the ride finder (~40″ filter)",
+      description: "Shareable height filter across Disney, Universal, Epic Universe, and more.",
+    });
+  } else if (signals.has("disney")) {
+    push({
+      href: "/rides",
+      label: "Browse Disney-friendly rides by height and thrill level",
+      description: "Use the ride filters to avoid walking into lines your kids cannot ride.",
+    });
+  }
+
   if (signals.has("disney")) {
-    links.push(
-      {
-        href: "/rides",
-        label: "Browse Disney-friendly rides by height and thrill level",
-        description: "Use the ride filters to avoid walking into lines your kids cannot ride.",
-      },
-      {
-        href: "/deals",
-        label: "Compare Disney and Orlando ticket deals",
-        description: "Helpful when the article moves readers from planning to booking.",
-      },
-    );
+    push({
+      href: "/deals",
+      label: "Compare Disney and Orlando ticket deals",
+      description: "Helpful when the article moves readers from planning to booking.",
+    });
   } else if (signals.has("universal") || signals.has("epic")) {
-    links.push(
-      {
-        href: "/parks",
-        label: "Compare Universal, Epic Universe, and the rest of Orlando",
-        description: "Useful for readers still deciding which park deserves a day.",
-      },
-      {
-        href: "/deals",
-        label: "See current Universal and Orlando ticket deal options",
-        description: "A booking-oriented next step without cluttering the article body.",
-      },
-    );
+    push({
+      href: "/parks",
+      label: "Compare Universal, Epic Universe, and the rest of Orlando",
+      description: "Useful for readers still deciding which park deserves a day.",
+    });
+    push({
+      href: "/deals",
+      label: "See current Universal and Orlando ticket deal options",
+      description: "A booking-oriented next step without cluttering the article body.",
+    });
   } else {
-    links.push(
-      {
-        href: "/parks",
-        label: "Compare Orlando parks side by side",
-        description: "A strong next step for top-of-funnel planning content.",
-      },
-      {
-        href: "/rides",
-        label: "Browse rides by thrill level and height requirement",
-        description: "Good for turning broad inspiration into an actual park plan.",
-      },
-    );
+    push({
+      href: "/parks",
+      label: "Compare Orlando parks side by side",
+      description: "A strong next step for top-of-funnel planning content.",
+    });
+    push({
+      href: "/rides",
+      label: "Browse rides by thrill level and height requirement",
+      description: "Good for turning broad inspiration into an actual park plan.",
+    });
+  }
+
+  for (const guide of getPriorityGuideLinks(post)) {
+    push(guide);
   }
 
   for (const relatedPost of relatedPosts) {
     const slug = slugFrom(relatedPost);
     if (!slug) continue;
-    links.push({
+    push({
       href: `/blog/${slug}`,
       label: relatedPost.title || "Related guide",
       description: relatedPost.excerpt || "Another closely related planning guide.",

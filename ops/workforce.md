@@ -1,44 +1,54 @@
 # Plan Your Park — Daily Workforce
 
 ## Intent
-Hermes runs Plan Your Park **every day without waiting for Bennett to ping**.  
+Hermes runs Plan Your Park **continuously without waiting for Bennett to ping** and **without artificial day-pacing**.  
+If cleanup or high-ROI work is unfinished, **keep going in the same session until the batch is done** (or blocked on approval/secrets).  
 Bennett only acts on **approvals** (publish / public social / spend / DNS-legal) and the **4-day ops review**.
 
 ## Cadence
 
 | Job | When | Channel | Purpose |
 |---|---|---|---|
-| **Daily workforce** | ~10:45 CT daily | Telegram (short) | Ship offline work; batch approvals |
+| **Continuous work** | Any session / cron / chat | Repo + Telegram when needed | Drain cleanup + backlog; do not stop after “one unit” if more cleanup remains |
+| **Daily workforce cron** | ~10:45 CT daily | Telegram (short) | Catch-up if no active session; still allowed to ship **multiple** units per run |
 | **Ops review** | Every 4 days | Telegram (full scorecard) | KPI + strategy + approval batch |
 
 ## Stage A autonomy (default)
-**Do freely every day:** research, scoring, Sanity drafts, dual QA, local code on branch if needed, analytics, backlog hygiene, Buffer *ideas* / review-queue drafts, affiliate research, partnership drafts, content integrity checks.
+**Do freely:** research, scoring, Sanity drafts, dual QA, local code, analytics, backlog hygiene, Buffer *ideas* / review-queue drafts, affiliate research, partnership drafts, content integrity checks, repo cleanup, security hygiene (remove hardcoded secrets from scripts), internal linking, conversion wiring that completes an already-approved rail.
 
-**Never without approval:** live publish/deploy of net-new public claims, Buffer `shareNow`, Reddit/Quora/outreach posts, new paid tools, partner emails, DNS/legal.
+**Never without approval:** live publish/deploy of **net-new public claims**, Buffer `shareNow`, Reddit/Quora/outreach posts, new paid tools, partner emails, DNS/legal, **new** affiliate program applications needing founder login.
 
-**Standing deploy exception:** after Bennett says **APPROVE DEPLOY** for a named batch (or Stage B unlock), complete that batch. Do not invent new deploys beyond the approved scope.
+**Standing deploy exception:** after Bennett says **APPROVE DEPLOY** for a named batch (or Stage B unlock), complete that batch end-to-end (commit → push → Netlify ready → live verify). Completing a **already-approved** incomplete fix (e.g. Amazon wiring that still misses list bodies) may ship without re-asking when scope is clearly the same rail.
 
-## Daily loop (ordered)
+## Continuous cleanup rule
+When the founder says cleanup / “don’t wait for days” / full automation pressure:
+1. Inventory remaining cleanup (integrity, secrets, junk files, broken conversion paths, stale ops, redirects, dead drafts).
+2. Execute **all** non-blocked items in one run.
+3. Only stop for true blockers (approval, missing secret, external account action).
+4. Do **not** schedule leftover cleanup for “tomorrow’s daily” if it can finish now.
+
+## Daily / session loop (ordered)
 1. **Read state:** `HERMES.md`, `ops/scorecard.md`, `ops/content-pipeline.md`, `ops/backlog.md`, latest `ops/weekly/*`
 2. **Intelligence:** run  
    `env -u PYTHONPATH .venv-analytics/bin/python scripts/seo_analytics_review.py --days 28`  
-   (if venv/token missing, note and continue with GSC/GA via available tools)
-3. **Integrity:** scan top commercial/family posts for incomplete Sanity bodies (cliffhanger “strategy:”, mid-sentence cuts)
-4. **Ship one unit of work** (pick highest ROI unfinished P0):
+   (if venv/token missing, note and continue)
+3. **Integrity:** scan posts for incomplete Sanity bodies (cliffhanger “strategy:”, mid-sentence cuts)
+4. **Drain work** (highest ROI unfinished items first; multiple units OK):
+   - Content integrity + conversion/affiliate wiring completeness  
    - CTR meta/title/excerpt on high-impr low-CTR URLs  
    - Utility hub / internal links into ride filters  
-   - Dual-QA a draft to `awaiting_approval`  
-   - Buffer idea pack for a live high-value URL  
-   - Conversion/affiliate placement fix  
+   - Dual-QA drafts to `awaiting_approval`  
+   - Buffer idea/queue packs for live high-value URLs (queue only with approval / Stage B)  
+   - Repo hygiene (gitignore, token removal, tmp junk)  
    - Product SEO (shareable height/filter surfaces) — not greenfield rebuilds
-5. **Write artifacts:** update pipeline/backlog/scorecard notes + `ops/weekly/YYYY-MM-DD-daily.md`
-6. **Telegram:**  
-   - If **no approvals needed:** 5–8 line “silent work done” summary (what changed, links)  
-   - If **approvals needed:** full mobile links + exact `APPROVE / REJECT / EDIT` line  
-   - Never wait for a human to start tomorrow’s work
+5. **Write artifacts:** update pipeline/backlog/scorecard + `ops/weekly/YYYY-MM-DD-*.md`
+6. **Telegram / chat:**  
+   - If **no approvals needed:** short “done / still working / No action needed”  
+   - If **approvals needed:** full mobile links + exact `APPROVE / REJECT / EDIT`  
+   - Never wait for a human to start the next unit of offline work
 
-## Definition of a good day
-At least one of: publish-ready draft, live conversion/SEO fix staged, integrity fix, Buffer pack drafted, analytics insight that changes backlog order, or a revenue-setup step completed.
+## Definition of a good session
+At least one of: cleanup batch closed, publish-ready draft, live conversion/SEO fix shipped or staged, integrity fix, Buffer pack drafted/queued (per policy), analytics insight that changes backlog order, or a revenue-setup step completed — **and** no known cleanup left idle purely to “save for tomorrow.”
 
 ## Stage B unlock criteria
 Propose Stage B when **4 consecutive** dual-QA content packages need only minor/no edits. Stage B allows standing auto-queue Buffer templates + auto-publish low-risk packages per `HERMES.md`.

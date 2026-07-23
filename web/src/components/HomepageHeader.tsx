@@ -105,13 +105,13 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
         <div className="home-header-inner">
           <div className="home-header-top">
             <div className="home-title-row">
-              <h1 className="home-title">Find Rides for Everyone</h1>
+              <h1 className="home-title">Find Rides Your Kids Can Ride</h1>
               <span className="total-rides-badge">
                 {hasActiveFilters ? franchiseData.reduce((sum, f) => sum + f.visible, 0) : totalRides} of {totalRides} rides
               </span>
             </div>
-            <Link href="/rides" className="home-cta-btn">
-              Browse All Rides
+            <Link href="/rides/?height=40" className="home-cta-btn">
+              Filter by height
             </Link>
           </div>
 

@@ -73,15 +73,16 @@ export default async function ParksPage() {
           </li>
           <li>
             <strong>Not sure yet?</strong> Browse all rides with filters on the{" "}
-            <Link href="/rides/">ride finder</Link> (height, thrill, accessibility).
+            <Link href="/rides/">ride finder</Link> (height, thrill, accessibility), or jump to{" "}
+            <Link href="/rides/?height=40">rides filtered for ~40&quot;</Link>.
           </li>
         </ul>
         <p className="parks-cta-row">
           <a className="parks-cta" href={AFFILIATE_LINKS.ucDealsPage} rel="nofollow sponsored">
             Compare Orlando ticket deals
           </a>
-          <Link className="parks-cta secondary" href="/rides/">
-            Open ride height filters
+          <Link className="parks-cta secondary" href="/rides/?height=40">
+            Open ride height filters (~40&quot;)
           </Link>
         </p>
         <p className="parks-affiliate-note">

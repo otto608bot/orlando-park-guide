@@ -13,12 +13,18 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Sanity config from environment / config
+// Sanity config from environment / config (never hardcode tokens)
+const token = process.env.SANITY_API_TOKEN || process.env.SANITY_TOKEN;
+if (!token) {
+  console.error('❌ SANITY_API_TOKEN (or SANITY_TOKEN) must be set before running this script.');
+  process.exit(1);
+}
+
 const client = createClient({
   projectId: process.env.SANITY_PROJECT_ID || 'hd7qwtcq',
   dataset: process.env.SANITY_DATASET || 'production',
   apiVersion: '2024-01-01',
-  token: process.env.SANITY_TOKEN,
+  token,
   useCdn: false,
 });
 

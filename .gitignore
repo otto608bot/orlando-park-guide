@@ -7,3 +7,15 @@ _site/
 .hermes/buffer_api_key
 .hermes/netlify_auth_token
 .hermes/netlify_site_id
+
+# Local junk / generated
+.tmp-hero-refs/
+*.mp3
+scripts/__pycache__/
+**/__pycache__/
+*.pyc
+web/.next/
+web/out/
+.env
+.env.*
+!.env.example

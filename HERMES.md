@@ -32,7 +32,7 @@ Every approval request **must include mobile-friendly links**:
 - Exact decision asked (Approve publish / Approve queue / Reject / Edit)
 - Risk notes (policy claims, medical, affiliate)
 
-Chat: Bennett Telegram DM (gateway). Bi-weekly ops review is the standing cadence; urgent approvals can interrupt.
+Chat: Bennett Telegram DM (gateway). Ops review every 4 days is the standing scorecard; urgent approvals can interrupt. Work between reviews is continuous, not day-gated.
 
 ## Content rules
 
@@ -72,9 +72,10 @@ Chat: Bennett Telegram DM (gateway). Bi-weekly ops review is the standing cadenc
 
 ## Cadence
 
-- **Daily workforce (~10:45 CT, Telegram):** autonomous loop — analytics → integrity → one high-ROI unit of work → update `ops/` → short Telegram note. Does **not** wait for Bennett to ping. See `ops/workforce.md`.
+- **Continuous work (default):** when cleanup or high-ROI items are open, finish them in the active session — do **not** pace by calendar days. Daily cron is a **catch-up net**, not a speed limit. See `ops/workforce.md`.
+- **Daily workforce (~10:45 CT, Telegram):** autonomous loop if no session is already draining the backlog — analytics → integrity → **as many units as fit** → update `ops/` → short Telegram note. Does **not** wait for Bennett to ping.
 - **Ops review every 4 days (Telegram):** scorecard, wins, approvals batch, next 4 days plan — full links
-- **Between reviews:** silent work continues daily; ping only for blockers/approvals (or a brief “done / no action” daily note)
+- **Between reviews:** silent continuous work; ping only for blockers/approvals (or a brief “done / no action” note)
 - Tools/spend: propose as needed with $ and why
 - **Pinterest:** live in Buffer — use for every publish pack
 - **Reddit:** create brand account when ready; draft-only until approved

@@ -8,9 +8,16 @@ import HomepageHeader from "@/components/HomepageHeader";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Orlando Theme Park Planning Guide",
-  description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld & more!",
+  title: "Orlando Parks Ride Finder for Kids — Height & Thrill Filters",
+  description:
+    "Plan Orlando theme parks with kids: filter Disney, Universal, Epic Universe, SeaWorld & LEGOLAND rides by height, thrills, and accessibility — then pick the right park.",
   path: "/",
+  keywords: [
+    "orlando theme parks with kids",
+    "rides by height orlando",
+    "disney universal height filter",
+    "best orlando park for kids",
+  ],
 });
 
 async function getHomePageData() {

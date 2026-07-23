@@ -17,19 +17,19 @@ export const blogAffiliateLinks: AffiliateLink[] = [
     url: 'https://www.amazon.com/s?k=comfortable+walking+shoes+for+theme+park&tag=planyourpark-20',
   },
   {
-    keywords: ['sunscreen', 'spf 50', 'spf 70', 'suncreen', 'sunscreen lotion'],
+    keywords: ['sunscreen spf 70+', 'sunscreen spf 70', 'sunscreen', 'spf 50', 'spf 70', 'suncreen', 'sunscreen lotion'],
     url: 'https://www.amazon.com/s?k=sunscreen+spf+70+lotion+disney+world&tag=planyourpark-20',
   },
   {
-    keywords: ['stroller fan', 'clip fan', 'usb stroller fan'],
+    keywords: ['stroller fan with clip', 'stroller fan', 'clip fan', 'usb stroller fan'],
     url: 'https://www.amazon.com/s?k=usb+stroller+fan+clip+disney&tag=planyourpark-20',
   },
   {
-    keywords: ['phone charger', 'power bank', 'portable charger', 'usb charger', '20000mah'],
+    keywords: ['portable phone charger', 'phone charger', 'power bank', 'portable charger', 'usb charger', '20000mah'],
     url: 'https://www.amazon.com/s?k=portable+phone+charger+20000mah+disney&tag=planyourpark-20',
   },
   {
-    keywords: ['rain poncho', 'poncho', 'disposable poncho', 'rain jackets'],
+    keywords: ['lightweight rain poncho', 'full-coverage rain poncho', 'rain poncho', 'poncho', 'disposable poncho', 'rain jackets'],
     url: 'https://www.amazon.com/s?k=rain+poncho+20+pack+disney+world&tag=planyourpark-20',
   },
   {
@@ -45,7 +45,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
     url: 'https://www.amazon.com/s?k=white+noise+machine+travel+portable&tag=planyourpark-20',
   },
   {
-    keywords: ['water bottle', 'insulated bottle', 'hydro flask', 'reusable water bottle'],
+    keywords: ['insulated water bottle', 'water bottle', 'insulated bottle', 'hydro flask', 'reusable water bottle'],
     url: 'https://www.amazon.com/s?k=insulated+water+bottle+32oz+disney+world&tag=planyourpark-20',
   },
   {
@@ -69,11 +69,11 @@ export const blogAffiliateLinks: AffiliateLink[] = [
     url: 'https://www.amazon.com/s?k=travel+snacks+granola+bars+for+disney&tag=planyourpark-20',
   },
   {
-    keywords: ['packing cubes', 'packing organizers', 'travel cubes'],
+    keywords: ['packing cubes or compression sacks', 'packing cubes', 'packing organizers', 'travel cubes', 'compression sacks'],
     url: 'https://www.amazon.com/s?k=packing+cubes+travel+organizers&tag=planyourpark-20',
   },
   {
-    keywords: ['waterproof phone pouch', 'waterproof phone case', 'phone pouch'],
+    keywords: ['waterproof phone pouch or dry bag', 'waterproof phone pouch', 'waterproof phone case', 'phone pouch', 'dry bag'],
     url: 'https://www.amazon.com/s?k=waterproof+phone+pouch+disney+world&tag=planyourpark-20',
   },
   {
@@ -117,7 +117,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
     url: 'https://www.amazon.com/s?k=pain+relievers+travel+disney+world&tag=planyourpark-20',
   },
   {
-    keywords: ['small backpack', 'daypack', 'park bag', 'crossbody bag'],
+    keywords: ['small backpack or diaper bag', 'small personal backpack', 'small backpack', 'daypack', 'park bag', 'crossbody bag', 'diaper bag'],
     url: 'https://www.amazon.com/s?k=small+backpack+for+disney+world+park&tag=planyourpark-20',
   },
   {

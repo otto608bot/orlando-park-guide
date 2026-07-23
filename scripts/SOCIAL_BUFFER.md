@@ -51,6 +51,12 @@ python3 scripts/buffer_api.py delete <post_id>
 
 Default mode queues posts (`addToQueue`). Image URLs must be publicly reachable with correct `Content-Type`.
 
+### GraphQL asset shape (verified 2026-07-22)
+- CreatePost `assets.image.url` (**singular** `image`, not `images[]`)
+- DeletePost input field is `id` (not `postId`)
+
+If mutations fail validation, re-introspect `AssetInput` / `DeletePostInput` before abandoning Buffer.
+
 ## Rotate / revoke
 
 1. Create a new key at Buffer Settings → API  
