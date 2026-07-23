@@ -138,16 +138,29 @@ export function normalizePortableTextBlocks(blocks: PortableTextBlock[] | null |
     const children = Array.isArray(block.children)
       ? block.children.map((child, childIndex) => {
           const nextMarks: string[] = [];
+          const childText = String(child?.text || "");
+          // Whole-paragraph Amazon/product links are a CMS anti-pattern (renders
+          // entire paragraphs orange). Drop link marks when the span is too long.
+          const MAX_LINK_SPAN = 80;
 
           for (const [markIndex, mark] of (child.marks || []).entries()) {
             if (typeof mark === "string") {
               if (BUILT_IN_MARKS.has(mark) || markKeys.has(mark)) {
+                // Drop existing markDef links on overlong spans
+                const def = markDefs.find((d) => d._key === mark);
+                if (def?._type === "link" && childText.trim().length > MAX_LINK_SPAN) {
+                  continue;
+                }
                 nextMarks.push(mark);
               }
               continue;
             }
 
             if (mark?._type === "link" && typeof mark.href === "string" && mark.href.trim()) {
+              if (childText.trim().length > MAX_LINK_SPAN) {
+                // Unwrap — keep plain text only
+                continue;
+              }
               const syntheticKey = `generated-link-${blockIndex}-${childIndex}-${markIndex}`;
               markDefs.push({ _key: syntheticKey, _type: "link", href: mark.href });
               markKeys.add(syntheticKey);
