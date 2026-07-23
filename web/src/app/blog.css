@@ -355,9 +355,16 @@
 
 .blog-content p { margin-bottom: 1.25rem; }
 .blog-content ul, .blog-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-.blog-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+.blog-content li { margin-bottom: 0.85rem; line-height: 1.6; }
 .blog-ul { list-style-type: disc; }
 .blog-ol { list-style-type: decimal; }
+/* Description notes under list titles should wrap to their own line */
+.blog-content li .blog-inline-note {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--text-medium);
+  font-weight: 400;
+}
 .blog-content a { color: var(--primary); text-decoration: underline; }
 .blog-content a:hover { color: #e85a1a; }
 

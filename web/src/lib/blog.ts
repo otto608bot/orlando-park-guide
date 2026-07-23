@@ -129,7 +129,7 @@ export function dedupePostsBySlug<T extends BlogPostLike>(posts: T[]): T[] {
 export function normalizePortableTextBlocks(blocks: PortableTextBlock[] | null | undefined): PortableTextBlock[] {
   if (!Array.isArray(blocks)) return [];
 
-  return blocks.map((block, blockIndex) => {
+  const normalized = blocks.map((block, blockIndex) => {
     if (block?._type !== "block") return block;
 
     const markDefs: MarkDef[] = Array.isArray(block.markDefs) ? [...block.markDefs] : [];
@@ -168,11 +168,96 @@ export function normalizePortableTextBlocks(blocks: PortableTextBlock[] | null |
     return {
       ...block,
       style,
-      ...(listItem ? { listItem } : {}),
+      ...(listItem ? { listItem, level: block.level || 1 } : {}),
       children,
       markDefs,
     };
   });
+
+  // Expand collapsed list blocks where many title + description pairs were
+  // jammed into a single listItem (renders as one "1." with no structure).
+  return expandCollapsedListBlocks(normalized);
+}
+
+function childHasDescriptionMark(child: PortableTextChild | undefined): boolean {
+  return Boolean(child?.marks?.some((mark) => mark === "description"));
+}
+
+function expandCollapsedListBlocks(blocks: PortableTextBlock[]): PortableTextBlock[] {
+  const out: PortableTextBlock[] = [];
+
+  for (const [blockIndex, block] of blocks.entries()) {
+    if (block?._type !== "block" || !block.listItem || !Array.isArray(block.children)) {
+      out.push(block);
+      continue;
+    }
+
+    const children = block.children;
+    // Heuristic: 3+ children with at least one description mark ⇒ likely collapsed multi-item list
+    const descCount = children.filter((child) => childHasDescriptionMark(child)).length;
+    if (children.length < 3 || descCount < 2) {
+      out.push(block);
+      continue;
+    }
+
+    const pairs: Array<{ title?: PortableTextChild; description?: PortableTextChild }> = [];
+    let i = 0;
+    while (i < children.length) {
+      const cur = children[i];
+      if (childHasDescriptionMark(cur)) {
+        pairs.push({ description: cur });
+        i += 1;
+        continue;
+      }
+      const nxt = children[i + 1];
+      if (nxt && childHasDescriptionMark(nxt)) {
+        pairs.push({ title: cur, description: nxt });
+        i += 2;
+      } else {
+        pairs.push({ title: cur });
+        i += 1;
+      }
+    }
+
+    if (pairs.length <= 1) {
+      out.push(block);
+      continue;
+    }
+
+    for (const [pairIndex, pair] of pairs.entries()) {
+      const nextChildren: PortableTextChild[] = [];
+      if (pair.title) {
+        nextChildren.push({
+          ...pair.title,
+          _type: pair.title._type || "span",
+          _key: pair.title._key || `exp-t-${blockIndex}-${pairIndex}`,
+          text: String(pair.title.text || "").replace(/^\n+/, ""),
+        });
+      }
+      if (pair.description) {
+        const descText = String(pair.description.text || "").replace(/^\n+/, "");
+        nextChildren.push({
+          ...pair.description,
+          _type: pair.description._type || "span",
+          _key: pair.description._key || `exp-d-${blockIndex}-${pairIndex}`,
+          text: descText ? `\n${descText}` : "",
+          marks: Array.from(new Set([...(pair.description.marks || []).map(String), "description"])),
+        });
+      }
+      if (!nextChildren.length) continue;
+      out.push({
+        ...block,
+        _key: `${block._key || "list"}-exp-${pairIndex}`,
+        style: "normal",
+        listItem: block.listItem,
+        level: block.level || 1,
+        children: nextChildren,
+        markDefs: block.markDefs || [],
+      });
+    }
+  }
+
+  return out;
 }
 
 function scoreRelatedPost(currentPost: BlogPostLike, candidate: BlogPostLike): number {

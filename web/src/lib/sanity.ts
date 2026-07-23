@@ -3,12 +3,13 @@ import { createClient } from '@sanity/client';
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'hd7qwtcq';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
 
-// Public read-only client (uses CDN)
+// Static export builds should not use the Sanity CDN — CDN can lag behind
+// mutations and bake stale bodies into Netlify HTML.
 export const sanityClient = createClient({
   projectId,
   dataset,
   apiVersion: '2024-01-01',
-  useCdn: true,
+  useCdn: false,
 });
 
 // Server-side client with token for write operations
