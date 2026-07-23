@@ -1,6 +1,6 @@
 import { createClient } from '@sanity/client';
 
-// rebuild-stamp: 2026-07-23-blog-full-qa — force Netlify static regen after CMS QA
+// rebuild-stamp: 2026-07-23-blog-qa-final — force Netlify static regen after CMS QA
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'hd7qwtcq';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
