@@ -240,11 +240,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       ),
     },
     marks: {
+      // Titles: allow a single careful product link
       strong: ({ children }: { children?: ReactNode }) => (
         <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{renderProcessedText(children)}</strong>
       ),
+      // Body notes under list items: NEVER auto-affiliate (was linking "poncho", "snacks", drugs mid-sentence)
       description: ({ children }: { children?: ReactNode }) => (
-        <span className="blog-inline-note">{renderProcessedText(children)}</span>
+        <span className="blog-inline-note">{children}</span>
       ),
       link: ({ children, value }: { children?: ReactNode; value?: { href?: string } }) => {
         const href = value?.href?.trim();
@@ -280,8 +282,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       },
     },
     listItem: {
-      bullet: ({ children }: { children?: ReactNode }) => <li>{renderProcessedText(children)}</li>,
-      number: ({ children }: { children?: ReactNode }) => <li>{renderProcessedText(children)}</li>,
+      // Do not re-run affiliate processing on the whole <li> (marks already handled) —
+      // double-processing was mangling titles down to a single linked keyword.
+      bullet: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
+      number: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
     },
     types: {
       span: ({ value }: { value?: { text?: string } }) =>
