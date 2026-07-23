@@ -39,3 +39,4 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Deploy 2026-07-22 — CTR v2 + Amazon renderer live (`60dc2d9`); 15 Buffer posts queued (FB/IG/Pinterest). See `weekly/2026-07-22-deploy-ctr-amazon-social.md`.
 - Daily 2026-07-22 (cron) — GSC 3/1,403 / 0.21%; integrity clean. Staged height-filter SEO + homepage CTR meta + Amazon list-body completion; 3 Buffer ideas; itinerary builder one-pager. Awaiting APPROVE DEPLOY.
 - Daily 2026-07-23 (cron) — Analytics token expired. Integrity clean. MK under-40 amplified via 6 Sanity inbounds + helpful-links code + 3 Buffer ideas; packing-list-kids broken outro fixed. Build OK. Deploy still blocked on approval; Google re-auth needed.
+- Deploy 2026-07-23 — height SEO + Amazon list wiring + MK amplify live (`b23b2af`). See `weekly/2026-07-23-deploy.md`.

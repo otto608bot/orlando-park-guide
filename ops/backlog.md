@@ -10,22 +10,22 @@
 - [x] Fix/reduce `/404` traffic — redirects deployed 2026-07-17 (`web/public/_redirects` short/alias park + epic-universe paths)  
 - [x] Amplify epic-universe-1-day-plan (best CTR) — parks hub, rides-ranked guide, and tickets guide inbound links live  
 - [x] **DEPLOY** Sanity integrity patches + redirects rebuild — **APPROVED 2026-07-17**  
-- [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`) — see `ops/weekly/2026-07-22-deploy-ctr-amazon-social.md`
-- [ ] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — staged 2026-07-22/23; build OK — **awaiting APPROVE DEPLOY**
+- [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
+- [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
 - [ ] **Re-auth Google SEO token** — analytics cron blocked 2026-07-23 (`invalid_grant`)
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
-- [x] Height-filter SEO: shareable URLs or landing copy — **coded** `/rides/` presets + meta (awaiting deploy)  
+- [x] Height-filter SEO: shareable URLs or landing copy — **live** `/rides/` presets + meta (`b23b2af`)  
 - [x] Queue Buffer posts from idea packs — 15 posts FB/IG/Pinterest queued 2026-07-22 (addToQueue)  
-- [x] Affiliate inventory audit on top posts — 2026-07-20; Amazon wiring live 2026-07-22  
-- [x] Review packing-list Portable Text for a focused Amazon gear CTA only if useful beyond keyword auto-links — list/heading keyword processor staged (same deploy batch)  
+- [x] Affiliate inventory audit on top posts — 2026-07-20; Amazon wiring live 2026-07-22; list-body complete 2026-07-23  
+- [x] Review packing-list Portable Text Amazon gear path — list/heading processor **live** (57 tags on packing kids)  
 - [ ] Apply remaining ticket/hotel programs  
 - [x] Inbound internal links → epic-universe-1-day-plan from high-impr pages  
 - [x] Rotate/revoke legacy Sanity token — **Rufus New deleted 2026-07-23** (kept Herman Editor); scripts env-only
-- [x] Amplify MK under-40 (earning clicks) with inbound Sanity links + helpful-links routing + 3 Buffer ideas (2026-07-23; deploy needed for HTML)
+- [x] Amplify MK under-40 (earning clicks) with inbound Sanity links + helpful-links routing + 3 Buffer ideas — **HTML live 2026-07-23**
 - [ ] Queue MK under-40 Buffer ideas when ready (ideas created 2026-07-22 + 2026-07-23)
-- [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide 494 impr, parks 325, packing pos 6.5, home pos ~4)
+- [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  
