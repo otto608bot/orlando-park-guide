@@ -32,9 +32,12 @@ When the founder says cleanup / “don’t wait for days” / full automation pr
 2. **Intelligence:** run  
    `env -u PYTHONPATH .venv-analytics/bin/python scripts/seo_analytics_review.py --days 28`  
    (if venv/token missing, note and continue)
-3. **Integrity:** scan posts for incomplete Sanity bodies (cliffhanger “strategy:”, mid-sentence cuts)
+3. **Integrity (CMS):** `python3 scripts/content_integrity_check.py`  
+   **Live format QA (required after any content change):** `python3 scripts/live_blog_qa.py --fail-on high`  
+   Live QA audits **rendered HTML** (overlong Amazon anchors, empty headings/lis, dead internal links, Genie+ framing). CMS-only QA is **not sufficient**.  
 4. **Drain work** (highest ROI unfinished items first; multiple units OK):
-   - Content integrity + conversion/affiliate wiring completeness  
+   - Content integrity + **live HTML QA failures** first  
+   - Conversion/affiliate wiring completeness (no whole-paragraph links; no junk mid-sentence Amazon spam)  
    - CTR meta/title/excerpt on high-impr low-CTR URLs  
    - Utility hub / internal links into ride filters  
    - Dual-QA drafts to `awaiting_approval`  
@@ -47,6 +50,12 @@ When the founder says cleanup / “don’t wait for days” / full automation pr
    - If **approvals needed:** full mobile links + exact `APPROVE / REJECT / EDIT`  
    - Never wait for a human to start the next unit of offline work
 
+## Content QA definition of done
+A blog content batch is **not done** until:
+1. Sanity integrity clean  
+2. `scripts/live_blog_qa.py --fail-on high` exits 0 against **production** (or local `out/` after build)  
+3. Spot-check at least one commercial post in a real browser path (or browser tool snapshot) for orange whole-paragraph links / broken lists  
+4. Netlify deploy verified with string checks on fixed URLs
 ## Definition of a good session
 At least one of: cleanup batch closed, publish-ready draft, live conversion/SEO fix shipped or staged, integrity fix, Buffer pack drafted/queued (per policy), analytics insight that changes backlog order, or a revenue-setup step completed — **and** no known cleanup left idle purely to “save for tomorrow.”
 
