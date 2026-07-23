@@ -202,6 +202,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     );
   }
 
+  // Continue <ol> numbering across heading-split list groups within this post render.
+  let nextOrderedListStart = 1;
+
   const components = {
     block: {
       // Headings + lists carry most packing/gear product phrases — process them too.
@@ -263,7 +266,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     list: {
       bullet: ({ children }: { children?: ReactNode }) => <ul className="blog-ul">{children}</ul>,
-      number: ({ children }: { children?: ReactNode }) => <ol className="blog-ol">{children}</ol>,
+      // Continue numbering across separate <ol> groups when headings split a long list
+      // (e.g. packing essentials 1–15, then age add-ons 16–25).
+      number: ({ children }: { children?: ReactNode }) => {
+        const start = nextOrderedListStart;
+        const count = React.Children.count(children);
+        nextOrderedListStart += count;
+        return (
+          <ol className="blog-ol" start={start}>
+            {children}
+          </ol>
+        );
+      },
     },
     listItem: {
       bullet: ({ children }: { children?: ReactNode }) => <li>{renderProcessedText(children)}</li>,
