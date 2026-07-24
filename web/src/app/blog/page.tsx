@@ -10,9 +10,17 @@ import { sanityClient } from "@/lib/sanity";
 export const revalidate = 60;
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Blog",
-  description: "Tips, guides, and news for your Orlando theme park vacation.",
+  title: "Orlando Theme Park Guides for Families with Kids",
+  description:
+    "Family guides for Disney, Universal, and Epic Universe: kid ride heights, 1-day plans, packing lists, and which Orlando park fits your kids.",
   path: "/blog",
+  keywords: [
+    "Orlando theme parks with kids",
+    "Disney World family guide",
+    "Universal Orlando kids",
+    "Epic Universe plan",
+    "ride height requirements",
+  ],
 });
 
 interface BlogIndexPost extends Omit<BlogPostLike, "slug" | "title" | "categories"> {

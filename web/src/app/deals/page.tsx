@@ -5,8 +5,9 @@ import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Orlando Theme Park Deals & Discounts",
-  description: "Save money on your Orlando vacation with exclusive ticket discounts and package deals.",
+  title: "Orlando Theme Park Ticket Deals for Families",
+  description:
+    "Compare Disney, Universal, Epic Universe, and SeaWorld ticket deal options for family trips — plus packing gear parents actually use.",
   path: "/deals",
 });
 

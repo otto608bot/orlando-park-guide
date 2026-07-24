@@ -4,8 +4,9 @@ import CharacterDiningClient from "./CharacterDiningClient";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Character Dining",
-  description: "Find the best character dining experiences at Disney World and Universal Orlando.",
+  title: "Disney & Universal Character Dining with Kids",
+  description:
+    "Compare character dining at Disney World and Universal Orlando — meals, parks, and kid-friendly meet-and-greet options in one list.",
   path: "/character-dining",
 });
 

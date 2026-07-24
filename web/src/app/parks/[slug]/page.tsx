@@ -19,34 +19,126 @@ export async function generateStaticParams() {
   return parks.map((p: { slug: string }) => ({ slug: p.slug }));
 }
 
+/** Family-oriented SERP titles/descriptions — park pages were bare brand names. */
+const parkSeoCopy: Record<string, { title: string; description: string }> = {
+  "magic-kingdom": {
+    title: "Magic Kingdom with Kids — Rides, Heights & Family Tips",
+    description:
+      "Plan Magic Kingdom with kids: iconic rides, height-friendly picks, character dining, and ticket options for a low-stress family park day.",
+  },
+  epcot: {
+    title: "EPCOT with Kids — Rides, Heights & Family Tips",
+    description:
+      "Plan EPCOT with kids: family rides, height notes, dining, and what is actually worth a day with younger visitors.",
+  },
+  "hollywood-studios": {
+    title: "Hollywood Studios with Kids — Rides, Heights & Tips",
+    description:
+      "Plan Hollywood Studios with kids: Star Wars and Toy Story rides, height filters, and family-day priorities.",
+  },
+  "animal-kingdom": {
+    title: "Animal Kingdom with Kids — Rides, Heights & Tips",
+    description:
+      "Plan Animal Kingdom with kids: Safari, Pandora, height-friendly rides, and a realistic family pacing plan.",
+  },
+  "universal-studios-florida": {
+    title: "Universal Studios Florida with Kids — Heights & Tips",
+    description:
+      "Plan Universal Studios Florida with kids: ride heights, thrill vs calm picks, and ticket options for families.",
+  },
+  "islands-of-adventure": {
+    title: "Islands of Adventure with Kids — Heights & Tips",
+    description:
+      "Plan Islands of Adventure with kids: Hagrid’s, Hogsmeade, height requirements, and calmer backups.",
+  },
+  "epic-universe": {
+    title: "Epic Universe with Kids — Rides, Heights & Tickets",
+    description:
+      "Plan Epic Universe with kids: Super Nintendo World, Berk, Dark Universe heights, family ride picks, and ticket options.",
+  },
+  "seaworld-orlando": {
+    title: "SeaWorld Orlando with Kids — Rides, Shows & Tips",
+    description:
+      "Plan SeaWorld Orlando with kids: coasters, shows, animal experiences, and a calmer family day option.",
+  },
+  "legoland-florida": {
+    title: "LEGOLAND Florida with Kids — Rides & Family Tips",
+    description:
+      "Plan LEGOLAND Florida with younger kids: age-fit rides, builds, and when it beats a big Orlando park day.",
+  },
+};
+
+/** High-value family guides to surface on each park page (conversion + internal links). */
+const parkGuideSlugs: Record<string, string[]> = {
+  "magic-kingdom": [
+    "best-magic-kingdom-rides-kids-under-40-inches",
+    "disney-world-packing-list-kids",
+    "disney-world-guide",
+  ],
+  epcot: ["disney-world-guide", "disney-world-packing-list-kids", "beat-disney-world-crowds"],
+  "hollywood-studios": ["disney-world-guide", "disney-world-packing-list-kids", "beat-disney-world-crowds"],
+  "animal-kingdom": ["disney-world-guide", "disney-world-packing-list-kids", "disney-world-with-baby-toddler"],
+  "universal-studios-florida": [
+    "universal-orlando-height-requirements",
+    "universal-orlando-summer-2026",
+    "epic-universe-1-day-plan",
+  ],
+  "islands-of-adventure": [
+    "universal-orlando-height-requirements",
+    "universal-orlando-summer-2026",
+    "epic-universe-1-day-plan",
+  ],
+  "epic-universe": [
+    "epic-universe-1-day-plan",
+    "epic-universe-rides-ranked-guide",
+    "epic-universe-tickets-guide",
+  ],
+  "seaworld-orlando": ["orlando-closures-march-2026", "free-things-disney-world"],
+  "legoland-florida": ["disney-world-with-baby-toddler", "disney-world-packing-list-kids"],
+};
+
+const parkImages: Record<string, string> = {
+  "magic-kingdom": "Magic-Kingdom.webp",
+  epcot: "epcot.jpeg",
+  "hollywood-studios": "Hollywood-Studios.jpeg",
+  "animal-kingdom": "animal-kingdom.jpeg",
+  "universal-studios-florida": "Universal-Studios.jpeg",
+  "islands-of-adventure": "islands-of-adventure.webp",
+  "epic-universe": "epic-universe.jpeg",
+  "seaworld-orlando": "sea-world.jpeg",
+  "legoland-florida": "legoland.jpeg",
+};
+
 export async function generateMetadata({ params }: ParkPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const park = await sanityClient.fetch(`
+  const park = await sanityClient.fetch(
+    `
     *[_type == "park" && slug.current == $slug][0] {
       name,
       description
     }
-  `, { slug });
+  `,
+    { slug },
+  );
 
   if (!park) return { title: "Park Not Found" };
+  const seo = parkSeoCopy[slug];
+  const imageFile = parkImages[slug];
   return createPageMetadata({
-    title: park.name,
-    description: park.description || `Plan rides, dining, and trip details for ${park.name}.`,
+    title: seo?.title || `${park.name} with Kids — Rides & Family Tips`,
+    description:
+      seo?.description ||
+      park.description ||
+      `Plan rides, dining, and trip details for ${park.name} with kids.`,
     path: `/parks/${slug}`,
+    ...(imageFile
+      ? {
+          image: `/${imageFile}`,
+          imageAlt: `${park.name} — Plan Your Park for families`,
+        }
+      : {}),
   });
 }
-
-const parkImages: Record<string, string> = {
-  'magic-kingdom': 'Magic-Kingdom.webp',
-  'epcot': 'epcot.jpeg',
-  'hollywood-studios': 'Hollywood-Studios.jpeg',
-  'animal-kingdom': 'animal-kingdom.jpeg',
-  'universal-studios-florida': 'Universal-Studios.jpeg',
-  'islands-of-adventure': 'islands-of-adventure.webp',
-  'epic-universe': 'epic-universe.jpeg',
-  'seaworld-orlando': 'sea-world.jpeg',
-  'legoland-florida': 'legoland.jpeg',
-};
 
 const parkColors: Record<string, string> = {
   'magic-kingdom': '#4A9DE8',
@@ -60,10 +152,68 @@ const parkColors: Record<string, string> = {
   'legoland-florida': '#F97316',
 };
 
+type ParkBlogCard = {
+  _id: string;
+  title: string;
+  slug?: { current?: string } | string;
+  excerpt?: string;
+  readTime?: number;
+  heroImage?: { asset?: { url?: string }; alt?: string };
+};
+
+async function getParkBlogPosts(slug: string, parkName: string): Promise<ParkBlogCard[]> {
+  const preferredSlugs = parkGuideSlugs[slug] || [];
+  const blogProjection = `
+    _id,
+    title,
+    slug,
+    excerpt,
+    readTime,
+    heroImage { asset-> { url }, alt }
+  `;
+
+  const [preferred, matched] = await Promise.all([
+    preferredSlugs.length
+      ? sanityClient.fetch<ParkBlogCard[]>(
+          `*[_type == "blogPost" && slug.current in $slugs]{ ${blogProjection} }`,
+          { slugs: preferredSlugs },
+        )
+      : Promise.resolve([] as ParkBlogCard[]),
+    sanityClient.fetch<ParkBlogCard[]>(
+      `*[
+        _type == "blogPost" && (
+          title match $parkName ||
+          pt::text(body) match $parkName ||
+          categories[]->title match $parkName ||
+          $parkName in tags
+        )
+      ] | order(publishedAt desc) [0..5] { ${blogProjection} }`,
+      { parkName },
+    ),
+  ]);
+
+  const bySlug = new Map<string, ParkBlogCard>();
+  const slugOf = (post: ParkBlogCard) =>
+    typeof post.slug === "string" ? post.slug : post.slug?.current || "";
+
+  // Preferred guides first (stable order from parkGuideSlugs)
+  for (const wanted of preferredSlugs) {
+    const hit = (preferred || []).find((p) => slugOf(p) === wanted);
+    if (hit) bySlug.set(wanted, hit);
+  }
+  for (const post of matched || []) {
+    const s = slugOf(post);
+    if (s && !bySlug.has(s)) bySlug.set(s, post);
+  }
+
+  return Array.from(bySlug.values()).slice(0, 3);
+}
+
 async function getParkData(slug: string) {
   const parkName = slugToParkName(slug);
   const [park, rides, dining, blogPosts] = await Promise.all([
-    sanityClient.fetch(`
+    sanityClient.fetch(
+      `
       *[_type == "park" && slug.current == $slug][0] {
         _id,
         name,
@@ -71,8 +221,11 @@ async function getParkData(slug: string) {
         description,
         image { asset-> { url }, alt }
       }
-    `, { slug }),
-    sanityClient.fetch(`
+    `,
+      { slug },
+    ),
+    sanityClient.fetch(
+      `
       *[_type == "ride" && park == $parkName] | order(thrillLevel desc, name asc) {
         _id,
         name,
@@ -87,8 +240,11 @@ async function getParkData(slug: string) {
         isClosed,
         closureNote
       }
-    `, { parkName }),
-    sanityClient.fetch(`
+    `,
+      { parkName },
+    ),
+    sanityClient.fetch(
+      `
       *[_type == "characterDining" && park == $parkName] | order(name asc) {
         _id,
         name,
@@ -98,17 +254,10 @@ async function getParkData(slug: string) {
         priceRange,
         description
       }
-    `, { parkName }),
-    sanityClient.fetch(`
-      *[_type == "blogPost" && (title match $parkName || categories[]->title match $parkName)] | order(publishedAt desc) [0..2] {
-        _id,
-        title,
-        slug,
-        excerpt,
-        readTime,
-        heroImage { asset-> { url }, alt }
-      }
-    `, { parkName }),
+    `,
+      { parkName },
+    ),
+    getParkBlogPosts(slug, parkName),
   ]);
 
   return { park, rides, dining, blogPosts };
@@ -185,7 +334,12 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
 
         {/* Rides Cards Grid */}
         <section className="park-rides">
-          <h2>Rides &amp; Attractions</h2>
+          <div className="park-rides-heading">
+            <h2>Rides &amp; Attractions</h2>
+            <Link href={`/rides/?height=40&parks=${encodeURIComponent(park.name)}`} className="park-height-link">
+              Filter rides kids under ~40″ can do →
+            </Link>
+          </div>
           <div className="park-rides-layout">
             <FilterSidebar />
             <div className="park-rides-main">
@@ -379,7 +533,32 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-size: 1.5rem;
           font-weight: 700;
           color: var(--text-dark);
+          margin: 0;
+        }
+
+        .park-rides-heading {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 0.5rem 1rem;
           margin-bottom: 1.5rem;
+        }
+
+        .park-dining h2,
+        .park-blog h2 {
+          margin-bottom: 1.5rem;
+        }
+
+        .park-height-link {
+          color: var(--primary);
+          font-size: 0.9375rem;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        .park-height-link:hover {
+          text-decoration: underline;
         }
 
         .park-rides-layout {

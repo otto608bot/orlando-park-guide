@@ -14,6 +14,9 @@ interface PageMetadataInput {
   path: string;
   keywords?: Metadata["keywords"];
   openGraphType?: "website" | "article";
+  /** Absolute or site-relative image path for OG/Twitter. Defaults to Disney-World.webp. */
+  image?: string;
+  imageAlt?: string;
 }
 
 export function createPageMetadata({
@@ -22,10 +25,13 @@ export function createPageMetadata({
   path,
   keywords,
   openGraphType = "website",
+  image,
+  imageAlt,
 }: PageMetadataInput): Metadata {
   const canonical = normalizePath(path);
-  // Default share image for utility pages without a CMS hero (social + messengers).
-  const defaultImage = `${SITE_URL}/Disney-World.webp`;
+  const imagePath = image || "/Disney-World.webp";
+  const imageUrl = imagePath.startsWith("http") ? imagePath : `${SITE_URL}${imagePath.startsWith("/") ? "" : "/"}${imagePath}`;
+  const alt = imageAlt || `${SITE_NAME} — Orlando parks for families`;
 
   return {
     title,
@@ -41,13 +47,13 @@ export function createPageMetadata({
       siteName: SITE_NAME,
       locale: "en_US",
       type: openGraphType,
-      images: [{ url: defaultImage, alt: `${SITE_NAME} — Orlando parks for families` }],
+      images: [{ url: imageUrl, alt }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [defaultImage],
+      images: [imageUrl],
     },
   };
 }

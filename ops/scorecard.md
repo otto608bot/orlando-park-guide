@@ -1,6 +1,6 @@
 # Scorecard
 
-Updated: 2026-07-24 (ops review)
+Updated: 2026-07-24 (daily workforce)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
@@ -25,6 +25,8 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Amazon live on packing paths (`tag=planyourpark-20`); Undercover Tourist ticket CTAs on commercial pages
 - Integrity: **14/14 clean** (2026-07-24 recheck)
 - Full blog product-naming QA **14/14 PASS** (Lightning Lane Multi/Single; Genie+ historical only) — live spot-check 2026-07-24 OK
+- Live blog QA script: **14/14 PASS** (2026-07-24 daily)
+- **Staged (awaiting deploy):** utility SEO pack — park SERP/OG, preferred guide cards, height-filter CTAs, blog/deals/dining meta (`ops/weekly/2026-07-24-daily.md`)
 - **Owner P0:** re-auth Google SEO OAuth so GSC/GA4 resume (`scripts/seo_analytics_auth.py`)
 
 ## Last review
@@ -32,4 +34,5 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Deploy 2026-07-22 — CTR v2 + Amazon renderer (`60dc2d9`); 15 Buffer posts queued FB/IG/Pinterest
 - Deploy 2026-07-23 — height SEO + Amazon list wiring + MK amplify (`b23b2af`)
 - Full blog Sanity QA + list/Amazon renderer fixes + Netlify rebuilds 2026-07-23 (`831482b` … `b337725`)
-- **Ops review 2026-07-24** — analytics still blocked; no open deploys; Phase 1 live and measuring window open once GSC returns
+- **Ops review 2026-07-24** — analytics still blocked; Phase 1 live and measuring window open once GSC returns
+- **Daily 2026-07-24** — utility SEO pack staged + 4 Buffer idea packs; integrity/live QA clean; analytics still blocked
