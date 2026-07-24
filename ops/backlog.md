@@ -12,7 +12,7 @@
 - [x] **DEPLOY** Sanity integrity patches + redirects rebuild — **APPROVED 2026-07-17**  
 - [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
 - [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
-- [ ] **Re-auth Google SEO token** — analytics cron blocked 2026-07-23 (`invalid_grant`)
+- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-07-24 (`invalid_grant`) — ops P0 owner action
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
