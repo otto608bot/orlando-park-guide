@@ -11,8 +11,26 @@
 /animal-kingdom /parks/animal-kingdom 301
 /universal-studios-florida /parks/universal-studios-florida 301
 /islands-of-adventure /parks/islands-of-adventure 301
+/epic-universe /parks/epic-universe 301
 /seaworld-orlando /parks/seaworld-orlando 301
 /legoland-florida /parks/legoland-florida 301
+
+# Common typed / short aliases (GSC + social / memory URLs)
+/epic-universe/ /parks/epic-universe/ 301
+/universal /parks/universal-studios-florida 301
+/universal/ /parks/universal-studios-florida/ 301
+/universal-studios /parks/universal-studios-florida 301
+/universal-studios/ /parks/universal-studios-florida/ 301
+/universal-orlando /parks/universal-studios-florida 301
+/universal-orlando/ /parks/universal-studios-florida/ 301
+/disney /parks 301
+/disney/ /parks/ 301
+/disney-world /parks 301
+/disney-world/ /parks/ 301
+/seaworld /parks/seaworld-orlando 301
+/seaworld/ /parks/seaworld-orlando/ 301
+/legoland /parks/legoland-florida 301
+/legoland/ /parks/legoland-florida/ 301
 
 # Legacy HTML redirects
 /magic-kingdom.html /parks/magic-kingdom 301
@@ -21,6 +39,7 @@
 /animal-kingdom.html /parks/animal-kingdom 301
 /universal-studios-florida.html /parks/universal-studios-florida 301
 /islands-of-adventure.html /parks/islands-of-adventure 301
+/epic-universe.html /parks/epic-universe 301
 /seaworld-orlando.html /parks/seaworld-orlando 301
 /legoland-florida.html /parks/legoland-florida 301
 
@@ -33,6 +52,8 @@
 /parks/ioa/ /parks/islands-of-adventure/ 301
 /parks/seaworld /parks/seaworld-orlando 301
 /parks/seaworld/ /parks/seaworld-orlando/ 301
+/parks/epic /parks/epic-universe 301
+/parks/epic/ /parks/epic-universe/ 301
 
 # Blog aliases → best family landing for intent
 /blog/epic-universe /blog/epic-universe-1-day-plan 301

@@ -12,8 +12,8 @@
 - [x] **DEPLOY** Sanity integrity patches + redirects rebuild — **APPROVED 2026-07-17**  
 - [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
 - [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
-- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-07-24 (`invalid_grant`) — ops P0 owner action
-- [ ] **DEPLOY** Utility SEO pack 2026-07-24 — park SERP/OG + preferred guide cards + height-filter CTA + blog/deals/dining meta (local build OK; see `ops/weekly/2026-07-24-daily.md`)
+- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-07-25 (`invalid_grant`) — ops P0 owner action
+- [ ] **DEPLOY** Utility SEO pack 2026-07-24/25 — park SERP/OG + preferred guide cards + height-filter CTA + blog/deals/dining meta + **short-path redirects** (`/epic-universe` was live 404) + blog hub earner amplify (local build OK; see `ops/weekly/2026-07-25-daily.md`)
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
@@ -25,11 +25,12 @@
 - [x] Inbound internal links → epic-universe-1-day-plan from high-impr pages  
 - [x] Rotate/revoke legacy Sanity token — **Rufus New deleted 2026-07-23** (kept Herman Editor); scripts env-only
 - [x] Amplify MK under-40 (earning clicks) with inbound Sanity links + helpful-links routing + 3 Buffer ideas — **HTML live 2026-07-23**
-- [ ] Queue MK under-40 Buffer ideas when ready (ideas created 2026-07-22 + 2026-07-23)
+- [ ] Queue MK under-40 Buffer ideas when ready (ideas created 2026-07-22 + 2026-07-23 + 2026-07-25)
 - [x] Buffer idea packs for Epic 1-day / packing kids / Universal heights / parks hub — **created 2026-07-24** (review only; not queued)
-- [ ] Queue 2026-07-24 Buffer idea packs when ready
+- [x] Buffer idea packs MK under-40 / Epic tickets / height=40 product — **created 2026-07-25** (review only)
+- [ ] Queue 2026-07-24 + 2026-07-25 Buffer idea packs when ready
 - [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
-- [ ] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe)
+- [ ] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  

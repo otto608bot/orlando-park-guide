@@ -41,15 +41,34 @@ const START_HERE_LINKS = [
     description: "Use this when you are still deciding between Disney, Universal, SeaWorld, or a mixed trip.",
   },
   {
-    href: "/rides",
-    title: "Browse rides by height and thrill",
-    description: "Best next step for families who need to avoid surprise height-limit disappointments.",
+    href: "/rides/?height=40",
+    title: "Ride finder for kids under ~40″",
+    description: "Filter every major Orlando park by your kid’s height before you buy tickets or walk into a line.",
+  },
+  {
+    href: "/blog/epic-universe-1-day-plan",
+    title: "Epic Universe 1-day plan",
+    description: "Our strongest family touring plan for Super Nintendo World, Berk, and the rest of Epic.",
+  },
+  {
+    href: "/blog/best-magic-kingdom-rides-kids-under-40-inches",
+    title: "Magic Kingdom rides under 40″",
+    description: "What shorter kids can actually ride — and what to skip without a meltdown.",
   },
   {
     href: "/deals",
-    title: "Check current deals and ticket options",
-    description: "Move from research into booking without hunting across multiple tabs.",
+    title: "Ticket deals for families",
+    description: "Move from research into booking Disney, Universal, and Epic options in one place.",
   },
+];
+
+/** Pin proven organic earners + commercial guides above pure recency. */
+const FEATURED_SLUG_PRIORITY = [
+  "epic-universe-1-day-plan",
+  "best-magic-kingdom-rides-kids-under-40-inches",
+  "disney-world-packing-list-kids",
+  "epic-universe-rides-ranked-guide",
+  "universal-orlando-height-requirements",
 ];
 
 async function getAllBlogPosts() {
@@ -70,9 +89,33 @@ async function getAllBlogPosts() {
   return dedupePostsBySlug(posts || []);
 }
 
+function pickFeaturedPosts(posts: BlogIndexPost[], limit = 3): BlogIndexPost[] {
+  const bySlug = new Map(posts.map((post) => [post.slug.current, post]));
+  const featured: BlogIndexPost[] = [];
+  const seen = new Set<string>();
+
+  for (const slug of FEATURED_SLUG_PRIORITY) {
+    const hit = bySlug.get(slug);
+    if (!hit || seen.has(slug)) continue;
+    featured.push(hit);
+    seen.add(slug);
+    if (featured.length >= limit) return featured;
+  }
+
+  for (const post of posts) {
+    const slug = post.slug.current;
+    if (!slug || seen.has(slug)) continue;
+    featured.push(post);
+    seen.add(slug);
+    if (featured.length >= limit) break;
+  }
+
+  return featured;
+}
+
 export default async function BlogPage() {
   const posts = await getAllBlogPosts();
-  const featuredPosts = posts.slice(0, 3);
+  const featuredPosts = pickFeaturedPosts(posts, 3);
 
   const blogCollectionLd = {
     "@context": "https://schema.org",
@@ -99,9 +142,9 @@ export default async function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionLd) }} />
 
       <header className="blog-page-header">
-        <h1>Orlando Theme Park Blog</h1>
+        <h1>Orlando Theme Park Guides for Families with Kids</h1>
         <p className="blog-page-subtitle">
-          Practical guides, trip-planning shortcuts, and current Orlando park updates for families trying to make smarter vacation decisions.
+          Height-friendly ride picks, 1-day plans, packing lists, and which Orlando park actually fits your kids — not just what&apos;s newest.
         </p>
       </header>
 
@@ -109,7 +152,7 @@ export default async function BlogPage() {
         <div className="blog-start-here-copy">
           <h2>Start here if you&apos;re planning from scratch</h2>
           <p>
-            The blog works best alongside the comparison and filtering tools. These links help readers move from inspiration into an actual plan.
+            Jump into the tools and guides families use most — compare parks, filter rides by height, then follow a proven day plan.
           </p>
         </div>
         <div className="blog-start-here-grid">
@@ -125,7 +168,7 @@ export default async function BlogPage() {
       {featuredPosts.length > 0 ? (
         <section className="blog-featured-posts">
           <div className="blog-section-heading">
-            <h2>Featured recent guides</h2>
+            <h2>Featured family guides</h2>
             <Link href="/deals">Need prices instead? See deals</Link>
           </div>
           <div className="blog-posts-grid">
