@@ -53,6 +53,39 @@ export default async function HomePage() {
         {/* Hero Callout */}
         <HomepageHeader totalRides={totalRides} allRides={allRides} />
 
+        {/* Planning shortcuts → parks hub, earners, ticket deals (SSR for SEO) */}
+        <section className="home-start-here" aria-label="Family planning shortcuts">
+          <div className="home-start-here-copy">
+            <h2>Planning a family trip?</h2>
+            <p>
+              Filter rides below by height — or jump to park comparisons, proven day plans, and
+              ticket options.
+            </p>
+          </div>
+          <div className="home-start-here-grid">
+            <Link href="/parks/" className="home-start-card">
+              <strong>Which Orlando park fits?</strong>
+              <span>Compare Disney, Universal, Epic, SeaWorld &amp; LEGOLAND for kids.</span>
+            </Link>
+            <Link href="/rides/?height=40" className="home-start-card">
+              <strong>Rides under ~40″</strong>
+              <span>Shareable height filter so you skip lines your kids can&apos;t ride.</span>
+            </Link>
+            <Link href="/blog/epic-universe-1-day-plan/" className="home-start-card">
+              <strong>Epic Universe 1-day plan</strong>
+              <span>Our best-performing family touring plan for the newest park.</span>
+            </Link>
+            <Link href="/blog/best-magic-kingdom-rides-kids-under-40-inches/" className="home-start-card">
+              <strong>Magic Kingdom under 40″</strong>
+              <span>What shorter kids can actually ride at the most popular park.</span>
+            </Link>
+            <Link href="/deals/" className="home-start-card">
+              <strong>Family ticket deals</strong>
+              <span>Compare partner pricing before you lock dates.</span>
+            </Link>
+          </div>
+        </section>
+
         {/* Park Cards with Filters */}
         <section className="rides-browser">
           <HomepageRides allRides={allRides} totalCount={totalRides} />
@@ -85,6 +118,65 @@ export default async function HomePage() {
 
         .rides-browser {
           margin-bottom: 2.5rem;
+        }
+
+        .home-start-here {
+          margin: 0 0 1.5rem;
+          padding: 1.15rem 1.15rem 1.25rem;
+          background: #fff;
+          border: 1px solid var(--border, #e2e8f0);
+          border-radius: 14px;
+        }
+
+        .home-start-here-copy h2 {
+          font-family: var(--font-heading);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--text-dark);
+          margin: 0 0 0.35rem;
+        }
+
+        .home-start-here-copy p {
+          margin: 0 0 0.9rem;
+          color: var(--text-medium);
+          font-size: 0.95rem;
+          line-height: 1.55;
+          max-width: 52rem;
+        }
+
+        .home-start-here-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 0.65rem;
+        }
+
+        .home-start-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          text-decoration: none;
+          border: 1px solid var(--border, #e2e8f0);
+          background: var(--bg-light, #fff7ed);
+          border-radius: 12px;
+          padding: 0.8rem 0.9rem;
+          transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .home-start-card:hover {
+          border-color: var(--primary, #f37021);
+          box-shadow: 0 4px 14px rgba(243, 112, 33, 0.12);
+        }
+
+        .home-start-card strong {
+          color: var(--text-dark);
+          font-size: 0.92rem;
+          line-height: 1.3;
+        }
+
+        .home-start-card span {
+          color: var(--text-medium);
+          font-size: 0.8rem;
+          line-height: 1.4;
         }
 
         .email-signup-section {

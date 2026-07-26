@@ -115,7 +115,9 @@ export default async function RidesPage() {
           , or our{" "}
           <Link href="/blog/epic-universe-rides-ranked-guide/">Epic Universe rides ranked</Link>{" "}
           guide. Comparing parks first? Start at the{" "}
-          <Link href="/parks/">Orlando parks hub</Link>.
+          <Link href="/parks/">Orlando parks hub</Link>
+          . Ready to book?{" "}
+          <Link href="/deals/">Compare family ticket deals</Link>.
         </p>
       </section>
 
