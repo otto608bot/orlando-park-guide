@@ -1,4 +1,5 @@
 import ContentPageShell from "@/components/ContentPageShell";
+import Link from "next/link";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -34,6 +35,15 @@ export default function AboutPage() {
         <h2>How we make money</h2>
         <p>
           Some pages include affiliate links for tickets, travel gear, and related trip-planning products. If you buy through those links, Plan Your Park may earn a commission at no extra cost to you.
+        </p>
+      </section>
+
+      <section>
+        <h2>Start planning</h2>
+        <p>
+          Start with the <Link href="/parks/">Orlando parks comparison</Link>, use the{" "}
+          <Link href="/rides/?height=40">ride finder for your child&apos;s height</Link>, or compare{" "}
+          <Link href="/deals/">family ticket options</Link> once you know where you want to go.
         </p>
       </section>
     </ContentPageShell>

@@ -187,6 +187,11 @@ export default function DealsPage() {
         <p className="deals-subtitle">
           Verified discounts and money-saving strategies for your Orlando theme park vacation.
         </p>
+        <p className="deals-disclosure">
+          Ticket and gear links below may be affiliate links. If you buy through them, Plan Your Park
+          may earn a commission at no extra cost to you.{" "}
+          <Link href="/affiliate-disclosure/">Full disclosure</Link>.
+        </p>
       </header>
 
       {/* Full-width Undercover Tourist Banner */}
@@ -386,6 +391,19 @@ export default function DealsPage() {
           color: var(--text-medium);
           max-width: 600px;
           margin: 0 auto;
+        }
+
+        .deals-disclosure {
+          font-size: 0.82rem;
+          color: var(--text-medium);
+          max-width: 640px;
+          margin: 0.85rem auto 0;
+          line-height: 1.5;
+        }
+
+        .deals-disclosure a {
+          color: var(--primary);
+          font-weight: 600;
         }
 
         /* Ticket Deals Section */
