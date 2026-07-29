@@ -18,11 +18,13 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Amazon list/heading keyword wiring | **published** | packing conversion | Amazon | blog renderer + `blogAffiliates.tsx` |
 | Helpful-links MK/height priority | **published** | footers prioritize earners | tickets | `web/src/lib/blog.ts` |
 | Phase 1 Buffer packs | queued | 15 posts 2026-07-22 | — | https://publish.buffer.com/ |
-| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects + blog earner amplify + **home/rides/dining/about routes + helpful noindex 404 + deals FTC disclosure**) | **awaiting_approval** | pack complete + build PASS 2026-07-28; live `/epic-universe` still 404 | tickets via parks/home/deals | see `ops/weekly/2026-07-28-daily.md` |
+| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects + blog earner amplify + **home/rides/dining/about routes + helpful noindex 404 + deals FTC disclosure + park height chips / deals CTA / ticket disclosure**) | **awaiting_approval** | pack extended + build PASS 2026-07-29; live `/epic-universe` still 404 | tickets via parks/home/deals | see `ops/weekly/2026-07-29-daily.md` |
 | Buffer ideas 2026-07-24 (Epic 1-day / packing / heights / parks) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-25 (MK under-40 / Epic tickets / height=40) | idea (review) | 3 packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-26 (rides ranked / free things / deals / Disney guide) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-28 (Epic tickets / baby-toddler / beat crowds / character dining) | idea (review) | 4 packs — not queued | tickets | https://publish.buffer.com/ |
+| Buffer ideas 2026-07-29 (MK park / Epic park / height=40 / parks hub) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
+| Post-deploy smoke script | tool ready | run after utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
 ## Dual QA checklist (every draft)
@@ -34,6 +36,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Meta title/description CTR-oriented
 - [x] No contradictory family lore
 - [x] Second QA pass
-- [x] Content integrity clean (14/14, 2026-07-27)
-- [x] Live HTML verify after deploy / full QA (2026-07-28 production blog clean; utility pack post-deploy pending)
+- [x] Content integrity clean (14/14, 2026-07-29)
+- [x] Live HTML verify after deploy / full QA (2026-07-29 production blog clean; utility pack post-deploy pending — use `post_deploy_smoke.py`)
 - [x] Deals commercial disclosure staged (2026-07-28)
+- [x] Park page height chips + ticket disclosure staged (2026-07-29)

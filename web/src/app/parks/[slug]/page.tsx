@@ -309,6 +309,9 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             All Parks
           </Link>
           <h1>{park.name}</h1>
+          <p className="park-hero-tagline">
+            Family ride picks by height — skip the guesswork before you buy tickets
+          </p>
           <div className="park-hero-meta">
             <span className="ride-count-badge">
               {rides.length} Rides & Attractions
@@ -317,7 +320,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           <a
             href={getParkTicketLink(park.name)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer sponsored"
             className="hero-buy-tickets-btn"
           >
             Buy Tickets — Save Up to 20%
@@ -331,6 +334,33 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             <p>{park.description}</p>
           </section>
         )}
+
+        {/* Shareable height presets → ride finder (product SEO surface) */}
+        <section className="park-height-presets" aria-label={`Height filters for ${park.name}`}>
+          <h2>Will my kid be tall enough?</h2>
+          <p>
+            Jump into the ride finder pre-filtered for {park.name}. Share the results with
+            your co-planner before you lock tickets.
+          </p>
+          <div className="park-height-chips">
+            {[
+              { h: 40, label: 'Under ~40″' },
+              { h: 44, label: '44″+' },
+              { h: 48, label: '48″+' },
+            ].map(({ h, label }) => (
+              <Link
+                key={h}
+                href={`/rides/?height=${h}&parks=${encodeURIComponent(park.name)}`}
+                className="park-height-chip"
+              >
+                {label}
+              </Link>
+            ))}
+            <Link href={`/rides/?parks=${encodeURIComponent(park.name)}`} className="park-height-chip park-height-chip-all">
+              All heights
+            </Link>
+          </div>
+        </section>
 
         {/* Rides Cards Grid */}
         <section className="park-rides">
@@ -388,15 +418,23 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           <Link href="/rides" className="cta-secondary">
             Browse All Rides
           </Link>
+          <Link href="/deals/" className="cta-secondary">
+            Compare Family Ticket Deals
+          </Link>
           <a
             href={getParkTicketLink(park.name)}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer sponsored"
             className="cta-primary"
           >
             Get Tickets
           </a>
         </div>
+        <p className="park-cta-disclosure">
+          Ticket links may be affiliate links, which can earn Plan Your Park a commission at no
+          extra cost to you.{" "}
+          <Link href="/affiliate-disclosure/">Affiliate disclosure</Link>.
+        </p>
       </div>
 
       <style>{`
@@ -466,6 +504,16 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
+        .park-hero-tagline {
+          margin: 0;
+          max-width: 36rem;
+          color: rgba(255,255,255,0.92);
+          font-size: clamp(0.875rem, 2.4vw, 1.0625rem);
+          font-weight: 500;
+          line-height: 1.4;
+          text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+        }
+
         .park-hero-meta {
           display: flex;
           align-items: center;
@@ -518,6 +566,62 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           font-size: 1.0625rem;
           color: var(--text-medium);
           line-height: 1.75;
+        }
+
+        .park-height-presets {
+          margin-bottom: 2.5rem;
+          padding: 1.25rem 1.25rem 1.35rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+        }
+
+        .park-height-presets h2 {
+          font-family: var(--font-heading);
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin: 0 0 0.5rem;
+        }
+
+        .park-height-presets p {
+          margin: 0 0 1rem;
+          font-size: 0.9375rem;
+          color: var(--text-medium);
+          line-height: 1.55;
+          max-width: 40rem;
+        }
+
+        .park-height-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .park-height-chip {
+          display: inline-flex;
+          align-items: center;
+          padding: 0.5rem 0.9rem;
+          border-radius: 9999px;
+          background: #fff7f0;
+          border: 1px solid rgba(243, 112, 33, 0.35);
+          color: var(--primary);
+          font-size: 0.875rem;
+          font-weight: 700;
+          text-decoration: none;
+          transition: background 0.15s, border-color 0.15s, transform 0.15s;
+        }
+
+        .park-height-chip:hover {
+          background: #ffedd9;
+          border-color: var(--primary);
+          transform: translateY(-1px);
+        }
+
+        .park-height-chip-all {
+          background: var(--bg-light);
+          border-color: var(--border);
+          color: var(--text-dark);
         }
 
         .park-rides,
@@ -686,6 +790,19 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           justify-content: center;
           margin-top: 3rem;
           flex-wrap: wrap;
+        }
+
+        .park-cta-disclosure {
+          margin: 0.85rem auto 0;
+          max-width: 36rem;
+          text-align: center;
+          font-size: 0.8125rem;
+          color: var(--text-light);
+          line-height: 1.45;
+        }
+
+        .park-cta-disclosure a {
+          color: var(--text-medium);
         }
 
         .cta-primary {

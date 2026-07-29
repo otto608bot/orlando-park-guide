@@ -1,0 +1,119 @@
+{
+  "base": "https://planyourpark.com",
+  "findings": [
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/disney did not land on */parks*",
+      "detail": "status=404/404 final=https://planyourpark.com/disney loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/disney-world did not land on */parks*",
+      "detail": "status=404/404 final=https://planyourpark.com/disney-world loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/epic-universe did not land on */parks/epic-universe*",
+      "detail": "status=404/404 final=https://planyourpark.com/epic-universe loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/epic-universe/ did not land on */parks/epic-universe*",
+      "detail": "status=404/404 final=https://planyourpark.com/epic-universe/ loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/parks/epic did not land on */parks/epic-universe*",
+      "detail": "status=404/404 final=https://planyourpark.com/parks/epic loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/parks/epic/ did not land on */parks/epic-universe*",
+      "detail": "status=404/404 final=https://planyourpark.com/parks/epic/ loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/universal did not land on */parks/universal-studios-florida*",
+      "detail": "status=404/404 final=https://planyourpark.com/universal loc="
+    },
+    {
+      "severity": "high",
+      "code": "redirect_target",
+      "message": "/universal/ did not land on */parks/universal-studios-florida*",
+      "detail": "status=404/404 final=https://planyourpark.com/universal/ loc="
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/blog/ title missing \u201cFamily\u201d",
+      "detail": "title='Blog | Plan Your Park'"
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/character-dining/ title missing \u201cCharacter Dining with Kids\u201d",
+      "detail": "title='Character Dining | Plan Your Park'"
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/deals/ title missing \u201cTicket Deals for Families\u201d",
+      "detail": "title='Orlando Theme Park Deals & Discounts | Plan Your Park'"
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/parks/epcot/ title missing \u201cEPCOT with Kids\u201d",
+      "detail": "title='EPCOT | Plan Your Park'"
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/parks/epic-universe/ title missing \u201cEpic Universe with Kids\u201d",
+      "detail": "title='Epic Universe | Plan Your Park'"
+    },
+    {
+      "severity": "high",
+      "code": "title_missing",
+      "message": "/parks/magic-kingdom/ title missing \u201cMagic Kingdom with Kids\u201d",
+      "detail": "title='Magic Kingdom | Plan Your Park'"
+    },
+    {
+      "severity": "medium",
+      "code": "body_missing",
+      "message": "/deals/ body missing \u201ccommission\u201d",
+      "detail": ""
+    },
+    {
+      "severity": "medium",
+      "code": "body_missing",
+      "message": "/parks/epic-universe/ body missing \u201cWill my kid be tall enough\u201d",
+      "detail": ""
+    },
+    {
+      "severity": "medium",
+      "code": "body_missing",
+      "message": "/parks/magic-kingdom/ body missing \u201cWill my kid be tall enough\u201d",
+      "detail": ""
+    },
+    {
+      "severity": "medium",
+      "code": "body_missing",
+      "message": "/parks/magic-kingdom/ body missing \u201cheight=40\u201d",
+      "detail": ""
+    }
+  ],
+  "counts": {
+    "high": 14,
+    "medium": 4,
+    "low": 0,
+    "total": 18
+  }
+}
