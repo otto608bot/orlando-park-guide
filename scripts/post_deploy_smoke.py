@@ -5,6 +5,7 @@ Post-deploy smoke checks for Plan Your Park utility SEO + conversion pack.
 Usage:
   python3 scripts/post_deploy_smoke.py
   python3 scripts/post_deploy_smoke.py --base https://planyourpark.com
+  python3 scripts/post_deploy_smoke.py --local-out web/out
   python3 scripts/post_deploy_smoke.py --fail-on high
 
 Exit 0 when no findings at/above --fail-on; else 1.
@@ -23,7 +24,9 @@ from typing import Optional
 
 DEFAULT_BASE = "https://planyourpark.com"
 UA = "PlanYourPark-PostDeploySmoke/1.0"
-OUT = Path(__file__).resolve().parents[1] / "ops" / "weekly" / "post-deploy-smoke-latest.json"
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "ops" / "weekly" / "post-deploy-smoke-latest.json"
+REDIRECTS_FILE = ROOT / "web" / "public" / "_redirects"
 
 # (path, expect_final_path_suffix or None, expect_status)
 REDIRECTS = [
@@ -42,7 +45,7 @@ TITLE_MUST_CONTAIN = {
     "/parks/magic-kingdom/": "Magic Kingdom with Kids",
     "/parks/epic-universe/": "Epic Universe with Kids",
     "/parks/epcot/": "EPCOT with Kids",
-    "/blog/": "Family",  # staged blog hub is family-oriented
+    "/blog/": "Families",  # staged blog hub is family-oriented
     "/deals/": "Ticket Deals for Families",
     "/character-dining/": "Character Dining with Kids",
     "/rides/": "Ride Finder",
@@ -51,8 +54,17 @@ TITLE_MUST_CONTAIN = {
 
 BODY_MUST_CONTAIN = {
     "/deals/": ["affiliate-disclosure", "commission"],
-    "/parks/magic-kingdom/": ["Will my kid be tall enough", "height=40"],
-    "/parks/epic-universe/": ["Will my kid be tall enough", "epic-universe-1-day-plan"],
+    "/parks/magic-kingdom/": [
+        "Will my kid be tall enough",
+        "height=40",
+        "TouristAttraction",
+        "FAQPage",
+    ],
+    "/parks/epic-universe/": [
+        "Will my kid be tall enough",
+        "epic-universe-1-day-plan",
+        "TouristAttraction",
+    ],
     "/404-test-path-that-should-404": [],  # handled separately
 }
 
@@ -111,6 +123,30 @@ def robots_of(html: str) -> str:
     return (m.group(1) if m else "").lower()
 
 
+def local_html_path(out_dir: Path, url_path: str) -> Path:
+    """Map a site path to static export HTML under out/."""
+    p = url_path.split("?", 1)[0]
+    if not p.startswith("/"):
+        p = "/" + p
+    if p == "/":
+        return out_dir / "index.html"
+    # strip trailing slash for directory index
+    stripped = p.rstrip("/")
+    candidate_dir = out_dir / stripped.lstrip("/")
+    index = candidate_dir / "index.html"
+    if index.is_file():
+        return index
+    html_file = out_dir / f"{stripped.lstrip('/')}.html"
+    return html_file
+
+
+def read_local(out_dir: Path, url_path: str) -> tuple[int, str, str]:
+    path = local_html_path(out_dir, url_path)
+    if not path.is_file():
+        return 404, str(path), ""
+    return 200, str(path), path.read_text(encoding="utf-8", errors="replace")
+
+
 def check_redirects(base: str) -> list[Finding]:
     findings: list[Finding] = []
     for path, expect_suffix, expect_status in REDIRECTS:
@@ -167,12 +203,49 @@ def check_redirects(base: str) -> list[Finding]:
     return findings
 
 
-def check_titles_and_bodies(base: str) -> list[Finding]:
+def check_redirects_file() -> list[Finding]:
+    """Pre-deploy: ensure Netlify _redirects declares the short aliases."""
+    findings: list[Finding] = []
+    if not REDIRECTS_FILE.is_file():
+        return [
+            Finding(
+                "high",
+                "redirects_missing",
+                "web/public/_redirects not found",
+                str(REDIRECTS_FILE),
+            )
+        ]
+    text = REDIRECTS_FILE.read_text(encoding="utf-8", errors="replace")
+    for path, expect_suffix, _status in REDIRECTS:
+        # lines look like: /epic-universe /parks/epic-universe 301
+        pattern = re.compile(
+            rf"^{re.escape(path.rstrip('/'))}/?\s+{re.escape(expect_suffix.rstrip('/'))}/?\s+30[18]\b",
+            re.M,
+        )
+        if not pattern.search(text):
+            findings.append(
+                Finding(
+                    "high",
+                    "redirects_rule",
+                    f"_redirects missing rule {path} → {expect_suffix}",
+                    "",
+                )
+            )
+    return findings
+
+
+def check_titles_and_bodies(
+    *, base: Optional[str] = None, out_dir: Optional[Path] = None
+) -> list[Finding]:
     findings: list[Finding] = []
     for path, needle in TITLE_MUST_CONTAIN.items():
-        url = base.rstrip("/") + path
         try:
-            status, final, body, _ = fetch(url, follow=True)
+            if out_dir is not None:
+                status, final, body = read_local(out_dir, path)
+            else:
+                assert base is not None
+                url = base.rstrip("/") + path
+                status, final, body, _ = fetch(url, follow=True)
         except RuntimeError as e:
             findings.append(Finding("high", "page_fetch", f"Could not fetch {path}", str(e)))
             continue
@@ -204,17 +277,25 @@ def check_titles_and_bodies(base: str) -> list[Finding]:
     return findings
 
 
-def check_404(base: str) -> list[Finding]:
+def check_404(*, base: Optional[str] = None, out_dir: Optional[Path] = None) -> list[Finding]:
     findings: list[Finding] = []
-    url = base.rstrip("/") + "/this-path-should-404-pyp-smoke"
-    try:
-        status, _final, body, _ = fetch(url, follow=True)
-    except RuntimeError as e:
-        return [Finding("high", "404_fetch", "Could not fetch deliberate 404 URL", str(e))]
-    if status != 404:
-        findings.append(
-            Finding("medium", "404_status", f"Expected HTTP 404, got {status}", url)
-        )
+    if out_dir is not None:
+        path = out_dir / "404.html"
+        if not path.is_file():
+            return [Finding("high", "404_fetch", "web/out/404.html missing", str(path))]
+        body = path.read_text(encoding="utf-8", errors="replace")
+        status = 404  # static export 404 page exists
+    else:
+        assert base is not None
+        url = base.rstrip("/") + "/this-path-should-404-pyp-smoke"
+        try:
+            status, _final, body, _ = fetch(url, follow=True)
+        except RuntimeError as e:
+            return [Finding("high", "404_fetch", "Could not fetch deliberate 404 URL", str(e))]
+        if status != 404:
+            findings.append(
+                Finding("medium", "404_status", f"Expected HTTP 404, got {status}", url)
+            )
     robots = robots_of(body)
     if "noindex" not in robots:
         findings.append(
@@ -243,6 +324,11 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--base", default=DEFAULT_BASE)
     ap.add_argument(
+        "--local-out",
+        default=None,
+        help="Path to Next static export (e.g. web/out). Skips live redirects; checks _redirects + HTML.",
+    )
+    ap.add_argument(
         "--fail-on",
         choices=("high", "medium", "low", "none"),
         default="high",
@@ -251,15 +337,28 @@ def main() -> int:
     args = ap.parse_args()
 
     findings: list[Finding] = []
-    findings.extend(check_redirects(args.base))
-    findings.extend(check_titles_and_bodies(args.base))
-    findings.extend(check_404(args.base))
+    label = args.base
+    if args.local_out:
+        out_dir = Path(args.local_out)
+        if not out_dir.is_absolute():
+            out_dir = (Path.cwd() / out_dir).resolve()
+        if not out_dir.is_dir():
+            print(f"local out dir missing: {out_dir}", file=sys.stderr)
+            return 2
+        label = f"local:{out_dir}"
+        findings.extend(check_redirects_file())
+        findings.extend(check_titles_and_bodies(out_dir=out_dir))
+        findings.extend(check_404(out_dir=out_dir))
+    else:
+        findings.extend(check_redirects(args.base))
+        findings.extend(check_titles_and_bodies(base=args.base))
+        findings.extend(check_404(base=args.base))
 
     rank = {"high": 3, "medium": 2, "low": 1}
     findings.sort(key=lambda f: (-rank.get(f.severity, 0), f.code, f.message))
 
     payload = {
-        "base": args.base,
+        "base": label,
         "findings": [asdict(f) for f in findings],
         "counts": {
             "high": sum(1 for f in findings if f.severity == "high"),
@@ -271,7 +370,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2) + "\n")
 
-    print(f"Post-deploy smoke @ {args.base}")
+    print(f"Post-deploy smoke @ {label}")
     print(
         f"findings={payload['counts']['total']} "
         f"high={payload['counts']['high']} "

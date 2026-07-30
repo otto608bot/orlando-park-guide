@@ -384,7 +384,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
           </div>
           <div className="blog-primary-cta-actions">
-            <a href={contextualTicketCta.href} target="_blank" rel="noopener noreferrer" className="primary">
+            <a
+              href={contextualTicketCta.href}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="primary"
+            >
               {contextualTicketCta.supportingLabel}
             </a>
             <Link href="/deals" className="secondary">See all Orlando deal options</Link>

@@ -147,7 +147,7 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
             <a
               href={getParkTicketLink(park.name)}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
               className="park-card-tickets-btn"
             >
               Buy Tickets

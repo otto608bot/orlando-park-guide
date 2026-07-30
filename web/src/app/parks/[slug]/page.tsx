@@ -6,7 +6,7 @@ import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 import FilterSidebar from "@/components/FilterSidebar";
 import { getParkTicketLink } from "@/config/affiliate-links";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, SITE_URL } from "@/lib/seo";
 
 interface ParkPageProps {
   params: Promise<{ slug: string }>;
@@ -93,8 +93,16 @@ const parkGuideSlugs: Record<string, string[]> = {
     "epic-universe-rides-ranked-guide",
     "epic-universe-tickets-guide",
   ],
-  "seaworld-orlando": ["orlando-closures-march-2026", "free-things-disney-world"],
-  "legoland-florida": ["disney-world-with-baby-toddler", "disney-world-packing-list-kids"],
+  "seaworld-orlando": [
+    "orlando-closures-march-2026",
+    "disney-world-packing-list-kids",
+    "free-things-disney-world",
+  ],
+  "legoland-florida": [
+    "disney-world-with-baby-toddler",
+    "disney-world-packing-list-kids",
+    "best-magic-kingdom-rides-kids-under-40-inches",
+  ],
 };
 
 const parkImages: Record<string, string> = {
@@ -294,9 +302,81 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
 
   const imageSrc = park.image?.asset?.url || `/${parkImages[slug] || 'Disney-World.webp'}`;
   const accentColor = parkColors[slug] || '#F37021';
+  const seo = parkSeoCopy[slug];
+  const parkPath = `/parks/${slug}/`;
+  const parkAbsoluteUrl = `${SITE_URL}${parkPath}`;
+  const imageAbsolute = imageSrc.startsWith("http")
+    ? imageSrc
+    : `${SITE_URL}${imageSrc.startsWith("/") ? "" : "/"}${imageSrc}`;
+  const parkJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TouristAttraction",
+        name: park.name,
+        description:
+          seo?.description ||
+          park.description ||
+          `Plan rides, heights, and tickets for ${park.name} with kids.`,
+        url: parkAbsoluteUrl,
+        image: imageAbsolute,
+        isAccessibleForFree: false,
+        touristType: ["Families with children", "Kids"],
+        publicAccess: true,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${SITE_URL}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Parks",
+            item: `${SITE_URL}/parks/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: park.name,
+            item: parkAbsoluteUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: `Will my kid be tall enough for ${park.name} rides?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Use the Plan Your Park ride finder filtered for ${park.name} by height (under ~40″, 44″+, 48″+, or all heights) before you lock tickets. Heights can change; always confirm on-site signage.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: `How do families plan a day at ${park.name}?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Start with height-friendly ride picks, skim our planning tips for ${park.name}, then compare family ticket options. Match park energy to your kids’ ages instead of trying to do everything.`,
+            },
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <div className="park-detail-container">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parkJsonLd) }}
+      />
       {/* Hero Section */}
       <div className="park-hero" style={{ '--park-accent': accentColor } as React.CSSProperties}>
         <img src={imageSrc} alt={park.image?.alt || park.name} className="park-hero-img" />
