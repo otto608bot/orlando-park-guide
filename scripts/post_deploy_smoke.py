@@ -38,6 +38,14 @@ REDIRECTS = [
     ("/universal/", "/parks/universal-studios-florida", 301),
     ("/disney", "/parks", 301),
     ("/disney-world", "/parks", 301),
+    ("/hs", "/parks/hollywood-studios", 301),
+    ("/hollywood", "/parks/hollywood-studios", 301),
+    ("/parks/hollywood", "/parks/hollywood-studios", 301),
+    ("/mk", "/parks/magic-kingdom", 301),
+    ("/parks/mk", "/parks/magic-kingdom", 301),
+    ("/ak", "/parks/animal-kingdom", 301),
+    ("/parks/ak", "/parks/animal-kingdom", 301),
+    ("/ioa", "/parks/islands-of-adventure", 301),
 ]
 
 # path -> substring that must appear in <title>

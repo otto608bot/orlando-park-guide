@@ -54,6 +54,26 @@
 /parks/seaworld/ /parks/seaworld-orlando/ 301
 /parks/epic /parks/epic-universe 301
 /parks/epic/ /parks/epic-universe/ 301
+/parks/hs /parks/hollywood-studios 301
+/parks/hs/ /parks/hollywood-studios/ 301
+/parks/hollywood /parks/hollywood-studios 301
+/parks/hollywood/ /parks/hollywood-studios/ 301
+/parks/mk /parks/magic-kingdom 301
+/parks/mk/ /parks/magic-kingdom/ 301
+/parks/ak /parks/animal-kingdom 301
+/parks/ak/ /parks/animal-kingdom/ 301
+
+# Root short aliases people type or share
+/hs /parks/hollywood-studios 301
+/hs/ /parks/hollywood-studios/ 301
+/hollywood /parks/hollywood-studios 301
+/hollywood/ /parks/hollywood-studios/ 301
+/mk /parks/magic-kingdom 301
+/mk/ /parks/magic-kingdom/ 301
+/ak /parks/animal-kingdom 301
+/ak/ /parks/animal-kingdom/ 301
+/ioa /parks/islands-of-adventure 301
+/ioa/ /parks/islands-of-adventure/ 301
 
 # Blog aliases → best family landing for intent
 /blog/epic-universe /blog/epic-universe-1-day-plan 301

@@ -12,8 +12,8 @@
 - [x] **DEPLOY** Sanity integrity patches + redirects rebuild — **APPROVED 2026-07-17**  
 - [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
 - [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
-- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-07-30 (`invalid_grant`) — ops P0 owner action (W31 ops)
-- [ ] **DEPLOY** Utility SEO + conversion pack 2026-07-24→30 — park SERP/OG + preferred guide cards + height-filter CTA + blog/deals/dining meta + **short-path redirects** (`/epic-universe` live 404) + blog hub earner amplify + **home/rides/dining/about conversion paths + helpful noindex 404 + deals FTC disclosure + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored blog/home CTAs + local smoke gate** (local ahead of origin; pack extended 2026-07-30 — see `ops/weekly/2026-07-30-daily.md` + W31 ops)
+- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-07-31 (`invalid_grant`) — ops P0 owner action (W31 ops)
+- [ ] **DEPLOY** Utility SEO + conversion pack 2026-07-24→31 — park SERP/OG + preferred guide cards + height-filter CTA + blog/deals/dining meta + **short-path redirects** (`/epic-universe` live 404) + blog hub earner amplify + **home/rides/dining/about conversion paths + helpful noindex 404 + deals FTC disclosure + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored blog/home CTAs + local smoke gate + hs/mk/ak/ioa aliases** (local ahead of origin; pack extended 2026-07-31 — see `ops/weekly/2026-07-31-daily.md` + W31 ops)
 - [x] Deals page FTC disclosure (header + affiliate-disclosure link) — staged 2026-07-28
 - [x] Buffer idea packs Epic tickets / baby-toddler / beat crowds / character dining — **created 2026-07-28** (review only)
 - [x] Park page height chips + deals CTA + ticket disclosure — staged 2026-07-29
@@ -21,8 +21,10 @@
 - [x] Buffer product idea packs MK/Epic park + height=40 + parks hub — **created 2026-07-29** (review only)
 - [x] Park JSON-LD (TouristAttraction/FAQ/Breadcrumb) + sponsored CTA compliance — staged 2026-07-30
 - [x] Buffer product idea packs IOA / USF / EPCOT / AK — **created 2026-07-30** (review only)
-- [x] Local smoke PASS on staged pack — 2026-07-30 (`--local-out web/out`)
-- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 Buffer idea packs when ready
+- [x] Local smoke PASS on staged pack — 2026-07-30 / **reconfirmed 2026-07-31** (`--local-out web/out`)
+- [x] Extra short aliases hs/mk/ak/ioa + smoke coverage — staged 2026-07-31
+- [x] Buffer product idea packs HS / SeaWorld / LEGOLAND / rides height=40 — **created 2026-07-31** (review only)
+- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 Buffer idea packs when ready
 - [ ] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → exit 0
 
 ## P1
@@ -39,9 +41,9 @@
 - [x] Buffer idea packs for Epic 1-day / packing kids / Universal heights / parks hub — **created 2026-07-24** (review only; not queued)
 - [x] Buffer idea packs MK under-40 / Epic tickets / height=40 product — **created 2026-07-25** (review only)
 - [x] Buffer idea packs rides ranked / free things / deals / Disney guide — **created 2026-07-26** (review only)
-- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 Buffer idea packs when ready
+- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 Buffer idea packs when ready
 - [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
-- [ ] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD
+- [ ] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  
