@@ -4,6 +4,7 @@ import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import RidesClient from "./RidesClient";
 import { createPageMetadata } from "@/lib/seo";
+import { RIDE_HEIGHT_PRESETS } from "@/lib/ride-presets";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Orlando Ride Finder by Height — Kids & Families (2026)",
@@ -17,42 +18,9 @@ export const metadata: Metadata = createPageMetadata({
     "disney height filter",
     "universal height filter",
     "rides under 40 inches",
+    "epic universe rides by height",
   ],
 });
-
-/** Shareable filter deep-links (FiltersContext reads ?height=&parks=&calm=). */
-const HEIGHT_PRESETS = [
-  {
-    href: "/rides/?height=40",
-    label: 'Under ~40"',
-    blurb: "Preschool / shorter riders",
-  },
-  {
-    href: "/rides/?height=44",
-    label: '44"',
-    blurb: "Many family coasters open",
-  },
-  {
-    href: "/rides/?height=48",
-    label: '48"',
-    blurb: "Most big thrills unlock",
-  },
-  {
-    href: "/rides/?height=52",
-    label: '52"+',
-    blurb: "Nearly full park access",
-  },
-  {
-    href: "/rides/?calm=true",
-    label: "Calm rides",
-    blurb: "Gentler experiences",
-  },
-  {
-    href: "/rides/?height=40&parks=Magic%20Kingdom",
-    label: "MK + under 40\"",
-    blurb: "Magic Kingdom short-rider start",
-  },
-] as const;
 
 async function getAllRides() {
   return sanityClient.fetch(`
@@ -94,7 +62,7 @@ export default async function RidesPage() {
           can text them to a co-planner or pin them for trip day.
         </p>
         <ul className="rides-preset-grid">
-          {HEIGHT_PRESETS.map((preset) => (
+          {RIDE_HEIGHT_PRESETS.map((preset) => (
             <li key={preset.href}>
               <Link href={preset.href} className="rides-preset-card">
                 <span className="rides-preset-label">{preset.label}</span>

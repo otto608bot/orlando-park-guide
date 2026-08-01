@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { dedupePostsBySlug } from "@/lib/blog";
+import { ridePresetSitemapPaths } from "@/lib/ride-presets";
 import { sanityClient } from "@/lib/sanity";
 import { SITE_URL } from "@/lib/seo";
 
@@ -111,5 +112,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...STATIC_ROUTES, ...parkRoutes, ...blogRoutes];
+  // Shareable ride-finder presets (height × park). Same static page + query;
+  // listed so GSC can discover deep links families actually share.
+  const now = new Date();
+  const ridePresetRoutes: MetadataRoute.Sitemap = ridePresetSitemapPaths().map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.75,
+  }));
+
+  return [...STATIC_ROUTES, ...ridePresetRoutes, ...parkRoutes, ...blogRoutes];
 }

@@ -429,17 +429,37 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
     links.push(link);
   };
 
-  // Product tool first for height/family intent
+  // Product tool first for height/family intent — prefer park-specific deep links when clear
   if (haystack.includes("height") || haystack.includes("under 40") || haystack.includes("ride")) {
-    push({
-      href: "/rides/?height=40",
-      label: "Open the ride finder (~40″ filter)",
-      description: "Shareable height filter across Disney, Universal, Epic Universe, and more.",
-    });
+    if (haystack.includes("epic")) {
+      push({
+        href: "/rides/?height=40&parks=Epic%20Universe",
+        label: "Open Epic Universe ride finder (~40″)",
+        description: "Shareable Epic-only height filter — what shorter kids can actually ride.",
+      });
+    } else if (haystack.includes("magic kingdom") || haystack.includes("under 40")) {
+      push({
+        href: "/rides/?height=40&parks=Magic%20Kingdom",
+        label: "Open Magic Kingdom ride finder (~40″)",
+        description: "Shareable MK short-rider filter across the full ride list.",
+      });
+    } else if (haystack.includes("universal") || haystack.includes("islands")) {
+      push({
+        href: "/rides/?height=40&parks=Universal%20Studios",
+        label: "Open Universal ride finder (~40″)",
+        description: "Shareable Universal Studios short-rider filter for your group chat.",
+      });
+    } else {
+      push({
+        href: "/rides/?height=40",
+        label: "Open the ride finder (~40″ filter)",
+        description: "Shareable height filter across Disney, Universal, Epic Universe, and more.",
+      });
+    }
   } else if (signals.has("disney")) {
     push({
-      href: "/rides",
-      label: "Browse Disney-friendly rides by height and thrill level",
+      href: "/rides/?height=40",
+      label: "Browse Disney-friendly rides by height",
       description: "Use the ride filters to avoid walking into lines your kids cannot ride.",
     });
   }
