@@ -78,3 +78,15 @@
 # Blog aliases → best family landing for intent
 /blog/epic-universe /blog/epic-universe-1-day-plan 301
 /blog/epic-universe/ /blog/epic-universe-1-day-plan/ 301
+/blog/epic /blog/epic-universe-1-day-plan 301
+/blog/epic/ /blog/epic-universe-1-day-plan/ 301
+/blog/packing /blog/disney-world-packing-list-kids 301
+/blog/packing/ /blog/disney-world-packing-list-kids/ 301
+/blog/packing-list /blog/disney-world-packing-list-kids 301
+/blog/packing-list/ /blog/disney-world-packing-list-kids/ 301
+/blog/heights /blog/universal-orlando-height-requirements 301
+/blog/heights/ /blog/universal-orlando-height-requirements/ 301
+/blog/height-requirements /blog/universal-orlando-height-requirements 301
+/blog/height-requirements/ /blog/universal-orlando-height-requirements/ 301
+/blog/mk-under-40 /blog/best-magic-kingdom-rides-kids-under-40-inches 301
+/blog/mk-under-40/ /blog/best-magic-kingdom-rides-kids-under-40-inches/ 301

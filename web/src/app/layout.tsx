@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FiltersProvider } from "@/context/FiltersContext";
 import { Suspense } from "react";
-import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import { SITE_NAME, SITE_URL, getSiteJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito", weight: ["400", "600", "700", "800"] });
@@ -18,8 +18,16 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} | Orlando Theme Park Planning Guide`,
     template: `%s | ${SITE_NAME}`,
   },
-  description: "Your ultimate guide to Orlando theme parks - Disney World, Universal, SeaWorld, LEGOLAND & more!",
-  keywords: ["Orlando theme parks", "Disney World", "Universal Orlando", "SeaWorld", "theme park planning", "Orlando vacation"],
+  description:
+    "Plan Orlando theme parks with kids: filter Disney, Universal, Epic Universe, SeaWorld & LEGOLAND rides by height and thrill — then pick the right park.",
+  keywords: [
+    "Orlando theme parks with kids",
+    "Disney World",
+    "Universal Orlando",
+    "rides by height",
+    "Epic Universe",
+    "theme park planning",
+  ],
   openGraph: {
     siteName: SITE_NAME,
     type: "website",
@@ -33,6 +41,8 @@ export const metadata: Metadata = {
     apple: '/favicon-180x180.png',
   },
 };
+
+const siteJsonLd = getSiteJsonLd();
 
 function FiltersLoader() {
   return (
@@ -55,6 +65,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <Suspense fallback={<FiltersLoader />}>
           <FiltersProvider>
             <Header />
@@ -64,9 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </FiltersProvider>
         </Suspense>
-        
+
         {/* Google Analytics */}
-        <Script 
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SJHPEWNBLS"
           strategy="afterInteractive"
         />

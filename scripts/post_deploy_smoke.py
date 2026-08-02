@@ -61,6 +61,7 @@ TITLE_MUST_CONTAIN = {
 }
 
 BODY_MUST_CONTAIN = {
+    "/": ["Organization", "WebSite", "application/ld+json"],
     "/deals/": ["affiliate-disclosure", "commission"],
     "/parks/magic-kingdom/": [
         "Will my kid be tall enough",
