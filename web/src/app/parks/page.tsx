@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import ParkCard from "@/components/ParkCard";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getParksHubJsonLd } from "@/lib/seo";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 export const metadata: Metadata = createPageMetadata({
@@ -34,9 +34,14 @@ async function getAllParks() {
 
 export default async function ParksPage() {
   const parks = await getAllParks();
+  const parksJsonLd = getParksHubJsonLd(parks || []);
 
   return (
     <div className="parks-page-container">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parksJsonLd) }}
+      />
       <header className="parks-header">
         <h1>All Parks in Orlando — Which One Fits Your Kids?</h1>
         <p className="parks-subtitle">
@@ -111,6 +116,13 @@ export default async function ParksPage() {
           Disney (especially Magic Kingdom) is usually easier with younger kids and classic characters.
           Universal wins for older kids who want coasters, Super Nintendo World, and Epic Universe lands
           — if they meet height requirements. Many families do both on longer trips.
+        </p>
+        <h2>How do I know which rides my kids can ride?</h2>
+        <p>
+          Open the{" "}
+          <Link href="/rides/?height=40">ride finder with a ~40&quot; filter</Link>, then narrow by park
+          (Magic Kingdom, Epic Universe, Universal, and more). Share the filtered URL with your group
+          before you buy tickets so nobody walks into a line a kid cannot ride.
         </p>
       </section>
 

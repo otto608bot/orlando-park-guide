@@ -3,7 +3,7 @@ export const revalidate = 60;
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import RidesClient from "./RidesClient";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getRidesHubJsonLd } from "@/lib/seo";
 import { RIDE_HEIGHT_PRESETS } from "@/lib/ride-presets";
 
 export const metadata: Metadata = createPageMetadata({
@@ -43,9 +43,14 @@ async function getAllRides() {
 
 export default async function RidesPage() {
   const rides = await getAllRides();
+  const ridesJsonLd = getRidesHubJsonLd([...RIDE_HEIGHT_PRESETS], rides.length);
 
   return (
     <div className="rides-page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ridesJsonLd) }}
+      />
       <header className="rides-header">
         <h1>Orlando Ride Finder — Filter by Your Kid&apos;s Height</h1>
         <p className="rides-subtitle">

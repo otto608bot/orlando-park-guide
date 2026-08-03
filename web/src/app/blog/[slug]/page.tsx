@@ -17,6 +17,7 @@ import {
   type BlogPostLike,
 } from "@/lib/blog";
 import { sanityClient } from "@/lib/sanity";
+import { SITE_NAME, SITE_URL, getOrganizationRef } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -293,28 +294,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   };
 
+  const pageUrl = `${SITE_URL}/blog/${slug}/`;
+  const heroUrl = post.heroImage?.asset?.url || `${SITE_URL}${getFallbackHero(post)}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${pageUrl}#article`,
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
     dateModified: post._updatedAt || post.publishedAt,
-    mainEntityOfPage: `https://planyourpark.com/blog/${slug}`,
-    image: [post.heroImage?.asset?.url || `https://planyourpark.com${getFallbackHero(post)}`],
-    author: { "@type": "Person", name: post.author?.name || "Plan Your Park" },
-    publisher: { "@type": "Organization", name: "Plan Your Park", url: "https://planyourpark.com" },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
+    image: [heroUrl],
+    author: {
+      "@type": "Person",
+      name: post.author?.name || SITE_NAME,
+    },
+    // Logo + stable org @id — required shape for Google article rich results.
+    publisher: getOrganizationRef(),
+    isPartOf: { "@id": `${SITE_URL}/#website` },
     keywords: post.tags,
     articleSection: post.categories?.map((category) => category.title).filter(Boolean),
+    inLanguage: "en-US",
   };
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://planyourpark.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://planyourpark.com/blog/" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://planyourpark.com/blog/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog/` },
+      { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
     ],
   };
 

@@ -46,9 +46,16 @@ REDIRECTS = [
     ("/ak", "/parks/animal-kingdom", 301),
     ("/parks/ak", "/parks/animal-kingdom", 301),
     ("/ioa", "/parks/islands-of-adventure", 301),
+    ("/blog/epic", "/blog/epic-universe-1-day-plan", 301),
+    ("/blog/packing", "/blog/disney-world-packing-list-kids", 301),
+    ("/blog/heights", "/blog/universal-orlando-height-requirements", 301),
+    ("/blog/mk-under-40", "/blog/best-magic-kingdom-rides-kids-under-40-inches", 301),
+    ("/blog/epic-1-day", "/blog/epic-universe-1-day-plan", 301),
+    ("/blog/tickets-epic", "/blog/epic-universe-tickets-guide", 301),
 ]
 
 # path -> substring that must appear in <title>
+# Empty string = skip title needle (body-only paths still checked via BODY_MUST_CONTAIN).
 TITLE_MUST_CONTAIN = {
     "/parks/magic-kingdom/": "Magic Kingdom with Kids",
     "/parks/epic-universe/": "Epic Universe with Kids",
@@ -58,10 +65,31 @@ TITLE_MUST_CONTAIN = {
     "/character-dining/": "Character Dining with Kids",
     "/rides/": "Ride Finder",
     "/": "Ride Finder",
+    "/parks/": "All Parks in Orlando",
+    "/blog/epic-universe-1-day-plan/": "Epic Universe",
 }
 
 BODY_MUST_CONTAIN = {
     "/": ["Organization", "WebSite", "application/ld+json"],
+    "/parks/": [
+        "FAQPage",
+        "ItemList",
+        "CollectionPage",
+        "How do I know which rides my kids can ride",
+        "application/ld+json",
+    ],
+    "/rides/": [
+        "CollectionPage",
+        "ItemList",
+        "Shareable ride height presets",
+        "application/ld+json",
+    ],
+    "/blog/epic-universe-1-day-plan/": [
+        "BlogPosting",
+        "logo-full.png",
+        "BreadcrumbList",
+        "application/ld+json",
+    ],
     "/deals/": ["affiliate-disclosure", "commission"],
     "/parks/magic-kingdom/": [
         "Will my kid be tall enough",

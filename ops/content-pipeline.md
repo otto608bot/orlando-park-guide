@@ -6,19 +6,19 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 | slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
-| parks hub CTR v2 | published + distributed | live; **watch 14d CTR** | tickets | https://planyourpark.com/parks/ |
+| parks hub CTR v2 | published + distributed | live; **watch 14d CTR**; hub FAQ/ItemList schema **staged** | tickets | https://planyourpark.com/parks/ |
 | epic-universe-rides-ranked-guide CTR v2 | published + distributed | live; high-impr 0-click focus | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |
 | disney-world-packing-list-kids CTR v2 | published + distributed | live; Amazon tags verified | Amazon + tickets | https://planyourpark.com/blog/disney-world-packing-list-kids/ |
 | universal-orlando-height-requirements CTR v2 | published + distributed | live + MK cross-link | tool + tickets + Amazon | https://planyourpark.com/blog/universal-orlando-height-requirements/ |
-| epic-universe-1-day-plan | published + distributed | best CTR amplifier | tickets + Amazon | https://planyourpark.com/blog/epic-universe-1-day-plan/ |
+| epic-universe-1-day-plan | published + distributed | best CTR amplifier; BlogPosting logo **staged** | tickets + Amazon | https://planyourpark.com/blog/epic-universe-1-day-plan/ |
 | epic-universe-tickets-guide | published | conversion trust | tickets + Amazon | https://planyourpark.com/blog/epic-universe-tickets-guide/ |
 | best-magic-kingdom-rides-kids-under-40-inches | published + amplified | inbound + height tool **live** | tickets | https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/ |
 | Full catalog product-naming QA (14 posts) | **published** | LL Multi/Single; Genie historical only | trust | all blog URLs |
-| Height-filter SEO (`/rides/` + home) | **published** | `?height=` presets live | tickets via finder | https://planyourpark.com/rides/ · https://planyourpark.com/ |
+| Height-filter SEO (`/rides/` + home) | **published** | `?height=` presets live; hub ItemList **staged** | tickets via finder | https://planyourpark.com/rides/ · https://planyourpark.com/ |
 | Amazon list/heading keyword wiring | **published** | packing conversion | Amazon | blog renderer + `blogAffiliates.tsx` |
 | Helpful-links MK/height priority | **published** | footers prioritize earners | tickets | `web/src/lib/blog.ts` |
 | Phase 1 Buffer packs | queued | 15 posts 2026-07-22 | — | https://publish.buffer.com/ |
-| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects incl. hs/mk/ak/ioa + blog earner amplify + home/rides/dining/about routes + helpful noindex 404 + deals FTC + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored CTAs + local smoke + **ride preset expansion 12 deep links + sitemap presets + park-aware blog helpful links + sitewide Organization/WebSite JSON-LD + blog earner aliases**) | **awaiting_approval** | pack extended + **local smoke PASS** 2026-08-02; live `/epic-universe` still 404; home still no ld+json | tickets via parks/home/deals/rides | see `ops/weekly/2026-08-02-daily.md` |
+| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects incl. hs/mk/ak/ioa + blog earner amplify + home/rides/dining/about routes + helpful noindex 404 + deals FTC + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored CTAs + local smoke + **ride preset expansion 12 deep links + sitemap presets + park-aware blog helpful links + sitewide Organization/WebSite JSON-LD + blog earner aliases + parks/rides hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo + epic-1-day/tickets-epic aliases**) | **awaiting_approval** | pack extended + **local smoke PASS** 2026-08-03; live `/epic-universe` still 404; home still no ld+json; parks/rides hubs still no hub schema | tickets via parks/home/deals/rides | see `ops/weekly/2026-08-03-daily.md` |
 | Buffer ideas 2026-07-24 (Epic 1-day / packing / heights / parks) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-25 (MK under-40 / Epic tickets / height=40) | idea (review) | 3 packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-26 (rides ranked / free things / deals / Disney guide) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
@@ -28,6 +28,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer ideas 2026-07-31 (HS / SeaWorld / LEGOLAND / rides height=40) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-01 (home / dining / Epic 1-day+height / park×height presets) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-02 (free things / beat crowds / Epic tickets / Universal heights) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
+| Buffer ideas 2026-08-03 (parks hub / rides height=40 / MK under-40 / Epic 1-day+tickets) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; run live after utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
@@ -40,11 +41,12 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Meta title/description CTR-oriented
 - [x] No contradictory family lore
 - [x] Second QA pass
-- [x] Content integrity clean (14/14, 2026-08-02)
-- [x] Live HTML verify after deploy / full QA (2026-08-02 production blog clean; utility pack post-deploy pending — local smoke PASS; use `post_deploy_smoke.py` live after deploy)
+- [x] Content integrity clean (14/14, 2026-08-03)
+- [x] Live HTML verify after deploy / full QA (2026-08-03 production blog clean; utility pack post-deploy pending — local smoke PASS; use `post_deploy_smoke.py` live after deploy)
 - [x] Deals commercial disclosure staged (2026-07-28)
 - [x] Park page height chips + ticket disclosure staged (2026-07-29)
 - [x] Park JSON-LD + sponsored ticket CTAs staged (2026-07-30)
 - [x] Extra short aliases hs/mk/ak/ioa staged (2026-07-31)
 - [x] Ride preset expansion + sitemap presets + park-aware helpful links staged (2026-08-01)
 - [x] Sitewide Organization/WebSite JSON-LD + blog earner aliases staged (2026-08-02)
+- [x] Parks/rides hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo staged (2026-08-03)
