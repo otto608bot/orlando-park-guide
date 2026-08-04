@@ -364,6 +364,7 @@ function postHaystack(post: BlogPostLike): string {
 function getPriorityGuideLinks(post: BlogPostLike): ContextualLink[] {
   const haystack = postHaystack(post);
   const slug = slugFrom(post);
+  const signals = getSignals(post);
   const links: ContextualLink[] = [];
 
   const isHeightOrYoungKids =
@@ -374,7 +375,12 @@ function getPriorityGuideLinks(post: BlogPostLike): ContextualLink[] {
     haystack.includes("preschool") ||
     haystack.includes("kids");
 
-  if (isHeightOrYoungKids && slug !== "best-magic-kingdom-rides-kids-under-40-inches") {
+  // Disney family posts (free things, crowds, guides) should still amplify short-rider earners
+  // even when the title doesn't say "kids".
+  if (
+    (isHeightOrYoungKids || signals.has("disney")) &&
+    slug !== "best-magic-kingdom-rides-kids-under-40-inches"
+  ) {
     links.push({
       href: "/blog/best-magic-kingdom-rides-kids-under-40-inches",
       label: "Magic Kingdom rides under 40 inches",
@@ -410,6 +416,21 @@ function getPriorityGuideLinks(post: BlogPostLike): ContextualLink[] {
       href: "/blog/epic-universe-1-day-plan",
       label: "Epic Universe 1-day plan",
       description: "Best-CTR touring plan — amplify after height checks.",
+    });
+  }
+
+  // Universal-family posts without "epic" in title still benefit from the 1-day earner
+  if (
+    signals.has("universal") &&
+    !haystack.includes("epic") &&
+    slug !== "epic-universe-1-day-plan" &&
+    slug !== "epic-universe-rides-ranked-guide" &&
+    slug !== "epic-universe-tickets-guide"
+  ) {
+    links.push({
+      href: "/blog/epic-universe-1-day-plan",
+      label: "Epic Universe 1-day plan",
+      description: "When Universal is on the table, this is our strongest family day plan for the newest park.",
     });
   }
 

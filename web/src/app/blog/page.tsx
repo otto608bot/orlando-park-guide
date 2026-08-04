@@ -4,7 +4,7 @@ import Link from "next/link";
 import BlogPostCard from "@/components/BlogPostCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { dedupePostsBySlug, type BlogPostLike } from "@/lib/blog";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getBlogHubJsonLd } from "@/lib/seo";
 import { sanityClient } from "@/lib/sanity";
 
 export const revalidate = 60;
@@ -115,31 +115,12 @@ function pickFeaturedPosts(posts: BlogIndexPost[], limit = 3): BlogIndexPost[] {
 
 export default async function BlogPage() {
   const posts = await getAllBlogPosts();
-  const featuredPosts = pickFeaturedPosts(posts, 3);
-
-  const blogCollectionLd = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "Plan Your Park Blog",
-    description: "Orlando theme park planning guides, updates, and trip strategy articles.",
-    url: "https://planyourpark.com/blog/",
-    hasPart: featuredPosts
-      .map((post) => {
-        const slug = typeof post.slug === "string" ? post.slug : post.slug?.current;
-        if (!slug) return null;
-        return {
-          "@type": "BlogPosting",
-          headline: post.title,
-          url: `https://planyourpark.com/blog/${slug}`,
-          description: post.excerpt,
-        };
-      })
-      .filter(Boolean),
-  };
+  const featuredPosts = pickFeaturedPosts(posts, 5);
+  const blogHubLd = getBlogHubJsonLd(featuredPosts);
 
   return (
     <div className="blog-page-container">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogHubLd) }} />
 
       <header className="blog-page-header">
         <h1>Orlando Theme Park Guides for Families with Kids</h1>
@@ -172,7 +153,7 @@ export default async function BlogPage() {
             <Link href="/deals">Need prices instead? See deals</Link>
           </div>
           <div className="blog-posts-grid">
-            {featuredPosts.map((post) => (
+            {featuredPosts.slice(0, 3).map((post) => (
               <BlogPostCard key={post.slug.current || post._id} post={post} />
             ))}
           </div>
@@ -188,6 +169,26 @@ export default async function BlogPage() {
           {posts.map((post) => (
             <BlogPostCard key={post.slug.current || post._id} post={post} />
           ))}
+        </div>
+      </section>
+
+      <section className="blog-planning-faq" aria-label="Planning FAQ">
+        <h2>Quick answers for family planners</h2>
+        <div className="blog-faq-grid">
+          <div>
+            <h3>Where should families start planning an Orlando park trip?</h3>
+            <p>
+              Start by comparing parks, filter rides by your child&apos;s height (for example ~40 inches), then
+              follow a proven day plan like Epic Universe or Magic Kingdom under 40 inches before you buy tickets.
+            </p>
+          </div>
+          <div>
+            <h3>Which Plan Your Park guides help most with kids?</h3>
+            <p>
+              Families use the ride finder by height, Magic Kingdom rides under 40 inches, Epic Universe 1-day plan,
+              kids packing list, and Universal height requirements the most when choosing parks and rides.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -314,6 +315,41 @@ export default async function BlogPage() {
 
         .blog-section-heading a:hover {
           color: var(--primary);
+        }
+
+        .blog-planning-faq {
+          margin-bottom: 2.5rem;
+          padding: 1.5rem;
+          border: 1px solid var(--border);
+          border-radius: 16px;
+          background: var(--bg-white);
+        }
+
+        .blog-planning-faq h2 {
+          font-family: var(--font-heading);
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin: 0 0 1rem;
+        }
+
+        .blog-faq-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 1rem;
+        }
+
+        .blog-faq-grid h3 {
+          font-size: 1rem;
+          color: var(--text-dark);
+          margin: 0 0 0.4rem;
+        }
+
+        .blog-faq-grid p {
+          color: var(--text-medium);
+          line-height: 1.65;
+          margin: 0;
+          font-size: 0.95rem;
         }
 
         .no-posts {

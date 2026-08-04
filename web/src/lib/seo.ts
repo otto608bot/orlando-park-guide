@@ -176,6 +176,198 @@ export function getRidesHubJsonLd(
   };
 }
 
+/** Blog hub: CollectionPage + featured guide ItemList + planning FAQ. */
+export function getBlogHubJsonLd(
+  posts: Array<{ title?: string | null; slug?: { current?: string | null } | string | null; excerpt?: string | null }>,
+): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}/blog/`;
+  const items = posts
+    .map((post, index) => {
+      const slug = typeof post.slug === "string" ? post.slug : post.slug?.current?.trim() || "";
+      const title = post.title?.trim();
+      if (!slug || !title) return null;
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: title,
+        description: post.excerpt?.trim() || undefined,
+        url: `${SITE_URL}/blog/${slug}/`,
+      };
+    })
+    .filter(Boolean);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Orlando Theme Park Guides for Families with Kids",
+        description:
+          "Family guides for Disney, Universal, and Epic Universe: kid ride heights, 1-day plans, packing lists, and which Orlando park fits your kids.",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+        mainEntity: { "@id": `${pageUrl}#itemlist` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#itemlist`,
+        name: "Featured family park guides",
+        numberOfItems: items.length,
+        itemListElement: items,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Where should families start planning an Orlando park trip?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Start by comparing parks, filter rides by your child's height (for example ~40 inches), then follow a proven day plan like Epic Universe or Magic Kingdom under 40 inches before you buy tickets.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Which Plan Your Park guides help most with kids?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Families use the ride finder by height, Magic Kingdom rides under 40 inches, Epic Universe 1-day plan, kids packing list, and Universal height requirements the most when choosing parks and rides.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
+/** Character dining hub: CollectionPage + sample ItemList + FAQ. */
+export function getCharacterDiningJsonLd(
+  venues: Array<{ name?: string | null; park?: string | null; description?: string | null }>,
+): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}/character-dining/`;
+  const items = venues
+    .slice(0, 12)
+    .map((venue, index) => {
+      const name = venue.name?.trim();
+      if (!name) return null;
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name,
+        description: [venue.park, venue.description].filter(Boolean).join(" — ") || undefined,
+      };
+    })
+    .filter(Boolean);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Disney & Universal Character Dining with Kids",
+        description:
+          "Compare character dining at Disney World and Universal Orlando — meals, parks, and kid-friendly meet-and-greet options in one list.",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+        mainEntity: { "@id": `${pageUrl}#itemlist` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#itemlist`,
+        name: "Character dining venues for families",
+        numberOfItems: items.length,
+        itemListElement: items,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Is character dining worth it with kids?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Often yes for younger kids who want guaranteed character time without standing in a separate meet-and-greet line. Book early, match the meal to your park day, and leave buffer time for height-restricted rides after breakfast or dinner.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Should we book character dining before tickets?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Decide which parks fit your kids first (height filters help), then book dining reservations for those park days. Ticket deals and the ride finder are useful before you lock a pricey character meal.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
+/** Deals hub: CollectionPage + ticket destination ItemList + FAQ. */
+export function getDealsJsonLd(
+  destinations: Array<{ name: string; description: string }>,
+): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}/deals/`;
+  const items = destinations.map((dest, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: dest.name,
+    description: dest.description,
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Orlando Theme Park Ticket Deals for Families",
+        description:
+          "Compare Disney, Universal, Epic Universe, and SeaWorld ticket deal options for family trips — plus packing gear parents actually use.",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+        mainEntity: { "@id": `${pageUrl}#itemlist` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#itemlist`,
+        name: "Family ticket deal destinations",
+        numberOfItems: items.length,
+        itemListElement: items,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do families save on Orlando theme park tickets?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Compare multi-day Disney and Universal options through trusted partners, visit mid-week when possible, and only buy park days your kids can actually use — check height requirements first so you do not overbuy thrill parks.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Are these ticket links affiliate links?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Ticket and gear links may be affiliate links. If you buy through them, Plan Your Park may earn a commission at no extra cost to you. See the full affiliate disclosure on the site.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
 interface PageMetadataInput {
   title: string;
   description: string;

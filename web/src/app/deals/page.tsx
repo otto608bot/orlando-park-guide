@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, getDealsJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Orlando Theme Park Ticket Deals for Families",
@@ -10,6 +10,8 @@ export const metadata: Metadata = createPageMetadata({
     "Compare Disney, Universal, Epic Universe, and SeaWorld ticket deal options for family trips — plus packing gear parents actually use.",
   path: "/deals",
 });
+
+const SPONSORED_REL = "noopener noreferrer sponsored" as const;
 
 const gearItems = [
   {
@@ -180,25 +182,38 @@ const attractionTickets = [
 ];
 
 export default function DealsPage() {
+  const dealsLd = getDealsJsonLd([
+    ...disneyTickets.map((t) => ({ name: t.name, description: t.description })),
+    ...universalTickets.map((t) => ({ name: t.name, description: t.description })),
+    ...attractionTickets.map((t) => ({ name: t.name, description: t.description })),
+  ]);
+
   return (
     <div className="deals-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(dealsLd) }} />
+
       <header className="deals-header">
-        <h1>Orlando Park Deals</h1>
+        <h1>Orlando Theme Park Ticket Deals for Families</h1>
         <p className="deals-subtitle">
-          Verified discounts and money-saving strategies for your Orlando theme park vacation.
+          Verified discounts and money-saving strategies for your Orlando theme park vacation — after you know which rides your kids can actually ride.
         </p>
         <p className="deals-disclosure">
           Ticket and gear links below may be affiliate links. If you buy through them, Plan Your Park
           may earn a commission at no extra cost to you.{" "}
           <Link href="/affiliate-disclosure/">Full disclosure</Link>.
         </p>
+        <div className="deals-planning-links">
+          <Link href="/rides/?height=40">Filter rides by height first</Link>
+          <Link href="/parks/">Compare parks for kids</Link>
+          <Link href="/blog/epic-universe-1-day-plan/">Epic Universe 1-day plan</Link>
+        </div>
       </header>
 
       {/* Full-width Undercover Tourist Banner */}
       <a
         href={AFFILIATE_LINKS.ucDealsPage}
         target="_blank"
-        rel="noopener noreferrer"
+        rel={SPONSORED_REL}
         className="uc-banner"
       >
         <div className="uc-banner-inner">
@@ -230,7 +245,7 @@ export default function DealsPage() {
               key={ticket.name}
               href={ticket.link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={SPONSORED_REL}
               className="ticket-deal-card"
             >
               <div className="ticket-deal-icon">{ticket.icon}</div>
@@ -259,7 +274,7 @@ export default function DealsPage() {
               key={ticket.name}
               href={ticket.link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={SPONSORED_REL}
               className="ticket-deal-card"
             >
               <div className="ticket-deal-icon">{ticket.icon}</div>
@@ -286,7 +301,7 @@ export default function DealsPage() {
         <a
           href={AFFILIATE_LINKS.viator}
           target="_blank"
-          rel="noopener noreferrer"
+          rel={SPONSORED_REL}
           className="viator-cta-btn"
         >
           Compare Tickets →
@@ -305,7 +320,7 @@ export default function DealsPage() {
               key={ticket.name}
               href={ticket.link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={SPONSORED_REL}
               className="attraction-card"
             >
               <div className="attraction-icon">{ticket.icon}</div>
@@ -331,7 +346,7 @@ export default function DealsPage() {
               key={item.id}
               href={item.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={SPONSORED_REL}
               className="gear-card"
             >
               <div className="gear-icon">{item.icon}</div>
@@ -355,6 +370,27 @@ export default function DealsPage() {
               <p>{tip.tip}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="deals-faq" aria-label="Ticket deals FAQ">
+        <h2>Quick answers for family ticket shoppers</h2>
+        <div className="deals-faq-grid">
+          <div>
+            <h3>How do families save on Orlando theme park tickets?</h3>
+            <p>
+              Compare multi-day Disney and Universal options through trusted partners, visit mid-week when possible,
+              and only buy park days your kids can actually use — check height requirements first so you do not overbuy
+              thrill parks.
+            </p>
+          </div>
+          <div>
+            <h3>Are these ticket links affiliate links?</h3>
+            <p>
+              Yes. Ticket and gear links may be affiliate links. If you buy through them, Plan Your Park may earn a
+              commission at no extra cost to you. See the full affiliate disclosure on the site.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -404,6 +440,60 @@ export default function DealsPage() {
         .deals-disclosure a {
           color: var(--primary);
           font-weight: 600;
+        }
+
+        .deals-planning-links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.6rem;
+          margin-top: 1rem;
+        }
+
+        .deals-planning-links a {
+          color: var(--primary);
+          font-weight: 700;
+          font-size: 0.9rem;
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          background: #fffaf5;
+          padding: 0.45rem 0.75rem;
+          text-decoration: none;
+        }
+
+        .deals-faq {
+          margin: 0 0 2.5rem;
+          padding: 1.25rem 1.5rem;
+          border: 1px solid var(--border);
+          border-radius: 16px;
+          background: #fffaf5;
+        }
+
+        .deals-faq h2 {
+          font-family: var(--font-heading);
+          font-size: 1.35rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin: 0 0 0.85rem;
+        }
+
+        .deals-faq-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1rem;
+        }
+
+        .deals-faq-grid h3 {
+          font-size: 1rem;
+          margin: 0 0 0.35rem;
+          color: var(--text-dark);
+        }
+
+        .deals-faq-grid p {
+          margin: 0;
+          color: var(--text-medium);
+          line-height: 1.6;
+          font-size: 0.95rem;
         }
 
         /* Ticket Deals Section */

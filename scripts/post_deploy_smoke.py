@@ -52,6 +52,9 @@ REDIRECTS = [
     ("/blog/mk-under-40", "/blog/best-magic-kingdom-rides-kids-under-40-inches", 301),
     ("/blog/epic-1-day", "/blog/epic-universe-1-day-plan", 301),
     ("/blog/tickets-epic", "/blog/epic-universe-tickets-guide", 301),
+    ("/tickets", "/deals", 301),
+    ("/dining", "/character-dining", 301),
+    ("/character-meals", "/character-dining", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -84,13 +87,36 @@ BODY_MUST_CONTAIN = {
         "Shareable ride height presets",
         "application/ld+json",
     ],
+    "/blog/": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "Where should families start planning",
+        "application/ld+json",
+    ],
     "/blog/epic-universe-1-day-plan/": [
         "BlogPosting",
         "logo-full.png",
         "BreadcrumbList",
         "application/ld+json",
     ],
-    "/deals/": ["affiliate-disclosure", "commission"],
+    "/deals/": [
+        "affiliate-disclosure",
+        "commission",
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "How do families save on Orlando theme park tickets",
+        "sponsored",
+        "application/ld+json",
+    ],
+    "/character-dining/": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "Is character dining worth it with kids",
+        "application/ld+json",
+    ],
     "/parks/magic-kingdom/": [
         "Will my kid be tall enough",
         "height=40",

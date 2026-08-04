@@ -94,3 +94,11 @@
 /blog/mk-under-40/ /blog/best-magic-kingdom-rides-kids-under-40-inches/ 301
 /blog/tickets-epic /blog/epic-universe-tickets-guide 301
 /blog/tickets-epic/ /blog/epic-universe-tickets-guide/ 301
+
+# Product short paths (typed URLs / social)
+/tickets /deals 301
+/tickets/ /deals/ 301
+/dining /character-dining 301
+/dining/ /character-dining/ 301
+/character-meals /character-dining 301
+/character-meals/ /character-dining/ 301
