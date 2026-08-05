@@ -13,7 +13,7 @@
 - [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
 - [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
 - [ ] **Re-auth Google SEO token** — analytics still blocked 2026-08-05 (`invalid_grant`) — ops P0 owner action (W32 ops)
-- [ ] **DEPLOY** Utility SEO + conversion pack 2026-07-24→08-05 — park SERP/OG + preferred guide cards + height-filter CTA + blog/deals/dining meta + **short-path redirects** (`/epic-universe` live 404) + blog hub earner amplify + **home/rides/dining/about conversion paths + helpful noindex 404 + deals FTC disclosure + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored blog/home/deals CTAs + local smoke gate + hs/mk/ak/ioa/tickets/dining aliases + ride preset expansion (12) + sitemap preset URLs + park-aware blog helpful links + sitewide Organization/WebSite JSON-LD + blog earner aliases + parks/rides/blog/deals/dining hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo + epic-1-day/tickets-epic aliases + Disney/Universal helpful amplify + rides hub FAQ + about/contact/disclosure trust schema + height/ride-finder/packing-list/disclosure aliases** (local ahead of origin; pack extended 2026-08-05 — see `ops/weekly/2026-08-05-daily.md` + W32 ops)
+- [x] **DEPLOY** Utility SEO + conversion pack 2026-07-24→08-05 — **APPROVED + DEPLOYED 2026-08-05** tip `d6365ea` Netlify `6a735cc1` — live smoke 0 findings; aliases/titles/schema verified — `ops/weekly/2026-08-05-deploy.md`
 - [x] Deals page FTC disclosure (header + affiliate-disclosure link) — staged 2026-07-28
 - [x] Buffer idea packs Epic tickets / baby-toddler / beat crowds / character dining — **created 2026-07-28** (review only)
 - [x] Park page height chips + deals CTA + ticket disclosure — staged 2026-07-29
@@ -35,7 +35,7 @@
 - [x] Rides hub FAQ + about/contact/disclosure trust schema + height/ride-finder/packing-list/disclosure aliases + all-park title smoke — staged 2026-08-05
 - [x] Buffer product idea packs IOA/USF heights / packing kids / ride-finder trust — **created 2026-08-05** (review only)
 - [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 Buffer idea packs when ready
-- [ ] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → exit 0
+- [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live, 0 findings)
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
@@ -53,7 +53,7 @@
 - [x] Buffer idea packs rides ranked / free things / deals / Disney guide — **created 2026-07-26** (review only)
 - [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 Buffer idea packs when ready
 - [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
-- [ ] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases + sitemap height presets + home Organization/WebSite + blog earner aliases + parks/rides/blog/deals/dining hub FAQ/ItemList + BlogPosting publisher logo + `/tickets` `/dining` + about/disclosure trust schema + `/height` `/ride-finder`
+- [x] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases + sitemap height presets + home Organization/WebSite + blog earner aliases + parks/rides/blog/deals/dining hub FAQ/ItemList + BlogPosting publisher logo + `/tickets` `/dining` + about/disclosure trust schema + `/height` `/ride-finder` — **live verify PASS 2026-08-05** (`d6365ea`); CTR watch still needs GSC re-auth
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  
