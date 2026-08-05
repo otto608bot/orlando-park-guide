@@ -102,3 +102,19 @@
 /dining/ /character-dining/ 301
 /character-meals /character-dining 301
 /character-meals/ /character-dining/ 301
+
+# Trust + product intent aliases
+/disclosure /affiliate-disclosure 301
+/disclosure/ /affiliate-disclosure/ 301
+/affiliate /affiliate-disclosure 301
+/affiliate/ /affiliate-disclosure/ 301
+/height /rides 301
+/height/ /rides/ 301
+/heights /rides 301
+/heights/ /rides/ 301
+/ride-finder /rides 301
+/ride-finder/ /rides/ 301
+/rides-by-height /rides 301
+/rides-by-height/ /rides/ 301
+/packing-list /blog/disney-world-packing-list-kids 301
+/packing-list/ /blog/disney-world-packing-list-kids/ 301

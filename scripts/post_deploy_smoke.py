@@ -55,6 +55,12 @@ REDIRECTS = [
     ("/tickets", "/deals", 301),
     ("/dining", "/character-dining", 301),
     ("/character-meals", "/character-dining", 301),
+    ("/disclosure", "/affiliate-disclosure", 301),
+    ("/affiliate", "/affiliate-disclosure", 301),
+    ("/height", "/rides", 301),
+    ("/ride-finder", "/rides", 301),
+    ("/rides-by-height", "/rides", 301),
+    ("/packing-list", "/blog/disney-world-packing-list-kids", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -63,6 +69,12 @@ TITLE_MUST_CONTAIN = {
     "/parks/magic-kingdom/": "Magic Kingdom with Kids",
     "/parks/epic-universe/": "Epic Universe with Kids",
     "/parks/epcot/": "EPCOT with Kids",
+    "/parks/hollywood-studios/": "Hollywood Studios with Kids",
+    "/parks/animal-kingdom/": "Animal Kingdom with Kids",
+    "/parks/universal-studios-florida/": "Universal Studios Florida with Kids",
+    "/parks/islands-of-adventure/": "Islands of Adventure with Kids",
+    "/parks/seaworld-orlando/": "SeaWorld Orlando with Kids",
+    "/parks/legoland-florida/": "LEGOLAND Florida with Kids",
     "/blog/": "Families",  # staged blog hub is family-oriented
     "/deals/": "Ticket Deals for Families",
     "/character-dining/": "Character Dining with Kids",
@@ -70,6 +82,9 @@ TITLE_MUST_CONTAIN = {
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
+    "/about/": "About Plan Your Park",
+    "/contact/": "Contact Plan Your Park",
+    "/affiliate-disclosure/": "Affiliate Disclosure",
 }
 
 BODY_MUST_CONTAIN = {
@@ -85,6 +100,8 @@ BODY_MUST_CONTAIN = {
         "CollectionPage",
         "ItemList",
         "Shareable ride height presets",
+        "FAQPage",
+        "How do I filter Orlando rides by my child's height",
         "application/ld+json",
     ],
     "/blog/": [
@@ -127,6 +144,25 @@ BODY_MUST_CONTAIN = {
         "Will my kid be tall enough",
         "epic-universe-1-day-plan",
         "TouristAttraction",
+    ],
+    "/about/": [
+        "AboutPage",
+        "FAQPage",
+        "What is Plan Your Park",
+        "affiliate-disclosure",
+        "application/ld+json",
+        "rides/?height=40",
+    ],
+    "/affiliate-disclosure/": [
+        "FAQPage",
+        "Does Plan Your Park use affiliate links",
+        "planyourpark-20",
+        "Undercover Tourist",
+        "application/ld+json",
+    ],
+    "/contact/": [
+        "ride finder",
+        "affiliate-disclosure",
     ],
     "/404-test-path-that-should-404": [],  # handled separately
 }

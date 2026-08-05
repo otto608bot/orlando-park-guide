@@ -14,11 +14,11 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | epic-universe-tickets-guide | published | conversion trust | tickets + Amazon | https://planyourpark.com/blog/epic-universe-tickets-guide/ |
 | best-magic-kingdom-rides-kids-under-40-inches | published + amplified | inbound + height tool **live**; more Disney footers **staged** | tickets | https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/ |
 | Full catalog product-naming QA (14 posts) | **published** | LL Multi/Single; Genie historical only | trust | all blog URLs |
-| Height-filter SEO (`/rides/` + home) | **published** | `?height=` presets live; hub ItemList **staged** | tickets via finder | https://planyourpark.com/rides/ · https://planyourpark.com/ |
+| Height-filter SEO (`/rides/` + home) | **published** | `?height=` presets live; hub ItemList+**FAQ staged** | tickets via finder | https://planyourpark.com/rides/ · https://planyourpark.com/ |
 | Amazon list/heading keyword wiring | **published** | packing conversion | Amazon | blog renderer + `blogAffiliates.tsx` |
 | Helpful-links MK/height priority | **published** + Disney amplify staged | footers prioritize earners | tickets | `web/src/lib/blog.ts` |
 | Phase 1 Buffer packs | queued | 15 posts 2026-07-22 | — | https://publish.buffer.com/ |
-| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects incl. hs/mk/ak/ioa/**tickets/dining** + blog earner amplify + home/rides/dining/about routes + helpful noindex 404 + deals FTC + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored CTAs + local smoke + **ride preset expansion 12 deep links + sitemap presets + park-aware blog helpful links + sitewide Organization/WebSite JSON-LD + blog earner aliases + parks/rides/**blog/deals/dining** hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo + epic-1-day/tickets-epic aliases + Disney/Universal helpful amplify**) | **awaiting_approval** | pack extended + **local smoke PASS** 2026-08-04; live `/epic-universe` still 404; home still no ld+json; hubs still missing full schema | tickets via parks/home/deals/rides | see `ops/weekly/2026-08-04-daily.md` |
+| Utility SEO + conversion pack (park SERP/OG + guides + height CTA + hub/deals/dining meta + short redirects incl. hs/mk/ak/ioa/**tickets/dining/height/ride-finder/disclosure** + blog earner amplify + home/rides/dining/about routes + helpful noindex 404 + deals FTC + park height chips / deals CTA / ticket disclosure + park JSON-LD + sponsored CTAs + local smoke + **ride preset expansion 12 deep links + sitemap presets + park-aware blog helpful links + sitewide Organization/WebSite JSON-LD + blog earner aliases + parks/rides/**blog/deals/dining** hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo + epic-1-day/tickets-epic aliases + Disney/Universal helpful amplify + rides FAQ + about/contact/disclosure trust schema**) | **awaiting_approval** | pack extended + **local smoke PASS** 2026-08-05; live `/epic-universe` still 404; home still no ld+json; hubs still missing full schema | tickets via parks/home/deals/rides | see `ops/weekly/2026-08-05-daily.md` |
 | Buffer ideas 2026-07-24 (Epic 1-day / packing / heights / parks) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-25 (MK under-40 / Epic tickets / height=40) | idea (review) | 3 packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-07-26 (rides ranked / free things / deals / Disney guide) | idea (review) | 4 packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
@@ -30,6 +30,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer ideas 2026-08-02 (free things / beat crowds / Epic tickets / Universal heights) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-03 (parks hub / rides height=40 / MK under-40 / Epic 1-day+tickets) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-04 (deals/tickets / character dining / blog hub / free-things→height) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
+| Buffer ideas 2026-08-05 (IOA/USF heights / packing kids / ride-finder trust) | idea (review) | 4 product packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; run live after utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
@@ -42,8 +43,8 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Meta title/description CTR-oriented
 - [x] No contradictory family lore
 - [x] Second QA pass
-- [x] Content integrity clean (14/14, 2026-08-04)
-- [x] Live HTML verify after deploy / full QA (2026-08-04 production blog clean; utility pack post-deploy pending — local smoke PASS; use `post_deploy_smoke.py` live after deploy)
+- [x] Content integrity clean (14/14, 2026-08-05)
+- [x] Live HTML verify after deploy / full QA (2026-08-05 production blog clean; utility pack post-deploy pending — local smoke PASS; use `post_deploy_smoke.py` live after deploy)
 - [x] Deals commercial disclosure staged (2026-07-28)
 - [x] Park page height chips + ticket disclosure staged (2026-07-29)
 - [x] Park JSON-LD + sponsored ticket CTAs staged (2026-07-30)
@@ -52,3 +53,4 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Sitewide Organization/WebSite JSON-LD + blog earner aliases staged (2026-08-02)
 - [x] Parks/rides hub CollectionPage+ItemList+FAQ JSON-LD + BlogPosting publisher logo staged (2026-08-03)
 - [x] Blog/deals/dining hub schema+FAQ + tickets/dining aliases + Disney/Universal helpful amplify + deals sponsored CTAs staged (2026-08-04)
+- [x] Rides FAQ + about/contact/disclosure trust schema + height/ride-finder/packing-list/disclosure aliases staged (2026-08-05)

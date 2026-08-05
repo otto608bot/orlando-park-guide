@@ -94,6 +94,28 @@ export default async function RidesPage() {
         </p>
       </section>
 
+      <section className="rides-seo-panel rides-faq" aria-label="Ride finder FAQ">
+        <h2>Ride finder FAQ</h2>
+        <h3>How do I filter Orlando rides by my child&apos;s height?</h3>
+        <p className="rides-seo-lead">
+          Set your child&apos;s height (for example ~40 inches) in the finder, or tap a shareable
+          preset above. Add a park filter when you already know which park day you are building so
+          your group only sees rides that kid can board.
+        </p>
+        <h3>Which height presets should families start with?</h3>
+        <p className="rides-seo-lead">
+          Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills
+          unlock. Park-specific presets (Magic Kingdom, Epic Universe, Islands of Adventure) help
+          when the park day is already locked.
+        </p>
+        <h3>Do height filters replace official park rules?</h3>
+        <p className="rides-seo-lead">
+          No. Filters help you plan from published height bands, but cast members enforce the
+          park&apos;s current posted requirements at the ride. Recheck official signs on trip day,
+          especially for new or refurbished attractions.
+        </p>
+      </section>
+
       <RidesClient rides={rides} />
 
       <style>{`
@@ -194,6 +216,18 @@ export default async function RidesPage() {
         .rides-guide-links a {
           color: var(--primary);
           font-weight: 600;
+        }
+
+        .rides-faq h3 {
+          font-family: var(--font-heading);
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--text-dark);
+          margin: 1rem 0 0.35rem;
+        }
+
+        .rides-faq h3:first-of-type {
+          margin-top: 0.25rem;
         }
 
         @media (max-width: 900px) {

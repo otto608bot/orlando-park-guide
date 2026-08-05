@@ -135,7 +135,7 @@ export function getParksHubJsonLd(
   };
 }
 
-/** Rides hub: CollectionPage + shareable height-preset ItemList. */
+/** Rides hub: CollectionPage + shareable height-preset ItemList + FAQ. */
 export function getRidesHubJsonLd(
   presets: Array<{ href: string; label: string; blurb: string }>,
   rideCount: number,
@@ -171,6 +171,121 @@ export function getRidesHubJsonLd(
         name: "Shareable ride height presets",
         numberOfItems: items.length,
         itemListElement: items,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I filter Orlando rides by my child's height?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Open the Plan Your Park ride finder and set your child's height (for example ~40 inches). Use a shareable preset, or pick a park plus height so your group only sees rides that kid can board.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Which height presets should families start with?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills unlock. Park-specific presets (Magic Kingdom, Epic Universe, Islands of Adventure) help when you already know which park day you are building.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do height filters replace official park rules?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "No. Filters help you plan from published height bands, but cast members enforce the park's current posted requirements at the ride. Recheck official signs on trip day, especially for new or refurbished attractions.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
+/** About page: AboutPage + trust FAQ for families. */
+export function getAboutJsonLd(): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}/about/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "About Plan Your Park — Family Orlando Park Planning",
+        description:
+          "Plan Your Park helps families choose Orlando parks and rides by kid height, thrill, and trip fit — then compare tickets through trusted partners.",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+        mainEntity: { "@id": ORG_ID },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What is Plan Your Park?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Plan Your Park is a free family planning site for Orlando theme parks. Filter rides by kid height and thrill, compare Disney, Universal, Epic Universe, SeaWorld, and LEGOLAND, and open trusted ticket or packing links when you are ready.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does Plan Your Park make money?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Some ticket and product links are affiliate links (including ticket partners and Amazon). If you buy through them, we may earn a commission at no extra cost to you. See the affiliate disclosure for details.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
+/** Affiliate disclosure: WebPage + clear commercial FAQ. */
+export function getAffiliateDisclosureJsonLd(): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}/affiliate-disclosure/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Affiliate Disclosure — Plan Your Park",
+        description:
+          "How Plan Your Park earns commissions from ticket and product links, and how that relates to family trip recommendations.",
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Does Plan Your Park use affiliate links?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Ticket links (for example Undercover Tourist via CJ) and some packing or gear links (Amazon Associates tag planyourpark-20) may earn a commission if you buy after clicking. There is no extra cost to you.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do affiliate links change ride height advice?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "No. Height filters and park-fit guides are product features first. Affiliate links support maintaining the tools and guides; they should not replace kid-height or park-fit recommendations.",
+            },
+          },
+        ],
       },
     ],
   };
