@@ -189,7 +189,7 @@ export function getRidesHubJsonLd(
             name: "Which height presets should families start with?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills unlock. Park-specific presets (Magic Kingdom, Epic Universe, Islands of Adventure) help when you already know which park day you are building.",
+              text: "Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills unlock. Park-specific presets (Magic Kingdom, Hollywood Studios, Epic Universe, Islands of Adventure, SeaWorld, LEGOLAND) help when you already know which park day you are building.",
             },
           },
           {

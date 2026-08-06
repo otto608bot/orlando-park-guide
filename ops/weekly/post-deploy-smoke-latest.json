@@ -1,5 +1,5 @@
 {
-  "base": "https://planyourpark.com",
+  "base": "local:/Users/bennett/Hermes/planyourpark/web/out",
   "findings": [],
   "counts": {
     "high": 0,

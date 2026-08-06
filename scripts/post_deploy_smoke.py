@@ -61,6 +61,11 @@ REDIRECTS = [
     ("/ride-finder", "/rides", 301),
     ("/rides-by-height", "/rides", 301),
     ("/packing-list", "/blog/disney-world-packing-list-kids", 301),
+    ("/blog/baby", "/blog/disney-world-with-baby-toddler", 301),
+    ("/blog/toddler", "/blog/disney-world-with-baby-toddler", 301),
+    ("/blog/crowds", "/blog/beat-disney-world-crowds", 301),
+    ("/blog/free", "/blog/free-things-disney-world", 301),
+    ("/blog/rides-ranked", "/blog/epic-universe-rides-ranked-guide", 301),
 ]
 
 # path -> substring that must appear in <title>

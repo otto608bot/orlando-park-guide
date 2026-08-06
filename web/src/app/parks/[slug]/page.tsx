@@ -94,9 +94,9 @@ const parkGuideSlugs: Record<string, string[]> = {
     "epic-universe-tickets-guide",
   ],
   "seaworld-orlando": [
-    "orlando-closures-march-2026",
+    "disney-world-with-baby-toddler",
     "disney-world-packing-list-kids",
-    "free-things-disney-world",
+    "beat-disney-world-crowds",
   ],
   "legoland-florida": [
     "disney-world-with-baby-toddler",

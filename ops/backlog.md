@@ -34,8 +34,11 @@
 - [x] Buffer product idea packs deals/tickets / character dining / blog hub / free-things→height — **created 2026-08-04** (review only)
 - [x] Rides hub FAQ + about/contact/disclosure trust schema + height/ride-finder/packing-list/disclosure aliases + all-park title smoke — staged 2026-08-05
 - [x] Buffer product idea packs IOA/USF heights / packing kids / ride-finder trust — **created 2026-08-05** (review only)
-- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 Buffer idea packs when ready
-- [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live, 0 findings)
+- [x] Ride preset expansion v2 (HS/SeaWorld/LEGOLAND/EPCOT48/MK-calm) + blog aliases baby/toddler/crowds/free/rides-ranked + SeaWorld guide cards — **staged 2026-08-06** (local smoke PASS)
+- [x] Buffer product idea packs HS heights / LEGOLAND / short links / SeaWorld — **created 2026-08-06** (review only)
+- [ ] **DEPLOY** Ride preset expansion v2 + blog aliases — awaiting **APPROVE DEPLOY RIDE PRESETS**
+- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 Buffer idea packs when ready
+- [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live, 0 findings; reconfirmed 2026-08-06)
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
@@ -51,9 +54,10 @@
 - [x] Buffer idea packs for Epic 1-day / packing kids / Universal heights / parks hub — **created 2026-07-24** (review only; not queued)
 - [x] Buffer idea packs MK under-40 / Epic tickets / height=40 product — **created 2026-07-25** (review only)
 - [x] Buffer idea packs rides ranked / free things / deals / Disney guide — **created 2026-07-26** (review only)
-- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 Buffer idea packs when ready
+- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 Buffer idea packs when ready
 - [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
-- [x] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases + sitemap height presets + home Organization/WebSite + blog earner aliases + parks/rides/blog/deals/dining hub FAQ/ItemList + BlogPosting publisher logo + `/tickets` `/dining` + about/disclosure trust schema + `/height` `/ride-finder` — **live verify PASS 2026-08-05** (`d6365ea`); CTR watch still needs GSC re-auth
+- [x] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases + sitemap height presets + home Organization/WebSite + blog earner aliases + parks/rides/blog/deals/dining hub FAQ/ItemList + BlogPosting publisher logo + `/tickets` `/dining` + about/disclosure trust schema + `/height` `/ride-finder` — **live verify PASS 2026-08-05** (`d6365ea`); CTR watch still needs GSC re-auth; **reconfirmed live smoke 0 on 2026-08-06**
+- [ ] After ride preset v2 deploy: verify HS/LEGOLAND/SeaWorld presets on `/rides/` + new blog aliases 301 + sitemap includes 18 presets
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  
