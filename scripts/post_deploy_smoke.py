@@ -66,6 +66,14 @@ REDIRECTS = [
     ("/blog/crowds", "/blog/beat-disney-world-crowds", 301),
     ("/blog/free", "/blog/free-things-disney-world", 301),
     ("/blog/rides-ranked", "/blog/epic-universe-rides-ranked-guide", 301),
+    ("/usf", "/parks/universal-studios-florida", 301),
+    ("/parks/usf", "/parks/universal-studios-florida", 301),
+    ("/compare-parks", "/parks", 301),
+    ("/orlando-parks", "/parks", 301),
+    ("/blog/epic-tickets", "/blog/epic-universe-tickets-guide", 301),
+    ("/blog/mk-heights", "/blog/best-magic-kingdom-rides-kids-under-40-inches", 301),
+    ("/blog/disney-packing", "/blog/disney-world-packing-list-kids", 301),
+    ("/blog/universal-heights", "/blog/universal-orlando-height-requirements", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -93,7 +101,13 @@ TITLE_MUST_CONTAIN = {
 }
 
 BODY_MUST_CONTAIN = {
-    "/": ["Organization", "WebSite", "application/ld+json"],
+    "/": [
+        "Organization",
+        "WebSite",
+        "application/ld+json",
+        # Home card uses canonical USF park query matching ride.park
+        "Universal%20Studios%20Florida",
+    ],
     "/parks/": [
         "FAQPage",
         "ItemList",
@@ -108,6 +122,9 @@ BODY_MUST_CONTAIN = {
         "FAQPage",
         "How do I filter Orlando rides by my child's height",
         "application/ld+json",
+        # Canonical USF park query must match ride.park (not bare "Universal Studios")
+        "Universal%20Studios%20Florida",
+        "USF + under 40",
     ],
     "/blog/": [
         "CollectionPage",

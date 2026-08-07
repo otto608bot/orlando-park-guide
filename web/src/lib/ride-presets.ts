@@ -47,9 +47,11 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     blurb: "World Showcase + family rides",
   },
   {
-    href: "/rides/?height=40&parks=Universal%20Studios",
+    // Park query MUST match ride.park + FilterSidebar PARKS[].name exactly
+    // (Sanity stores "Universal Studios Florida", not "Universal Studios").
+    href: "/rides/?height=40&parks=Universal%20Studios%20Florida",
     label: 'USF + under 40"',
-    blurb: "Universal Studios short-rider filter",
+    blurb: "Universal Studios Florida short-rider filter",
   },
   {
     href: "/rides/?height=40&parks=Islands%20of%20Adventure",

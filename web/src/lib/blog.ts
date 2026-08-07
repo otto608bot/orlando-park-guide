@@ -464,11 +464,48 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
         label: "Open Magic Kingdom ride finder (~40″)",
         description: "Shareable MK short-rider filter across the full ride list.",
       });
-    } else if (haystack.includes("universal") || haystack.includes("islands")) {
+    } else if (haystack.includes("islands")) {
       push({
-        href: "/rides/?height=40&parks=Universal%20Studios",
-        label: "Open Universal ride finder (~40″)",
-        description: "Shareable Universal Studios short-rider filter for your group chat.",
+        href: "/rides/?height=40&parks=Islands%20of%20Adventure",
+        label: "Open Islands of Adventure ride finder (~40″)",
+        description: "Shareable IOA short-rider filter for your group chat.",
+      });
+    } else if (haystack.includes("universal")) {
+      push({
+        // Must match ride.park / FilterSidebar: "Universal Studios Florida"
+        href: "/rides/?height=40&parks=Universal%20Studios%20Florida",
+        label: "Open Universal Studios ride finder (~40″)",
+        description: "Shareable Universal Studios Florida short-rider filter for your group chat.",
+      });
+    } else if (haystack.includes("hollywood") || haystack.includes("star wars")) {
+      push({
+        href: "/rides/?height=40&parks=Hollywood%20Studios",
+        label: "Open Hollywood Studios ride finder (~40″)",
+        description: "Shareable HS short-rider filter — Toy Story / Galaxy's Edge height band.",
+      });
+    } else if (haystack.includes("legoland")) {
+      push({
+        href: "/rides/?height=40&parks=LEGOLAND%20Florida",
+        label: "Open LEGOLAND ride finder (~40″)",
+        description: "Shareable LEGOLAND Florida height filter for younger kids.",
+      });
+    } else if (haystack.includes("seaworld")) {
+      push({
+        href: "/rides/?height=40&parks=SeaWorld%20Orlando",
+        label: "Open SeaWorld ride finder (~40″)",
+        description: "Shareable SeaWorld Orlando short-rider + show-day filter.",
+      });
+    } else if (haystack.includes("epcot")) {
+      push({
+        href: "/rides/?height=40&parks=EPCOT",
+        label: "Open EPCOT ride finder (~40″)",
+        description: "Shareable EPCOT short-rider filter for World Showcase family days.",
+      });
+    } else if (haystack.includes("animal kingdom")) {
+      push({
+        href: "/rides/?height=44&parks=Animal%20Kingdom",
+        label: "Open Animal Kingdom ride finder (44″)",
+        description: "Shareable AK family-coaster height band before you lock a day.",
       });
     } else {
       push({

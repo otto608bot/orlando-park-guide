@@ -10,7 +10,7 @@ const PARKS = [
   { name: 'EPCOT', slug: 'epcot' },
   { name: 'Hollywood Studios', slug: 'hollywood-studios' },
   { name: 'Animal Kingdom', slug: 'animal-kingdom' },
-  { name: 'Universal Studios', slug: 'universal-studios-florida' },
+  { name: 'Universal Studios Florida', slug: 'universal-studios-florida' },
   { name: 'Islands of Adventure', slug: 'islands-of-adventure' },
   { name: 'Epic Universe', slug: 'epic-universe' },
   { name: 'SeaWorld Orlando', slug: 'seaworld-orlando' },

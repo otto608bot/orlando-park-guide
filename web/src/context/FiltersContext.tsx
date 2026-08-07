@@ -29,6 +29,36 @@ const defaultFilters: FilterState = {
   selectedParks: [],
 };
 
+/**
+ * Normalize park query values so shareable URLs match ride.park + FilterSidebar.
+ * Historical presets used "Universal Studios"; Sanity rides use "Universal Studios Florida".
+ */
+const PARK_QUERY_ALIASES: Record<string, string> = {
+  "Universal Studios": "Universal Studios Florida",
+  "Universal Studios Florida": "Universal Studios Florida",
+  "USF": "Universal Studios Florida",
+  "IOA": "Islands of Adventure",
+  "MK": "Magic Kingdom",
+  "HS": "Hollywood Studios",
+  "AK": "Animal Kingdom",
+  "SeaWorld": "SeaWorld Orlando",
+  "LEGOLAND": "LEGOLAND Florida",
+};
+
+function normalizeParkQueryNames(parks: string[]): string[] {
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const raw of parks) {
+    const trimmed = raw.trim();
+    if (!trimmed) continue;
+    const canonical = PARK_QUERY_ALIASES[trimmed] || trimmed;
+    if (seen.has(canonical)) continue;
+    seen.add(canonical);
+    out.push(canonical);
+  }
+  return out;
+}
+
 const FiltersContext = createContext<FiltersContextType>({
   filters: defaultFilters,
   setHeight: () => {},
@@ -53,7 +83,9 @@ export function FiltersProvider({ children }: { children: ReactNode }) {
     const wheelchairAccessible = searchParams.get('wheelchair') === 'true';
     const calmExperience = searchParams.get('calm') === 'true';
     const parksParam = searchParams.get('parks');
-    const selectedParks = parksParam ? parksParam.split(',') : [];
+    const selectedParks = parksParam
+      ? normalizeParkQueryNames(parksParam.split(','))
+      : [];
 
     setFilters({
       height: isNaN(height) ? 0 : height,

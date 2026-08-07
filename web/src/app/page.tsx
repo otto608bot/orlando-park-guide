@@ -71,6 +71,13 @@ export default async function HomePage() {
               <strong>Rides under ~40″</strong>
               <span>Shareable height filter so you skip lines your kids can&apos;t ride.</span>
             </Link>
+            <Link
+              href="/rides/?height=40&parks=Universal%20Studios%20Florida"
+              className="home-start-card"
+            >
+              <strong>Universal Studios under ~40″</strong>
+              <span>USF-only short-rider filter — matches the live ride list names.</span>
+            </Link>
             <Link href="/blog/epic-universe-1-day-plan/" className="home-start-card">
               <strong>Epic Universe 1-day plan</strong>
               <span>Our best-performing family touring plan for the newest park.</span>
