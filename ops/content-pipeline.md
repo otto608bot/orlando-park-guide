@@ -31,9 +31,11 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer ideas 2026-08-03 (parks hub / rides height=40 / MK under-40 / Epic 1-day+tickets) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-04 (deals/tickets / character dining / blog hub / free-things→height) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-05 (IOA/USF heights / packing kids / ride-finder trust) | idea (review) | 4 product packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
-| Ride preset expansion v2 + **USF filter park-name fix** + typed aliases (`/usf` `/compare` `/blog/epic-tickets` …) + blog park-aware helpful links | **awaiting_approval** | local smoke PASS 2026-08-07; **critical USF fix** (presets/sidebar matched 0 rides before) | tickets via finder | `ops/weekly/2026-08-07-daily.md` |
+| Ride preset expansion v2 + **USF filter park-name fix** + typed aliases (`/usf` `/compare` `/blog/epic-tickets` …) + blog park-aware helpful links | **awaiting_approval** (bundled w/ 08-08 landings) | local smoke PASS 2026-08-07/08; **critical USF fix** (presets/sidebar matched 0 rides before) | tickets via finder | `ops/weekly/2026-08-07-daily.md` |
 | Buffer ideas 2026-08-06 (HS heights / LEGOLAND / short links / SeaWorld) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Buffer ideas 2026-08-07 (USF fixed filter / MK calm+40 / Epic tickets / compare short links) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
+| Static height SEO landings `/rides/for/[slug]/` (18) + **calm filter fix** (thrill≤2) | **awaiting_approval** | build 57 pages; local smoke PASS 2026-08-08; includes prior USF fix + preset v2 | tickets via finder | `ops/weekly/2026-08-08-daily.md` |
+| Buffer ideas 2026-08-08 (height landings / MK calm / Epic heights / USF vs MK) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
@@ -47,7 +49,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] No contradictory family lore
 - [x] Second QA pass
 - [x] Content integrity clean (14/14, 2026-08-06)
-- [x] Live HTML verify after deploy / full QA (2026-08-06 production blog clean; utility pack live smoke 0; **ride preset v2 + USF fix local smoke PASS 2026-08-07** — awaiting deploy)
+- [x] Live HTML verify after deploy / full QA (2026-08-06 production blog clean; utility pack live smoke 0; **ride preset v2 + USF fix + height landings local smoke PASS 2026-08-08** — awaiting deploy)
 - [x] Deals commercial disclosure staged (2026-07-28)
 - [x] Park page height chips + ticket disclosure staged (2026-07-29)
 - [x] Park JSON-LD + sponsored ticket CTAs staged (2026-07-30)
@@ -59,3 +61,5 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Rides FAQ + about/contact/disclosure trust schema + height/ride-finder/packing-list/disclosure aliases staged (2026-08-05)
 - [x] Ride preset expansion v2 (HS/SeaWorld/LEGOLAND/EPCOT48/MK-calm) + blog aliases + SeaWorld guides staged (2026-08-06)
 - [x] USF filter park-name fix + FiltersContext aliases + home USF card + typed aliases + smoke needles staged (2026-08-07)
+- [x] Static `/rides/for/[slug]/` SEO landings (18) + calm filter thrill≤2 fix + sitemap/smoke staged (2026-08-08)
+- [x] Content integrity reconfirmed 14/14 (2026-08-08); live blog QA 14/14 PASS

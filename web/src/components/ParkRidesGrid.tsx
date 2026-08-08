@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { Ride } from '@/lib/sanity-types';
+import { isCalmExperience } from '@/lib/ride-filter';
 import { useFilters } from '@/context/FiltersContext';
 import RideModal from './RideModal';
 
@@ -40,13 +41,6 @@ function isWheelchairAccessible(ride: Ride): boolean {
   );
 }
 
-function isCalmExperience(ride: Ride): boolean {
-  if (!ride.accessibility) return false;
-  const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
-  return ride.accessibility.some(a =>
-    calmIndicators.some(ci => a?.toLowerCase().includes(ci))
-  );
-}
 
 function getRideImageSrc(ride: Ride): string | null {
   if (ride.image?.asset?.url) return ride.image.asset.url;

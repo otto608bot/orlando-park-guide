@@ -92,6 +92,10 @@ TITLE_MUST_CONTAIN = {
     "/deals/": "Ticket Deals for Families",
     "/character-dining/": "Character Dining with Kids",
     "/rides/": "Ride Finder",
+    "/rides/for/under-40/": 'Under 40',
+    "/rides/for/magic-kingdom-under-40/": "Magic Kingdom",
+    "/rides/for/universal-studios-under-40/": "Universal Studios Florida",
+    "/rides/for/epic-universe-under-40/": "Epic Universe",
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
@@ -125,6 +129,35 @@ BODY_MUST_CONTAIN = {
         # Canonical USF park query must match ride.park (not bare "Universal Studios")
         "Universal%20Studios%20Florida",
         "USF + under 40",
+        # Static SEO landings linked from hub cards
+        "/rides/for/under-40/",
+        "/rides/for/universal-studios-under-40/",
+    ],
+    "/rides/for/under-40/": [
+        "CollectionPage",
+        "ItemList",
+        "FAQPage",
+        "Open interactive filter",
+        "application/ld+json",
+        "affiliate-disclosure",
+    ],
+    "/rides/for/magic-kingdom-under-40/": [
+        "CollectionPage",
+        "Magic Kingdom",
+        "ItemList",
+        "application/ld+json",
+    ],
+    "/rides/for/universal-studios-under-40/": [
+        "CollectionPage",
+        "Universal Studios Florida",
+        "ItemList",
+        "application/ld+json",
+    ],
+    "/rides/for/epic-universe-under-40/": [
+        "CollectionPage",
+        "Epic Universe",
+        "ItemList",
+        "application/ld+json",
     ],
     "/blog/": [
         "CollectionPage",

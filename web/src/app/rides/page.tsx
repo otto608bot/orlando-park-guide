@@ -43,7 +43,14 @@ async function getAllRides() {
 
 export default async function RidesPage() {
   const rides = await getAllRides();
-  const ridesJsonLd = getRidesHubJsonLd([...RIDE_HEIGHT_PRESETS], rides.length);
+  const ridesJsonLd = getRidesHubJsonLd(
+    RIDE_HEIGHT_PRESETS.map((p) => ({
+      href: p.seoPath,
+      label: p.label,
+      blurb: p.blurb,
+    })),
+    rides.length,
+  );
 
   return (
     <div className="rides-page-wrapper">
@@ -63,19 +70,34 @@ export default async function RidesPage() {
       <section className="rides-seo-panel" aria-label="Quick height filters">
         <h2>Quick height presets (shareable)</h2>
         <p className="rides-seo-lead">
-          Tap a preset to open the finder with filters applied. URLs stay in the address bar so you
-          can text them to a co-planner or pin them for trip day.
+          Open a crawlable height list (static ride names + unique SEO page), or jump straight into
+          the interactive finder with filters applied so you can text the link to a co-planner.
         </p>
         <ul className="rides-preset-grid">
           {RIDE_HEIGHT_PRESETS.map((preset) => (
-            <li key={preset.href}>
-              <Link href={preset.href} className="rides-preset-card">
+            <li key={preset.slug}>
+              <Link href={preset.seoPath} className="rides-preset-card">
                 <span className="rides-preset-label">{preset.label}</span>
                 <span className="rides-preset-blurb">{preset.blurb}</span>
               </Link>
             </li>
           ))}
         </ul>
+        <p className="rides-seo-lead rides-interactive-links">
+          Prefer the live filter UI? Jump in with filters applied:{" "}
+          <Link href="/rides/?height=40">under ~40&quot;</Link>
+          {", "}
+          <Link href="/rides/?height=40&parks=Magic%20Kingdom">MK under 40&quot;</Link>
+          {", "}
+          <Link href="/rides/?height=40&parks=Universal%20Studios%20Florida">
+            USF under 40&quot;
+          </Link>
+          {", "}
+          <Link href="/rides/?height=40&parks=Epic%20Universe">Epic under 40&quot;</Link>
+          {", or "}
+          <Link href="/rides/?height=40&parks=Magic%20Kingdom&calm=true">MK calm + under 40&quot;</Link>
+          .
+        </p>
         <p className="rides-guide-links">
           Prefer a guided list? See{" "}
           <Link href="/blog/best-magic-kingdom-rides-kids-under-40-inches/">

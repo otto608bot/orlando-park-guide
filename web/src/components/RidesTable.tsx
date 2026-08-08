@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
+import { isCalmExperience } from '@/lib/ride-filter';
 import { useFilters } from '@/context/FiltersContext';
 import RideModal from './RideModal';
 
@@ -76,14 +77,6 @@ function isWheelchairAccessible(ride: Ride): boolean {
     a?.toLowerCase().includes('wheelchair') || 
     a?.toLowerCase().includes('wav') ||
     a?.toLowerCase().includes('ecv')
-  );
-}
-
-function isCalmExperience(ride: Ride): boolean {
-  if (!ride.accessibility) return false;
-  const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
-  return ride.accessibility.some(a => 
-    calmIndicators.some(ci => a?.toLowerCase().includes(ci))
   );
 }
 

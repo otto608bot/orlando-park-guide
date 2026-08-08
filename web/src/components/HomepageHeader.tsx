@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { useFilters } from '@/context/FiltersContext';
 import type { Ride } from '@/lib/sanity-types';
+import { isCalmExperience } from '@/lib/ride-filter';
 
 interface HomepageHeaderProps {
   totalRides: number;
@@ -78,13 +79,7 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
       }
 
       if (filters.calmExperience) {
-        visible = visible.filter(r => {
-          if (!r.accessibility) return false;
-          const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
-          return r.accessibility.some(a =>
-            calmIndicators.some(ci => a?.toLowerCase().includes(ci))
-          );
-        });
+        visible = visible.filter((r) => isCalmExperience(r));
       }
 
       return {

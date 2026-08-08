@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
+import { isCalmExperience } from '@/lib/ride-filter';
 import RideModal from './RideModal';
 
 interface RideCardProps {
@@ -65,13 +66,6 @@ function isWheelchairAccessible(ride: Ride): boolean {
   );
 }
 
-function isCalmExperience(ride: Ride): boolean {
-  if (!ride.accessibility) return false;
-  const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
-  return ride.accessibility.some(a =>
-    calmIndicators.some(ci => a?.toLowerCase().includes(ci))
-  );
-}
 
 export default function RideCard({ ride, showPark = false }: RideCardProps) {
   const [selectedRide, setSelectedRide] = useState<Ride | null>(null);

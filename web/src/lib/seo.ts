@@ -483,6 +483,76 @@ export function getDealsJsonLd(
   };
 }
 
+/** Static ride-preset SEO landing: CollectionPage + ride ItemList + FAQ. */
+export function getRidePresetLandingJsonLd(input: {
+  path: string;
+  title: string;
+  description: string;
+  rides: Array<{ name?: string | null; park?: string | null }>;
+  finderHref: string;
+}): Record<string, unknown> {
+  const pageUrl = `${SITE_URL}${normalizePath(input.path)}`;
+  const finderUrl = input.finderHref.startsWith("http")
+    ? input.finderHref
+    : `${SITE_URL}${input.finderHref.startsWith("/") ? "" : "/"}${input.finderHref}`;
+  const items = input.rides.slice(0, 80).map((ride, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: ride.name || `Ride ${index + 1}`,
+    description: ride.park ? `${ride.park}` : undefined,
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: input.title,
+        description: input.description,
+        isPartOf: { "@id": WEBSITE_ID },
+        about: { "@id": ORG_ID },
+        mainEntity: { "@id": `${pageUrl}#itemlist` },
+        potentialAction: {
+          "@type": "ViewAction",
+          target: finderUrl,
+          name: "Open interactive height filter",
+        },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#itemlist`,
+        name: input.title,
+        numberOfItems: input.rides.length,
+        itemListElement: items,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do these height lists work?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We filter published ride height minimums from our Orlando ride database. A ride appears when your child meets or exceeds the listed minimum (or the ride has no minimum). Always recheck official park signs on trip day.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I change the height or park?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Yes. Open the interactive ride finder (${finderUrl}) to adjust height, park, and calm filters, then share the filtered link with your group.`,
+            },
+          },
+        ],
+      },
+    ],
+  };
+}
+
 interface PageMetadataInput {
   title: string;
   description: string;

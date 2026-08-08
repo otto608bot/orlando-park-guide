@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import type { Ride } from '@/lib/sanity-types';
+import { isCalmExperience } from '@/lib/ride-filter';
 import { useFilters } from '@/context/FiltersContext';
 import { getParkTicketLink } from '@/config/affiliate-links';
 
@@ -87,13 +88,7 @@ export default function HomepageRides({ allRides, totalCount }: HomepageRidesPro
         });
       }
       if (filters.calmExperience) {
-        parkRides = parkRides.filter(r => {
-          if (!r.accessibility) return false;
-          const calmIndicators = ['calm', 'gentle', 'slow', 'peaceful', 'no sudden'];
-          return r.accessibility.some(a =>
-            calmIndicators.some(ci => a?.toLowerCase().includes(ci))
-          );
-        });
+        parkRides = parkRides.filter((r) => isCalmExperience(r));
       }
 
       return {
