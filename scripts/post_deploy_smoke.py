@@ -109,8 +109,9 @@ BODY_MUST_CONTAIN = {
         "Organization",
         "WebSite",
         "application/ld+json",
-        # Home card uses canonical USF park query matching ride.park
-        "Universal%20Studios%20Florida",
+        # Home cards point at crawlable height SEO landings
+        "/rides/for/under-40/",
+        "/rides/for/universal-studios-under-40/",
     ],
     "/parks/": [
         "FAQPage",
@@ -118,6 +119,7 @@ BODY_MUST_CONTAIN = {
         "CollectionPage",
         "How do I know which rides my kids can ride",
         "application/ld+json",
+        "/rides/for/under-40/",
     ],
     "/rides/": [
         "CollectionPage",
@@ -159,6 +161,18 @@ BODY_MUST_CONTAIN = {
         "ItemList",
         "application/ld+json",
     ],
+    "/rides/for/animal-kingdom-under-40/": [
+        "CollectionPage",
+        "Animal Kingdom",
+        "ItemList",
+        "application/ld+json",
+    ],
+    "/rides/for/magic-kingdom-48/": [
+        "CollectionPage",
+        "Magic Kingdom",
+        "ItemList",
+        "application/ld+json",
+    ],
     "/blog/": [
         "CollectionPage",
         "ItemList",
@@ -191,13 +205,19 @@ BODY_MUST_CONTAIN = {
     ],
     "/parks/magic-kingdom/": [
         "Will my kid be tall enough",
-        "height=40",
+        "/rides/for/magic-kingdom-under-40/",
         "TouristAttraction",
         "FAQPage",
     ],
     "/parks/epic-universe/": [
         "Will my kid be tall enough",
         "epic-universe-1-day-plan",
+        "TouristAttraction",
+        "/rides/for/epic-universe-under-40/",
+    ],
+    "/parks/universal-studios-florida/": [
+        "Will my kid be tall enough",
+        "/rides/for/universal-studios-under-40/",
         "TouristAttraction",
     ],
     "/about/": [

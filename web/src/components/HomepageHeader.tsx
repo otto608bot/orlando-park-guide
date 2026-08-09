@@ -105,7 +105,7 @@ export default function HomepageHeader({ totalRides, allRides }: HomepageHeaderP
                 {hasActiveFilters ? franchiseData.reduce((sum, f) => sum + f.visible, 0) : totalRides} of {totalRides} rides
               </span>
             </div>
-            <Link href="/rides/?height=40" className="home-cta-btn">
+            <Link href="/rides/for/under-40/" className="home-cta-btn">
               Filter by height
             </Link>
           </div>

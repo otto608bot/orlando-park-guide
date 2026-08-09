@@ -79,15 +79,15 @@ export default async function ParksPage() {
           <li>
             <strong>Not sure yet?</strong> Browse all rides with filters on the{" "}
             <Link href="/rides/">ride finder</Link> (height, thrill, accessibility), or jump to{" "}
-            <Link href="/rides/?height=40">rides filtered for ~40&quot;</Link>.
+            <Link href="/rides/for/under-40/">rides under ~40&quot;</Link>.
           </li>
         </ul>
         <p className="parks-cta-row">
           <a className="parks-cta" href={AFFILIATE_LINKS.ucDealsPage} rel="nofollow sponsored">
             Compare Orlando ticket deals
           </a>
-          <Link className="parks-cta secondary" href="/rides/?height=40">
-            Open ride height filters (~40&quot;)
+          <Link className="parks-cta secondary" href="/rides/for/under-40/">
+            Open rides under ~40&quot;
           </Link>
         </p>
         <p className="parks-affiliate-note">
@@ -119,10 +119,11 @@ export default async function ParksPage() {
         </p>
         <h2>How do I know which rides my kids can ride?</h2>
         <p>
-          Open the{" "}
-          <Link href="/rides/?height=40">ride finder with a ~40&quot; filter</Link>, then narrow by park
-          (Magic Kingdom, Epic Universe, Universal, and more). Share the filtered URL with your group
-          before you buy tickets so nobody walks into a line a kid cannot ride.
+          Start with our crawlable{" "}
+          <Link href="/rides/for/under-40/">rides under ~40&quot; list</Link>, then narrow by park
+          (Magic Kingdom, Epic Universe, Universal, and more) or open the interactive{" "}
+          <Link href="/rides/">ride finder</Link>. Share the URL with your group before you buy tickets
+          so nobody walks into a line a kid cannot ride.
         </p>
       </section>
 

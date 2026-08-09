@@ -231,6 +231,46 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     parks: ["Magic Kingdom"],
     calm: true,
   }),
+  definePreset({
+    slug: "animal-kingdom-under-40",
+    label: 'AK + under 40"',
+    blurb: "Animal Kingdom short-rider start",
+    seoTitle: 'Animal Kingdom Rides Under 40" for Kids',
+    seoDescription:
+      "Animal Kingdom rides shorter kids (~40\") can board — Safari-day planning with real height gates.",
+    height: 40,
+    parks: ["Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "magic-kingdom-48",
+    label: 'MK + 48"',
+    blurb: "Magic Kingdom when thrills unlock",
+    seoTitle: 'Magic Kingdom Rides at 48" Height',
+    seoDescription:
+      "Magic Kingdom rides that open around 48 inches — thrills unlocked plus family classics for taller kids.",
+    height: 48,
+    parks: ["Magic Kingdom"],
+  }),
+  definePreset({
+    slug: "islands-of-adventure-48",
+    label: 'IOA + 48"',
+    blurb: "Islands of Adventure thrills unlock",
+    seoTitle: 'Islands of Adventure Rides at 48" Height',
+    seoDescription:
+      "Islands of Adventure rides that open around 48 inches — Hogsmeade thrills and family backups side by side.",
+    height: 48,
+    parks: ["Islands of Adventure"],
+  }),
+  definePreset({
+    slug: "universal-studios-48",
+    label: 'USF + 48"',
+    blurb: "Universal Studios Florida thrills unlock",
+    seoTitle: 'Universal Studios Florida Rides at 48" Height',
+    seoDescription:
+      "Universal Studios Florida rides that open around 48 inches — when more thrills unlock for taller kids.",
+    height: 48,
+    parks: ["Universal Studios Florida"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
@@ -245,4 +285,64 @@ export function ridePresetSeoPaths(): string[] {
 
 export function getRidePresetBySlug(slug: string): RidePreset | undefined {
   return RIDE_HEIGHT_PRESETS.find((p) => p.slug === slug);
+}
+
+function sameParkSet(a: readonly string[] | undefined, b: readonly string[] | undefined): boolean {
+  const left = [...(a ?? [])].sort();
+  const right = [...(b ?? [])].sort();
+  if (left.length !== right.length) return false;
+  return left.every((name, i) => name === right[i]);
+}
+
+/**
+ * Best matching SEO landing for a height/park/calm combo.
+ * Prefer exact park+height+calm; then all-parks height; then finder href fallback via caller.
+ */
+export function findRidePreset(opts: {
+  height?: number;
+  parks?: readonly string[];
+  calm?: boolean;
+}): RidePreset | undefined {
+  const height = opts.height;
+  const parks = opts.parks;
+  const calm = Boolean(opts.calm);
+
+  const exact = RIDE_HEIGHT_PRESETS.find(
+    (p) =>
+      Boolean(p.calm) === calm &&
+      (p.height ?? undefined) === (height ?? undefined) &&
+      sameParkSet(p.parks, parks),
+  );
+  if (exact) return exact;
+
+  // Park-scoped without calm → drop calm requirement only if caller didn't ask for calm
+  if (!calm && parks && parks.length > 0 && height) {
+    const parkHeight = RIDE_HEIGHT_PRESETS.find(
+      (p) => !p.calm && p.height === height && sameParkSet(p.parks, parks),
+    );
+    if (parkHeight) return parkHeight;
+  }
+
+  // All-parks height (or calm-only) landing
+  if (!parks || parks.length === 0) {
+    return RIDE_HEIGHT_PRESETS.find(
+      (p) =>
+        Boolean(p.calm) === calm &&
+        (p.height ?? undefined) === (height ?? undefined) &&
+        (!p.parks || p.parks.length === 0),
+    );
+  }
+
+  return undefined;
+}
+
+/** Prefer crawlable SEO path; fall back to interactive finder query URL. */
+export function rideLinkFor(opts: {
+  height?: number;
+  parks?: readonly string[];
+  calm?: boolean;
+}): string {
+  const preset = findRidePreset(opts);
+  if (preset) return preset.seoPath;
+  return finderHref(opts);
 }

@@ -1,3 +1,5 @@
+import { rideLinkFor } from "@/lib/ride-presets";
+
 const AFFILIATE_LINKS = {
   disney4DayParkHopper: "https://www.tkqlhce.com/click-101693488-12783539",
   universal3Park3Day: "https://www.dpbolvw.net/click-101693488-12983229",
@@ -450,75 +452,74 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
     links.push(link);
   };
 
-  // Product tool first for height/family intent — prefer park-specific deep links when clear
+  // Product tool first for height/family intent — prefer crawlable /rides/for/* SEO landings
   if (haystack.includes("height") || haystack.includes("under 40") || haystack.includes("ride")) {
     if (haystack.includes("epic")) {
       push({
-        href: "/rides/?height=40&parks=Epic%20Universe",
-        label: "Open Epic Universe ride finder (~40″)",
-        description: "Shareable Epic-only height filter — what shorter kids can actually ride.",
+        href: rideLinkFor({ height: 40, parks: ["Epic Universe"] }),
+        label: "Epic Universe rides under ~40″",
+        description: "Crawlable short-rider list + interactive finder for Epic Universe.",
       });
     } else if (haystack.includes("magic kingdom") || haystack.includes("under 40")) {
       push({
-        href: "/rides/?height=40&parks=Magic%20Kingdom",
-        label: "Open Magic Kingdom ride finder (~40″)",
-        description: "Shareable MK short-rider filter across the full ride list.",
+        href: rideLinkFor({ height: 40, parks: ["Magic Kingdom"] }),
+        label: "Magic Kingdom rides under ~40″",
+        description: "Crawlable MK short-rider list — share before you lock tickets.",
       });
     } else if (haystack.includes("islands")) {
       push({
-        href: "/rides/?height=40&parks=Islands%20of%20Adventure",
-        label: "Open Islands of Adventure ride finder (~40″)",
-        description: "Shareable IOA short-rider filter for your group chat.",
+        href: rideLinkFor({ height: 40, parks: ["Islands of Adventure"] }),
+        label: "Islands of Adventure rides under ~40″",
+        description: "Crawlable IOA short-rider list for your group chat.",
       });
     } else if (haystack.includes("universal")) {
       push({
-        // Must match ride.park / FilterSidebar: "Universal Studios Florida"
-        href: "/rides/?height=40&parks=Universal%20Studios%20Florida",
-        label: "Open Universal Studios ride finder (~40″)",
-        description: "Shareable Universal Studios Florida short-rider filter for your group chat.",
+        href: rideLinkFor({ height: 40, parks: ["Universal Studios Florida"] }),
+        label: "Universal Studios Florida rides under ~40″",
+        description: "Crawlable USF short-rider list (matches live park name).",
       });
     } else if (haystack.includes("hollywood") || haystack.includes("star wars")) {
       push({
-        href: "/rides/?height=40&parks=Hollywood%20Studios",
-        label: "Open Hollywood Studios ride finder (~40″)",
-        description: "Shareable HS short-rider filter — Toy Story / Galaxy's Edge height band.",
+        href: rideLinkFor({ height: 40, parks: ["Hollywood Studios"] }),
+        label: "Hollywood Studios rides under ~40″",
+        description: "Crawlable HS short-rider list — Toy Story / Galaxy's Edge height band.",
       });
     } else if (haystack.includes("legoland")) {
       push({
-        href: "/rides/?height=40&parks=LEGOLAND%20Florida",
-        label: "Open LEGOLAND ride finder (~40″)",
-        description: "Shareable LEGOLAND Florida height filter for younger kids.",
+        href: rideLinkFor({ height: 40, parks: ["LEGOLAND Florida"] }),
+        label: "LEGOLAND Florida rides under ~40″",
+        description: "Crawlable LEGOLAND height list for younger kids.",
       });
     } else if (haystack.includes("seaworld")) {
       push({
-        href: "/rides/?height=40&parks=SeaWorld%20Orlando",
-        label: "Open SeaWorld ride finder (~40″)",
-        description: "Shareable SeaWorld Orlando short-rider + show-day filter.",
+        href: rideLinkFor({ height: 40, parks: ["SeaWorld Orlando"] }),
+        label: "SeaWorld Orlando rides under ~40″",
+        description: "Crawlable SeaWorld short-rider + show-day list.",
       });
     } else if (haystack.includes("epcot")) {
       push({
-        href: "/rides/?height=40&parks=EPCOT",
-        label: "Open EPCOT ride finder (~40″)",
-        description: "Shareable EPCOT short-rider filter for World Showcase family days.",
+        href: rideLinkFor({ height: 40, parks: ["EPCOT"] }),
+        label: "EPCOT rides under ~40″",
+        description: "Crawlable EPCOT short-rider list for World Showcase family days.",
       });
     } else if (haystack.includes("animal kingdom")) {
       push({
-        href: "/rides/?height=44&parks=Animal%20Kingdom",
-        label: "Open Animal Kingdom ride finder (44″)",
-        description: "Shareable AK family-coaster height band before you lock a day.",
+        href: rideLinkFor({ height: 40, parks: ["Animal Kingdom"] }),
+        label: "Animal Kingdom rides under ~40″",
+        description: "Crawlable AK short-rider list before you lock a Safari day.",
       });
     } else {
       push({
-        href: "/rides/?height=40",
-        label: "Open the ride finder (~40″ filter)",
-        description: "Shareable height filter across Disney, Universal, Epic Universe, and more.",
+        href: rideLinkFor({ height: 40 }),
+        label: "Orlando rides under ~40″ (all parks)",
+        description: "Crawlable height list across Disney, Universal, Epic Universe, and more.",
       });
     }
   } else if (signals.has("disney")) {
     push({
-      href: "/rides/?height=40",
+      href: rideLinkFor({ height: 40 }),
       label: "Browse Disney-friendly rides by height",
-      description: "Use the ride filters to avoid walking into lines your kids cannot ride.",
+      description: "Use crawlable height lists so nobody walks into a line kids cannot ride.",
     });
   }
 

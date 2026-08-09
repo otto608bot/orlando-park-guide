@@ -6,6 +6,7 @@ import ParkRidesGrid from "@/components/ParkRidesGrid";
 import CharacterDiningTable from "@/components/CharacterDiningTable";
 import FilterSidebar from "@/components/FilterSidebar";
 import { getParkTicketLink } from "@/config/affiliate-links";
+import { rideLinkFor } from "@/lib/ride-presets";
 import { createPageMetadata, SITE_URL } from "@/lib/seo";
 
 interface ParkPageProps {
@@ -415,12 +416,12 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
           </section>
         )}
 
-        {/* Shareable height presets → ride finder (product SEO surface) */}
+        {/* Shareable height presets → crawlable SEO landings when available */}
         <section className="park-height-presets" aria-label={`Height filters for ${park.name}`}>
           <h2>Will my kid be tall enough?</h2>
           <p>
-            Jump into the ride finder pre-filtered for {park.name}. Share the results with
-            your co-planner before you lock tickets.
+            Open crawlable height lists for {park.name}, then jump into the interactive finder.
+            Share the results with your co-planner before you lock tickets.
           </p>
           <div className="park-height-chips">
             {[
@@ -430,13 +431,13 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             ].map(({ h, label }) => (
               <Link
                 key={h}
-                href={`/rides/?height=${h}&parks=${encodeURIComponent(park.name)}`}
+                href={rideLinkFor({ height: h, parks: [park.name] })}
                 className="park-height-chip"
               >
                 {label}
               </Link>
             ))}
-            <Link href={`/rides/?parks=${encodeURIComponent(park.name)}`} className="park-height-chip park-height-chip-all">
+            <Link href={rideLinkFor({ parks: [park.name] })} className="park-height-chip park-height-chip-all">
               All heights
             </Link>
           </div>
@@ -446,7 +447,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
         <section className="park-rides">
           <div className="park-rides-heading">
             <h2>Rides &amp; Attractions</h2>
-            <Link href={`/rides/?height=40&parks=${encodeURIComponent(park.name)}`} className="park-height-link">
+            <Link href={rideLinkFor({ height: 40, parks: [park.name] })} className="park-height-link">
               Filter rides kids under ~40″ can do →
             </Link>
           </div>

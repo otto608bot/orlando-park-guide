@@ -67,16 +67,13 @@ export default async function HomePage() {
               <strong>Which Orlando park fits?</strong>
               <span>Compare Disney, Universal, Epic, SeaWorld &amp; LEGOLAND for kids.</span>
             </Link>
-            <Link href="/rides/?height=40" className="home-start-card">
+            <Link href="/rides/for/under-40/" className="home-start-card">
               <strong>Rides under ~40″</strong>
-              <span>Shareable height filter so you skip lines your kids can&apos;t ride.</span>
+              <span>Crawlable height list so you skip lines your kids can&apos;t ride.</span>
             </Link>
-            <Link
-              href="/rides/?height=40&parks=Universal%20Studios%20Florida"
-              className="home-start-card"
-            >
+            <Link href="/rides/for/universal-studios-under-40/" className="home-start-card">
               <strong>Universal Studios under ~40″</strong>
-              <span>USF-only short-rider filter — matches the live ride list names.</span>
+              <span>USF-only short-rider list — matches the live ride list names.</span>
             </Link>
             <Link href="/blog/epic-universe-1-day-plan/" className="home-start-card">
               <strong>Epic Universe 1-day plan</strong>

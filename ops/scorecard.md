@@ -1,12 +1,12 @@
 # Scorecard
 
-Updated: 2026-08-08 (static height landings + calm filter fix staged; ride preset batch awaiting deploy)
+Updated: 2026-08-09 (daily — SEO-link amplify staged; ride-preset batch +1 commit; analytics still blocked)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
 
 ## Baseline (28d — last successful pull ending ~2026-07-22 GSC / GA4)
-*Analytics still blocked 2026-08-08 — Google SEO OAuth `invalid_grant` on `.hermes/google_seo_token.json`. Numbers below are last successful pull (not refreshed this run).*
+*Analytics still blocked 2026-08-09 — Google SEO OAuth `invalid_grant` on `.hermes/google_seo_token.json`. Numbers below are last successful pull (not refreshed this run).*
 
 | Metric | Baseline | 30d target | 90d target |
 |---|---:|---:|---:|
@@ -20,18 +20,18 @@ Families with kids → choose the right park/rides → return + convert (tickets
 | Affiliate revenue | ~$0 tracked | first real $ | meaningful (not tip jar) |
 
 ## Leading indicators this sprint
-- **Watch 14d CTR (post 2026-07-22/23 + utility pack 2026-08-05):** [Epic Universe rides ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [parks hub](https://planyourpark.com/parks/), [packing list kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal height requirements](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides finder](https://planyourpark.com/rides/), park landings (MK/Epic), [deals](https://planyourpark.com/deals/), [blog hub](https://planyourpark.com/blog/)
+- **Watch 14d CTR (post 2026-07-22/23 + utility pack 2026-08-05; + height landings once deployed):** [Epic Universe rides ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [parks hub](https://planyourpark.com/parks/), [packing list kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal height requirements](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides finder](https://planyourpark.com/rides/), park landings (MK/Epic), [deals](https://planyourpark.com/deals/), [blog hub](https://planyourpark.com/blog/), staged [height landings](https://planyourpark.com/rides/for/under-40/)
 - Preserve earners: [Epic 1-day plan](https://planyourpark.com/blog/epic-universe-1-day-plan/), [MK rides under 40"](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/)
 - Amazon live on packing paths (`tag=planyourpark-20`); Undercover Tourist ticket CTAs on commercial pages
-- Integrity: **14/14 clean** (2026-08-08)
-- Live blog QA: **14/14 PASS** (2026-08-08)
+- Integrity: **14/14 clean** (2026-08-09)
+- Live blog QA: **14/14 PASS** (2026-08-09)
 - Buffer channels connected: FB / IG / Pinterest
-- **Utility SEO + conversion pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1` · live smoke **0 high/0 med** (utility gates); ride-preset batch still local
-- **Staged 2026-08-06→08-08:** ride preset expansion v2 + **USF filter park-name fix** + **18 static `/rides/for/*` height SEO landings** + **calm filter fix** (thrill≤2; was 0 matches) + typed aliases — local smoke PASS (57 pages); awaiting deploy
-- Buffer: product idea packs 2026-07-24→08-08 (review only) — not queued
+- **Utility SEO + conversion pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1` · origin docs `034c60c` · live aliases/titles confirmed 2026-08-09
+- **Staged (local `main` +4 vs origin):** ride preset expansion v2 + **USF filter park-name fix** + **22 static `/rides/for/*` height SEO landings** + **calm filter fix** + **home/parks/blog helpful → SEO paths** + typed aliases — local smoke PASS (61 pages); live smoke **21 findings / 17 high** until deploy
+- Buffer: product idea packs 2026-07-24→08-09 (review only) — not queued
 - **Owner P0:** re-auth Google SEO OAuth so GSC/GA4 resume (`scripts/seo_analytics_auth.py`)
-- Optional: **APPROVE QUEUE BUFFER** for idea packs on board
-- **APPROVE DEPLOY RIDE PRESETS** for 2026-08-06/07/08 delta (presets + USF + landings + calm)
+- Optional: **APPROVE QUEUE BUFFER** for idea packs on board (prefer after ride-preset deploy)
+- **APPROVE DEPLOY RIDE PRESETS** for 2026-08-06/07/08/09 delta (presets + USF + landings + calm + SEO-link amplify)
 
 ## Last review
 - Ops review 2026-07-24 — `weekly/2026-W30-ops.md`; analytics blocked; Phase 1 live measuring window open once GSC returns
@@ -39,8 +39,10 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Deploy 2026-07-23 — height SEO + Amazon list wiring + MK amplify (`b23b2af`)
 - Full blog Sanity QA + list/Amazon renderer fixes + Netlify rebuilds 2026-07-23 (`831482b` … `b337725`)
 - **Daily 2026-07-24→08-05** — utility SEO pack staged + Buffer idea packs (review only)
-- **Ops review 2026-08-05 (W32)** — still blind; deploy + OAuth gates
+- **Ops review 2026-08-05 (W32)** — still blind; deploy + OAuth gates — `weekly/2026-W32-ops.md`
 - **Deploy 2026-08-05** — utility SEO + conversion pack **LIVE** (`d6365ea` / Netlify `6a735cc1`); live smoke exit 0 — `ops/weekly/2026-08-05-deploy.md`
 - **Daily 2026-08-06** — integrity/live/smoke green; ride preset v2 + aliases staged; 4 Buffer idea packs
 - **Daily 2026-08-07** — integrity/live green; **USF park-name filter bug fixed** (local); more aliases + Buffer packs; local smoke 0
 - **Daily 2026-08-08** — integrity/live green; **static height SEO landings** + **calm filter fix**; Buffer packs; local smoke 0 (57 pages)
+- **Ops review 2026-08-09 (W32 #2)** — analytics still blocked; utility live confirmed; ride-preset batch awaiting approve — `weekly/2026-W32-ops-2.md`
+- **Daily 2026-08-09** — SEO-link amplify home/parks/blog → `/rides/for/*` + 4 presets (61 pages); Buffer packs; local smoke 0 — `weekly/2026-08-09-daily.md`
