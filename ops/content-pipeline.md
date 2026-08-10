@@ -38,6 +38,8 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer ideas 2026-08-08 (height landings / MK calm / Epic heights / USF vs MK) | idea (review) | 4 product packs — not queued | tickets | https://publish.buffer.com/ |
 | SEO-link amplify home/parks/blog helpful → `/rides/for/*` + 4 presets (AK40/MK48/IOA48/USF48) | **awaiting_approval** (bundled w/ ride presets) | local smoke PASS 2026-08-09; compounds landings via internal links | tickets via finder | `ops/weekly/2026-08-09-daily.md` |
 | Buffer ideas 2026-08-09 (crawlable heights / Epic+MK / park chips / packing+deals) | idea (review) | 4 product packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
+| Height landing conversion polish (ranked related + park-aware guides + FAQ + BreadcrumbList JSON-LD) | **awaiting_approval** (bundled w/ ride presets) | local smoke PASS 2026-08-10; Epic→1-day, MK→under-40 blog, USF→heights | tickets + Amazon via guides | `ops/weekly/2026-08-10-daily.md` |
+| Buffer ideas 2026-08-10 (Epic 1-day / packing+deals / MK under-40 / parks hub) | idea (review) | 4 live-safe packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
@@ -67,3 +69,5 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Content integrity reconfirmed 14/14 (2026-08-08); live blog QA 14/14 PASS
 - [x] SEO-link amplify home/parks/blog → `/rides/for/*` + 4 presets (22 landings, 61 pages) + smoke needles staged (2026-08-09)
 - [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-09)
+- [x] Height landing conversion polish — ranked related + park-aware guides + expanded FAQ + BreadcrumbList JSON-LD + smoke needles (2026-08-10)
+- [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-10); local smoke 0 on 61 pages

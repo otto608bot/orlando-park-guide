@@ -5,6 +5,8 @@ import { getParkTicketLink } from "@/config/affiliate-links";
 import { filterRides, groupRidesByPark, PARK_SLUG_MAP } from "@/lib/ride-filter";
 import {
   getRidePresetBySlug,
+  heightLandingGuides,
+  relatedRidePresets,
   RIDE_HEIGHT_PRESETS,
   type RidePreset,
 } from "@/lib/ride-presets";
@@ -97,9 +99,11 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
     description: preset.seoDescription,
     rides: matched.map((r) => ({ name: r.name, park: r.park })),
     finderHref: preset.href,
+    parkLabel: primaryPark,
   });
 
-  const related = RIDE_HEIGHT_PRESETS.filter((p) => p.slug !== preset.slug).slice(0, 8);
+  const related = relatedRidePresets(preset, 10);
+  const guides = heightLandingGuides(preset);
 
   return (
     <div className="preset-landing">
@@ -205,7 +209,37 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
           <Link href={preset.href}>interactive ride finder</Link> to adjust height, park, and calm
           filters, then share the filtered link with your group.
         </p>
+        <h3>What if my kids are different heights?</h3>
+        <p>
+          Run this list once per child, or open the interactive finder and save a filtered link for
+          each height. Many families start with the shortest rider, then add thrills the taller kids
+          unlock.
+        </p>
+        <h3>When should we buy tickets?</h3>
+        <p>
+          After you know who can ride what
+          {primaryPark ? ` at ${primaryPark}` : " across Orlando parks"}, compare family ticket
+          options on our{" "}
+          <Link href="/deals/">deals page</Link> or park pages — ticket links may be affiliate
+          partners.
+        </p>
       </section>
+
+      {guides.length > 0 ? (
+        <section className="preset-section" aria-label="Next planning steps">
+          <h2>Next planning steps</h2>
+          <ul className="preset-guides">
+            {guides.map((g) => (
+              <li key={g.href}>
+                <Link href={g.href}>
+                  <strong>{g.label}</strong>
+                  <span>{g.description}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       <section className="preset-section" aria-label="More height presets">
         <h2>More shareable height presets</h2>
@@ -221,13 +255,6 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
         </ul>
         <p className="preset-more">
           Full interactive grid: <Link href="/rides/">Orlando ride finder by height</Link>
-          {" · "}
-          Guides:{" "}
-          <Link href="/blog/best-magic-kingdom-rides-kids-under-40-inches/">MK under 40&quot;</Link>
-          {" · "}
-          <Link href="/blog/universal-orlando-height-requirements/">Universal heights</Link>
-          {" · "}
-          <Link href="/blog/epic-universe-rides-ranked-guide/">Epic rides ranked</Link>
         </p>
       </section>
 
@@ -370,7 +397,8 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
           color: var(--text-medium, #475569);
           line-height: 1.6;
         }
-        .preset-related {
+        .preset-related,
+        .preset-guides {
           list-style: none;
           margin: 0;
           padding: 0;
@@ -378,7 +406,8 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
           grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
           gap: 0.6rem;
         }
-        .preset-related a {
+        .preset-related a,
+        .preset-guides a {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
@@ -388,11 +417,17 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
           padding: 0.75rem 0.85rem;
           background: #fff7ed;
         }
-        .preset-related strong {
+        .preset-guides a {
+          background: #f0fdf4;
+          border-color: #bbf7d0;
+        }
+        .preset-related strong,
+        .preset-guides strong {
           color: var(--text-dark, #0f172a);
           font-size: 0.92rem;
         }
-        .preset-related span {
+        .preset-related span,
+        .preset-guides span {
           color: var(--text-medium, #64748b);
           font-size: 0.8rem;
           line-height: 1.35;

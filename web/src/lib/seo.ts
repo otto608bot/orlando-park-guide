@@ -483,13 +483,15 @@ export function getDealsJsonLd(
   };
 }
 
-/** Static ride-preset SEO landing: CollectionPage + ride ItemList + FAQ. */
+/** Static ride-preset SEO landing: CollectionPage + ride ItemList + FAQ + breadcrumbs. */
 export function getRidePresetLandingJsonLd(input: {
   path: string;
   title: string;
   description: string;
   rides: Array<{ name?: string | null; park?: string | null }>;
   finderHref: string;
+  /** Optional park label for FAQ copy (e.g. Magic Kingdom). */
+  parkLabel?: string;
 }): Record<string, unknown> {
   const pageUrl = `${SITE_URL}${normalizePath(input.path)}`;
   const finderUrl = input.finderHref.startsWith("http")
@@ -501,10 +503,38 @@ export function getRidePresetLandingJsonLd(input: {
     name: ride.name || `Ride ${index + 1}`,
     description: ride.park ? `${ride.park}` : undefined,
   }));
+  const parkBit = input.parkLabel ? ` at ${input.parkLabel}` : " across Orlando parks";
+  const differentHeightsAnswer =
+    "Run this list once per child, or open the interactive finder and save a filtered link for each height. Many families start with the shortest rider, then add thrills the taller kids unlock.";
+  const ticketsAnswer = `After you know who can ride what${parkBit}, compare family ticket options on our deals page or park pages — ticket links may be affiliate partners.`;
 
   return {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${SITE_URL}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Ride finder",
+            item: `${SITE_URL}/rides/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: input.title,
+            item: pageUrl,
+          },
+        ],
+      },
       {
         "@type": "CollectionPage",
         "@id": `${pageUrl}#webpage`,
@@ -514,6 +544,7 @@ export function getRidePresetLandingJsonLd(input: {
         isPartOf: { "@id": WEBSITE_ID },
         about: { "@id": ORG_ID },
         mainEntity: { "@id": `${pageUrl}#itemlist` },
+        breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
         potentialAction: {
           "@type": "ViewAction",
           target: finderUrl,
@@ -545,6 +576,22 @@ export function getRidePresetLandingJsonLd(input: {
             acceptedAnswer: {
               "@type": "Answer",
               text: `Yes. Open the interactive ride finder (${finderUrl}) to adjust height, park, and calm filters, then share the filtered link with your group.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What if my kids are different heights?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: differentHeightsAnswer,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "When should we buy tickets?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: ticketsAnswer,
             },
           },
         ],

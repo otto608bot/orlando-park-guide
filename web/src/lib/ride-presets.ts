@@ -346,3 +346,121 @@ export function rideLinkFor(opts: {
   if (preset) return preset.seoPath;
   return finderHref(opts);
 }
+
+/**
+ * Rank related SEO landings for internal linking (same park > same height > calm affinity).
+ * Avoids the prior "first N in array" bias that always pushed global under-40 cards.
+ */
+export function relatedRidePresets(current: RidePreset, limit = 10): RidePreset[] {
+  const currentParks = new Set(current.parks ?? []);
+  const scored = RIDE_HEIGHT_PRESETS.filter((p) => p.slug !== current.slug).map((p) => {
+    let score = 0;
+    const parks = p.parks ?? [];
+    for (const park of parks) {
+      if (currentParks.has(park)) score += 8;
+    }
+    if ((current.parks?.length ?? 0) === 0 && parks.length === 0) score += 3;
+    if (current.height && p.height === current.height) score += 5;
+    if (Boolean(current.calm) === Boolean(p.calm) && (current.calm || p.calm)) score += 4;
+    // Prefer park-scoped companions when current is park-scoped
+    if ((current.parks?.length ?? 0) > 0 && parks.length > 0) score += 1;
+    // Slight boost for popular short-rider / thrill-unlock bands
+    if (p.height === 40 || p.height === 48) score += 1;
+    return { p, score };
+  });
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.p.label.localeCompare(b.p.label);
+  });
+
+  return scored.slice(0, limit).map(({ p }) => p);
+}
+
+/** Park-aware next-step guides (earners + conversion) for height landing footers. */
+export type HeightLandingGuide = {
+  href: string;
+  label: string;
+  description: string;
+};
+
+export function heightLandingGuides(preset: RidePreset): HeightLandingGuide[] {
+  const parks = new Set(preset.parks ?? []);
+  const hay = `${preset.slug} ${preset.label} ${[...(preset.parks ?? [])].join(" ")}`.toLowerCase();
+  const guides: HeightLandingGuide[] = [];
+  const push = (g: HeightLandingGuide) => {
+    if (guides.some((x) => x.href === g.href)) return;
+    guides.push(g);
+  };
+
+  const isEpic = parks.has("Epic Universe") || hay.includes("epic");
+  const isMk = parks.has("Magic Kingdom") || hay.includes("magic-kingdom") || hay.includes("mk ");
+  const isUniversal =
+    parks.has("Universal Studios Florida") ||
+    parks.has("Islands of Adventure") ||
+    hay.includes("universal") ||
+    hay.includes("islands");
+  const isDisneyPark =
+    isMk ||
+    parks.has("EPCOT") ||
+    parks.has("Hollywood Studios") ||
+    parks.has("Animal Kingdom") ||
+    hay.includes("epcot") ||
+    hay.includes("hollywood") ||
+    hay.includes("animal");
+
+  if (isEpic) {
+    push({
+      href: "/blog/epic-universe-1-day-plan/",
+      label: "Epic Universe 1-day plan",
+      description: "Best-CTR touring plan after you know who can ride what.",
+    });
+    push({
+      href: "/blog/epic-universe-tickets-guide/",
+      label: "Epic Universe tickets guide",
+      description: "Park-day ticket options before you lock dates.",
+    });
+    push({
+      href: "/blog/epic-universe-rides-ranked-guide/",
+      label: "Epic Universe rides ranked",
+      description: "Family ranking once heights are clear.",
+    });
+  }
+
+  if (isMk || (preset.height === 40 && isDisneyPark)) {
+    push({
+      href: "/blog/best-magic-kingdom-rides-kids-under-40-inches/",
+      label: 'Magic Kingdom rides under 40"',
+      description: "Our strongest short-rider earner for MK park days.",
+    });
+  }
+
+  if (isUniversal || isEpic) {
+    push({
+      href: "/blog/universal-orlando-height-requirements/",
+      label: "Universal Orlando height requirements",
+      description: "Full chart across USF, Islands, and Epic Universe.",
+    });
+  }
+
+  if (isDisneyPark || !preset.parks?.length) {
+    push({
+      href: "/blog/disney-world-packing-list-kids/",
+      label: "Disney World kids packing list",
+      description: "Gear families actually use — Amazon paths included.",
+    });
+  }
+
+  push({
+    href: "/deals/",
+    label: "Family ticket deals",
+    description: "Compare Orlando ticket options once the ride list is set.",
+  });
+  push({
+    href: "/parks/",
+    label: "Compare all Orlando parks",
+    description: "Pick the right park day for your kids' heights and energy.",
+  });
+
+  return guides.slice(0, 6);
+}
