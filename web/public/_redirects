@@ -148,3 +148,23 @@
 /blog/disney-packing/ /blog/disney-world-packing-list-kids/ 301
 /blog/universal-heights /blog/universal-orlando-height-requirements 301
 /blog/universal-heights/ /blog/universal-orlando-height-requirements/ 301
+
+# Height SEO landing short aliases (typed / social) → crawlable /rides/for/*
+/under-40 /rides/for/under-40 301
+/under-40/ /rides/for/under-40/ 301
+/rides/under-40 /rides/for/under-40 301
+/rides/under-40/ /rides/for/under-40/ 301
+/height-40 /rides/for/under-40 301
+/height-40/ /rides/for/under-40/ 301
+/rides/height-40 /rides/for/under-40 301
+/rides/height-40/ /rides/for/under-40/ 301
+/rides/mk-under-40 /rides/for/magic-kingdom-under-40 301
+/rides/mk-under-40/ /rides/for/magic-kingdom-under-40/ 301
+/rides/epic-under-40 /rides/for/epic-universe-under-40 301
+/rides/epic-under-40/ /rides/for/epic-universe-under-40/ 301
+/rides/usf-under-40 /rides/for/universal-studios-under-40 301
+/rides/usf-under-40/ /rides/for/universal-studios-under-40/ 301
+/rides/epic-44 /rides/for/epic-universe-44 301
+/rides/epic-44/ /rides/for/epic-universe-44/ 301
+/rides/mk-44 /rides/for/magic-kingdom-44 301
+/rides/mk-44/ /rides/for/magic-kingdom-44/ 301

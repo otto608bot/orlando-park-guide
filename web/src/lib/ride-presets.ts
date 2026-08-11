@@ -271,6 +271,47 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     height: 48,
     parks: ["Universal Studios Florida"],
   }),
+  // Family coaster band (44") at top commercial parks — park chips link here
+  definePreset({
+    slug: "epic-universe-44",
+    label: 'Epic + 44"',
+    blurb: "Epic Universe family coaster band",
+    seoTitle: 'Epic Universe Rides at 44" for Families',
+    seoDescription:
+      "Epic Universe rides around the 44-inch family coaster band — plan Super Nintendo World and Berk with real height gates.",
+    height: 44,
+    parks: ["Epic Universe"],
+  }),
+  definePreset({
+    slug: "magic-kingdom-44",
+    label: 'MK + 44"',
+    blurb: "Magic Kingdom family coaster band",
+    seoTitle: 'Magic Kingdom Rides at 44" for Families',
+    seoDescription:
+      "Magic Kingdom rides around the 44-inch family coaster band — classics plus what unlocks before big thrills.",
+    height: 44,
+    parks: ["Magic Kingdom"],
+  }),
+  definePreset({
+    slug: "islands-of-adventure-44",
+    label: 'IOA + 44"',
+    blurb: "Islands of Adventure family coaster band",
+    seoTitle: 'Islands of Adventure Rides at 44" for Families',
+    seoDescription:
+      "Islands of Adventure rides around 44 inches — Hogsmeade family options before taller thrills unlock.",
+    height: 44,
+    parks: ["Islands of Adventure"],
+  }),
+  definePreset({
+    slug: "universal-studios-44",
+    label: 'USF + 44"',
+    blurb: "Universal Studios Florida family coaster band",
+    seoTitle: 'Universal Studios Florida Rides at 44" for Families',
+    seoDescription:
+      "Universal Studios Florida rides around the 44-inch band — family coasters and backups before 48\" thrills.",
+    height: 44,
+    parks: ["Universal Studios Florida"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
@@ -409,6 +450,13 @@ export function heightLandingGuides(preset: RidePreset): HeightLandingGuide[] {
     hay.includes("hollywood") ||
     hay.includes("animal");
 
+  const isHs = parks.has("Hollywood Studios") || hay.includes("hollywood");
+  const isEpcot = parks.has("EPCOT") || hay.includes("epcot");
+  const isAk = parks.has("Animal Kingdom") || hay.includes("animal");
+  const isSeaWorld = parks.has("SeaWorld Orlando") || hay.includes("seaworld");
+  const isLegoland = parks.has("LEGOLAND Florida") || hay.includes("legoland");
+  const shortRider = !preset.height || preset.height <= 44;
+
   if (isEpic) {
     push({
       href: "/blog/epic-universe-1-day-plan/",
@@ -440,6 +488,35 @@ export function heightLandingGuides(preset: RidePreset): HeightLandingGuide[] {
       href: "/blog/universal-orlando-height-requirements/",
       label: "Universal Orlando height requirements",
       description: "Full chart across USF, Islands, and Epic Universe.",
+    });
+  }
+
+  if (isDisneyPark && shortRider) {
+    push({
+      href: "/blog/disney-world-with-baby-toddler/",
+      label: "Disney World with a baby or toddler",
+      description: "Stroller pacing and park-day reality for the littlest riders.",
+    });
+  }
+
+  if (isHs || isEpcot || isAk) {
+    push({
+      href: "/blog/beat-disney-world-crowds/",
+      label: "Beat Disney World crowds",
+      description: "Rope-drop and midday breaks after heights are sorted.",
+    });
+  }
+
+  if (isSeaWorld || isLegoland) {
+    push({
+      href: "/parks/",
+      label: "Compare all Orlando parks",
+      description: "See when SeaWorld or LEGOLAND beats a big Disney/Universal day.",
+    });
+    push({
+      href: "/blog/free-things-disney-world/",
+      label: "Free things at Disney World",
+      description: "Budget-friendly backups if you mix park brands on one trip.",
     });
   }
 

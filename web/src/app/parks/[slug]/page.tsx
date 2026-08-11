@@ -437,6 +437,12 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
                 {label}
               </Link>
             ))}
+            <Link
+              href={rideLinkFor({ height: 40, parks: [park.name], calm: true })}
+              className="park-height-chip"
+            >
+              Calm + under ~40″
+            </Link>
             <Link href={rideLinkFor({ parks: [park.name] })} className="park-height-chip park-height-chip-all">
               All heights
             </Link>

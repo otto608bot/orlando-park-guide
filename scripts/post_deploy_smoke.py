@@ -74,6 +74,15 @@ REDIRECTS = [
     ("/blog/mk-heights", "/blog/best-magic-kingdom-rides-kids-under-40-inches", 301),
     ("/blog/disney-packing", "/blog/disney-world-packing-list-kids", 301),
     ("/blog/universal-heights", "/blog/universal-orlando-height-requirements", 301),
+    # Height SEO landing short aliases (2026-08-11)
+    ("/under-40", "/rides/for/under-40", 301),
+    ("/rides/under-40", "/rides/for/under-40", 301),
+    ("/height-40", "/rides/for/under-40", 301),
+    ("/rides/mk-under-40", "/rides/for/magic-kingdom-under-40", 301),
+    ("/rides/epic-under-40", "/rides/for/epic-universe-under-40", 301),
+    ("/rides/usf-under-40", "/rides/for/universal-studios-under-40", 301),
+    ("/rides/epic-44", "/rides/for/epic-universe-44", 301),
+    ("/rides/mk-44", "/rides/for/magic-kingdom-44", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -96,6 +105,10 @@ TITLE_MUST_CONTAIN = {
     "/rides/for/magic-kingdom-under-40/": "Magic Kingdom",
     "/rides/for/universal-studios-under-40/": "Universal Studios Florida",
     "/rides/for/epic-universe-under-40/": "Epic Universe",
+    "/rides/for/epic-universe-44/": "Epic Universe",
+    "/rides/for/magic-kingdom-44/": "Magic Kingdom",
+    "/rides/for/universal-studios-44/": "Universal Studios Florida",
+    "/rides/for/islands-of-adventure-44/": "Islands of Adventure",
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
@@ -145,6 +158,7 @@ BODY_MUST_CONTAIN = {
         "affiliate-disclosure",
         "What if my kids are different heights",
         "Next planning steps",
+        "Heights checked",
         "/blog/disney-world-packing-list-kids/",
         "/deals/",
     ],
@@ -156,6 +170,7 @@ BODY_MUST_CONTAIN = {
         "application/ld+json",
         "/blog/best-magic-kingdom-rides-kids-under-40-inches/",
         "Next planning steps",
+        "Heights checked",
     ],
     "/rides/for/universal-studios-under-40/": [
         "CollectionPage",
@@ -164,6 +179,7 @@ BODY_MUST_CONTAIN = {
         "BreadcrumbList",
         "application/ld+json",
         "/blog/universal-orlando-height-requirements/",
+        "Heights checked",
     ],
     "/rides/for/epic-universe-under-40/": [
         "CollectionPage",
@@ -173,6 +189,7 @@ BODY_MUST_CONTAIN = {
         "application/ld+json",
         "/blog/epic-universe-1-day-plan/",
         "Next planning steps",
+        "Heights checked",
     ],
     "/rides/for/animal-kingdom-under-40/": [
         "CollectionPage",
@@ -180,6 +197,7 @@ BODY_MUST_CONTAIN = {
         "ItemList",
         "BreadcrumbList",
         "application/ld+json",
+        "Heights checked",
     ],
     "/rides/for/magic-kingdom-48/": [
         "CollectionPage",
@@ -187,6 +205,40 @@ BODY_MUST_CONTAIN = {
         "ItemList",
         "BreadcrumbList",
         "application/ld+json",
+        "Heights checked",
+    ],
+    "/rides/for/epic-universe-44/": [
+        "CollectionPage",
+        "Epic Universe",
+        "ItemList",
+        "BreadcrumbList",
+        "application/ld+json",
+        "Heights checked",
+        "/blog/epic-universe-1-day-plan/",
+    ],
+    "/rides/for/magic-kingdom-44/": [
+        "CollectionPage",
+        "Magic Kingdom",
+        "ItemList",
+        "BreadcrumbList",
+        "application/ld+json",
+        "Heights checked",
+    ],
+    "/rides/for/universal-studios-44/": [
+        "CollectionPage",
+        "Universal Studios Florida",
+        "ItemList",
+        "BreadcrumbList",
+        "application/ld+json",
+        "Heights checked",
+    ],
+    "/rides/for/islands-of-adventure-44/": [
+        "CollectionPage",
+        "Islands of Adventure",
+        "ItemList",
+        "BreadcrumbList",
+        "application/ld+json",
+        "Heights checked",
     ],
     "/blog/": [
         "CollectionPage",
@@ -221,6 +273,8 @@ BODY_MUST_CONTAIN = {
     "/parks/magic-kingdom/": [
         "Will my kid be tall enough",
         "/rides/for/magic-kingdom-under-40/",
+        "/rides/for/magic-kingdom-44/",
+        "Calm + under",
         "TouristAttraction",
         "FAQPage",
     ],
@@ -229,10 +283,14 @@ BODY_MUST_CONTAIN = {
         "epic-universe-1-day-plan",
         "TouristAttraction",
         "/rides/for/epic-universe-under-40/",
+        "/rides/for/epic-universe-44/",
+        "Calm + under",
     ],
     "/parks/universal-studios-florida/": [
         "Will my kid be tall enough",
         "/rides/for/universal-studios-under-40/",
+        "/rides/for/universal-studios-44/",
+        "Calm + under",
         "TouristAttraction",
     ],
     "/about/": [

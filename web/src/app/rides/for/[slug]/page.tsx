@@ -195,6 +195,42 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
         )}
       </section>
 
+      <section className="preset-section preset-mid-cta" aria-label="Tickets after heights">
+        <h2>Heights checked — ready for tickets?</h2>
+        <p>
+          Once you know who can ride what{primaryPark ? ` at ${primaryPark}` : ""}, compare family
+          ticket options. Partner links may earn us a commission at no extra cost to you.
+        </p>
+        <div className="preset-actions">
+          {ticketIsExternal ? (
+            <a
+              href={ticketHref}
+              className="preset-btn preset-btn-primary"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+            >
+              Compare {primaryPark ? primaryPark : "park"} tickets
+            </a>
+          ) : (
+            <Link href="/deals/" className="preset-btn preset-btn-primary">
+              Compare family ticket deals
+            </Link>
+          )}
+          <Link href="/deals/" className="preset-btn preset-btn-secondary">
+            All Orlando ticket deals
+          </Link>
+          {primaryPark && PARK_SLUG_MAP[primaryPark] ? (
+            <Link href={`/parks/${PARK_SLUG_MAP[primaryPark]}/`} className="preset-btn preset-btn-ghost">
+              {primaryPark} park guide
+            </Link>
+          ) : (
+            <Link href="/parks/" className="preset-btn preset-btn-ghost">
+              Compare parks
+            </Link>
+          )}
+        </div>
+      </section>
+
       <section className="preset-section preset-faq" aria-label="Height list FAQ">
         <h2>FAQ</h2>
         <h3>How do these height lists work?</h3>
@@ -336,6 +372,17 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
           font-weight: 800;
           margin: 0 0 0.85rem;
           color: var(--text-dark, #0f172a);
+        }
+        .preset-mid-cta {
+          padding: 1.15rem 1.1rem;
+          border-radius: 14px;
+          border: 1px solid #fed7aa;
+          background: linear-gradient(180deg, #fff7ed 0%, #fff 100%);
+        }
+        .preset-mid-cta p {
+          margin: 0 0 0.85rem;
+          color: var(--text-medium, #475569);
+          line-height: 1.6;
         }
         .preset-park-block {
           margin-bottom: 1.25rem;
