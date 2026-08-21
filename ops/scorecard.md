@@ -27,7 +27,7 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Live blog QA: **14/14 PASS** (2026-08-21)
 - Buffer channels connected: FB / IG / Pinterest
 - **Utility SEO + conversion pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1` · origin docs `034c60c` · live aliases/titles confirmed 2026-08-09
-- **Staged (local `main` ahead of origin by 7):** ride preset expansion v2 + **USF filter park-name fix** + **28 static `/rides/for/*` height SEO landings** (+HS/EPCOT 44″) + **calm filter fix** + **home/parks/blog helpful → SEO paths** + **height-landing guides/FAQ/BreadcrumbList** + **mid-list ticket CTA** + **park calm chips** + **short height aliases** + typed aliases — local smoke PASS (67 pages); live smoke high findings until deploy
+- **Staged (local `main` ahead of origin by 8):** ride preset expansion v2 + **USF filter park-name fix** + **28 static `/rides/for/*` height SEO landings** (+HS/EPCOT 44″) + **calm filter fix** + **home/parks/blog helpful → SEO paths** + **height-landing guides/FAQ/BreadcrumbList** + **mid-list ticket CTA** + **park calm chips** + **short height aliases** + typed aliases — local smoke PASS (67 pages); live smoke high findings until deploy
 - Buffer: product idea packs 2026-07-24→08-21 (review only) — not queued
 - **Owner P0:** re-auth Google SEO OAuth so GSC/GA4 resume (`scripts/seo_analytics_auth.py`)
 - Optional: **APPROVE QUEUE BUFFER** for idea packs on board (prefer after ride-preset deploy; 08-10/08-11/08-21 packs are live-safe)
@@ -48,4 +48,4 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - **Daily 2026-08-09** — SEO-link amplify home/parks/blog → `/rides/for/*` + 4 presets (61 pages); Buffer packs; local smoke 0 — `weekly/2026-08-09-daily.md`
 - **Daily 2026-08-10** — height-landing guides/FAQ/BreadcrumbList + ranked related; Buffer live-safe packs; local smoke 0 — `weekly/2026-08-10-daily.md`
 - **Daily 2026-08-11** — **+4× 44″ landings**, mid-list ticket CTA, park calm chips, short height aliases; Buffer live-safe packs; local smoke 0 (65 pages) — `weekly/2026-08-11-daily.md`
-- **Daily 2026-08-21** — **HS/EPCOT 44″ landings** + height aliases expand + blog hub amplify; Buffer live-safe packs; local smoke 0 (**67 pages / 28 landings**); main ahead origin **7** — `weekly/2026-08-21-daily.md`
+- **Daily 2026-08-21** — **HS/EPCOT 44″ landings** + height aliases expand + blog hub amplify; Buffer live-safe packs; local smoke 0 (**67 pages / 28 landings**); main ahead origin **8** — `weekly/2026-08-21-daily.md`
