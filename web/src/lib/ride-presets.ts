@@ -312,6 +312,27 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     height: 44,
     parks: ["Universal Studios Florida"],
   }),
+  // Remaining Disney 44″ park chips (HS / EPCOT) — park pages already call rideLinkFor(44)
+  definePreset({
+    slug: "hollywood-studios-44",
+    label: 'HS + 44"',
+    blurb: "Hollywood Studios family coaster band",
+    seoTitle: 'Hollywood Studios Rides at 44" for Families',
+    seoDescription:
+      "Hollywood Studios rides around the 44-inch family coaster band — Toy Story, shows, and what unlocks before taller thrills.",
+    height: 44,
+    parks: ["Hollywood Studios"],
+  }),
+  definePreset({
+    slug: "epcot-44",
+    label: 'EPCOT + 44"',
+    blurb: "EPCOT family coaster band",
+    seoTitle: 'EPCOT Rides at 44" for Families',
+    seoDescription:
+      "EPCOT rides around the 44-inch family coaster band — Guardians-adjacent planning with calmer backups for mixed-height kids.",
+    height: 44,
+    parks: ["EPCOT"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */

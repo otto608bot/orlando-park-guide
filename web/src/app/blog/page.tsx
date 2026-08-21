@@ -41,9 +41,14 @@ const START_HERE_LINKS = [
     description: "Use this when you are still deciding between Disney, Universal, SeaWorld, or a mixed trip.",
   },
   {
-    href: "/rides/?height=40",
-    title: "Ride finder for kids under ~40″",
-    description: "Filter every major Orlando park by your kid’s height before you buy tickets or walk into a line.",
+    href: "/rides/for/under-40/",
+    title: "Rides kids under ~40″ can board",
+    description: "Crawlable height list across Disney, Universal, Epic Universe, and more — then open the interactive filter.",
+  },
+  {
+    href: "/rides/for/magic-kingdom-under-40/",
+    title: "Magic Kingdom under ~40″ (ride list)",
+    description: "Shareable MK short-rider filter before you buy tickets or walk into a line.",
   },
   {
     href: "/blog/epic-universe-1-day-plan",
