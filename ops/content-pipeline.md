@@ -40,8 +40,10 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer ideas 2026-08-09 (crawlable heights / Epic+MK / park chips / packing+deals) | idea (review) | 4 product packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Height landing conversion polish (ranked related + park-aware guides + FAQ + BreadcrumbList JSON-LD) | **awaiting_approval** (bundled w/ ride presets) | local smoke PASS 2026-08-10; Epic→1-day, MK→under-40 blog, USF→heights | tickets + Amazon via guides | `ops/weekly/2026-08-10-daily.md` |
 | Buffer ideas 2026-08-10 (Epic 1-day / packing+deals / MK under-40 / parks hub) | idea (review) | 4 live-safe packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
-| **+4× 44″ height landings** (Epic/MK/IOA/USF) + mid-list ticket CTA + park calm chips + short height aliases (`/under-40` `/rides/epic-44` …) + guides expand | **awaiting_approval** (bundled w/ ride presets) | build **65** pages / **26** landings; local smoke PASS 2026-08-11 | tickets via finder + deals | `ops/weekly/2026-08-11-daily.md` |
+| **+4× 44″ height landings** (Epic/MK/IOA/USF) + mid-list ticket CTA + park calm chips + short height aliases (`/under-40` `/rides/epic-44` …) + guides expand | **awaiting_approval** (bundled w/ ride presets) | build **65** pages / **26** landings (superseded: 67/28 on 08-21); local smoke PASS 2026-08-11 | tickets via finder + deals | `ops/weekly/2026-08-11-daily.md` |
 | Buffer ideas 2026-08-11 (Epic tickets / Universal heights / packing+deals / crowds+heights) | idea (review) | 4 live-safe packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
+| **HS/EPCOT 44″ landings** + short aliases expand + blog hub → `/rides/for/*` | **awaiting_approval** (bundled w/ ride presets) | build **67** pages / **28** landings; local smoke PASS 2026-08-21 | tickets via finder | `ops/weekly/2026-08-21-daily.md` |
+| Buffer ideas 2026-08-21 (Epic 1-day / MK under-40 / packing+deals / parks+rides) | idea (review) | 4 live-safe packs — not queued | tickets + Amazon | https://publish.buffer.com/ |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
@@ -75,3 +77,5 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-10); local smoke 0 on 61 pages
 - [x] +4× 44″ landings (Epic/MK/IOA/USF) + mid-list ticket CTA + park calm chips + short height aliases + guides expand (2026-08-11)
 - [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-11); local smoke 0 on 65 pages / 26 landings
+- [x] HS/EPCOT 44″ landings + short aliases expand + blog hub amplify (2026-08-21)
+- [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-21); local smoke 0 on 67 pages / 28 landings
