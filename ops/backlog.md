@@ -49,8 +49,12 @@
 - [x] Buffer product idea packs Epic tickets / Universal heights / packing+deals / crowds+heights — **created 2026-08-11** (review only; live-safe URLs)
 - [x] **HS/EPCOT 44″ landings** + short height aliases expand + blog hub start-here → `/rides/for/*` — **staged 2026-08-21** (local smoke PASS, 67 pages / 28 landings)
 - [x] Buffer product idea packs Epic 1-day / MK under-40 / packing+deals / parks+rides — **created 2026-08-21** (review only; live-safe URLs)
-- [ ] **DEPLOY** Ride preset expansion v2 + USF filter fix + static height landings (**28**) + calm filter + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short height aliases + **HS/EPCOT 44** + blog hub amplify + blog/typed aliases — awaiting **APPROVE DEPLOY RIDE PRESETS**
-- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 Buffer idea packs when ready
+- [x] **AK 48 + SeaWorld/LEGOLAND 44/48 landings** + short aliases — **staged 2026-08-22** (local smoke PASS, 72 pages / 33 landings)
+- [x] Buffer product idea packs Epic 1-day / MK under-40 / packing+deals / Universal heights — **created 2026-08-22** (review only; live-safe URLs)
+- [x] **Park calm-under-40 landings (8)** + calm short aliases + park-chip smoke — **staged 2026-08-23** (local smoke PASS, 80 pages / 41 landings)
+- [x] Buffer product idea packs Epic 1-day / MK under-40 / packing+deals — **created 2026-08-23** (review only; 4th hit Ideas limit)
+- [ ] **DEPLOY** Ride preset expansion v2 + USF filter fix + static height landings (**41**) + calm filter + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short height aliases + **HS/EPCOT 44** + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48 + **park calm-under-40 (8)** + blog/typed aliases — awaiting **APPROVE DEPLOY RIDE PRESETS**
+- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 + 2026-08-22 + 2026-08-23 Buffer idea packs when ready
 - [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live, 0 findings; reconfirmed 2026-08-06; production still utility-only through 2026-08-11 pending ride-preset batch)
 
 ## P1
@@ -67,10 +71,10 @@
 - [x] Buffer idea packs for Epic 1-day / packing kids / Universal heights / parks hub — **created 2026-07-24** (review only; not queued)
 - [x] Buffer idea packs MK under-40 / Epic tickets / height=40 product — **created 2026-07-25** (review only)
 - [x] Buffer idea packs rides ranked / free things / deals / Disney guide — **created 2026-07-26** (review only)
-- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 Buffer idea packs when ready
+- [ ] Queue 2026-07-24 + 2026-07-25 + 2026-07-26 + 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 + 2026-08-22 + 2026-08-23 Buffer idea packs when ready
 - [ ] Watch CTR v2 + height SEO 14d post-deploy (ranked guide, parks, packing, home, rides)
 - [x] After utility SEO deploy: watch park landing CTR (esp. Magic Kingdom, Epic Universe) + verify `/epic-universe` 301 + home/dining conversion paths + helpful 404 + park height chips + JSON-LD + short aliases + sitemap height presets + home Organization/WebSite + blog earner aliases + parks/rides/blog/deals/dining hub FAQ/ItemList + BlogPosting publisher logo + `/tickets` `/dining` + about/disclosure trust schema + `/height` `/ride-finder` — **live verify PASS 2026-08-05** (`d6365ea`); CTR watch still needs GSC re-auth; **reconfirmed live smoke 0 on 2026-08-06**
-- [ ] After ride preset v2 + USF fix + height landings + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + HS/EPCOT 44 deploy: verify HS/LEGOLAND/SeaWorld presets on `/rides/` + USF preset uses `Universal Studios Florida` + filter checkbox selects rides + new aliases 301 (`/usf` `/compare` `/under-40` `/rides/epic-44` `/rides/hs-44` `/rides/epcot-44` …) + sitemap includes SEO `/rides/for/*` (28) + calm filter returns rides + home/parks/blog link to SEO paths + height landings show BreadcrumbList + mid-CTA + park-aware guides + live smoke 0
+- [ ] After ride preset v2 + USF fix + height landings + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + HS/EPCOT 44 + AK48/SW/LL + park calm-under-40 deploy: verify HS/LEGOLAND/SeaWorld presets on `/rides/` + USF preset uses `Universal Studios Florida` + filter checkbox selects rides + new aliases 301 (`/usf` `/compare` `/under-40` `/rides/epic-44` `/rides/hs-44` `/rides/epcot-44` `/rides/epic-calm` …) + sitemap includes SEO `/rides/for/*` (41) + calm filter returns rides + home/parks/blog link to SEO paths + park calm chips → `/rides/for/*-calm-under-40/` + height landings show BreadcrumbList + mid-CTA + park-aware guides + live smoke 0
 
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  

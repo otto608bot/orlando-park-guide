@@ -333,6 +333,146 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     height: 44,
     parks: ["EPCOT"],
   }),
+  // Remaining park chips: AK 48″ + SeaWorld/LEGOLAND 44″ & 48″ (park pages link via rideLinkFor)
+  definePreset({
+    slug: "animal-kingdom-48",
+    label: 'AK + 48"',
+    blurb: "Animal Kingdom thrills unlock",
+    seoTitle: 'Animal Kingdom Rides at 48" Height',
+    seoDescription:
+      "Animal Kingdom rides that open around 48 inches — thrills unlocked plus Safari-day family backups for taller kids.",
+    height: 48,
+    parks: ["Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "seaworld-44",
+    label: 'SeaWorld + 44"',
+    blurb: "SeaWorld family coaster band",
+    seoTitle: 'SeaWorld Orlando Rides at 44" for Families',
+    seoDescription:
+      "SeaWorld Orlando rides around the 44-inch family coaster band — shows-first pacing with what unlocks before bigger thrills.",
+    height: 44,
+    parks: ["SeaWorld Orlando"],
+  }),
+  definePreset({
+    slug: "seaworld-48",
+    label: 'SeaWorld + 48"',
+    blurb: "SeaWorld thrills unlock",
+    seoTitle: 'SeaWorld Orlando Rides at 48" Height',
+    seoDescription:
+      "SeaWorld Orlando rides that open around 48 inches — when more thrills unlock alongside shows and animal experiences.",
+    height: 48,
+    parks: ["SeaWorld Orlando"],
+  }),
+  definePreset({
+    slug: "legoland-44",
+    label: 'LEGOLAND + 44"',
+    blurb: "LEGOLAND family coaster band",
+    seoTitle: 'LEGOLAND Florida Rides at 44" for Families',
+    seoDescription:
+      "LEGOLAND Florida rides around 44 inches — built-for-kids thrills and backups when LEGOLAND beats a big Orlando park day.",
+    height: 44,
+    parks: ["LEGOLAND Florida"],
+  }),
+  definePreset({
+    slug: "legoland-48",
+    label: 'LEGOLAND + 48"',
+    blurb: "LEGOLAND thrills unlock",
+    seoTitle: 'LEGOLAND Florida Rides at 48" Height',
+    seoDescription:
+      "LEGOLAND Florida rides that open around 48 inches — fuller access for taller kids on a LEGOLAND-focused park day.",
+    height: 48,
+    parks: ["LEGOLAND Florida"],
+  }),
+  // Calm + under ~40″ for every park (park pages ship a calm chip via rideLinkFor)
+  definePreset({
+    slug: "epic-universe-calm-under-40",
+    label: 'Epic calm + under 40"',
+    blurb: "Epic Universe gentler short-rider day",
+    seoTitle: 'Epic Universe Calm Rides Under 40" for Kids',
+    seoDescription:
+      "Gentler Epic Universe rides for shorter kids (~40\") — a calmer Super Nintendo World / Berk start before thrills.",
+    height: 40,
+    parks: ["Epic Universe"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "universal-studios-calm-under-40",
+    label: 'USF calm + under 40"',
+    blurb: "Universal Studios Florida gentler short-rider day",
+    seoTitle: 'Universal Studios Florida Calm Rides Under 40"',
+    seoDescription:
+      "Gentler Universal Studios Florida rides for shorter kids (~40\") — calmer backups before bigger thrills.",
+    height: 40,
+    parks: ["Universal Studios Florida"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "islands-of-adventure-calm-under-40",
+    label: 'IOA calm + under 40"',
+    blurb: "Islands of Adventure gentler short-rider day",
+    seoTitle: 'Islands of Adventure Calm Rides Under 40"',
+    seoDescription:
+      "Gentler Islands of Adventure rides for shorter kids (~40\") — calmer Hogsmeade-day backups before coasters.",
+    height: 40,
+    parks: ["Islands of Adventure"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "epcot-calm-under-40",
+    label: 'EPCOT calm + under 40"',
+    blurb: "EPCOT gentler short-rider day",
+    seoTitle: 'EPCOT Calm Rides Under 40" for Kids',
+    seoDescription:
+      "Gentler EPCOT rides for shorter kids (~40\") — World Showcase pacing and calmer attractions first.",
+    height: 40,
+    parks: ["EPCOT"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "hollywood-studios-calm-under-40",
+    label: 'HS calm + under 40"',
+    blurb: "Hollywood Studios gentler short-rider day",
+    seoTitle: 'Hollywood Studios Calm Rides Under 40"',
+    seoDescription:
+      "Gentler Hollywood Studios rides for shorter kids (~40\") — shows and calmer picks before height-gated thrills.",
+    height: 40,
+    parks: ["Hollywood Studios"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "animal-kingdom-calm-under-40",
+    label: 'AK calm + under 40"',
+    blurb: "Animal Kingdom gentler short-rider day",
+    seoTitle: 'Animal Kingdom Calm Rides Under 40" for Kids',
+    seoDescription:
+      "Gentler Animal Kingdom rides for shorter kids (~40\") — Safari-day calm picks and short-rider backups.",
+    height: 40,
+    parks: ["Animal Kingdom"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "seaworld-calm-under-40",
+    label: 'SeaWorld calm + under 40"',
+    blurb: "SeaWorld gentler short-rider day",
+    seoTitle: 'SeaWorld Orlando Calm Rides Under 40"',
+    seoDescription:
+      "Gentler SeaWorld Orlando rides and shows-first options for shorter kids (~40\") — calmer family pacing.",
+    height: 40,
+    parks: ["SeaWorld Orlando"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "legoland-calm-under-40",
+    label: 'LEGOLAND calm + under 40"',
+    blurb: "LEGOLAND gentler short-rider day",
+    seoTitle: 'LEGOLAND Florida Calm Rides Under 40" for Kids',
+    seoDescription:
+      "Gentler LEGOLAND Florida rides for shorter / younger kids (~40\") — soft-start options on a kids-first park day.",
+    height: 40,
+    parks: ["LEGOLAND Florida"],
+    calm: true,
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
