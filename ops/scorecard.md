@@ -1,6 +1,6 @@
 # Scorecard
 
-Updated: 2026-08-23 (daily — park calm-under-40 landings staged; analytics still blocked)
+Updated: 2026-08-25 (daily — park-all landings staged; analytics still blocked)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
@@ -27,11 +27,11 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - Live blog QA: **14/14 PASS** (2026-08-22)
 - Buffer channels connected: FB / IG / Pinterest
 - **Utility SEO + conversion pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1` · origin docs `034c60c` · live aliases/titles confirmed 2026-08-09
-- **Staged (local `main` ahead of origin):** ride preset expansion v2 + **USF filter park-name fix** + **41 static `/rides/for/*` height SEO landings** (+HS/EPCOT 44″ + AK 48 + SeaWorld/LEGOLAND 44/48 + **8 park calm-under-40**) + **calm filter fix** + **home/parks/blog helpful → SEO paths** + **height-landing guides/FAQ/BreadcrumbList** + **mid-list ticket CTA** + **park calm chips** + **short height aliases** + typed aliases + blog hub amplify — local smoke PASS (80 pages); live smoke high findings until deploy
-- Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board hit limit on 4th pack 08-23
+- **Staged (local `main` ahead of origin):** ride preset expansion v2 + **USF filter park-name fix** + **50 static `/rides/for/*` height SEO landings** (+HS/EPCOT 44″ + AK 48 + SeaWorld/LEGOLAND 44/48 + **8 park calm-under-40** + **9 park-all**) + **calm filter fix** + **home/parks/blog helpful → SEO paths** + **height-landing guides/FAQ/BreadcrumbList** + **mid-list ticket CTA** + **park calm chips** + **short height aliases** + typed aliases + blog hub amplify — local smoke PASS (89 pages); live smoke high findings until deploy
+- Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board **still at limit** 08-25 (0 new packs)
 - **Owner P0:** re-auth Google SEO OAuth so GSC/GA4 resume (`scripts/seo_analytics_auth.py`)
-- Optional: **APPROVE QUEUE BUFFER** for idea packs on board (prefer after ride-preset deploy; 08-10/08-11/08-21/08-22/08-23 packs are live-safe)
-- **APPROVE DEPLOY RIDE PRESETS** for 2026-08-06→08-23 delta (presets + USF + landings + calm + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short aliases + HS/EPCOT 44 + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48 + **park calm-under-40**)
+- Optional: **APPROVE QUEUE BUFFER** for idea packs on board (prefer after ride-preset deploy; 08-10/08-11/08-21/08-22/08-23 packs are live-safe) + prune Ideas board
+- **APPROVE DEPLOY RIDE PRESETS** for 2026-08-06→08-25 delta (presets + USF + landings + calm + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short aliases + HS/EPCOT 44 + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48 + park calm-under-40 + **park-all**)
 
 ## Last review
 - Ops review 2026-07-24 — `weekly/2026-W30-ops.md`; analytics blocked; Phase 1 live measuring window open once GSC returns
@@ -52,3 +52,4 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - **Ops review 2026-08-21 (W34)** — analytics still blocked; ride-preset batch gated; no new approvals cleared since W32 #2 — `weekly/2026-W34-ops.md`
 - **Daily 2026-08-22** — **AK 48 + SeaWorld/LEGOLAND 44/48 landings** + short aliases + park-chip smoke; Buffer live-safe packs; local smoke 0 (**72 pages / 33 landings**) — `weekly/2026-08-22-daily.md`
 - **Daily 2026-08-23** — **park calm-under-40 landings (8)** + short aliases + park-chip smoke; Buffer live-safe packs (3; Ideas limit); local smoke 0 (**80 pages / 41 landings**) — `weekly/2026-08-23-daily.md`
+- **Daily 2026-08-25** — **park-all landings (9)** + short aliases + park-chip All heights SEO hrefs; Buffer Ideas still at limit; local smoke 0 (**89 pages / 50 landings**) — `weekly/2026-08-25-daily.md`
