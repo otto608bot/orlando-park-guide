@@ -473,6 +473,88 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     parks: ["LEGOLAND Florida"],
     calm: true,
   }),
+  // Park-only “all heights” landings — park pages’ All heights chip was query-only fallback
+  definePreset({
+    slug: "magic-kingdom-all",
+    label: "MK all heights",
+    blurb: "Full Magic Kingdom ride list for families",
+    seoTitle: "Magic Kingdom Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Magic Kingdom ride for families, then filter by your kids’ heights — a crawlable full-park list before you lock tickets.",
+    parks: ["Magic Kingdom"],
+  }),
+  definePreset({
+    slug: "epcot-all",
+    label: "EPCOT all heights",
+    blurb: "Full EPCOT ride list for families",
+    seoTitle: "EPCOT Rides for Kids — Full List",
+    seoDescription:
+      "Browse every EPCOT ride for families, then jump into height filters — World Showcase pacing with real ride gates.",
+    parks: ["EPCOT"],
+  }),
+  definePreset({
+    slug: "hollywood-studios-all",
+    label: "HS all heights",
+    blurb: "Full Hollywood Studios ride list for families",
+    seoTitle: "Hollywood Studios Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Hollywood Studios ride for families — Toy Story, shows, and thrills — then filter by kids’ heights.",
+    parks: ["Hollywood Studios"],
+  }),
+  definePreset({
+    slug: "animal-kingdom-all",
+    label: "AK all heights",
+    blurb: "Full Animal Kingdom ride list for families",
+    seoTitle: "Animal Kingdom Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Animal Kingdom ride for families — Safari-day planning with height clarity before you pick tickets.",
+    parks: ["Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "universal-studios-all",
+    label: "USF all heights",
+    blurb: "Full Universal Studios Florida ride list",
+    seoTitle: "Universal Studios Florida Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Universal Studios Florida ride for families, then filter by height — park name matches the live ride list.",
+    parks: ["Universal Studios Florida"],
+  }),
+  definePreset({
+    slug: "islands-of-adventure-all",
+    label: "IOA all heights",
+    blurb: "Full Islands of Adventure ride list",
+    seoTitle: "Islands of Adventure Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Islands of Adventure ride for families — Hogsmeade thrills and family backups — then filter by kids’ heights.",
+    parks: ["Islands of Adventure"],
+  }),
+  definePreset({
+    slug: "epic-universe-all",
+    label: "Epic all heights",
+    blurb: "Full Epic Universe ride list for families",
+    seoTitle: "Epic Universe Rides for Kids — Full List",
+    seoDescription:
+      "Browse every Epic Universe ride for families across Super Nintendo World, Berk, and more — then filter by real height gates.",
+    parks: ["Epic Universe"],
+  }),
+  definePreset({
+    slug: "seaworld-all",
+    label: "SeaWorld all heights",
+    blurb: "Full SeaWorld Orlando ride list for families",
+    seoTitle: "SeaWorld Orlando Rides for Kids — Full List",
+    seoDescription:
+      "Browse every SeaWorld Orlando ride and family attraction, then filter by height — shows-first pacing with thrills side by side.",
+    parks: ["SeaWorld Orlando"],
+  }),
+  definePreset({
+    slug: "legoland-all",
+    label: "LEGOLAND all heights",
+    blurb: "Full LEGOLAND Florida ride list for families",
+    seoTitle: "LEGOLAND Florida Rides for Kids — Full List",
+    seoDescription:
+      "Browse every LEGOLAND Florida ride for families — when LEGOLAND beats a big Orlando park day — then filter by kids’ heights.",
+    parks: ["LEGOLAND Florida"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
