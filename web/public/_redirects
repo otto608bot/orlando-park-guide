@@ -243,3 +243,24 @@
 /rides/seaworld-all/ /rides/for/seaworld-all/ 301
 /rides/legoland-all /rides/for/legoland-all 301
 /rides/legoland-all/ /rides/for/legoland-all/ 301
+# Multi-resort bundles (2026-08-26)
+/rides/disney-under-40 /rides/for/disney-world-under-40 301
+/rides/disney-under-40/ /rides/for/disney-world-under-40/ 301
+/rides/disney-world-under-40 /rides/for/disney-world-under-40 301
+/rides/disney-world-under-40/ /rides/for/disney-world-under-40/ 301
+/rides/disney-48 /rides/for/disney-world-48 301
+/rides/disney-48/ /rides/for/disney-world-48/ 301
+/rides/disney-all /rides/for/disney-world-all 301
+/rides/disney-all/ /rides/for/disney-world-all/ 301
+/rides/universal-under-40 /rides/for/universal-orlando-under-40 301
+/rides/universal-under-40/ /rides/for/universal-orlando-under-40/ 301
+/rides/universal-orlando-under-40 /rides/for/universal-orlando-under-40 301
+/rides/universal-orlando-under-40/ /rides/for/universal-orlando-under-40/ 301
+/rides/universal-48 /rides/for/universal-orlando-48 301
+/rides/universal-48/ /rides/for/universal-orlando-48/ 301
+/rides/universal-all /rides/for/universal-orlando-all 301
+/rides/universal-all/ /rides/for/universal-orlando-all/ 301
+/disney-under-40 /rides/for/disney-world-under-40 301
+/disney-under-40/ /rides/for/disney-world-under-40/ 301
+/universal-under-40 /rides/for/universal-orlando-under-40 301
+/universal-under-40/ /rides/for/universal-orlando-under-40/ 301

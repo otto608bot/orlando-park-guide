@@ -71,9 +71,13 @@ export default async function HomePage() {
               <strong>Rides under ~40″</strong>
               <span>Crawlable height list so you skip lines your kids can&apos;t ride.</span>
             </Link>
-            <Link href="/rides/for/universal-studios-under-40/" className="home-start-card">
-              <strong>Universal Studios under ~40″</strong>
-              <span>USF-only short-rider list — matches the live ride list names.</span>
+            <Link href="/rides/for/disney-world-under-40/" className="home-start-card">
+              <strong>Disney World under ~40″</strong>
+              <span>All 4 Disney parks — Magic Kingdom through Animal Kingdom short riders.</span>
+            </Link>
+            <Link href="/rides/for/universal-orlando-under-40/" className="home-start-card">
+              <strong>Universal Orlando under ~40″</strong>
+              <span>USF + Islands + Epic short-rider list in one crawlable page.</span>
             </Link>
             <Link href="/blog/epic-universe-1-day-plan/" className="home-start-card">
               <strong>Epic Universe 1-day plan</strong>

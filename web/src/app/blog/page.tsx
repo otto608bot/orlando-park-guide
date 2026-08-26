@@ -51,6 +51,16 @@ const START_HERE_LINKS = [
     description: "Shareable MK short-rider filter before you buy tickets or walk into a line.",
   },
   {
+    href: "/rides/for/disney-world-under-40/",
+    title: "Disney World under ~40″ (all 4 parks)",
+    description: "One short-rider list across Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom.",
+  },
+  {
+    href: "/rides/for/universal-orlando-under-40/",
+    title: "Universal Orlando under ~40″",
+    description: "USF + Islands of Adventure + Epic Universe short riders in one crawlable page.",
+  },
+  {
     href: "/blog/epic-universe-1-day-plan",
     title: "Epic Universe 1-day plan",
     description: "Our strongest family touring plan for Super Nintendo World, Berk, and the rest of Epic.",

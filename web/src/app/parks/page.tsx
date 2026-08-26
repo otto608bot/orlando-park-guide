@@ -57,14 +57,20 @@ export default async function ParksPage() {
           <li>
             <strong>Preschoolers / under ~40&quot;:</strong> Magic Kingdom, LEGOLAND, parts of Animal Kingdom
             — start with our{" "}
+            <Link href="/rides/for/disney-world-under-40/">Disney World under ~40&quot; list</Link>{" "}
+            or the{" "}
             <Link href="/blog/best-magic-kingdom-rides-kids-under-40-inches/">
               Magic Kingdom rides under 40 inches
-            </Link>
-            .
+            </Link>{" "}
+            guide.
           </li>
           <li>
-            <strong>Mixed ages / first Universal trip:</strong> Islands of Adventure + Universal Studios;
-            check{" "}
+            <strong>Mixed ages / first Universal trip:</strong> Islands of Adventure + Universal Studios +
+            Epic — check{" "}
+            <Link href="/rides/for/universal-orlando-under-40/">
+              Universal Orlando under ~40&quot;
+            </Link>{" "}
+            and{" "}
             <Link href="/blog/universal-orlando-height-requirements/">
               Universal height requirements
             </Link>{" "}
@@ -120,8 +126,12 @@ export default async function ParksPage() {
         <h2>How do I know which rides my kids can ride?</h2>
         <p>
           Start with our crawlable{" "}
-          <Link href="/rides/for/under-40/">rides under ~40&quot; list</Link>, then narrow by park
-          (Magic Kingdom, Epic Universe, Universal, and more) or open the interactive{" "}
+          <Link href="/rides/for/under-40/">rides under ~40&quot; list</Link>, multi-park{" "}
+          <Link href="/rides/for/disney-world-under-40/">Disney World under ~40&quot;</Link> or{" "}
+          <Link href="/rides/for/universal-orlando-under-40/">
+            Universal Orlando under ~40&quot;
+          </Link>
+          , then narrow by single park or open the interactive{" "}
           <Link href="/rides/">ride finder</Link>. Share the URL with your group before you buy tickets
           so nobody walks into a line a kid cannot ride.
         </p>

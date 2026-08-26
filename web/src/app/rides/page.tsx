@@ -127,8 +127,10 @@ export default async function RidesPage() {
         <h3>Which height presets should families start with?</h3>
         <p className="rides-seo-lead">
           Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills
-          unlock. Park-specific presets (Magic Kingdom, Hollywood Studios, Epic Universe, Islands of
-          Adventure, SeaWorld, LEGOLAND) help when the park day is already locked.
+          unlock. Multi-park presets (Disney World all four parks, Universal Orlando USF + Islands +
+          Epic) help when the resort is locked but the park day isn&apos;t. Single-park presets (Magic
+          Kingdom, Hollywood Studios, Epic Universe, Islands of Adventure, SeaWorld, LEGOLAND) help when
+          the park day is already locked.
         </p>
         <h3>Do height filters replace official park rules?</h3>
         <p className="rides-seo-lead">

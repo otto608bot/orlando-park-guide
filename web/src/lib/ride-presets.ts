@@ -555,6 +555,65 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
       "Browse every LEGOLAND Florida ride for families — when LEGOLAND beats a big Orlando park day — then filter by kids’ heights.",
     parks: ["LEGOLAND Florida"],
   }),
+  // Multi-resort bundles (high-intent “Disney World / Universal Orlando” queries)
+  definePreset({
+    slug: "disney-world-under-40",
+    label: 'Disney World + under 40"',
+    blurb: "All 4 Disney parks — short riders",
+    seoTitle: 'Disney World Rides Under 40" for Kids — All 4 Parks',
+    seoDescription:
+      "Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom rides shorter kids (~40\") can board — one crawlable Disney World short-rider list.",
+    height: 40,
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "disney-world-48",
+    label: 'Disney World + 48"',
+    blurb: "All 4 Disney parks when thrills unlock",
+    seoTitle: 'Disney World Rides at 48" — All 4 Parks',
+    seoDescription:
+      "Disney World rides that open around 48 inches across Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom — thrills unlocked for taller kids.",
+    height: 48,
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "disney-world-all",
+    label: "Disney World all heights",
+    blurb: "Full 4-park Disney World ride list",
+    seoTitle: "Disney World Rides for Kids — All 4 Parks List",
+    seoDescription:
+      "Browse Disney World rides across Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom — then filter by your kids’ heights before you lock tickets.",
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "universal-orlando-under-40",
+    label: 'Universal Orlando + under 40"',
+    blurb: "USF + IOA + Epic — short riders",
+    seoTitle: 'Universal Orlando Rides Under 40" — USF, Islands & Epic',
+    seoDescription:
+      "Universal Studios Florida, Islands of Adventure, and Epic Universe rides shorter kids (~40\") can board — one short-rider list across the Universal Orlando complex.",
+    height: 40,
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+  }),
+  definePreset({
+    slug: "universal-orlando-48",
+    label: 'Universal Orlando + 48"',
+    blurb: "USF + IOA + Epic when thrills unlock",
+    seoTitle: 'Universal Orlando Rides at 48" — USF, Islands & Epic',
+    seoDescription:
+      "Universal Orlando rides that open around 48 inches across Universal Studios Florida, Islands of Adventure, and Epic Universe — thrills unlocked for taller kids.",
+    height: 48,
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+  }),
+  definePreset({
+    slug: "universal-orlando-all",
+    label: "Universal Orlando all heights",
+    blurb: "Full USF + IOA + Epic ride list",
+    seoTitle: "Universal Orlando Rides for Kids — USF, Islands & Epic",
+    seoDescription:
+      "Browse Universal Orlando rides across Universal Studios Florida, Islands of Adventure, and Epic Universe — then filter by kids’ heights before you pick tickets.",
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
@@ -679,19 +738,33 @@ export function heightLandingGuides(preset: RidePreset): HeightLandingGuide[] {
 
   const isEpic = parks.has("Epic Universe") || hay.includes("epic");
   const isMk = parks.has("Magic Kingdom") || hay.includes("magic-kingdom") || hay.includes("mk ");
+  const isMultiDisney =
+    hay.includes("disney-world") ||
+    (parks.has("Magic Kingdom") &&
+      parks.has("EPCOT") &&
+      parks.has("Hollywood Studios") &&
+      parks.has("Animal Kingdom"));
+  const isMultiUniversal =
+    hay.includes("universal-orlando") ||
+    (parks.has("Universal Studios Florida") &&
+      parks.has("Islands of Adventure") &&
+      parks.has("Epic Universe"));
   const isUniversal =
     parks.has("Universal Studios Florida") ||
     parks.has("Islands of Adventure") ||
+    isMultiUniversal ||
     hay.includes("universal") ||
     hay.includes("islands");
   const isDisneyPark =
     isMk ||
+    isMultiDisney ||
     parks.has("EPCOT") ||
     parks.has("Hollywood Studios") ||
     parks.has("Animal Kingdom") ||
     hay.includes("epcot") ||
     hay.includes("hollywood") ||
-    hay.includes("animal");
+    hay.includes("animal") ||
+    hay.includes("disney");
 
   const isHs = parks.has("Hollywood Studios") || hay.includes("hollywood");
   const isEpcot = parks.has("EPCOT") || hay.includes("epcot");
