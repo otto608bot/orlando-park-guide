@@ -132,6 +132,10 @@ REDIRECTS = [
     ("/rides/universal-all", "/rides/for/universal-orlando-all", 301),
     ("/disney-under-40", "/rides/for/disney-world-under-40", 301),
     ("/universal-under-40", "/rides/for/universal-orlando-under-40", 301),
+    ("/rides/disney-44", "/rides/for/disney-world-44", 301),
+    ("/rides/universal-44", "/rides/for/universal-orlando-44", 301),
+    ("/rides/disney-calm", "/rides/for/disney-world-calm-under-40", 301),
+    ("/rides/universal-calm", "/rides/for/universal-orlando-calm-under-40", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -190,6 +194,10 @@ TITLE_MUST_CONTAIN = {
     "/rides/for/universal-orlando-under-40/": "Universal Orlando",
     "/rides/for/universal-orlando-48/": "Universal Orlando",
     "/rides/for/universal-orlando-all/": "Universal Orlando",
+    "/rides/for/disney-world-44/": "Disney World",
+    "/rides/for/universal-orlando-44/": "Universal Orlando",
+    "/rides/for/disney-world-calm-under-40/": "Disney World",
+    "/rides/for/universal-orlando-calm-under-40/": "Universal Orlando",
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
@@ -603,6 +611,22 @@ BODY_MUST_CONTAIN = {
         "BreadcrumbList",
         "application/ld+json",
         "Heights checked",
+    ],
+    "/rides/for/disney-world-44/": [
+        "CollectionPage", "Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom",
+        "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked",
+    ],
+    "/rides/for/universal-orlando-44/": [
+        "CollectionPage", "Universal Studios Florida", "Islands of Adventure", "Epic Universe",
+        "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked",
+    ],
+    "/rides/for/disney-world-calm-under-40/": [
+        "CollectionPage", "Magic Kingdom", "EPCOT", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/universal-orlando-calm-under-40/": [
+        "CollectionPage", "Universal Studios Florida", "Islands of Adventure", "Epic Universe",
+        "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked", "Next planning steps",
     ],
     "/blog/": [
         "CollectionPage",

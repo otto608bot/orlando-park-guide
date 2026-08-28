@@ -264,3 +264,12 @@
 /disney-under-40/ /rides/for/disney-world-under-40/ 301
 /universal-under-40 /rides/for/universal-orlando-under-40 301
 /universal-under-40/ /rides/for/universal-orlando-under-40/ 301
+# Multi-resort 44-inch and calm short-rider aliases (2026-08-28)
+/rides/disney-44 /rides/for/disney-world-44 301
+/rides/disney-44/ /rides/for/disney-world-44/ 301
+/rides/universal-44 /rides/for/universal-orlando-44 301
+/rides/universal-44/ /rides/for/universal-orlando-44/ 301
+/rides/disney-calm /rides/for/disney-world-calm-under-40 301
+/rides/disney-calm/ /rides/for/disney-world-calm-under-40/ 301
+/rides/universal-calm /rides/for/universal-orlando-calm-under-40 301
+/rides/universal-calm/ /rides/for/universal-orlando-calm-under-40/ 301

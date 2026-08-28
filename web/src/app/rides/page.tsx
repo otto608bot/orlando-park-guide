@@ -128,7 +128,11 @@ export default async function RidesPage() {
         <p className="rides-seo-lead">
           Start with under ~40 inches for preschoolers, then 44 inches and 48 inches as thrills
           unlock. Multi-park presets (Disney World all four parks, Universal Orlando USF + Islands +
-          Epic) help when the resort is locked but the park day isn&apos;t. Single-park presets (Magic
+          Epic) help when the resort is locked but the park day isn&apos;t: try{" "}
+          <Link href="/rides/for/disney-world-44/">Disney World at 44 inches</Link>,{" "}
+          <Link href="/rides/for/universal-orlando-44/">Universal Orlando at 44 inches</Link>, or a{" "}
+          <Link href="/rides/for/disney-world-calm-under-40/">calmer Disney World short-rider list</Link>.
+          Single-park presets (Magic
           Kingdom, Hollywood Studios, Epic Universe, Islands of Adventure, SeaWorld, LEGOLAND) help when
           the park day is already locked.
         </p>

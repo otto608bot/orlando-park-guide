@@ -50,6 +50,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | **Park calm-under-40 landings (8)** + calm short aliases + park-chip SEO hrefs | **awaiting_approval** (bundled w/ ride presets) | build **80** pages / **41** landings; local smoke PASS 2026-08-23 | tickets via finder | `ops/weekly/2026-08-23-daily.md` |
 | **Park-all landings (9)** + short aliases + park All heights SEO hrefs | **awaiting_approval** (bundled w/ ride presets) | build **89** pages / **50** landings (superseded: 95/56 on 08-26); local smoke PASS 2026-08-25 | tickets via finder | `ops/weekly/2026-08-25-daily.md` |
 | **Multi-resort landings (6)** Disney World + Universal Orlando under-40/48/all + home/parks/blog amplify | **awaiting_approval** (bundled w/ ride presets) | build **95** pages / **56** landings; local smoke PASS 2026-08-26 | tickets via finder | `ops/weekly/2026-08-26-daily.md` |
+| **Multi-resort matrix completion (4)** Disney World + Universal Orlando 44″/calm-under-40 + rides-hub amplify | **awaiting_approval** (bundled w/ ride presets) | build **99** pages / **60** landings; local smoke PASS 2026-08-28 | tickets via finder | `ops/weekly/2026-08-28-daily.md` |
 | Buffer offline packs 2026-08-26 | idea (offline) | Ideas board full — drafts in repo | tickets + Amazon | `ops/buffer/ideas-offline-2026-08-26.md` |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
@@ -94,3 +95,5 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 - [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-25); local smoke 0 on 89 pages / 50 landings
 - [x] Multi-resort Disney World + Universal Orlando landings (6) + home/parks/blog amplify + short aliases (2026-08-26)
 - [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-26); local smoke 0 on 95 pages / 56 landings
+- [x] Disney World + Universal Orlando 44″ and calm-under-40 landings + aliases + rides-hub links (2026-08-28)
+- [x] Content integrity + live blog QA reconfirmed 14/14 (2026-08-28); local smoke 0 on 99 pages / 60 landings

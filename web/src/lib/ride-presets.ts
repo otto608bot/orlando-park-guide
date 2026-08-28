@@ -614,6 +614,49 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
       "Browse Universal Orlando rides across Universal Studios Florida, Islands of Adventure, and Epic Universe — then filter by kids’ heights before you pick tickets.",
     parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
   }),
+  // Complete the high-intent multi-resort matrix: family-coaster and gentler short-rider paths.
+  definePreset({
+    slug: "disney-world-44",
+    label: 'Disney World + 44"',
+    blurb: "All 4 Disney parks — family coaster band",
+    seoTitle: 'Disney World Rides at 44" — All 4 Parks',
+    seoDescription:
+      "Disney World rides that open around 44 inches across Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom — a shareable family-coaster list.",
+    height: 44,
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "universal-orlando-44",
+    label: 'Universal Orlando + 44"',
+    blurb: "USF + Islands + Epic — family coaster band",
+    seoTitle: 'Universal Orlando Rides at 44" — USF, Islands & Epic',
+    seoDescription:
+      "Universal Orlando rides that open around 44 inches across Universal Studios Florida, Islands of Adventure, and Epic Universe — a family-coaster planning list.",
+    height: 44,
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+  }),
+  definePreset({
+    slug: "disney-world-calm-under-40",
+    label: 'Disney World calm + under 40"',
+    blurb: "All 4 Disney parks — gentler short-rider list",
+    seoTitle: 'Disney World Calm Rides Under 40" — All 4 Parks',
+    seoDescription:
+      "Gentler Disney World rides shorter kids (~40 inches) can board across all four parks — a calmer short-rider list before you add thrills.",
+    height: 40,
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+    calm: true,
+  }),
+  definePreset({
+    slug: "universal-orlando-calm-under-40",
+    label: 'Universal Orlando calm + under 40"',
+    blurb: "USF + Islands + Epic — gentler short-rider list",
+    seoTitle: 'Universal Orlando Calm Rides Under 40" — USF, Islands & Epic',
+    seoDescription:
+      "Gentler Universal Orlando rides shorter kids (~40 inches) can board across Universal Studios Florida, Islands of Adventure, and Epic Universe.",
+    height: 40,
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+    calm: true,
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
