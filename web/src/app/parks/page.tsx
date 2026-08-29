@@ -80,7 +80,10 @@ export default async function ParksPage() {
             <strong>Big thrills + newest lands:</strong>{" "}
             <Link href="/parks/epic-universe/">Epic Universe</Link> — see our{" "}
             <Link href="/blog/epic-universe-rides-ranked-guide/">rides ranked</Link> and{" "}
-            <Link href="/blog/epic-universe-1-day-plan/">1-day plan</Link>.
+            <Link href="/blog/epic-universe-1-day-plan/">1-day plan</Link>. Taller kids (~52&quot;+)?
+            Open{" "}
+            <Link href="/rides/for/disney-world-52/">Disney World 52&quot;+</Link> or{" "}
+            <Link href="/rides/for/universal-orlando-52/">Universal Orlando 52&quot;+</Link>.
           </li>
           <li>
             <strong>Not sure yet?</strong> Browse all rides with filters on the{" "}

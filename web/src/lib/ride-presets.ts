@@ -657,6 +657,27 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
     calm: true,
   }),
+  // Near-full access multi-resort band (52″) — taller kids / near-full park access queries
+  definePreset({
+    slug: "disney-world-52",
+    label: 'Disney World + 52"+',
+    blurb: "All 4 Disney parks — near-full access",
+    seoTitle: 'Disney World Rides at 52"+ — All 4 Parks',
+    seoDescription:
+      "Disney World rides open around 52 inches and up across Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom — near-full access for taller kids.",
+    height: 52,
+    parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "universal-orlando-52",
+    label: 'Universal Orlando + 52"+',
+    blurb: "USF + Islands + Epic — near-full access",
+    seoTitle: 'Universal Orlando Rides at 52"+ — USF, Islands & Epic',
+    seoDescription:
+      "Universal Orlando rides open around 52 inches and up across Universal Studios Florida, Islands of Adventure, and Epic Universe — near-full access for taller kids.",
+    height: 52,
+    parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */

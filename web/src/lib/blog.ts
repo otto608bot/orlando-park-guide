@@ -453,24 +453,70 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
   };
 
   // Product tool first for height/family intent — prefer crawlable /rides/for/* SEO landings
+  // Single-park pages stay park-scoped; multi-park / brand-wide posts prefer multi-resort landings.
+  const slug = slugFrom(post);
+  const isMkOnly =
+    haystack.includes("magic kingdom") ||
+    slug.includes("magic-kingdom") ||
+    slug.includes("best-magic-kingdom");
+  // Epic-first only when the post is primarily about Epic (slug/title), not merely tagged
+  const isEpicFocused =
+    slug.includes("epic-universe") ||
+    haystack.startsWith("epic universe") ||
+    (post.title || "").toLowerCase().trim().startsWith("epic universe") ||
+    (post.title || "").toLowerCase().includes("at epic universe") ||
+    (post.title || "").toLowerCase().includes("epic universe rides") ||
+    (post.title || "").toLowerCase().includes("epic universe tickets") ||
+    (post.title || "").toLowerCase().includes("epic universe 1-day") ||
+    (post.title || "").toLowerCase().includes("what to do at epic universe");
+  const isMultiUniversal =
+    slug.includes("universal-orlando") ||
+    haystack.includes("universal orlando height") ||
+    (haystack.includes("universal") &&
+      haystack.includes("height") &&
+      !isEpicFocused) ||
+    (haystack.includes("universal orlando") && !isEpicFocused) ||
+    (haystack.includes("universal") &&
+      (haystack.includes("islands") || haystack.includes("epic")) &&
+      !isEpicFocused &&
+      !slug.includes("epic-universe"));
+  const isMultiDisney =
+    haystack.includes("disney world") ||
+    slug.includes("disney-world") ||
+    (signals.has("disney") &&
+      !isMkOnly &&
+      !haystack.includes("epcot") &&
+      !haystack.includes("hollywood") &&
+      !haystack.includes("animal kingdom"));
+
   if (haystack.includes("height") || haystack.includes("under 40") || haystack.includes("ride")) {
-    if (haystack.includes("epic")) {
-      push({
-        href: rideLinkFor({ height: 40, parks: ["Epic Universe"] }),
-        label: "Epic Universe rides under ~40″",
-        description: "Crawlable short-rider list + interactive finder for Epic Universe.",
-      });
-    } else if (haystack.includes("magic kingdom") || haystack.includes("under 40")) {
+    if (isMkOnly) {
       push({
         href: rideLinkFor({ height: 40, parks: ["Magic Kingdom"] }),
         label: "Magic Kingdom rides under ~40″",
         description: "Crawlable MK short-rider list — share before you lock tickets.",
       });
-    } else if (haystack.includes("islands")) {
+    } else if (isEpicFocused) {
+      // Epic-first posts (even when tagged Universal Orlando) stay on Epic short-rider landing
+      push({
+        href: rideLinkFor({ height: 40, parks: ["Epic Universe"] }),
+        label: "Epic Universe rides under ~40″",
+        description: "Crawlable short-rider list + interactive finder for Epic Universe.",
+      });
+    } else if (haystack.includes("islands") && !isMultiUniversal) {
       push({
         href: rideLinkFor({ height: 40, parks: ["Islands of Adventure"] }),
         label: "Islands of Adventure rides under ~40″",
         description: "Crawlable IOA short-rider list for your group chat.",
+      });
+    } else if (isMultiUniversal || (haystack.includes("universal") && haystack.includes("height"))) {
+      push({
+        href: rideLinkFor({
+          height: 40,
+          parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+        }),
+        label: "Universal Orlando rides under ~40″",
+        description: "USF + Islands + Epic short-rider list in one crawlable page.",
       });
     } else if (haystack.includes("universal")) {
       push({
@@ -508,6 +554,15 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
         label: "Animal Kingdom rides under ~40″",
         description: "Crawlable AK short-rider list before you lock a Safari day.",
       });
+    } else if (isMultiDisney) {
+      push({
+        href: rideLinkFor({
+          height: 40,
+          parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+        }),
+        label: "Disney World rides under ~40″ (all 4 parks)",
+        description: "One crawlable short-rider list across Magic Kingdom through Animal Kingdom.",
+      });
     } else {
       push({
         href: rideLinkFor({ height: 40 }),
@@ -515,11 +570,35 @@ export function getHelpfulInternalLinks(post: BlogPostLike, allPosts: BlogPostLi
         description: "Crawlable height list across Disney, Universal, Epic Universe, and more.",
       });
     }
-  } else if (signals.has("disney")) {
+  } else if (isMkOnly) {
     push({
-      href: rideLinkFor({ height: 40 }),
-      label: "Browse Disney-friendly rides by height",
-      description: "Use crawlable height lists so nobody walks into a line kids cannot ride.",
+      href: rideLinkFor({ height: 40, parks: ["Magic Kingdom"] }),
+      label: "Magic Kingdom rides under ~40″",
+      description: "Crawlable MK short-rider list — share before you lock tickets.",
+    });
+  } else if (isEpicFocused) {
+    push({
+      href: rideLinkFor({ height: 40, parks: ["Epic Universe"] }),
+      label: "Epic Universe rides under ~40″",
+      description: "Crawlable short-rider list + interactive finder for Epic Universe.",
+    });
+  } else if (isMultiDisney || signals.has("disney")) {
+    push({
+      href: rideLinkFor({
+        height: 40,
+        parks: ["Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom"],
+      }),
+      label: "Disney World rides under ~40″ (all 4 parks)",
+      description: "Use the multi-park short-rider list so nobody walks into a line kids cannot ride.",
+    });
+  } else if (isMultiUniversal || signals.has("universal")) {
+    push({
+      href: rideLinkFor({
+        height: 40,
+        parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
+      }),
+      label: "Universal Orlando rides under ~40″",
+      description: "USF + Islands + Epic height list before you lock a park day.",
     });
   }
 

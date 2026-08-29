@@ -136,6 +136,8 @@ REDIRECTS = [
     ("/rides/universal-44", "/rides/for/universal-orlando-44", 301),
     ("/rides/disney-calm", "/rides/for/disney-world-calm-under-40", 301),
     ("/rides/universal-calm", "/rides/for/universal-orlando-calm-under-40", 301),
+    ("/rides/disney-52", "/rides/for/disney-world-52", 301),
+    ("/rides/universal-52", "/rides/for/universal-orlando-52", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -198,9 +200,14 @@ TITLE_MUST_CONTAIN = {
     "/rides/for/universal-orlando-44/": "Universal Orlando",
     "/rides/for/disney-world-calm-under-40/": "Disney World",
     "/rides/for/universal-orlando-calm-under-40/": "Universal Orlando",
+    "/rides/for/disney-world-52/": "Disney World",
+    "/rides/for/universal-orlando-52/": "Universal Orlando",
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
+    "/blog/universal-orlando-height-requirements/": "Universal",
+    "/blog/disney-world-packing-list-kids/": "Packing",
+    "/blog/best-magic-kingdom-rides-kids-under-40-inches/": "Magic Kingdom",
     "/about/": "About Plan Your Park",
     "/contact/": "Contact Plan Your Park",
     "/affiliate-disclosure/": "Affiliate Disclosure",
@@ -215,6 +222,7 @@ BODY_MUST_CONTAIN = {
         "/rides/for/under-40/",
         "/rides/for/disney-world-under-40/",
         "/rides/for/universal-orlando-under-40/",
+        "/rides/for/disney-world-52/",
     ],
     "/parks/": [
         "FAQPage",
@@ -225,6 +233,8 @@ BODY_MUST_CONTAIN = {
         "/rides/for/under-40/",
         "/rides/for/disney-world-under-40/",
         "/rides/for/universal-orlando-under-40/",
+        "/rides/for/disney-world-52/",
+        "/rides/for/universal-orlando-52/",
     ],
     "/rides/": [
         "CollectionPage",
@@ -241,6 +251,8 @@ BODY_MUST_CONTAIN = {
         "/rides/for/universal-studios-under-40/",
         "Disney World all four parks",
         "Universal Orlando USF",
+        "/rides/for/disney-world-52/",
+        "/rides/for/universal-orlando-52/",
     ],
     "/rides/for/under-40/": [
         "CollectionPage",
@@ -628,6 +640,14 @@ BODY_MUST_CONTAIN = {
         "CollectionPage", "Universal Studios Florida", "Islands of Adventure", "Epic Universe",
         "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked", "Next planning steps",
     ],
+    "/rides/for/disney-world-52/": [
+        "CollectionPage", "Magic Kingdom", "EPCOT", "Hollywood Studios", "Animal Kingdom",
+        "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/universal-orlando-52/": [
+        "CollectionPage", "Universal Studios Florida", "Islands of Adventure", "Epic Universe",
+        "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked", "Next planning steps",
+    ],
     "/blog/": [
         "CollectionPage",
         "ItemList",
@@ -645,6 +665,24 @@ BODY_MUST_CONTAIN = {
         "logo-full.png",
         "BreadcrumbList",
         "application/ld+json",
+        # Helpful links amplify → crawlable Epic height landing
+        "/rides/for/epic-universe-under-40/",
+    ],
+    "/blog/universal-orlando-height-requirements/": [
+        "BlogPosting",
+        "application/ld+json",
+        # Multi-resort amplify (not single-park USF-only)
+        "/rides/for/universal-orlando-under-40/",
+    ],
+    "/blog/disney-world-packing-list-kids/": [
+        "BlogPosting",
+        "application/ld+json",
+        "/rides/for/disney-world-under-40/",
+    ],
+    "/blog/best-magic-kingdom-rides-kids-under-40-inches/": [
+        "BlogPosting",
+        "application/ld+json",
+        "/rides/for/magic-kingdom-under-40/",
     ],
     "/deals/": [
         "affiliate-disclosure",

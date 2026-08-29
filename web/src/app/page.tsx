@@ -79,6 +79,10 @@ export default async function HomePage() {
               <strong>Universal Orlando under ~40″</strong>
               <span>USF + Islands + Epic short-rider list in one crawlable page.</span>
             </Link>
+            <Link href="/rides/for/disney-world-52/" className="home-start-card">
+              <strong>Disney World 52″+</strong>
+              <span>Near-full access across all 4 Disney parks for taller kids.</span>
+            </Link>
             <Link href="/blog/epic-universe-1-day-plan/" className="home-start-card">
               <strong>Epic Universe 1-day plan</strong>
               <span>Our best-performing family touring plan for the newest park.</span>

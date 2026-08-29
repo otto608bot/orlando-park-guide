@@ -273,3 +273,8 @@
 /rides/disney-calm/ /rides/for/disney-world-calm-under-40/ 301
 /rides/universal-calm /rides/for/universal-orlando-calm-under-40 301
 /rides/universal-calm/ /rides/for/universal-orlando-calm-under-40/ 301
+# Multi-resort 52-inch near-full access aliases (2026-08-29)
+/rides/disney-52 /rides/for/disney-world-52 301
+/rides/disney-52/ /rides/for/disney-world-52/ 301
+/rides/universal-52 /rides/for/universal-orlando-52 301
+/rides/universal-52/ /rides/for/universal-orlando-52/ 301
