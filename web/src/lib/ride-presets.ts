@@ -678,6 +678,77 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     height: 52,
     parks: ["Universal Studios Florida", "Islands of Adventure", "Epic Universe"],
   }),
+  // Park-level 52″ near-full access (major Disney + Universal parks)
+  definePreset({
+    slug: "magic-kingdom-52",
+    label: 'MK + 52"+',
+    blurb: "Magic Kingdom near-full access",
+    seoTitle: 'Magic Kingdom Rides at 52"+ for Kids',
+    seoDescription:
+      "Magic Kingdom rides open around 52 inches and up — near-full access for taller kids, plus the interactive height filter.",
+    height: 52,
+    parks: ["Magic Kingdom"],
+  }),
+  definePreset({
+    slug: "epcot-52",
+    label: 'EPCOT + 52"+',
+    blurb: "EPCOT near-full access",
+    seoTitle: 'EPCOT Rides at 52"+ for Kids',
+    seoDescription:
+      "EPCOT rides open around 52 inches and up — near-full access for taller kids planning a World Showcase + thrills day.",
+    height: 52,
+    parks: ["EPCOT"],
+  }),
+  definePreset({
+    slug: "hollywood-studios-52",
+    label: 'HS + 52"+',
+    blurb: "Hollywood Studios near-full access",
+    seoTitle: 'Hollywood Studios Rides at 52"+ for Kids',
+    seoDescription:
+      "Hollywood Studios rides open around 52 inches and up — near-full access across Toy Story, Galaxy’s Edge, and more.",
+    height: 52,
+    parks: ["Hollywood Studios"],
+  }),
+  definePreset({
+    slug: "animal-kingdom-52",
+    label: 'AK + 52"+',
+    blurb: "Animal Kingdom near-full access",
+    seoTitle: 'Animal Kingdom Rides at 52"+ for Kids',
+    seoDescription:
+      "Animal Kingdom rides open around 52 inches and up — near-full access for taller kids on a Safari + Pandora day.",
+    height: 52,
+    parks: ["Animal Kingdom"],
+  }),
+  definePreset({
+    slug: "universal-studios-52",
+    label: 'USF + 52"+',
+    blurb: "Universal Studios Florida near-full access",
+    seoTitle: 'Universal Studios Florida Rides at 52"+',
+    seoDescription:
+      "Universal Studios Florida rides open around 52 inches and up — near-full access for taller kids before you lock tickets.",
+    height: 52,
+    parks: ["Universal Studios Florida"],
+  }),
+  definePreset({
+    slug: "islands-of-adventure-52",
+    label: 'IOA + 52"+',
+    blurb: "Islands of Adventure near-full access",
+    seoTitle: 'Islands of Adventure Rides at 52"+ for Kids',
+    seoDescription:
+      "Islands of Adventure rides open around 52 inches and up — near-full access including big thrills taller kids can board.",
+    height: 52,
+    parks: ["Islands of Adventure"],
+  }),
+  definePreset({
+    slug: "epic-universe-52",
+    label: 'Epic + 52"+',
+    blurb: "Epic Universe near-full access",
+    seoTitle: 'Epic Universe Rides at 52"+ for Kids',
+    seoDescription:
+      "Epic Universe rides open around 52 inches and up — near-full access across Super Nintendo World, Berk, and more.",
+    height: 52,
+    parks: ["Epic Universe"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */

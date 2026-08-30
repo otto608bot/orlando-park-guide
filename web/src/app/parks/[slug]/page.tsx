@@ -356,7 +356,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
             name: `Will my kid be tall enough for ${park.name} rides?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: `Use the Plan Your Park ride finder filtered for ${park.name} by height (under ~40″, 44″+, 48″+, or all heights) before you lock tickets. Heights can change; always confirm on-site signage.`,
+              text: `Use the Plan Your Park ride finder filtered for ${park.name} by height (under ~40″, 44″+, 48″+, 52″+, or all heights) before you lock tickets. Heights can change; always confirm on-site signage.`,
             },
           },
           {
@@ -428,6 +428,7 @@ export default async function ParkDetailPage({ params }: ParkPageProps) {
               { h: 40, label: 'Under ~40″' },
               { h: 44, label: '44″+' },
               { h: 48, label: '48″+' },
+              { h: 52, label: '52″+' },
             ].map(({ h, label }) => (
               <Link
                 key={h}

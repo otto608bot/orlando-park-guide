@@ -138,6 +138,14 @@ REDIRECTS = [
     ("/rides/universal-calm", "/rides/for/universal-orlando-calm-under-40", 301),
     ("/rides/disney-52", "/rides/for/disney-world-52", 301),
     ("/rides/universal-52", "/rides/for/universal-orlando-52", 301),
+    # Park-level 52″ (2026-08-30)
+    ("/rides/mk-52", "/rides/for/magic-kingdom-52", 301),
+    ("/rides/epcot-52", "/rides/for/epcot-52", 301),
+    ("/rides/hs-52", "/rides/for/hollywood-studios-52", 301),
+    ("/rides/ak-52", "/rides/for/animal-kingdom-52", 301),
+    ("/rides/usf-52", "/rides/for/universal-studios-52", 301),
+    ("/rides/ioa-52", "/rides/for/islands-of-adventure-52", 301),
+    ("/rides/epic-52", "/rides/for/epic-universe-52", 301),
 ]
 
 # path -> substring that must appear in <title>
@@ -202,6 +210,13 @@ TITLE_MUST_CONTAIN = {
     "/rides/for/universal-orlando-calm-under-40/": "Universal Orlando",
     "/rides/for/disney-world-52/": "Disney World",
     "/rides/for/universal-orlando-52/": "Universal Orlando",
+    "/rides/for/magic-kingdom-52/": "Magic Kingdom",
+    "/rides/for/epcot-52/": "EPCOT",
+    "/rides/for/hollywood-studios-52/": "Hollywood Studios",
+    "/rides/for/animal-kingdom-52/": "Animal Kingdom",
+    "/rides/for/universal-studios-52/": "Universal Studios Florida",
+    "/rides/for/islands-of-adventure-52/": "Islands of Adventure",
+    "/rides/for/epic-universe-52/": "Epic Universe",
     "/": "Ride Finder",
     "/parks/": "All Parks in Orlando",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
@@ -253,6 +268,8 @@ BODY_MUST_CONTAIN = {
         "Universal Orlando USF",
         "/rides/for/disney-world-52/",
         "/rides/for/universal-orlando-52/",
+        "/rides/for/magic-kingdom-52/",
+        "/rides/for/epic-universe-52/",
     ],
     "/rides/for/under-40/": [
         "CollectionPage",
@@ -647,6 +664,43 @@ BODY_MUST_CONTAIN = {
     "/rides/for/universal-orlando-52/": [
         "CollectionPage", "Universal Studios Florida", "Islands of Adventure", "Epic Universe",
         "ItemList", "BreadcrumbList", "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/magic-kingdom-52/": [
+        "CollectionPage", "Magic Kingdom", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/epcot-52/": [
+        "CollectionPage", "EPCOT", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/hollywood-studios-52/": [
+        "CollectionPage", "Hollywood Studios", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/animal-kingdom-52/": [
+        "CollectionPage", "Animal Kingdom", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/universal-studios-52/": [
+        "CollectionPage", "Universal Studios Florida", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/islands-of-adventure-52/": [
+        "CollectionPage", "Islands of Adventure", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+    ],
+    "/rides/for/epic-universe-52/": [
+        "CollectionPage", "Epic Universe", "ItemList", "BreadcrumbList",
+        "application/ld+json", "Heights checked", "Next planning steps",
+        "/blog/epic-universe-1-day-plan/",
+    ],
+    "/parks/magic-kingdom/": [
+        "/rides/for/magic-kingdom-52/",
+        "52″+",
+    ],
+    "/parks/epic-universe/": [
+        "/rides/for/epic-universe-52/",
+        "52″+",
     ],
     "/blog/": [
         "CollectionPage",
