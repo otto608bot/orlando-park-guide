@@ -139,8 +139,10 @@ export default async function RidesPage() {
           Single-park presets (Magic
           Kingdom, Hollywood Studios, Epic Universe, Islands of Adventure, SeaWorld, LEGOLAND) help when
           the park day is already locked — including park-level 52&quot;+ lists like{" "}
-          <Link href="/rides/for/magic-kingdom-52/">Magic Kingdom 52 inches+</Link> and{" "}
-          <Link href="/rides/for/epic-universe-52/">Epic Universe 52 inches+</Link>.
+          <Link href="/rides/for/magic-kingdom-52/">Magic Kingdom 52 inches+</Link>,{" "}
+          <Link href="/rides/for/epic-universe-52/">Epic Universe 52 inches+</Link>,{" "}
+          <Link href="/rides/for/seaworld-52/">SeaWorld 52 inches+</Link>, and{" "}
+          <Link href="/rides/for/legoland-52/">LEGOLAND 52 inches+</Link>.
         </p>
         <h3>Do height filters replace official park rules?</h3>
         <p className="rides-seo-lead">

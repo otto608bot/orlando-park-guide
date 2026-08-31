@@ -749,6 +749,27 @@ export const RIDE_HEIGHT_PRESETS: readonly RidePreset[] = [
     height: 52,
     parks: ["Epic Universe"],
   }),
+  // Complete park-level 52″ for SeaWorld + LEGOLAND (park chips already call rideLinkFor 52)
+  definePreset({
+    slug: "seaworld-52",
+    label: 'SeaWorld + 52"+',
+    blurb: "SeaWorld near-full access",
+    seoTitle: 'SeaWorld Orlando Rides at 52"+ for Kids',
+    seoDescription:
+      "SeaWorld Orlando rides open around 52 inches and up — near-full access for taller kids alongside shows and animal experiences.",
+    height: 52,
+    parks: ["SeaWorld Orlando"],
+  }),
+  definePreset({
+    slug: "legoland-52",
+    label: 'LEGOLAND + 52"+',
+    blurb: "LEGOLAND near-full access",
+    seoTitle: 'LEGOLAND Florida Rides at 52"+ for Kids',
+    seoDescription:
+      "LEGOLAND Florida rides open around 52 inches and up — fuller access for taller kids on a kids-first park day.",
+    height: 52,
+    parks: ["LEGOLAND Florida"],
+  }),
 ] as const;
 
 /** Interactive finder paths (with query) — still listed for share discovery. */
