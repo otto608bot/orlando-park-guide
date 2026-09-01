@@ -1,6 +1,6 @@
 # Scorecard
 
-Updated: 2026-09-01 (Google SEO OAuth re-auth success; fresh 28d pull)
+Updated: 2026-09-01 (ride-preset + 71 height landings LIVE; OAuth restored)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
@@ -21,21 +21,22 @@ Families with kids → choose the right park/rides → return + convert (tickets
 *OAuth restored 2026-09-01 → `.hermes/google_seo_token.json`. Analytics no longer blocked.*
 
 ## Leading indicators this sprint
-- **Watch 14d CTR (post 2026-07-22/23 + utility pack 2026-08-05; + height landings once deployed):** [Epic Universe rides ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [parks hub](https://planyourpark.com/parks/), [packing list kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal height requirements](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides finder](https://planyourpark.com/rides/), park landings (MK/Epic), [deals](https://planyourpark.com/deals/), [blog hub](https://planyourpark.com/blog/), staged [height landings](https://planyourpark.com/rides/for/under-40/), staged multi-resort + **park-level 52″ all 9 parks** (MK/Epic/USF/IOA/HS/EPCOT/AK/SeaWorld/LEGOLAND)
+- **Watch 14d CTR (utility 2026-08-05 + height landings 2026-09-01):** [height landings hub](https://planyourpark.com/rides/for/under-40/), [MK under-40 landing](https://planyourpark.com/rides/for/magic-kingdom-under-40/), [Disney under-40](https://planyourpark.com/rides/for/disney-world-under-40/), [Epic under-40](https://planyourpark.com/rides/for/epic-universe-under-40/), [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [parks](https://planyourpark.com/parks/), [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal heights](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides](https://planyourpark.com/rides/), [deals](https://planyourpark.com/deals/)
 - Preserve earners: [Epic 1-day plan](https://planyourpark.com/blog/epic-universe-1-day-plan/), [MK rides under 40"](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/)
 - Amazon live on packing paths (`tag=planyourpark-20`); Undercover Tourist ticket CTAs on commercial pages
-- Integrity: **14/14 clean** (2026-08-31 daily)
-- Live blog QA: **14/14 PASS** (2026-08-31 daily)
+- Integrity: **14/14 clean** (2026-09-01 deploy)
+- Live blog QA: **14/14 PASS** (2026-09-01 deploy)
 - Buffer channels connected: FB / IG / Pinterest
-- **Utility SEO + conversion pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1` · origin docs `034c60c` · live aliases/titles confirmed 2026-08-09
-- **Staged (local `main` ahead of origin):** ride preset expansion v2 + **USF filter park-name fix** + **71 static `/rides/for/*` height SEO landings** (+HS/EPCOT 44″ + AK 48 + SeaWorld/LEGOLAND 44/48/**52** + **8 park calm-under-40** + **9 park-all** + **multi-resort Disney/Universal 40/44/48/52/all/calm** + **9 park-level 52″**) + **calm filter fix** + **home/parks/blog/rides helpful → SEO paths** + **height-landing guides/FAQ/BreadcrumbList** + **mid-list ticket CTA** + **park calm chips + 52″ chips** + **short height aliases** + typed aliases + blog hub amplify + **blog earner helpful → multi-resort landings** — local smoke PASS (110 pages); live smoke medium findings until deploy
-- Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board **still at limit** 08-31; offline packs in `ops/buffer/ideas-offline-2026-08-26.md` + `ops/buffer/ideas-offline-2026-08-29.md` + `ops/buffer/ideas-offline-2026-08-30.md` + `ops/buffer/ideas-offline-2026-08-31.md`
+- **Utility SEO pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1`
+- **Ride presets + 71 height landings LIVE 2026-09-01** — tip `c6868a6` · Netlify `6a970db3` · live smoke 0 · sitemap 71 `/rides/for/*` — `ops/weekly/2026-09-01-deploy.md`
+- Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board **still at limit**; offline packs `ops/buffer/ideas-offline-2026-08-*.md`
 - **Owner P0 done 2026-09-01:** Google SEO OAuth re-auth — GSC/GA4 live again
-- Optional: **APPROVE QUEUE BUFFER** for idea packs on board (prefer after ride-preset deploy; 08-10→08-23 packs are live-safe) + prune Ideas board
-- **APPROVE DEPLOY RIDE PRESETS** for 2026-08-06→08-31 delta (presets + USF + **71 landings** + calm + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short aliases + HS/EPCOT 44 + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48/52 + park calm-under-40 + park-all + multi-resort matrix incl. **52″** + **park-level 52″ all parks** + **blog helpful multi-resort amplify**)
+- Optional: **APPROVE QUEUE BUFFER** (post-deploy OK now — height URLs resolve) + prune Ideas board
 
 ## Last review
-- Ops review 2026-07-24 — `weekly/2026-W30-ops.md`; analytics blocked; Phase 1 live measuring window open once GSC returns
+- **Deploy 2026-09-01** — ride presets + 71 height landings LIVE (`c6868a6` / Netlify `6a970db3`) — `weekly/2026-09-01-deploy.md`
+- OAuth restored 2026-09-01; fresh GSC/GA4 pull on scorecard
+- Ops review 2026-08-29 W35 #2 — `weekly/2026-W35-ops-2.md`
 - Deploy 2026-07-22 — CTR v2 + Amazon renderer (`60dc2d9`); 15 Buffer posts queued FB/IG/Pinterest
 - Deploy 2026-07-23 — height SEO + Amazon list wiring + MK amplify (`b23b2af`)
 - Full blog Sanity QA + list/Amazon renderer fixes + Netlify rebuilds 2026-07-23 (`831482b` … `b337725`)

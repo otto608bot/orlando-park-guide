@@ -60,13 +60,14 @@
 - [x] **Park-level 52″ landings (7)** MK/EPCOT/HS/AK/USF/IOA/Epic + park chips 52″+ + rides hub amplify + short aliases — **staged 2026-08-30** (local smoke PASS, 108 pages / 69 landings)
 - [x] **SeaWorld + LEGOLAND 52″ landings (2)** + short aliases + rides hub amplify + smoke park-52 overwrite fix — **staged 2026-08-31** (local smoke PASS, 110 pages / 71 landings)
 - [ ] Buffer product idea packs 2026-08-25/26/29/30/31 — **blocked** (Ideas board limit; offline drafts in `ops/buffer/ideas-offline-2026-08-26.md` + `ops/buffer/ideas-offline-2026-08-29.md` + `ops/buffer/ideas-offline-2026-08-30.md` + `ops/buffer/ideas-offline-2026-08-31.md`)
-- [ ] **DEPLOY** Ride preset expansion v2 + USF filter fix + static height landings (**71**) + calm filter + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short height aliases + **HS/EPCOT 44** + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48/52 + **park calm-under-40 (8)** + **park-all (9)** + **multi-resort Disney/Universal (incl. 52″)** + **park-level 52″ (9 = all parks)** + blog helpful multi-resort amplify + blog/typed aliases — awaiting **APPROVE DEPLOY RIDE PRESETS**
-- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 + 2026-08-22 + 2026-08-23 Buffer idea packs when ready (Ideas board at limit — prune or queue; offline 08-26/08-29/08-30/08-31 packs ready)
-- [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live, 0 findings; reconfirmed 2026-08-06; production still utility-only through 2026-08-25 pending ride-preset batch)
+- [x] **DEPLOY** Ride preset expansion v2 + USF filter fix + static height landings (**71**) + calm filter + SEO-link amplify + landing conversion polish + 44″ band + mid-CTA + calm chips + short height aliases + HS/EPCOT 44 + blog hub amplify + AK 48 + SeaWorld/LEGOLAND 44/48/52 + park calm-under-40 + park-all + multi-resort + park-level 52″ all parks + blog amplify — **APPROVED + DEPLOYED 2026-09-01** tip `c6868a6` Netlify `6a970db3` — live smoke 0 — `ops/weekly/2026-09-01-deploy.md`
+- [ ] Queue 2026-07-28 + 2026-07-29 + 2026-07-30 + 2026-07-31 + 2026-08-01 + 2026-08-02 + 2026-08-03 + 2026-08-04 + 2026-08-05 + 2026-08-06 + 2026-08-07 + 2026-08-08 + 2026-08-09 + 2026-08-10 + 2026-08-11 + 2026-08-21 + 2026-08-22 + 2026-08-23 Buffer idea packs when ready (Ideas board at limit — prune or queue; offline 08-26/08-29/08-30/08-31 packs ready; height URLs now live)
+- [x] After utility deploy: `python3 scripts/post_deploy_smoke.py --fail-on high` → **exit 0** (2026-08-05 live)
+- [x] After ride-preset deploy: live smoke **exit 0** + 71 sitemap landings + sample titles 200 (2026-09-01)
 
 ## P1
 - [x] Itinerary builder one-pager spec (uses ride DB + kid constraints) — `ops/specs/itinerary-builder.md`  
-- [x] Height-filter SEO: shareable URLs or landing copy — **live** `/rides/` presets + meta (`b23b2af`); **static landings staged** 2026-08-08  
+- [x] Height-filter SEO: shareable URLs or landing copy — **live** `/rides/` presets + **71** static `/rides/for/*` landings (**DEPLOYED 2026-09-01** `c6868a6`)
 - [x] Queue Buffer posts from idea packs — 15 posts FB/IG/Pinterest queued 2026-07-22 (addToQueue)  
 - [x] Affiliate inventory audit on top posts — 2026-07-20; Amazon wiring live 2026-07-22; list-body complete 2026-07-23  
 - [x] Review packing-list Portable Charger Amazon gear path — list/heading processor **live** (57 tags on packing kids)  
