@@ -12,7 +12,7 @@
 - [x] **DEPLOY** Sanity integrity patches + redirects rebuild — **APPROVED 2026-07-17**  
 - [x] CTR package v2 + Amazon renderer — **APPROVED + DEPLOYED 2026-07-22** (`60dc2d9`)  
 - [x] **DEPLOY** Height-filter SEO + homepage CTR meta + Amazon list-body + helpful-links MK amplify + Sanity MK inbound rebuild — **APPROVED + DEPLOYED 2026-07-23** (`b23b2af`) — see `ops/weekly/2026-07-23-deploy.md`
-- [ ] **Re-auth Google SEO token** — analytics still blocked 2026-08-08 (`invalid_grant`) — ops P0 owner action (W32 ops)
+- [x] **Re-auth Google SEO token** — restored 2026-09-01; GSC/GA4 pull OK
 - [x] **DEPLOY** Utility SEO + conversion pack 2026-07-24→08-05 — **APPROVED + DEPLOYED 2026-08-05** tip `d6365ea` Netlify `6a735cc1` — live smoke 0 findings; aliases/titles/schema verified — `ops/weekly/2026-08-05-deploy.md`
 - [x] Deals page FTC disclosure (header + affiliate-disclosure link) — staged 2026-07-28
 - [x] Buffer idea packs Epic tickets / baby-toddler / beat crowds / character dining — **created 2026-07-28** (review only)
