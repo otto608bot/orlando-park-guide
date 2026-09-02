@@ -1,20 +1,20 @@
 # Scorecard
 
-Updated: 2026-09-01 (ride-preset + 71 height landings LIVE; OAuth restored)
+Updated: 2026-09-02 (fresh 28d pull; height-landings monitoring begins)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
 
 ## Baseline vs latest (28d)
 
-| Metric | Baseline ~2026-07-22 | Latest 2026-09-01 pull | 30d target | 90d target |
+| Metric | Baseline ~2026-07-22 | Latest 2026-09-02 pull | 30d target | 90d target |
 |---|---:|---:|---:|---:|
-| GSC clicks | 3 | **1** (GSC end 2026-08-30) | 50 | 300 |
-| GSC impressions | 1,403 | **634** | 3,000 | 10,000 |
-| GSC CTR | 0.21% | **0.16%** | 1.5% | 2.5%+ |
-| GSC avg position | 38.7 | **22.8** (better) | 30 | 20 |
-| GA4 sessions | 35 | **66** (2026-08-04→09-01) | 200 | 1,000 |
-| GA4 users | 29 | **59** | 180 | 900 |
+| GSC clicks | 3 | **2** (GSC end 2026-08-31) | 50 | 300 |
+| GSC impressions | 1,403 | **648** | 3,000 | 10,000 |
+| GSC CTR | 0.21% | **0.31%** | 1.5% | 2.5%+ |
+| GSC avg position | 38.7 | **22.4** (better) | 30 | 20 |
+| GA4 sessions | 35 | **75** (2026-08-05→09-02) | 200 | 1,000 |
+| GA4 users | 29 | **62** | 180 | 900 |
 | Email subs (Tally) | unknown/low | unknown/low | 50 | 500 |
 | Affiliate revenue | ~$0 tracked | ~$0 tracked | first real $ | meaningful (not tip jar) |
 
@@ -31,9 +31,12 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - **Ride presets + 71 height landings LIVE 2026-09-01** — tip `c6868a6` · Netlify `6a970db3` · live smoke 0 · sitemap 71 `/rides/for/*` — `ops/weekly/2026-09-01-deploy.md`
 - Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board **still at limit**; offline packs `ops/buffer/ideas-offline-2026-08-*.md`
 - **Owner P0 done 2026-09-01:** Google SEO OAuth re-auth — GSC/GA4 live again
-- Optional: **APPROVE QUEUE BUFFER** (post-deploy OK now — height URLs resolve) + prune Ideas board
+- **Fresh pull 2026-09-02:** GA4 **75 sessions / 62 users**; GSC **2 clicks / 648 impressions / 0.31% CTR / 22.4 avg position** (end 2026-08-31)
+- First signal: organic **36 sessions**; 4 views / 2 sessions reached [MK under-40](https://planyourpark.com/rides/for/magic-kingdom-under-40/) after the 2026-09-01 deploy — too early to attribute/index.
+- Optional: **APPROVE QUEUE BUFFER** (post-deploy URLs resolve) + prune Ideas board
 
 ## Last review
+- **Ops review 2026-09-02 (W36)** — fresh measurement: `weekly/2026-W36-ops.md`
 - **Deploy 2026-09-01** — ride presets + 71 height landings LIVE (`c6868a6` / Netlify `6a970db3`) — `weekly/2026-09-01-deploy.md`
 - OAuth restored 2026-09-01; fresh GSC/GA4 pull on scorecard
 - Ops review 2026-08-29 W35 #2 — `weekly/2026-W35-ops-2.md`
