@@ -1,7 +1,10 @@
 # Backlog
 
 ## P0 — this sprint
-- [x] Refresh meta/H1/intro/CTAs: Epic Universe rides ranked (titles + body integrity)  
+- [ ] **CTR package: parks hub** (229 impr / 0 clk / pos 29.1) — title/H1/intro + height-landing + ticket links (draft→dual QA→approve)
+- [ ] **CTR package: Epic tickets guide** (178 impr / 0 clk / pos 10.4) — meta/title + ticket CTA audit
+- [ ] **CTR snippet: MK under-40 post** (52 impr / 0 clk / pos 7.4) — title/excerpt only if integrity green
+- [x] Refresh meta/H1/intro/CTAs: Epic Universe rides ranked (titles + body integrity) — re-open if 83 impr stay 0-click after parks/tickets CTR
 - [x] Refresh `/parks/` for “all parks in Orlando” intent  
 - [x] CTR pass: packing list kids + Universal height requirements (titles/excerpts)  
 - [x] Dual-QA content SOP dry run on Phase 1 refresh  

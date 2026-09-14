@@ -1,28 +1,28 @@
 # Scorecard
 
-Updated: 2026-09-11 (Google SEO OAuth restored; fresh 28d GSC/GA4 pull)
+Updated: 2026-09-14 (ops review W38; fresh 28d GSC/GA4 pull)
 
 ## North star
 Families with kids → choose the right park/rides → return + convert (tickets/gear/email).
 
 ## Baseline vs latest (28d)
 
-| Metric | Baseline ~2026-07-22 | Latest 2026-09-11 pull | 30d target | 90d target |
+| Metric | Baseline ~2026-07-22 | Latest 2026-09-14 pull | 30d target | 90d target |
 |---|---:|---:|---:|---:|
-| GSC clicks | 3 | **5** (GSC end 2026-09-09) | 50 | 300 |
-| GSC impressions | 1,403 | **969** | 3,000 | 10,000 |
-| GSC CTR | 0.21% | **0.52%** | 1.5% | 2.5%+ |
-| GSC avg position | 38.7 | **21.0** (better) | 30 | 20 |
-| GA4 sessions | 35 | **93** (2026-08-14→09-11) | 200 | 1,000 |
-| GA4 users | 29 | **72** | 180 | 900 |
+| GSC clicks | 3 | **5** (GSC end 2026-09-12) | 50 | 300 |
+| GSC impressions | 1,403 | **1,053** | 3,000 | 10,000 |
+| GSC CTR | 0.21% | **0.47%** | 1.5% | 2.5%+ |
+| GSC avg position | 38.7 | **20.3** (better) | 30 | 20 |
+| GA4 sessions | 35 | **94** (2026-08-17→09-14) | 200 | 1,000 |
+| GA4 users | 29 | **73** | 180 | 900 |
 | Email subs (Tally) | unknown/low | unknown/low | 50 | 500 |
 | Affiliate revenue | ~$0 tracked | ~$0 tracked | first real $ | meaningful (not tip jar) |
 
-*OAuth restored 2026-09-11 → `.hermes/google_seo_token.json` (readonly Analytics + Search Console). Analytics unblocked.*
+*OAuth valid 2026-09-14 → `.hermes/google_seo_token.json` (readonly Analytics + Search Console).*
 
 ## Leading indicators this sprint
-- **Watch 14d CTR (utility 2026-08-05 + height landings 2026-09-01):** [height landings hub](https://planyourpark.com/rides/for/under-40/), [MK under-40 landing](https://planyourpark.com/rides/for/magic-kingdom-under-40/), [Disney under-40](https://planyourpark.com/rides/for/disney-world-under-40/), [Epic under-40](https://planyourpark.com/rides/for/epic-universe-under-40/), [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [parks](https://planyourpark.com/parks/), [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal heights](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides](https://planyourpark.com/rides/), [deals](https://planyourpark.com/deals/)
-- Preserve earners: [Epic 1-day plan](https://planyourpark.com/blog/epic-universe-1-day-plan/), [MK rides under 40"](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/)
+- **Watch CTR (utility 2026-08-05 + height landings 2026-09-01):** [height landings hub](https://planyourpark.com/rides/for/under-40/), [MK under-40 landing](https://planyourpark.com/rides/for/magic-kingdom-under-40/), [Disney under-40](https://planyourpark.com/rides/for/disney-world-under-40/), [Disney World 52″](https://planyourpark.com/rides/for/disney-world-52/), [Epic under-40](https://planyourpark.com/rides/for/epic-universe-under-40/), [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [Epic tickets](https://planyourpark.com/blog/epic-universe-tickets-guide/), [parks](https://planyourpark.com/parks/), [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal heights](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides](https://planyourpark.com/rides/), [deals](https://planyourpark.com/deals/)
+- Preserve earners: [Epic 1-day plan](https://planyourpark.com/blog/epic-universe-1-day-plan/), [MK rides under 40"](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/), packing kids
 - Amazon live on packing paths (`tag=planyourpark-20`); Undercover Tourist ticket CTAs on commercial pages
 - Integrity: **14/14 clean** (2026-09-01 deploy)
 - Live blog QA: **14/14 PASS** (2026-09-01 deploy)
@@ -30,15 +30,15 @@ Families with kids → choose the right park/rides → return + convert (tickets
 - **Utility SEO pack LIVE 2026-08-05** — tip `d6365ea` · Netlify `6a735cc1`
 - **Ride presets + 71 height landings LIVE 2026-09-01** — tip `c6868a6` · Netlify `6a970db3` · live smoke 0 · sitemap 71 `/rides/for/*` — `ops/weekly/2026-09-01-deploy.md`
 - Buffer: product idea packs 2026-07-24→08-23 (review only) — not queued; Ideas board **still at limit**; offline packs `ops/buffer/ideas-offline-2026-08-*.md`
-- **Owner P0 done 2026-09-11:** Google SEO OAuth re-auth (after Sep 10 `invalid_grant`) — GSC/GA4 live again
-- **Fresh pull 2026-09-11:** GA4 **93 sessions / 72 users / 51 organic sessions**; GSC **5 clicks / 969 impressions / 0.52% CTR / 21.0 avg position** (end 2026-09-09). Versus Sep 6: +9 sessions, +3 users, +3 clicks, +216 impressions, CTR 0.27%→0.52%.
-- GSC click URLs (1 each): [best time 2026](https://planyourpark.com/blog/best-time-visit-disney-world-2026/), [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Epic 1-day](https://planyourpark.com/blog/epic-universe-1-day-plan/), [Disney World 52″ landing](https://planyourpark.com/rides/for/disney-world-52/), [Epic under-40 landing](https://planyourpark.com/rides/for/epic-universe-under-40/)
-- High-impr 0-click: [parks hub](https://planyourpark.com/parks/) 181 impr / pos 29.3; [Epic tickets](https://planyourpark.com/blog/epic-universe-tickets-guide/) 158 / 12.8; [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/) 104 / 23.1; [MK under-40 post](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/) 50 / 7.0
-- GA4 top: Universal heights 37 views; `/rides/` 27; packing kids 15; home 13
-- **Live check 2026-09-10:** 71 height URLs remain in the sitemap; direct 200 checks passed for Disney World 44/52, core Phase-1 commercial posts, parks, and rides.
+- **Fresh pull 2026-09-14 (W38):** GA4 **94 sessions / 73 users / 52 organic sessions**; GSC **5 clicks / 1,053 impressions / 0.47% CTR / 20.3 avg position** (end 2026-09-12). Versus Sep 11: +1 session, +1 user, +84 impressions, clicks flat at 5, CTR 0.52%→0.47%, position 21.0→20.3.
+- GSC click URLs: [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/) **2** / 33 impr / 6.1% CTR; [Epic 1-day](https://planyourpark.com/blog/epic-universe-1-day-plan/) **1** / 66 / 1.5%; [Disney World 52″ landing](https://planyourpark.com/rides/for/disney-world-52/) **1** / 23 / 4.4%; [Epic under-40 landing](https://planyourpark.com/rides/for/epic-universe-under-40/) **1** / 6 / 16.7%
+- High-impr 0-click (Phase-1 CTR targets): [parks hub](https://planyourpark.com/parks/) **229** impr / pos 29.1; [Epic tickets](https://planyourpark.com/blog/epic-universe-tickets-guide/) **178** / 10.4; [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/) **83** / 20.7; [MK under-40 post](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/) **52** / 7.4
+- GA4 top: Universal heights 37 views; `/rides/` 27; home 16; packing kids 16; packing adult 7; best-time 2026 6; **MK under-40 landing 4 views**
+- **Live check 2026-09-14:** sitemap still **71** `/rides/for/*`; sample 200s: parks, under-40 hub, Disney World 52″, Epic under-40, Epic tickets, Epic ranked
 
 ## Last review
-- **OAuth restored 2026-09-11** — fresh GSC/GA4 28d pull on this scorecard
+- **Ops review 2026-09-14 (W38)** — fresh measurement: `weekly/2026-W38-ops.md`
+- **OAuth restored 2026-09-11** — GSC/GA4 28d pull on scorecard
 - **Ops review 2026-09-10 (W37)** — analytics refresh blocked at the time; last good then was Sep 6: `weekly/2026-W37-ops.md`
 - **Ops review 2026-09-06 (W36)** — fresh measurement: `weekly/2026-W36-ops.md`
 - **Deploy 2026-09-01** — ride presets + 71 height landings LIVE (`c6868a6` / Netlify `6a970db3`) — `weekly/2026-09-01-deploy.md`
