@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity";
 import ParkCard from "@/components/ParkCard";
+import ParksDecisionTracker from "@/components/ParksDecisionTracker";
 import { createPageMetadata, getParksHubJsonLd } from "@/lib/seo";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
@@ -52,7 +53,31 @@ export default async function ParksPage() {
       </header>
 
       <section className="parks-decision" aria-label="Quick family picks">
-        <h2>Quick picks for families</h2>
+        <ParksDecisionTracker />
+        <h2>Start with what your kid can ride</h2>
+        <p className="parks-decision-intro">
+          The park cards below let you compare every option. If height is the decision-maker, start here
+          and open the exact ride list first.
+        </p>
+        <div className="parks-decision-choices" aria-label="Choose a family ride starting point">
+          <Link href="/rides/for/under-40/" className="parks-decision-choice" data-decision-cta data-decision-choice="under-40">
+            <strong>Under ~40&quot;</strong>
+            <span>Short-rider options across every park</span>
+          </Link>
+          <Link href="/rides/for/height-44/" className="parks-decision-choice" data-decision-cta data-decision-choice="height-44">
+            <strong>Around 44&quot;</strong>
+            <span>When more family coasters open</span>
+          </Link>
+          <Link href="/rides/for/height-52/" className="parks-decision-choice" data-decision-cta data-decision-choice="height-52">
+            <strong>52&quot;+</strong>
+            <span>Nearly full access to major rides</span>
+          </Link>
+          <Link href="/rides/for/calm/" className="parks-decision-choice" data-decision-cta data-decision-choice="calm">
+            <strong>Calm rides</strong>
+            <span>Gentler choices for sensitive kids</span>
+          </Link>
+        </div>
+        <h3>Quick picks by trip type</h3>
         <ul>
           <li>
             <strong>Preschoolers / under ~40&quot;:</strong> Magic Kingdom, LEGOLAND, parts of Animal Kingdom
@@ -186,6 +211,57 @@ export default async function ParksPage() {
           margin: 0 0 0.75rem;
         }
 
+        .parks-decision h3 {
+          font-family: var(--font-heading);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--text-dark);
+          margin: 1.5rem 0 0.75rem;
+        }
+
+        .parks-decision-intro {
+          color: var(--text-medium);
+          line-height: 1.55;
+          margin: 0 0 1rem;
+        }
+
+        .parks-decision-choices {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 0.65rem;
+        }
+
+        .parks-decision-choice {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          min-height: 88px;
+          padding: 0.85rem;
+          background: var(--bg-white);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          color: var(--text-dark) !important;
+          text-decoration: none;
+        }
+
+        .parks-decision-choice:hover,
+        .parks-decision-choice:focus-visible {
+          border-color: var(--primary);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .parks-decision-choice strong {
+          color: var(--primary);
+          font-size: 1rem;
+        }
+
+        .parks-decision-choice span {
+          color: var(--text-medium);
+          font-size: 0.82rem;
+          font-weight: 400;
+          line-height: 1.35;
+        }
+
         .parks-decision ul {
           margin: 0 0 1.25rem;
           padding-left: 1.2rem;
@@ -259,6 +335,8 @@ export default async function ParksPage() {
           .parks-page-container { padding: 1.5rem 1rem 3rem; }
           .parks-grid-full { grid-template-columns: 1fr; }
           .parks-decision { padding: 1.15rem 1rem; }
+          .parks-decision-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .parks-decision-choice { min-height: 100px; padding: 0.8rem; }
         }
       `}</style>
     </div>

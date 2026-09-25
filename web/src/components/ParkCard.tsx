@@ -14,6 +14,17 @@ interface ParkCardProps {
 }
 
 export default function ParkCard({ park }: ParkCardProps) {
+  const parkFit: Record<string, string> = {
+    'magic-kingdom': 'Best for: classic first Disney day',
+    epcot: 'Best for: mixed ages and slower pacing',
+    'hollywood-studios': 'Best for: Star Wars and Toy Story fans',
+    'animal-kingdom': 'Best for: animals and a calmer day',
+    'universal-studios-florida': 'Best for: older kids and movie fans',
+    'islands-of-adventure': 'Best for: thrill-seeking mixed ages',
+    'epic-universe': 'Best for: newer lands and bigger thrills',
+    'seaworld-orlando': 'Best for: shows, animals, and coasters',
+    'legoland-florida': 'Best for: younger builders',
+  };
   const parkImages: Record<string, string> = {
     'magic-kingdom': 'Magic-Kingdom.webp',
     'epcot': 'epcot.jpeg',
@@ -36,7 +47,9 @@ export default function ParkCard({ park }: ParkCardProps) {
       </div>
       <div className="park-card-content">
         <h3>{park.name}</h3>
+        {parkFit[park.slug.current] && <p className="park-card-fit">{parkFit[park.slug.current]}</p>}
         {park.description && <p>{park.description.substring(0, 100)}...</p>}
+        <span className="park-card-action">Explore rides, heights &amp; family fit →</span>
       </div>
       
       <style>{`
@@ -87,6 +100,20 @@ export default function ParkCard({ park }: ParkCardProps) {
           color: var(--text-medium);
           line-height: 1.5;
           margin: 0;
+        }
+
+        .park-card-content .park-card-fit {
+          color: var(--primary);
+          font-weight: 700;
+          margin-bottom: 0.45rem;
+        }
+
+        .park-card-action {
+          display: inline-block;
+          color: var(--primary);
+          font-size: 0.875rem;
+          font-weight: 700;
+          margin-top: 0.9rem;
         }
       `}</style>
     </Link>

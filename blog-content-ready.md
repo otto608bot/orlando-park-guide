@@ -140,6 +140,9 @@
 
 ---
 
+**Status:** **superseded 2026-09-25** by the published height/energy/interests decision post
+`/blog/disney-vs-universal-with-kids-2026/`. Do not create the 10-category comparison. Keep `/parks/` as the general Orlando comparison page.
+
 ### POST 7: Disney World vs. Universal Orlando: Which Is Better?
 
 **Slug:** disney-world-vs-universal-orlando
