@@ -1,6 +1,7 @@
 # Backlog
 
 ## P0 — this sprint
+- [x] **Deploy GA4 affiliate-click tracking** — live 2026-09-25 (`408cc2c`, Netlify `6ab67243c35a3a0008e66abc`); first event review due after 7–14 days — `ops/weekly/2026-09-25-affiliate-tracking-deploy.md`
 - [ ] **CTR package: parks hub** (229 impr / 0 clk / pos 29.1) — title/H1/intro + height-landing + ticket links (draft→dual QA→approve)
 - [ ] **CTR package: Epic tickets guide** (178 impr / 0 clk / pos 10.4) — meta/title + ticket CTA audit
 - [ ] **CTR snippet: MK under-40 post** (52 impr / 0 clk / pos 7.4) — title/excerpt only if integrity green
