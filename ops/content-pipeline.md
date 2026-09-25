@@ -4,11 +4,12 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 ## Now
 
-**Status 2026-09-22 (W39):** Ride preset batch + **71** `/rides/for/*` landings remain **published** (deployed 2026-09-01 `c6868a6`). Live HEAD 200 + integrity 14/14 OK today. Analytics OAuth **still blocked** (`invalid_grant` again) — last good GSC/GA4 2026-09-14. Rows still saying `awaiting_approval` for the height batch are historical — treat as live. Next work = re-auth analytics + **Phase-1 CTR** on high-impr 0-click URLs (parks hub, Epic tickets, Epic ranked, MK under-40), not net-new posts. Buffer Ideas still full. No product deploy since 2026-09-01.
+**Status 2026-09-25:** Analytics OAuth restored. Parks hub mobile chooser + Disney vs Universal kids post **published** (`cf74148` / Netlify `6ab6f4b389ed7300089baf7a`). Integrity 15/15 and live blog QA 15/15 PASS. Next = watch `park_decision_click` / affiliate events and remaining Phase-1 CTR pages (Epic tickets, Epic ranked, MK under-40). Buffer Ideas still full.
 
 | slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
-| parks hub CTR v2 | published + distributed | live; **229 impr / 0 clicks** → next CTR package | tickets | https://planyourpark.com/parks/ |
+| parks hub CTR v2 | published + distributed | live; mobile height chooser shipped 2026-09-25 | tickets | https://planyourpark.com/parks/ |
+| disney-vs-universal-with-kids-2026 | published | height/energy/interests decision post | tickets | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/ |
 | epic-universe-rides-ranked-guide CTR v2 | published + distributed | live; high-impr 0-click focus | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |
 | disney-world-packing-list-kids CTR v2 | published + distributed | live; Amazon tags verified | Amazon + tickets | https://planyourpark.com/blog/disney-world-packing-list-kids/ |
 | universal-orlando-height-requirements CTR v2 | published + distributed | live + MK cross-link; Epic 1-day amplify **staged** | tool + tickets + Amazon | https://planyourpark.com/blog/universal-orlando-height-requirements/ |

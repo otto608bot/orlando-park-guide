@@ -2,6 +2,7 @@
 
 ## P0 — this sprint
 - [x] **Deploy GA4 affiliate-click tracking** — live 2026-09-25 (`408cc2c`, Netlify `6ab67243c35a3a0008e66abc`); first event review due after 7–14 days — `ops/weekly/2026-09-25-affiliate-tracking-deploy.md`
+- [x] **Parks hub mobile decision chooser + Disney vs Universal kids post** — live 2026-09-25 (`cf74148`, Netlify `6ab6f4b389ed7300089baf7a`); watch `park_decision_click` + CTR — `ops/weekly/2026-09-25-parks-mobile-disney-vs-universal-deploy.md`
 - [ ] **CTR package: parks hub** (229 impr / 0 clk / pos 29.1) — title/H1/intro + height-landing + ticket links (draft→dual QA→approve)
 - [ ] **CTR package: Epic tickets guide** (178 impr / 0 clk / pos 10.4) — meta/title + ticket CTA audit
 - [ ] **CTR snippet: MK under-40 post** (52 impr / 0 clk / pos 7.4) — title/excerpt only if integrity green
