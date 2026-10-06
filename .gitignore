@@ -3,6 +3,7 @@ _site/
 .DS_Store
 .venv-analytics/
 .hermes/google_seo_token.json
+.hermes/google_seo_client_secret.json
 .hermes/google_seo_oauth_pending.json
 .hermes/buffer_api_key
 .hermes/netlify_auth_token

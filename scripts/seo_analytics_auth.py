@@ -26,7 +26,12 @@ from google_auth_oauthlib.flow import Flow
 
 ROOT = Path(__file__).resolve().parents[1]
 HERMES_HOME = Path.home() / ".hermes"
-CLIENT_SECRET_PATH = HERMES_HOME / "google_client_secret.json"
+PROJECT_CLIENT_SECRET_PATH = ROOT / ".hermes" / "google_seo_client_secret.json"
+CLIENT_SECRET_PATH = (
+    PROJECT_CLIENT_SECRET_PATH
+    if PROJECT_CLIENT_SECRET_PATH.exists()
+    else HERMES_HOME / "google_client_secret.json"
+)
 TOKEN_PATH = ROOT / ".hermes" / "google_seo_token.json"
 PENDING_PATH = ROOT / ".hermes" / "google_seo_oauth_pending.json"
 

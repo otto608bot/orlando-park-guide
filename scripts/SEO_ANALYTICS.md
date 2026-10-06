@@ -4,16 +4,15 @@ Local tooling so Hermes can pull GA4 + Search Console reviews for planyourpark.c
 
 ## One-time setup
 
-### 1. Enable APIs (Google Cloud project that owns the OAuth client)
+### 1. Enable APIs (project that owns the site-only OAuth client)
 
-In the same Google Cloud project as `~/.hermes/google_client_secret.json`, enable:
+Dedicated project: [`plan-your-park-analytics`](https://console.cloud.google.com/home/dashboard?project=plan-your-park-analytics), created Oct 5, 2026, with Analytics Data/Admin and Search Console APIs enabled. The Desktop OAuth client JSON lives at `.hermes/google_seo_client_secret.json` (gitignored; mode 0600). The auth script prefers this local client and only falls back to `~/.hermes/google_client_secret.json` when the local file is absent. **Never commit either client secret or the token.**
 
-- [Google Analytics Data API](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com)
-- [Google Analytics Admin API](https://console.cloud.google.com/apis/library/analyticsadmin.googleapis.com)
-- [Google Search Console API](https://console.cloud.google.com/apis/library/searchconsole.googleapis.com)
+- [Google Analytics Data API](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com?project=plan-your-park-analytics)
+- [Google Analytics Admin API](https://console.cloud.google.com/apis/library/analyticsadmin.googleapis.com?project=plan-your-park-analytics)
+- [Google Search Console API](https://console.cloud.google.com/apis/library/searchconsole.googleapis.com?project=plan-your-park-analytics)
 
-If the OAuth app is in **Testing**, add your Google account under
-[Audience → Test users](https://console.cloud.google.com/auth/audience).
+Before reauthorizing on the new client, publish the reviewed app homepage/privacy pages, set the matching URLs under [Branding](https://console.cloud.google.com/auth/branding?project=plan-your-park-analytics), and move the site-only app beyond Testing under [Audience](https://console.cloud.google.com/auth/audience?project=plan-your-park-analytics). Never migrate the shared Hermes Workspace client for this site's branding. During Testing, add the operator account as a test user if needed.
 
 ### 2. Confirm product access
 
@@ -29,10 +28,10 @@ Using the **same Google account** you’ll authorize:
 export PY="/Users/bennett/Hermes/planyourpark/.venv-analytics/bin/python"
 
 env -u PYTHONPATH $PY scripts/seo_analytics_auth.py --auth-url
-# open the printed URL, approve Analytics + Search Console read access
-# browser may error on localhost redirect — copy the full redirect URL
-
-env -u PYTHONPATH $PY scripts/seo_analytics_auth.py --auth-code 'PASTE_FULL_REDIRECT_URL'
+# Open the printed URL in the visible Hermes preview. The account holder approves
+# only Analytics + Search Console read access there; no code/redirect is pasted in chat.
+# Hermes reads the localhost redirect privately from the preview and exchanges it.
+env -u PYTHONPATH $PY scripts/seo_analytics_auth.py --auth-code 'LOCAL_REDIRECT_FROM_PREVIEW'
 env -u PYTHONPATH $PY scripts/seo_analytics_auth.py --check
 ```
 
