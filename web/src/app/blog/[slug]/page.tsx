@@ -175,7 +175,8 @@ function getFallbackHero(post: BlogPostRecord) {
 function getTicketButtonHref(ticketText: string) {
   const label = ticketText.toLowerCase();
 
-  if (label.includes("1-park epic universe")) return AFFILIATE_LINKS.universal1Park1DayEpic;
+  // universal1Park1DayEpic is mislabeled (CJ 12834895 = Universal 2-park 2-day); send Epic 1-park labels to /deals/.
+  if (label.includes("1-park epic universe")) return "/deals/";
   if (label.includes("2-park")) return AFFILIATE_LINKS.universal2Park2Day;
   if (label.includes("3-park")) return AFFILIATE_LINKS.universal3Park3Day;
   if (label.includes("direct from universal")) return AFFILIATE_LINKS.universalOrlandoDirect;
@@ -397,14 +398,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
           </div>
           <div className="blog-primary-cta-actions">
-            <a
-              href={contextualTicketCta.href}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="primary"
-            >
-              {contextualTicketCta.supportingLabel}
-            </a>
+            {contextualTicketCta.href.startsWith("/") ? (
+              <Link href={contextualTicketCta.href} className="primary">
+                {contextualTicketCta.supportingLabel}
+              </Link>
+            ) : (
+              <a
+                href={contextualTicketCta.href}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="primary"
+              >
+                {contextualTicketCta.supportingLabel}
+              </a>
+            )}
             <Link href="/deals" className="secondary">See all Orlando deal options</Link>
           </div>
         </section>

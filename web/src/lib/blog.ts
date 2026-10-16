@@ -3,6 +3,9 @@ import { rideLinkFor } from "@/lib/ride-presets";
 const AFFILIATE_LINKS = {
   disney4DayParkHopper: "https://www.tkqlhce.com/click-101693488-12783539",
   universal3Park3Day: "https://www.dpbolvw.net/click-101693488-12983229",
+  // NOTE (2026-10-16): MISLABELED KEY. CJ link 12834895 goes to Undercover Tourist's Universal
+  // 2-park, 2-day park-to-park ticket (confirmed by owner), NOT an Epic Universe 1-day ticket.
+  // Do not use it for Epic CTAs; the Epic CTA below points to /deals/ until a real Epic link exists.
   universal1Park1DayEpic: "https://www.tkqlhce.com/click-101693488-12834895",
   seaworld: "https://www.tkqlhce.com/click-101693488-12540778",
   legoland: "https://www.anrdoezrs.net/click-101693488-12540781",
@@ -312,10 +315,11 @@ export function getContextualTicketCta(post: BlogPostLike): ContextualTicketCta 
 
   if (signals.has("epic")) {
     return {
-      href: AFFILIATE_LINKS.universal1Park1DayEpic,
-      label: "See Epic Universe ticket options",
-      description: "Best for single-park Epic Universe coverage and fast price checking.",
-      supportingLabel: "Universal Orlando partner pricing",
+      // Was AFFILIATE_LINKS.universal1Park1DayEpic (mislabeled: 2-park 2-day ticket). Pending a real Epic link.
+      href: "/deals/",
+      label: "Compare Epic Universe ticket options",
+      description: "See current Epic Universe and Universal Orlando ticket options from our ticket partner on our deals page.",
+      supportingLabel: "Compare Epic Universe ticket options",
     };
   }
 
