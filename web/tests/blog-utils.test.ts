@@ -108,7 +108,7 @@ test("getContextualTicketCta selects a destination-relevant primary offer", () =
       slug: { current: "epic-universe-tickets-guide" },
       categories: [{ title: "Universal Orlando" }],
     }).href,
-    "https://www.tkqlhce.com/click-101693488-12834895",
+    "/deals/",
   );
 
   assert.equal(
