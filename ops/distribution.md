@@ -36,3 +36,11 @@ All go to Buffer queue or `ops/weekly` for approval with **full links**.
 - [ ] Reddit account(s) + which subs OK  
 - [ ] Quora account  
 - [ ] Optional: connect X to Buffer  
+
+## UTM convention (approved 2026-10-16)
+
+Tag every social link:
+`utm_source={facebook|instagram|pinterest}&utm_medium=social&utm_campaign=evergreen-YYYY-MM&utm_content={post-slug}`
+
+Example (October 2026, Pinterest):
+`https://planyourpark.com/blog/disney-world-packing-list/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=disney-world-packing-list`
