@@ -11,9 +11,9 @@
 | 2 | /blog/universal-orlando-height-requirements/ | 17 | 16 | 188s |
 | 3 | /blog/disney-world-packing-list-kids/ | 10 | 11 | 146s |
 
-**UTM convention (new; distribution.md defines none):** `utm_source={facebook|instagram|pinterest}&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content={post-slug}`. Instagram: link in bio / link sticker uses the instagram-tagged URL.
+**UTM convention (approved by CEO 2026-10-16; documented in ops/distribution.md):** `utm_source={facebook|instagram|pinterest}&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content={post-slug}`. Instagram: link in bio / link sticker uses the instagram-tagged URL.
 
-**Affiliate disclosure:** None of the linked destinations below are affiliate links (post, `/rides/` ride finder, `/parks/` park chooser), so no disclosure in captions. If any pack is edited to link `/deals/` or Amazon, add: "We may earn a commission from some links, at no extra cost to you."
+**Affiliate disclosure:** No caption disclosure is needed when captions link only to our own posts/pages. None of the linked destinations below are affiliate links (post, `/rides/` ride finder, `/parks/` park chooser), so no disclosure in captions. If any pack is edited to link `/deals/` or Amazon, add: "We may earn a commission from some links, at no extra cost to you."
 
 **Images:** simple text-only branded graphics made on the box (`ops/buffer/img-2026-10-16/`). No people, no park logos. (Post hero images were not reused: they are AI-style scenes with people and Disney/Universal branding.)
 
