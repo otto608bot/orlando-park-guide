@@ -42,3 +42,24 @@ Every link target returned HTTP 200 live on 2026-10-16, and no anchor exceeds 60
   - The disney-world-guide draft no longer contains "I've been to Disney".
   - All 12 **published** docs keep their pre-apply `_rev` and body, i.e. unchanged.
 - Nothing was published.
+
+## Packing posts — 7 more targeted span REPLACES (applied to drafts 2026-10-16 ~11:35 CT, txn `8zlLPwu11vTM6HR7vzZPPQ`)
+These are non-insert edits. Old text is pinned in `packing_replaces.json`. Each edit was re-verified against the current drafts and guarded with `ifRevisionID`.
+
+- **disney-world-packing-list:**
+  - intro (`span-9b3c8e9ed1cc`): removes "verified by Orlando locals who've done this dozens of times" and the "people who've never navigated…" claim.
+  - heat (`span-33a91940982d`): "regularly hit 95°F with 80%+ humidity" → NOAA normals (Jun–Aug highs ~91–92°F; Dec–Feb highs ~72–75°F).
+  - summer FAQ (`s879be0cfbb33`): same NOAA fix.
+  - winter FAQ (`span-df13f26c389e`): "60–75°F" → NOAA highs ~72–75°F / lows ~50–53°F.
+  - "five things most first-time visitors wish they had brought" (`span-d9d46275df0d`) → neutral priority list.
+  - closing "four things most first-time visitors wish…" (`span-af4834551c09`) → neutral.
+- **disney-world-packing-list-kids:**
+  - intro (`e531a32a974e`): removes "items that actual families… used… tested in real heat".
+- **Source (dated):** NOAA NCEI 1991–2020 monthly normals, Orlando Intl AP (USW00012815), https://www.ncei.noaa.gov/data/normals-monthly/1991-2020/access/USW00012815.csv, accessed 2026-10-16.
+  - Values (°F): Jun 90.8 / Jul 92.0 / Aug 91.6 highs; Dec 73.8 / Jan 71.8 / Feb 74.9 highs; lows 52.9 / 49.5 / 52.4.
+  - Humidity percentages were removed; the text now says only "humid", because these normals don't include humidity.
+  - The citation is inline text, not a link. Add a link in Studio if wanted.
+- **Not changed (flag for later review):**
+  - packing-kids "heat index hits 95°F+" and stroller-fan "10–15 degrees" claims.
+  - "Kids feel heat more" medical-adjacent lines elsewhere.
+- Read-back: all 7 spans show the new text, no flagged phrases remain, and both **published** docs keep their `_rev` (unchanged).
