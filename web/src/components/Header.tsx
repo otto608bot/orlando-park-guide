@@ -2,17 +2,20 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { filtersToQuery, useFilters } from '@/context/FiltersContext';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [parksDropdownOpen, setParksDropdownOpen] = useState(false);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  // Read filter state from context (not useSearchParams) so the header
+  // doesn't force client-side rendering of every page in static export.
+  const { filters } = useFilters();
+  const filterQuery = filtersToQuery(filters);
 
   const buildParkHref = (parkPath: string) => {
-    const params = new URLSearchParams(searchParams.toString());
-    return `${parkPath}${params.toString() ? `?${params.toString()}` : ''}`;
+    return `${parkPath}${filterQuery ? `?${filterQuery}` : ''}`;
   };
 
   const isActive = (path: string) => {
@@ -24,13 +27,7 @@ export default function Header() {
   const hasFilters = pathname === '/' || pathname === '/rides' || pathname.startsWith('/parks');
 
   // Check if any filters are active (from URL params)
-  const hasActiveFilters = hasFilters && (
-    searchParams.get('height') ||
-    searchParams.get('pregnancySafe') ||
-    searchParams.get('wheelchair') ||
-    searchParams.get('calm') ||
-    searchParams.get('parks')
-  );
+  const hasActiveFilters = hasFilters && filterQuery.length > 0;
 
   const parksDropdownRef = useRef<HTMLDivElement>(null);
 
