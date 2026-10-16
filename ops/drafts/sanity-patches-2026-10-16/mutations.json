@@ -1260,6 +1260,30 @@
      "body[_key==\"block-22cdf86bac9a\"].children[_key==\"span-22cdf86bac9a\"].text": "Park days are physically demanding for kids. Every Disney park has a First Aid station, but it may be a long walk away, so a small family kit covers the everyday basics like bandages and blister care:"
     }
    }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"978380997239\"].children[_key==\"a1c15bfa0227\"].text": "\nIf your child is prone to motion sickness, ask your pediatrician about motion-sickness options before your trip."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"361ec0c52bdd\"].children[_key==\"e84dc79687f5\"].text": "Every Walt Disney World theme park has First Aid (Disney's official First Aid page, accessed Oct 16, 2026), staffed by medical professionals. For emergencies, dial 911 or alert any cast member. First Aid locations are marked on park maps."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list",
+    "set": {
+     "body[_key==\"block-83c1ec8cf815\"].children[_key==\"s76b01292884f\"].text": "\nIf anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip."
+    }
+   }
   }
  ]
 }

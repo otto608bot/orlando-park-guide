@@ -4,7 +4,7 @@ Status: **prepared locally, NOT applied.** Post content lives only in Sanity (pr
 
 Files:
 - `build_patches.py` regenerates `mutations.json` and `preview.md`.
-- `mutations.json` holds 20 mutations (19 inserts + 15 targeted span replaces) targeting `drafts.<id>`.
+- `mutations.json` holds 20 mutations (19 inserts + 18 targeted span replaces) targeting `drafts.<id>`.
 - `preview.md` shows the inserted text.
 
 Scope (12 posts):
@@ -82,3 +82,13 @@ Old text is pinned in `packing_replaces_2.json`. Each edit was re-verified again
 - **Still flagged (not changed):**
   - packing-kids motion-sickness line naming Bonine/Dramamine with timing advice (`a1c15bfa0227`).
   - FAQ "First Aid staffed by registered nurses" (`e84dc79687f5`) needs an official Disney citation.
+
+## Packing posts — 3 more span REPLACES (motion sickness + First Aid FAQ), applied to drafts 2026-10-16 ~11:45 CT, txn `f1O3mfm9f6TgHfHlPz4ATI`
+- **packing-kids** `a1c15bfa0227`:
+  - Bonine/Dramamine timing advice and the unverified "rides have spins" list removed.
+  - Now: "If your child is prone to motion sickness, ask your pediatrician about motion-sickness options before your trip."
+- **packing-kids** `e84dc79687f5` (FAQ):
+  - Disney's official First Aid page (https://disneyworld.disney.go.com/guest-services/first-aid/, accessed 2026-10-16) confirms "First aid is available in every Walt Disney World theme park". Its fetched text does **not** mention nurses.
+  - "Registered nurses" → "staffed by medical professionals". The unverified OTC-meds/urgent-care claims were removed.
+- **packing** `s76b01292884f` (Anti-Nausea Medication item): replaced with the same "ask your pediatrician or doctor about motion-sickness options" wording.
+- Read-back: applied; Bonine, Dramamine and "registered nurses" are gone; published `_rev`s are unchanged.

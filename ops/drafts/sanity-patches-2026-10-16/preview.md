@@ -118,3 +118,19 @@ Travel days and new food can be rough on little stomachs; pack whatever your ped
 ### disney-world-packing-list · block `block-22cdf86bac9a` span `span-22cdf86bac9a`
 - **Before:** Park days are physically demanding for kids. Disney's first aid stations exist but walking there takes time. A well-packed family medical kit handles 90% of what comes up:
 - **After:** Park days are physically demanding for kids. Every Disney park has a First Aid station, but it may be a long walk away, so a small family kit covers the everyday basics like bandages and blister care:
+
+### disney-world-packing-list-kids · block `978380997239` span `a1c15bfa0227`
+- **Before:** 
+Seven Dwarfs Mine Train, Slinky Dog Dash, and Frozen Ever After all have spins. If your child is prone to motion sickness, give Bonine or Dramamine before the park — not after symptoms start. Ask your pediatrician which they recommend for your child's age and weight.
+- **After:** 
+If your child is prone to motion sickness, ask your pediatrician about motion-sickness options before your trip.
+
+### disney-world-packing-list-kids · block `361ec0c52bdd` span `e84dc79687f5`
+- **Before:** Every Disney park has a First Aid station staffed by registered nurses. They handle minor injuries, provide over-the-counter medications, and can connect you with local urgent care if needed. For emergencies, dial 911 or alert any cast member. First Aid is clearly marked on park maps and at the front of every park.
+- **After:** Every Walt Disney World theme park has First Aid (Disney's official First Aid page, accessed Oct 16, 2026), staffed by medical professionals. For emergencies, dial 911 or alert any cast member. First Aid locations are marked on park maps.
+
+### disney-world-packing-list · block `block-83c1ec8cf815` span `s76b01292884f`
+- **Before:** 
+If anyone in your group is sensitive to motion simulator rides.
+- **After:** 
+If anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip.
