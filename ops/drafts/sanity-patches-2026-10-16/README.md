@@ -33,3 +33,12 @@ Every link target returned HTTP 200 live on 2026-10-16, and no anchor exceeds 60
   - After: "For families with young kids, one thing about Disney World holds true:"
 - The rest of the sentence is unchanged.
 - `build_patches.py` asserts the original text before building. Re-check the span text in the draft before you apply, because a `set` overwrites the whole span.
+
+## Applied to DRAFTS 2026-10-16 ~11:25 CT (transaction `f1O3mfm9f6TgHfHlPz28kS`)
+- Before applying, I re-fetched all 12 published docs. Every body was identical to the audit fetch: 0 drift, all 19 insert anchors present, and the replace span text matched exactly.
+- No drafts existed beforehand. I created all 12 `drafts.<id>` docs from the published content (`createIfNotExists`) and applied the 20 mutations in one transaction, after a successful dryRun.
+- Read-back:
+  - All 12 drafts exist with every inserted block (+19 blocks total).
+  - The disney-world-guide draft no longer contains "I've been to Disney".
+  - All 12 **published** docs keep their pre-apply `_rev` and body, i.e. unchanged.
+- Nothing was published.
