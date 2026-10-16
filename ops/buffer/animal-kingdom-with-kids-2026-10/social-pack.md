@@ -34,7 +34,7 @@ Full guide + a calm half-day plan: link in bio.
 ## Pinterest (PlanYourPark)
 - **Title:** Animal Kingdom with Kids: Rides by Height + Easy Half-Day Plan
 - **Description:** Planning Animal Kingdom with kids? See which rides work at any height, 38" and 44", with heights checked on Disney's official pages (Oct 2026). Includes the best rides for kids under 40", heat tips, and a simple half-day plan for toddlers and preschoolers.
-- **Board:** *Disney World with Kids* (**board name unconfirmed**: no board list in the repo; pick an existing board in Buffer/Pinterest)
+- **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`). It's the only board on the PlanYourPark channel, per a read-only Buffer GraphQL `channel.metadata.boards` query on 2026-10-16.
 - **Image:** `pin-1000x1500.png` (text-only, 2:3)
 - **Destination URL:** https://planyourpark.com/blog/animal-kingdom-with-kids-rides-by-height/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=animal-kingdom-with-kids-rides-by-height
 
@@ -43,4 +43,4 @@ Full guide + a calm half-day plan: link in bio.
 - [x] No people or logos in the graphics
 - [x] Heights match the post and the official pages (accessed 2026-10-16)
 - [ ] Post published (blocked: needs approval)
-- [ ] Pinterest board confirmed
+- [x] Pinterest board confirmed (Buffer read-only, 2026-10-16)

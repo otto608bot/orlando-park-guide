@@ -38,6 +38,9 @@ PASS height Avatar Flight of Passage=44
 PASS height Expedition Everest=44 
 PASS height Kali River Rapids=38 
 PASS closed rides not listed as open 
+PASS no unverified ticket ages 
+PASS no unverified Tropical Americas year 
+PASS closure dates attributed 
 PASS heights dated 
 PASS heat line non-medical + First Aid pointer 
 fails 0

@@ -41,7 +41,26 @@
 - `live_blog_qa.py`: not applicable until published (and blocked by the site-wide CSR issue).
 
 ## Open flags
-1. **Ride finder data is stale for AK.** `data/rides.js` still lists DINOSAUR, TriceraTop Spin and "It's Tough to be a Bug" (`ak-bug`). The AK finder pages this post links to may show closed rides. Needs a data fix before or with publish.
-2. Hero image: an AI hero in the blog style is required by HERMES.md. **Not generated**, and the draft has no `heroImage`.
-3. Ticket-age claim and Tropical Americas timing need official citations.
+1. Ride finder: closed AK rides fixed in Sanity ride **drafts** (`RIDE-FINDER-FIX.md`). They must be published + redeployed together with this post.
+2. ~~Hero~~: text-only branded hero attached (see update). It is not an AI scene image; confirm it's acceptable per HERMES.md.
+3. ~~Ticket-age / Tropical Americas~~: removed (see update).
 4. `publishedAt` is unset (set at publish).
+
+## Update 2026-10-16 ~11:55 CT (draft rev `f1O3mfm9f6TgHfHlPz4g5I`)
+- **Ticket ages removed.**
+  - Disney's ticket pages (admission/tickets, FAQ ticket-age-ranges) render client-side only, so the age text could not be read from the box (WebFetch failed too).
+  - The post now says: "Check Disney's official ticket page for current child ticket ages and prices before you buy."
+- **Tropical Americas year removed.**
+  - The Disney Parks Blog (Apr 30, 2026) says 2027.
+  - Disney's own "Coming to the Parks" page dropped "in 2027" on Sep 10, 2026, as reported by WDWMagic and WDW News Today (Sep 10, 2026).
+  - Because the official sources conflict, the post now says "check Disney's official site for current opening timing".
+- **Closure dates now attributed in text:**
+  - "WDWMagic reported…" with article dates: Sep 2, 2025; Mar 14, 2025; plus WDW News Today, Feb 2, 2026.
+  - Added the It's Tough to be a Bug! closure (Mar 16, 2025 final shows).
+- **Hero:** text-only branded graphic `hero-1376x768.png` (no people, no Disney logos), uploaded as asset `image-243e0fc1ed84366f692b36c5cebae367ceebc850-1376x768-png` and attached as `heroImage`.
+- **Ride finder fix:** see `RIDE-FINDER-FIX.md`.
+- **QA re-run:**
+  - `qa.py`: 0 fails, now also checking no ticket ages, no 2027, and attributed closures.
+  - Integrity analyzer on all 14 blog drafts: 0 issues.
+  - Repo integrity (published): 0 issues.
+- Body is now about 1,151 words.

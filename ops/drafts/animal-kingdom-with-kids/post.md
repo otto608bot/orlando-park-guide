@@ -24,7 +24,7 @@ Source: official Walt Disney World attraction pages, accessed October 16, 2026. 
 
 ## What Changed in 2026: DinoLand Is Closed
 
-If you are reading older guides, note that DinoLand U.S.A. is gone. DINOSAUR's last day was February 1, 2026, after TriceraTop Spin closed in January 2025 and The Boneyard playground in September 2025. The area is being rebuilt as Tropical Americas, which Disney has said is planned for 2027. Finding Nemo: The Big Blue… and Beyond! is a separate theater show; check the park's entertainment schedule for current times.
+If you are reading older guides, note that DinoLand U.S.A. is gone. WDWMagic reported that TriceraTop Spin closed in January 2025 and The Boneyard playground on September 2, 2025 (WDWMagic, Sep 2, 2025), and that DINOSAUR's last day was February 1, 2026 (WDWMagic, Sep 2, 2025; WDW News Today, Feb 2, 2026). It's Tough to be a Bug! also closed after its final shows on March 16, 2025 (WDWMagic, Mar 14, 2025), and its theater now hosts Zootopia: Better Zoogether!. The DinoLand area is being rebuilt as Tropical Americas; check Disney's official site for current opening timing. Finding Nemo: The Big Blue… and Beyond! is a separate theater show; check the park's entertainment schedule for current times.
 
 ## Best Animal Kingdom Rides for Kids Under 38 Inches
 
@@ -73,7 +73,7 @@ For many families, yes — especially as a lighter day between bigger parks. If 
 
 ## Tickets
 
-Animal Kingdom is included with standard Disney World park tickets. Disney counts children ages 3–9 at child pricing, and children under 3 do not need a ticket. Compare current ticket options on our [Disney World deals page](/deals/).
+Animal Kingdom is included with standard Disney World park tickets. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our [Disney World deals page](/deals/).
 
 ## FAQ
 
@@ -85,4 +85,4 @@ Animal Kingdom is included with standard Disney World park tickets. Disney count
 
 **What can a 3-year-old do at Animal Kingdom?** Kilimanjaro Safaris, Na'vi River Journey, the Wildlife Express Train, the animal trails and the shows all have no height requirement. See all of them in the [ride finder](/rides/for/animal-kingdom-all/).
 
-**Is DINOSAUR still open?** No. DINOSAUR closed after February 1, 2026, as part of the Tropical Americas project.
+**Is DINOSAUR still open?** No. WDWMagic and WDW News Today reported that DINOSAUR's last day was February 1, 2026, as DinoLand U.S.A. closed for the Tropical Americas project.

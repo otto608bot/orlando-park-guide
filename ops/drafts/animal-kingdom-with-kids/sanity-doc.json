@@ -284,7 +284,7 @@
     {
      "_type": "span",
      "_key": "1e4f8b7e1eea",
-     "text": "If you are reading older guides, note that DinoLand U.S.A. is gone. DINOSAUR's last day was February 1, 2026, after TriceraTop Spin closed in January 2025 and The Boneyard playground in September 2025. The area is being rebuilt as Tropical Americas, which Disney has said is planned for 2027. Finding Nemo: The Big Blue… and Beyond! is a separate theater show; check the park's entertainment schedule for current times.",
+     "text": "If you are reading older guides, note that DinoLand U.S.A. is gone. WDWMagic reported that TriceraTop Spin closed in January 2025 and The Boneyard playground on September 2, 2025 (WDWMagic, Sep 2, 2025), and that DINOSAUR's last day was February 1, 2026 (WDWMagic, Sep 2, 2025; WDW News Today, Feb 2, 2026). It's Tough to be a Bug! also closed after its final shows on March 16, 2025 (WDWMagic, Mar 14, 2025), and its theater now hosts Zootopia: Better Zoogether!. The DinoLand area is being rebuilt as Tropical Americas; check Disney's official site for current opening timing. Finding Nemo: The Big Blue… and Beyond! is a separate theater show; check the park's entertainment schedule for current times.",
      "marks": []
     }
    ]
@@ -1037,7 +1037,7 @@
     {
      "_type": "span",
      "_key": "0572b0756ee0",
-     "text": "Animal Kingdom is included with standard Disney World park tickets. Disney counts children ages 3–9 at child pricing, and children under 3 do not need a ticket. Compare current ticket options on our ",
+     "text": "Animal Kingdom is included with standard Disney World park tickets. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our ",
      "marks": []
     },
     {
@@ -1195,10 +1195,18 @@
     {
      "_type": "span",
      "_key": "aa152a70fe92",
-     "text": " No. DINOSAUR closed after February 1, 2026, as part of the Tropical Americas project.",
+     "text": " No. WDWMagic and WDW News Today reported that DINOSAUR's last day was February 1, 2026, as DinoLand U.S.A. closed for the Tropical Americas project.",
      "marks": []
     }
    ]
   }
- ]
+ ],
+ "heroImage": {
+  "_type": "image",
+  "alt": "Text graphic: Animal Kingdom with kids, rides by height",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-243e0fc1ed84366f692b36c5cebae367ceebc850-1376x768-png"
+  }
+ }
 }
