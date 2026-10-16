@@ -59,6 +59,11 @@ assert OLD_TEXT.startswith(REPLACE['old_phrase'])
 NEW_TEXT = OLD_TEXT.replace(REPLACE['old_phrase'], REPLACE['new_phrase'], 1)
 R = REPLACE
 muts.append({"patch":{"id":f"drafts.{IDS[R['slug']]}","set":{f'body[_key=="{R['block']}"].children[_key=="{R['span']}"].text': NEW_TEXT}}})
+# --- Packing-post neutral-wording span replaces (2026-10-16 #2); old text pinned from current drafts ---
+PR = json.load(open(os.path.join(H,'packing_replaces.json')))
+for e in PR['edits']:
+    assert "I've been" not in e['new'] and 'locals' not in e['new'] and 'actual families' not in e['new']
+    muts.append({"patch":{"id":e['draft'],"set":{f'body[_key=="{e['block']}"].children[_key=="{e['span']}"].text': e['new']}}})
 json.dump({"_note":"NOT APPLIED. Sanity draft mutations (all inserts except ONE targeted span set on disney-world-guide); create drafts.<id> from published first. Seuss Trolley untouched (see README).","mutations":muts}, open(os.path.join(H,'mutations.json'),'w'), indent=1, ensure_ascii=False)
 with open(os.path.join(H,'preview.md'),'w') as f:
     f.write("# Preview of inserted paragraphs (2026-10-16)\n\n")
@@ -69,11 +74,6 @@ with open(os.path.join(H,'preview.md'),'w') as f:
 with open(os.path.join(H,'preview.md'),'a') as f:
     f.write("## disney-world-guide — REPLACE (the one non-insert edit)\n")
     f.write(f"Block `{R['block']}`, span `{R['span']}` only.\n\n- **Before:** {OLD_TEXT}\n- **After:** {NEW_TEXT}\n")
-# --- Packing-post neutral-wording span replaces (2026-10-16 #2); old text pinned from current drafts ---
-PR = json.load(open(os.path.join(H,'packing_replaces.json')))
-for e in PR['edits']:
-    assert "I've been" not in e['new'] and 'locals' not in e['new'] and 'actual families' not in e['new']
-    muts.append({"patch":{"id":e['draft'],"set":{f'body[_key=="{e['block']}"].children[_key=="{e['span']}"].text': e['new']}}})
 with open(os.path.join(H,'preview.md'),'a') as f:
     f.write("\n## Packing posts — REPLACES (neutral wording + dated NOAA source)\n")
     for e in PR['edits']:
