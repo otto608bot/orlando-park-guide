@@ -92,3 +92,23 @@ Old text is pinned in `packing_replaces_2.json`. Each edit was re-verified again
   - "Registered nurses" → "staffed by medical professionals". The unverified OTC-meds/urgent-care claims were removed.
 - **packing** `s76b01292884f` (Anti-Nausea Medication item): replaced with the same "ask your pediatrician or doctor about motion-sickness options" wording.
 - Read-back: applied; Bonine, Dramamine and "registered nurses" are gone; published `_rev`s are unchanged.
+
+## Epic Universe tickets — CTR + above-the-fold (applied to draft 2026-10-16 ~12:00 CT, txn `8zlLPwu11vTM6HR7vzbwXm`)
+- **How title/meta are set:**
+  - `web/src/app/blog/[slug]/page.tsx` uses Sanity `title` for `<title>`, H1, OG and Twitter, with the layout appending " | Plan Your Park".
+  - Sanity `excerpt` becomes the meta description (and the OG description, plus the blog card).
+  - There are no separate SEO fields, so changing `title` also changes the H1.
+- **GSC (2026-09-17 → 10-14):** 96 impressions, 0 clicks, position 8.1. **All 96 impressions are anonymized: there are 0 query rows.** A 90-day window shows only 2 long-tail questions (6 impr, pos 64; 2 impr, pos 50). The options below therefore rest on page intent and SERP position, not observed queries. See `epic_ctr.json` for the option set and reasoning.
+- **Title:**
+  - Before: "Epic Universe Tickets: Pricing, Tiers, and Money-Saving Tips"
+  - After: "Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families"
+- **Meta (excerpt):**
+  - Before: "How to compare current Epic Universe tickets, Universal Express and authorized-seller options without relying on stale price claims."
+  - After: "Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026."
+- **Inserted:**
+  - The affiliate disclosure right under the first H2, before any affiliate link.
+  - A ticket CTA after the finder/chooser paragraph: Undercover Tourist via `/deals/`, plus the Epic under-40 ride finder link.
+  - The earlier link paragraph (`5ed1d877e3ef`) is preserved.
+- **No price or policy claims were added or changed.**
+- Published doc `_rev` is unchanged.
+- **Flag:** `AFFILIATE_LINKS.universal1Park1DayEpic` (CJ link 12834895), used by the template's Epic CTA, is labeled in `data/undercover-tourist-links.csv` as "Save $53 on Universal 2-Day Park to Park" (2023), not an Epic 1-day ticket. Verify the destination in CJ.

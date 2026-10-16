@@ -134,3 +134,11 @@ If your child is prone to motion sickness, ask your pediatrician about motion-si
 If anyone in your group is sensitive to motion simulator rides.
 - **After:** 
 If anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip.
+
+## epic-universe-tickets-guide — title/excerpt (meta) + above-the-fold inserts
+- **Title before:** Epic Universe Tickets: Pricing, Tiers, and Money-Saving Tips
+- **Title after:** Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families
+- **Meta before:** How to compare current Epic Universe tickets, Universal Express and authorized-seller options without relying on stale price claims.
+- **Meta after:** Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026.
+- **Insert after `h239qaB`:** Heads up: some ticket links in this guide are affiliate links. If you book through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **Insert after `5ed1d877e3ef`:** Ready to compare? See current Epic Universe and Universal Orlando ticket options from our ticket partner, Undercover Tourist, on our [Orlando ticket deals page](/deals/). Not sure Epic fits your kids yet? Start with the [Epic Universe under-40 ride list](/rides/for/epic-universe-under-40/).

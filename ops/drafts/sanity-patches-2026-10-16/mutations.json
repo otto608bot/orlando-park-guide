@@ -1284,6 +1284,122 @@
      "body[_key==\"block-83c1ec8cf815\"].children[_key==\"s76b01292884f\"].text": "\nIf anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip."
     }
    }
+  },
+  {
+   "patch": {
+    "id": "drafts.blogPost-epic-universe-tickets-guide",
+    "set": {
+     "title": "Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families",
+     "excerpt": "Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.blogPost-epic-universe-tickets-guide",
+    "insert": {
+     "after": "body[_key==\"h239qaB\"]",
+     "items": [
+      {
+       "_type": "block",
+       "_key": "bb4b0b6f3825",
+       "style": "normal",
+       "markDefs": [
+        {
+         "_type": "link",
+         "_key": "3684bd87359d",
+         "href": "/affiliate-disclosure/"
+        }
+       ],
+       "children": [
+        {
+         "_type": "span",
+         "_key": "b42175400e2e",
+         "text": "Heads up: some ticket links in this guide are affiliate links. If you book through them, we may earn a commission at no extra cost to you. ",
+         "marks": []
+        },
+        {
+         "_type": "span",
+         "_key": "71c3ace549ae",
+         "text": "See our affiliate disclosure",
+         "marks": [
+          "3684bd87359d"
+         ]
+        },
+        {
+         "_type": "span",
+         "_key": "2ba4012ef068",
+         "text": ".",
+         "marks": []
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.blogPost-epic-universe-tickets-guide",
+    "insert": {
+     "after": "body[_key==\"5ed1d877e3ef\"]",
+     "items": [
+      {
+       "_type": "block",
+       "_key": "3d548df53b32",
+       "style": "normal",
+       "markDefs": [
+        {
+         "_type": "link",
+         "_key": "932ffb801fec",
+         "href": "/deals/"
+        },
+        {
+         "_type": "link",
+         "_key": "f4fe26412c02",
+         "href": "/rides/for/epic-universe-under-40/"
+        }
+       ],
+       "children": [
+        {
+         "_type": "span",
+         "_key": "27a096a9e590",
+         "text": "Ready to compare? See current Epic Universe and Universal Orlando ticket options from our ticket partner, Undercover Tourist, on our ",
+         "marks": []
+        },
+        {
+         "_type": "span",
+         "_key": "f6ee8d876c9b",
+         "text": "Orlando ticket deals page",
+         "marks": [
+          "932ffb801fec"
+         ]
+        },
+        {
+         "_type": "span",
+         "_key": "a2be3f139228",
+         "text": ". Not sure Epic fits your kids yet? Start with the ",
+         "marks": []
+        },
+        {
+         "_type": "span",
+         "_key": "508a3bac39e2",
+         "text": "Epic Universe under-40 ride list",
+         "marks": [
+          "f4fe26412c02"
+         ]
+        },
+        {
+         "_type": "span",
+         "_key": "352e660a8500",
+         "text": ".",
+         "marks": []
+        }
+       ]
+      }
+     ]
+    }
+   }
   }
  ]
 }

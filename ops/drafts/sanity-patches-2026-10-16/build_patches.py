@@ -66,6 +66,11 @@ PR['edits'] += json.load(open(os.path.join(H,'packing_replaces_3.json')))['edits
 for e in PR['edits']:
     assert "I've been" not in e['new'] and 'locals' not in e['new'] and 'actual families' not in e['new']
     muts.append({"patch":{"id":e['draft'],"set":{f'body[_key=="{e['block']}"].children[_key=="{e['span']}"].text': e['new']}}})
+# --- Epic tickets CTR + above-the-fold (2026-10-16 #5) ---
+EC = json.load(open(os.path.join(H,'epic_ctr.json')))
+muts.append({"patch":{"id":EC['doc'],"set":EC['new']}})
+for ins in EC['inserts']:
+    muts.append({"patch":{"id":EC['doc'],"insert":{"after":f'body[_key=="{ins["after"]}"]',"items":[ins['block']]}}})
 json.dump({"_note":"NOT APPLIED. Sanity draft mutations (all inserts except ONE targeted span set on disney-world-guide); create drafts.<id> from published first. Seuss Trolley untouched (see README).","mutations":muts}, open(os.path.join(H,'mutations.json'),'w'), indent=1, ensure_ascii=False)
 with open(os.path.join(H,'preview.md'),'w') as f:
     f.write("# Preview of inserted paragraphs (2026-10-16)\n\n")
@@ -80,4 +85,8 @@ with open(os.path.join(H,'preview.md'),'a') as f:
     f.write("\n## Packing posts — REPLACES (neutral wording + dated NOAA source)\n")
     for e in PR['edits']:
         f.write(f"\n### {e['post']} · block `{e['block']}` span `{e['span']}`\n- **Before:** {e['old']}\n- **After:** {e['new']}\n")
+with open(os.path.join(H,'preview.md'),'a') as f:
+    f.write("\n## epic-universe-tickets-guide — title/excerpt (meta) + above-the-fold inserts\n")
+    f.write(f"- **Title before:** {EC['old']['title']}\n- **Title after:** {EC['new']['title']}\n- **Meta before:** {EC['old']['excerpt']}\n- **Meta after:** {EC['new']['excerpt']}\n")
+    for ins in EC['inserts']: f.write(f"- **Insert after `{ins['after']}`:** {mdtext([(c['text'], next((m['href'] for m in ins['block']['markDefs'] if m['_key'] in c['marks']),None)) for c in ins['block']['children']])}\n")
 print(len(muts),"mutations,",len(preview),"posts")
