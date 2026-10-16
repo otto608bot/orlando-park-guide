@@ -1,0 +1,148 @@
+# Preview of inserted paragraphs (2026-10-16)
+
+## disney-world-guide
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block blk7200f3e2c289):** If your kids are on the shorter side, start with [Disney World rides under 40 inches](/rides/for/disney-world-under-40/) in our ride finder, and use the [park chooser](/parks/) to decide which of the four parks to prioritize.
+
+## best-time-visit-disney-world-2026
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block how2):** Once you have dates, pick the park that fits your kids with the [park chooser](/parks/), then check [Disney World rides under 40 inches](/rides/for/disney-world-under-40/) in the ride finder.
+
+## free-things-disney-world
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block 3573139aa814):** Pair the free extras with rides your kids can actually do: the [ride finder for Disney World by height](/rides/for/disney-world-all/) and the [park chooser](/parks/) make it easier to plan a lower-cost park day.
+
+## epic-universe-1-day-plan
+- **links (after block bullet1qqaB):** Check heights against our ride finder before you pick priorities: [Epic Universe under 40 inches](/rides/for/epic-universe-under-40/), [44 inches](/rides/for/epic-universe-44/), and [48 inches](/rides/for/epic-universe-48/). Not sure Epic is the right park for your kids? Start with the [park chooser](/parks/).
+
+## epic-universe-rides-ranked-guide
+- **links (after block p5qaB):** To see only the rides your kids can do today, open the ride finder for [Epic Universe rides under 40 inches](/rides/for/epic-universe-under-40/) or the [48-inch view](/rides/for/epic-universe-48/). If Epic is one of several parks on your list, the [park chooser](/parks/) helps you decide where it fits.
+
+## epic-universe-tickets-guide
+- **links (after block p3bqaB):** Before you pay for an Epic day, check what your kids can actually ride with the [Epic Universe ride finder by height](/rides/for/epic-universe-all/), and compare Epic against the other Orlando parks in the [park chooser](/parks/).
+
+## disney-world-packing-list
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block block-0d5050c7f825):** Packing depends on the park and the rides. Use the [park chooser](/parks/) to settle your park days, and the [Disney World ride finder by height](/rides/for/disney-world-all/) to see which rides need a rain poncho or a height check.
+
+## disney-world-packing-list-kids
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+
+## beat-disney-world-crowds
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block blkee8d2baf5e0b):** Crowd plans work best when you only line up for rides your kids can ride. Filter [Disney World rides under 40 inches](/rides/for/disney-world-under-40/) or [48 inches](/rides/for/disney-world-48/), and use the [park chooser](/parks/) to pick the right park for your crowd-day.
+
+## disney-world-with-baby-toddler
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+
+## universal-orlando-height-requirements
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block 35825d7827c1):** Want the list filtered to your kid's height? Use the [Universal Orlando rides for kids under 40 inches](/rides/for/universal-orlando-under-40/), or jump to the [44-inch](/rides/for/universal-orlando-44/) and [48-inch](/rides/for/universal-orlando-48/) views in our ride finder. Still deciding between parks? The [park chooser](/parks/) compares every Orlando park by height and thrill level.
+
+## universal-orlando-summer-2026
+- **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **links (after block a5a54d8355a9):** Whatever the season, height decides the day for younger kids. Filter [Universal Orlando rides by height](/rides/for/universal-orlando-all/) or compare parks in the [park chooser](/parks/).
+
+## disney-world-guide — REPLACE (the one non-insert edit)
+Block `blk720c5dce00c0`, span `s164cb485a680` only.
+
+- **Before:** I've been to Disney World more times than I can count with young kids, and here's what I know for certain: it is absolutely worth the logistical headache — but only if you go in with a real plan. Not the "we'll figure it out" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time).
+- **After:** For families with young kids, one thing about Disney World holds true: it is absolutely worth the logistical headache — but only if you go in with a real plan. Not the "we'll figure it out" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time).
+
+## Packing posts — REPLACES (neutral wording + dated NOAA source)
+
+### disney-world-packing-list · block `block-9b3c8e9ed1cc` span `span-9b3c8e9ed1cc`
+- **Before:** If you're Googling 'what to pack for Disney World vacation with kids 2026,' you're in the right place. Most packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by Orlando locals who've done this dozens of times with their own kids, updated specifically for 2026 park policies, Lightning Lane requirements, and current Florida weather patterns.
+- **After:** If you're searching for what to pack for a Disney World vacation with kids in 2026, this checklist is built for that. It covers 65+ items organized by category, updated for 2026 park policies, Lightning Lane requirements, and Orlando's typical weather by season.
+
+### disney-world-packing-list · block `block-33a91940982d` span `span-33a91940982d`
+- **Before:** Orlando summers regularly hit 95°F with 80%+ humidity. Winter daytime temps run 60–75°F but buildings are aggressively air-conditioned. Kids feel the heat more than adults — pack accordingly:
+- **After:** Orlando summers are hot and humid: average daily highs at Orlando International Airport are about 91–92°F in June through August, and winter (December–February) highs average about 72–75°F (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026). Indoor attractions and restaurants are often heavily air-conditioned. Young kids can overheat quickly, so plan shade and water breaks and pack accordingly:
+
+### disney-world-packing-list · block `block-23658bb9bc8d` span `s879be0cfbb33`
+- **Before:** Summer Disney World packing with kids requires extra focus on heat management: SPF 50+ lotion sunscreen (not aerosol spray), cooling towels, cooling neck gaiters, electrolyte packets, insulated water bottles for each family member, and a USB rechargeable handheld fan. The temperature regularly hits 95°F with 80%+ humidity in July and August. Kids feel heat faster than adults — pack more cooling supplies than you think you need.
+- **After:** Summer Disney World packing with kids requires extra focus on heat management: SPF 50+ lotion sunscreen (not aerosol spray), cooling towels, cooling neck gaiters, electrolyte packets, insulated water bottles for each family member, and a USB rechargeable handheld fan. July and August average highs in Orlando are about 92°F, with high humidity (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026). Plan regular shade and water breaks for young kids, and pack more cooling supplies than you think you need.
+
+### disney-world-packing-list · block `block-df13f26c389e` span `span-df13f26c389e`
+- **Before:** Winter Disney World (December–February) daytime temps run 60–75°F, but buildings are aggressively air-conditioned. Pack layers for everyone: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still necessary — Orlando winter sun is strong enough to burn kids' exposed skin.
+- **After:** Winter Disney World (December–February) average daytime highs are about 72–75°F, with average lows around 50–53°F (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026), and indoor spaces are often heavily air-conditioned. Pack layers for everyone: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still worth packing — kids can burn even on cooler sunny days.
+
+### disney-world-packing-list · block `block-d9d46275df0d` span `span-d9d46275df0d`
+- **Before:** The five things most first-time family visitors wish they had brought are: a portable phone charger (20,000mAh+), comfortable broken-in walking shoes, a cooling towel, an insulated water bottle for each family member, and rain ponchos for the whole family. These five items alone will dramatically improve your park experience compared to visitors who don't pack them.
+- **After:** If you only pack five extras, prioritize: a portable phone charger (20,000mAh+), comfortable broken-in walking shoes, a cooling towel, an insulated water bottle for each family member, and rain ponchos for the whole family. These cover the most common park-day problems: dead phones, sore feet, heat, thirst, and afternoon rain.
+
+### disney-world-packing-list · block `block-af4834551c09` span `span-af4834551c09`
+- **Before:** Everything above is available on Amazon — delivered to your hotel or home before your trip. Use our packing list links above to grab everything your family needs before you go. A 20,000mAh charger, cooling towel, packing cubes, and a good pair of walking shoes are the four things most first-time visitors with kids wish they had brought.
+- **After:** Everything above is available on Amazon — delivered to your hotel or home before your trip. Use our packing list links above to grab what your family needs before you go. If you're short on time, start with a 20,000mAh charger, a cooling towel, packing cubes, and a good pair of walking shoes.
+
+### disney-world-packing-list-kids · block `86642c220973` span `e531a32a974e`
+- **Before:** This isn't a generic 100-item packing list copied from a travel site. These are 25 items that actual families with young kids used at Disney World in 2025 and 2026 — tested in real heat, real crowds, and real exhaustion. Organized by what actually matters, with age-specific guidance for toddlers through early elementary.
+- **After:** This isn't a generic 100-item packing list. It's 25 practical items for Disney World with young kids, chosen for the heat, crowds, and long days of a typical park visit. It's organized by what matters most, with age-specific guidance for toddlers through early elementary.
+
+### disney-world-packing-list-kids · block `b39c434970ca` span `93ba542451d8`
+- **Before:** 
+When the heat index hits 95°F+ in summer, these can prevent heat exhaustion in small bodies. Wet it, drape it on their neck, and keep moving. For toddlers who can't tell you they're overheating until it's serious, this is a genuine safety item.
+- **After:** 
+Orlando summer days are hot and humid, and young kids can't always tell you they're too hot. Wet a cooling towel, drape it on their neck, and pair it with shade and water breaks. If a child shows signs of heat illness, get help from park First Aid or a doctor.
+
+### disney-world-packing-list-kids · block `3617679e59a6` span `3aee82b2d791`
+- **Before:** 
+Florida heat + a napping toddler in a stroller = a very unhappy kid. A clip-on stroller fan with a misting option can drop the perceived temperature by 10–15 degrees. USB rechargeable means you top it off from a battery pack during lunch.
+- **After:** 
+Florida heat + a napping toddler in a stroller = a very unhappy kid. A clip-on stroller fan (some have a misting option) moves air and can make a shaded stroller more comfortable. Follow the maker's safety guidance, keep fingers and straps clear, and don't rely on a fan alone in high heat. USB rechargeable means you top it off from a battery pack during lunch.
+
+### disney-world-packing-list-kids · block `c5ea5147885d` span `9318dabb0d4f`
+- **Before:** 
+Disney provides free water at quick-service restaurants. Bring a bottle and refill it. Dehydration is the #1 reason young kids crash mid-afternoon — and the fix is simple and free.
+- **After:** 
+Disney provides free water at quick-service restaurants. Bring a bottle and refill it often — regular water breaks are one of the simplest ways to keep a long park day going.
+
+### disney-world-packing-list-kids · block `ed060f2081c0` span `0e47173321ee`
+- **Before:** 
+Frozen water bottles count as a liquid, but they'll thaw by the time you land — giving you ice-cold water in the Orlando heat. Swap for a refill at the airport or hotel. It also means you don't start the trip already dehydrated.
+- **After:** 
+Frozen water bottles count as a liquid, but they'll thaw by the time you land — giving you ice-cold water in the Orlando heat. Swap for a refill at the airport or hotel so everyone starts the trip with water on hand.
+
+### disney-world-packing-list · block `block-0027d4574016` span `se90f50839437`
+- **Before:** 
+Water alone isn't enough in Florida heat with active kids. Pack electrolyte powder packets (like Liquid IV or LMNT) to add to water bottles — they prevent cramping and fatigue.
+- **After:** 
+On hot days with active kids, some families add electrolyte drink packets to water bottles. Check labels and ask your pediatrician if you're unsure what's right for your child's age. If a child shows signs of heat illness, get help from park First Aid or a doctor.
+
+### disney-world-packing-list · block `block-a3aa6cec2ca7` span `s631502cc3438`
+- **Before:** 
+Changes in water, food, and heat can upset kids' stomachs.
+- **After:** 
+Travel days and new food can be rough on little stomachs; pack whatever your pediatrician recommends for your child. If a child seems unwell, get help from park First Aid or a doctor.
+
+### disney-world-packing-list · block `block-22cdf86bac9a` span `span-22cdf86bac9a`
+- **Before:** Park days are physically demanding for kids. Disney's first aid stations exist but walking there takes time. A well-packed family medical kit handles 90% of what comes up:
+- **After:** Park days are physically demanding for kids. Every Disney park has a First Aid station, but it may be a long walk away, so a small family kit covers the everyday basics like bandages and blister care:
+
+### disney-world-packing-list-kids · block `978380997239` span `a1c15bfa0227`
+- **Before:** 
+Seven Dwarfs Mine Train, Slinky Dog Dash, and Frozen Ever After all have spins. If your child is prone to motion sickness, give Bonine or Dramamine before the park — not after symptoms start. Ask your pediatrician which they recommend for your child's age and weight.
+- **After:** 
+If your child is prone to motion sickness, ask your pediatrician about motion-sickness options before your trip.
+
+### disney-world-packing-list-kids · block `361ec0c52bdd` span `e84dc79687f5`
+- **Before:** Every Disney park has a First Aid station staffed by registered nurses. They handle minor injuries, provide over-the-counter medications, and can connect you with local urgent care if needed. For emergencies, dial 911 or alert any cast member. First Aid is clearly marked on park maps and at the front of every park.
+- **After:** Every Walt Disney World theme park has First Aid (Disney's official First Aid page, accessed Oct 16, 2026), staffed by medical professionals. For emergencies, dial 911 or alert any cast member. First Aid locations are marked on park maps.
+
+### disney-world-packing-list · block `block-83c1ec8cf815` span `s76b01292884f`
+- **Before:** 
+If anyone in your group is sensitive to motion simulator rides.
+- **After:** 
+If anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip.
+
+### epic-universe-tickets-guide · block `p4yqaB` span `s4zqaB`
+- **Before:** As an Amazon Associate and affiliate partner, Plan Your Park may earn from qualifying purchases at no extra cost to you.
+- **After:** Some ticket links on this page (including our ticket partner, Undercover Tourist) and product links (Amazon Associates) are affiliate links. If you book or buy through them, Plan Your Park may earn a commission at no extra cost to you.
+
+## epic-universe-tickets-guide — title/excerpt (meta) + above-the-fold inserts
+- **Title before:** Epic Universe Tickets: Pricing, Tiers, and Money-Saving Tips
+- **Title after:** Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families
+- **Meta before:** How to compare current Epic Universe tickets, Universal Express and authorized-seller options without relying on stale price claims.
+- **Meta after:** Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026.
+- **Insert after `h239qaB`:** Heads up: some ticket links in this guide are affiliate links. If you book through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
+- **Insert after `5ed1d877e3ef`:** Ready to compare? See current Epic Universe and Universal Orlando ticket options from our ticket partner, Undercover Tourist, on our [Orlando ticket deals page](/deals/). Not sure Epic fits your kids yet? Start with the [Epic Universe under-40 ride list](/rides/for/epic-universe-under-40/).
