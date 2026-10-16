@@ -1,5 +1,5 @@
 {
- "_note": "NOT APPLIED. Sanity draft mutations; create drafts.<id> from published first. Seuss Trolley untouched (see README).",
+ "_note": "NOT APPLIED. Sanity draft mutations (all inserts except ONE targeted span set on disney-world-guide); create drafts.<id> from published first. Seuss Trolley untouched (see README).",
  "mutations": [
   {
    "patch": {
@@ -1138,6 +1138,14 @@
        ]
       }
      ]
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.200HsSeCmp0rIIhq3n1ivp",
+    "set": {
+     "body[_key==\"blk720c5dce00c0\"].children[_key==\"s164cb485a680\"].text": "Disney World with young kids takes real planning, and one thing holds true for most families: it is absolutely worth the logistical headache — but only if you go in with a real plan. Not the \"we'll figure it out\" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time)."
     }
    }
   }

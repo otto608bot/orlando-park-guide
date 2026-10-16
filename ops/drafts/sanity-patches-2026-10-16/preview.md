@@ -43,3 +43,8 @@
 - **disclosure:** Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. [See our affiliate disclosure](/affiliate-disclosure/).
 - **links (after block a5a54d8355a9):** Whatever the season, height decides the day for younger kids. Filter [Universal Orlando rides by height](/rides/for/universal-orlando-all/) or compare parks in the [park chooser](/parks/).
 
+## disney-world-guide — REPLACE (the one non-insert edit)
+Block `blk720c5dce00c0`, span `s164cb485a680` only.
+
+- **Before:** I've been to Disney World more times than I can count with young kids, and here's what I know for certain: it is absolutely worth the logistical headache — but only if you go in with a real plan. Not the "we'll figure it out" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time).
+- **After:** Disney World with young kids takes real planning, and one thing holds true for most families: it is absolutely worth the logistical headache — but only if you go in with a real plan. Not the "we'll figure it out" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time).

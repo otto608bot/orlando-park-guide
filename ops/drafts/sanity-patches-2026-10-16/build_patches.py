@@ -24,6 +24,13 @@ LINKS = {
  'beat-disney-world-crowds':('blkee8d2baf5e0b',[("Crowd plans work best when you only line up for rides your kids can ride. Filter ",None),("Disney World rides under 40 inches","/rides/for/disney-world-under-40/"),(" or ",None),("48 inches","/rides/for/disney-world-48/"),(", and use the ",None),("park chooser","/parks/"),(" to pick the right park for your crowd-day.",None)]),
  'disney-world-packing-list':('block-0d5050c7f825',[("Packing depends on the park and the rides. Use the ",None),("park chooser","/parks/"),(" to settle your park days, and the ",None),("Disney World ride finder by height","/rides/for/disney-world-all/"),(" to see which rides need a rain poncho or a height check.",None)]),
 }
+
+# --- The ONE non-insert edit: targeted span replace (brand-voice family-lore fix) ---
+REPLACE = {
+ 'slug':'disney-world-guide','block':'blk720c5dce00c0','span':'s164cb485a680',
+ 'old_phrase':"I've been to Disney World more times than I can count with young kids, and here's what I know for certain:",
+ 'new_phrase':"Disney World with young kids takes real planning, and one thing holds true for most families:",
+}
 def k(*a): return hashlib.md5('|'.join(a).encode()).hexdigest()[:12]
 def block(slug, tag, segs):
     md, ch = [], []
@@ -46,11 +53,20 @@ for slug, did in IDS.items():
         preview.setdefault(slug,[]).append((f"links (after block {a})", mdtext(segs)))
     for pos, key, b in ins:
         muts.append({"patch":{"id":f"drafts.{did}","insert":{pos:f'body[_key=="{key}"]',"items":[b]}}})
-json.dump({"_note":"NOT APPLIED. Sanity draft mutations; create drafts.<id> from published first. Seuss Trolley untouched (see README).","mutations":muts}, open(os.path.join(H,'mutations.json'),'w'), indent=1, ensure_ascii=False)
+src = json.load(open('/tmp/pp/posts.json')) if os.path.exists('/tmp/pp/posts.json') else None
+OLD_TEXT = "I've been to Disney World more times than I can count with young kids, and here's what I know for certain: it is absolutely worth the logistical headache \u2014 but only if you go in with a real plan. Not the \"we'll figure it out\" kind of plan. The kind where you know which park you're walking into, what you're eating, and approximately how long you'll wait for Rise of the Resistance (because it will be long, every single time)."
+assert OLD_TEXT.startswith(REPLACE['old_phrase'])
+NEW_TEXT = OLD_TEXT.replace(REPLACE['old_phrase'], REPLACE['new_phrase'], 1)
+R = REPLACE
+muts.append({"patch":{"id":f"drafts.{IDS[R['slug']]}","set":{f'body[_key=="{R['block']}"].children[_key=="{R['span']}"].text': NEW_TEXT}}})
+json.dump({"_note":"NOT APPLIED. Sanity draft mutations (all inserts except ONE targeted span set on disney-world-guide); create drafts.<id> from published first. Seuss Trolley untouched (see README).","mutations":muts}, open(os.path.join(H,'mutations.json'),'w'), indent=1, ensure_ascii=False)
 with open(os.path.join(H,'preview.md'),'w') as f:
     f.write("# Preview of inserted paragraphs (2026-10-16)\n\n")
     for s, items in preview.items():
         f.write(f"## {s}\n")
         for lab, t in items: f.write(f"- **{lab}:** {t}\n")
         f.write("\n")
+with open(os.path.join(H,'preview.md'),'a') as f:
+    f.write("## disney-world-guide — REPLACE (the one non-insert edit)\n")
+    f.write(f"Block `{R['block']}`, span `{R['span']}` only.\n\n- **Before:** {OLD_TEXT}\n- **After:** {NEW_TEXT}\n")
 print(len(muts),"mutations,",len(preview),"posts")

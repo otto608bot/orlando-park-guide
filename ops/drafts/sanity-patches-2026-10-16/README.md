@@ -4,7 +4,7 @@ Status: **prepared locally, NOT applied.** Post content lives only in Sanity (pr
 
 Files:
 - `build_patches.py` regenerates `mutations.json` and `preview.md`.
-- `mutations.json` holds 19 insert mutations targeting `drafts.<id>`.
+- `mutations.json` holds 19 mutations (19 inserts + 1 targeted span replace) targeting `drafts.<id>`.
 - `preview.md` shows the inserted text.
 
 Scope (12 posts):
