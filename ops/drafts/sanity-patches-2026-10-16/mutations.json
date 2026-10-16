@@ -1204,6 +1204,62 @@
      "body[_key==\"86642c220973\"].children[_key==\"e531a32a974e\"].text": "This isn't a generic 100-item packing list. It's 25 practical items for Disney World with young kids, chosen for the heat, crowds, and long days of a typical park visit. It's organized by what matters most, with age-specific guidance for toddlers through early elementary."
     }
    }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"b39c434970ca\"].children[_key==\"93ba542451d8\"].text": "\nOrlando summer days are hot and humid, and young kids can't always tell you they're too hot. Wet a cooling towel, drape it on their neck, and pair it with shade and water breaks. If a child shows signs of heat illness, get help from park First Aid or a doctor."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"3617679e59a6\"].children[_key==\"3aee82b2d791\"].text": "\nFlorida heat + a napping toddler in a stroller = a very unhappy kid. A clip-on stroller fan (some have a misting option) moves air and can make a shaded stroller more comfortable. Follow the maker's safety guidance, keep fingers and straps clear, and don't rely on a fan alone in high heat. USB rechargeable means you top it off from a battery pack during lunch."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"c5ea5147885d\"].children[_key==\"9318dabb0d4f\"].text": "\nDisney provides free water at quick-service restaurants. Bring a bottle and refill it often — regular water breaks are one of the simplest ways to keep a long park day going."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list-kids",
+    "set": {
+     "body[_key==\"ed060f2081c0\"].children[_key==\"0e47173321ee\"].text": "\nFrozen water bottles count as a liquid, but they'll thaw by the time you land — giving you ice-cold water in the Orlando heat. Swap for a refill at the airport or hotel so everyone starts the trip with water on hand."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list",
+    "set": {
+     "body[_key==\"block-0027d4574016\"].children[_key==\"se90f50839437\"].text": "\nOn hot days with active kids, some families add electrolyte drink packets to water bottles. Check labels and ask your pediatrician if you're unsure what's right for your child's age. If a child shows signs of heat illness, get help from park First Aid or a doctor."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list",
+    "set": {
+     "body[_key==\"block-a3aa6cec2ca7\"].children[_key==\"s631502cc3438\"].text": "\nTravel days and new food can be rough on little stomachs; pack whatever your pediatrician recommends for your child. If a child seems unwell, get help from park First Aid or a doctor."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.disney-world-packing-list",
+    "set": {
+     "body[_key==\"block-22cdf86bac9a\"].children[_key==\"span-22cdf86bac9a\"].text": "Park days are physically demanding for kids. Every Disney park has a First Aid station, but it may be a long walk away, so a small family kit covers the everyday basics like bandages and blister care:"
+    }
+   }
   }
  ]
 }

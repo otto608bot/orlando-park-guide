@@ -61,6 +61,7 @@ R = REPLACE
 muts.append({"patch":{"id":f"drafts.{IDS[R['slug']]}","set":{f'body[_key=="{R['block']}"].children[_key=="{R['span']}"].text': NEW_TEXT}}})
 # --- Packing-post neutral-wording span replaces (2026-10-16 #2); old text pinned from current drafts ---
 PR = json.load(open(os.path.join(H,'packing_replaces.json')))
+PR['edits'] += json.load(open(os.path.join(H,'packing_replaces_2.json')))['edits']
 for e in PR['edits']:
     assert "I've been" not in e['new'] and 'locals' not in e['new'] and 'actual families' not in e['new']
     muts.append({"patch":{"id":e['draft'],"set":{f'body[_key=="{e['block']}"].children[_key=="{e['span']}"].text': e['new']}}})

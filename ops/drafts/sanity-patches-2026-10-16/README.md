@@ -4,7 +4,7 @@ Status: **prepared locally, NOT applied.** Post content lives only in Sanity (pr
 
 Files:
 - `build_patches.py` regenerates `mutations.json` and `preview.md`.
-- `mutations.json` holds 20 mutations (19 inserts + 8 targeted span replaces) targeting `drafts.<id>`.
+- `mutations.json` holds 20 mutations (19 inserts + 15 targeted span replaces) targeting `drafts.<id>`.
 - `preview.md` shows the inserted text.
 
 Scope (12 posts):
@@ -63,3 +63,22 @@ These are non-insert edits. Old text is pinned in `packing_replaces.json`. Each 
   - packing-kids "heat index hits 95°F+" and stroller-fan "10–15 degrees" claims.
   - "Kids feel heat more" medical-adjacent lines elsewhere.
 - Read-back: all 7 spans show the new text, no flagged phrases remain, and both **published** docs keep their `_rev` (unchanged).
+
+## Packing posts — 7 more span REPLACES (heat/medical-adjacent softening), applied to drafts 2026-10-16 ~11:40 CT, txn `k0VJ6AV1kAo5HVBfuck8S9`
+Old text is pinned in `packing_replaces_2.json`. Each edit was re-verified against the current drafts and guarded with `ifRevisionID`.
+
+**Numeric claims removed, not sourced:** I found no authoritative, dated source for "heat index hits 95°F+" as a threshold or for "fan drops perceived temp 10–15 degrees".
+
+- **packing-kids:**
+  - cooling towel (`93ba542451d8`): removes the heat-index and "prevent heat exhaustion" claims. Adds a First Aid/doctor pointer.
+  - stroller fan (`3aee82b2d791`): removes "10–15 degrees". Adds "follow maker's safety guidance; don't rely on a fan alone".
+  - water (`9318dabb0d4f`): removes "Dehydration is the #1 reason…".
+  - frozen bottles (`0e47173321ee`): removes "already dehydrated".
+- **packing:**
+  - electrolytes (`se90f50839437`): removes "prevent cramping and fatigue". Adds a pediatrician + First Aid pointer.
+  - stomach (`s631502cc3438`): general wording + First Aid/doctor pointer.
+  - medical kit intro (`span-22cdf86bac9a`): removes "handles 90% of what comes up".
+- Read-back: all applied, flagged phrases gone, published `_rev`s unchanged.
+- **Still flagged (not changed):**
+  - packing-kids motion-sickness line naming Bonine/Dramamine with timing advice (`a1c15bfa0227`).
+  - FAQ "First Aid staffed by registered nurses" (`e84dc79687f5`) needs an official Disney citation.

@@ -78,3 +78,43 @@ Block `blk720c5dce00c0`, span `s164cb485a680` only.
 ### disney-world-packing-list-kids · block `86642c220973` span `e531a32a974e`
 - **Before:** This isn't a generic 100-item packing list copied from a travel site. These are 25 items that actual families with young kids used at Disney World in 2025 and 2026 — tested in real heat, real crowds, and real exhaustion. Organized by what actually matters, with age-specific guidance for toddlers through early elementary.
 - **After:** This isn't a generic 100-item packing list. It's 25 practical items for Disney World with young kids, chosen for the heat, crowds, and long days of a typical park visit. It's organized by what matters most, with age-specific guidance for toddlers through early elementary.
+
+### disney-world-packing-list-kids · block `b39c434970ca` span `93ba542451d8`
+- **Before:** 
+When the heat index hits 95°F+ in summer, these can prevent heat exhaustion in small bodies. Wet it, drape it on their neck, and keep moving. For toddlers who can't tell you they're overheating until it's serious, this is a genuine safety item.
+- **After:** 
+Orlando summer days are hot and humid, and young kids can't always tell you they're too hot. Wet a cooling towel, drape it on their neck, and pair it with shade and water breaks. If a child shows signs of heat illness, get help from park First Aid or a doctor.
+
+### disney-world-packing-list-kids · block `3617679e59a6` span `3aee82b2d791`
+- **Before:** 
+Florida heat + a napping toddler in a stroller = a very unhappy kid. A clip-on stroller fan with a misting option can drop the perceived temperature by 10–15 degrees. USB rechargeable means you top it off from a battery pack during lunch.
+- **After:** 
+Florida heat + a napping toddler in a stroller = a very unhappy kid. A clip-on stroller fan (some have a misting option) moves air and can make a shaded stroller more comfortable. Follow the maker's safety guidance, keep fingers and straps clear, and don't rely on a fan alone in high heat. USB rechargeable means you top it off from a battery pack during lunch.
+
+### disney-world-packing-list-kids · block `c5ea5147885d` span `9318dabb0d4f`
+- **Before:** 
+Disney provides free water at quick-service restaurants. Bring a bottle and refill it. Dehydration is the #1 reason young kids crash mid-afternoon — and the fix is simple and free.
+- **After:** 
+Disney provides free water at quick-service restaurants. Bring a bottle and refill it often — regular water breaks are one of the simplest ways to keep a long park day going.
+
+### disney-world-packing-list-kids · block `ed060f2081c0` span `0e47173321ee`
+- **Before:** 
+Frozen water bottles count as a liquid, but they'll thaw by the time you land — giving you ice-cold water in the Orlando heat. Swap for a refill at the airport or hotel. It also means you don't start the trip already dehydrated.
+- **After:** 
+Frozen water bottles count as a liquid, but they'll thaw by the time you land — giving you ice-cold water in the Orlando heat. Swap for a refill at the airport or hotel so everyone starts the trip with water on hand.
+
+### disney-world-packing-list · block `block-0027d4574016` span `se90f50839437`
+- **Before:** 
+Water alone isn't enough in Florida heat with active kids. Pack electrolyte powder packets (like Liquid IV or LMNT) to add to water bottles — they prevent cramping and fatigue.
+- **After:** 
+On hot days with active kids, some families add electrolyte drink packets to water bottles. Check labels and ask your pediatrician if you're unsure what's right for your child's age. If a child shows signs of heat illness, get help from park First Aid or a doctor.
+
+### disney-world-packing-list · block `block-a3aa6cec2ca7` span `s631502cc3438`
+- **Before:** 
+Changes in water, food, and heat can upset kids' stomachs.
+- **After:** 
+Travel days and new food can be rough on little stomachs; pack whatever your pediatrician recommends for your child. If a child seems unwell, get help from park First Aid or a doctor.
+
+### disney-world-packing-list · block `block-22cdf86bac9a` span `span-22cdf86bac9a`
+- **Before:** Park days are physically demanding for kids. Disney's first aid stations exist but walking there takes time. A well-packed family medical kit handles 90% of what comes up:
+- **After:** Park days are physically demanding for kids. Every Disney park has a First Aid station, but it may be a long walk away, so a small family kit covers the everyday basics like bandages and blister care:
