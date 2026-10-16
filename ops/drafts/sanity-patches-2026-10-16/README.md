@@ -19,9 +19,17 @@ Every link target returned HTTP 200 live on 2026-10-16, and no anchor exceeds 60
 - Verify on https://www.universalorlando.com/web/en/us/plan-your-visit/accessibility-information/rider-height-requirements in a real browser before editing. The text is intentionally left unchanged.
 
 ## Other flags (not changed)
-- disney-world-guide intro says "I've been to Disney World more times than I can count with young kids". That conflicts with the brand-voice family-lore policy and needs review.
+- disney-world-guide family-lore line: now handled by the replace patch below.
 
 ## To apply (after approval)
 1. Create the `drafts.<id>` docs from the published versions (e.g. open each in Studio).
 2. POST `mutations.json` `.mutations` to the `/data/mutate/production` endpoint with an editor token.
 3. Review in Studio, then run `scripts/content_integrity_check.py` and, after any publish, `scripts/live_blog_qa.py --fail-on high`.
+
+## ⚠️ The ONE non-insert edit (targeted replace)
+- **disney-world-guide**, block `blk720c5dce00c0`, span `s164cb485a680`. A single `set` on that span's `.text`. Nothing else in the post changes.
+- Only the opening clause changes, to remove first-person family lore (brand-voice policy):
+  - Before: "I've been to Disney World more times than I can count with young kids, and here's what I know for certain:"
+  - After: "For families with young kids, one thing about Disney World holds true:"
+- The rest of the sentence is unchanged.
+- `build_patches.py` asserts the original text before building. Re-check the span text in the draft before you apply, because a `set` overwrites the whole span.

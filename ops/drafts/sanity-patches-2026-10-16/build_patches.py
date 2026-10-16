@@ -29,7 +29,7 @@ LINKS = {
 REPLACE = {
  'slug':'disney-world-guide','block':'blk720c5dce00c0','span':'s164cb485a680',
  'old_phrase':"I've been to Disney World more times than I can count with young kids, and here's what I know for certain:",
- 'new_phrase':"Disney World with young kids takes real planning, and one thing holds true for most families:",
+ 'new_phrase':"For families with young kids, one thing about Disney World holds true:",
 }
 def k(*a): return hashlib.md5('|'.join(a).encode()).hexdigest()[:12]
 def block(slug, tag, segs):
