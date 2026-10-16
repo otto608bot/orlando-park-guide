@@ -59,6 +59,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | **SeaWorld + LEGOLAND 52″ landings (2)** + short aliases + rides hub amplify + smoke park-52 key overwrite fix | **awaiting_approval** (bundled w/ ride presets) | build **110** pages / **71** landings; local smoke PASS 2026-08-31; **all 9 parks** have 52″ SEO | tickets via finder | `ops/weekly/2026-08-31-daily.md` |
 | Buffer offline packs 2026-08-26 + 2026-08-29 + 2026-08-30 + 2026-08-31 | idea (offline) | Ideas board full — drafts in repo | tickets + Amazon | `ops/buffer/ideas-offline-2026-08-26.md` · `ops/buffer/ideas-offline-2026-08-29.md` · `ops/buffer/ideas-offline-2026-08-30.md` · `ops/buffer/ideas-offline-2026-08-31.md` |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
+| animal-kingdom-with-kids-rides-by-height | **drafting → qa2 done (Sanity draft)** | GSC 62 impr/0 clicks pos 31 (AK cluster) | tickets + Amazon | `drafts.blogPost-animal-kingdom-with-kids-rides-by-height` · `ops/drafts/animal-kingdom-with-kids/` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
 ## Dual QA checklist (every draft)

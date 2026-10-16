@@ -1,0 +1,46 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /rides/for/animal-kingdom-under-40/ 200
+PASS anchor<=60 "Animal Kingdom rides for kids " 
+PASS link /rides/for/animal-kingdom-44/ 200
+PASS anchor<=60 "44-inch Animal Kingdom list" 
+PASS link /rides/for/animal-kingdom-48/ 200
+PASS anchor<=60 "48-inch view" 
+PASS link /rides/for/animal-kingdom-calm-under-40/ 200
+PASS anchor<=60 "calm Animal Kingdom picks unde" 
+PASS link https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpark-20 503
+PASS anchor<=60 "cooling towel" 
+PASS link https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20 503
+PASS anchor<=60 "kids' rain poncho" 
+PASS link https://www.amazon.com/s?k=stroller+fan&tag=planyourpark-20 503
+PASS anchor<=60 "stroller fan" 
+PASS link /blog/disney-world-packing-list-kids/ 200
+PASS anchor<=60 "Disney World packing list for " 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /parks/animal-kingdom/ 200
+PASS anchor<=60 "Animal Kingdom park guide" 
+PASS link /blog/disney-world-with-baby-toddler/ 200
+PASS anchor<=60 "Disney World with a baby or to" 
+PASS link /deals/ 200
+PASS anchor<=60 "Disney World deals page" 
+PASS link /rides/for/animal-kingdom-all/ 200
+PASS anchor<=60 "ride finder" 
+PASS amazon links tagged 
+PASS no empty headings 
+PASS no empty list items 
+PASS disclosure before first affiliate link 
+PASS links ride finder AK 
+PASS links park chooser 
+PASS no first-person lore 
+PASS no Genie+ as current 
+PASS height Avatar Flight of Passage=44 
+PASS height Expedition Everest=44 
+PASS height Kali River Rapids=38 
+PASS closed rides not listed as open 
+PASS no unverified ticket ages 
+PASS no unverified Tropical Americas year 
+PASS closure dates attributed 
+PASS heights dated 
+PASS heat line non-medical + First Aid pointer 
+fails 0
