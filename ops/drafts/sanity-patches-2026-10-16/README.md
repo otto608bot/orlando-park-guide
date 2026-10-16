@@ -112,3 +112,14 @@ Old text is pinned in `packing_replaces_2.json`. Each edit was re-verified again
 - **No price or policy claims were added or changed.**
 - Published doc `_rev` is unchanged.
 - **Flag:** `AFFILIATE_LINKS.universal1Park1DayEpic` (CJ link 12834895), used by the template's Epic CTA, is labeled in `data/undercover-tourist-links.csv` as "Save $53 on Universal 2-Day Park to Park" (2023), not an Epic 1-day ticket. Verify the destination in CJ.
+
+## Epic tickets — bottom disclosure now covers ticket links (applied to draft 2026-10-16 ~12:10 CT, txn `k0VJ6AV1kAo5HVBfucpyS1`)
+- Block `p4yqaB`, span `s4zqaB`.
+- Before: "As an Amazon Associate and affiliate partner, Plan Your Park may earn from qualifying purchases at no extra cost to you."
+- After: "Some ticket links on this page (including our ticket partner, Undercover Tourist) and product links (Amazon Associates) are affiliate links. If you book or buy through them, Plan Your Park may earn a commission at no extra cost to you."
+- Read-back: applied. The title/meta and the 3 earlier inserts are intact, and the published `_rev` is unchanged.
+
+## CJ mislabel (code, not content)
+- `AFFILIATE_LINKS.universal1Park1DayEpic` (CJ 12834895) is actually Undercover Tourist's **Universal 2-park 2-day park-to-park** ticket (owner-confirmed).
+- No Sanity content links to it. The Epic contextual CTA in code is fixed to `/deals/` in **PR #65** (`blog/epic-cta-fix`).
+- A real Epic Universe CJ link is still pending.

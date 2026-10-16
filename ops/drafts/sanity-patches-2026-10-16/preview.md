@@ -135,6 +135,10 @@ If anyone in your group is sensitive to motion simulator rides.
 - **After:** 
 If anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip.
 
+### epic-universe-tickets-guide · block `p4yqaB` span `s4zqaB`
+- **Before:** As an Amazon Associate and affiliate partner, Plan Your Park may earn from qualifying purchases at no extra cost to you.
+- **After:** Some ticket links on this page (including our ticket partner, Undercover Tourist) and product links (Amazon Associates) are affiliate links. If you book or buy through them, Plan Your Park may earn a commission at no extra cost to you.
+
 ## epic-universe-tickets-guide — title/excerpt (meta) + above-the-fold inserts
 - **Title before:** Epic Universe Tickets: Pricing, Tiers, and Money-Saving Tips
 - **Title after:** Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families

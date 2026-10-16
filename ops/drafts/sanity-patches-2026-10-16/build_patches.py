@@ -63,6 +63,7 @@ muts.append({"patch":{"id":f"drafts.{IDS[R['slug']]}","set":{f'body[_key=="{R['b
 PR = json.load(open(os.path.join(H,'packing_replaces.json')))
 PR['edits'] += json.load(open(os.path.join(H,'packing_replaces_2.json')))['edits']
 PR['edits'] += json.load(open(os.path.join(H,'packing_replaces_3.json')))['edits']
+PR['edits'] += json.load(open(os.path.join(H,'packing_replaces_4.json')))['edits']
 for e in PR['edits']:
     assert "I've been" not in e['new'] and 'locals' not in e['new'] and 'actual families' not in e['new']
     muts.append({"patch":{"id":e['draft'],"set":{f'body[_key=="{e['block']}"].children[_key=="{e['span']}"].text': e['new']}}})

@@ -1289,6 +1289,14 @@
    "patch": {
     "id": "drafts.blogPost-epic-universe-tickets-guide",
     "set": {
+     "body[_key==\"p4yqaB\"].children[_key==\"s4zqaB\"].text": "Some ticket links on this page (including our ticket partner, Undercover Tourist) and product links (Amazon Associates) are affiliate links. If you book or buy through them, Plan Your Park may earn a commission at no extra cost to you."
+    }
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.blogPost-epic-universe-tickets-guide",
+    "set": {
      "title": "Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families",
      "excerpt": "Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026."
     }
