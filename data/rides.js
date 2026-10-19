@@ -131,16 +131,7 @@ const rideData = [
     duration: "10 min",
     description: "A humorous riverboat tour through exotic rivers"
   },
-  {
-    id: "mk-riverboat",
-    name: "Liberty Square Riverboat",
-    park: "Magic Kingdom",
-    resort: "Walt Disney World",
-    height: 0,
-    pregnant: true,
-    wheelchair: "WAV",
-    sensory: { dark: false, loud: false, fog: false, sudden: false, enclosed: false, strobe: false },
-    type: "Boat",
+  type: "Boat",
     duration: "20 min",
     description: "A scenic cruise aboard a steam-powered paddle wheeler"
   },
