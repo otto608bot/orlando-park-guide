@@ -13,6 +13,8 @@ We sorted the current rides by height, as listed on Disney's official pages (che
 • 32–40": Tomorrowland Speedway, Barnstormer, Seven Dwarfs Mine Train, Big Thunder, Tiana's Bayou Adventure
 • 44–48": Space Mountain, TRON Lightcycle / Run
 
+Heads up: Disney lists Tiana's Bayou Adventure as closed for refurbishment Nov 2 to an expected December 2026 reopening, and the Walt Disney World Railroad is closed until an expected November 2026 reopening.
+
 Plus a simple park-day plan by height 👇
 https://planyourpark.com/blog/magic-kingdom-with-kids-rides-by-height/?utm_source=facebook&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=magic-kingdom-with-kids-rides-by-height
 
@@ -34,7 +36,7 @@ Full guide + a simple park-day plan: link in bio.
 
 ## Pinterest (PlanYourPark)
 - **Title:** Magic Kingdom with Kids: Rides by Height + Simple Park-Day Plan
-- **Description:** Planning Magic Kingdom with kids? See which rides work at any height, 32–40", and 44–48", with heights checked on Disney's official pages (Oct 19, 2026). Includes calm under-40 picks, Rider Switch tips, and a simple plan for mixed-age families.
+- **Description:** Planning Magic Kingdom with kids? See which rides work at any height, 32–40", and 44–48", with heights checked on Disney's official pages (Oct 19, 2026). Includes calm under-40 picks, current closures to check, Rider Switch tips, and a simple plan for mixed-age families.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`). Same board used in the Animal Kingdom pack (Buffer read-only confirm 2026-10-16).
 - **Image:** `pin-1000x1500.png` (text-only, 2:3)
 - **Destination URL:** https://planyourpark.com/blog/magic-kingdom-with-kids-rides-by-height/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=magic-kingdom-with-kids-rides-by-height
@@ -45,3 +47,4 @@ Full guide + a simple park-day plan: link in bio.
 - [x] Heights match the post and official pages (accessed 2026-10-19)
 - [ ] Post published (blocked: needs approval)
 - [x] Pinterest board matches AK pack (Orlando Theme Parks)
+- [x] CEO review 2026-10-19: UTMs match ops/distribution.md convention (PR #62); pin re-rendered with larger text (no overlap); FB copy now flags Tiana's and Railroad closures

@@ -6,7 +6,7 @@
   "_type": "slug",
   "current": "magic-kingdom-with-kids-rides-by-height"
  },
- "excerpt": "Magic Kingdom with kids, sorted by height: which rides work under ~40 inches, mid heights, and taller kids, plus calm picks and a simple park-day plan. Heights checked Oct 19, 2026.",
+ "excerpt": "Magic Kingdom with kids, sorted by height: rides for any height, 32 to 40 inches, and 44+ inches, plus closures to check and a simple park-day plan (Oct 2026).",
  "tags": [
   "Magic Kingdom with kids",
   "Magic Kingdom rides for kids",
@@ -19,7 +19,7 @@
  },
  "categories": [
   {
-   "_key": "cf995593016a",
+   "_key": "5785838c1136",
    "_ref": "q5bQv6QFqWcAZeLNacathw",
    "_type": "reference"
   }
@@ -83,7 +83,7 @@
     {
      "_type": "span",
      "_key": "8913af587b3d",
-     "text": "Yes — Magic Kingdom is usually the best first Disney World park for families with young kids. It has the longest list of no-height-limit rides, familiar characters, and a mix of calm dark rides and a few bigger thrills. The catch is that the big coasters and Tiana's Bayou Adventure do have height minimums, so measuring kids before you go saves a lot of line-time heartbreak.",
+     "text": "Yes — Magic Kingdom is usually the best first Disney World park for families with young kids. It has a long list of rides with no height requirement, familiar characters, and a mix of calm dark rides and a few bigger thrills. The catch is that the big coasters and Tiana's Bayou Adventure do have height minimums, so measuring kids before you go saves a lot of line-time heartbreak.",
      "marks": []
     }
    ]
@@ -206,7 +206,7 @@
     {
      "_type": "span",
      "_key": "c7ed4d0a59c0",
-     "text": " Dumbo the Flying Elephant, \"it's a small world,\" Peter Pan's Flight, The Many Adventures of Winnie the Pooh, Under the Sea ~ Journey of The Little Mermaid, The Magic Carpets of Aladdin, Mad Tea Party, Prince Charming Regal Carrousel, Astro Orbiter, Buzz Lightyear's Space Ranger Spin, Jungle Cruise, Pirates of the Caribbean, Haunted Mansion, Tomorrowland Transit Authority PeopleMover, Walt Disney World Railroad, Mickey's PhilharMagic, and more shows/walk-throughs",
+     "text": " Dumbo the Flying Elephant, \"it's a small world,\" Peter Pan's Flight, The Many Adventures of Winnie the Pooh, Under the Sea ~ Journey of The Little Mermaid, The Magic Carpets of Aladdin, Mad Tea Party, Prince Charming Regal Carrousel, Astro Orbiter, Buzz Lightyear's Space Ranger Spin, Jungle Cruise, Pirates of the Caribbean, Haunted Mansion, Tomorrowland Transit Authority PeopleMover, Mickey's PhilharMagic, Walt Disney World Railroad (closed for refurbishment right now; see below), and more shows/walk-throughs",
      "marks": []
     }
    ],
@@ -438,7 +438,7 @@
     {
      "_type": "span",
      "_key": "f128b94c2118",
-     "text": "When Magic Kingdom Fits Your Family",
+     "text": "Closures to Check Before You Go",
      "marks": []
     }
    ]
@@ -452,37 +452,29 @@
     {
      "_type": "span",
      "_key": "62ddc9505fcf",
-     "text": "Magic Kingdom fits well when:",
+     "text": "As of October 19, 2026, Disney's official attraction pages list these temporary Magic Kingdom closures:",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "2d873944cf65",
+   "_key": "44da89808301",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
      "_key": "8c249d6fa51a",
-     "text": "At least one kid is under ~40 inches and you want lots of rides they can actually board",
-     "marks": []
-    }
-   ],
-   "listItem": "bullet",
-   "level": 1
-  },
-  {
-   "_type": "block",
-   "_key": "781cfdae25ce",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
+     "text": "Walt Disney World Railroad:",
+     "marks": [
+      "strong"
+     ]
+    },
     {
      "_type": "span",
-     "_key": "44da89808301",
-     "text": "You want classic Disney dark rides and character energy more than animals or studios",
+     "_key": "2d873944cf65",
+     "text": " closed for routine refurbishment since September 28; expected to reopen in November 2026",
      "marks": []
     }
    ],
@@ -497,8 +489,16 @@
    "children": [
     {
      "_type": "span",
+     "_key": "781cfdae25ce",
+     "text": "Tiana's Bayou Adventure:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
      "_key": "caae3a4971fe",
-     "text": "You can handle a longer walking day and bigger crowds than Animal Kingdom",
+     "text": " closes for routine refurbishment on November 2; expected to reopen in December 2026",
      "marks": []
     }
    ],
@@ -507,50 +507,50 @@
   },
   {
    "_type": "block",
-   "_key": "c36628ebf6a2",
+   "_key": "35988ad2c397",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "c92088306e2a",
+     "text": "Walt Disney's Carousel of Progress:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "f30467a6aa38",
+     "text": " closed since July 6, 2026; expected to reopen in late spring 2027",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "627437f3bf0b",
    "style": "normal",
    "markDefs": [
     {
      "_type": "link",
-     "_key": "f30467a6aa38",
-     "href": "/parks/"
-    },
-    {
-     "_type": "link",
      "_key": "15c519a872c3",
-     "href": "/blog/disney-vs-universal-with-kids-2026/"
-    },
-    {
-     "_type": "link",
-     "_key": "627437f3bf0b",
-     "href": "/blog/disney-world-with-baby-toddler/"
+     "href": "https://disneyworld.disney.go.com/attractions/magic-kingdom/"
     }
    ],
    "children": [
     {
      "_type": "span",
-     "_key": "c92088306e2a",
-     "text": "If you are still choosing parks, use the ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "35988ad2c397",
-     "text": "park chooser",
-     "marks": [
-      "f30467a6aa38"
-     ]
-    },
-    {
-     "_type": "span",
      "_key": "f5f99cbec9c2",
-     "text": " or compare resorts in ",
+     "text": "Dates can change, so re-check ",
      "marks": []
     },
     {
      "_type": "span",
      "_key": "7343759cc4ac",
-     "text": "Disney vs Universal with kids (2026)",
+     "text": "Disney's Magic Kingdom attraction list",
      "marks": [
       "15c519a872c3"
      ]
@@ -558,52 +558,70 @@
     {
      "_type": "span",
      "_key": "90caa3403b3a",
-     "text": ". Families with babies may also like our ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "cf649e619aaa",
-     "text": "Disney World with a baby or toddler guide",
-     "marks": [
-      "627437f3bf0b"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "0ed9fdb8137f",
-     "text": ".",
+     "text": " before you lock in your park day.",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "6215817a400d",
+   "_key": "0ed9fdb8137f",
    "style": "h2",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "d9edfa5d4498",
-     "text": "Best Magic Kingdom Rides for Kids Under ~40 Inches",
+     "_key": "cf649e619aaa",
+     "text": "When Magic Kingdom Fits Your Family",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "f4576698b90b",
+   "_key": "d9edfa5d4498",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "bf0ba5ba104c",
-     "text": "Kids this age can do most of Magic Kingdom. Start with calm classics:",
+     "_key": "c36628ebf6a2",
+     "text": "Magic Kingdom fits well when:",
      "marks": []
     }
    ]
+  },
+  {
+   "_type": "block",
+   "_key": "bf0ba5ba104c",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "6215817a400d",
+     "text": "At least one kid is under ~40 inches and you want lots of rides they can actually board",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "69015dd700df",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f4576698b90b",
+     "text": "You want classic Disney dark rides and character energy more than animals or studios",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
   },
   {
    "_type": "block",
@@ -613,16 +631,8 @@
    "children": [
     {
      "_type": "span",
-     "_key": "69015dd700df",
-     "text": "\"it's a small world\"",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
      "_key": "e891ac808cc3",
-     "text": " — slow boat ride, any height; an easy win for preschoolers",
+     "text": "You can handle a longer walking day and bigger crowds than Animal Kingdom",
      "marks": []
     }
    ],
@@ -631,103 +641,103 @@
   },
   {
    "_type": "block",
-   "_key": "dc6ddfa6804c",
+   "_key": "a67405ac3417",
    "style": "normal",
-   "markDefs": [],
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "c114d68d3cc4",
+     "href": "/parks/"
+    },
+    {
+     "_type": "link",
+     "_key": "dc6ddfa6804c",
+     "href": "/blog/disney-vs-universal-with-kids-2026/"
+    },
+    {
+     "_type": "link",
+     "_key": "65dab9728d50",
+     "href": "/blog/disney-world-with-baby-toddler/"
+    }
+   ],
    "children": [
     {
      "_type": "span",
      "_key": "fb39c6fb6f2e",
-     "text": "Dumbo the Flying Elephant",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "c114d68d3cc4",
-     "text": " and ",
+     "text": "If you are still choosing parks, use the ",
      "marks": []
     },
     {
      "_type": "span",
      "_key": "e6a4edc916e0",
-     "text": "The Magic Carpets of Aladdin",
+     "text": "park chooser",
      "marks": [
-      "strong"
+      "c114d68d3cc4"
      ]
     },
     {
      "_type": "span",
      "_key": "9b9f2cf06b1a",
-     "text": " — kid-controlled spinners, any height",
+     "text": " or compare resorts in ",
      "marks": []
-    }
-   ],
-   "listItem": "bullet",
-   "level": 1
-  },
-  {
-   "_type": "block",
-   "_key": "1a2f42da24ac",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
+    },
     {
      "_type": "span",
      "_key": "917f7c4a27bf",
-     "text": "The Many Adventures of Winnie the Pooh",
+     "text": "Disney vs Universal with kids (2026)",
      "marks": [
-      "strong"
+      "dc6ddfa6804c"
      ]
     },
     {
      "_type": "span",
      "_key": "d1494e7af494",
-     "text": " and ",
+     "text": ". Families with babies may also like our ",
      "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "65dab9728d50",
-     "text": "Under the Sea ~ Journey of The Little Mermaid",
-     "marks": [
-      "strong"
-     ]
     },
     {
      "_type": "span",
      "_key": "2a27b75e481d",
-     "text": " — gentle dark rides",
+     "text": "Disney World with a baby or toddler guide",
+     "marks": [
+      "65dab9728d50"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "1a2f42da24ac",
+     "text": ".",
      "marks": []
     }
-   ],
-   "listItem": "bullet",
-   "level": 1
+   ]
   },
   {
    "_type": "block",
    "_key": "7630674eb2dd",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "6d72cd3fd3e1",
+     "text": "Best Magic Kingdom Rides for Kids Under ~40 Inches",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "12c44b0ce459",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "a67405ac3417",
-     "text": "Peter Pan's Flight",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "6d72cd3fd3e1",
-     "text": " — popular dark ride; some younger kids find the height illusion spooky, so preview if your child is sensitive",
+     "_key": "a58fa7a76820",
+     "text": "Kids this age can do most of Magic Kingdom. Start with calm classics:",
      "marks": []
     }
-   ],
-   "listItem": "bullet",
-   "level": 1
+   ]
   },
   {
    "_type": "block",
@@ -737,22 +747,8 @@
    "children": [
     {
      "_type": "span",
-     "_key": "a58fa7a76820",
-     "text": "Jungle Cruise",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "12c44b0ce459",
-     "text": " and ",
-     "marks": []
-    },
-    {
-     "_type": "span",
      "_key": "709011110902",
-     "text": "Pirates of the Caribbean",
+     "text": "\"it's a small world\"",
      "marks": [
       "strong"
      ]
@@ -760,7 +756,7 @@
     {
      "_type": "span",
      "_key": "4dcd754a072b",
-     "text": " — boat rides with mild thrills/story moments (Pirates has a short drop and darker scenes)",
+     "text": " — slow boat ride, any height; an easy win for preschoolers",
      "marks": []
     }
    ],
@@ -769,14 +765,14 @@
   },
   {
    "_type": "block",
-   "_key": "2fbac104f2cd",
+   "_key": "7538bb599e98",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
      "_key": "5ef845877254",
-     "text": "Buzz Lightyear's Space Ranger Spin",
+     "text": "Dumbo the Flying Elephant",
      "marks": [
       "strong"
      ]
@@ -784,7 +780,21 @@
     {
      "_type": "span",
      "_key": "64547800c93f",
-     "text": " — interactive dark ride kids this age often love",
+     "text": " and ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "2fbac104f2cd",
+     "text": "The Magic Carpets of Aladdin",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ecd3e847bf16",
+     "text": " — kid-controlled spinners, any height",
      "marks": []
     }
    ],
@@ -793,28 +803,14 @@
   },
   {
    "_type": "block",
-   "_key": "97bb5fc80f24",
+   "_key": "2904f5fd0206",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "ecd3e847bf16",
-     "text": "Tomorrowland Transit Authority PeopleMover",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "7538bb599e98",
-     "text": " and ",
-     "marks": []
-    },
-    {
-     "_type": "span",
      "_key": "49aa99acbd15",
-     "text": "Walt Disney World Railroad",
+     "text": "The Many Adventures of Winnie the Pooh",
      "marks": [
       "strong"
      ]
@@ -822,7 +818,21 @@
     {
      "_type": "span",
      "_key": "4ee56ae2328c",
-     "text": " — seated breaks with a view",
+     "text": " and ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "97bb5fc80f24",
+     "text": "Under the Sea ~ Journey of The Little Mermaid",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "8deee8498372",
+     "text": " — gentle dark rides",
      "marks": []
     }
    ],
@@ -833,80 +843,74 @@
    "_type": "block",
    "_key": "38b515ff2832",
    "style": "normal",
-   "markDefs": [
-    {
-     "_type": "link",
-     "_key": "2904f5fd0206",
-     "href": "/rides/for/magic-kingdom-calm-under-40/"
-    }
-   ],
+   "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "8deee8498372",
-     "text": "For calmer kids, the ride finder's ",
-     "marks": []
-    },
-    {
-     "_type": "span",
      "_key": "30cff29716d3",
-     "text": "calm Magic Kingdom picks under 40 inches",
+     "text": "Peter Pan's Flight",
      "marks": [
-      "2904f5fd0206"
+      "strong"
      ]
     },
     {
      "_type": "span",
      "_key": "6ad4f4ccd63c",
-     "text": " skips higher-thrill options.",
+     "text": " — popular dark ride; some younger kids find the height illusion spooky, so preview if your child is sensitive",
      "marks": []
     }
-   ]
+   ],
+   "listItem": "bullet",
+   "level": 1
   },
   {
    "_type": "block",
-   "_key": "ef9b6ae24ae5",
+   "_key": "091a5d1421c4",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
      "_key": "bcfc69fb2cd4",
-     "text": "At ",
-     "marks": []
+     "text": "Jungle Cruise",
+     "marks": [
+      "strong"
+     ]
     },
     {
      "_type": "span",
      "_key": "d14f74deb9b0",
-     "text": "32 inches",
-     "marks": [
-      "strong"
-     ]
+     "text": " and ",
+     "marks": []
     },
     {
      "_type": "span",
      "_key": "11f2e2b793fb",
-     "text": ", ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "4c89a8e33133",
-     "text": "Tomorrowland Speedway",
+     "text": "Pirates of the Caribbean",
      "marks": [
       "strong"
      ]
     },
     {
      "_type": "span",
-     "_key": "091a5d1421c4",
-     "text": " opens with a tall companion (54\"+). At ",
+     "_key": "4c89a8e33133",
+     "text": " — boat rides with mild thrills/story moments (Pirates has a short drop and darker scenes)",
      "marks": []
-    },
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "d27b535137b4",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
     {
      "_type": "span",
      "_key": "0cb970ba1736",
-     "text": "35 inches",
+     "text": "Buzz Lightyear's Space Ranger Spin",
      "marks": [
       "strong"
      ]
@@ -914,84 +918,88 @@
     {
      "_type": "span",
      "_key": "c04397739a7d",
-     "text": ", ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "d27b535137b4",
-     "text": "The Barnstormer",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "07e51d405fdd",
-     "text": " (small coaster) opens. At ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "d0d987d7dc35",
-     "text": "38 inches",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "250dd49ea81c",
-     "text": ", ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "025c0cd96201",
-     "text": "Seven Dwarfs Mine Train",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "2ea45822c6b2",
-     "text": " and ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "26810c01d815",
-     "text": "Big Thunder Mountain Railroad",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "34fa95b1b839",
-     "text": " open — both are real coasters, just milder than Space Mountain or TRON.",
+     "text": " — interactive dark ride kids this age often love",
      "marks": []
     }
-   ]
+   ],
+   "listItem": "bullet",
+   "level": 1
   },
   {
    "_type": "block",
-   "_key": "a6fe4a41c108",
-   "style": "h2",
+   "_key": "2ea45822c6b2",
+   "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
+     "_key": "07e51d405fdd",
+     "text": "Tomorrowland Transit Authority PeopleMover",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "d0d987d7dc35",
+     "text": " — a seated break with a view (the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "250dd49ea81c",
+     "text": "Walt Disney World Railroad",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "025c0cd96201",
+     "text": " is another once it reopens)",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "a6fe4a41c108",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "34fa95b1b839",
+     "href": "/rides/for/magic-kingdom-calm-under-40/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "26810c01d815",
+     "text": "For calmer kids, the ride finder's ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "ef9b6ae24ae5",
+     "text": "calm Magic Kingdom picks under 40 inches",
+     "marks": [
+      "34fa95b1b839"
+     ]
+    },
+    {
+     "_type": "span",
      "_key": "4658752cd0cf",
-     "text": "Mid Heights: 40 to 43 Inches",
+     "text": " skips higher-thrill options.",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "23a50646decc",
+   "_key": "8db66bdcbd97",
    "style": "normal",
    "markDefs": [],
    "children": [
@@ -1004,7 +1012,7 @@
     {
      "_type": "span",
      "_key": "70e24fa0a624",
-     "text": "40 inches",
+     "text": "32 inches",
      "marks": [
       "strong"
      ]
@@ -1018,7 +1026,7 @@
     {
      "_type": "span",
      "_key": "b25bb6498165",
-     "text": "Tiana's Bayou Adventure",
+     "text": "Tomorrowland Speedway",
      "marks": [
       "strong"
      ]
@@ -1026,71 +1034,69 @@
     {
      "_type": "span",
      "_key": "fd49b866f40d",
-     "text": " opens. It is a log-flume style ride with a large drop, and you may get wet. Pack a poncho or change of clothes if kids this age want to ride.",
+     "text": " opens with a tall companion (54\"+). At ",
      "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "4f505f998b6a",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
+    },
     {
      "_type": "span",
-     "_key": "50587a2725af",
-     "text": "Note (Oct 19, 2026):",
+     "_key": "23a50646decc",
+     "text": "35 inches",
      "marks": [
       "strong"
      ]
     },
     {
      "_type": "span",
-     "_key": "3f9a7b74e98b",
-     "text": " Disney's official Tiana's Bayou Adventure page says the attraction will temporarily close for routine refurbishment on November 2 and is expected to reopen in December 2026. Re-check the official page before you lock your park day.",
+     "_key": "50587a2725af",
+     "text": ", ",
      "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "174918d4c861",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
+    },
+    {
+     "_type": "span",
+     "_key": "3f9a7b74e98b",
+     "text": "The Barnstormer",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "4f505f998b6a",
+     "text": " (small coaster) opens. At ",
+     "marks": []
+    },
     {
      "_type": "span",
      "_key": "69adadad1606",
-     "text": "Everything in the under-40 list still applies, plus Barnstormer / Mine Train / Big Thunder if kids clear those heights.",
+     "text": "38 inches",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "174918d4c861",
+     "text": ", ",
      "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "e774ec81645a",
-   "style": "h2",
-   "markDefs": [],
-   "children": [
+    },
     {
      "_type": "span",
      "_key": "ea6b8f16ac0e",
-     "text": "Taller Kids: 44 Inches and Up",
+     "text": "Seven Dwarfs Mine Train",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e774ec81645a",
+     "text": " and ",
      "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "8db66bdcbd97",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
+    },
     {
      "_type": "span",
      "_key": "2ced0ebe1f2e",
-     "text": "44 inches — Space Mountain:",
+     "text": "Big Thunder Mountain Railroad",
      "marks": [
       "strong"
      ]
@@ -1098,158 +1104,136 @@
     {
      "_type": "span",
      "_key": "bf7173b56c3a",
-     "text": " indoor roller coaster in the dark. Intense for some kids even when they clear the height.",
-     "marks": []
-    }
-   ],
-   "listItem": "bullet",
-   "level": 1
-  },
-  {
-   "_type": "block",
-   "_key": "e2b461a227de",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "be61f699411b",
-     "text": "48 inches — TRON Lightcycle / Run:",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "75ec8e7c741d",
-     "text": " one of Disney's fastest coasters; motorcycle-style seat. Many kids this age still prefer Space Mountain first, or skip TRON if coasters are new.",
-     "marks": []
-    }
-   ],
-   "listItem": "bullet",
-   "level": 1
-  },
-  {
-   "_type": "block",
-   "_key": "7654bb92a31f",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "d4c36353cff0",
-     "text": "If one child is too short or not interested, Disney's ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "10cdae21bdf3",
-     "text": "Rider Switch",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "8c64d79a4c3a",
-     "text": " lets one adult wait with the child while the other adult rides, then swap without waiting in the full standby line again (see Disney's Rider Switch page for current rules).",
+     "text": " open — both are real coasters, just milder than Space Mountain or TRON.",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "5435e162e3a1",
+   "_key": "75ec8e7c741d",
    "style": "h2",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "80d64f78cee2",
-     "text": "A Simple One-Park Plan by Height",
+     "_key": "be61f699411b",
+     "text": "Mid Heights: 40 to 43 Inches",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "57885b6c0510",
+   "_key": "80d64f78cee2",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "58bc83c45172",
-     "text": "Kids mostly under 40 inches",
+     "_key": "e2b461a227de",
+     "text": "At ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "d4c36353cff0",
+     "text": "40 inches",
      "marks": [
       "strong"
      ]
+    },
+    {
+     "_type": "span",
+     "_key": "10cdae21bdf3",
+     "text": ", ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "8c64d79a4c3a",
+     "text": "Tiana's Bayou Adventure",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7654bb92a31f",
+     "text": " opens. It is a log-flume style ride with a large drop, and you may get wet. Pack a poncho or change of clothes if kids this age want to ride.",
+     "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "585231fc8719",
+   "_key": "231268f8fc42",
    "style": "normal",
-   "markDefs": [],
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "57885b6c0510",
+     "href": "https://disneyworld.disney.go.com/attractions/magic-kingdom/tianas-bayou-adventure/"
+    }
+   ],
    "children": [
+    {
+     "_type": "span",
+     "_key": "5435e162e3a1",
+     "text": "Note (Oct 19, 2026):",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "58bc83c45172",
+     "text": " Disney's official ",
+     "marks": []
+    },
     {
      "_type": "span",
      "_key": "93c5eb172dba",
-     "text": "Arrive near opening and start in Fantasyland (Pooh, Little Mermaid, \"it's a small world,\" Dumbo).",
+     "text": "Tiana's Bayou Adventure page",
+     "marks": [
+      "57885b6c0510"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "585231fc8719",
+     "text": " says the attraction will temporarily close for routine refurbishment on November 2 and is expected to reopen in December 2026. Re-check the official page before you lock your park day.",
      "marks": []
     }
-   ],
-   "listItem": "number",
-   "level": 1
+   ]
   },
   {
    "_type": "block",
-   "_key": "a0829c5052ce",
+   "_key": "9c8d718f572b",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "231268f8fc42",
-     "text": "Grab Peter Pan's Flight early if it is a must — waits grow fast.",
+     "_key": "a0829c5052ce",
+     "text": "Everything in the under-40 list still applies, plus Barnstormer / Mine Train / Big Thunder if kids clear those heights.",
      "marks": []
     }
-   ],
-   "listItem": "number",
-   "level": 1
+   ]
   },
   {
    "_type": "block",
-   "_key": "08524a4c0227",
-   "style": "normal",
+   "_key": "0a8e8b6367a7",
+   "style": "h2",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "9c8d718f572b",
-     "text": "Midday: PeopleMover, PhilharMagic, or an indoor show break.",
+     "_key": "08524a4c0227",
+     "text": "Taller Kids: 44 Inches and Up",
      "marks": []
     }
-   ],
-   "listItem": "number",
-   "level": 1
-  },
-  {
-   "_type": "block",
-   "_key": "be27228d5048",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "0a8e8b6367a7",
-     "text": "Afternoon: Adventureland boat rides (Jungle Cruise / Pirates) when energy allows.",
-     "marks": []
-    }
-   ],
-   "listItem": "number",
-   "level": 1
+   ]
   },
   {
    "_type": "block",
@@ -1259,7 +1243,197 @@
    "children": [
     {
      "_type": "span",
+     "_key": "be27228d5048",
+     "text": "44 inches — Space Mountain:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
      "_key": "263315154c62",
+     "text": " indoor roller coaster in the dark. Intense for some kids even when they clear the height.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "28cf60628402",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "54d33b835545",
+     "text": "48 inches — TRON Lightcycle / Run:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e868c3e73ec5",
+     "text": " Disney calls it one of its fastest coasters; motorcycle-style seat. Many kids this age still prefer Space Mountain first, or skip TRON if coasters are new.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "f79efd4ee906",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "f97c2488a3d2",
+     "href": "https://disneyworld.disney.go.com/guest-services/rider-switch/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "e00d7ce080bb",
+     "text": "If one child is too short or not interested, Disney's ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "7d2fdc756a6d",
+     "text": "Rider Switch",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ee9b67229d0a",
+     "text": " lets one adult wait with the child while the other adult rides, then swap without waiting in the full standby line again (see ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "49e17c754230",
+     "text": "Disney's Rider Switch page",
+     "marks": [
+      "f97c2488a3d2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "da1a24471e4d",
+     "text": " for current rules).",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ba216a373958",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "1c2d3294bd57",
+     "text": "A Simple One-Park Plan by Height",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "9611e7cc11b1",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "750882ab9878",
+     "text": "Kids mostly under 40 inches",
+     "marks": [
+      "strong"
+     ]
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "227bdbf87523",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "411561fce4f4",
+     "text": "Arrive near opening and start in Fantasyland (Pooh, Little Mermaid, \"it's a small world,\" Dumbo).",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "5fe7f53177e7",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f8221fae6ce8",
+     "text": "Grab Peter Pan's Flight early if it is a must — waits grow fast.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "752c7f178e7d",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b9ea5c0704a1",
+     "text": "Midday: PeopleMover, PhilharMagic, or an indoor show break.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "5334998ff764",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "8cb5354efc27",
+     "text": "Afternoon: Adventureland boat rides (Jungle Cruise / Pirates) when energy allows.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "222b8710628b",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b5ed5b8c3661",
      "text": "If a child is 35–38\"+ and coaster-ready, add Barnstormer or Seven Dwarfs Mine Train later.",
      "marks": []
     }
@@ -1269,13 +1443,13 @@
   },
   {
    "_type": "block",
-   "_key": "e868c3e73ec5",
+   "_key": "35b7b0f3826b",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "54d33b835545",
+     "_key": "9a75689167c1",
      "text": "Mixed heights (one short, one taller)",
      "marks": [
       "strong"
@@ -1285,13 +1459,13 @@
   },
   {
    "_type": "block",
-   "_key": "e00d7ce080bb",
+   "_key": "17a3aadeaacd",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "28cf60628402",
+     "_key": "6018028d28aa",
      "text": "Use Rider Switch on Mine Train, Big Thunder, Tiana's (when open), Space Mountain, or TRON so the shorter sibling is not stuck in every line.",
      "marks": []
     }
@@ -1299,13 +1473,13 @@
   },
   {
    "_type": "block",
-   "_key": "ee9b67229d0a",
+   "_key": "d764b375f7ad",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "7d2fdc756a6d",
+     "_key": "3e012712f529",
      "text": "Older kids (44\"+ / 48\"+) can add Space Mountain and TRON at quieter times or with Lightning Lane options shown in the My Disney Experience app (prices and availability vary by date).",
      "marks": []
     }
@@ -1313,13 +1487,13 @@
   },
   {
    "_type": "block",
-   "_key": "49e17c754230",
+   "_key": "c9ee027af87d",
    "style": "h2",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "f97c2488a3d2",
+     "_key": "c81c9c6fca41",
      "text": "Heat, Crowds, and Safety Tips",
      "marks": []
     }
@@ -1327,104 +1501,124 @@
   },
   {
    "_type": "block",
-   "_key": "f79efd4ee906",
+   "_key": "145ace2237e3",
    "style": "normal",
-   "markDefs": [],
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "0402c5d492f2",
+     "href": "https://disneyworld.disney.go.com/guest-services/first-aid/"
+    }
+   ],
    "children": [
     {
      "_type": "span",
-     "_key": "da1a24471e4d",
-     "text": "Magic Kingdom is large, outdoor-heavy, and often crowded. Plan water and shade breaks, and use indoor attractions to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor — Disney lists First Aid in every Walt Disney World theme park.",
+     "_key": "b6ddac1515a1",
+     "text": "Magic Kingdom is large, outdoor-heavy, and often crowded. Plan water and shade breaks, and use indoor attractions to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor. Disney lists ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "7e0be4a1d0a0",
+     "text": "First Aid centers",
+     "marks": [
+      "0402c5d492f2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b3e74d19d8d8",
+     "text": " in its theme parks.",
      "marks": []
     }
    ]
   },
   {
    "_type": "block",
-   "_key": "222b8710628b",
+   "_key": "aa651f181820",
    "style": "normal",
    "markDefs": [
     {
      "_type": "link",
-     "_key": "ba216a373958",
+     "_key": "8ab5b545525a",
      "href": "https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpark-20"
     },
     {
      "_type": "link",
-     "_key": "411561fce4f4",
+     "_key": "a761982bf56b",
      "href": "https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20"
     },
     {
      "_type": "link",
-     "_key": "5fe7f53177e7",
+     "_key": "547cddd281d9",
      "href": "https://www.amazon.com/s?k=stroller+fan&tag=planyourpark-20"
     },
     {
      "_type": "link",
-     "_key": "8cb5354efc27",
+     "_key": "993fbb9a3f32",
      "href": "/blog/disney-world-packing-list-kids/"
     }
    ],
    "children": [
     {
      "_type": "span",
-     "_key": "1c2d3294bd57",
+     "_key": "191254a9a5cd",
      "text": "Useful gear (affiliate links may apply): a ",
      "marks": []
     },
     {
      "_type": "span",
-     "_key": "750882ab9878",
+     "_key": "cc6812b7fb46",
      "text": "cooling towel",
      "marks": [
-      "ba216a373958"
+      "8ab5b545525a"
      ]
     },
     {
      "_type": "span",
-     "_key": "9611e7cc11b1",
+     "_key": "5a461900dc08",
      "text": ", a ",
      "marks": []
     },
     {
      "_type": "span",
-     "_key": "227bdbf87523",
+     "_key": "cc4a34241b7d",
      "text": "kids' rain poncho",
      "marks": [
-      "411561fce4f4"
+      "a761982bf56b"
      ]
     },
     {
      "_type": "span",
-     "_key": "f8221fae6ce8",
+     "_key": "97d29c926758",
      "text": " for Tiana's, and a ",
      "marks": []
     },
     {
      "_type": "span",
-     "_key": "b9ea5c0704a1",
+     "_key": "c28331045099",
      "text": "stroller fan",
      "marks": [
-      "5fe7f53177e7"
+      "547cddd281d9"
      ]
     },
     {
      "_type": "span",
-     "_key": "752c7f178e7d",
+     "_key": "29e39274b525",
      "text": ". Our ",
      "marks": []
     },
     {
      "_type": "span",
-     "_key": "5334998ff764",
+     "_key": "5d07721408e3",
      "text": "Disney World packing list for kids",
      "marks": [
-      "8cb5354efc27"
+      "993fbb9a3f32"
      ]
     },
     {
      "_type": "span",
-     "_key": "b5ed5b8c3661",
+     "_key": "f9709103d84d",
      "text": " has the full checklist.",
      "marks": []
     }
@@ -1432,215 +1626,14 @@
   },
   {
    "_type": "block",
-   "_key": "35b7b0f3826b",
+   "_key": "ff1bd2124f9a",
    "style": "h2",
    "markDefs": [],
    "children": [
-    {
-     "_type": "span",
-     "_key": "9a75689167c1",
-     "text": "Tickets",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "c81c9c6fca41",
-   "style": "normal",
-   "markDefs": [
-    {
-     "_type": "link",
-     "_key": "17a3aadeaacd",
-     "href": "/deals/"
-    }
-   ],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "6018028d28aa",
-     "text": "Magic Kingdom is included with standard Disney World park tickets. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "3e012712f529",
-     "text": "Disney World deals page",
-     "marks": [
-      "17a3aadeaacd"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "d764b375f7ad",
-     "text": ".",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "8ab5b545525a",
-   "style": "normal",
-   "markDefs": [
-    {
-     "_type": "link",
-     "_key": "b6ddac1515a1",
-     "href": "/parks/magic-kingdom/"
-    },
-    {
-     "_type": "link",
-     "_key": "b3e74d19d8d8",
-     "href": "/rides/"
-    }
-   ],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "c9ee027af87d",
-     "text": "For more park context, read our ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "0402c5d492f2",
-     "text": "Magic Kingdom park guide",
-     "marks": [
-      "b6ddac1515a1"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "7e0be4a1d0a0",
-     "text": " or browse all rides in the ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "145ace2237e3",
-     "text": "ride finder",
-     "marks": [
-      "b3e74d19d8d8"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "191254a9a5cd",
-     "text": ".",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "5a461900dc08",
-   "style": "h2",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "cc6812b7fb46",
-     "text": "FAQ",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "97d29c926758",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "a761982bf56b",
-     "text": "What rides at Magic Kingdom have height requirements?",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "cc4a34241b7d",
-     "text": " The main ones are Tomorrowland Speedway (32\" with a 54\" companion; 54\" alone), The Barnstormer (35\"), Seven Dwarfs Mine Train and Big Thunder Mountain Railroad (38\"), Tiana's Bayou Adventure (40\"), Space Mountain (44\"), and TRON Lightcycle / Run (48\"), per Disney's official pages (accessed Oct 19, 2026).",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "f9709103d84d",
-   "style": "normal",
-   "markDefs": [
-    {
-     "_type": "link",
-     "_key": "29e39274b525",
-     "href": "/rides/for/magic-kingdom-under-40/"
-    }
-   ],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "547cddd281d9",
-     "text": "What can a 3-year-old do at Magic Kingdom?",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "c28331045099",
-     "text": " Most Fantasyland dark rides and spinners, \"it's a small world,\" Jungle Cruise, Pirates, PeopleMover, the railroad, and many shows have no height requirement. See them in the ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "993fbb9a3f32",
-     "text": "under-40 ride finder",
-     "marks": [
-      "29e39274b525"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "5d07721408e3",
-     "text": ".",
-     "marks": []
-    }
-   ]
-  },
-  {
-   "_type": "block",
-   "_key": "f6cde9704f81",
-   "style": "normal",
-   "markDefs": [],
-   "children": [
-    {
-     "_type": "span",
-     "_key": "aa651f181820",
-     "text": "Is Big Thunder Mountain 38 or 40 inches?",
-     "marks": [
-      "strong"
-     ]
-    },
     {
      "_type": "span",
      "_key": "56c186ed43fa",
-     "text": " Disney's official Big Thunder Mountain Railroad page lists ",
-     "marks": []
-    },
-    {
-     "_type": "span",
-     "_key": "ff1bd2124f9a",
-     "text": "38 inches (97 cm)",
-     "marks": [
-      "strong"
-     ]
-    },
-    {
-     "_type": "span",
-     "_key": "c773d1f82ac3",
-     "text": " as of October 19, 2026.",
+     "text": "Tickets",
      "marks": []
     }
    ]
@@ -1649,11 +1642,212 @@
    "_type": "block",
    "_key": "3d3fc32c876a",
    "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "f6cde9704f81",
+     "href": "/deals/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "c773d1f82ac3",
+     "text": "Magic Kingdom is included with standard Disney World park tickets. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "81e20f3e35fe",
+     "text": "Disney World deals page",
+     "marks": [
+      "f6cde9704f81"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "81becfa3f86e",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "40b1b7adf441",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "2ae52b2df698",
+     "href": "/parks/magic-kingdom/"
+    },
+    {
+     "_type": "link",
+     "_key": "5005f6c917e9",
+     "href": "/rides/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "548f6cb0d1be",
+     "text": "For more park context, read our ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "bb21b97d95aa",
+     "text": "Magic Kingdom park guide",
+     "marks": [
+      "2ae52b2df698"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "cf995593016a",
+     "text": " or browse all rides in the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "9f1bf8430175",
+     "text": "ride finder",
+     "marks": [
+      "5005f6c917e9"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "858ebf184b05",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "4e123ac01760",
+   "style": "h2",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "81e20f3e35fe",
+     "_key": "fb25a9d98a0a",
+     "text": "FAQ",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "d5a5917a3557",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "fd2787da374a",
+     "text": "What rides at Magic Kingdom have height requirements?",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "f61697bc4a3d",
+     "text": " The main ones are Tomorrowland Speedway (32\" with a 54\" companion; 54\" alone), The Barnstormer (35\"), Seven Dwarfs Mine Train and Big Thunder Mountain Railroad (38\"), Tiana's Bayou Adventure (40\"), Space Mountain (44\"), and TRON Lightcycle / Run (48\"), per Disney's official pages (accessed Oct 19, 2026).",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "e1bb5123bf9e",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "1c0e7d76f9ca",
+     "href": "/rides/for/magic-kingdom-under-40/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "09218e8217bd",
+     "text": "What can a 3-year-old do at Magic Kingdom?",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "4bcca04c46c8",
+     "text": " Most Fantasyland dark rides and spinners, \"it's a small world,\" Jungle Cruise, Pirates, PeopleMover, and many shows have no height requirement (the railroad does too, once it reopens). See them in the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "fbb5ef5e29e1",
+     "text": "under-40 ride finder",
+     "marks": [
+      "1c0e7d76f9ca"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "5f9bb67db35f",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "c3a7b242dbc6",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "aea9f9f9b376",
+     "text": "Is Big Thunder Mountain 38 or 40 inches?",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "56534b04c72b",
+     "text": " Disney's official Big Thunder Mountain Railroad page lists ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "e0f5d1aabce3",
+     "text": "38 inches (97 cm)",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "47948de274fb",
+     "text": " as of October 19, 2026.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "2f04cdafc414",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "04b8d526e7ab",
      "text": "Is Tiana's Bayou Adventure open?",
      "marks": [
       "strong"
@@ -1661,7 +1855,7 @@
     },
     {
      "_type": "span",
-     "_key": "81becfa3f86e",
+     "_key": "bfb7865db573",
      "text": " Check Disney's official page before you go. As of Oct 19, 2026, Disney lists a temporary refurbishment starting November 2, expected to reopen in December 2026.",
      "marks": []
     }
@@ -1669,13 +1863,13 @@
   },
   {
    "_type": "block",
-   "_key": "bb21b97d95aa",
+   "_key": "c9553eeb7976",
    "style": "normal",
    "markDefs": [],
    "children": [
     {
      "_type": "span",
-     "_key": "548f6cb0d1be",
+     "_key": "fcf6e9866e70",
      "text": "How does this differ from the under-40 rides post?",
      "marks": [
       "strong"
@@ -1683,7 +1877,7 @@
     },
     {
      "_type": "span",
-     "_key": "2ae52b2df698",
+     "_key": "c370d99b480f",
      "text": " That post deep-dives the under-40 shortlist. This post is the full height-banded decision guide for mixed-age families, with mid and taller bands plus park-day planning.",
      "marks": []
     }

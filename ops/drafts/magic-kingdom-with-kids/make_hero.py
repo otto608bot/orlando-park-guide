@@ -14,7 +14,9 @@ y=300
 for a,b in rows:
     d.rounded_rectangle([100,y,360,y+85],radius=20,fill=GREEN)
     fa=ImageFont.truetype(F,32); tw=d.textlength(a,font=fa); d.text((230-tw/2,y+24),a,font=fa,fill=CREAM)
-    d.text((390,y+22),b,font=ImageFont.truetype(R,32),fill=INK); y+=105
+    s=32
+    while d.textlength(b,font=ImageFont.truetype(R,s))>W-100-390 and s>20: s-=1  # keep text inside the card
+    d.text((390,y+42-s*0.6),b,font=ImageFont.truetype(R,s),fill=INK); y+=105
 d.text((100,H-110),'planyourpark.com',font=ImageFont.truetype(F,34),fill=ORANGE)
 im.save('hero-1376x768.png')
 print('hero ok')

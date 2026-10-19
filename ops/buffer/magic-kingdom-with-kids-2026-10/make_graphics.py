@@ -22,5 +22,10 @@ L=[("Magic Kingdom with Kids",68,GREEN,True),("Rides by height (checked Oct 19, 
    ("32–40\": Speedway, Barnstormer, Mine Train, Big Thunder, Tiana's",38,(40,40,40),True),
    ("44–48\": Space Mountain, TRON Lightcycle / Run",38,(40,40,40),True)]
 card(1080,1080,L,'ig-1080x1080.png')
-card(1000,1500,L+[("Plus a simple park-day plan by height",36,GREEN,False)],'pin-1000x1500.png')
+P=[("Magic Kingdom with Kids",80,GREEN,True),("Rides by height (checked Oct 19, 2026)",40,ORANGE,True),
+   ("Any height: Dumbo, small world, Pooh, Peter Pan, Jungle Cruise, and more",44,(40,40,40),False),
+   ("32–40\": Speedway, Barnstormer, Mine Train, Big Thunder, Tiana's",46,(40,40,40),True),
+   ("44–48\": Space Mountain, TRON Lightcycle / Run",46,(40,40,40),True),
+   ("Plus closures to check and a simple park-day plan by height",42,GREEN,False)]
+card(1000,1500,P,'pin-1000x1500.png')
 print('graphics ok')

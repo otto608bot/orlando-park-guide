@@ -1,7 +1,7 @@
 ---
 title: "Magic Kingdom with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)"
 slug: magic-kingdom-with-kids-rides-by-height
-excerpt: "Magic Kingdom with kids, sorted by height: which rides work under ~40 inches, mid heights, and taller kids, plus calm picks and a simple park-day plan. Heights checked Oct 19, 2026."
+excerpt: "Magic Kingdom with kids, sorted by height: rides for any height, 32 to 40 inches, and 44+ inches, plus closures to check and a simple park-day plan (Oct 2026)."
 tags: [Magic Kingdom with kids, Magic Kingdom rides for kids, Disney World height requirements, Magic Kingdom]
 targets: ["magic kingdom with kids", "magic kingdom rides for kids"]
 ---
@@ -10,7 +10,7 @@ targets: ["magic kingdom with kids", "magic kingdom rides for kids"]
 
 ## Is Magic Kingdom Good for Kids?
 
-Yes — Magic Kingdom is usually the best first Disney World park for families with young kids. It has the longest list of no-height-limit rides, familiar characters, and a mix of calm dark rides and a few bigger thrills. The catch is that the big coasters and Tiana's Bayou Adventure do have height minimums, so measuring kids before you go saves a lot of line-time heartbreak.
+Yes — Magic Kingdom is usually the best first Disney World park for families with young kids. It has a long list of rides with no height requirement, familiar characters, and a mix of calm dark rides and a few bigger thrills. The catch is that the big coasters and Tiana's Bayou Adventure do have height minimums, so measuring kids before you go saves a lot of line-time heartbreak.
 
 Below, Magic Kingdom rides are grouped by the official minimum heights on Disney's attraction pages (accessed October 19, 2026). Rules can change, so re-check close to your trip. Want the list filtered automatically? Open our [Magic Kingdom rides for kids under 40 inches](/rides/for/magic-kingdom-under-40/) in the ride finder, or start from the [full Magic Kingdom ride list](/rides/for/magic-kingdom-all/).
 
@@ -18,7 +18,7 @@ This guide is the height-banded overview. For a deeper under-40 shortlist, see o
 
 ## Magic Kingdom Ride Heights at a Glance
 
-- **Any height:** Dumbo the Flying Elephant, "it's a small world," Peter Pan's Flight, The Many Adventures of Winnie the Pooh, Under the Sea ~ Journey of The Little Mermaid, The Magic Carpets of Aladdin, Mad Tea Party, Prince Charming Regal Carrousel, Astro Orbiter, Buzz Lightyear's Space Ranger Spin, Jungle Cruise, Pirates of the Caribbean, Haunted Mansion, Tomorrowland Transit Authority PeopleMover, Walt Disney World Railroad, Mickey's PhilharMagic, and more shows/walk-throughs
+- **Any height:** Dumbo the Flying Elephant, "it's a small world," Peter Pan's Flight, The Many Adventures of Winnie the Pooh, Under the Sea ~ Journey of The Little Mermaid, The Magic Carpets of Aladdin, Mad Tea Party, Prince Charming Regal Carrousel, Astro Orbiter, Buzz Lightyear's Space Ranger Spin, Jungle Cruise, Pirates of the Caribbean, Haunted Mansion, Tomorrowland Transit Authority PeopleMover, Mickey's PhilharMagic, Walt Disney World Railroad (closed for refurbishment right now; see below), and more shows/walk-throughs
 - **32 inches (81 cm):** Tomorrowland Speedway (must ride with a companion who is at least 54 inches / 137 cm; 54 inches to drive alone)
 - **35 inches (89 cm):** The Barnstormer
 - **38 inches (97 cm):** Seven Dwarfs Mine Train, Big Thunder Mountain Railroad
@@ -27,6 +27,16 @@ This guide is the height-banded overview. For a deeper under-40 shortlist, see o
 - **48 inches (122 cm):** TRON Lightcycle / Run
 
 Source: official Walt Disney World attraction pages, accessed October 19, 2026. Also useful: the [44-inch Magic Kingdom list](/rides/for/magic-kingdom-44/), [48-inch view](/rides/for/magic-kingdom-48/), and [52-inch view](/rides/for/magic-kingdom-52/) in the ride finder.
+
+## Closures to Check Before You Go
+
+As of October 19, 2026, Disney's official attraction pages list these temporary Magic Kingdom closures:
+
+- **Walt Disney World Railroad:** closed for routine refurbishment since September 28; expected to reopen in November 2026
+- **Tiana's Bayou Adventure:** closes for routine refurbishment on November 2; expected to reopen in December 2026
+- **Walt Disney's Carousel of Progress:** closed since July 6, 2026; expected to reopen in late spring 2027
+
+Dates can change, so re-check [Disney's Magic Kingdom attraction list](https://disneyworld.disney.go.com/attractions/magic-kingdom/) before you lock in your park day.
 
 ## When Magic Kingdom Fits Your Family
 
@@ -48,7 +58,7 @@ Kids this age can do most of Magic Kingdom. Start with calm classics:
 - **Peter Pan's Flight** — popular dark ride; some younger kids find the height illusion spooky, so preview if your child is sensitive
 - **Jungle Cruise** and **Pirates of the Caribbean** — boat rides with mild thrills/story moments (Pirates has a short drop and darker scenes)
 - **Buzz Lightyear's Space Ranger Spin** — interactive dark ride kids this age often love
-- **Tomorrowland Transit Authority PeopleMover** and **Walt Disney World Railroad** — seated breaks with a view
+- **Tomorrowland Transit Authority PeopleMover** — a seated break with a view (the **Walt Disney World Railroad** is another once it reopens)
 
 For calmer kids, the ride finder's [calm Magic Kingdom picks under 40 inches](/rides/for/magic-kingdom-calm-under-40/) skips higher-thrill options.
 
@@ -58,16 +68,16 @@ At **32 inches**, **Tomorrowland Speedway** opens with a tall companion (54"+). 
 
 At **40 inches**, **Tiana's Bayou Adventure** opens. It is a log-flume style ride with a large drop, and you may get wet. Pack a poncho or change of clothes if kids this age want to ride.
 
-**Note (Oct 19, 2026):** Disney's official Tiana's Bayou Adventure page says the attraction will temporarily close for routine refurbishment on November 2 and is expected to reopen in December 2026. Re-check the official page before you lock your park day.
+**Note (Oct 19, 2026):** Disney's official [Tiana's Bayou Adventure page](https://disneyworld.disney.go.com/attractions/magic-kingdom/tianas-bayou-adventure/) says the attraction will temporarily close for routine refurbishment on November 2 and is expected to reopen in December 2026. Re-check the official page before you lock your park day.
 
 Everything in the under-40 list still applies, plus Barnstormer / Mine Train / Big Thunder if kids clear those heights.
 
 ## Taller Kids: 44 Inches and Up
 
 - **44 inches — Space Mountain:** indoor roller coaster in the dark. Intense for some kids even when they clear the height.
-- **48 inches — TRON Lightcycle / Run:** one of Disney's fastest coasters; motorcycle-style seat. Many kids this age still prefer Space Mountain first, or skip TRON if coasters are new.
+- **48 inches — TRON Lightcycle / Run:** Disney calls it one of its fastest coasters; motorcycle-style seat. Many kids this age still prefer Space Mountain first, or skip TRON if coasters are new.
 
-If one child is too short or not interested, Disney's **Rider Switch** lets one adult wait with the child while the other adult rides, then swap without waiting in the full standby line again (see Disney's Rider Switch page for current rules).
+If one child is too short or not interested, Disney's **Rider Switch** lets one adult wait with the child while the other adult rides, then swap without waiting in the full standby line again (see [Disney's Rider Switch page](https://disneyworld.disney.go.com/guest-services/rider-switch/) for current rules).
 
 ## A Simple One-Park Plan by Height
 
@@ -87,7 +97,7 @@ Older kids (44"+ / 48"+) can add Space Mountain and TRON at quieter times or wit
 
 ## Heat, Crowds, and Safety Tips
 
-Magic Kingdom is large, outdoor-heavy, and often crowded. Plan water and shade breaks, and use indoor attractions to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor — Disney lists First Aid in every Walt Disney World theme park.
+Magic Kingdom is large, outdoor-heavy, and often crowded. Plan water and shade breaks, and use indoor attractions to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor. Disney lists [First Aid centers](https://disneyworld.disney.go.com/guest-services/first-aid/) in its theme parks.
 
 Useful gear (affiliate links may apply): a [cooling towel](https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpark-20), a [kids' rain poncho](https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20) for Tiana's, and a [stroller fan](https://www.amazon.com/s?k=stroller+fan&tag=planyourpark-20). Our [Disney World packing list for kids](/blog/disney-world-packing-list-kids/) has the full checklist.
 
@@ -101,7 +111,7 @@ For more park context, read our [Magic Kingdom park guide](/parks/magic-kingdom/
 
 **What rides at Magic Kingdom have height requirements?** The main ones are Tomorrowland Speedway (32" with a 54" companion; 54" alone), The Barnstormer (35"), Seven Dwarfs Mine Train and Big Thunder Mountain Railroad (38"), Tiana's Bayou Adventure (40"), Space Mountain (44"), and TRON Lightcycle / Run (48"), per Disney's official pages (accessed Oct 19, 2026).
 
-**What can a 3-year-old do at Magic Kingdom?** Most Fantasyland dark rides and spinners, "it's a small world," Jungle Cruise, Pirates, PeopleMover, the railroad, and many shows have no height requirement. See them in the [under-40 ride finder](/rides/for/magic-kingdom-under-40/).
+**What can a 3-year-old do at Magic Kingdom?** Most Fantasyland dark rides and spinners, "it's a small world," Jungle Cruise, Pirates, PeopleMover, and many shows have no height requirement (the railroad does too, once it reopens). See them in the [under-40 ride finder](/rides/for/magic-kingdom-under-40/).
 
 **Is Big Thunder Mountain 38 or 40 inches?** Disney's official Big Thunder Mountain Railroad page lists **38 inches (97 cm)** as of October 19, 2026.
 

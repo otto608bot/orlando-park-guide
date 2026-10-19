@@ -43,3 +43,11 @@
 3. **Hero:** text-only branded graphic (no people, no Disney logos), same approach as AK. Confirm acceptable per HERMES.md.
 4. `publishedAt` unset (set at publish).
 5. Social pack is DRAFT only under `ops/buffer/magic-kingdom-with-kids-2026-10/` — never queued.
+
+## CEO second review (2026-10-19)
+- Big Thunder **38"** confirmed on Disney's official page (facet "38\" (97 cm) or Taller" and safety text "minimum height requirement of 38 inches"). The Sanity ride field the site uses is `heightRequirement` (was **40**, not null; `height` is an unused field). Saved draft `drafts.UzjbPEJ4gI65TQn8dT70ny` with heightRequirement 38. `data/rides.js` fixed in a separate ceo/ PR (not used by the web build).
+- New closure found: **Walt Disney World Railroad** closed since Sep 28, 2026, expected back November 2026. **Carousel of Progress** closed Jul 6, 2026 to late spring 2027. Post now has a "Closures to Check Before You Go" section; railroad no longer recommended as a current seated break. Ride drafts saved with isClosed + closureNote: `drafts.r5PBb5Nahg2bY9oktfqOej`, `drafts.q5bQv6QFqWcAZeLNaYZkeb`.
+- Tiana's refurb (Nov 2 to expected Dec 2026) confirmed on official page.
+- Hero fixed: 32-40" row text ran past the card edge; now auto-fits. New asset `image-b593ecffa898bec88d0b9a66e33ebf46db531950-1376x768-png` attached to the draft.
+- Excerpt (meta description) cut from 181 to 159 characters. Added official links for Tiana's, Rider Switch, First Aid, and the MK attraction list. Softened "longest list" claim; TRON speed claim now attributed to Disney.
+- Consistency fixes in other posts (drafts only): under-40 MK post (Big Thunder 40 -> 38) and baby/toddler draft (Tiana's 38 -> 40).
