@@ -32,7 +32,7 @@ const rideData = [
     name: "Big Thunder Mountain Railroad",
     park: "Magic Kingdom",
     resort: "Walt Disney World",
-    height: 40,
+    height: 38,
     pregnant: false,
     wheelchair: "TAV",
     sensory: { dark: true, loud: true, fog: false, sudden: true, enclosed: false, strobe: false },
