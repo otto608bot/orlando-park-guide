@@ -1,0 +1,134 @@
+{
+ "doc": "drafts.blogPost-epic-universe-tickets-guide",
+ "base_rev": "f1O3mfm9f6TgHfHlPz28kS",
+ "old": {
+  "title": "Epic Universe Tickets: Pricing, Tiers, and Money-Saving Tips",
+  "excerpt": "How to compare current Epic Universe tickets, Universal Express and authorized-seller options without relying on stale price claims."
+ },
+ "new": {
+  "title": "Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families",
+  "excerpt": "Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026."
+ },
+ "inserts": [
+  {
+   "after": "h239qaB",
+   "block": {
+    "_type": "block",
+    "_key": "bb4b0b6f3825",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "3684bd87359d",
+      "href": "/affiliate-disclosure/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b42175400e2e",
+      "text": "Heads up: some ticket links in this guide are affiliate links. If you book through them, we may earn a commission at no extra cost to you. ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "71c3ace549ae",
+      "text": "See our affiliate disclosure",
+      "marks": [
+       "3684bd87359d"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "2ba4012ef068",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   }
+  },
+  {
+   "after": "5ed1d877e3ef",
+   "block": {
+    "_type": "block",
+    "_key": "3d548df53b32",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "932ffb801fec",
+      "href": "/deals/"
+     },
+     {
+      "_type": "link",
+      "_key": "f4fe26412c02",
+      "href": "/rides/for/epic-universe-under-40/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "27a096a9e590",
+      "text": "Ready to compare? See current Epic Universe and Universal Orlando ticket options from our ticket partner, Undercover Tourist, on our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "f6ee8d876c9b",
+      "text": "Orlando ticket deals page",
+      "marks": [
+       "932ffb801fec"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a2be3f139228",
+      "text": ". Not sure Epic fits your kids yet? Start with the ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "508a3bac39e2",
+      "text": "Epic Universe under-40 ride list",
+      "marks": [
+       "f4fe26412c02"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "352e660a8500",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   }
+  }
+ ],
+ "title_options": [
+  {
+   "t": "Epic Universe Tickets 2026: 1-Day vs Multi-Day for Families",
+   "len": 59,
+   "why": "RECOMMENDED. Leads with the head term, adds year freshness, and names the real decision the post answers (Epic-only day vs multi-day). Drops 'Pricing', which the body deliberately avoids (no static prices), so the snippet matches the content. Family angle differentiates from Universal/aggregator results."
+  },
+  {
+   "t": "Epic Universe Tickets: Which Ticket Is Right for Your Family?",
+   "len": 61,
+   "why": "Question framing can lift CTR at pos ~8, but loses the year and the 1-day/multi-day specifics."
+  },
+  {
+   "t": "Epic Universe Tickets 2026: Ticket Types, Express & Where to Buy",
+   "len": 64,
+   "why": "Covers the most subtopics, but is long (likely truncated with the ' | Plan Your Park' suffix) and generic."
+  }
+ ],
+ "meta_options": [
+  {
+   "m": "Epic-only day or multi-day Universal ticket? Compare Epic Universe ticket types, Express add-ons and where to buy, with a family checklist. Updated Oct 2026.",
+   "why": "RECOMMENDED. Opens with the decision, lists concrete subtopics, dated."
+  },
+  {
+   "m": "Planning Epic Universe with kids? See what each ticket type includes, when Universal Express is worth it, and how to compare authorized sellers before you buy.",
+   "why": "Stronger family hook, but no freshness signal."
+  }
+ ]
+}

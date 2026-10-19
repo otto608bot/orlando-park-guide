@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, Suspense } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 
 interface FilterState {
@@ -69,12 +69,33 @@ const FiltersContext = createContext<FiltersContextType>({
   clearFilters: () => {},
 });
 
-export function FiltersProvider({ children }: { children: ReactNode }) {
+/** Serialize filters to the shareable query string used across the site. */
+export function filtersToQuery(filters: FilterState): string {
+  const params = new URLSearchParams();
+  if (filters.height > 0) params.set('height', filters.height.toString());
+  if (filters.pregnancySafe) params.set('pregnancySafe', 'true');
+  if (filters.wheelchairAccessible) params.set('wheelchair', 'true');
+  if (filters.calmExperience) params.set('calm', 'true');
+  if (filters.selectedParks.length > 0) params.set('parks', filters.selectedParks.join(','));
+  return params.toString();
+}
+
+/**
+ * Reads URL params and syncs filters <-> URL. Isolated in its own <Suspense>
+ * (renders nothing) so useSearchParams() doesn't force the whole layout —
+ * and every page body — into client-side rendering during static export.
+ */
+function FiltersUrlSync({
+  filters,
+  setFilters,
+}: {
+  filters: FilterState;
+  setFilters: (f: FilterState) => void;
+}) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
   const [initialized, setInitialized] = useState(false);
-  const [filters, setFilters] = useState<FilterState>(defaultFilters);
 
   // Initialize filters from URL params
   useEffect(() => {
@@ -95,23 +116,21 @@ export function FiltersProvider({ children }: { children: ReactNode }) {
       selectedParks,
     });
     setInitialized(true);
-  }, [searchParams]);
+  }, [searchParams, setFilters]);
 
   // Update URL when filters change
   useEffect(() => {
     if (!initialized) return;
-
-    const params = new URLSearchParams();
-    if (filters.height > 0) params.set('height', filters.height.toString());
-    if (filters.pregnancySafe) params.set('pregnancySafe', 'true');
-    if (filters.wheelchairAccessible) params.set('wheelchair', 'true');
-    if (filters.calmExperience) params.set('calm', 'true');
-    if (filters.selectedParks.length > 0) params.set('parks', filters.selectedParks.join(','));
-
-    const queryString = params.toString();
+    const queryString = filtersToQuery(filters);
     const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
     router.replace(newUrl, { scroll: false });
   }, [filters, initialized, pathname, router]);
+
+  return null;
+}
+
+export function FiltersProvider({ children }: { children: ReactNode }) {
+  const [filters, setFilters] = useState<FilterState>(defaultFilters);
 
   const setHeight = (height: number) => {
     setFilters(prev => ({ ...prev, height }));
@@ -147,6 +166,9 @@ export function FiltersProvider({ children }: { children: ReactNode }) {
       setSelectedParks,
       clearFilters,
     }}>
+      <Suspense fallback={null}>
+        <FiltersUrlSync filters={filters} setFilters={setFilters} />
+      </Suspense>
       {children}
     </FiltersContext.Provider>
   );

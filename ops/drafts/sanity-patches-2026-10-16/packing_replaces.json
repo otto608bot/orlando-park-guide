@@ -1,0 +1,75 @@
+{
+ "source": {
+  "name": "NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026",
+  "url": "https://www.ncei.noaa.gov/data/normals-monthly/1991-2020/access/USW00012815.csv",
+  "values_F": {
+   "Jun_high": 90.8,
+   "Jul_high": 92.0,
+   "Aug_high": 91.6,
+   "Dec_high": 73.8,
+   "Jan_high": 71.8,
+   "Feb_high": 74.9,
+   "Dec_low": 52.9,
+   "Jan_low": 49.5,
+   "Feb_low": 52.4
+  }
+ },
+ "edits": [
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-9b3c8e9ed1cc",
+   "span": "span-9b3c8e9ed1cc",
+   "old": "If you're Googling 'what to pack for Disney World vacation with kids 2026,' you're in the right place. Most packing lists are written by people who've never navigated Magic Kingdom with a toddler in one hand and a cooling towel in the other. This one is different — 65+ items verified by Orlando locals who've done this dozens of times with their own kids, updated specifically for 2026 park policies, Lightning Lane requirements, and current Florida weather patterns.",
+   "new": "If you're searching for what to pack for a Disney World vacation with kids in 2026, this checklist is built for that. It covers 65+ items organized by category, updated for 2026 park policies, Lightning Lane requirements, and Orlando's typical weather by season."
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-33a91940982d",
+   "span": "span-33a91940982d",
+   "old": "Orlando summers regularly hit 95°F with 80%+ humidity. Winter daytime temps run 60–75°F but buildings are aggressively air-conditioned. Kids feel the heat more than adults — pack accordingly:",
+   "new": "Orlando summers are hot and humid: average daily highs at Orlando International Airport are about 91–92°F in June through August, and winter (December–February) highs average about 72–75°F (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026). Indoor attractions and restaurants are often heavily air-conditioned. Young kids can overheat quickly, so plan shade and water breaks and pack accordingly:"
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-23658bb9bc8d",
+   "span": "s879be0cfbb33",
+   "old": "Summer Disney World packing with kids requires extra focus on heat management: SPF 50+ lotion sunscreen (not aerosol spray), cooling towels, cooling neck gaiters, electrolyte packets, insulated water bottles for each family member, and a USB rechargeable handheld fan. The temperature regularly hits 95°F with 80%+ humidity in July and August. Kids feel heat faster than adults — pack more cooling supplies than you think you need.",
+   "new": "Summer Disney World packing with kids requires extra focus on heat management: SPF 50+ lotion sunscreen (not aerosol spray), cooling towels, cooling neck gaiters, electrolyte packets, insulated water bottles for each family member, and a USB rechargeable handheld fan. July and August average highs in Orlando are about 92°F, with high humidity (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026). Plan regular shade and water breaks for young kids, and pack more cooling supplies than you think you need."
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-df13f26c389e",
+   "span": "span-df13f26c389e",
+   "old": "Winter Disney World (December–February) daytime temps run 60–75°F, but buildings are aggressively air-conditioned. Pack layers for everyone: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still necessary — Orlando winter sun is strong enough to burn kids' exposed skin.",
+   "new": "Winter Disney World (December–February) average daytime highs are about 72–75°F, with average lows around 50–53°F (NOAA NCEI 1991–2020 climate normals, Orlando International Airport, accessed Oct 16, 2026), and indoor spaces are often heavily air-conditioned. Pack layers for everyone: a light jacket or fleece, moisture-wicking base layers, and a rain jacket for unexpected rain. Sunscreen is still worth packing — kids can burn even on cooler sunny days."
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-d9d46275df0d",
+   "span": "span-d9d46275df0d",
+   "old": "The five things most first-time family visitors wish they had brought are: a portable phone charger (20,000mAh+), comfortable broken-in walking shoes, a cooling towel, an insulated water bottle for each family member, and rain ponchos for the whole family. These five items alone will dramatically improve your park experience compared to visitors who don't pack them.",
+   "new": "If you only pack five extras, prioritize: a portable phone charger (20,000mAh+), comfortable broken-in walking shoes, a cooling towel, an insulated water bottle for each family member, and rain ponchos for the whole family. These cover the most common park-day problems: dead phones, sore feet, heat, thirst, and afternoon rain."
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-af4834551c09",
+   "span": "span-af4834551c09",
+   "old": "Everything above is available on Amazon — delivered to your hotel or home before your trip. Use our packing list links above to grab everything your family needs before you go. A 20,000mAh charger, cooling towel, packing cubes, and a good pair of walking shoes are the four things most first-time visitors with kids wish they had brought.",
+   "new": "Everything above is available on Amazon — delivered to your hotel or home before your trip. Use our packing list links above to grab what your family needs before you go. If you're short on time, start with a 20,000mAh charger, a cooling towel, packing cubes, and a good pair of walking shoes."
+  },
+  {
+   "post": "disney-world-packing-list-kids",
+   "draft": "drafts.disney-world-packing-list-kids",
+   "block": "86642c220973",
+   "span": "e531a32a974e",
+   "old": "This isn't a generic 100-item packing list copied from a travel site. These are 25 items that actual families with young kids used at Disney World in 2025 and 2026 — tested in real heat, real crowds, and real exhaustion. Organized by what actually matters, with age-specific guidance for toddlers through early elementary.",
+   "new": "This isn't a generic 100-item packing list. It's 25 practical items for Disney World with young kids, chosen for the heat, crowds, and long days of a typical park visit. It's organized by what matters most, with age-specific guidance for toddlers through early elementary."
+  }
+ ]
+}

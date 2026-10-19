@@ -8,6 +8,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 | slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
+| magic-kingdom-with-kids-rides-by-height | **awaiting_approval (Sanity draft + PR)** | GSC ~50 impr/0 clicks (MK with kids cluster 2026-09-20→10-17) | tickets + Amazon | `drafts.blogPost-magic-kingdom-with-kids-rides-by-height` · `ops/drafts/magic-kingdom-with-kids/` · buffer `ops/buffer/magic-kingdom-with-kids-2026-10/` |
 | parks hub CTR v2 | published + distributed | live; mobile height chooser shipped 2026-09-25 | tickets | https://planyourpark.com/parks/ |
 | disney-vs-universal-with-kids-2026 | published | height/energy/interests decision post | tickets | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/ |
 | epic-universe-rides-ranked-guide CTR v2 | published + distributed | live; high-impr 0-click focus | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |
@@ -60,6 +61,8 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Buffer offline packs 2026-08-26 + 2026-08-29 + 2026-08-30 + 2026-08-31 | idea (offline) | Ideas board full — drafts in repo | tickets + Amazon | `ops/buffer/ideas-offline-2026-08-26.md` · `ops/buffer/ideas-offline-2026-08-29.md` · `ops/buffer/ideas-offline-2026-08-30.md` · `ops/buffer/ideas-offline-2026-08-31.md` |
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | animal-kingdom-with-kids-rides-by-height | **drafting → qa2 done (Sanity draft)** | GSC 62 impr/0 clicks pos 31 (AK cluster) | tickets + Amazon | `drafts.blogPost-animal-kingdom-with-kids-rides-by-height` · `ops/drafts/animal-kingdom-with-kids/` |
+| orlando-theme-parks-list-families (brief) | brief | GSC 319 impr/0 clicks pos 28 (cannibalization risk with /parks/) | tickets | `ops/drafts/briefs-2026-10-16/02-orlando-theme-parks-list-for-families.md` |
+| magic-kingdom-with-kids-all-ages (brief) | brief | GSC 45 impr/0 clicks pos 38 | tickets + Amazon | `ops/drafts/briefs-2026-10-16/03-magic-kingdom-with-kids-all-ages.md` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |
 
 ## Dual QA checklist (every draft)

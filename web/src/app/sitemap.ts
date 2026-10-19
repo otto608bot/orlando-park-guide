@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { dedupePostsBySlug } from "@/lib/blog";
-import { ridePresetSeoPaths, ridePresetSitemapPaths } from "@/lib/ride-presets";
+import { ridePresetSeoPaths } from "@/lib/ride-presets";
 import { sanityClient } from "@/lib/sanity";
 import { SITE_URL } from "@/lib/seo";
 
@@ -112,7 +112,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Crawlable static SEO landings (/rides/for/…) + interactive query deep links.
+  // Crawlable static SEO landings (/rides/for/…) only. Query deep links
+  // (/rides?height=…&parks=…) are interactive views of the same content, are
+  // not canonical, and their raw "&" made the XML invalid — keep them out.
   const now = new Date();
   const ridePresetSeoRoutes: MetadataRoute.Sitemap = ridePresetSeoPaths().map((path) => ({
     url: `${SITE_URL}${path}`,
@@ -120,17 +122,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
-  const ridePresetQueryRoutes: MetadataRoute.Sitemap = ridePresetSitemapPaths().map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
-  }));
 
   return [
     ...STATIC_ROUTES,
     ...ridePresetSeoRoutes,
-    ...ridePresetQueryRoutes,
     ...parkRoutes,
     ...blogRoutes,
   ];
