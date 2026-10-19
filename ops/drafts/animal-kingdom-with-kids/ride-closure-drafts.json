@@ -1,0 +1,109 @@
+{
+ "mutations": [
+  {
+   "createIfNotExists": {
+    "_id": "drafts.r5PBb5Nahg2bY9oktfqTQR",
+    "_type": "ride",
+    "accessibility": [
+     "transfer-accessible",
+     "not-pregnant-safe",
+     "dark-ride",
+     "loud-audio",
+     "fog-effects",
+     "strobe-lights",
+     "sudden-movements",
+     "enclosed-space"
+    ],
+    "description": "A turbulent time rover mission to save a dinosaur",
+    "heightRequirement": 40,
+    "image": null,
+    "name": "DINOSAUR",
+    "park": "Animal Kingdom",
+    "rideDuration": "4 min",
+    "rideType": "Dark Ride",
+    "slug": {
+     "_type": "slug",
+     "current": "ak-dinosaur"
+    },
+    "thrillLevel": 3
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.r5PBb5Nahg2bY9oktfqTQR",
+    "set": {
+     "isClosed": true,
+     "closureNote": "Permanently closed. Last day Feb 1, 2026 (DinoLand U.S.A. closure for Tropical Americas), as reported by WDWMagic (Sep 2, 2025) and WDW News Today (Feb 2, 2026)."
+    }
+   }
+  },
+  {
+   "createIfNotExists": {
+    "_id": "drafts.UzjbPEJ4gI65TQn8dT7GVw",
+    "_type": "ride",
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "Fly on a friendly dinosaur",
+    "heightRequirement": 0,
+    "image": null,
+    "name": "TriceraTop Spin",
+    "park": "Animal Kingdom",
+    "rideDuration": "2 min",
+    "rideType": "Spinner",
+    "slug": {
+     "current": "ak-triceratop"
+    },
+    "thrillLevel": 1
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.UzjbPEJ4gI65TQn8dT7GVw",
+    "set": {
+     "isClosed": true,
+     "closureNote": "Permanently closed Jan 2025 (DinoLand U.S.A. / Tropical Americas), as reported by WDWMagic (Sep 2, 2025). Official Disney page returns 404 (checked Oct 16, 2026)."
+    }
+   }
+  },
+  {
+   "createIfNotExists": {
+    "_id": "drafts.q5bQv6QFqWcAZeLNaYa5Ig",
+    "_type": "ride",
+    "accessibility": [
+     "wheelchair-accessible",
+     "dark-ride",
+     "loud-audio",
+     "fog-effects",
+     "sudden-movements",
+     "enclosed-space"
+    ],
+    "description": "A 3D show inside the Tree of Life",
+    "heightRequirement": 0,
+    "image": null,
+    "name": "It's Tough to be a Bug!",
+    "park": "Animal Kingdom",
+    "rideDuration": "9 min",
+    "rideType": "4D Show",
+    "slug": {
+     "current": "ak-bug"
+    },
+    "thrillLevel": 1
+   }
+  },
+  {
+   "patch": {
+    "id": "drafts.q5bQv6QFqWcAZeLNaYa5Ig",
+    "set": {
+     "isClosed": true,
+     "closureNote": "Permanently closed after its final performances on Mar 16, 2025; replaced by Zootopia: Better Zoogether!, as reported by WDWMagic (Feb 3 and Mar 14, 2025)."
+    }
+   }
+  }
+ ],
+ "published_revs": {
+  "r5PBb5Nahg2bY9oktfqTQR": "r5PBb5Nahg2bY9oktgvX1E",
+  "UzjbPEJ4gI65TQn8dT7GVw": "r5PBb5Nahg2bY9okth8eoH",
+  "q5bQv6QFqWcAZeLNaYa5Ig": "r5PBb5Nahg2bY9okth8ufl"
+ }
+}
