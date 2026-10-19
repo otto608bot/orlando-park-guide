@@ -13,6 +13,8 @@ export const AFFILIATE_LINKS = {
   universal3Park3Day: 'https://www.dpbolvw.net/click-101693488-12983229',
   universal3DayBaseVolcanoBay: 'https://www.tkqlhce.com/click-101693488-12834933',
   universal4DayBase: 'https://www.tkqlhce.com/click-101693488-12983232',
+  // NOTE (2026-10-16): MISLABELED. 12834895 = Universal 2-park 2-day park-to-park (same as universal2Park2Day),
+  // not an Epic 1-day ticket. Kept for compatibility; Epic CTAs route to /deals/ until a real Epic link exists.
   universal1Park1DayEpic: 'https://www.tkqlhce.com/click-101693488-12834895',
   universalOrlandoDirect: 'https://www.universalorlando.com',
 

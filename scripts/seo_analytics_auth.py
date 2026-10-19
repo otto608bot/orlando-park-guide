@@ -38,6 +38,7 @@ PENDING_PATH = ROOT / ".hermes" / "google_seo_oauth_pending.json"
 SCOPES = [
     "https://www.googleapis.com/auth/analytics.readonly",
     "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/webmasters",
 ]
 REDIRECT_URI = "http://localhost:1"
 
