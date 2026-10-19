@@ -1,0 +1,13 @@
+{
+ "note": "2026-10-16 #6: Epic tickets bottom disclosure covers ticket + Amazon links.",
+ "edits": [
+  {
+   "post": "epic-universe-tickets-guide",
+   "draft": "drafts.blogPost-epic-universe-tickets-guide",
+   "block": "p4yqaB",
+   "span": "s4zqaB",
+   "old": "As an Amazon Associate and affiliate partner, Plan Your Park may earn from qualifying purchases at no extra cost to you.",
+   "new": "Some ticket links on this page (including our ticket partner, Undercover Tourist) and product links (Amazon Associates) are affiliate links. If you book or buy through them, Plan Your Park may earn a commission at no extra cost to you."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "note": "Part 1c (2026-10-16 #4): motion-sickness + First Aid FAQ softening. Disney First Aid page (https://disneyworld.disney.go.com/guest-services/first-aid/, accessed 2026-10-16) confirms First Aid in every WDW theme park but its fetched text does not mention nurses -> softened to 'medical professionals'.",
+ "edits": [
+  {
+   "post": "disney-world-packing-list-kids",
+   "draft": "drafts.disney-world-packing-list-kids",
+   "block": "978380997239",
+   "span": "a1c15bfa0227",
+   "old": "\nSeven Dwarfs Mine Train, Slinky Dog Dash, and Frozen Ever After all have spins. If your child is prone to motion sickness, give Bonine or Dramamine before the park — not after symptoms start. Ask your pediatrician which they recommend for your child's age and weight.",
+   "new": "\nIf your child is prone to motion sickness, ask your pediatrician about motion-sickness options before your trip."
+  },
+  {
+   "post": "disney-world-packing-list-kids",
+   "draft": "drafts.disney-world-packing-list-kids",
+   "block": "361ec0c52bdd",
+   "span": "e84dc79687f5",
+   "old": "Every Disney park has a First Aid station staffed by registered nurses. They handle minor injuries, provide over-the-counter medications, and can connect you with local urgent care if needed. For emergencies, dial 911 or alert any cast member. First Aid is clearly marked on park maps and at the front of every park.",
+   "new": "Every Walt Disney World theme park has First Aid (Disney's official First Aid page, accessed Oct 16, 2026), staffed by medical professionals. For emergencies, dial 911 or alert any cast member. First Aid locations are marked on park maps."
+  },
+  {
+   "post": "disney-world-packing-list",
+   "draft": "drafts.disney-world-packing-list",
+   "block": "block-83c1ec8cf815",
+   "span": "s76b01292884f",
+   "old": "\nIf anyone in your group is sensitive to motion simulator rides.",
+   "new": "\nIf anyone in your group gets motion sick, ask your pediatrician or doctor about motion-sickness options before your trip."
+  }
+ ]
+}
