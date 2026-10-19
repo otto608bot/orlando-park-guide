@@ -131,10 +131,6 @@ const rideData = [
     duration: "10 min",
     description: "A humorous riverboat tour through exotic rivers"
   },
-  type: "Boat",
-    duration: "20 min",
-    description: "A scenic cruise aboard a steam-powered paddle wheeler"
-  },
   {
     id: "mk-tea-cups",
     name: "Mad Tea Party",
