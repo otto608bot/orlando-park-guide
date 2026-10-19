@@ -7,14 +7,16 @@ import { createPageMetadata, getParksHubJsonLd } from "@/lib/seo";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "All Parks in Orlando for Families (2026) — Disney, Universal & More",
+  title: "Orlando Parks: All 9 Theme Parks Compared for Families (2026)",
   description:
-    "Full list of Orlando theme parks for families: Disney World, Universal (Epic Universe), SeaWorld, and LEGOLAND. Compare by kid age, height, thrills, and tickets.",
+    "The full list of Orlando theme parks: 4 Disney World parks, 3 Universal parks including Epic Universe, SeaWorld and LEGOLAND. Compare by kid age, height and thrills.",
   path: "/parks",
   keywords: [
+    "orlando parks",
+    "parks in orlando",
+    "orlando theme parks list",
     "all parks in orlando",
     "all orlando theme parks",
-    "orlando parks",
     "best orlando park for kids",
     "disney vs universal with kids",
     "epic universe families",
@@ -44,12 +46,41 @@ export default async function ParksPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(parksJsonLd) }}
       />
       <header className="parks-header">
-        <h1>All Parks in Orlando — Which One Fits Your Kids?</h1>
+        <h1>Orlando Theme Parks: All 9 Parks, Compared for Families</h1>
         <p className="parks-subtitle">
-          Looking for all parks in Orlando in one place? Use this hub to compare Disney World,
-          Universal Orlando (including Epic Universe), SeaWorld, and LEGOLAND — then jump into ride
-          lists filtered by height, thrills, and accessibility.
+          There are nine major theme parks in Orlando: four at Walt Disney World, three at Universal
+          Orlando (including Epic Universe), plus SeaWorld Orlando and LEGOLAND Florida. Compare all the
+          parks in Orlando below, then jump into ride lists filtered by your kid&apos;s height, thrill
+          level, and accessibility needs.
         </p>
+        <nav className="parks-list-nav" aria-label="All Orlando theme parks">
+          <h2>The full Orlando parks list</h2>
+          <ul>
+            <li>
+              <strong>Walt Disney World (4):</strong>{" "}
+              <Link href="/parks/magic-kingdom/">Magic Kingdom</Link>,{" "}
+              <Link href="/parks/epcot/">EPCOT</Link>,{" "}
+              <Link href="/parks/hollywood-studios/">Hollywood Studios</Link>,{" "}
+              <Link href="/parks/animal-kingdom/">Animal Kingdom</Link>
+            </li>
+            <li>
+              <strong>Universal Orlando (3):</strong>{" "}
+              <Link href="/parks/universal-studios-florida/">Universal Studios Florida</Link>,{" "}
+              <Link href="/parks/islands-of-adventure/">Islands of Adventure</Link>,{" "}
+              <Link href="/parks/epic-universe/">Epic Universe</Link>
+            </li>
+            <li>
+              <strong>Also in Orlando (2):</strong>{" "}
+              <Link href="/parks/seaworld-orlando/">SeaWorld Orlando</Link>,{" "}
+              <Link href="/parks/legoland-florida/">LEGOLAND Florida</Link>{" "}
+              (LEGOLAND is in Winter Haven, between Orlando and Tampa)
+            </li>
+          </ul>
+          <p>
+            Deciding between resorts? Read{" "}
+            <Link href="/blog/disney-vs-universal-with-kids-2026/">Disney vs Universal with kids</Link>.
+          </p>
+        </nav>
       </header>
 
       <section className="parks-decision" aria-label="Quick family picks">
@@ -185,6 +216,9 @@ export default async function ParksPage() {
           margin-bottom: 1rem;
         }
 
+        .parks-list-nav { margin: 1.25rem auto 0; max-width: 820px; text-align: left; }
+        .parks-list-nav h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .parks-list-nav ul { padding-left: 1.1rem; line-height: 1.7; }
         .parks-subtitle {
           font-size: 1.125rem;
           color: var(--text-medium);
