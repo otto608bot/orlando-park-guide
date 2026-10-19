@@ -8,6 +8,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 | slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
+| magic-kingdom-with-kids-rides-by-height | **awaiting_approval (Sanity draft + PR)** | GSC ~50 impr/0 clicks (MK with kids cluster 2026-09-20→10-17) | tickets + Amazon | `drafts.blogPost-magic-kingdom-with-kids-rides-by-height` · `ops/drafts/magic-kingdom-with-kids/` · buffer `ops/buffer/magic-kingdom-with-kids-2026-10/` |
 | parks hub CTR v2 | published + distributed | live; mobile height chooser shipped 2026-09-25 | tickets | https://planyourpark.com/parks/ |
 | disney-vs-universal-with-kids-2026 | published | height/energy/interests decision post | tickets | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/ |
 | epic-universe-rides-ranked-guide CTR v2 | published + distributed | live; high-impr 0-click focus | tickets | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/ |

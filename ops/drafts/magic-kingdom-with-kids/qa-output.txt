@@ -1,0 +1,71 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /rides/for/magic-kingdom-under-40/ 200
+PASS anchor<=60 "Magic Kingdom rides for kids u" 
+PASS link /rides/for/magic-kingdom-all/ 200
+PASS anchor<=60 "full Magic Kingdom ride list" 
+PASS link /blog/best-magic-kingdom-rides-kids-under-40-inches/ 200
+PASS anchor<=60 "best Magic Kingdom rides for k" 
+PASS link /rides/for/magic-kingdom-44/ 200
+PASS anchor<=60 "44-inch Magic Kingdom list" 
+PASS link /rides/for/magic-kingdom-48/ 200
+PASS anchor<=60 "48-inch view" 
+PASS link /rides/for/magic-kingdom-52/ 200
+PASS anchor<=60 "52-inch view" 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /blog/disney-vs-universal-with-kids-2026/ 200
+PASS anchor<=60 "Disney vs Universal with kids " 
+PASS link /blog/disney-world-with-baby-toddler/ 200
+PASS anchor<=60 "Disney World with a baby or to" 
+PASS link /rides/for/magic-kingdom-calm-under-40/ 200
+PASS anchor<=60 "calm Magic Kingdom picks under" 
+PASS link https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpark-20 503
+PASS anchor<=60 "cooling towel" 
+PASS link https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20 503
+PASS anchor<=60 "kids' rain poncho" 
+PASS link https://www.amazon.com/s?k=stroller+fan&tag=planyourpark-20 503
+PASS anchor<=60 "stroller fan" 
+PASS link /blog/disney-world-packing-list-kids/ 200
+PASS anchor<=60 "Disney World packing list for " 
+PASS link /deals/ 200
+PASS anchor<=60 "Disney World deals page" 
+PASS link /parks/magic-kingdom/ 200
+PASS anchor<=60 "Magic Kingdom park guide" 
+PASS link /rides/ 200
+PASS anchor<=60 "ride finder" 
+PASS link /rides/for/magic-kingdom-under-40/ 200
+PASS anchor<=60 "under-40 ride finder" 
+PASS amazon links tagged 
+PASS no empty headings 
+PASS no empty list items 
+PASS disclosure before first affiliate link 
+PASS links ride finder MK 
+PASS links park chooser 
+PASS links MK park page 
+PASS links under-40 complementary post 
+PASS links disney vs universal 
+PASS links deals 
+PASS no first-person lore 
+PASS no Genie+ as current 
+PASS height Seven Dwarfs Mine Train=38 
+PASS height Big Thunder Mountain Railroad=38 
+PASS height Tiana's Bayou Adventure=40 
+PASS height Space Mountain=44 
+PASS height TRON Lightcycle / Run=48 
+PASS height The Barnstormer=35 
+PASS height Tomorrowland Speedway=32 
+PASS named height Seven Dwarfs Mine Train 
+PASS named height Big Thunder Mountain Railroad 
+PASS named height Tiana's Bayou Adventure 
+PASS named height Space Mountain 
+PASS named height TRON Lightcycle / Run 
+PASS named height The Barnstormer 
+PASS named height Tomorrowland Speedway 
+PASS Big Thunder listed as 38 not 40 for min 
+PASS Tiana refurb flagged 
+PASS heights dated Oct 19 
+PASS no unverified ticket ages 
+PASS heat line non-medical + First Aid pointer 
+PASS word count band 
+fails 0
