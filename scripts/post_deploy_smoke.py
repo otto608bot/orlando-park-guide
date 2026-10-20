@@ -225,7 +225,7 @@ TITLE_MUST_CONTAIN = {
     "/rides/for/seaworld-52/": "SeaWorld",
     "/rides/for/legoland-52/": "LEGOLAND",
     "/": "Ride Finder",
-    "/parks/": "All Parks in Orlando",
+    "/parks/": "Orlando Parks: All 9 Theme Parks Compared",
     "/blog/epic-universe-1-day-plan/": "Epic Universe",
     "/blog/universal-orlando-height-requirements/": "Universal",
     "/blog/disney-world-packing-list-kids/": "Packing",
