@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Ride } from '@/lib/sanity-types';
-import { isCalmExperience } from '@/lib/ride-filter';
+import { isCalmExperience, splitByHeight } from '@/lib/ride-filter';
 import { useFilters } from '@/context/FiltersContext';
 import RideModal from './RideModal';
 
@@ -98,7 +98,7 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
   const [selectedRide, setSelectedRide] = useState<Ride | null>(null);
 
-  const filteredAndSortedRides = useMemo(() => {
+  const heightSplit = useMemo(() => {
     let result = [...rides];
 
     // Apply park filter
@@ -106,12 +106,8 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
       result = result.filter(r => filters.selectedParks.includes(r.park));
     }
 
-    // Apply height filter: show rides the user can ride (height req <= user's height)
-    if (filters.height > 0) {
-      result = result.filter(r => 
-        !r.heightRequirement || r.heightRequirement <= filters.height
-      );
-    }
+    // Height is applied after sorting: rides the rider is too short for are
+    // kept (grayed out, at the bottom) instead of hidden.
 
     // Apply pregnancy safe filter
     if (filters.pregnancySafe) {
@@ -167,8 +163,10 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
       return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
     });
 
-    return result;
+    return splitByHeight(result, filters.height);
   }, [rides, filters, sortField, sortDirection]);
+
+  const { eligible: filteredAndSortedRides, tooTall } = heightSplit;
 
   const handleSort = (field: SortField) => {
     if (sortField === field) {
@@ -184,12 +182,77 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
     return <span className="sort-icon sort-active">{sortDirection === 'asc' ? '↑' : '↓'}</span>;
   };
 
+  const renderRow = (ride: Ride, tooShort: boolean) => {
+    const imageSrc = getRideImageSrc(ride);
+    const parkSlug = getParkSlug(ride.park);
+    const thrill = thrillClass(ride.thrillLevel);
+    const thrillLbl = thrillLabel(ride.thrillLevel);
+    const heightLbl = heightLabel(ride.heightRequirement);
+    const pregnancyOk = isPregnancySafe(ride);
+    const wheelchairOk = isWheelchairAccessible(ride);
+    const calm = isCalmExperience(ride);
+
+    return (
+      <tr key={ride._id} className={`ride-row ${ride.isClosed ? 'ride-closed' : ''} ${tooShort ? 'ride-too-tall' : ''}`} onClick={() => setSelectedRide(ride)} style={{ cursor: 'pointer' }}>
+        <td className="td-image">
+          <div className="ride-thumb">
+            {imageSrc ? (
+              <img src={imageSrc} alt={ride.name} />
+            ) : (
+              <div className={`ride-thumb-placeholder img-placeholder--${parkSlug}`}>
+                <span>🎢</span>
+              </div>
+            )}
+          </div>
+        </td>
+        <td className="td-name">
+          <div className="ride-name-cell">
+            {ride.isClosed && <span className="closed-badge">CLOSED</span>}
+            <span className="ride-name">{ride.name}</span>
+            {tooShort && (
+              <span className="too-tall-badge">Needs {ride.heightRequirement}&quot;</span>
+            )}
+          </div>
+        </td>
+        {showParkColumn && (
+          <td className="td-park">
+            <Link href={`/parks/${parkSlug}`} className={`park-link park-badge--${parkSlug}`}>
+              {ride.park}
+            </Link>
+          </td>
+        )}
+        <td className="td-thrill">
+          <span className={`thrill-badge thrill-badge--${thrill}`}>{thrillLbl}</span>
+        </td>
+        <td className="td-height">
+          <span className={heightLbl === 'None' ? 'height-none' : ''}>{heightLbl}</span>
+        </td>
+        <td className="td-type">
+          <span className="type-pill">{ride.rideType || 'N/A'}</span>
+        </td>
+        <td className="td-access">
+          <div className="access-icons">
+            {pregnancyOk && <span title="Pregnancy Safe" className="access-icon access-pregnancy">🤰</span>}
+            {wheelchairOk && <span title="Wheelchair Accessible" className="access-icon access-wheelchair">♿</span>}
+            {calm && <span title="Calm Experience" className="access-icon access-calm">😌</span>}
+            {!pregnancyOk && <span title="Not Recommended for Pregnancy" className="access-icon access-no">🚫</span>}
+          </div>
+        </td>
+      </tr>
+    );
+  };
+
   return (
     <div className="rides-table-wrapper">
       <div className="results-count-bar">
         <p className="count-text">
           Showing <strong>{filteredAndSortedRides.length}</strong> of <strong>{rides.length}</strong> rides
         </p>
+        {tooTall.length > 0 && (
+          <p className="too-tall-note">
+            {tooTall.length} more {tooTall.length === 1 ? 'ride needs' : 'rides need'} a taller rider — shown grayed out at the bottom.
+          </p>
+        )}
       </div>
 
       <div className="table-scroll">
@@ -218,67 +281,20 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
             </tr>
           </thead>
           <tbody>
-            {filteredAndSortedRides.map(ride => {
-              const imageSrc = getRideImageSrc(ride);
-              const parkSlug = getParkSlug(ride.park);
-              const thrill = thrillClass(ride.thrillLevel);
-              const thrillLbl = thrillLabel(ride.thrillLevel);
-              const heightLbl = heightLabel(ride.heightRequirement);
-              const pregnancyOk = isPregnancySafe(ride);
-              const wheelchairOk = isWheelchairAccessible(ride);
-              const calm = isCalmExperience(ride);
-
-              return (
-                <tr key={ride._id} className={`ride-row ${ride.isClosed ? 'ride-closed' : ''}`} onClick={() => setSelectedRide(ride)} style={{ cursor: 'pointer' }}>
-                  <td className="td-image">
-                    <div className="ride-thumb">
-                      {imageSrc ? (
-                        <img src={imageSrc} alt={ride.name} />
-                      ) : (
-                        <div className={`ride-thumb-placeholder img-placeholder--${parkSlug}`}>
-                          <span>🎢</span>
-                        </div>
-                      )}
-                    </div>
-                  </td>
-                  <td className="td-name">
-                    <div className="ride-name-cell">
-                      {ride.isClosed && <span className="closed-badge">CLOSED</span>}
-                      <span className="ride-name">{ride.name}</span>
-                    </div>
-                  </td>
-                  {showParkColumn && (
-                    <td className="td-park">
-                      <Link href={`/parks/${parkSlug}`} className={`park-link park-badge--${parkSlug}`}>
-                        {ride.park}
-                      </Link>
-                    </td>
-                  )}
-                  <td className="td-thrill">
-                    <span className={`thrill-badge thrill-badge--${thrill}`}>{thrillLbl}</span>
-                  </td>
-                  <td className="td-height">
-                    <span className={heightLbl === 'None' ? 'height-none' : ''}>{heightLbl}</span>
-                  </td>
-                  <td className="td-type">
-                    <span className="type-pill">{ride.rideType || 'N/A'}</span>
-                  </td>
-                  <td className="td-access">
-                    <div className="access-icons">
-                      {pregnancyOk && <span title="Pregnancy Safe" className="access-icon access-pregnancy">🤰</span>}
-                      {wheelchairOk && <span title="Wheelchair Accessible" className="access-icon access-wheelchair">♿</span>}
-                      {calm && <span title="Calm Experience" className="access-icon access-calm">😌</span>}
-                      {!pregnancyOk && <span title="Not Recommended for Pregnancy" className="access-icon access-no">🚫</span>}
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
+            {filteredAndSortedRides.map(ride => renderRow(ride, false))}
+            {tooTall.length > 0 && (
+              <tr className="too-tall-divider">
+                <td colSpan={showParkColumn ? 7 : 6}>
+                  Rides you&apos;ll need to grow for <span>({tooTall.length}) — taller than {filters.height}&quot; required</span>
+                </td>
+              </tr>
+            )}
+            {tooTall.map(ride => renderRow(ride, true))}
           </tbody>
         </table>
       </div>
 
-      {filteredAndSortedRides.length === 0 && (
+      {filteredAndSortedRides.length === 0 && tooTall.length === 0 && (
         <div className="no-results-state">
           <p>No rides match your filters. Try adjusting your criteria.</p>
         </div>
@@ -526,6 +542,43 @@ export default function RidesTable({ rides, showParkColumn = true, compact = fal
         /* Closed Row */
         .ride-closed {
           opacity: 0.6;
+        }
+
+        /* Too-tall rows (height filter): kept visible, muted, at the bottom */
+        .rides-table tbody tr.ride-too-tall {
+          opacity: 0.55;
+          filter: grayscale(1);
+        }
+        .rides-table tbody tr.ride-too-tall:hover {
+          opacity: 0.8;
+        }
+        .too-tall-badge {
+          display: inline-block;
+          font-size: 0.6875rem;
+          font-weight: 700;
+          color: #334155;
+          background: #E2E8F0;
+          padding: 0.125rem 0.375rem;
+          border-radius: 4px;
+          width: fit-content;
+        }
+        .rides-table tbody tr.too-tall-divider td {
+          background: var(--bg-light);
+          font-family: var(--font-heading);
+          font-weight: 700;
+          font-size: 0.875rem;
+          color: var(--text-dark);
+          padding: 0.75rem 1rem;
+          cursor: default;
+        }
+        .too-tall-divider span {
+          font-weight: 500;
+          color: var(--text-medium);
+        }
+        .too-tall-note {
+          font-size: 0.8125rem;
+          color: var(--text-light);
+          margin-top: 0.25rem;
         }
 
         /* Results Bar */

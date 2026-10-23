@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getParkTicketLink } from "@/config/affiliate-links";
-import { filterRides, groupRidesByPark, PARK_SLUG_MAP } from "@/lib/ride-filter";
+import { filterRides, groupRidesByPark, PARK_SLUG_MAP, rideMatchesHeight } from "@/lib/ride-filter";
 import {
   getRidePresetBySlug,
   heightLandingGuides,
@@ -85,6 +85,23 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
     parks: preset.parks ? [...preset.parks] : undefined,
     calm: preset.calm,
   }).filter((r) => !r.isClosed);
+
+  // Open rides in the same park/calm scope that the rider is still too short
+  // for. Shown grayed out after the matching list so families can see what
+  // they'll unlock later. Not counted in titles/meta/JSON-LD.
+  const growInto = preset.height
+    ? filterRides(allRides, {
+        parks: preset.parks ? [...preset.parks] : undefined,
+        calm: preset.calm,
+      })
+        .filter((r) => !r.isClosed && !rideMatchesHeight(r, preset.height!))
+        .sort(
+          (a, b) =>
+            (a.heightRequirement || 0) - (b.heightRequirement || 0) ||
+            (a.name || "").localeCompare(b.name || ""),
+        )
+    : [];
+  const showParkOnGrowInto = !preset.parks || preset.parks.length !== 1;
 
   const grouped = groupRidesByPark(matched);
   const primaryPark = preset.parks?.[0];
@@ -195,6 +212,34 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
         )}
       </section>
 
+      {growInto.length > 0 ? (
+        <section className="preset-section preset-grow" aria-labelledby="grow-heading">
+          <h2 id="grow-heading">Rides you&apos;ll need to grow for</h2>
+          <p className="preset-grow-lead">
+            {growInto.length === 1 ? "This open ride" : `These ${growInto.length} open rides`}
+            {primaryPark && !showParkOnGrowInto ? ` at ${primaryPark}` : ""}{" "}
+            {growInto.length === 1 ? "has" : "have"} a minimum taller than {preset.height}&quot;. Listed here so you know what&apos;s out there — and
+            what to look forward to.
+          </p>
+          <ul className="preset-ride-list preset-grow-list">
+            {growInto.map((ride) => (
+              <li key={ride._id}>
+                <span className="preset-ride-name">
+                  {ride.name}
+                  {showParkOnGrowInto && ride.park ? (
+                    <span className="preset-grow-park"> · {ride.park}</span>
+                  ) : null}
+                </span>
+                <span className="preset-ride-meta">
+                  <span className="preset-needs">Needs {ride.heightRequirement}&quot;</span>
+                  {ride.rideType ? ` · ${ride.rideType}` : ""}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <section className="preset-section preset-mid-cta" aria-label="Tickets after heights">
         <h2>Heights checked — ready for tickets?</h2>
         <p>
@@ -236,8 +281,9 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
         <h3>How do these height lists work?</h3>
         <p>
           We filter published ride height minimums from our Orlando ride database. A ride appears
-          when your child meets or exceeds the listed minimum (or the ride has no minimum). Always
-          recheck official park signs on trip day.
+          when your child meets or exceeds the listed minimum (or the ride has no minimum). Rides
+          with a taller minimum are listed separately, grayed out, so you can see what they&apos;ll
+          grow into. Always recheck official park signs on trip day.
         </p>
         <h3>Can I change the height or park?</h3>
         <p>
@@ -429,6 +475,34 @@ export default async function RidePresetLandingPage({ params }: PageProps) {
         .preset-ride-meta {
           font-size: 0.85rem;
           color: var(--text-medium, #64748b);
+        }
+        .preset-grow {
+          padding: 1rem 1rem 0.85rem;
+          border: 1px dashed var(--border, #cbd5e1);
+          border-radius: 12px;
+          background: #f8fafc;
+        }
+        .preset-grow-lead {
+          margin: 0 0 0.75rem;
+          color: var(--text-medium, #64748b);
+          font-size: 0.92rem;
+          line-height: 1.55;
+        }
+        .preset-grow-list li { opacity: 0.6; }
+        .preset-grow-list .preset-ride-name { color: var(--text-medium, #475569); }
+        .preset-grow-park {
+          font-weight: 500;
+          font-size: 0.85rem;
+          color: var(--text-medium, #64748b);
+        }
+        .preset-needs {
+          display: inline-block;
+          font-weight: 700;
+          font-size: 0.78rem;
+          color: #334155;
+          background: #e2e8f0;
+          padding: 0.05rem 0.4rem;
+          border-radius: 4px;
         }
         .preset-empty {
           color: var(--text-medium, #475569);

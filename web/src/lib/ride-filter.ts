@@ -71,6 +71,24 @@ export function rideMatchesHeight(ride: Ride, height: number): boolean {
   return ride.heightRequirement <= height;
 }
 
+/**
+ * Split rides into ones the rider is tall enough for and ones they still need
+ * to grow into. Order inside each group is preserved. With no height set,
+ * everything is eligible.
+ */
+export function splitByHeight<T extends Ride>(
+  rides: T[],
+  height: number,
+): { eligible: T[]; tooTall: T[] } {
+  if (!height || height <= 0) return { eligible: rides, tooTall: [] };
+  const eligible: T[] = [];
+  const tooTall: T[] = [];
+  for (const r of rides) {
+    (rideMatchesHeight(r, height) ? eligible : tooTall).push(r);
+  }
+  return { eligible, tooTall };
+}
+
 export function filterRides(rides: Ride[], input: RideFilterInput): Ride[] {
   let out = rides;
   if (input.parks && input.parks.length > 0) {
