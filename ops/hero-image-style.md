@@ -28,3 +28,16 @@ Wide establishing shot, horizon in upper third, people in lower third,
 blue sky with soft clouds. No text, no signs, no logos, no cartoon characters.
 ```
 Aspect ratio: 16:9. Examples are in `ops/drafts/hero-refresh-2026-10-26/` (AK jungle path, MK main street castle, EPCOT lagoon sphere, character dining breakfast).
+
+## Original costumed characters (character dining and similar topics)
+- Show costumed characters visiting the table. This is the point of these posts, so a hero with no characters misses the topic.
+- Use **only original, Disney-esque designs**. Examples: a big fluffy caramel bear in a teal vest, a lavender mouse-like mascot with round glasses and a yellow bow tie, or a princess-style character in an original coral and gold gown with a flower crown.
+- Never use Mickey, Minnie, Pooh, Stitch, Cinderella or any other trademarked character, and don't use their signature traits (round black ears, red shorts, a red shirt on a yellow bear, a blue ball gown with a headband, and so on). Never show logos.
+- In the prompt, spell out "original design, not any known character." Then check each output closely and regenerate anything that looks like a real character.
+
+## Social graphics (FB/IG square 1080×1080, Pinterest pin 1000×1500)
+- Use the same photo style as the heroes, but make them **more fun and captivating**: brighter colors, close-ups and kids' delight (laughing, arms up, high-fives, hugs).
+- Show a dynamic moment, such as a kid reacting to fireworks, a ride in motion or a character greeting. Avoid a calm scenery-only shot.
+- Use no text or keep it minimal, and only correct facts (no prices or heights baked into the image). The caption carries the details.
+- Generate the square at 1:1. Generate the pin at 9:16, then center-crop it to 2:3.
+- Save them in the pack folder `ops/buffer/<pack>/`. Never touch Buffer without Bennett's approval.
