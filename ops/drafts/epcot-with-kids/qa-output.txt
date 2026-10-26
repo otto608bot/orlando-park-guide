@@ -1,0 +1,62 @@
+== PASS 1 (author: links, anchors, format)
+== PASS 2 (independent: facts, policy, brand, disclosure)
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /rides/for/epcot-under-40/ 200
+PASS anchor<=60 "EPCOT rides for kids under 40 " 
+PASS link /rides/for/epcot-all/ 200
+PASS anchor<=60 "EPCOT all-heights ride finder" 
+PASS link /rides/for/epcot-44/ 200
+PASS anchor<=60 "44-inch EPCOT list" 
+PASS link /rides/for/epcot-calm-under-40/ 200
+PASS anchor<=60 "calm EPCOT picks under 40 inch" 
+PASS link /blog/best-time-visit-disney-world-2026/ 200
+PASS anchor<=60 "best time to visit Disney Worl" 
+PASS link https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpark-20 503
+PASS anchor<=60 "kids' cooling towel" 
+PASS link https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20 503
+PASS anchor<=60 "kids' rain poncho" 
+PASS link https://www.amazon.com/s?k=stroller+fan&tag=planyourpark-20 503
+PASS anchor<=60 "stroller fan" 
+PASS link /blog/disney-world-packing-list-kids/ 200
+PASS anchor<=60 "Disney World packing list for " 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /parks/epcot/ 200
+PASS anchor<=60 "EPCOT park guide" 
+PASS link /blog/magic-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Magic Kingdom rides by height" 
+PASS link /blog/animal-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Animal Kingdom rides by height" 
+PASS link /blog/disney-world-with-baby-toddler/ 200
+PASS anchor<=60 "Disney World with a baby or to" 
+PASS link /deals/ 200
+PASS anchor<=60 "Disney World deals page" 
+PASS link /rides/for/epcot-all/ 200
+PASS anchor<=60 "ride finder" 
+PASS amazon links tagged 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS title <= 70 chars 
+PASS excerpt <= 200 chars 
+-- pass 2 --
+PASS disclosure before first affiliate link 
+PASS >=4 EPCOT ride-finder links 
+PASS links park chooser /parks/ 
+PASS no first-person lore 
+PASS no Genie+ as current 
+PASS height Guardians of the Galaxy: Cosmic Rewind=42 inches 
+PASS height Test Track=40 inches 
+PASS height Mission: SPACE (Orange)=44 inches 
+PASS height Soarin' Across America=40 inches 
+PASS closed Soarin' Around the World not recommended as open 
+PASS Living with the Land holiday closure disclosed 
+PASS Living with the Land not in half-day plan 
+PASS DuckTales refurb noted, not recommended 
+PASS festival dates from official page 
+PASS heights dated 
+PASS heat line non-medical + First Aid pointer 
+PASS no unverified ticket ages/prices 
+PASS no invented ride mechanics (trackless/dangle) 
+pass1 fails 0 | pass2 fails 0
