@@ -11,7 +11,7 @@ targets: ["best character dining disney world", "character dining disney world p
 ## Quick Answer: Which Character Meal Should You Book?
 
 - **Princess fans:** [Cinderella's Royal Table](https://disneyworld.disney.go.com/dining/magic-kingdom/cinderella-royal-table/) inside the castle, or [Akershus Royal Banquet Hall](https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/) in EPCOT for a lower breakfast price tier.
-- **Classic Mickey and friends, no park ticket needed:** [Chef Mickey's](https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/) at the Contemporary Resort.
+- **Mickey Mouse at a resort, no park ticket listed:** [Chef Mickey's](https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/) at the Contemporary Resort.
 - **Winnie the Pooh fans on a Magic Kingdom day:** [The Crystal Palace](https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/).
 - **Stitch fans:** the breakfast at [ʻOhana](https://disneyworld.disney.go.com/dining/polynesian-village/ohana/) (breakfast only, characters do not appear at dinner).
 
@@ -42,9 +42,9 @@ These picks go by the meal format and the characters Disney lists, not by any se
 
 Buffets and family-style meals let you start eating right away, which helps with little kids who can't wait for a plated course. Familiar faces help too:
 
-- [The Crystal Palace](https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/): a buffet with Winnie the Pooh and friends from the Hundred-Acre Wood. Disney suggests planning about 90 minutes to see all the characters.
-- [Chef Mickey's](https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/): a buffet where Mickey and pals move through the dining rooms. Each table gets an autographed keepsake card.
-- [ʻOhana breakfast](https://disneyworld.disney.go.com/dining/polynesian-village/ohana/): family-style breakfast with Lilo, Stitch, and other friends. Disney's menu lists Stitch and Mickey waffles.
+- [The Crystal Palace](https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/): a buffet with Winnie the Pooh (Disney's page doesn't name other characters). Disney suggests planning about 90 minutes to see all the characters.
+- [Chef Mickey's](https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/): a buffet with Mickey Mouse (the only character Disney's page names). Each table gets an autographed keepsake card.
+- [ʻOhana breakfast](https://disneyworld.disney.go.com/dining/polynesian-village/ohana/): family-style breakfast with Lilo and Stitch. Disney's menu lists Stitch and Mickey waffles.
 
 For more on very young kids, see our [Disney World with a baby or toddler guide](/blog/disney-world-with-baby-toddler/).
 
@@ -63,9 +63,9 @@ Older kids often care more about the food and setting. [Story Book Dining at Art
 Book the meal on the day you're already in that park, so you don't lose ride time crossing the resort.
 
 - **Magic Kingdom:** Cinderella's Royal Table or The Crystal Palace. Check what your kids can ride with the [Magic Kingdom rides under 40 inches](/rides/for/magic-kingdom-under-40/) filter, or read [Magic Kingdom with kids](/blog/magic-kingdom-with-kids-rides-by-height/).
-- **EPCOT:** Garden Grill (Chip, Dale, Mickey, and more, in a slowly rotating dining room) or Akershus. See [EPCOT with kids](/blog/epcot-with-kids-rides-by-height/).
+- **EPCOT:** Garden Grill (Chip, Dale, and Mickey Mouse, in a slowly rotating dining room) or Akershus. See [EPCOT with kids](/blog/epcot-with-kids-rides-by-height/).
 - **Hollywood Studios:** Hollywood & Vine, Minnie's Seasonal Dining with outfits and themes that change through the year. Park overview: [Hollywood Studios](/parks/hollywood-studios/).
-- **Animal Kingdom:** Tusker House, where Donald, Mickey, and friends come by in safari outfits. Park overview: [Animal Kingdom](/parks/animal-kingdom/).
+- **Animal Kingdom:** Tusker House, where Donald Duck and Mickey Mouse come by in safari outfits. Park overview: [Animal Kingdom](/parks/animal-kingdom/).
 
 Not sure which parks fit your kids yet? Start with the [park chooser](/parks/), then pick the meal.
 
@@ -107,7 +107,7 @@ On Disney's official pages (Oct 26, 2026), character breakfasts are mostly in th
 
 ### Which Disney character dining is best for toddlers?
 
-Buffet or family-style meals with familiar characters are the easiest picks: The Crystal Palace (Winnie the Pooh), Chef Mickey's (Mickey and pals), and ʻOhana breakfast (Lilo and Stitch).
+Buffet or family-style meals with familiar characters are the easiest picks: The Crystal Palace (Winnie the Pooh), Chef Mickey's (Mickey Mouse), and ʻOhana breakfast (Lilo and Stitch).
 
 ### Can you do character dining without a park ticket?
 

@@ -152,7 +152,7 @@
     {
      "_type": "span",
      "_key": "03f575fc97cb",
-     "text": "Classic Mickey and friends, no park ticket needed:",
+     "text": "Mickey Mouse at a resort, no park ticket listed:",
      "marks": [
       "strong"
      ]
@@ -804,7 +804,7 @@
     {
      "_type": "span",
      "_key": "10b3f0a303b0",
-     "text": ": a buffet with Winnie the Pooh and friends from the Hundred-Acre Wood. Disney suggests planning about 90 minutes to see all the characters.",
+     "text": ": a buffet with Winnie the Pooh (Disney's page doesn't name other characters). Disney suggests planning about 90 minutes to see all the characters.",
      "marks": []
     }
    ],
@@ -834,7 +834,7 @@
     {
      "_type": "span",
      "_key": "3c2434edf13a",
-     "text": ": a buffet where Mickey and pals move through the dining rooms. Each table gets an autographed keepsake card.",
+     "text": ": a buffet with Mickey Mouse (the only character Disney's page names). Each table gets an autographed keepsake card.",
      "marks": []
     }
    ],
@@ -864,7 +864,7 @@
     {
      "_type": "span",
      "_key": "d1c5bf6921c2",
-     "text": ": family-style breakfast with Lilo, Stitch, and other friends. Disney's menu lists Stitch and Mickey waffles.",
+     "text": ": family-style breakfast with Lilo and Stitch. Disney's menu lists Stitch and Mickey waffles.",
      "marks": []
     }
    ],
@@ -1190,7 +1190,7 @@
     {
      "_type": "span",
      "_key": "467a28bd4d9b",
-     "text": " Garden Grill (Chip, Dale, Mickey, and more, in a slowly rotating dining room) or Akershus. See ",
+     "text": " Garden Grill (Chip, Dale, and Mickey Mouse, in a slowly rotating dining room) or Akershus. See ",
      "marks": []
     },
     {
@@ -1278,7 +1278,7 @@
     {
      "_type": "span",
      "_key": "58585f838423",
-     "text": " Tusker House, where Donald, Mickey, and friends come by in safari outfits. Park overview: ",
+     "text": " Tusker House, where Donald Duck and Mickey Mouse come by in safari outfits. Park overview: ",
      "marks": []
     },
     {
@@ -1860,7 +1860,7 @@
     {
      "_type": "span",
      "_key": "5fc768b7918f",
-     "text": "Buffet or family-style meals with familiar characters are the easiest picks: The Crystal Palace (Winnie the Pooh), Chef Mickey's (Mickey and pals), and ʻOhana breakfast (Lilo and Stitch).",
+     "text": "Buffet or family-style meals with familiar characters are the easiest picks: The Crystal Palace (Winnie the Pooh), Chef Mickey's (Mickey Mouse), and ʻOhana breakfast (Lilo and Stitch).",
      "marks": []
     }
    ]
