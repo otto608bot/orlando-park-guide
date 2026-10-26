@@ -8,7 +8,7 @@ import { createPageMetadata, getCharacterDiningJsonLd } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Disney World Character Dining List (2026): Prices, Meals & Characters",
   description:
-    "Every Disney World character meal in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
+    "Disney World character meals in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
   path: "/character-dining",
 });
 

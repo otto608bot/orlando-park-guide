@@ -386,7 +386,7 @@ export function getCharacterDiningJsonLd(
         url: pageUrl,
         name: "Disney World Character Dining List (2026): Prices, Meals & Characters",
         description:
-          "Every Disney World character meal in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
+          "Disney World character meals in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
         isPartOf: { "@id": WEBSITE_ID },
         about: { "@id": ORG_ID },
         mainEntity: { "@id": `${pageUrl}#itemlist` },
