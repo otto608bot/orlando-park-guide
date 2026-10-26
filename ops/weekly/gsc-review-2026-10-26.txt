@@ -1,0 +1,65 @@
+
+========================================================================
+Google Search Console — last 28 days ending 2026-10-24 (2-day lag)
+========================================================================
+Property: sc-domain:planyourpark.com
+  Clicks=10  Impressions=2,181  CTR=0.46%  Avg position=18.0
+
+Top queries
+       0 clicks |        1 impr | CTR  0.00% | pos  26.0 | advise for epic
+       0 clicks |        1 impr | CTR  0.00% | pos  20.0 | all amusement parks in orlando
+       0 clicks |        1 impr | CTR  0.00% | pos  13.0 | all amusement parks in orlando florida
+       0 clicks |        1 impr | CTR  0.00% | pos  30.0 | all florida parks
+       0 clicks |        1 impr | CTR  0.00% | pos   7.0 | all of the parks
+       0 clicks |        1 impr | CTR  0.00% | pos  12.0 | all orlando parks
+       0 clicks |        1 impr | CTR  0.00% | pos  35.0 | all orlando theme parks
+       0 clicks |       10 impr | CTR  0.00% | pos  13.5 | all parks in orlando
+       0 clicks |        4 impr | CTR  0.00% | pos  21.5 | all parks in orlando florida
+       0 clicks |        1 impr | CTR  0.00% | pos  44.0 | all the parks in orlando
+       0 clicks |        1 impr | CTR  0.00% | pos  22.0 | all universal parks
+       0 clicks |        1 impr | CTR  0.00% | pos  81.0 | animal kingdom everest height
+       0 clicks |        2 impr | CTR  0.00% | pos  16.5 | animal kingdom for kids
+       0 clicks |        1 impr | CTR  0.00% | pos  59.0 | animal kingdom guide
+       0 clicks |        3 impr | CTR  0.00% | pos  27.3 | animal kingdom height requirements
+       0 clicks |        1 impr | CTR  0.00% | pos   6.0 | animal kingdom height requirements for rides
+       0 clicks |        1 impr | CTR  0.00% | pos  50.0 | animal kingdom no height requirement rides
+       0 clicks |        2 impr | CTR  0.00% | pos   7.0 | animal kingdom ride height requirements
+       0 clicks |        9 impr | CTR  0.00% | pos   6.9 | animal kingdom ride heights
+       0 clicks |        2 impr | CTR  0.00% | pos   7.5 | animal kingdom rides and height requirements
+       0 clicks |        1 impr | CTR  0.00% | pos   9.0 | animal kingdom rides by height
+       0 clicks |       26 impr | CTR  0.00% | pos  27.8 | animal kingdom rides for kids
+       0 clicks |        2 impr | CTR  0.00% | pos  51.0 | animal kingdom rides for toddlers
+       0 clicks |        2 impr | CTR  0.00% | pos   6.5 | animal kingdom rides height
+       0 clicks |        3 impr | CTR  0.00% | pos   5.0 | animal kingdom rides height requirements
+
+Top pages
+       1 clicks |       91 impr | CTR  1.10% | pos   6.7 | https://planyourpark.com/blog/animal-kingdom-with-kids-rides-by-height
+       1 clicks |       92 impr | CTR  1.09% | pos   6.8 | https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/
+       1 clicks |       78 impr | CTR  1.28% | pos  20.6 | https://planyourpark.com/blog/epic-universe-1-day-plan/
+       1 clicks |       60 impr | CTR  1.67% | pos  12.7 | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/
+       1 clicks |       68 impr | CTR  1.47% | pos  13.8 | https://planyourpark.com/blog/magic-kingdom-with-kids-rides-by-height/
+       1 clicks |       48 impr | CTR  2.08% | pos   8.2 | https://planyourpark.com/rides/for/disney-world-52/
+       1 clicks |        8 impr | CTR 12.50% | pos   5.8 | https://planyourpark.com/rides/for/disney-world-under-40/
+       1 clicks |       66 impr | CTR  1.52% | pos   9.3 | https://planyourpark.com/rides/for/legoland-all/
+       1 clicks |        2 impr | CTR 50.00% | pos   7.5 | https://planyourpark.com/rides/for/magic-kingdom-under-40/
+       1 clicks |        7 impr | CTR 14.29% | pos   5.1 | https://planyourpark.com/rides/for/under-40/
+       0 clicks |       13 impr | CTR  0.00% | pos   8.7 | https://planyourpark.com/
+       0 clicks |        2 impr | CTR  0.00% | pos  19.5 | https://planyourpark.com/about/
+       0 clicks |       98 impr | CTR  0.00% | pos   8.5 | https://planyourpark.com/blog/animal-kingdom-with-kids-rides-by-height/
+       0 clicks |        6 impr | CTR  0.00% | pos   7.2 | https://planyourpark.com/blog/beat-disney-world-crowds/
+       0 clicks |        1 impr | CTR  0.00% | pos   8.0 | https://planyourpark.com/blog/best-time-visit-disney-world-2026/
+       0 clicks |        2 impr | CTR  0.00% | pos   9.5 | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026
+       0 clicks |       33 impr | CTR  0.00% | pos   7.5 | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/
+       0 clicks |        2 impr | CTR  0.00% | pos   9.5 | https://planyourpark.com/blog/disney-world-with-baby-toddler/
+       0 clicks |       76 impr | CTR  0.00% | pos   8.2 | https://planyourpark.com/blog/epic-universe-tickets-guide/
+       0 clicks |        1 impr | CTR  0.00% | pos   9.0 | https://planyourpark.com/blog/free-things-disney-world/
+       0 clicks |        1 impr | CTR  0.00% | pos   4.0 | https://planyourpark.com/blog/orlando-closures-march-2026/
+       0 clicks |       10 impr | CTR  0.00% | pos   9.6 | https://planyourpark.com/blog/universal-orlando-height-requirements/
+       0 clicks |        5 impr | CTR  0.00% | pos  24.4 | https://planyourpark.com/blog/universal-orlando-summer-2026/
+       0 clicks |       10 impr | CTR  0.00% | pos  40.2 | https://planyourpark.com/character-dining/
+       0 clicks |        1 impr | CTR  0.00% | pos  92.0 | https://planyourpark.com/contact/
+
+Devices
+  MOBILE     clicks=     6  impr=   1,302  CTR= 0.46%  pos= 14.5
+  DESKTOP    clicks=     4  impr=     871  CTR= 0.46%  pos= 23.4
+  TABLET     clicks=     0  impr=       8  CTR= 0.00%  pos=  8.5

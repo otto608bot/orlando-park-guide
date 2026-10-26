@@ -101,3 +101,5 @@
 
 ## Parking lot
 - Media kit, sponsorships, multi-language  
+
+- [ ] **Later (conditional): Universal Orlando character dining** (e.g., character breakfasts at Universal hotels). Keep the Disney character-dining cluster Disney-only. Only brief this if search data supports it: GSC shows impressions on Universal character-dining queries, or autocomplete/Trends shows steady demand. As of 2026-10-26, GSC (Jul 27–Oct 24) shows no Universal character dining queries. Added 2026-10-26.

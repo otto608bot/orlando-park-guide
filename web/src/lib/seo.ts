@@ -384,9 +384,9 @@ export function getCharacterDiningJsonLd(
         "@type": "CollectionPage",
         "@id": `${pageUrl}#webpage`,
         url: pageUrl,
-        name: "Disney & Universal Character Dining with Kids",
+        name: "Disney World Character Dining List (2026): Prices, Meals & Characters",
         description:
-          "Compare character dining at Disney World and Universal Orlando — meals, parks, and kid-friendly meet-and-greet options in one list.",
+          "Every Disney World character meal in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
         isPartOf: { "@id": WEBSITE_ID },
         about: { "@id": ORG_ID },
         mainEntity: { "@id": `${pageUrl}#itemlist` },

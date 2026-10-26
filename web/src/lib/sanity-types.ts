@@ -69,6 +69,13 @@ export interface CharacterDining {
   description?: string;
   image?: SanityImage & { alt?: string };
   bookingUrl?: string;
+  /** Official Disney price tier per meal, e.g. "$$$ ($35–$59.99/adult)" */
+  priceByMeal?: { breakfast?: string; lunch?: string; dinner?: string };
+  sourceUrl?: string;
+  verifiedAt?: string;
+  /** true = keep the doc but leave it off character dining lists */
+  hideFromList?: boolean;
+  hideReason?: string;
 }
 
 export interface Deal {

@@ -6,15 +6,15 @@ import CharacterDiningClient from "./CharacterDiningClient";
 import { createPageMetadata, getCharacterDiningJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Disney & Universal Character Dining with Kids",
+  title: "Disney World Character Dining List (2026): Prices, Meals & Characters",
   description:
-    "Compare character dining at Disney World and Universal Orlando — meals, parks, and kid-friendly meet-and-greet options in one list.",
+    "Every Disney World character meal in one list: which characters appear at breakfast, lunch or dinner, Disney's official price tier, and how to book at 60 days.",
   path: "/character-dining",
 });
 
 async function getAllCharacterDining(): Promise<CharacterDining[]> {
   return sanityClient.fetch(`
-    *[_type == "characterDining"] | order(park asc, name asc) {
+    *[_type == "characterDining" && hideFromList != true] | order(park asc, name asc) {
       _id,
       _type,
       name,
@@ -22,6 +22,9 @@ async function getAllCharacterDining(): Promise<CharacterDining[]> {
       characters,
       mealType,
       priceRange,
+      priceByMeal,
+      sourceUrl,
+      verifiedAt,
       description
     }
   `);
@@ -36,9 +39,16 @@ export default async function CharacterDiningPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(diningLd) }} />
 
       <header className="dining-header">
-        <h1>Character Dining with Kids</h1>
+        <h1>Disney World Character Dining with Kids</h1>
         <p className="dining-subtitle">
-          Meet your favorite Disney and Universal characters over meals — then match the reservation to rides your kids can actually enjoy.
+          Which characters show up at which meal, Disney&apos;s official price tier, and whether you need a park ticket.
+          Then match the reservation to rides your kids can actually enjoy.
+        </p>
+        <p className="dining-subtitle dining-note">
+          Prices use Disney&apos;s own tiers: $$$ is $35–$59.99 and $$$$ is over $60 per adult for the whole meal and
+          non-alcoholic drinks, before tax and tip. Each restaurant links to its official Disney page, checked October 26, 2026.
+          Character lineups can change. Want our picks by age? Read{' '}
+          <Link href="/blog/best-disney-world-character-dining-kids/">the best Disney World character dining for kids</Link>.
         </p>
       </header>
 
@@ -60,6 +70,25 @@ export default async function CharacterDiningPage() {
             <p>
               Decide which parks fit your kids first (height filters help), then book dining reservations for those park
               days. Ticket deals and the ride finder are useful before you lock a pricey character meal.
+            </p>
+          </div>
+          <div>
+            <h3>When can you book Disney character dining?</h3>
+            <p>
+              Disney opens dining reservations 60 days ahead at 6:00 AM Eastern. Guests at a Disney Resort hotel can book
+              their whole stay (up to 10 days) on that 60-day mark; everyone else books one day at a time. You don&apos;t
+              need a hotel or tickets to book (
+              <a href="https://plandisney.disney.go.com/question/book-dining-reservation-cinderellas-castle-day-advance-646572/" target="_blank" rel="noopener noreferrer">planDisney, Oct 13, 2026</a>
+              ).
+            </p>
+          </div>
+          <div>
+            <h3>Do you need a park ticket for character dining?</h3>
+            <p>
+              Only for in-park restaurants like Cinderella&apos;s Royal Table, Crystal Palace, Garden Grill, Akershus,
+              Hollywood &amp; Vine and Tusker House, where Disney&apos;s pages say valid admission is required. Disney&apos;s pages
+              for resort hotel meals like Chef Mickey&apos;s, &apos;Ohana breakfast and 1900 Park Fare don&apos;t list a park
+              admission requirement (checked Oct 26, 2026).
             </p>
           </div>
         </div>
@@ -145,6 +174,7 @@ export default async function CharacterDiningPage() {
           padding: 0.55rem 0.75rem;
           text-decoration: none;
         }
+        .dining-note { font-size: 0.9rem; margin-top: 0.75rem; }
         .dining-disclosure { font-size: 0.82rem; }
         .dining-disclosure a { color: var(--primary); }
         @media (max-width: 640px) {
