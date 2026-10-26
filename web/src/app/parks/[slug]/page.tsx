@@ -254,13 +254,16 @@ async function getParkData(slug: string) {
     ),
     sanityClient.fetch(
       `
-      *[_type == "characterDining" && park == $parkName] | order(name asc) {
+      *[_type == "characterDining" && park == $parkName && hideFromList != true] | order(name asc) {
         _id,
         name,
         park,
         characters,
         mealType,
         priceRange,
+        priceByMeal,
+        sourceUrl,
+        verifiedAt,
         description
       }
     `,

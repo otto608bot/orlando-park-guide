@@ -1,0 +1,363 @@
+{
+ "mutations": [
+  {
+   "createOrReplace": {
+    "_id": "drafts.200HsSeCmp0rIIhq3n1iMx",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/epcot/garden-grill-restaurant/",
+    "characters": [
+     "Mickey Mouse",
+     "Chip",
+     "Dale",
+     "and more"
+    ],
+    "description": "Chip 'n' Dale's Harvest Feast: family-style meal in a slowly rotating dining room with views of Living with the Land. Characters at breakfast, lunch and dinner.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "Garden Grill Restaurant",
+    "park": "EPCOT",
+    "priceRange": "$$$–$$$$",
+    "resort": "EPCOT",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/epcot/garden-grill-restaurant/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.200HsSeCmp0rIIhq3n1inU",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/",
+    "characters": [
+     "Donald Duck",
+     "Mickey Mouse",
+     "and other friends"
+    ],
+    "description": "Buffet in Africa hosted by Donald Duck and friends in safari outfits. Kid options listed by Disney include fruit and yogurt at breakfast and mac-and-cheese at lunch and dinner.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "Tusker House Restaurant",
+    "park": "Animal Kingdom",
+    "priceRange": "$$$–$$$$",
+    "resort": "Animal Kingdom",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.RLBxGAumPb4EPh1Y0BD39g",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/1900-park-fare/",
+    "characters": [
+     "Aladdin",
+     "Cinderella",
+     "Mirabel",
+     "Tiana"
+    ],
+    "description": "Wish Makers Enchanted Dining buffet at breakfast and dinner. Resort hotel location, so no park ticket needed. Disney notes renovation work at the resort through early 2027.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "dinner"
+    ],
+    "name": "1900 Park Fare",
+    "park": "Disney's Grand Floridian Resort & Spa",
+    "priceRange": "$$$$",
+    "resort": "Disney's Grand Floridian Resort & Spa",
+    "priceByMeal": {
+     "breakfast": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/1900-park-fare/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.RLBxGAumPb4EPh1Y0BD3eW",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/",
+    "characters": [
+     "Disney Princesses"
+    ],
+    "description": "Princess Storybook Dining in EPCOT's Norway pavilion: family-style Norwegian-inspired meals with a promenade of Disney Princesses. Disney does not list which princesses appear.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "Akershus Royal Banquet Hall",
+    "park": "EPCOT",
+    "priceRange": "$$$–$$$$",
+    "resort": "EPCOT",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.RLBxGAumPb4EPh1Y0BD4Om",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/",
+    "characters": [
+     "Mickey Mouse",
+     "and pals"
+    ],
+    "description": "Buffet breakfast and dinner where Mickey and pals move through the dining rooms. Each table gets an autographed keepsake card. Resort hotel location, so no park ticket needed.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "dinner"
+    ],
+    "name": "Chef Mickey's",
+    "park": "Disney's Contemporary Resort",
+    "priceRange": "$$$–$$$$",
+    "resort": "Disney's Contemporary Resort",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.RLBxGAumPb4EPh1Y0BD6Rz",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/polynesian-village/ohana/",
+    "characters": [
+     "Lilo",
+     "Stitch",
+     "and other friends"
+    ],
+    "description": "Best Friends Breakfast featuring Lilo & Stitch, served family-style. Characters appear at breakfast only; 'Ohana dinner is not a character meal.",
+    "image": null,
+    "mealType": [
+     "breakfast"
+    ],
+    "name": "'Ohana",
+    "park": "Disney's Polynesian Village Resort",
+    "priceRange": "$$$",
+    "resort": "Disney's Polynesian Village Resort",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/polynesian-village/ohana/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.UzjbPEJ4gI65TQn8dT8Qjj",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/",
+    "characters": [
+     "Winnie the Pooh",
+     "Hundred-Acre Wood pals"
+    ],
+    "description": "Buffet on Main Street, U.S.A. with Winnie the Pooh and friends. Disney suggests planning 90 minutes to see all the characters.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "The Crystal Palace",
+    "park": "Magic Kingdom",
+    "priceRange": "$$$–$$$$",
+    "resort": "Magic Kingdom",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.UzjbPEJ4gI65TQn8dT8TiK",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/hollywood-studios/hollywood-and-vine/",
+    "characters": [
+     "Minnie Mouse",
+     "and friends (seasonal outfits)"
+    ],
+    "description": "Minnie's Seasonal Dining buffet; the theme and character outfits change through the year.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "Hollywood & Vine",
+    "park": "Hollywood Studios",
+    "priceRange": "$$$–$$$$",
+    "resort": "Hollywood Studios",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/hollywood-studios/hollywood-and-vine/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.UzjbPEJ4gI65TQn8dT8UCD",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/riviera-resort/topolinos-terrace/",
+    "characters": [
+     "Mickey Mouse",
+     "Minnie Mouse",
+     "Donald Duck",
+     "Daisy Duck"
+    ],
+    "description": "Breakfast à la Art with Mickey & Friends: prix-fixe rooftop breakfast. Characters appear at breakfast only; dinner is a signature restaurant with a dress code.",
+    "image": null,
+    "mealType": [
+     "breakfast"
+    ],
+    "name": "Topolino's Terrace - Flavors of the Riviera",
+    "park": "Disney's Riviera Resort",
+    "priceRange": "$$$",
+    "resort": "Disney's Riviera Resort",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/riviera-resort/topolinos-terrace/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.q5bQv6QFqWcAZeLNaYbsnk",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/wilderness-lodge-resort/artist-point/",
+    "characters": [
+     "Snow White",
+     "Dopey",
+     "Grumpy"
+    ],
+    "description": "Dinner only, with plated entrées and shared starters and desserts. Snow White, Dopey and Grumpy appear every evening.",
+    "image": null,
+    "mealType": [
+     "dinner"
+    ],
+    "name": "Story Book Dining at Artist Point with Snow White",
+    "park": "Disney's Wilderness Lodge",
+    "priceRange": "$$$$",
+    "resort": "Disney's Wilderness Lodge",
+    "priceByMeal": {
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/wilderness-lodge-resort/artist-point/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.r5PBb5Nahg2bY9oktfrIWW",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/beach-club-resort/cape-may-cafe/",
+    "characters": [
+     "Minnie Mouse",
+     "and friends"
+    ],
+    "description": "Minnie's Beach Bash Breakfast buffet at the Beach Club Resort (near EPCOT). Characters appear at breakfast only; the dinner buffet has no characters.",
+    "image": null,
+    "mealType": [
+     "breakfast"
+    ],
+    "name": "Cape May Cafe",
+    "park": "Disney's Beach Club Resort",
+    "priceRange": "$$$",
+    "resort": "Disney's Beach Club Resort",
+    "priceByMeal": {
+     "breakfast": "$$$ ($35–$59.99/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/beach-club-resort/cape-may-cafe/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.r5PBb5Nahg2bY9oktfrIqS",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/cinderella-royal-table/",
+    "characters": [
+     "Cinderella",
+     "Disney Princesses"
+    ],
+    "description": "Prix-fixe meal inside Cinderella Castle. Cinderella greets you in the Grand Hall and Disney Princesses visit for photos. Paid in full when you book; no changes after booking; cancel at least 2 hours ahead or the full price is charged.",
+    "image": null,
+    "mealType": [
+     "breakfast",
+     "lunch",
+     "dinner"
+    ],
+    "name": "Cinderella's Royal Table",
+    "park": "Magic Kingdom",
+    "priceRange": "$$$$",
+    "resort": "Magic Kingdom",
+    "priceByMeal": {
+     "breakfast": "$$$$ (over $60/adult)",
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/cinderella-royal-table/",
+    "verifiedAt": "2026-10-26"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.UzjbPEJ4gI65TQn8dT8QAZ",
+    "_type": "characterDining",
+    "bookingUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/",
+    "characters": [],
+    "description": "Not a character meal. Prix-fixe lunch and dinner in Beast's Castle.",
+    "image": null,
+    "mealType": [],
+    "name": "Be Our Guest Restaurant",
+    "park": "Magic Kingdom",
+    "priceRange": "$$$$",
+    "resort": "Magic Kingdom",
+    "priceByMeal": {
+     "lunch": "$$$$ (over $60/adult)",
+     "dinner": "$$$$ (over $60/adult)"
+    },
+    "hideFromList": true,
+    "hideReason": "Not a character dining location: Disney's official page (checked 2026-10-26) lists no Character Dining tag or character appearances.",
+    "sourceUrl": "https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/",
+    "verifiedAt": "2026-10-26"
+   }
+  }
+ ]
+}

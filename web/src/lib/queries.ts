@@ -169,13 +169,16 @@ export async function getParkSlugs(): Promise<string[]> {
 // Character Dining
 export async function getAllCharacterDining(): Promise<CharacterDining[]> {
   return sanityClient.fetch(`
-    *[_type == "characterDining"] | order(park asc, name asc) {
+    *[_type == "characterDining" && hideFromList != true] | order(park asc, name asc) {
       _id,
       name,
       park,
       characters,
       mealType,
       priceRange,
+      priceByMeal,
+      sourceUrl,
+      verifiedAt,
       description,
       image {
         asset-> { url },

@@ -29,7 +29,7 @@ function getParkSlug(park: string | undefined): string {
   };
   if (map[park]) return map[park];
   // Check if it's a resort/hotel location
-  if (park.includes('Resort') || park.includes('Hotel') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian') || park.includes('Villa')) {
+  if (park.includes('Resort') || park.includes('Hotel') || park.includes('Lodge') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian') || park.includes('Villa')) {
     return 'resort';
   }
   return 'other';
@@ -74,14 +74,20 @@ function getLocationLabel(park: string | undefined, itemName: string | undefined
   return park;
 }
 
+const IN_PARK_LOCATIONS = new Set([
+  'Magic Kingdom', 'EPCOT', 'Hollywood Studios', 'Animal Kingdom',
+  'Universal Studios Florida', 'Islands of Adventure', 'Epic Universe',
+  'SeaWorld Orlando', 'LEGOLAND Florida',
+]);
+
 function isInPark(park: string | undefined): boolean {
   if (!park) return false;
-  return !park.includes('Resort') && !park.includes('Hotel') && !park.includes('Villa');
+  return IN_PARK_LOCATIONS.has(park);
 }
 
 function isResort(park: string | undefined): boolean {
   if (!park) return false;
-  return park.includes('Resort') || park.includes('Hotel') || park.includes('Grand Floridian') || park.includes('Contemporary') || park.includes('Polynesian');
+  return !isInPark(park);
 }
 
 function formatCharacters(chars: string[] | undefined): string {
@@ -246,6 +252,11 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
                       {item.priceRange && (
                         <span className="price-badge">{item.priceRange}</span>
                       )}
+                      {item.sourceUrl && (
+                        <a className="dining-source" href={item.sourceUrl} target="_blank" rel="noopener noreferrer">
+                          Official Disney page{item.verifiedAt ? ` (checked ${item.verifiedAt})` : ''}
+                        </a>
+                      )}
                     </div>
                   </td>
                   <td className={`td-meal td-breakfast ${!hasBreakfast ? 'meal-unavailable' : ''}`}>
@@ -259,8 +270,8 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
                             <span className="more-chars">+{item.characters.length - 4}</span>
                           )}
                         </div>
-                        {item.priceRange && (
-                          <span className="meal-price">${item.priceRange.includes('$') ? '45' : ''}+</span>
+                        {item.priceByMeal?.breakfast && (
+                          <span className="meal-price">{item.priceByMeal.breakfast}</span>
                         )}
                       </div>
                     ) : (
@@ -278,8 +289,8 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
                             <span className="more-chars">+{item.characters.length - 4}</span>
                           )}
                         </div>
-                        {item.priceRange && (
-                          <span className="meal-price">${item.priceRange.includes('$$') ? '55' : ''}+</span>
+                        {item.priceByMeal?.lunch && (
+                          <span className="meal-price">{item.priceByMeal.lunch}</span>
                         )}
                       </div>
                     ) : (
@@ -297,8 +308,8 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
                             <span className="more-chars">+{item.characters.length - 4}</span>
                           )}
                         </div>
-                        {item.priceRange && (
-                          <span className="meal-price">${item.priceRange.includes('$$$') ? '65' : ''}+</span>
+                        {item.priceByMeal?.dinner && (
+                          <span className="meal-price">{item.priceByMeal.dinner}</span>
                         )}
                       </div>
                     ) : (
@@ -321,6 +332,13 @@ export default function CharacterDiningTable({ diningList, showFilters = true, p
       <style>{`
         .dining-table-wrapper {
           width: 100%;
+        }
+
+        .dining-source {
+          display: block;
+          margin-top: 0.35rem;
+          font-size: 0.75rem;
+          color: var(--primary);
         }
 
         .dining-filters {
