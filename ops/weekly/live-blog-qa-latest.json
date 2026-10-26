@@ -1,6 +1,654 @@
 {
   "base": "https://planyourpark.com",
-  "posts": 15,
-  "summary": {},
-  "findings": []
+  "posts": 17,
+  "summary": {
+    "medium": 84,
+    "high": 8
+  },
+  "findings": [
+    {
+      "slug": "animal-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 90 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/animal-kingdom-under-40/ | text=Animal Kingdom rides under ~40\u2033Crawlable AK short-rider list before you lock a Safari day.\u2026"
+    },
+    {
+      "slug": "animal-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "animal-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 247 chars (consider shorter label)",
+      "detail": "href=/blog/magic-kingdom-with-kids-rides-by-height/ | text=Magic Kingdom with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)Magic Kingdo\u2026"
+    },
+    {
+      "slug": "animal-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 171 chars (consider shorter label)",
+      "detail": "href=/blog/best-magic-kingdom-rides-kids-under-40-inches/ | text=Best Magic Kingdom Rides for Kids Under 40 InchesThe best Magic Kingdom rides for kids und\u2026"
+    },
+    {
+      "slug": "animal-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "magic-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 92 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/magic-kingdom-under-40/ | text=Magic Kingdom rides under ~40\u2033Crawlable MK short-rider list \u2014 share before you lock ticket\u2026"
+    },
+    {
+      "slug": "magic-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "magic-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 265 chars (consider shorter label)",
+      "detail": "href=/blog/animal-kingdom-with-kids-rides-by-height/ | text=Animal Kingdom with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)Animal King\u2026"
+    },
+    {
+      "slug": "magic-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 171 chars (consider shorter label)",
+      "detail": "href=/blog/best-magic-kingdom-rides-kids-under-40-inches/ | text=Best Magic Kingdom Rides for Kids Under 40 InchesThe best Magic Kingdom rides for kids und\u2026"
+    },
+    {
+      "slug": "magic-kingdom-with-kids-rides-by-height",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "disney-vs-universal-with-kids-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 94 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/universal-orlando-under-40/ | text=Universal Orlando rides under ~40\u2033USF + Islands + Epic short-rider list in one crawlable p\u2026"
+    },
+    {
+      "slug": "disney-vs-universal-with-kids-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "disney-vs-universal-with-kids-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "disney-vs-universal-with-kids-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 201 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list-kids/ | text=Disney World Kids Packing List (2026) \u2014 25 EssentialsPack only what kids ages 2\u20138 actually\u2026"
+    },
+    {
+      "slug": "disney-vs-universal-with-kids-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 191 chars (consider shorter label)",
+      "detail": "href=/blog/orlando-closures-march-2026/ | text=Orlando Theme Park Closures & Refurbs: March 2026Historical March 2026 closure notes, upda\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 320 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list-kids",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 277 chars (consider shorter label)",
+      "detail": "href=/blog/best-time-visit-disney-world-2026/ | text=Best Time to Visit Disney World in 2026 \u2014 Complete Month-by-Month GuidePlanning a Disney W\u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 94 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/universal-orlando-under-40/ | text=Universal Orlando rides under ~40\u2033USF + Islands + Epic height list before you lock a park \u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 117 chars (whole sentence/paragraph linked)",
+      "detail": "href=/parks/ | text=Compare Universal, Epic Universe, and the rest of OrlandoUseful for readers still deciding\u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 118 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=See current Universal and Orlando ticket deal optionsA booking-oriented next step without \u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 226 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-tickets-guide/ | text=Epic Universe Tickets 2026: 1-Day vs Multi-Day for FamiliesEpic-only day or multi-day Univ\u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 193 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-rides-ranked-guide/ | text=All Epic Universe Rides Ranked for Kids (2026 Guide)Epic Universe rides for families: how \u2026"
+    },
+    {
+      "slug": "universal-orlando-summer-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 197 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-1-day-plan/ | text=What to Do at Epic Universe: Complete 1-Day Touring PlanA realistic 1-day Epic Universe to\u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 96 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/epic-universe-under-40/ | text=Epic Universe rides under ~40\u2033Crawlable short-rider list + interactive finder for Epic Uni\u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 117 chars (whole sentence/paragraph linked)",
+      "detail": "href=/parks/ | text=Compare Universal, Epic Universe, and the rest of OrlandoUseful for readers still deciding\u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 118 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=See current Universal and Orlando ticket deal optionsA booking-oriented next step without \u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 193 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-rides-ranked-guide/ | text=All Epic Universe Rides Ranked for Kids (2026 Guide)Epic Universe rides for families: how \u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 372 chars (consider shorter label)",
+      "detail": "href=/blog/universal-orlando-summer-2026/ | text=Universal Orlando Summer 2026: The Complete Spielberg Summer Blockbuster Planning GuideEve\u2026"
+    },
+    {
+      "slug": "epic-universe-tickets-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 197 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-1-day-plan/ | text=What to Do at Epic Universe: Complete 1-Day Touring PlanA realistic 1-day Epic Universe to\u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 96 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/epic-universe-under-40/ | text=Epic Universe rides under ~40\u2033Crawlable short-rider list + interactive finder for Epic Uni\u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 117 chars (whole sentence/paragraph linked)",
+      "detail": "href=/parks/ | text=Compare Universal, Epic Universe, and the rest of OrlandoUseful for readers still deciding\u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 118 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=See current Universal and Orlando ticket deal optionsA booking-oriented next step without \u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 226 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-tickets-guide/ | text=Epic Universe Tickets 2026: 1-Day vs Multi-Day for FamiliesEpic-only day or multi-day Univ\u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 372 chars (consider shorter label)",
+      "detail": "href=/blog/universal-orlando-summer-2026/ | text=Universal Orlando Summer 2026: The Complete Spielberg Summer Blockbuster Planning GuideEve\u2026"
+    },
+    {
+      "slug": "epic-universe-rides-ranked-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 197 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-1-day-plan/ | text=What to Do at Epic Universe: Complete 1-Day Touring PlanA realistic 1-day Epic Universe to\u2026"
+    },
+    {
+      "slug": "best-time-visit-disney-world-2026",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "best-time-visit-disney-world-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "best-time-visit-disney-world-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 152 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-guide/ | text=Complete Disney World Planning Guide for FamiliesEverything you need to know to plan the p\u2026"
+    },
+    {
+      "slug": "best-time-visit-disney-world-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "best-time-visit-disney-world-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 273 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-with-baby-toddler/ | text=Disney World with a Baby or Toddler: The Complete GuideDisney World with a baby or toddler\u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 96 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/epic-universe-under-40/ | text=Epic Universe rides under ~40\u2033Crawlable short-rider list + interactive finder for Epic Uni\u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 117 chars (whole sentence/paragraph linked)",
+      "detail": "href=/parks/ | text=Compare Universal, Epic Universe, and the rest of OrlandoUseful for readers still deciding\u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 118 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=See current Universal and Orlando ticket deal optionsA booking-oriented next step without \u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 226 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-tickets-guide/ | text=Epic Universe Tickets 2026: 1-Day vs Multi-Day for FamiliesEpic-only day or multi-day Univ\u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 193 chars (consider shorter label)",
+      "detail": "href=/blog/epic-universe-rides-ranked-guide/ | text=All Epic Universe Rides Ranked for Kids (2026 Guide)Epic Universe rides for families: how \u2026"
+    },
+    {
+      "slug": "epic-universe-1-day-plan",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 372 chars (consider shorter label)",
+      "detail": "href=/blog/universal-orlando-summer-2026/ | text=Universal Orlando Summer 2026: The Complete Spielberg Summer Blockbuster Planning GuideEve\u2026"
+    },
+    {
+      "slug": "disney-world-guide",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "disney-world-guide",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "disney-world-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 277 chars (consider shorter label)",
+      "detail": "href=/blog/best-time-visit-disney-world-2026/ | text=Best Time to Visit Disney World in 2026 \u2014 Complete Month-by-Month GuidePlanning a Disney W\u2026"
+    },
+    {
+      "slug": "disney-world-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "disney-world-guide",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 273 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-with-baby-toddler/ | text=Disney World with a Baby or Toddler: The Complete GuideDisney World with a baby or toddler\u2026"
+    },
+    {
+      "slug": "free-things-disney-world",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "free-things-disney-world",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "free-things-disney-world",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 191 chars (consider shorter label)",
+      "detail": "href=/blog/orlando-closures-march-2026/ | text=Orlando Theme Park Closures & Refurbs: March 2026Historical March 2026 closure notes, upda\u2026"
+    },
+    {
+      "slug": "free-things-disney-world",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 201 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list-kids/ | text=Disney World Kids Packing List (2026) \u2014 25 EssentialsPack only what kids ages 2\u20138 actually\u2026"
+    },
+    {
+      "slug": "free-things-disney-world",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 277 chars (consider shorter label)",
+      "detail": "href=/blog/best-time-visit-disney-world-2026/ | text=Best Time to Visit Disney World in 2026 \u2014 Complete Month-by-Month GuidePlanning a Disney W\u2026"
+    },
+    {
+      "slug": "best-magic-kingdom-rides-kids-under-40-inches",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 92 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/magic-kingdom-under-40/ | text=Magic Kingdom rides under ~40\u2033Crawlable MK short-rider list \u2014 share before you lock ticket\u2026"
+    },
+    {
+      "slug": "best-magic-kingdom-rides-kids-under-40-inches",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "best-magic-kingdom-rides-kids-under-40-inches",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 247 chars (consider shorter label)",
+      "detail": "href=/blog/magic-kingdom-with-kids-rides-by-height/ | text=Magic Kingdom with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)Magic Kingdo\u2026"
+    },
+    {
+      "slug": "best-magic-kingdom-rides-kids-under-40-inches",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "best-magic-kingdom-rides-kids-under-40-inches",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "beat-disney-world-crowds",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "beat-disney-world-crowds",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "beat-disney-world-crowds",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 273 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-with-baby-toddler/ | text=Disney World with a Baby or Toddler: The Complete GuideDisney World with a baby or toddler\u2026"
+    },
+    {
+      "slug": "beat-disney-world-crowds",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 201 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list-kids/ | text=Disney World Kids Packing List (2026) \u2014 25 EssentialsPack only what kids ages 2\u20138 actually\u2026"
+    },
+    {
+      "slug": "beat-disney-world-crowds",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 277 chars (consider shorter label)",
+      "detail": "href=/blog/best-time-visit-disney-world-2026/ | text=Best Time to Visit Disney World in 2026 \u2014 Complete Month-by-Month GuidePlanning a Disney W\u2026"
+    },
+    {
+      "slug": "orlando-closures-march-2026",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "orlando-closures-march-2026",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "orlando-closures-march-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "orlando-closures-march-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 266 chars (consider shorter label)",
+      "detail": "href=/blog/free-things-disney-world/ | text=19 No-Extra-Cost Things to Do at Disney World (That Are Actually Good)Disney World is expe\u2026"
+    },
+    {
+      "slug": "orlando-closures-march-2026",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 208 chars (consider shorter label)",
+      "detail": "href=/blog/universal-orlando-height-requirements/ | text=Universal Height Requirements 2026 \u2014 Full Ride ChartCan your kids ride it? Complete height\u2026"
+    },
+    {
+      "slug": "disney-world-with-baby-toddler",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "disney-world-with-baby-toddler",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "disney-world-with-baby-toddler",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 152 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-guide/ | text=Complete Disney World Planning Guide for FamiliesEverything you need to know to plan the p\u2026"
+    },
+    {
+      "slug": "disney-world-with-baby-toddler",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 277 chars (consider shorter label)",
+      "detail": "href=/blog/best-time-visit-disney-world-2026/ | text=Best Time to Visit Disney World in 2026 \u2014 Complete Month-by-Month GuidePlanning a Disney W\u2026"
+    },
+    {
+      "slug": "disney-world-with-baby-toddler",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 331 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list/ | text=What to Pack for Disney World With Kids (2026) \u2014 65+ Essentials for FamiliesComplete Disne\u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 94 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/universal-orlando-under-40/ | text=Universal Orlando rides under ~40\u2033USF + Islands + Epic short-rider list in one crawlable p\u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 117 chars (whole sentence/paragraph linked)",
+      "detail": "href=/parks/ | text=Compare Universal, Epic Universe, and the rest of OrlandoUseful for readers still deciding\u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 118 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=See current Universal and Orlando ticket deal optionsA booking-oriented next step without \u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 191 chars (consider shorter label)",
+      "detail": "href=/blog/orlando-closures-march-2026/ | text=Orlando Theme Park Closures & Refurbs: March 2026Historical March 2026 closure notes, upda\u2026"
+    },
+    {
+      "slug": "universal-orlando-height-requirements",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 372 chars (consider shorter label)",
+      "detail": "href=/blog/universal-orlando-summer-2026/ | text=Universal Orlando Summer 2026: The Complete Spielberg Summer Blockbuster Planning GuideEve\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "high",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 124 chars (whole sentence/paragraph linked)",
+      "detail": "href=/rides/for/disney-world-under-40/ | text=Disney World rides under ~40\u2033 (all 4 parks)Use the multi-park short-rider list so nobody w\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "medium",
+      "code": "overlong_anchor",
+      "message": "Hyperlink text is 103 chars (whole sentence/paragraph linked)",
+      "detail": "href=/deals/ | text=Compare Disney and Orlando ticket dealsHelpful when the article moves readers from plannin\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 190 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list-kids/ | text=Disney World Kids Packing List (2026) \u2014 25 EssentialsPack only what kids ages 2\u20138 actually\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 201 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-packing-list-kids/ | text=Disney World Kids Packing List (2026) \u2014 25 EssentialsPack only what kids ages 2\u20138 actually\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 216 chars (consider shorter label)",
+      "detail": "href=/blog/disney-vs-universal-with-kids-2026/ | text=Disney vs. Universal With Kids: Pick the Right Orlando ParkCompare Disney World and Univer\u2026"
+    },
+    {
+      "slug": "disney-world-packing-list",
+      "severity": "medium",
+      "code": "overlong_internal_anchor",
+      "message": "Internal blog link text is 152 chars (consider shorter label)",
+      "detail": "href=/blog/disney-world-guide/ | text=Complete Disney World Planning Guide for FamiliesEverything you need to know to plan the p\u2026"
+    }
+  ]
 }

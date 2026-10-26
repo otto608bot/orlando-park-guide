@@ -35,6 +35,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOKEN_PATH = ROOT / ".hermes" / "google_seo_token.json"
 CONFIG_PATH = Path(__file__).with_name("seo_analytics_config.json")
 SCOPES = [
+    "https://www.googleapis.com/auth/webmasters",
     "https://www.googleapis.com/auth/analytics.readonly",
     "https://www.googleapis.com/auth/webmasters.readonly",
 ]
@@ -56,7 +57,17 @@ def get_credentials() -> Credentials:
     if not creds.valid:
         if creds.expired and creds.refresh_token:
             creds.refresh(Request())
-            TOKEN_PATH.write_text(creds.to_json())
+            # Never save narrower scopes than the token was granted (keeps the
+            # Search Console write scope). Prefer granted scopes from refresh.
+            data = json.loads(creds.to_json())
+            try:
+                prev = json.loads(TOKEN_PATH.read_text()).get("scopes") or []
+            except Exception:
+                prev = []
+            granted = list(getattr(creds, "granted_scopes", None) or [])
+            merged = sorted(set(prev) | set(granted) | set(data.get("scopes") or []))
+            data["scopes"] = merged
+            TOKEN_PATH.write_text(json.dumps(data))
         else:
             print("ERROR: Token invalid. Re-run auth setup.")
             sys.exit(1)
