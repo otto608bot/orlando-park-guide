@@ -1,0 +1,2099 @@
+{
+ "_id": "drafts.blogPost-how-to-book-disney-character-dining",
+ "_type": "blogPost",
+ "title": "How to Book Disney World Character Dining (2026): 60-Day Rules",
+ "slug": {
+  "_type": "slug",
+  "current": "how-to-book-disney-character-dining"
+ },
+ "excerpt": "When Disney World character dining reservations open, how the 60-day window works for resort and off-site guests, cancellation fees, and a simple booking-morning plan.",
+ "tags": [
+  "Disney World character dining",
+  "Disney dining reservations",
+  "Disney World planning",
+  "Disney World with kids"
+ ],
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "categories": [
+  {
+   "_key": "d4b6df6fc1e1",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "readTime": 7,
+ "body": [
+  {
+   "_type": "block",
+   "_key": "3ccdcad36140",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "9dda7f7f2002",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "9073b1c4c84f",
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "aa7705c6b7c8",
+     "text": "See our affiliate disclosure",
+     "marks": [
+      "9dda7f7f2002"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "d31a6e684268",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "48f6b2265edb",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "be1fe23d3cbf",
+     "text": "Quick Answer: How Booking Works",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "4c7276ab5544",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b811977a36ed",
+     "href": "https://disneyworld.disney.go.com/faq/reservation-window/advance-reservations/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "2e07a5e4728e",
+     "text": "When:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "1e8484b82598",
+     "text": " Disney World dining reservations open ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "8a94675c20c2",
+     "text": "60 days before",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "2615581c5e46",
+     "text": " your date. New booking windows open at ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "0ea2f148178f",
+     "text": "about 6:00 AM",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "224ffcf85f7e",
+     "text": " each day (Disney World is on Eastern time), per ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "ef2393c1f207",
+     "text": "Disney's dining reservation FAQ",
+     "marks": [
+      "b811977a36ed"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e798758742bc",
+     "text": ".",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "e1937f7976b6",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "289ae83401c9",
+     "text": "Staying at a Disney Resort hotel?",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e4418f08d1ee",
+     "text": " At the 60-day mark before your arrival, you can book meals for your ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "06dc2e6f7f0a",
+     "text": "whole stay, up to a 10-night stay",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "6cceec142e1c",
+     "text": ", all on the same morning.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "d6806674d12e",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "4f08c9386d9e",
+     "text": "Staying off-site?",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "f482af933e68",
+     "text": " You book each date when it reaches 60 days out, one day at a time.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "0a3efaf175c2",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "658fa35739ab",
+     "href": "https://disneyworld.disney.go.com/faq/dining-reservations/restaurant-reservation-cancellation/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "253a4de2da22",
+     "text": "Cancel in time:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "439362984eff",
+     "text": " most restaurants charge ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "688e7cb01751",
+     "text": "$10 per person",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ff096f1e455d",
+     "text": " if you cancel within 2 hours or don't show up. Cinderella's Royal Table charges the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "fa2b6ba95262",
+     "text": "full cost per person",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "193cbd613a7c",
+     "text": " unless you cancel at least 2 hours ahead (",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "aae6c4c27240",
+     "text": "Disney's cancellation FAQ",
+     "marks": [
+      "658fa35739ab"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "1532793e0c5d",
+     "text": ").",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "0f10a506a6a7",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "70d0257858cb",
+     "href": "/blog/best-disney-world-character-dining-kids/"
+    },
+    {
+     "_type": "link",
+     "_key": "e382d17e6b8d",
+     "href": "/character-dining/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "63528591620c",
+     "text": "Everything here was checked on Disney's official pages on ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "947e59c5d167",
+     "text": "November 2, 2026",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "c12e5ea96c2a",
+     "text": ". Disney says its policies can change without notice, so re-check before you book. Still picking a restaurant? Start with our ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "6306326edbbb",
+     "text": "best character dining for kids",
+     "marks": [
+      "70d0257858cb"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "5276b5423ed5",
+     "text": " guide or the full ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "c8c2d3388db3",
+     "text": "Disney World character dining list",
+     "marks": [
+      "e382d17e6b8d"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ecac8cbe0bc6",
+     "text": ".",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "63b6cd52678e",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f4b20799f5bc",
+     "text": "When Do Disney Dining Reservations Open?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ac738715ff4c",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "036b8f4f5e3b",
+     "text": "Disney's rule is simple: you can book starting 60 days ahead. To find your date, count back 60 days from the day you want to eat. A few examples:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "528a05792719",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "32ae3c3cb26c",
+     "text": "Friday, January 15, 2027:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "42a3df54b296",
+     "text": " book on Monday, November 16, 2026",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "01597540575b",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "22f7ebf37cd2",
+     "text": "Sunday, February 14, 2027:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "3e8e249619ee",
+     "text": " book on Wednesday, December 16, 2026",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "a15b7da0e924",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f431d0fd6610",
+     "text": "Monday, March 15, 2027:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "98b60786b560",
+     "text": " book on Thursday, January 14, 2027",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "8b303b1e4abe",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "746d2da059b8",
+     "text": "Thursday, April 1, 2027:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "9696ea5ff188",
+     "text": " book on Sunday, January 31, 2027",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "d4399fba29ea",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "44b1f5e67b34",
+     "text": "Tuesday, June 1, 2027:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ecb63d00d152",
+     "text": " book on Friday, April 2, 2027",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "311270e545a6",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "fca03512df0b",
+     "text": "That's plain date math. Disney's booking page is the final word, so if a date doesn't show yet, check again the next morning. Windows open at about 6:00 AM Eastern, which is 5:00 AM if you live in Central time. Disney notes that delays are possible.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "591b9d20cf91",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "1abd3749d514",
+     "text": "Resort Guests vs. Off-Site Guests",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ad9375ef5712",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "bda92b830707",
+     "text": "This is the biggest difference in how families book.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "f64cd13063f6",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "c3e655697e4d",
+     "text": "Disney Resort hotel guests:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "90e0a40a16d7",
+     "text": " starting 60 days before your ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b5d182f940ae",
+     "text": "arrival",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "f0488045ee3c",
+     "text": " day, you can book dining for your entire stay, up to a 10-night stay. Disney points out that this lets you make all your reservations on the same day instead of checking day after day.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "9743a52d3ec4",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "71dcba962eda",
+     "text": "Everyone else:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "c2346e004fc0",
+     "text": " you can book starting 60 days in advance of each meal date.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "15c0da660ad8",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b21ba01076cb",
+     "text": "So if you're staying off-site and want a character breakfast on the last day of your trip, that date opens later than your first day. Put a reminder on your calendar for each one.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ff47c8a8d11d",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f742bde26d75",
+     "text": "Before You Book: Party Size, Tickets, and a Card",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "013e259f32d0",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "6bc9f1da8fb0",
+     "text": "Count everyone, including babies.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "fe4526273885",
+     "text": " For in-park table-service restaurants, Disney \"highly recommends\" a confirmed reservation for the total number of guests, regardless of age. Put toddlers and babies in your party count.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b9c372ff57d0",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "3a7b8c9d1c3e",
+     "href": "/deals/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "5f13f9b686e0",
+     "text": "In-park meals need park admission.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ad025d3b730a",
+     "text": " Valid theme park admission is required to dine inside a park. A dining reservation doesn't guarantee park entry, and Disney says theme park reservations may be required depending on your ticket type. Compare tickets on our ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "2f4c78211cc6",
+     "text": "ticket deals page",
+     "marks": [
+      "3a7b8c9d1c3e"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "39b225f051bf",
+     "text": " before your 60-day window opens.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "f7e958328ae2",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "c957db79474c",
+     "text": "Resort meals are outside the parks.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "16c581d26632",
+     "text": " For Disney Resort hotel restaurants, Disney encourages all guests to make reservations. Chef Mickey's, ʻOhana breakfast, 1900 Park Fare, Topolino's Terrace breakfast, Cape May Cafe breakfast, and Story Book Dining are all at resort hotels.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "6e585544a449",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "8f9e4c33fc82",
+     "text": "Have a credit card ready.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "d70e491a375c",
+     "text": " Disney's restaurant pages say the card you give when booking is charged a per-person fee if you don't show up or don't cancel in time.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "9d35aafa7d81",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "4fca05e992a4",
+     "text": "Disney Dining Cancellation Policy",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "dc3875cb855f",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "ea7f716f9be6",
+     "href": "https://disneyworld.disney.go.com/faq/dining-reservations/restaurant-reservation-cancellation/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "ee5d37e4a09d",
+     "text": "From ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "f50e332c2388",
+     "text": "Disney's cancellation FAQ",
+     "marks": [
+      "ea7f716f9be6"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "327190c91536",
+     "text": " on November 2, 2026:",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b3c51a154161",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "980a2715873d",
+     "text": "Most restaurants:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "bcb9714b14ae",
+     "text": " you can cancel or change online. Restaurants that take advance reservations don't allow changes within 2 hours of your time, and most charge ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "ebb9b9d20771",
+     "text": "$10 per person",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "833e07a48c10",
+     "text": " if you cancel within 2 hours or don't show up.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "0bc63606f366",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "74ef3f796cae",
+     "text": "Cinderella's Royal Table:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "54795d996aa9",
+     "text": " once confirmed, the reservation ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "de35b7c6b0f3",
+     "text": "can't be modified",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "afef2125f634",
+     "text": ". To avoid paying the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "4e323eaa80a9",
+     "text": "full cost of the experience per person",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7c38d8fcf688",
+     "text": ", cancel at least 2 hours before your reservation time.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "0052e0fa88b1",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "13d1f9ef73f3",
+     "text": "Check your confirmation email.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "1ece8825dee7",
+     "text": " Disney gives each restaurant's policy when you book and in the confirmation email.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "c38d11c3b11f",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "e4499f41007f",
+     "text": "When someone cancels, Disney says the time goes straight back into the booking system for other guests. If the meal you want is full, keep checking. Spots can open up as plans change.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "1d477a346ade",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "a8ae2d7f8b4b",
+     "text": "Character Meal Times to Know",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "7fb089c746f3",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "70e1a89b24e2",
+     "text": "These are the meal periods on each restaurant's official page (November 2, 2026). Times and characters can change. Garden Grill's page, for example, says character appearances are subject to change or cancellation without notice.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "3a3bd4e27dee",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "3d766784ea54",
+     "href": "https://disneyworld.disney.go.com/dining/magic-kingdom/cinderella-royal-table/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "4d905d1e5fa9",
+     "text": "Cinderella's Royal Table",
+     "marks": [
+      "3d766784ea54"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "811768fe1e0c",
+     "text": " (Magic Kingdom): breakfast 8:00 to 10:15 AM, lunch 11:00 AM to 2:55 PM, dinner 3:00 to 9:15 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "c6c93ac8d1ea",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "2b0d5fc2f307",
+     "href": "https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "a36ad8abefd3",
+     "text": "The Crystal Palace",
+     "marks": [
+      "2b0d5fc2f307"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "3721b2c315f6",
+     "text": " (Magic Kingdom): breakfast 8:00 to 10:45 AM, lunch 11:00 AM to 2:55 PM, dinner 3:00 to 9:00 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "f3ce4ccc70e8",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "4156c6f05a03",
+     "href": "https://disneyworld.disney.go.com/dining/epcot/garden-grill-restaurant/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "9cc38174e745",
+     "text": "Garden Grill",
+     "marks": [
+      "4156c6f05a03"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "67f11563da4f",
+     "text": " (EPCOT): breakfast 8:30 to 10:30 AM, lunch 11:30 AM to 3:40 PM, dinner 3:45 to 8:00 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "b0963f959b14",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "5a66340b6267",
+     "href": "https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "84cef2ef8e1e",
+     "text": "Akershus Royal Banquet Hall",
+     "marks": [
+      "5a66340b6267"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "eeba981cc18e",
+     "text": " (EPCOT): breakfast 8:30 AM to 12:10 PM, lunch 12:15 to 4:40 PM, dinner 5:25 to 8:05 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "ec4e4ad98f96",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "e78f0be1d88d",
+     "href": "https://disneyworld.disney.go.com/dining/hollywood-studios/hollywood-and-vine/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "854e803ce590",
+     "text": "Hollywood & Vine",
+     "marks": [
+      "e78f0be1d88d"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "6b006b8c626d",
+     "text": " (Hollywood Studios): breakfast 8:30 to 10:30 AM, lunch 10:45 AM to 3:55 PM, dinner 4:00 to 8:00 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "ba89f0f60985",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "61682b974030",
+     "href": "https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "16232e76f08e",
+     "text": "Tusker House",
+     "marks": [
+      "61682b974030"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7a29743675b8",
+     "text": " (Animal Kingdom): breakfast 7:30 to 10:30 AM, lunch 11:00 AM to 3:30 PM, dinner 3:35 to 7:00 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "52313c2ff49b",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "34745c714b0f",
+     "href": "https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f2e597b9af84",
+     "text": "Chef Mickey's",
+     "marks": [
+      "34745c714b0f"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "f42a96707b2a",
+     "text": " (Contemporary Resort): breakfast 7:30 AM to 12:30 PM, dinner 5:00 to 9:30 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "ca2c5359bd88",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "e16a6f9f3045",
+     "href": "https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/1900-park-fare/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "9a27d8b1ea5b",
+     "text": "1900 Park Fare",
+     "marks": [
+      "e16a6f9f3045"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "a510840ecd83",
+     "text": " (Grand Floridian): breakfast 8:00 AM to 12:00 PM, dinner 4:00 to 9:00 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "8625e6d5ef47",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "9c6e88d95467",
+     "href": "https://disneyworld.disney.go.com/dining/polynesian-village/ohana/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "492baa21b2f0",
+     "text": "ʻOhana",
+     "marks": [
+      "9c6e88d95467"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e3863c5b8d60",
+     "text": " (Polynesian Village): character breakfast 7:30 AM to 12:15 PM. Dinner is not a character meal.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "6102d802ca0c",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "bdd8a9cc69fd",
+     "href": "https://disneyworld.disney.go.com/dining/riviera-resort/topolinos-terrace/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "538e05c9c442",
+     "text": "Topolino's Terrace",
+     "marks": [
+      "bdd8a9cc69fd"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "6fd2426dd2b1",
+     "text": " (Riviera Resort): character breakfast 7:30 AM to 12:15 PM. No characters at dinner.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "323620e4ed73",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "8f78abb7ce71",
+     "href": "https://disneyworld.disney.go.com/dining/beach-club-resort/cape-may-cafe/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "50406666266f",
+     "text": "Cape May Cafe",
+     "marks": [
+      "8f78abb7ce71"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "653d8e53c1c9",
+     "text": " (Beach Club): character breakfast 7:30 to 11:30 AM. No characters at dinner.",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "e561e7dab397",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "1cb69e6ceb17",
+     "href": "https://disneyworld.disney.go.com/dining/wilderness-lodge-resort/artist-point/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "806c62dfdafa",
+     "text": "Story Book Dining at Artist Point",
+     "marks": [
+      "1cb69e6ceb17"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "14ebf889bc7b",
+     "text": " (Wilderness Lodge): dinner 4:00 to 9:15 PM",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "2883494990e8",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "ac1a8e52270d",
+     "text": "Heads-up notes from Disney's pages:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7592c01f81a7",
+     "text": " Grand Floridian renovations continue in select areas through early 2027, so you may see work or need to take a different path to 1900 Park Fare. ʻOhana's page says exterior maintenance may block some lagoon views. The Disney Skyliner is scheduled to close for refurbishment January 24 to 30, 2027, with buses provided, which matters if you plan to reach Topolino's Terrace by Skyliner that week.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "87a41c5fd617",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "6194dee5d07c",
+     "text": "A Simple Booking-Morning Plan",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "bda790e5c9eb",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b997481fde8c",
+     "text": "Pick your top two meals per date.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ee0f28c62391",
+     "text": " Have a backup restaurant and a backup meal (breakfast or lunch) ready. Breakfast is often the lower price tier on Disney's pages, so it makes a good backup.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "0599e4f86688",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "7913e5b3ba5a",
+     "text": "Sign in the night before.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "0c0f46f07c6c",
+     "text": " Make sure your Disney account works and your party is set up, including kids and babies.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "ca76bffc1dba",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "102989463eb8",
+     "text": "Be ready just before 6:00 AM Eastern",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "62554ea7b7f6",
+     "text": " on your 60-day date.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "c116a27fce0b",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "ccb5fc0d707d",
+     "text": "Book the hardest one first.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "ebd0a1cd3340",
+     "text": " If Cinderella's Royal Table is on your list, start there, then move to the rest.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "9f99d3641663",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "523672d57c5c",
+     "text": "Read the policy on each confirmation.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "25cb6d328466",
+     "text": " Note any meal with a stricter rule, like Cinderella's Royal Table.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "5e73940f7cf4",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "4a02b8d12582",
+     "text": "Didn't get it? Keep checking.",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "23b047b76418",
+     "text": " Cancelled times go back into the system right away.",
+     "marks": []
+    }
+   ],
+   "listItem": "number",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "5602d80886f2",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "34fe5e0fd8c4",
+     "text": "Plan the Rest of the Park Day",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "d1d5e83138e9",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "458d1641a63e",
+     "text": "Book the character meal in the park you're already visiting, then plan rides around it. Heights below are from Disney's official attraction pages, checked November 2, 2026.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "6888cccc86fa",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "db3858aae840",
+     "href": "/rides/for/magic-kingdom-under-40/"
+    },
+    {
+     "_type": "link",
+     "_key": "65cccfd19dd2",
+     "href": "/blog/magic-kingdom-with-kids-rides-by-height/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "74afffa8918c",
+     "text": "Magic Kingdom:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "6553b911555a",
+     "text": " Seven Dwarfs Mine Train needs riders to be ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "462983e5334c",
+     "text": "38 inches",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "d1f738536664",
+     "text": " or taller. Tiana's Bayou Adventure (",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "57ce707b6bff",
+     "text": "40 inches",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "78e07e6e042d",
+     "text": ") is closed for refurbishment from November 2, with reopening expected in December 2026. See the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "4a900e006c57",
+     "text": "Magic Kingdom rides under 40 inches",
+     "marks": [
+      "db3858aae840"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "22f95119c97d",
+     "text": " and ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "b7b762e7441b",
+     "text": "Magic Kingdom with kids",
+     "marks": [
+      "65cccfd19dd2"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7770e0666388",
+     "text": ".",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "157d2bc415fe",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "c076474b7be9",
+     "href": "/rides/for/epcot-under-40/"
+    },
+    {
+     "_type": "link",
+     "_key": "1284c0d46b88",
+     "href": "/blog/epcot-with-kids-rides-by-height/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "e477dcba2b3e",
+     "text": "EPCOT:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "8bfa50139ef1",
+     "text": " Frozen Ever After, in World Showcase like Akershus, is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "4f454cc67d39",
+     "text": "any height",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "67d63353ccb0",
+     "text": ". Browse ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "ef4b3b7e121f",
+     "text": "EPCOT rides under 40 inches",
+     "marks": [
+      "c076474b7be9"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "0137f6981e4a",
+     "text": " or read ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "2da3125d4eaa",
+     "text": "EPCOT with kids",
+     "marks": [
+      "1284c0d46b88"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "7b2c705344be",
+     "text": ".",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "96a17b469bcd",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "7fdbf0818558",
+     "href": "/rides/for/hollywood-studios-under-40/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "84978c25661a",
+     "text": "Hollywood Studios:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "55adadfc207d",
+     "text": " Star Tours is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "40f86a6316de",
+     "text": "40 inches",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b52cf68affa4",
+     "text": ", and Toy Story Mania! is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "f9d8ce4680ec",
+     "text": "any height",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "869309cb118e",
+     "text": ". See ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "bb4008dcd07a",
+     "text": "Hollywood Studios rides under 40 inches",
+     "marks": [
+      "7fdbf0818558"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "e1b9f857c491",
+     "text": ".",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "5d3700d827f1",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "5d47e9eda979",
+     "href": "/rides/for/animal-kingdom-under-40/"
+    },
+    {
+     "_type": "link",
+     "_key": "34632d1fad27",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "3b3571617bad",
+     "text": "Animal Kingdom:",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "a5b7ffa129e3",
+     "text": " Kilimanjaro Safaris, in the same Africa area as Tusker House, is ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "66cf8fed2ade",
+     "text": "any height",
+     "marks": [
+      "strong"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "9380b1138e62",
+     "text": ". Check ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "971b075b2333",
+     "text": "Animal Kingdom rides under 40 inches",
+     "marks": [
+      "5d47e9eda979"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "8515ed3a84a2",
+     "text": " or ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "e9efbec32915",
+     "text": "Animal Kingdom with kids",
+     "marks": [
+      "34632d1fad27"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "b4e6ddc23c17",
+     "text": ".",
+     "marks": []
+    }
+   ],
+   "listItem": "bullet",
+   "level": 1
+  },
+  {
+   "_type": "block",
+   "_key": "6cc7a3fa0fa1",
+   "style": "normal",
+   "markDefs": [
+    {
+     "_type": "link",
+     "_key": "b3c24fbf57f7",
+     "href": "/parks/"
+    },
+    {
+     "_type": "link",
+     "_key": "d5965edb2ad3",
+     "href": "/rides/"
+    }
+   ],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "c9916950748b",
+     "text": "Not sure which parks fit your kids? Start with the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "6bc63999f661",
+     "text": "park chooser",
+     "marks": [
+      "b3c24fbf57f7"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "5fddeac37d04",
+     "text": ", or use the ",
+     "marks": []
+    },
+    {
+     "_type": "span",
+     "_key": "7671a6ef8f4b",
+     "text": "ride finder",
+     "marks": [
+      "d5965edb2ad3"
+     ]
+    },
+    {
+     "_type": "span",
+     "_key": "d498ce9fa438",
+     "text": " to filter every Disney World ride by your child's height. Your kids will be so excited when the characters come around the table, and a little planning keeps the rest of the day just as fun.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "48a1705cf240",
+   "style": "h2",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "b981c9d438ed",
+     "text": "Character Dining Booking FAQ",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "412b62650497",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "2271d072ca68",
+     "text": "How far in advance can you book Disney character dining?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ff15931c3cf2",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "a5898305d2a4",
+     "text": "60 days ahead. Disney Resort hotel guests can book their whole stay, up to a 10-night stay, at 60 days before arrival. Everyone else books each date 60 days ahead.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b9139cc492c2",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "5d37e86ac5d8",
+     "text": "What time do Disney dining reservations open?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "b99d3fdf518a",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "fc8d4e103ff7",
+     "text": "At about 6:00 AM each day, per Disney's FAQ. Disney World is on Eastern time, so that's 5:00 AM Central.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "f26c427c8746",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "a26542a6fe28",
+     "text": "Do I need to include my baby in the reservation?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "3737cabccd3a",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "f0018ec651f2",
+     "text": "For in-park table-service restaurants, Disney highly recommends a reservation for the total number of guests, regardless of age. Count babies and toddlers.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "05291bca031e",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "1d02f236179c",
+     "text": "What is the Disney dining cancellation fee?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "7c31f878695a",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "ddf444b60c75",
+     "text": "Most restaurants charge $10 per person if you cancel within 2 hours of your reservation or don't show up. Cinderella's Royal Table charges the full cost per person unless you cancel at least 2 hours before.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "2febafcdbd07",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "214eacb9a10e",
+     "text": "Can I change my Cinderella's Royal Table reservation?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "dfc31cf952b8",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "0605625d6760",
+     "text": "No. Disney's FAQ says that once it's confirmed, the reservation can't be modified. You would need to cancel (at least 2 hours ahead to avoid the fee) and book again if a new time is available.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "a38c6536fea9",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "99cfbfd22177",
+     "text": "Do I need a park ticket for character dining?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "ca70c4729988",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "7b865ccc6c3e",
+     "text": "For meals inside a park, yes. Valid theme park admission is required. Resort hotel character meals like Chef Mickey's, ʻOhana breakfast, and Cape May Cafe breakfast are outside the parks.",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "9fae248bea70",
+   "style": "h3",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "75b8b72e7eba",
+     "text": "Can I call to book Disney dining?",
+     "marks": []
+    }
+   ]
+  },
+  {
+   "_type": "block",
+   "_key": "2d411f5e884a",
+   "style": "normal",
+   "markDefs": [],
+   "children": [
+    {
+     "_type": "span",
+     "_key": "684ae1077640",
+     "text": "Disney asks guests to book dining online. For extra help with an existing reservation, its cancellation FAQ lists (407) WDW-DINE, or (407) 939-3463. Guests under 18 need a parent or guardian's permission to call.",
+     "marks": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+== PASS 1 (author: links, anchors, format)
+== PASS 2 (independent: facts, policy, brand, disclosure)
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link https://disneyworld.disney.go.com/faq/reservation-window/advance-reservations/ 200
+PASS anchor<=60 "Disney's dining reservation FA" 
+PASS link https://disneyworld.disney.go.com/faq/dining-reservations/restaurant-reservation-cancellation/ 200
+PASS anchor<=60 "Disney's cancellation FAQ" 
+PASS link /blog/best-disney-world-character-dining-kids/ 200
+PASS anchor<=60 "best character dining for kids" 
+PASS link /character-dining/ 200
+PASS anchor<=60 "Disney World character dining " 
+PASS link /deals/ 200
+PASS anchor<=60 "ticket deals page" 
+PASS link https://disneyworld.disney.go.com/dining/magic-kingdom/cinderella-royal-table/ 200
+PASS anchor<=60 "Cinderella's Royal Table" 
+PASS link https://disneyworld.disney.go.com/dining/magic-kingdom/crystal-palace/ 200
+PASS anchor<=60 "The Crystal Palace" 
+PASS link https://disneyworld.disney.go.com/dining/epcot/garden-grill-restaurant/ 200
+PASS anchor<=60 "Garden Grill" 
+PASS link https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/ 200
+PASS anchor<=60 "Akershus Royal Banquet Hall" 
+PASS link https://disneyworld.disney.go.com/dining/hollywood-studios/hollywood-and-vine/ 200
+PASS anchor<=60 "Hollywood & Vine" 
+PASS link https://disneyworld.disney.go.com/dining/animal-kingdom/tusker-house-restaurant/ 200
+PASS anchor<=60 "Tusker House" 
+PASS link https://disneyworld.disney.go.com/dining/contemporary-resort/chef-mickeys/ 200
+PASS anchor<=60 "Chef Mickey's" 
+PASS link https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/1900-park-fare/ 200
+PASS anchor<=60 "1900 Park Fare" 
+PASS link https://disneyworld.disney.go.com/dining/polynesian-village/ohana/ 200
+PASS anchor<=60 "ʻOhana" 
+PASS link https://disneyworld.disney.go.com/dining/riviera-resort/topolinos-terrace/ 200
+PASS anchor<=60 "Topolino's Terrace" 
+PASS link https://disneyworld.disney.go.com/dining/beach-club-resort/cape-may-cafe/ 200
+PASS anchor<=60 "Cape May Cafe" 
+PASS link https://disneyworld.disney.go.com/dining/wilderness-lodge-resort/artist-point/ 200
+PASS anchor<=60 "Story Book Dining at Artist Po" 
+PASS link /rides/for/magic-kingdom-under-40/ 200
+PASS anchor<=60 "Magic Kingdom rides under 40 i" 
+PASS link /blog/magic-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Magic Kingdom with kids" 
+PASS link /rides/for/epcot-under-40/ 200
+PASS anchor<=60 "EPCOT rides under 40 inches" 
+PASS link /blog/epcot-with-kids-rides-by-height/ 200
+PASS anchor<=60 "EPCOT with kids" 
+PASS link /rides/for/hollywood-studios-under-40/ 200
+PASS anchor<=60 "Hollywood Studios rides under " 
+PASS link /rides/for/animal-kingdom-under-40/ 200
+PASS anchor<=60 "Animal Kingdom rides under 40 " 
+PASS link /blog/animal-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Animal Kingdom with kids" 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /rides/ 200
+PASS anchor<=60 "ride finder" 
+PASS amazon links tagged 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS title <= 70 chars 
+PASS excerpt <= 200 chars 
+PASS links Post 1 + hub 
+-- pass 2 --
+PASS disclosure before first affiliate link 
+PASS >=4 ride-finder links 
+PASS links park chooser /parks/ and /rides/ 
+PASS no first-person lore (reader-voice FAQ questions excluded) 
+PASS no Genie+/Lightning Lane claims 
+PASS 60 days + 6:00 AM (official FAQ) 
+PASS resort window = up to a 10-night stay, no "10 days" 
+PASS fee $10 per person within 2 hours (official FAQ) 
+PASS CRT: full cost, no modifications 
+PASS no unverified prepayment claim 
+PASS height Seven Dwarfs Mine Train=**38 inches** 
+PASS height Tiana's Bayou Adventure=**40 inches** 
+PASS height Star Tours=**40 inches** 
+PASS Tiana's refurb disclosed 
+PASS heights/facts dated 
+PASS meal times match official extract 
+PASS no specific dollar menu prices (tiers/fees only) 
+PASS ʻOhana/Topolino/Cape May dinner not called character 
+pass1 fails 0 | pass2 fails 0
