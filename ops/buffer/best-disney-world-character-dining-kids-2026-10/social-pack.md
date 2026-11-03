@@ -13,7 +13,7 @@ Which Disney World character meal fits your kids? We checked every one on Disney
 • Reservations open 60 days out at 6 AM Eastern
 
 Picks by age and park day, plus every price tier 👇
-https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=facebook?utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
+https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=facebook&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
 
 ## Instagram (planyourparknow)
 **Image:** `ig-1080x1080.png` (text-only branded card; no people or logos)
@@ -28,14 +28,14 @@ Book 60 days out at 6 AM Eastern. Checked on Disney's pages Oct 2026; re-check b
 Full guide: link in bio.
 #DisneyWorld #CharacterDining #DisneyWorldWithKids #DisneyTips #DisneyWorld2026
 
-**Link-in-bio URL:** https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=instagram?utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
+**Link-in-bio URL:** https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=instagram&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
 
 ## Pinterest (PlanYourPark)
 - **Title:** Best Disney World Character Dining for Kids (2026): Prices + How to Book
 - **Description:** Planning Disney World character dining with kids? See Disney's official price tier for every character meal (checked Oct 2026), picks for toddlers, princess fans and each park day, resort meals with no park ticket listed, and how to book at 60 days.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), per ops/distribution.md / the 2026-10-16 read-only check. Not re-checked in Buffer (no Buffer API used).
 - **Image:** `pin-1000x1500.png` (text-only, 2:3)
-- **Destination URL:** https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=pinterest?utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
+- **Destination URL:** https://planyourpark.com/blog/best-disney-world-character-dining-kids/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-10&utm_content=best-disney-world-character-dining-kids
 
 ## Checks
 - [x] UTM matches the approved scheme
