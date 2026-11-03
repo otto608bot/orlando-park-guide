@@ -18,7 +18,7 @@ https://planyourpark.com/blog/how-to-book-disney-character-dining/?utm_source=fa
 
 ## Instagram (planyourparknow)
 **Image:** `ig-1080x1080.jpg` (photo-style: girl high-fives an original lavender mouse character; no logos, no trademarked characters, no text)
-**Alt text:** A laughing girl high-fives a friendly lavender mouse character with round glasses and a yellow bow tie at a sunny breakfast table, while a curly-haired boy laughs beside them.
+**Alt text:** A laughing girl high-fives a friendly lavender mouse character with round glasses and a yellow bow tie over a breakfast table of waffles and eggs.
 
 **Caption:**
 How to book Disney World character dining 🥞
@@ -36,12 +36,12 @@ Full guide: link in bio.
 - **Title:** How to Book Disney World Character Dining (2026): 60-Day Rules
 - **Description:** When do Disney World dining reservations open? 60 days ahead at about 6 AM Eastern. See how the window works for Disney Resort guests vs. off-site guests, date examples, cancellation fees (including Cinderella's Royal Table), and a simple booking-morning plan for families with kids.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), the existing board in ops/distribution.md. Not re-checked in Buffer (no Buffer API used).
-- **Image:** `pin-1000x1500.jpg` (photo-style, 2:3: boy hugs an original bear character in a teal vest; no logos or text)
-- **Alt text:** A boy laughs while hugging a big friendly bear character in a teal vest at a sunny breakfast table, as a girl claps beside them.
+- **Image:** `pin-1000x1500.jpg` (photo-style, 2:3: boy runs to hug an original princess-style character in a coral and gold gown with a flower crown; no logos or text)
+- **Alt text:** A boy runs with arms open toward a smiling princess-style character in a coral and gold gown and flower crown, as his family smiles from a sunny breakfast table.
 - **Destination URL:** https://planyourpark.com/blog/how-to-book-disney-character-dining/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=how-to-book-disney-character-dining
 
 ## Image note
-No image generator was available in this run. Both images are existing photo-style originals from 2026-10-26 (`/workspace/character-dining-{square,pin}-photo-style-2026-10-26.png`), also stored in Post 1's pack folder. If Post 1's social already used them, generate fresh ones per ops/hero-image-style.md before queueing.
+All images are new originals generated 2026-11-02 for this post per ops/hero-image-style.md (no reuse of Post 1 art). Hero: ops/drafts/hero-2026-11-02/how-to-book-character-dining-hero.jpg (Sanity asset image-10cdc0bf829096df2848953248754b2caf10ec13-1376x768-jpg).
 
 ## Checks
 - [x] UTM matches the approved scheme (`&` separators; note Post 1's pack has `?utm_medium` typos — fix before queueing that one)
