@@ -1,0 +1,363 @@
+{
+ "mutations": [
+  {
+   "createOrReplace": {
+    "_type": "ride",
+    "accessibility": [
+     "wheelchair-accessible",
+     "dark-ride",
+     "loud-audio"
+    ],
+    "description": "An interactive laser blast adventure",
+    "heightRequirement": 30,
+    "image": null,
+    "name": "Lost Kingdom Adventure",
+    "park": "LEGOLAND Florida",
+    "rideDuration": "4 min",
+    "rideType": "Interactive Dark Ride",
+    "slug": {
+     "current": "ll-lost-kingdom"
+    },
+    "thrillLevel": 1,
+    "_id": "drafts.200HsSeCmp0rIIhq3n1hwQ"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_type": "ride",
+    "accessibility": [
+     "transfer-accessible",
+     "not-pregnant-safe",
+     "sudden-movements"
+    ],
+    "description": "A gentle kid-sized drop tower",
+    "heightRequirement": 36,
+    "image": null,
+    "name": "Beetle Bounce",
+    "park": "LEGOLAND Florida",
+    "rideDuration": "1 min",
+    "rideType": "Drop Tower",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-beetle-bounce"
+    },
+    "thrillLevel": 1,
+    "_id": "drafts.r5PBb5Nahg2bY9oktfrH4o"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_type": "ride",
+    "accessibility": [
+     "transfer-accessible",
+     "not-pregnant-safe",
+     "loud-audio",
+     "sudden-movements"
+    ],
+    "description": "A suspended family coaster",
+    "heightRequirement": 44,
+    "image": null,
+    "name": "Flying School",
+    "park": "LEGOLAND Florida",
+    "rideDuration": "2 min",
+    "rideType": "Coaster",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-flying-school"
+    },
+    "thrillLevel": 4,
+    "isClosed": true,
+    "closureNote": "Permanently closed after its final rides on Aug 16, 2023, per LEGOLAND Florida's Jul 13, 2023 press release (reprinted by Mousesteps and reported by ClickOrlando and The Ledger). No longer listed on LEGOLAND Florida's official rides or height pages, and its official page returns 404 (checked Nov 9, 2026).",
+    "_id": "drafts.q5bQv6QFqWcAZeLNaYbW4i"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-galacticoaster",
+    "_type": "ride",
+    "name": "Galacticoaster",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-galacticoaster"
+    },
+    "heightRequirement": 36,
+    "rideType": "Coaster",
+    "thrillLevel": 3,
+    "accessibility": [],
+    "description": "An indoor LEGO space coaster you customize; riders under 48\" ride with a responsible rider 13+ and 48\"+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-kid-power-towers",
+    "_type": "ride",
+    "name": "Kid Power Towers",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-kid-power-towers"
+    },
+    "heightRequirement": 38,
+    "rideType": "Drop Tower",
+    "thrillLevel": 2,
+    "accessibility": [],
+    "description": "Pull yourself up the tower, then float back down. Under 48\" ride with a responsible rider 14+. (Official height chart says 30\"; the ride page says 38\". Using 38\".)"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-coast-guard-academy",
+    "_type": "ride",
+    "name": "Coast Guard Academy",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-coast-guard-academy"
+    },
+    "heightRequirement": 34,
+    "rideType": "Boat Ride",
+    "thrillLevel": 1,
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "Captain your own boat on calm waterways; 34\u201348\" ride with a responsible rider 14+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-rescue-academy",
+    "_type": "ride",
+    "name": "Rescue Academy",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-rescue-academy"
+    },
+    "heightRequirement": 34,
+    "rideType": "Interactive",
+    "thrillLevel": 1,
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "Pump a fire truck and spray water to put out a pretend fire; 34\u201348\" ride with a responsible rider 14+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-safari-trek",
+    "_type": "ride",
+    "name": "Safari Trek",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-safari-trek"
+    },
+    "heightRequirement": 34,
+    "rideType": "Car Ride",
+    "thrillLevel": 1,
+    "accessibility": [],
+    "description": "A gentle jeep ride past LEGO animals; under 48\" ride with a responsible rider 14+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-royal-joust",
+    "_type": "ride",
+    "name": "Royal Joust",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-royal-joust"
+    },
+    "heightRequirement": 36,
+    "rideType": "Kiddie Ride",
+    "thrillLevel": 1,
+    "accessibility": [],
+    "description": "Kids ride their own LEGO horse through a medieval forest. Ages 4\u201312 only, max 170 lbs."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-technicycle",
+    "_type": "ride",
+    "name": "Technicycle",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-technicycle"
+    },
+    "heightRequirement": 36,
+    "rideType": "Pedal Ride",
+    "thrillLevel": 2,
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "Pedal faster to fly higher on this rider-controlled spinner; 36\u201348\" ride with a responsible person 14+ and 48\"+.",
+    "isClosed": true,
+    "closureNote": "Temporarily closed Nov 2\u201320, 2026, per LEGOLAND Florida's official temporary closures page (checked Nov 9, 2026)."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-unikitty-disco-drop",
+    "_type": "ride",
+    "name": "Unikitty's Disco Drop",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-unikitty-disco-drop"
+    },
+    "heightRequirement": 40,
+    "rideType": "Drop Tower",
+    "thrillLevel": 2,
+    "accessibility": [],
+    "description": "A spinning, bouncing drop tower in Unikitty's disco; 40\u201348\" ride with a supervising companion 14+ and 48\"+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-masters-of-flight",
+    "_type": "ride",
+    "name": "THE LEGO MOVIE Masters of Flight",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-masters-of-flight"
+    },
+    "heightRequirement": 40,
+    "rideType": "Flying Theater",
+    "thrillLevel": 2,
+    "accessibility": [],
+    "description": "A suspended flying-theater ride on Emmet's triple-decker couch; 40\u201352\" ride with a companion 14+ and 52\"+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-great-lego-race",
+    "_type": "ride",
+    "name": "The Great LEGO Race",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-great-lego-race"
+    },
+    "heightRequirement": 42,
+    "rideType": "Coaster",
+    "thrillLevel": 3,
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "A wild-mouse family coaster (optional VR experience needs 35\"+ and is separate); 42\u201347\" ride with a responsible rider 14+ and 48\"+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-mias-riding-adventure",
+    "_type": "ride",
+    "name": "Mia's Riding Adventure",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-mias-riding-adventure"
+    },
+    "heightRequirement": 48,
+    "rideType": "Coaster",
+    "thrillLevel": 4,
+    "accessibility": [],
+    "description": "A spinning disc coaster at Mia's riding camp; 48\" minimum."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-aquazone-wave-racers",
+    "_type": "ride",
+    "name": "AQUAZONE Wave Racers",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-aquazone-wave-racers"
+    },
+    "heightRequirement": 40,
+    "rideType": "Water Ride",
+    "thrillLevel": 3,
+    "accessibility": [],
+    "description": "Spinning jet-ski style ride dodging water blasts; riders stand. Under 52\" ride with a responsible rider 14+. (Ride page says 40\" minimum; the chart's first line says 52\". Using 40\".)"
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-grand-carousel",
+    "_type": "ride",
+    "name": "The Grand Carousel",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-grand-carousel"
+    },
+    "heightRequirement": 0,
+    "rideType": "Carousel",
+    "thrillLevel": 1,
+    "accessibility": [
+     "transfer-accessible"
+    ],
+    "description": "Double-decker carousel in Fun Town; under 48\" ride with a responsible person 14+ and 48\"+."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-duplo-tractor",
+    "_type": "ride",
+    "name": "DUPLO Tractor",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-duplo-tractor"
+    },
+    "heightRequirement": 0,
+    "rideType": "Kiddie Ride",
+    "thrillLevel": 1,
+    "accessibility": [],
+    "description": "A toddler tractor ride through DUPLO Valley; under 42\" ride with a responsible person 14+ and 48\"+. No handheld infants.",
+    "isClosed": true,
+    "closureNote": "Temporarily closed Nov 2\u201311, 2026, per LEGOLAND Florida's official temporary closures page (checked Nov 9, 2026)."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-battle-of-bricksburg",
+    "_type": "ride",
+    "name": "Battle of Bricksburg",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-battle-of-bricksburg"
+    },
+    "heightRequirement": 0,
+    "rideType": "Water Ride",
+    "thrillLevel": 1,
+    "accessibility": [],
+    "description": "Interactive splash boat ride in THE LEGO MOVIE WORLD; under age 6 or under 48\" ride with a responsible person 16+.",
+    "isClosed": true,
+    "closureNote": "Temporarily closed starting Nov 2, 2026, with no reopening date given, per LEGOLAND Florida's official temporary closures page (checked Nov 9, 2026)."
+   }
+  },
+  {
+   "createOrReplace": {
+    "_id": "drafts.ride-legoland-pirate-river-quest",
+    "_type": "ride",
+    "name": "Pirate River Quest",
+    "park": "LEGOLAND Florida",
+    "slug": {
+     "_type": "slug",
+     "current": "ll-pirate-river-quest"
+    },
+    "heightRequirement": 0,
+    "rideType": "Boat Ride",
+    "thrillLevel": 1,
+    "accessibility": [],
+    "description": "A pirate boat ride and treasure hunt; riders may get splashed."
+   }
+  }
+ ]
+}
