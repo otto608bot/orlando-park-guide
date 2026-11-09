@@ -1,0 +1,29 @@
+{
+ "transactionId": "dJ3ZmtNcKW3cm5QrHe1Spt",
+ "results": [
+  {
+   "id": "drafts.ride-legoland-pirate-river-quest",
+   "operation": "update"
+  },
+  {
+   "id": "drafts.RLBxGAumPb4EPh1Y0BD12c",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNaYbnsf",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.ride-legoland-duplo-tractor",
+   "operation": "update"
+  },
+  {
+   "id": "drafts.ride-legoland-technicycle",
+   "operation": "update"
+  },
+  {
+   "id": "drafts.blogPost-legoland-florida-rides-by-height",
+   "operation": "update"
+  }
+ ]
+}

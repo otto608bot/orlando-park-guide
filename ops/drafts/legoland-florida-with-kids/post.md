@@ -10,16 +10,15 @@ targets: ["legoland florida ride heights", "how many rides are at legoland flori
 
 ## Quick Answer: LEGOLAND Florida Rides by Height
 
-LEGOLAND Florida is built for younger kids, and it shows in the height chart. Most rides open up somewhere between **30 and 42 inches**, and only two rides in the theme park need a child taller than that to ride: Mia's Riding Adventure (**48 inches**) and AQUAZONE Wave Racers (listed at **52 inches**).
+LEGOLAND Florida is built for younger kids, and it shows in the height chart. Most rides open up somewhere between **30 and 42 inches**, and only one ride in the theme park needs a child taller than that: Mia's Riding Adventure (**48 inches**). AQUAZONE Wave Racers starts at **40 inches**, and riders under 52 inches ride with an adult.
 
 - **No minimum height:** LEGO NINJAGO The Ride, The Grand Carousel, DUPLO Train, DUPLO Tractor, Jr. Driving School (ages 3 to 5), Driving School (ages 6 to 13)
 - **30 inches:** Lost Kingdom Adventure
 - **34 inches:** Coast Guard Academy, Rescue Academy, Safari Trek
 - **36 inches:** Galacticoaster, Merlin's Challenge, Beetle Bounce, Royal Joust, Technicycle
-- **40 inches:** The Dragon, Unikitty's Disco Drop, THE LEGO MOVIE Masters of Flight
+- **40 inches:** The Dragon, Unikitty's Disco Drop, THE LEGO MOVIE Masters of Flight, AQUAZONE Wave Racers (under 52 inches with an adult)
 - **42 inches:** Coastersaurus, The Great LEGO Race
 - **48 inches:** Mia's Riding Adventure
-- **52 inches:** AQUAZONE Wave Racers
 
 Heights come from LEGOLAND Florida's official [height restrictions page](https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/) and ride pages, checked on **November 9, 2026**. Rules can change, so check again close to your trip. Want the list filtered for your child? Open the [LEGOLAND Florida ride finder](/rides/for/legoland-all/) or pick a height below.
 
@@ -71,6 +70,7 @@ Browse these in the [LEGOLAND rides for kids under 40 inches](/rides/for/legolan
 - **The Dragon (40 inches):** a steel coaster that runs partly indoors and partly outdoors. Riders 40 to 48 inches go with someone 14 or older.
 - **Unikitty's Disco Drop (40 inches):** a spinning, bouncing drop ride. Riders 40 to 48 inches go with a companion who is 14 or older and 48 inches tall.
 - **THE LEGO MOVIE Masters of Flight (40 inches):** an indoor flying-theater ride. Riders 40 to 52 inches must sit next to a companion who is 14 or older and 52 inches tall.
+- **AQUAZONE Wave Racers (40 inches):** you race through the waves in LEGO Technic vehicles and dodge water blasts, standing the whole time. Riders 40 to 52 inches ride with an adult (a responsible rider 14 or older) in the same vehicle; 52 inches and up can ride alone.
 - **Coastersaurus (42 inches):** a wooden family coaster that dips around LEGO dinosaurs. A good next step after The Dragon.
 - **The Great LEGO Race (42 inches):** a road-rally themed coaster. Riders 42 to 47 inches ride with someone 14 or older and 48 inches tall; 48 inches and up can ride alone.
 
@@ -79,7 +79,6 @@ See them together in the [LEGOLAND 44-inch ride list](/rides/for/legoland-44/).
 ## 48 Inches and Up
 
 - **Mia's Riding Adventure (48 inches):** a disc coaster in Heartlake City. For most families, this is the park's biggest thrill.
-- **AQUAZONE Wave Racers (52 inches):** you race through the waves in LEGO Technic vehicles and dodge water blasts. LEGOLAND lists a 52-inch minimum but also says riders 40 to 52 inches must ride with someone 14 or older in the same vehicle. That wording is unclear, so ask the ride host before you queue with a shorter child.
 
 Compare with the [LEGOLAND 48-inch list](/rides/for/legoland-48/) and the [LEGOLAND 52-inch list](/rides/for/legoland-52/).
 
@@ -104,11 +103,11 @@ Details come from LEGOLAND's [Christmas Bricktacular page](https://www.legoland.
 
 **Under 36 inches:** start with LEGO NINJAGO The Ride and Lost Kingdom Adventure (30 inches) while lines are short. Then do DUPLO Valley (Train, Tractor and the splash area), The Grand Carousel and Jr. Driving School if your child is 3 to 5. Add the 34-inch rides (Coast Guard Academy, Rescue Academy, Safari Trek) if your child clears that mark. Plan a midday break; a slower day beats a meltdown.
 
-**36 to 41 inches:** go straight to Galacticoaster at opening, since it's the newest ride. Then Merlin's Challenge, Beetle Bounce and Royal Joust. At 40 inches, add The Dragon and Unikitty's Disco Drop. Fill gaps with MINILAND USA, a walk-through of American cities built from more than 32 million LEGO bricks.
+**36 to 41 inches:** go straight to Galacticoaster at opening, since it's the newest ride. Then Merlin's Challenge, Beetle Bounce and Royal Joust. At 40 inches, add The Dragon, Unikitty's Disco Drop and AQUAZONE Wave Racers (with an adult). Fill gaps with MINILAND USA, a walk-through of American cities built from more than 32 million LEGO bricks.
 
 **42 to 47 inches:** do Galacticoaster, then Coastersaurus and The Great LEGO Race back to back, then The Dragon. Save Driving School (ages 6 to 13) for the afternoon. Mia's Riding Adventure is still off-limits under 48 inches, so don't promise it.
 
-**48 inches and up:** everything in the theme park except possibly AQUAZONE Wave Racers is open. Ride Mia's Riding Adventure and Galacticoaster early, then repeat favorites.
+**48 inches and up:** everything in the theme park is open (AQUAZONE Wave Racers still needs an adult along until 52 inches). Ride Mia's Riding Adventure and Galacticoaster early, then repeat favorites.
 
 ## LEGOLAND Tickets: What We'd Check
 
@@ -124,7 +123,7 @@ Going to Disney too? Our [Magic Kingdom with kids guide](/blog/magic-kingdom-wit
 
 ### What is the height requirement at LEGOLAND Florida?
 
-There's no single park-wide rule. Several rides have no minimum height, most rides open between 30 and 42 inches, Mia's Riding Adventure needs 48 inches and AQUAZONE Wave Racers is listed at 52 inches (checked November 9, 2026).
+There's no single park-wide rule. Several rides have no minimum height, most rides open between 30 and 42 inches, and Mia's Riding Adventure needs 48 inches. AQUAZONE Wave Racers starts at 40 inches, with riders under 52 inches riding with an adult (checked November 9, 2026).
 
 ### How many rides are at LEGOLAND Florida?
 
@@ -136,7 +135,7 @@ Yes. LEGO NINJAGO The Ride, The Grand Carousel and the DUPLO Train have no minim
 
 ### What's the tallest height requirement at LEGOLAND Florida?
 
-AQUAZONE Wave Racers is listed at 52 inches. Among the coasters and thrill rides, Mia's Riding Adventure is the tallest at 48 inches.
+Mia's Riding Adventure has the tallest minimum in the theme park at 48 inches. AQUAZONE Wave Racers starts at 40 inches, but riders under 52 inches must ride with an adult.
 
 ### Is the LEGOLAND Florida water park open in November?
 
