@@ -1,0 +1,81 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/ 200
+PASS anchor<=60 "height restrictions page" 
+PASS link /rides/for/legoland-all/ 200
+PASS anchor<=60 "LEGOLAND Florida ride finder" 
+PASS link https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/ 200
+PASS anchor<=60 "temporary closures page" 
+PASS link /rides/for/legoland-under-40/ 200
+PASS anchor<=60 "LEGOLAND rides for kids under " 
+PASS link /rides/for/legoland-calm-under-40/ 200
+PASS anchor<=60 "LEGOLAND calm rides under 40 i" 
+PASS link /rides/for/legoland-44/ 200
+PASS anchor<=60 "LEGOLAND 44-inch ride list" 
+PASS link /rides/for/legoland-48/ 200
+PASS anchor<=60 "LEGOLAND 48-inch list" 
+PASS link /rides/for/legoland-52/ 200
+PASS anchor<=60 "LEGOLAND 52-inch list" 
+PASS link https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/ 200
+PASS anchor<=60 "Christmas Bricktacular page" 
+PASS link https://www.legoland.com/florida/plan-your-visit/planning-tools/opening-hours/ 200
+PASS anchor<=60 "official hours calendar" 
+PASS link https://www.anrdoezrs.net/click-101693488-12540781 200
+PASS anchor<=60 "LEGOLAND Florida ticket deals" 
+PASS link /deals/ 200
+PASS anchor<=60 "Orlando ticket deals page" 
+PASS link /parks/ 200
+PASS anchor<=60 "Orlando park chooser" 
+PASS link /parks/legoland-florida/ 200
+PASS anchor<=60 "LEGOLAND Florida park page" 
+PASS link /rides/ 200
+PASS anchor<=60 "ride finder" 
+PASS link /blog/magic-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Magic Kingdom with kids guide" 
+PASS link /blog/disney-vs-universal-with-kids-2026/ 200
+PASS anchor<=60 "Disney vs. Universal with kids" 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS title <= 70 chars 
+PASS excerpt <= 200 chars 
+PASS primary query words in title 
+PASS FAQ answers "how many rides" 
+-- pass 2 --
+PASS disclosure before first affiliate link 
+PASS affiliate link = config legoland 
+PASS >=4 ride-finder links 6
+PASS links /parks/ and /rides/ and park page 
+PASS no first-person lore 
+PASS no Genie+/Lightning Lane 
+PASS height in body + extract: Lost Kingdom Adventure (30 inches) 
+PASS height in body + extract: Coast Guard Academy (34 inches) 
+PASS height in body + extract: Galacticoaster (36 inches) 
+PASS height in body + extract: Beetle Bounce (36 inches) 
+PASS height in body + extract: Merlin's Challenge (36 inches) 
+PASS height in body + extract: The Dragon (40 inches) 
+PASS height in body + extract: Coastersaurus (42 inches) 
+PASS height in body + extract: The Great LEGO Race (42 inches) 
+PASS height in body + extract: Mia's Riding Adventure (48 inches) 
+PASS height in body + extract: AQUAZONE Wave Racers (52 inches) 
+PASS height in body + extract: Unikitty's Disco Drop (40 inches) 
+PASS height in body + extract: THE LEGO MOVIE Masters of Flight (40 inches) 
+PASS height in body + extract: Royal Joust (36 inches) 
+PASS height in body + extract: Technicycle (36 inches) 
+PASS height in body + extract: Safari Trek (34 inches) 
+PASS height in body + extract: Rescue Academy (34 inches) 
+PASS Kid Power Towers conflict disclosed (30 vs 38) 
+PASS closure disclosed: Pirate River Quest 
+PASS closure disclosed: Battle of Bricksburg 
+PASS closure disclosed: DUPLO Train and DUPLO Tractor: 
+PASS closure disclosed: Technicycle:** closed November 
+PASS closure disclosed: closed for the season 
+PASS closures match official page 
+PASS Bricktacular dates match 
+PASS drone show dates match 
+PASS tree lighting Nov 20 6 PM 
+PASS prices dated + sourced 
+PASS heights/facts dated (>=5x) 7
+PASS no Disney/Universal rides recommended (no closure recheck needed) 
+PASS no invented age-height mapping 
+pass1 fails 0 | pass2 fails 0 | checks 79
