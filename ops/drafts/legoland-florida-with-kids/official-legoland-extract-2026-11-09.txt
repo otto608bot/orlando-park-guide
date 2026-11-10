@@ -1,0 +1,346 @@
+# LEGOLAND Florida official page extracts (accessed 2026-11-09 ~9:30 AM CT via curl + BeautifulSoup; full text for height/closure pages, relevant lines for others)
+
+## https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/
+Height Restrictions
+Height Restrictions
+Name of attraction
+Minimum height
+Maximum height
+THE LEGO® MOVIE™ Masters of Flight
+Guests under 40” in height are not allowed on the ride. Guests between 40” and 52” must be accompanied by a supervising companion age 14 years or older and 52” or taller and capable of ensuring the child’s safety and seated next to the child. Guests 52” in height may ride unaccompanied.
+The Great LEGO® Race
+Minimum rider height is 42 inches to ride. Riders between 42 - 48 inches must be accompanied by a responsible rider 14 years of age or older in the same vehicle.
+Kid Power Towers
+Minimum rider height is 30 inches. Guests less than 42 inches must be accompanied by a responsible rider 14 years of age or older.
+LEGO® NINJAGO® The Ride
+No minimum height requirement. Guests under 48" must ride with a supervising companion who is 14 years or older and 48" or taller.
+Merlin's Challenge
+Minimum rider height is 36 inches. Guests less than 48 inches must be accompanied by a responsible rider 14 years of age or older.
+Mia's Riding Adventure
+Minimum rider height is 48 inches.
+Rescue Academy
+Minimum rider height is 34 inches. Guests between 34 - 48 inches must be accompanied by a responsible rider 14 years of age or older in the same vehicle.
+Unikitty’s Disco Drop
+Guests under 40” in height are not allowed on the ride. Guests between 40” and 48” must be accompanied by a supervising companion age 14 years or older and 48” or taller and capable of ensuring the child’s safety. Guests 48” in height may ride unaccompanied
+Splash Out
+Minimum rider height is 48 inches.
+Twin Chasers
+Minimum rider height is 42 inches.
+Coastersaurus
+Minimum rider height is 42 inches.
+Lost Kingdom Adventure
+Minimum rider height is 30 inches. Guests less than 42 inches must be accompanied by a responsible rider 14 years of age or older.
+AQUAZONE® Wave Racers
+Minimum rider height is 52 inches. Guests between 40 - 52  inches must be accompanied by a responsible rider 14 years of age or older in the same vehicle.
+The Dragon
+Minimum rider height is 40 inches. Guests under 48 inches must be accompanied by a responsible rider 14 years of age or older.
+Joker Soaker
+40" minimum to ride slides
+Galacticoaster
+Rider must be at least 36" to ride. Rider under 48" must be accompanied by a responsible rider at least 13 years old and 48" or taller.
+Beetle Bounce
+Minimum rider height is 36 inches.
+Royal Joust
+Minimum rider height 36 inches
+Technicycle
+Minimum rider height is 36 inches. Guests between 36-48 inches must be accompanied by a responsible rider 14 years of age or older in the same ride unit.
+The Great LEGO® Race Virtual Reality Experience
+Guests must be 35" or taller in order to ride.
+Coast Guard Academy
+Minimum rider height is 34 inches. Guests between 34 - 48 inches must be accompanied by a responsible rider 14 years or older in the same boat.
+Safari Trek
+Minimum rider height is 34 inches. Guests 44 inches or more, must be at least 6 years old to ride unaccompanied, all riders under 44 inches or 6 years old must be accompanied by a responsible person age 14 or up.
+Other restrictions
+Name of attraction
+Name of attraction
+AQUAZONE® Wave Racers
+Guests have to remain standing at all times during the ride experience. Riders must be able to utilize stairs to access this attraction.
+Battle of Bricksburg
+Under 6 years must ride with an adult
+Coast Guard Academy
+Guests must be able to transfer into the ride vehicle with assistance from their own party.
+DUPLO® Tractor
+Handheld infants are not permitted.
+DUPLO® Train
+Handheld infants are not permitted
+Driving School
+Ages 6-13; riders must have the ability to drive their car. They must not be visually impaired.
+Jr. Driving School
+Ages 3-5; riders must have the ability to drive their car. They must not be visually impaired.
+Merlin's Challenge
+Ride restrictions apply. This ride is not recommended for elderly guests. Guests who cannot sit upright independently are not permitted to ride this attraction.
+Mia's Riding Adventure
+Ride restrictions apply. This ride is not recommended for elderly guests. Guests who cannot sit upright independently are not permitted to ride this attraction.
+Rescue Academy
+Guests must be able to transfer to ride vehicle
+Royal Joust
+All riders must be between ages 4 - 12
+Technicycle
+Guests must be able to transfer into the ride vehicle with assistance from their own party.
+The Grand Carousel
+Guests must be able to transfer to ride vehicle
+The Great LEGO® Race
+Guests in wheelchairs must be able to transfer to the ride vehicle with assistance from a member of their party.
+DUPLO® Splash Safari
+This area is for children age 6 and under. Children must be able to walk unassisted and sit upright to ride down the slides, and also must be accompanied by a responsible adult.
+Splash Out
+1 person max, 300lbs
+Twin Chasers
+Children under 48 inches must ride with a responsible person over 48 inches. Max 2 people, 400lbs.
+No restrictions
+Name of attraction
+Junior Astronaut Training Zone
+Benny’s Play Ship
+Botanical Gardens
+DUPLO® Valley Schoolhouse
+DUPLO® Splash & Play
+Heartlake Stepping Tones Fountain
+Imagination Theater
+Imagination Zone
+LEGO® Ferrari Build & Race
+LEGO® NINJAGO® World
+MINILAND USA
+Pharaoh's Revenge Land of Adventure
+Pirate River Quest
+The LEGOLAND® Story
+
+## https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/
+Temporary Closures
+The following offerings are scheduled to be temporarily closed at LEGOLAND® Park:
+Pirate River Quest
+Battle of Bricksburg (Starting 11/2)
+DUPLO® Tractor  (11/2 - 11/11)
+DUPLO® Train (11/2 - 11/11)
+Technicycle (11/2 - 11/20)
+Imagination Zone (11/2 - 11/20)
+The following offerings are scheduled to be temporarily closed at LEGOLAND Water Park:
+Closed for the Season
+The following offerings are scheduled to be temporarily closed at Peppa Pig Theme Park:
+Peppa Pig's Balloon Ride (11/2 - 11/20)
+The following offerings are scheduled to be temporarily closed at LEGOLAND Florida Resort hotels:
+All attractions open
+PLEASE NOTE:
+Additional attractions may be closed without notice. This page highlights scheduled closures at LEGOLAND Florida Resort.
+Back to Plan Your Visit
+
+## https://www.legoland.com/florida/plan-your-visit/planning-tools/opening-hours/
+Tomorrow Tuesday 10
+10am - 5pm
+Closed
+10am - 5pm
+10am - 3pm
+10am - 5pm
+Closed
+10am - 5pm
+10am - 3pm
+to experience, we have something in store for visitors of all ages! Our LEGOLAND® Florida Theme Park hours vary surrounding seasonal events, but are typically 10 AM - 5 PM through weekdays, with a later close at 6 PM on weekends.
+View Vacation Packages
+For a less crowded experience, consider visiting on weekdays, particularly Tuesday through Thursday, and during off-peak months like February, May, and September. Check out our LEGOLAND
+Florida Theme Park opens at 10 AM.
+Looking to avoid crowds? The least crowded days at LEGOLAND® Florida are typically mid-week during the school year, especially Tuesdays through Thursdays in the spring and fall. Arrive early, in line with the LEGOLAND® hours, to enjoy shorter wait times. For the best time to visit the Water Park, aim for early afternoons on weekdays in summer for maximum splash time.
+Yes, LEGOLAND® Florida Resort is busier around Thanksgiving as the park tends to be busiest
+
+## https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/
+Select Dates Nov 21 - Jan 3
+Included with Tickets & Annual Passes
+This holiday season, build, play and celebrate together at LEGOLAND Christmas Bricktacular – where festive fun comes to life, one LEGO® brick at a time. Experience the all-new Christmas drone show featuring LEGO Santa, powered by the festive magic families build at LEGOLAND. The icing on top of the fruitcake—Christmas Bricktacular is included in
+Join the Jolliest Event of the Year on Select Dates:
+November - 21, 22, 27, 28, 29
+December- 5, 6, 12, 13, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+January- 1, 2, 3
+What's Included:
+December 5, 12, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+Take “elfies” with your favorite LEGO characters including ALL-NEW Yeti
+November 20 at 6:00 p.m.!
+Watch our giant LEGO® Christmas Tree sparkle to life with awesome guests and plenty of festive cheer—all included in regular admission and select Annual Passes!
+Select Dates: December 5, 12, 19 – 30
+Blast off into the holiday season with the all-new customizable elements, where festive LEGO fun takes your celebrations to out-of-this-world heights!
+Nov. 20 – Dec. 24.
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+Build a bricktastic holiday keepsake at LEGO Santa’s Workshop—all included in your stay.
+With stays starting at $162 per person, per night, what are you waiting for?! Offer ends November 17, 2026.
+Get into the holiday spirit as you decorate your very own keepsake ornament, all included with your hotel stay.
+Build a heart and share the joy in our Build to Give Workshop! Join our mission to gift the superpower of play in the biggest ever donation of LEGO® sets to children in need of it most from November 20 to January 3 at The Dream Creation Station.
+LEGOLAND Florida Christmas Bricktacular is the Resort's annual Christmas celebration featuring festive LEGO decorations, holiday entertainment, seasonal treats, character meet-and-greets, and family-friendly activities. Guests can enjoy a giant LEGO Christmas tree, LEGO Santa, holiday-themed shows, and interactive building experiences throughout the park. The event takes place on select dates from November through December and is included with regular admission.
+Is LEGOLAND Christmas Bricktacular included with park admission?
+Yes. LEGOLAND Christmas Bricktacular is included with regular LEGOLAND Florida Resort tickets, Annual Passes, and select vacation packages. No separate event ticket is required, making it one of the best-value Christmas events for families in Central Florida.
+
+## https://www.legoland.com/florida/things-to-do/seasonal-events/kids-new-year-s-eve/
+December 31
+Included with Tickets & Select Passes
+"Midnight" comes early for families at LEGOLAND® Florida Resort, celebrating the New Year together with brick-bursting fireworks and awesome entertainment, all without missing their bedtimes. Plus, Kids' New Year's Eve is included in General Park Admission, Vacation Packages, and select Annual Passes.
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/battle-of-bricksburg/
+Height Requirements & Rider Restrictions
+Children under 6 years of age or less than 48” must ride with a responsible person age 16 years or older and capable of ensuring the child’s safety. The responsible person must be seated on the same bench as the child
+height restrictions
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/beetle-bounce/
+Minimum rider height is 36 inches
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/coast-guard-academy/
+Minimum rider height is 34 inches
+Guests below 48 inches in height must be accompanied by a responsible rider 14 years or older
+Learn more about our height requirements
+Coast Guard Academy LEGOLAND® is a popular stop for young captains, so wait times can vary throughout the day. Mornings and late afternoons usually offer the shortest lines, while midday can be a bit busier.
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/coastersaurus/
+Minimum rider height is 42 inches
+If your little ones meet the height requirement and are ready for a step up from the kiddie rides, Coastersaurus is the perfect way to introduce them to the world of coaster thrills!
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/driving-school/
+Beep Beep! Young LEGO® fans take the wheel at LEGOLAND® Driving School, where kids ages 6–13 learn the rules of the road in a fun LEGO® driving adventure. Whether pretending to be policemen, firewomen, taxi drivers, or any driver they choose, children can enjoy the thrill of driving LEGO® cars on roadways designed for them.
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+Age, Height & Safety Requirements
+View Hotel Packages
+Is the LEGOLAND® Driving License Included In Admission?
+No, the LEGOLAND® Driving License is not included in the general admission price; it is an optional add-on available for purchase at the Driving School store at LEGOLAND® Florida Theme Park.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/duplo-tractor/
+Handheld infants are not permitted.
+Guests 42" and above can ride unaccompanied.
+Children under 42” must ride with a responsible person 48” or taller and ensure the child’s safety. A Responsible person 14 years older is required.
+Yes, the tractor ride is suitable for kids of all ages! Young riders should be accompanied by someone at least 14 years of age.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/duplo-train/
+Handheld infants are not permitted
+Guests under 34" must ride with a responsible person 48" or taller
+Guests 34" and above may ride unaccompanied
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/galacticoaster/
+Height Requirements:
+Minimum 36" with adult
+Minimum 48" unaccompanied
+Recruits of any age can take part in the action! Step into the Junior Astronaut Training Zone, a soft-play zone designed for tiny astronauts (ages 1-4) to start their LEGO® Galaxy training early.
+Seasonal Events Included
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/jr-driving-school/
+Specially designed for children ages 3–5, this fun and friendly ride lets young drivers practice basic skills like steering, starting and stopping as they cruise around a kid-sized track in LEGO® City.
+Ages 3-5
+No driving experience needed! Jr. Driving School is designed especially for beginners ages 3–5, making it a fun and easy way for little builders to enjoy their first time behind the wheel.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/kid-power-towers/
+Kids Power Tower: Ages, Height & Safety Requirements
+Minimum rider height is 38 inches
+Guests below 48 inches in height must be accompanied by a responsible rider 14 years or older
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/lego-ninjago-the-ride/
+Fight like a ninja master on LEGO NINJAGO The Ride – the immersive 4D family-friendly ride. Adventurers of all ages can take on NINJAGO enemies with their bare hands in interactive hand-gesture gameplay.
+There is no minimum height requirement for this ride – making it one of the best LEGOLAND Florida rides and attractions for families and kids of all ages.
+No minimum height requirement. Guests under 48" must ride with a supervising companion who is 14 years or older and 48" or taller.
+No separate booking is required for LEGO NINJAGO The Ride. Access is included with all standard LEGOLAND Florida theme park admission tickets and eligible Annual Passes.
+Are there height or age restrictions for LEGO NINJAGO The Ride?
+LEGO NINJAGO The Ride has no minimum height requirement – making it accessible to riders of all ages, including toddlers and young children. Guests under 1.3m (4’4”) should be accompanied by a responsible adult. For the full list of ride-by-ride height requirements across LEGOLAND Florida, visit
+attraction height restrictions.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/lost-kingdom-adventure/
+Minimum rider height: 30”
+Riders 30"–48": Must ride with a responsible rider
+Responsible rider requirements: Must be at least 14 years old and 48” or taller
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/merlin-s-challenge/
+Minimum rider height is 36 inches
+Guests below 48 inches in height must be accompanied by a responsible rider 14 years or older
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/mia-s-riding-adventure/
+Minimum rider height is 48 inches
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/miniland-usa/
+Feel the rush as you experience the "World Center of Racing”  at 1/20 scale. The sounds of squealing tires and cheering fans greet guests at this giant replica of the DAYTONA Rising renovation project, which took more than a dozen Master Model Builders to create out of nearly 300,000 LEGO® bricks.
+This re-creation of the famous Florida facility pays tribute to the men and women who have been reaching for the stars for more than 50 years. Models include a U.S. space shuttle and launch pad, the iconic Rocket Garden and the mammoth Vehicle Assembly Building, where spacecraft were readied for launch starting with the Apollo program.
+Viva Las Vegas! Stop over to see the world-famous Strip made entirely out of LEGO® Bricks. The strip features the Luxor Las Vegas, New York, New York Hotel and Casino, Excalibur, Mirage, Treasure Island, Tropicana, MGM Grand, Venetian, Stratosphere tower and two iconic structures of Paris Las Vegas: the balloon sign and Eiffel Tower. "The Strip" at LEGOLAND® Florida Resort also features a miniature wedding chapel, monorails and real-life sounds recorded in Las Vegas.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/pirate-river-quest/
+Pirate River Quest is temporarily closed. Please see the
+Temporary Closures page
+This scenic LEGOLAND® pirate boat ride is perfect for all ages. Note that riders of this boat ride at LEGOLAND® may get splashed with water.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/rescue-academy/
+Minimum rider height is 34 inches
+Guests below 48 inches in height must be accompanied by a responsible rider 14 years or older
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/royal-joust/
+Minimum age 4
+Minimum rider height 36 inches
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/safari-trek/
+Minimum rider height is 34 inches
+Guests below 48 inches in height must be accompanied by a responsible rider 14 years or older
+Yes! Safari Trek is perfect for young explorers. Kids 34 inches and taller can ride with an adult.
+No, Safari Trek is included with your general LEGOLAND® Florida Resort admission ticket or Annual Pass.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/technicycle/
+Minimum rider height is 36 inches
+Guests between 36” and 48” must ride with a responsible person 14 years or older and 48” or taller
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-dragon/
+Minimum rider height is 40 inches
+Children between 40" and 48" must ride with a responsible person 14 years or older
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-grand-carousel/
+This double-decker carousel is the centerpiece of Fun Town. Children can choose their favorite horse and giddy up!
+No minimum rider height requirement
+Children under 48” must ride with a responsible person 48” or taller and ensuring the child’s safety. Responsible person age 14 years older required.
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-great-lego-race/
+Height & Safety Requirements
+Under 42 inches (1.06m): Not tall enough to ride yet! Check out other exciting attractions like AQUAZONE Wave Racers, Technicycle, Kid Power Towers, The Dragon and LEGO
+42-47 inches (1.06m-1.19m): Can ride when accompanied by a responsible rider 14 years or older and at least 48 inches tall (1.21m).
+48 inches (1.21m) and above: Can ride if he or she is alone.
+Seasonal Events Included
+Up to 20% Off Photo Packages
+Free standard parking included with Preferred and Premium passes
+Auto renewal after 12-month minimum. One-time initial payment starting at $101 required.
+Daily hot breakfast included
+Select Dates Nov 21 - Jan 3
+Offer ends November 17, 2026
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-lego-movie-masters-of-flight/
+Hop aboard Emmet’s Triple Decker Flying Couch! This flying theater attraction whisks guests away on an action-packed adventure on a suspended ride with a full-dome virtual screen, giving the sensational feeling of flying alongside some familiar and some new faces like Sweet Mayhem, a character set to debut in the upcoming feature THE LEGO(R) MOVIE(TM) 2: The Second Part. The one-of-a-kind experience is the first attraction at a major theme park in the United States that embeds a 180-degree turn in the ride experience.
+Guests under 40” in height are not allowed on the ride
+Guests between 40” and 52” must be accompanied by a supervising companion age 14 years or older and 52” or taller and capable of ensuring the child’s safety and seated next to the child.
+Guests 52” in height may ride unaccompanied
+
+## https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/unikitty-s-disco-drop/
+Guests under 40” in height are not allowed on the ride
+Guests between 40” and 48” must be accompanied by a supervising companion age 14 years or older and 48” or taller and capable of ensuring the child’s safety.
+Guests 48” in height may ride unaccompanied

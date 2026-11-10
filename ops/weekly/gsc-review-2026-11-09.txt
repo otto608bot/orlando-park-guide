@@ -1,0 +1,107 @@
+
+========================================================================
+Google Analytics 4 — last 28 days (2026-10-12 → 2026-11-09)
+========================================================================
+Property: properties/525883145
+  Sessions                     255
+  Users                        237
+  New users                    237
+  Page views                   341
+  Bounce rate                  0.78
+  Avg session duration (sec)   93.93
+  Engagement rate              0.22
+
+Top pages
+        36 views |      37 sess |  117.91s | /blog/disney-world-packing-list/
+        34 views |      26 sess |  148.00s | /
+        20 views |       6 sess |  441.01s | /parks/
+        16 views |      16 sess |   30.44s | /blog/animal-kingdom-with-kids-rides-by-height/
+        14 views |      10 sess |   33.65s | /parks/magic-kingdom/
+        11 views |      11 sess |   98.59s | /blog/best-magic-kingdom-rides-kids-under-40-inches/
+        10 views |       4 sess |  126.53s | /parks/islands-of-adventure/
+         9 views |       8 sess |    9.71s | /blog/how-to-book-disney-character-dining/
+         9 views |       9 sess |   23.49s | /blog/universal-orlando-height-requirements/
+         8 views |       7 sess |   27.01s | /blog/
+         8 views |       8 sess |  246.39s | /blog/disney-world-packing-list-kids/
+         8 views |       5 sess |    6.62s | /rides/
+         7 views |       7 sess |   58.99s | /blog/disney-world-guide/
+         7 views |       7 sess |   13.27s | /blog/disney-world-with-baby-toddler/
+         7 views |       4 sess |  103.88s | /parks/hollywood-studios/
+
+Traffic sources
+  Direct                 sessions=     169  users=     164
+  Organic Search         sessions=      59  users=      53
+  Organic Social         sessions=      12  users=      12
+  AI Assistant           sessions=       8  users=       5
+  Referral               sessions=       6  users=       2
+  Unassigned             sessions=       1  users=       1
+
+Devices
+  desktop      sessions=     213  users=     201
+  mobile       sessions=      41  users=      35
+  tablet       sessions=       1  users=       1
+
+========================================================================
+Google Search Console — last 28 days ending 2026-11-07 (2-day lag)
+========================================================================
+Property: sc-domain:planyourpark.com
+  Clicks=22  Impressions=4,171  CTR=0.53%  Avg position=17.9
+
+Top queries
+       0 clicks |        1 impr | CTR  0.00% | pos   7.0 | 32 inches
+       0 clicks |        3 impr | CTR  0.00% | pos  24.3 | advise for epic
+       0 clicks |        1 impr | CTR  0.00% | pos  20.0 | all amusement parks in orlando
+       0 clicks |        2 impr | CTR  0.00% | pos  27.0 | all amusement parks in orlando florida
+       0 clicks |        1 impr | CTR  0.00% | pos  10.0 | all animal kingdom rides
+       0 clicks |        1 impr | CTR  0.00% | pos  30.0 | all florida parks
+       0 clicks |        1 impr | CTR  0.00% | pos   7.0 | all of the parks
+       0 clicks |        4 impr | CTR  0.00% | pos  10.5 | all orlando parks
+       0 clicks |        1 impr | CTR  0.00% | pos  35.0 | all orlando theme parks
+       0 clicks |        8 impr | CTR  0.00% | pos  15.8 | all parks in orlando
+       0 clicks |        5 impr | CTR  0.00% | pos  15.4 | all parks in orlando florida
+       0 clicks |        1 impr | CTR  0.00% | pos   8.0 | all the parks in orlando
+       0 clicks |        1 impr | CTR  0.00% | pos  22.0 | all theme parks in orlando
+       0 clicks |        1 impr | CTR  0.00% | pos  22.0 | all universal parks
+       0 clicks |        2 impr | CTR  0.00% | pos  16.5 | all universal studios parks
+       0 clicks |        1 impr | CTR  0.00% | pos  48.0 | amusement parks in orlando
+       0 clicks |        1 impr | CTR  0.00% | pos  24.0 | amusement parks in orlando florida
+       0 clicks |        1 impr | CTR  0.00% | pos  81.0 | animal kingdom everest height
+       0 clicks |        1 impr | CTR  0.00% | pos  17.0 | animal kingdom for kids
+       0 clicks |        1 impr | CTR  0.00% | pos  59.0 | animal kingdom guide
+       0 clicks |        7 impr | CTR  0.00% | pos   9.9 | animal kingdom height requirements
+       0 clicks |        1 impr | CTR  0.00% | pos  10.0 | animal kingdom height requirements 2026
+       0 clicks |        2 impr | CTR  0.00% | pos   6.0 | animal kingdom height requirements for rides
+       0 clicks |        1 impr | CTR  0.00% | pos  50.0 | animal kingdom no height requirement rides
+       0 clicks |        7 impr | CTR  0.00% | pos   7.0 | animal kingdom ride height requirements
+
+Top pages
+       7 clicks |      488 impr | CTR  1.43% | pos  11.4 | https://planyourpark.com/blog/animal-kingdom-with-kids-rides-by-height/
+       2 clicks |      329 impr | CTR  0.61% | pos   8.5 | https://planyourpark.com/blog/animal-kingdom-with-kids-rides-by-height
+       2 clicks |      127 impr | CTR  1.57% | pos   7.8 | https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/
+       2 clicks |      144 impr | CTR  1.39% | pos  15.3 | https://planyourpark.com/blog/epic-universe-1-day-plan/
+       2 clicks |      212 impr | CTR  0.94% | pos  13.0 | https://planyourpark.com/blog/magic-kingdom-with-kids-rides-by-height/
+       2 clicks |       96 impr | CTR  2.08% | pos   9.3 | https://planyourpark.com/rides/for/epic-universe-48/
+       1 clicks |      264 impr | CTR  0.38% | pos  18.6 | https://planyourpark.com/blog/epic-universe-rides-ranked-guide/
+       1 clicks |       40 impr | CTR  2.50% | pos   9.9 | https://planyourpark.com/rides/for/disney-world-52/
+       1 clicks |       46 impr | CTR  2.17% | pos   9.0 | https://planyourpark.com/rides/for/legoland-all/
+       1 clicks |       10 impr | CTR 10.00% | pos   6.5 | https://planyourpark.com/rides/for/under-40/
+       1 clicks |        8 impr | CTR 12.50% | pos  14.2 | https://planyourpark.com/rides/for/universal-studios-all/
+       0 clicks |       25 impr | CTR  0.00% | pos   5.3 | https://planyourpark.com/
+       0 clicks |       10 impr | CTR  0.00% | pos   6.4 | https://planyourpark.com/about/
+       0 clicks |        2 impr | CTR  0.00% | pos   2.0 | https://planyourpark.com/blog/beat-disney-world-crowds/
+       0 clicks |       35 impr | CTR  0.00% | pos  20.7 | https://planyourpark.com/blog/best-disney-world-character-dining-kids
+       0 clicks |       10 impr | CTR  0.00% | pos   8.4 | https://planyourpark.com/blog/best-disney-world-character-dining-kids/
+       0 clicks |       11 impr | CTR  0.00% | pos   7.9 | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026
+       0 clicks |      150 impr | CTR  0.00% | pos   7.2 | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/
+       0 clicks |       55 impr | CTR  0.00% | pos  14.3 | https://planyourpark.com/blog/epcot-with-kids-rides-by-height/
+       0 clicks |      111 impr | CTR  0.00% | pos   9.0 | https://planyourpark.com/blog/epic-universe-tickets-guide/
+       0 clicks |        3 impr | CTR  0.00% | pos  10.3 | https://planyourpark.com/blog/free-things-disney-world/
+       0 clicks |       75 impr | CTR  0.00% | pos  13.4 | https://planyourpark.com/blog/how-to-book-disney-character-dining/
+       0 clicks |        8 impr | CTR  0.00% | pos  18.1 | https://planyourpark.com/blog/universal-orlando-summer-2026/
+       0 clicks |        6 impr | CTR  0.00% | pos  24.5 | https://planyourpark.com/character-dining/
+       0 clicks |       11 impr | CTR  0.00% | pos  15.6 | https://planyourpark.com/contact/
+
+Devices
+  MOBILE     clicks=    13  impr=   2,490  CTR= 0.52%  pos= 14.3
+  DESKTOP    clicks=     8  impr=   1,660  CTR= 0.48%  pos= 23.5
+  TABLET     clicks=     1  impr=      21  CTR= 4.76%  pos=  6.6

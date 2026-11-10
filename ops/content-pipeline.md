@@ -62,6 +62,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 | Post-deploy smoke script (+ `--local-out`) | tool ready | local PASS; live PASS post utility deploy | — | `scripts/post_deploy_smoke.py` |
 | animal-kingdom-with-kids-rides-by-height | **drafting → qa2 done (Sanity draft)** | GSC 62 impr/0 clicks pos 31 (AK cluster) | tickets + Amazon | `drafts.blogPost-animal-kingdom-with-kids-rides-by-height` · `ops/drafts/animal-kingdom-with-kids/` |
 | epcot-with-kids-rides-by-height | **drafting → qa2 done (Sanity draft)** | GSC 52 impr/0 clicks pos 39.9 (EPCOT kid cluster, 28d to 10-24) | tickets + Amazon | `drafts.blogPost-epcot-with-kids-rides-by-height` · `ops/drafts/epcot-with-kids/` · social `ops/buffer/epcot-with-kids-2026-10/` |
+| legoland-florida-rides-by-height | **qa2 done (Sanity draft, no hero)** | GSC LEGOLAND cluster 123 impr/0 clicks pos 42.2 (28d to 11-07) | tickets (UT LEGOLAND) | `drafts.blogPost-legoland-florida-rides-by-height` · `ops/drafts/legoland-florida-with-kids/` · social `ops/buffer/legoland-florida-rides-by-height-2026-11/` |
 | orlando-theme-parks-list-families (brief) | brief | GSC 319 impr/0 clicks pos 28 (cannibalization risk with /parks/) | tickets | `ops/drafts/briefs-2026-10-16/02-orlando-theme-parks-list-for-families.md` |
 | magic-kingdom-with-kids-all-ages (brief) | brief | GSC 45 impr/0 clicks pos 38 | tickets + Amazon | `ops/drafts/briefs-2026-10-16/03-magic-kingdom-with-kids-all-ages.md` |
 | Itinerary builder | brief/spec | parked until CTR data | tickets | `ops/specs/itinerary-builder.md` |

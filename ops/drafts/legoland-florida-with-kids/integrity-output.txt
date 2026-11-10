@@ -1,0 +1,15 @@
+(post: 'dict[str, Any]', min_chars: 'int') -> 'dict[str, Any]'
+{
+ "slug": {
+  "_type": "slug",
+  "current": "legoland-florida-rides-by-height"
+ },
+ "title": "LEGOLAND Florida Ride Heights 2026: Rides by Height for Kids",
+ "updatedAt": null,
+ "bodyChars": 11321,
+ "blockCount": 86,
+ "severity": "ok",
+ "flags": [],
+ "details": [],
+ "url": "https://planyourpark.com/blog/{'_type': 'slug', 'current': 'legoland-florida-rides-by-height'}/"
+}

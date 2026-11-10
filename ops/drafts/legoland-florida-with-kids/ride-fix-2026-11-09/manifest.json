@@ -1,0 +1,321 @@
+[
+ {
+  "draftId": "drafts.200HsSeCmp0rIIhq3n1hwQ",
+  "name": "Lost Kingdom Adventure",
+  "status": "updated",
+  "heightBefore": 0,
+  "heightAfter": 30,
+  "changes": {
+   "heightRequirement": 30
+  },
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/lost-kingdom-adventure/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.r5PBb5Nahg2bY9oktfrH4o",
+  "name": "Beetle Bounce",
+  "status": "updated",
+  "heightBefore": 0,
+  "heightAfter": 36,
+  "changes": {
+   "heightRequirement": 36
+  },
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/beetle-bounce/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYbW4i",
+  "name": "Flying School",
+  "status": "updated",
+  "heightBefore": 44,
+  "heightAfter": 44,
+  "changes": {
+   "isClosed": true,
+   "closureNote": "Permanently closed after its final rides on Aug 16, 2023, per LEGOLAND Florida's Jul 13, 2023 press release (reprinted by Mousesteps and reported by ClickOrlando and The Ledger). No longer listed on LEGOLAND Florida's official rides or height pages, and its official page returns 404 (checked Nov 9, 2026)."
+  },
+  "sources": [
+   "https://www.mousesteps.com/2023/07/14/flying-school-roller-coaster-at-legoland-florida-to-make-final-flight-on-august-16th-2023/",
+   "https://www.clickorlando.com/theme-parks/2023/07/13/flying-school-roller-coaster-set-to-close-at-legoland-florida-resort/",
+   "https://www.theledger.com/story/news/local/2025/03/25/legoland-florida-plans-to-launch-indoor-roller-coast-next-year/82649663007/",
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/flying-school/ (404)",
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-galacticoaster",
+  "name": "Galacticoaster",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 36,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/galacticoaster/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-kid-power-towers",
+  "name": "Kid Power Towers",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 38,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/kid-power-towers/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-coast-guard-academy",
+  "name": "Coast Guard Academy",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 34,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/coast-guard-academy/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-rescue-academy",
+  "name": "Rescue Academy",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 34,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/rescue-academy/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-safari-trek",
+  "name": "Safari Trek",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 34,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/safari-trek/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-royal-joust",
+  "name": "Royal Joust",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 36,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/royal-joust/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-technicycle",
+  "name": "Technicycle",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 36,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/technicycle/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+  ],
+  "checked": "2026-11-09",
+  "decision": "CEO 2026-11-09: isClosed/closureNote removed; dated closure (Nov 2\u201320, 2026, per https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/) is mentioned in the post only"
+ },
+ {
+  "draftId": "drafts.ride-legoland-unikitty-disco-drop",
+  "name": "Unikitty's Disco Drop",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 40,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/unikitty-s-disco-drop/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-masters-of-flight",
+  "name": "THE LEGO MOVIE Masters of Flight",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 40,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-lego-movie-masters-of-flight/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-great-lego-race",
+  "name": "The Great LEGO Race",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 42,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-great-lego-race/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-mias-riding-adventure",
+  "name": "Mia's Riding Adventure",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 48,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/mia-s-riding-adventure/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-aquazone-wave-racers",
+  "name": "AQUAZONE Wave Racers",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 40,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/aquazone-wave-racers/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-grand-carousel",
+  "name": "The Grand Carousel",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 0,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/the-grand-carousel/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-duplo-tractor",
+  "name": "DUPLO Tractor",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 0,
+  "changes": {},
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/duplo-tractor/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+  ],
+  "checked": "2026-11-09",
+  "decision": "CEO 2026-11-09: isClosed/closureNote removed; dated closure (Nov 2\u201311, 2026, per https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/) is mentioned in the post only"
+ },
+ {
+  "draftId": "drafts.ride-legoland-battle-of-bricksburg",
+  "name": "Battle of Bricksburg",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 0,
+  "changes": {
+   "isClosed": true,
+   "closureNote": "Temporarily closed starting Nov 2, 2026, with no reopening date given, per LEGOLAND Florida's official temporary closures page (checked Nov 9, 2026)."
+  },
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/battle-of-bricksburg/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.ride-legoland-pirate-river-quest",
+  "name": "Pirate River Quest",
+  "status": "new",
+  "heightBefore": null,
+  "heightAfter": 0,
+  "changes": {
+   "isClosed": true,
+   "closureNote": "Temporarily closed; LEGOLAND hasn't announced a reopening date (checked Nov 9, 2026)"
+  },
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/pirate-river-quest/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+  ],
+  "checked": "2026-11-09",
+  "decision": "CEO 2026-11-09: mark closed (official ride page + closures page say temporarily closed, no date)"
+ },
+ {
+  "draftId": "drafts.RLBxGAumPb4EPh1Y0BD12c",
+  "name": "Boating School",
+  "status": "updated",
+  "heightBefore": 0,
+  "heightAfter": 0,
+  "changes": {
+   "isClosed": true,
+   "closureNote": "Not on LEGOLAND Florida's current ride list (checked Nov 9, 2026)"
+  },
+  "decision": "CEO 2026-11-09: mark closed; not on the official ride list or height chart",
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/boating-school/ (404)"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYbnsf",
+  "name": "Fairy Tale Brook",
+  "status": "updated",
+  "heightBefore": 0,
+  "heightAfter": 0,
+  "changes": {
+   "isClosed": true,
+   "closureNote": "Not on LEGOLAND Florida's current ride list (checked Nov 9, 2026)"
+  },
+  "decision": "CEO 2026-11-09: mark closed; not on the official ride list or height chart",
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/",
+   "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/attraction-height-restrictions/",
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/fairy-tale-brook/ (404)"
+  ],
+  "checked": "2026-11-09"
+ },
+ {
+  "draftId": "drafts.blogPost-legoland-florida-rides-by-height",
+  "name": "Post: LEGOLAND Florida Ride Heights 2026",
+  "status": "updated",
+  "changes": {
+   "heroImage": "image-7dded4f2707634d3a2790ee7b19c37b297f86d3f-1280x720-jpg",
+   "AQUAZONE Wave Racers": "52 -> 40 (under 52 with an adult) in quick answer, height list, 40-42 section, plan by age, 2 FAQs; 52-inch bullet removed"
+  },
+  "sources": [
+   "https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/aquazone-wave-racers/"
+  ],
+  "checked": "2026-11-09"
+ }
+]
