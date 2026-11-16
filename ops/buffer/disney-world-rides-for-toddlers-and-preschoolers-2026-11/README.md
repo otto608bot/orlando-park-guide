@@ -33,7 +33,7 @@ No text, no signs, no logos, no brand marks, no cartoon characters, no costumed 
 ```
 **Alt text:** A laughing toddler with arms raised rides a pastel carousel horse while a parent walks beside it holding a hand, with palm trees and a sunny blue sky behind them.
 
-## 3) SOCIAL — Pinterest pin, generate at 9:16 then center-crop to 1000×1500 (2:3) (save as `images/pinterest-9x16.jpg`)
+## 3) SOCIAL — Pinterest pin, generate at 9:16 then center-crop to 1000×1500 (2:3) (save the cropped 1000×1500 file as `images/pin-1000x1500.jpg`; do not upload the uncropped 9:16)
 ```
 Photorealistic travel photo with a polished illustrated look, bright sunny day, extra-vivid saturated colors, vertical 9:16 composition.
 Two young kids (generic children, not real people) laughing and holding on in a whirling pastel teacup-style spinning ride, one kid with hands in the air, a parent smiling and waving from just outside the ride rail.

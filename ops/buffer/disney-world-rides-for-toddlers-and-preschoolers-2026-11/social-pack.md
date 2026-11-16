@@ -46,7 +46,7 @@ Full park-by-park guide: link in bio.
 - **Title:** Disney World Rides for Toddlers and Preschoolers: Best Picks at Every Park
 - **Description:** The best Disney World rides for toddlers and preschoolers at all four parks, sorted by official minimum height. See which Magic Kingdom, EPCOT, Hollywood Studios and Animal Kingdom rides have no height requirement, which start at 32 inches, and what's closed right now. Checked on Disney's official pages November 16, 2026.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), the existing board used in prior packs. Not re-checked in Buffer (no Buffer API used).
-- **Image:** `images/pinterest-9x16.jpg` → 1000×1500 (to be generated; see README.md)
+- **Image:** `images/pin-1000x1500.jpg` (center-cropped to 1000×1500) (to be generated; see README.md)
 - **Alt text:** Two young kids laugh and hold on in a whirling pastel teacup ride at a sunny theme park, with palm trees, flower beds and a fairytale tower in the background.
 - **Destination URL:** https://planyourpark.com/blog/disney-world-rides-for-toddlers-and-preschoolers/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=disney-world-rides-for-toddlers-and-preschoolers
 
