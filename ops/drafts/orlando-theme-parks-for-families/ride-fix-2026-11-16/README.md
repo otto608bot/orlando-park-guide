@@ -11,7 +11,7 @@ All values checked Nov 16, 2026 (~9:48-10:05 AM CT) on official pages; raw captu
 
 ## Conflicts / not verified
 - Elmo's Choo Choo Train: listing + ride page headline say 36"; the page's accessibility paragraph separately says 42" with a companion. 36 written (matches the Orlando post).
-- Sky Tower (Sanity 0): official rides page lists 48" min and "Temporarily Closed" with no date. NOT changed (out of scope); candidate for height 48 + isClosed.
+- Sky Tower: ADDED (closure only, `apply_skytower.py`, result `apply-result-skytower.json`): `drafts.UzjbPEJ4gI65TQn8dT7zNC` isClosed true, closureNote "Temporarily closed; SeaWorld lists no reopening date (checked Nov 16, 2026)". HEIGHT CONFLICT, NOT written: SeaWorld's rides listing tags it 48" Min. Height, but its own ride page (seaworld.com/orlando/rides/sky-tower) says "HEIGHT REQUIREMENT: No Limit"; heightRequirement left at 0. Recheck captures: raw/sw-rides-recheck.txt, raw/sw-closure-schedule-recheck.txt, raw/sw-sky-tower.txt.
 - Abby's Flower Tower: "Closed for Annual Maintenance", no ride doc exists; not added.
 - Universal Studios Florida height list no longer includes Hollywood Rip Ride Rockit or Fast & Furious (Sanity 51 / 40). Not changed.
 - New docs leave thrillLevel unset (no official numeric rating) and Expedition Odyssey / Penguin Trek / Ice Breaker land unset; rideType only where the official page implies one.

@@ -158,5 +158,29 @@
   "before": "see legoland-post-published-BEFORE.json",
   "after": "see legoland-post-draft-AFTER.json",
   "source": "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT7zNC",
+  "name": "Sky Tower",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://seaworld.com/orlando/rides/ (\"Temporarily Closed\") + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Sky Tower - Temporarily Closed\", no date). HEIGHT CONFLICT, not written: listing tag says 48\" min, https://seaworld.com/orlando/rides/sky-tower says \"No Limit\"; heightRequirement left at 0."
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT7zNC",
+  "name": "Sky Tower",
+  "field": "closureNote",
+  "before": null,
+  "after": "Temporarily closed; SeaWorld lists no reopening date (checked Nov 16, 2026)",
+  "source": "https://seaworld.com/orlando/rides/ (\"Temporarily Closed\") + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Sky Tower - Temporarily Closed\", no date). HEIGHT CONFLICT, not written: listing tag says 48\" min, https://seaworld.com/orlando/rides/sky-tower says \"No Limit\"; heightRequirement left at 0."
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT7zNC",
+  "name": "Sky Tower",
+  "field": "heightRequirement (UNCHANGED, conflict)",
+  "before": 0,
+  "after": 0,
+  "source": "https://seaworld.com/orlando/rides/ (\"Temporarily Closed\") + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Sky Tower - Temporarily Closed\", no date). HEIGHT CONFLICT, not written: listing tag says 48\" min, https://seaworld.com/orlando/rides/sky-tower says \"No Limit\"; heightRequirement left at 0."
  }
 ]

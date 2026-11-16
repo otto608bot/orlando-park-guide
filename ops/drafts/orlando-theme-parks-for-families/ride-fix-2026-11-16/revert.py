@@ -1,6 +1,6 @@
 """Revert: deletes ONLY the drafts.* documents created by apply.py (published docs untouched). Usage: python3 revert.py [--go]"""
 import json, os, sys, urllib.request
-ids = sorted({r["id"] for r in json.load(open("apply-result.json"))["results"]})
+ids = sorted({r["id"] for f in ("apply-result.json","apply-result-skytower.json") for r in json.load(open(f))["results"]})
 assert all(i.startswith("drafts.") for i in ids)
 print("\n".join(ids))
 if "--go" in sys.argv:
