@@ -1,0 +1,150 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /rides/for/disney-world-under-40/ 200
+PASS anchor<=60 "Disney World rides under 40 in" 
+PASS link /rides/for/universal-orlando-under-40/ 200
+PASS anchor<=60 "Universal Orlando rides under " 
+PASS link /blog/disney-vs-universal-with-kids-2026/ 200
+PASS anchor<=60 "Disney vs. Universal with kids" 
+PASS link /blog/magic-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Magic Kingdom with kids by hei" 
+PASS link /parks/magic-kingdom/ 200
+PASS anchor<=60 "Magic Kingdom park guide" 
+PASS link /rides/for/magic-kingdom-under-40/ 200
+PASS anchor<=60 "Magic Kingdom rides under 40 i" 
+PASS link /blog/epcot-with-kids-rides-by-height/ 200
+PASS anchor<=60 "EPCOT with kids by height" 
+PASS link /parks/epcot/ 200
+PASS anchor<=60 "EPCOT park guide" 
+PASS link /rides/for/epcot-under-40/ 200
+PASS anchor<=60 "EPCOT rides under 40 inches" 
+PASS link /parks/hollywood-studios/ 200
+PASS anchor<=60 "Hollywood Studios park guide" 
+PASS link /rides/for/hollywood-studios-under-40/ 200
+PASS anchor<=60 "Hollywood Studios rides under " 
+PASS link /blog/animal-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Animal Kingdom with kids by he" 
+PASS link /parks/animal-kingdom/ 200
+PASS anchor<=60 "Animal Kingdom park guide" 
+PASS link /rides/for/animal-kingdom-under-40/ 200
+PASS anchor<=60 "Animal Kingdom rides under 40 " 
+PASS link https://www.tkqlhce.com/click-101693488-12783539 200
+PASS anchor<=60 "Compare Disney World 4-day Par" 
+PASS link https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements bot-walled; verified via headless Chrome, see extract
+PASS anchor<=60 "ride height requirements page" 
+PASS link /parks/universal-studios-florida/ 200
+PASS anchor<=60 "Universal Studios park guide" 
+PASS link /rides/for/universal-studios-under-40/ 200
+PASS anchor<=60 "Universal Studios rides under " 
+PASS link /parks/islands-of-adventure/ 200
+PASS anchor<=60 "Islands of Adventure park guid" 
+PASS link /rides/for/islands-of-adventure-under-40/ 200
+PASS anchor<=60 "Islands of Adventure rides und" 
+PASS link /blog/epic-universe-1-day-plan/ 200
+PASS anchor<=60 "Epic Universe 1-day plan" 
+PASS link /blog/epic-universe-rides-ranked-guide/ 200
+PASS anchor<=60 "Epic Universe rides ranked for" 
+PASS link /rides/for/epic-universe-under-40/ 200
+PASS anchor<=60 "Epic Universe rides under 40 i" 
+PASS link https://www.dpbolvw.net/click-101693488-12983229 200
+PASS anchor<=60 "Compare Universal 3-park, 3-da" 
+PASS link /parks/seaworld-orlando/ 200
+PASS anchor<=60 "SeaWorld Orlando park guide" 
+PASS link /rides/for/seaworld-under-40/ 200
+PASS anchor<=60 "SeaWorld rides under 40 inches" 
+PASS link https://www.tkqlhce.com/click-101693488-12540778 200
+PASS anchor<=60 "SeaWorld Orlando tickets" 
+PASS link /blog/legoland-florida-rides-by-height/ 200
+PASS anchor<=60 "LEGOLAND Florida ride heights" 
+PASS link /parks/legoland-florida/ 200
+PASS anchor<=60 "LEGOLAND park guide" 
+PASS link https://www.anrdoezrs.net/click-101693488-12540781 200
+PASS anchor<=60 "LEGOLAND Florida tickets" 
+PASS link /deals/ 200
+PASS anchor<=60 "Orlando ticket deals page" 
+PASS link https://www.tkqlhce.com/click-101693488-12783539 200
+PASS anchor<=60 "Disney World Park Hopper ticke" 
+PASS link https://www.dpbolvw.net/click-101693488-12983229 200
+PASS anchor<=60 "Universal 3-park tickets" 
+PASS link /rides/ 200
+PASS anchor<=60 "ride finder" 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS title <= 60 chars 59
+PASS excerpt <= 200 chars 
+PASS primary query words in title 
+PASS H2 answers "how many theme parks" 
+PASS FAQ answers "what are all the parks" 
+PASS all 9 park pages linked 
+-- pass 2 --
+PASS disclosure before first affiliate link 
+PASS affiliate = config disney4DayParkHopper 
+PASS affiliate = config universal3Park3Day 
+PASS affiliate = config seaworld 
+PASS affiliate = config legoland 
+PASS no mislabeled Epic affiliate (12834895) 
+PASS >=8 ride-finder links 10
+PASS park chooser /parks/ linked >=3x 3
+PASS no first-person lore 
+PASS no Genie+/Lightning Lane 
+PASS no prices 
+PASS no invented age ranges 
+PASS height body+extract: Peter Pan's Flight and Dumbo the Flying Eleph []
+PASS height body+extract: Seven Dwarfs Mine Train and Big Thunder Mount []
+PASS height body+extract: Frozen Ever After and Remy's Ratatouille Adve []
+PASS height body+extract: Test Track needs **40 inches** []
+PASS height body+extract: Toy Story Mania! and Mickey & Minnie's Runawa []
+PASS height body+extract: Alien Swirling Saucers starts at **32 inches* []
+PASS height body+extract: Slinky Dog Dash and Millennium Falcon: Smuggl []
+PASS height body+extract: Kilimanjaro Safaris and Na'vi River Journey a []
+PASS height body+extract: Kali River Rapids needs **38 inches** (Disney []
+PASS height body+extract: Avatar Flight of Passage needs **44 inches** []
+PASS height body+extract: Illumination's Villain-Con Minion Blast has * []
+PASS height body+extract: E.T. Adventure starts at **34 inches** []
+PASS height body+extract: Trolls Trollercoaster at **36 inches** []
+PASS height body+extract: Despicable Me Minion Mayhem at **40 inches** []
+PASS height body+extract: The Cat in the Hat, Flight of the Hippogriff  []
+PASS height body+extract: The Amazing Adventures of Spider-Man needs ** []
+PASS height body+extract: Jurassic World VelociCoaster (51 inches) []
+PASS height body+extract: Constellation Carousel and Fyre Drill have ** []
+PASS height body+extract: Yoshi's Adventure starts at **34 inches** []
+PASS height body+extract: Mario Kart: Bowser's Challenge, Mine-Cart Mad []
+PASS height body+extract: Monsters Unchained: The Frankenstein Experime []
+PASS height body+extract: Elmo's Choo Choo Train at **36 inches** []
+PASS height body+extract: Super Grover's Box Car Derby at **38 inches** []
+PASS height body+extract: Expedition Odyssey: Fire & Ice, needs **39 in []
+PASS height body+extract: Penguin Trek needs **42 inches** (42 to 48 in []
+PASS height body+extract: Mako and Manta need **54 inches** []
+PASS height body+extract: Mako (54 inches) []
+PASS height body+extract: Lost Kingdom Adventure starts at **30 inches* []
+PASS height body+extract: Galacticoaster at **36 inches** []
+PASS height body+extract: The Dragon at **40 inches** []
+PASS height body+extract: Coastersaurus at **42 inches** []
+PASS closure body+extract: **Tiana's Bayou Adventure** is in a routine r 
+PASS closure body+extract: from November 27 to December 30, 2026, Disney 
+PASS closure body+extract: **Jurassic Park River Adventure** is listed a 
+PASS closure body+extract: scheduled to close December 11 to 15, 2026 
+PASS closure body+extract: Volcano Bay is closed for maintenance with a  
+PASS closure body+extract: LEGOLAND Water Park is closed for the season 
+PASS closure body+extract: Abby's Flower Tower and Infinity Falls closed 
+PASS closure body+extract: LEGO NINJAGO The Ride and The Dragon as close 
+PASS closure body+extract: Pirate River Quest, Battle of Bricksburg, DUP 
+PASS SeaWorld closures in extract 
+PASS event body+extract: Disney's holiday season runs November 13 to J 
+PASS event body+extract: select nights from November 8 to December 22, 
+PASS event body+extract: International Festival of the Holidays runs N 
+PASS event body+extract: select nights from November 7, 2026, to Janua 
+PASS event body+extract: Merry Menagerie of arctic-animal puppets on D 
+PASS event body+extract: Holidays run November 14, 2026, to January 3, 
+PASS event body+extract: (included with a theme park ticket) 
+PASS event body+extract: Christmas Celebration runs on select dates fr 
+PASS event body+extract: November 21, 22, 27, 28 and 29; December 5, 6 
+PASS event body+extract: Christmas Bricktacular is included with admis 
+PASS event body+extract: LEGOLAND is in Winter Haven 
+PASS facts dated Nov 16, 2026 
+PASS Tiana not recommended as open 
+PASS no closed ride recommended (Jurassic River, Infinity Falls, Abby, Kid Power, NINJAGO as open) 
+pass1 fails 0 | pass2 fails 0 | checks 148
