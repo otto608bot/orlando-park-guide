@@ -1,0 +1,162 @@
+[
+ {
+  "draftId": "drafts.r5PBb5Nahg2bY9oktiHnab",
+  "name": "Donkey Kong Mine Cart Madness",
+  "field": "heightRequirement",
+  "before": 36,
+  "after": 40,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Mine-Cart Madness: Minimum Height 40\")"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dVaVm8",
+  "name": "Monsters Unchained: The Frankenstein Experiment",
+  "field": "heightRequirement",
+  "before": 40,
+  "after": 48,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Monsters Unchained: Minimum Height 48\")"
+ },
+ {
+  "draftId": "drafts.r5PBb5Nahg2bY9oktiHnwC",
+  "name": "Yoshi's Adventure",
+  "field": "heightRequirement",
+  "before": null,
+  "after": 34,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Yoshi's Adventure: Minimum Height 34\")"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNadCzDU",
+  "name": "Mario Kart: Bowser's Challenge",
+  "field": "heightRequirement",
+  "before": null,
+  "after": 40,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Mario Kart: Bowser's Challenge: Minimum Height 40\")"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dVaTDu",
+  "name": "Battle of the Ministry of Magic",
+  "field": "heightRequirement",
+  "before": null,
+  "after": 40,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Harry Potter and the Battle at the Ministry: Minimum Height 40\")"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dVaSlm",
+  "name": "Constellation Carousel",
+  "field": "heightRequirement",
+  "before": null,
+  "after": 0,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Constellation Carousel: no minimum; supervising companion under 48\")"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNadCxqZ",
+  "name": "Fyre Drill",
+  "field": "heightRequirement",
+  "before": null,
+  "after": 0,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (Fyre Drill: no minimum; supervising companion under 48\")"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT7ymH",
+  "name": "Infinity Falls",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://seaworld.com/orlando/rides/ + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Closed for Annual Maintenance\", no date)"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT7ymH",
+  "name": "Infinity Falls",
+  "field": "closureNote",
+  "before": null,
+  "after": "Closed for annual maintenance; SeaWorld lists no reopening date (checked Nov 16, 2026)",
+  "source": "https://seaworld.com/orlando/rides/ + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Closed for Annual Maintenance\", no date)"
+ },
+ {
+  "draftId": "drafts.ride-legoland-kid-power-towers",
+  "name": "Kid Power Towers",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/ (\"Kid Power Towers (Starting 11/10)\", no end date)"
+ },
+ {
+  "draftId": "drafts.ride-legoland-kid-power-towers",
+  "name": "Kid Power Towers",
+  "field": "closureNote",
+  "before": null,
+  "after": "Closed starting Nov 10, 2026; LEGOLAND lists no reopening date (checked Nov 16, 2026)",
+  "source": "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/ (\"Kid Power Towers (Starting 11/10)\", no end date)"
+ },
+ {
+  "draftId": "drafts.ride-usf-villain-con-minion-blast",
+  "name": "Illumination's Villain-Con Minion Blast",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 0,
+  "source": "https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/illuminations-villain-con-minion-blast + https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements"
+ },
+ {
+  "draftId": "drafts.ride-usf-trolls-trollercoaster",
+  "name": "Trolls Trollercoaster",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 36,
+  "source": "https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/trolls-trollercoaster + https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements"
+ },
+ {
+  "draftId": "drafts.ride-ioa-flight-of-the-hippogriff",
+  "name": "Flight of the Hippogriff",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 36,
+  "source": "https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/flight-of-the-hippogriff + https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements"
+ },
+ {
+  "draftId": "drafts.ride-sw-elmos-choo-choo-train",
+  "name": "Elmo's Choo Choo Train",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 36,
+  "source": "https://seaworld.com/orlando/sesame-street/attractions/elmos-choo-choo-train + https://seaworld.com/orlando/rides/ (36\" min; the ride page's accessibility paragraph separately mentions 42\")"
+ },
+ {
+  "draftId": "drafts.ride-sw-super-grovers-box-car-derby",
+  "name": "Super Grover's Box Car Derby",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 38,
+  "source": "https://seaworld.com/orlando/sesame-street/attractions/super-grovers-box-car-derby + https://seaworld.com/orlando/rides/"
+ },
+ {
+  "draftId": "drafts.ride-sw-expedition-odyssey-fire-ice",
+  "name": "Expedition Odyssey: Fire & Ice",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 39,
+  "source": "https://seaworld.com/orlando/rides/expedition-odyssey-fire-ice + https://seaworld.com/orlando/rides/"
+ },
+ {
+  "draftId": "drafts.ride-sw-penguin-trek",
+  "name": "Penguin Trek",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 42,
+  "source": "https://seaworld.com/orlando/roller-coasters/penguin-trek + https://seaworld.com/orlando/rides/"
+ },
+ {
+  "draftId": "drafts.ride-sw-ice-breaker",
+  "name": "Ice Breaker",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 48,
+  "source": "https://seaworld.com/orlando/roller-coasters/ice-breaker + https://seaworld.com/orlando/rides/"
+ },
+ {
+  "draftId": "drafts.blogPost-legoland-florida-rides-by-height",
+  "name": "LEGOLAND Florida Ride Heights 2026: Rides by Height for Kids",
+  "field": "body (closures list, ride entries, Kid Power Towers, plan-by-age)",
+  "before": "see legoland-post-published-BEFORE.json",
+  "after": "see legoland-post-draft-AFTER.json",
+  "source": "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/temporary-closures/"
+ }
+]
