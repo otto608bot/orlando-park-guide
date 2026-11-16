@@ -1,0 +1,211 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /rides/for/disney-world-under-40/ 200
+PASS anchor<=60 "Disney World rides under 40 in" 
+PASS link /rides/for/disney-world-all/ 200
+PASS anchor<=60 "every Disney World ride" 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link https://disneyworld.disney.go.com/guest-services/rider-switch/ 200
+PASS anchor<=60 "Rider Switch page" 
+PASS link https://disneyworld.disney.go.com/attractions/magic-kingdom/jingle-cruise/ 200
+PASS anchor<=60 "Jingle Cruise" 
+PASS link https://disneyworld.disney.go.com/attractions/epcot/soarin-across-america/ 200
+PASS anchor<=60 "Soarin' Across America" 
+PASS link /blog/animal-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Animal Kingdom guide" 
+PASS link /blog/magic-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Magic Kingdom with kids guide" 
+PASS link /blog/best-magic-kingdom-rides-kids-under-40-inches/ 200
+PASS anchor<=60 "Magic Kingdom rides for kids u" 
+PASS link /rides/for/magic-kingdom-calm-under-40/ 200
+PASS anchor<=60 "calm Magic Kingdom rides under" 
+PASS link /parks/magic-kingdom/ 200
+PASS anchor<=60 "Magic Kingdom park guide" 
+PASS link /blog/epcot-with-kids-rides-by-height/ 200
+PASS anchor<=60 "EPCOT with kids guide" 
+PASS link /rides/for/epcot-calm-under-40/ 200
+PASS anchor<=60 "calm EPCOT rides under 40 inch" 
+PASS link /parks/epcot/ 200
+PASS anchor<=60 "EPCOT park guide" 
+PASS link /blog/disney-vs-universal-with-kids-2026/ 200
+PASS anchor<=60 "Disney vs. Universal guide for" 
+PASS link /rides/for/hollywood-studios-calm-under-40/ 200
+PASS anchor<=60 "calm Hollywood Studios rides u" 
+PASS link /parks/hollywood-studios/ 200
+PASS anchor<=60 "Hollywood Studios park guide" 
+PASS link /blog/animal-kingdom-with-kids-rides-by-height/ 200
+PASS anchor<=60 "Animal Kingdom with kids guide" 
+PASS link /rides/for/animal-kingdom-calm-under-40/ 200
+PASS anchor<=60 "calm Animal Kingdom rides unde" 
+PASS link /parks/animal-kingdom/ 200
+PASS anchor<=60 "Animal Kingdom park guide" 
+PASS link /rides/ 200
+PASS anchor<=60 "Disney World ride finder" 
+PASS link /blog/disney-world-with-baby-toddler/ 200
+PASS anchor<=60 "Disney World with a baby or to" 
+PASS link https://disneyworld.disney.go.com/guest-services/first-aid/ 200
+PASS anchor<=60 "First Aid page" 
+PASS link https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20 503
+PASS anchor<=60 "kids' rain poncho" 
+PASS link https://www.amazon.com/s?k=kids+ear+protection+earmuffs&tag=planyourpark-20 503
+PASS anchor<=60 "kids' ear protection" 
+PASS link https://www.amazon.com/s?k=lightweight+travel+stroller&tag=planyourpark-20 503
+PASS anchor<=60 "lightweight travel stroller" 
+PASS link /blog/disney-world-packing-list-kids/ 200
+PASS anchor<=60 "Disney World packing list for " 
+PASS link /blog/best-disney-world-character-dining-kids/ 200
+PASS anchor<=60 "best Disney World character di" 
+PASS link /deals/ 200
+PASS anchor<=60 "Disney World deals page" 
+PASS link /rides/for/disney-world-all/ 200
+PASS anchor<=60 "ride finder" 
+PASS link /blog/best-magic-kingdom-rides-kids-under-40-inches/ 200
+PASS anchor<=60 "Magic Kingdom rides under 40 i" 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS title <= 70 chars 67
+PASS excerpt <= 200 chars 167
+PASS title has toddlers+preschoolers+Disney World+rides 
+PASS excerpt has primary words + date 
+PASS first block is affiliate disclosure 
+PASS disclosure before first affiliate link 
+PASS amazon links tagged planyourpark-20 
+PASS >=5 ride-finder links 7
+PASS links /rides/ /parks/ /deals/ + 4 park pages 
+PASS links all 8 related posts 
+PASS does not link parked/unpublished Orlando post 
+PASS FAQ has >=8 questions 8
+PASS FAQ covers: toddler go on 
+PASS FAQ covers: 4-year-olds 
+PASS FAQ covers: no height requirement 
+PASS FAQ covers: Animal Kingdom rides for toddlers 
+PASS FAQ covers: preschoolers 
+PASS FAQ covers: under 40 inches 
+PASS FAQ covers: most rides for little kids 
+PASS no first-person lore 
+PASS no Genie+/Lightning Lane 
+PASS no prices / $ 
+PASS no age-to-height mapping 
+PASS facts dated Nov 16, 2026 (>=8x) 12
+PASS no hype words 
+-- pass 2 --
+PASS any height official: Dumbo the Flying Elephant magic-kingdom__dumbo-the-flying-elephant
+PASS any height official: Prince Charming Regal Carrousel magic-kingdom__prince-charming-regal-carrousel
+PASS any height official: The Magic Carpets of Aladdin magic-kingdom__magic-carpets-of-aladdin
+PASS any height official: Mad Tea Party magic-kingdom__mad-tea-party
+PASS any height official: Astro Orbiter magic-kingdom__astro-orbiter
+PASS any height official: Tomorrowland Transit Authority PeopleMover magic-kingdom__tomorrowland-transit-authority-peoplemover
+PASS any height official: Peter Pan's Flight magic-kingdom__peter-pan-flight
+PASS any height official: The Many Adventures of Winnie the Pooh magic-kingdom__many-adventures-of-winnie-the-pooh
+PASS any height official: "it's a small world" magic-kingdom__its-a-small-world
+PASS any height official: Under the Sea - Journey of The Little Mermaid magic-kingdom__under-the-sea-journey-of-the-little-mermaid
+PASS any height official: Buzz Lightyear's Space Ranger Spin magic-kingdom__buzz-lightyear-space-ranger-spin
+PASS any height official: Haunted Mansion magic-kingdom__haunted-mansion
+PASS any height official: Pirates of the Caribbean magic-kingdom__pirates-of-the-caribbean
+PASS any height official: Jingle Cruise magic-kingdom__jingle-cruise
+PASS any height official: Walt Disney World Railroad magic-kingdom__walt-disney-world-railroad
+PASS any height official: Mickey's PhilharMagic magic-kingdom__mickeys-philharmagic
+PASS any height official: Enchanted Tales with Belle magic-kingdom__enchanted-tales-with-belle
+PASS any height official: Monsters, Inc. Laugh Floor magic-kingdom__monsters-inc-laugh-floor
+PASS any height official: Casey Jr. Splash 'N' Soak Station magic-kingdom__casey-jr-splash-n-soak-station
+PASS any height official: Swiss Family Treehouse magic-kingdom__swiss-family-treehouse
+PASS any height official: Frozen Ever After epcot__frozen-ever-after
+PASS any height official: The Seas with Nemo & Friends epcot__seas-with-nemo-and-friends
+PASS any height official: Journey Into Imagination With Figment epcot__journey-into-imagination-with-figment
+PASS any height official: Gran Fiesta Tour epcot__gran-fiesta-tour-starring-three-caballeros
+PASS any height official: Living with the Land epcot__living-with-the-land
+PASS any height official: Remy's Ratatouille Adventure epcot__remys-ratatouille-adventure
+PASS any height official: Spaceship Earth epcot__spaceship-earth
+PASS any height official: Journey of Water, Inspired by Moana epcot__journey-of-water
+PASS any height official: ImageWorks epcot__imageworks
+PASS any height official: Turtle Talk With Crush epcot__turtle-talk-with-crush
+PASS any height official: Disney and Pixar Short Film Festival epcot__disney-pixar-short-film-festival
+PASS any height official: Bruce's Shark World epcot__bruces-shark-world
+PASS any height official: Kidcot Fun Stops epcot__kidcot-fun-stops
+PASS any height official: Toy Story Mania! hollywood-studios__toy-story-mania
+PASS any height official: Mickey & Minnie's Runaway Railway hollywood-studios__mickey-minnies-runaway-railway
+PASS any height official: Vacation Fun hollywood-studios__vacation-fun
+PASS any height official: Kilimanjaro Safaris animal-kingdom__kilimanjaro-safaris
+PASS any height official: Na'vi River Journey animal-kingdom__navi-river-journey
+PASS any height official: Wildlife Express Train animal-kingdom__wildlife-express-train
+PASS any height official: Gorilla Falls Exploration Trail animal-kingdom__gorilla-falls-forest-exploration-trail
+PASS any height official: Maharajah Jungle Trek animal-kingdom__maharajah-jungle-trek
+PASS any height official: Discovery Island Trails animal-kingdom__discovery-island-trails
+PASS any height official: Zootopia: Better Zoogether! animal-kingdom__zootopia-better-zoogether
+PASS any height official: Wilderness Explorers animal-kingdom__wilderness-explorers
+PASS any height official: Animal Care at Conservation Station animal-kingdom__conservation-station
+PASS height 32" official: Tomorrowland Speedway magic-kingdom__tomorrowland-speedway
+PASS height 35" official: The Barnstormer magic-kingdom__barnstormer-starring-great-goofini
+PASS height 38" official: Seven Dwarfs Mine Train magic-kingdom__seven-dwarfs-mine-train
+PASS height 38" official: Big Thunder Mountain Railroad magic-kingdom__big-thunder-mountain-railroad
+PASS height 40" official: Tiana's Bayou Adventure magic-kingdom__tianas-bayou-adventure
+PASS height 44" official: Space Mountain magic-kingdom__space-mountain
+PASS height 40" official: Test Track epcot__test-track
+PASS height 40" official: Soarin' Across America epcot__soarin-across-america
+PASS height 40" official: Mission: SPACE (Green) epcot__mission-space
+PASS height 42" official: Guardians of the Galaxy: Cosmic Rewind epcot__guardians-of-the-galaxy-cosmic-rewind
+PASS height 44" official: Mission: SPACE (Orange) epcot__mission-space
+PASS height 32" official: Alien Swirling Saucers hollywood-studios__alien-swirling-saucers
+PASS height 38" official: Slinky Dog Dash hollywood-studios__slinky-dog-dash
+PASS height 38" official: Millennium Falcon: Smugglers Run hollywood-studios__millennium-falcon-smugglers-run
+PASS height 40" official: Star Tours hollywood-studios__star-tours
+PASS height 40" official: Star Wars: Rise of the Resistance hollywood-studios__star-wars-rise-of-the-resistance
+PASS height 40" official: The Twilight Zone Tower of Terror hollywood-studios__twilight-zone-tower-of-terror
+PASS height 48" official: Rock 'n' Roller Coaster Starring The Muppets hollywood-studios__rock-and-roller-coaster-starring-muppets
+PASS height 38" official: Kali River Rapids animal-kingdom__kali-river-rapids
+PASS height 44" official: Avatar Flight of Passage animal-kingdom__avatar-flight-of-passage
+PASS height 44" official: Expedition Everest animal-kingdom__expedition-everest
+PASS glance line 32 inches 32 inches
+PASS glance line 35 inches 35 inches
+PASS glance line 38 inches 38 inches
+PASS glance line 40 inches 40 inches
+PASS glance line 42 inches 42 inches
+PASS glance line 44 inches 44 inches
+PASS MK any-height count = 15 (each Any Height officially + named in post) 15
+PASS EPCOT any-height count = 7 (each Any Height officially + named in post) 7
+PASS HS any-height count = 2 (each Any Height officially + named in post) 2
+PASS AK any-height count = 3 (each Any Height officially + named in post) 3
+PASS quick-answer counts text 15/7/3/2 
+PASS FAQ counts text matches 
+PASS smallest posted minimum 32 in (no listed ride below 32) 
+PASS Tiana: Nov 2 refurb, reopen December 2026 on official page 
+PASS Jungle Cruise: No times available + Jingle Cruise + returns early next year 
+PASS Railroad modified route (Main St <-> Fantasyland only) 
+PASS Soarin Around the World unavailable -> Across America 
+PASS DuckTales under refurbishment/limited 
+PASS AK list truly lacks DINOSAUR and TriceraTop 
+PASS official wording [Dumbo]: "whimsical flight aboard Dumbo" magic-kingdom__dumbo-the-flying-elephant
+PASS official wording [Carrousel]: "Ride atop a regal steed" magic-kingdom__prince-charming-regal-carrousel
+PASS official wording [Buzz]: "dark, slow-moving and suitable for all ages" magic-kingdom__buzz-lightyear-space-ranger-spin
+PASS official wording [Haunted]: "some mildly frightening scenes" magic-kingdom__haunted-mansion
+PASS official wording [Haunted]: "no gore" magic-kingdom__haunted-mansion
+PASS official wording [Haunted]: "slow-moving" magic-kingdom__haunted-mansion
+PASS official wording [SmallWorld]: "gentle 10-minute journey" magic-kingdom__its-a-small-world
+PASS official wording [PeopleMover]: "10-minute tour" magic-kingdom__tomorrowland-transit-authority-peoplemover
+PASS official wording [PhilharMagic]: "12-minute" magic-kingdom__mickeys-philharmagic
+PASS official wording [Barnstormer]: "junior roller coaster" magic-kingdom__barnstormer-starring-great-goofini
+PASS official wording [Speedway]: "at least 54 inches" magic-kingdom__tomorrowland-speedway
+PASS official wording [TeaParty]: "turn slowly, or not at all" magic-kingdom__mad-tea-party
+PASS official wording [Seas]: "gentle ride" epcot__seas-with-nemo-and-friends
+PASS official wording [Gran]: "gentle boat ride" epcot__gran-fiesta-tour-starring-three-caballeros
+PASS official wording [Gran]: "dark boat ride" epcot__gran-fiesta-tour-starring-three-caballeros
+PASS official wording [Land]: "gentle boat tour" epcot__living-with-the-land
+PASS official wording [ImageWorks]: "little ones can explore their senses" epcot__imageworks
+PASS official wording [Mission]: "doesn’t spin" epcot__mission-space
+PASS official wording [AlienSaucers]: "intergalactic spin" hollywood-studios__alien-swirling-saucers
+PASS official wording [Kili]: "18-minute" animal-kingdom__kilimanjaro-safaris
+PASS official wording [Train]: "7-minute, 1.2-mile" animal-kingdom__wildlife-express-train
+PASS official wording [Explorers]: "over 20 badges" animal-kingdom__wilderness-explorers
+PASS official wording [Kali]: "You will surely get splashed" animal-kingdom__kali-river-rapids
+PASS Rider Switch page says adults take turns + skip standard queue 
+PASS First Aid page: theme parks and water parks 
+PASS HS list contains: Disney Jr. Mickey Mouse Clubhouse Live! Disney Jr. Mickey Mouse Clubhouse Live!
+PASS HS list contains: For the First Time in Forever: A Frozen Sing-Along Celebration For the First Time in Forever: A Frozen Sing-Along Celebration
+PASS HS list contains: The Little Mermaid – A Musical Adventure The Little Mermaid – A Musical Adventure
+PASS HS list contains: Beauty and the Beast – Live on Stage Beauty and the Beast – Live on Stage
+PASS HS list contains: Vacation Fun Vacation Fun
+PASS Muppet*Vision / Riverboat not recommended in post 
+PASS Tiana described closed + 40 in only (not recommended as toddler ride) 
+pass1 fails 0 | pass2 fails 0 | checks 209
