@@ -1,5 +1,5 @@
 # QA notes: Best Disney World Rides for Toddlers and Preschoolers, Park by Park (2026-11-16)
-- Sanity: **`drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers`**, NEW draft (created 2026-11-16, 132 blocks, ~3,000 words, readTime 13), category Disney World (`q5bQv6QFqWcAZeLNacathw`), `publishedAt` unset, `heroImage` set 2026-11-16 (asset `image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg`, alt from the pack README). Nothing published. No published doc with this slug existed.
+- Sanity: **`drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers`**, NEW draft (created 2026-11-16, 132 blocks, ~3,000 words, readTime 13), category Disney World (`q5bQv6QFqWcAZeLNacathw`), `publishedAt` unset, `heroImage` set 2026-11-16 (asset `image-13f8e60148004df48252afb571a38866976fa049-1280x720-jpg`, alt from the pack README). Nothing published. No published doc with this slug existed.
 - **Sanity-draft-only:** the post is NOT on the Netlify deploy preview (preview builds from published Sanity content). The PR only changes ops/ files.
 - Brief + demand: `brief.md`. Official pages (saved text, accessed 2026-11-16): `official/`. Heights vs Sanity: `HEIGHT-MISMATCHES.md` + `ride-compare-2026-11-16.md`.
 
@@ -11,7 +11,7 @@
 - Scripted pass 2 can't catch everything (same author). Reviewer: spot-check the Disney pages in `official/` for any ride you plan to emphasize.
 
 ## Open issues
-1. **Hero + social images:** generated 2026-11-16 and in the pack `images/`. Hero is on the draft. Note for reviewers: the hero's silvery geodesic sphere is quite close to EPCOT's Spaceship Earth (faceted white sphere); the prompt asked for a generic sphere, so confirm you are comfortable with it or regenerate.
+1. **Hero + social images:** generated 2026-11-16 and in the pack `images/`. The hero was replaced the same day with a topic-specific one (preschooler on a slow canal boat ride with a parent, no sphere), so the earlier Spaceship Earth–lookalike concern is resolved. Hero is set on the draft.
 2. **Ride data (not fixed; see HEIGHT-MISMATCHES.md):** 0 height mismatches, but Muppet*Vision 3D is still "open" in Sanity (closed June 2025); the pending `drafts.…Walt Disney World Railroad` draft says closed through Nov 2026 while Disney now shows it operating on a modified route; Rock 'n' Roller Coaster name outdated; several any-height attractions have no ride doc. The ride-finder pages this post links to show the stale data.
 3. **Dated closures** are in the post only (Tiana's reopening "December 2026", Jingle Cruise holiday overlay, Railroad modified route, Soarin' Around the World unavailable, DuckTales refurb). Re-check these on the publish date; Tiana's is covered by the December revert routine.
 4. **Cannibalization:** AK with-kids post ranks ~#66 for "animal kingdom rides for toddlers"; the hub competes mildly. Optional: add a toddler H2 to the AK post later.

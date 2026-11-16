@@ -1,19 +1,19 @@
 # Social pack (DRAFT — review only): Best Disney World Rides for Toddlers and Preschoolers, Park by Park
-Status: **DRAFT. Do not queue, do not shareNow, do not touch the Buffer queue.** Nothing was sent to Buffer. Proposed times are **TBD** (the CEO slots them).
+Status: **DRAFT. Do not queue, do not shareNow, do not touch the Buffer queue.** Nothing was sent to Buffer. Proposed times set per the CEO (see below).
 - The post is a Sanity draft (`drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers`) and is **not live yet**. The URLs below 404 until it is published.
 - Use only after Bennett approves publish + queue (via Plan Your Park CEO).
-- **Images (generated 2026-11-16, original art):** `images/hero-1280x720.jpg` (blog hero; Sanity asset `image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg`, set as `heroImage` on the draft), `images/instagram-1x1.jpg` (1080×1080), `images/pin-1000x1500.jpg` (1000×1500, center-cropped from 9:16 with a top bias). Prompts are in `README.md`; alt text below matches the actual images.
+- **Images (generated 2026-11-16, original art):** `images/hero-1280x720.jpg` (blog hero; Sanity asset `image-13f8e60148004df48252afb571a38866976fa049-1280x720-jpg`, set as `heroImage` on the draft), `images/instagram-1x1.jpg` (1080×1080), `images/pin-1000x1500.jpg` (1000×1500, center-cropped from 9:16 with a top bias). Prompts are in `README.md`; alt text below matches the actual images.
 
 Slug: `disney-world-rides-for-toddlers-and-preschoolers` · Campaign: `evergreen-2026-11` (UTM scheme per ops/distribution.md)
 Facts checked on Disney's official attraction pages, accessed 2026-11-16.
 
-## Proposed times (America/Chicago, CT)
-| Channel | Slot |
+## Proposed times (America/Chicago, CT) — per CEO, 2026-11-16, only if the post is published by then
+| Channel | Proposed slot |
 |---|---|
-| Facebook | **TBD** |
-| Instagram | **TBD** |
-| Pinterest | **TBD** |
-Note for the CEO: the IG bio link can only point at one post at a time (Buffer can't change it). Avoid slotting this IG post on the same day as another pack's IG post.
+| Facebook | **Wed Nov 25, 2026, 7:30 PM CT** |
+| Instagram | **Fri Nov 27, 2026, 7:00 PM CT** |
+| Pinterest | **Sat Nov 28, 2026, 8:30 PM CT** |
+Avoids the LEGOLAND slots (Nov 18–20) and the packing pack (FB Nov 22, IG Nov 23, Pinterest Nov 24). If publish slips, shift all three by the same number of days. Note: the IG bio link can only point at one post at a time (Buffer can't change it); it needs a manual update to this post's link before Nov 27 at 7 PM CT.
 
 ## Facebook (Plan Your Park)
 Taking a toddler or preschooler to Disney World? Here's what little kids can ride at each park 🎠
@@ -56,4 +56,4 @@ Full park-by-park guide: link in bio.
 - [x] No prices, no baked-in text on images, no Disney logos/characters in image prompts
 - [x] Images generated (original art, 2026-11-16)
 - [ ] Post published (blocked: needs Bennett's approval)
-- [ ] Times slotted (TBD, CEO)
+- [x] Times proposed (CEO, 2026-11-16); not queued

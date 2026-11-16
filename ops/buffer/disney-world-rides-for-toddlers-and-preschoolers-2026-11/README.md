@@ -10,17 +10,16 @@ Files in this folder: `social-pack.md` (captions, Pinterest fields, UTM links, a
 - Generic families seen from behind or in profile, faces not prominent (hero). Social images may show happy kids' faces, but they must be generic and not resemble real people.
 - Check each output at full size and at card size. Redo anything with garbled text, extra limbs, logos or a castle that looks like a real one.
 
-## 1) HERO — 16:9, generate at 1280×720 JPG (quality 85–90). Set as `heroImage` on the draft only.
+## 1) HERO — 16:9, 1280×720 JPG (q88). Topic-specific: a preschooler on a gentle ride with a parent. Set as `heroImage` on the draft only.
+Replaced the first (family-plaza + sphere) hero on 2026-11-16 per Bennett's topic-specific request; the old image is not kept in the repo. The sphere concern is resolved (no sphere in the new hero).
 ```
 Photorealistic travel photo with a polished illustrated look, warm golden-hour light, vivid saturated colors.
-A generic family of four, seen from behind, faces not prominent: two parents, one toddler riding on a parent's shoulders and one preschooler holding a parent's hand, plus a compact stroller, walking along a warm stone-and-brick promenade toward a sunlit theme-park plaza.
-Wide establishing shot, horizon in the upper third, people in the lower third, clean focal point in the center for a 16:9 crop.
-In the middle distance: an ORIGINAL fairytale pavilion-castle in warm sandstone and coral with one broad rounded copper-green dome flanked by two short lantern towers and a ring of arched windows (clearly not a tall white castle, no blue conical roofs, no pointed gold spires), a calm lagoon in front of it, and to one side a silvery geodesic sphere pavilion rising above palm trees.
-On the other side, a lush jungle-covered rock spire with a small waterfall, tall palms, pink and purple flower beds, a pastel carousel canopy and a gentle boat ride on the lagoon.
-Blue sky with soft peach clouds and a soft sun glow.
-No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters.
+A smiling preschooler (generic child, not a real person) pointing excitedly at glowing paper lanterns from a pastel pink-and-teal boat on a slow, calm canal ride, a parent beside them holding the child close.
+Background: palm trees, pink and purple flower beds along the canal bank, strung lanterns, and an ORIGINAL coral-stone domed tower with a copper-green dome (not any known castle).
+Soft sunset sky in peach and pink, gentle reflections on the water. Wide 16:9, child and parent in the left two-thirds, clean focal area on the right for the card crop.
+No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters, no spheres.
 ```
-**Alt text:** A family with a toddler on a parent's shoulders and a preschooler holding hands walks a warm stone path toward a sunny theme-park plaza with a rounded-dome fairytale pavilion, a silvery sphere, palm trees and a lagoon.
+**Alt text:** A smiling preschooler points at glowing lanterns from a pastel boat on a slow canal ride while a parent holds them close, with palm trees, flowers and a coral domed tower behind.
 
 ## 2) SOCIAL — FB/IG 1:1, generate at 1080×1080 (save as `images/instagram-1x1.jpg`; the same file works for the Facebook link card if needed)
 More fun and captivating than the hero: brighter color, close-up, kids' delight, a dynamic moment.
@@ -45,4 +44,4 @@ No text, no signs, no logos, no brand marks, no cartoon characters, no costumed 
 
 ## After generating (done)
 - Files saved in `images/`; `.gitkeep` removed.
-- Hero uploaded to Sanity as `image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg` and set as `heroImage` (+ alt) on `drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers` only. Not published.
+- Hero uploaded to Sanity as `image-13f8e60148004df48252afb571a38866976fa049-1280x720-jpg` and set as `heroImage` (+ alt) on `drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers` only. Not published.
