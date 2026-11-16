@@ -2,7 +2,8 @@
 Status: **DRAFT. Do not queue, do not shareNow, do not touch the Buffer queue.** Nothing was sent to Buffer.
 - The post is a Sanity draft (`drafts.blogPost-orlando-theme-parks-for-families`) and is **not live yet**. These URLs 404 until it is published.
 - Use only after Bennett approves publish + queue (via Plan Your Park CEO).
-- **Images:** NOT YET CREATED (phase 2, parent generates). Target files in `images/`: `hero-16x9.jpg` (1376×768), `instagram-1x1.jpg` (1080×1080), `pinterest-9x16.jpg` (generated 9:16) → `pinterest-2x3.jpg` (center-crop, 1000×1500).
+- **Images:** created 2026-11-16, original and new for this post (no text, logos, characters or real likenesses). Files in `images/`: `hero-16x9.jpg` (1376×768, also the Sanity draft heroImage, asset `image-6f2d64c8f8838393f2da5584b9cc0e168752b546-1376x768-jpg`), `instagram-1x1.jpg` (1080×1080), `pinterest-9x16.jpg` (generated 9:16, 720×1280) → `pinterest-2x3.jpg` (center-crop of this week's new image, 1000×1500).
+- **Hero alt text (Sanity):** A family of four, the youngest on dad's shoulders, looks out at sunset over a lagoon toward a fairytale castle, a silver geodesic sphere and a looping roller coaster, framed by palm trees and pink and purple flowers.
 
 Slug: `orlando-theme-parks-for-families` · Campaign: `evergreen-2026-11` (UTM scheme per ops/distribution.md)
 Facts checked on Disney, Universal, SeaWorld and LEGOLAND official pages, accessed 2026-11-16.
@@ -28,7 +29,7 @@ https://planyourpark.com/blog/orlando-theme-parks-for-families/?utm_source=faceb
 
 ## Instagram (planyourparknow)
 **Image:** `images/instagram-1x1.jpg`
-**Alt text:** (write after the image exists; describe the actual scene, e.g. "A laughing young girl throws her arms up on a family coaster as it curves past palm trees and a fairytale castle at sunset.")
+**Alt text:** A laughing girl and her dad throw their arms up in the front of a yellow-and-pink family roller coaster as it curves past palm trees, with a blue-spired fairytale castle under a bright blue sky.
 
 **Caption:**
 Which Orlando park fits your kids? 🎢
@@ -48,12 +49,12 @@ Full guide: link in bio.
 - **Description:** Which Orlando theme park fits your kids? All 9 parks (Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom, Universal Studios, Islands of Adventure, Epic Universe, SeaWorld and LEGOLAND) with kid-friendly rides by official height, current closures, December 2026 holiday events and how many parks to plan with kids.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), the existing board used in prior packs. Not re-checked in Buffer (no Buffer API used).
 - **Image:** `images/pinterest-2x3.jpg` (center-crop of `pinterest-9x16.jpg`)
-- **Alt text:** (write after the image exists; describe the actual scene)
+- **Alt text:** A family of four seen from behind stands on a brick plaza at dusk as the little girl points up at fireworks over a glowing fairytale castle, a giant lit Christmas tree and palm trees wrapped in string lights.
 - **Destination URL:** https://planyourpark.com/blog/orlando-theme-parks-for-families/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=orlando-theme-parks-for-families
 
 ## Checks
 - [x] UTM matches the approved scheme exactly: `?utm_source=…&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=orlando-theme-parks-for-families` (exactly one question mark, before utm_source; utm_medium joined with &; all 3 URLs regex-verified)
 - [x] Every height/date in captions appears in the post and in `ops/drafts/orlando-theme-parks-for-families/official-extract-2026-11-16.txt`
 - [x] No prices in captions or images
-- [ ] Images (phase 2)
+- [x] Images (phase 2): created, resized/cropped, alt text written; hero set on the Sanity draft only (not published)
 - [ ] Post published (blocked: needs Bennett's approval)

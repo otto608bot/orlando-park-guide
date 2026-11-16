@@ -2779,5 +2779,13 @@
     }
    ]
   }
- ]
+ ],
+ "heroImage": {
+  "_type": "image",
+  "alt": "A family of four, the youngest on dad's shoulders, looks out at sunset over a lagoon toward a fairytale castle, a silver geodesic sphere and a looping roller coaster, framed by palm trees and pink and purple flowers.",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-6f2d64c8f8838393f2da5584b9cc0e168752b546-1376x768-jpg"
+  }
+ }
 }
