@@ -3603,5 +3603,13 @@
     }
    ]
   }
- ]
+ ],
+ "heroImage": {
+  "_type": "image",
+  "alt": "A family with a toddler on a parent's shoulders and a preschooler holding hands walks a warm stone path toward a sunny theme-park plaza with a rounded-dome fairytale pavilion, a silvery sphere, palm trees and a lagoon.",
+  "asset": {
+   "_type": "reference",
+   "_ref": "image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg"
+  }
+ }
 }

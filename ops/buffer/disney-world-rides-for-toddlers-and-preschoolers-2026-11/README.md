@@ -1,5 +1,5 @@
 # Image prompts + pack notes: Best Disney World Rides for Toddlers and Preschoolers, Park by Park
-Slug: `disney-world-rides-for-toddlers-and-preschoolers` · Pack written 2026-11-16 · Status: **images NOT generated** (the executor that built this pack can't generate images). All art must be **new and original**, never reused or cropped from another post (Bennett, Nov 2). Follow `ops/hero-image-style.md`.
+Slug: `disney-world-rides-for-toddlers-and-preschoolers` · Pack written 2026-11-16 · Status: **images generated 2026-11-16** and saved in `images/` (hero 1280×720, IG 1080×1080, Pin 1000×1500). Alt text below matches the actual images. All art must be **new and original**, never reused or cropped from another post (Bennett, Nov 2). Follow `ops/hero-image-style.md`.
 
 Files in this folder: `social-pack.md` (captions, Pinterest fields, UTM links, alt text) · `images/` (drop the generated files here).
 
@@ -31,7 +31,7 @@ Behind: palm trees, pink flower beds and a blue sky. An original generic carouse
 Square 1:1 composition with the child's face and raised arms in the upper-center, plenty of safe margin on all sides.
 No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters.
 ```
-**Alt text:** A laughing toddler with arms raised rides a pastel carousel horse while a parent walks beside it holding a hand, with palm trees and a sunny blue sky behind them.
+**Alt text:** A laughing toddler in overalls throws both arms up on a pastel carousel horse while a smiling parent steadies them, with palm trees and pink flowers behind.
 
 ## 3) SOCIAL — Pinterest pin, generate at 9:16 then center-crop to 1000×1500 (2:3) (save the cropped 1000×1500 file as `images/pin-1000x1500.jpg`; do not upload the uncropped 9:16)
 ```
@@ -41,9 +41,8 @@ Background: tall palms, bright pink and purple flower beds, a small original fai
 Keep the kids and the teacup in the center two-thirds of the frame so a 2:3 center-crop loses nothing important; leave the top 15% of the frame as calm sky.
 No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters.
 ```
-**Alt text:** Two young kids laugh and hold on in a whirling pastel teacup ride at a sunny theme park, with palm trees, flower beds and a fairytale tower in the background.
+**Alt text:** Two kids laugh with arms up in a swirly pastel teacup ride while a parent waves from the rail, with palms, bright flowers and a coral fairytale tower behind.
 
-## After generating
-1. Save the files in `images/` and delete `images/.gitkeep`.
-2. Upload the hero to Sanity and set `heroImage` (+ alt) on `drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers` only; never publish.
-3. Update the social-pack.md "Images generated" checkbox and, if the real image differs from the prompt, rewrite the alt text to match.
+## After generating (done)
+- Files saved in `images/`; `.gitkeep` removed.
+- Hero uploaded to Sanity as `image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg` and set as `heroImage` (+ alt) on `drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers` only. Not published.

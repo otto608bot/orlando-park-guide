@@ -2,7 +2,7 @@
 Status: **DRAFT. Do not queue, do not shareNow, do not touch the Buffer queue.** Nothing was sent to Buffer. Proposed times are **TBD** (the CEO slots them).
 - The post is a Sanity draft (`drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers`) and is **not live yet**. The URLs below 404 until it is published.
 - Use only after Bennett approves publish + queue (via Plan Your Park CEO).
-- **Images: not generated yet.** Prompts are in `README.md` (hero 1280×720, IG/FB 1080×1080, Pin 1000×1500). Alt text below is written for those prompts; re-check it against the real images once generated.
+- **Images (generated 2026-11-16, original art):** `images/hero-1280x720.jpg` (blog hero; Sanity asset `image-80e2034d5a58d12bf0b4ef554aff722c63752813-1280x720-jpg`, set as `heroImage` on the draft), `images/instagram-1x1.jpg` (1080×1080), `images/pin-1000x1500.jpg` (1000×1500, center-cropped from 9:16 with a top bias). Prompts are in `README.md`; alt text below matches the actual images.
 
 Slug: `disney-world-rides-for-toddlers-and-preschoolers` · Campaign: `evergreen-2026-11` (UTM scheme per ops/distribution.md)
 Facts checked on Disney's official attraction pages, accessed 2026-11-16.
@@ -26,8 +26,8 @@ Heights checked on Disney's official pages Nov 16, 2026. Park-by-park picks, wha
 https://planyourpark.com/blog/disney-world-rides-for-toddlers-and-preschoolers/?utm_source=facebook&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=disney-world-rides-for-toddlers-and-preschoolers
 
 ## Instagram (planyourparknow)
-**Image:** `images/instagram-1x1.jpg` (to be generated; see README.md)
-**Alt text:** A laughing toddler with arms raised rides a pastel carousel horse while a parent walks beside it holding a hand, with palm trees and a sunny blue sky behind them.
+**Image:** `images/instagram-1x1.jpg` 
+**Alt text:** A laughing toddler in overalls throws both arms up on a pastel carousel horse while a smiling parent steadies them, with palm trees and pink flowers behind.
 
 **Caption:**
 Disney World with a toddler or preschooler 🎠
@@ -46,14 +46,14 @@ Full park-by-park guide: link in bio.
 - **Title:** Disney World Rides for Toddlers and Preschoolers: Best Picks at Every Park
 - **Description:** The best Disney World rides for toddlers and preschoolers at all four parks, sorted by official minimum height. See which Magic Kingdom, EPCOT, Hollywood Studios and Animal Kingdom rides have no height requirement, which start at 32 inches, and what's closed right now. Checked on Disney's official pages November 16, 2026.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), the existing board used in prior packs. Not re-checked in Buffer (no Buffer API used).
-- **Image:** `images/pin-1000x1500.jpg` (center-cropped to 1000×1500) (to be generated; see README.md)
-- **Alt text:** Two young kids laugh and hold on in a whirling pastel teacup ride at a sunny theme park, with palm trees, flower beds and a fairytale tower in the background.
+- **Image:** `images/pin-1000x1500.jpg` (center-cropped to 1000×1500)
+- **Alt text:** Two kids laugh with arms up in a swirly pastel teacup ride while a parent waves from the rail, with palms, bright flowers and a coral fairytale tower behind.
 - **Destination URL:** https://planyourpark.com/blog/disney-world-rides-for-toddlers-and-preschoolers/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=disney-world-rides-for-toddlers-and-preschoolers
 
 ## Checks
 - [x] UTM matches the approved scheme exactly: `?utm_source=…&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=disney-world-rides-for-toddlers-and-preschoolers` (one `?`, `&` separators)
 - [x] Counts and heights match the post and Disney's official pages (accessed 2026-11-16)
 - [x] No prices, no baked-in text on images, no Disney logos/characters in image prompts
-- [ ] Images generated (blocked: executor cannot generate images; prompts in README.md)
+- [x] Images generated (original art, 2026-11-16)
 - [ ] Post published (blocked: needs Bennett's approval)
 - [ ] Times slotted (TBD, CEO)
