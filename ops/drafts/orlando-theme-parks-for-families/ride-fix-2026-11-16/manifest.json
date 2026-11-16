@@ -182,5 +182,37 @@
   "before": 0,
   "after": 0,
   "source": "https://seaworld.com/orlando/rides/ (\"Temporarily Closed\") + https://seaworld.com/orlando/park-info/ride-attraction-schedule (\"Sky Tower - Temporarily Closed\", no date). HEIGHT CONFLICT, not written: listing tag says 48\" min, https://seaworld.com/orlando/rides/sky-tower says \"No Limit\"; heightRequirement left at 0."
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT78P8",
+  "name": "Muppet*Vision 3D",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://disneyworld.disney.go.com/attractions/hollywood-studios/ (42 things to do, checked Nov 16, 2026): not listed (Rock 'n' Roller Coaster Starring The Muppets is; no Muppet*Vision 3D); disneyworld.disney.go.com/attractions/hollywood-studios/muppet-vision-3d/ redirects to that listing. Closure date: last public show June 7, closed June 8, 2025 per https://wdwnt.com/2025/06/video-final-muppetvision-3d-show-at-disneys-hollywood-studios/ and https://www.disneytouristblog.com/muppetvision-3d-is-closed-whats-next/"
+ },
+ {
+  "draftId": "drafts.UzjbPEJ4gI65TQn8dT78P8",
+  "name": "Muppet*Vision 3D",
+  "field": "closureNote",
+  "before": null,
+  "after": "Permanently closed in June 2025 (checked Nov 16, 2026)",
+  "source": "https://disneyworld.disney.go.com/attractions/hollywood-studios/ (42 things to do, checked Nov 16, 2026): not listed (Rock 'n' Roller Coaster Starring The Muppets is; no Muppet*Vision 3D); disneyworld.disney.go.com/attractions/hollywood-studios/muppet-vision-3d/ redirects to that listing. Closure date: last public show June 7, closed June 8, 2025 per https://wdwnt.com/2025/06/video-final-muppetvision-3d-show-at-disneys-hollywood-studios/ and https://www.disneytouristblog.com/muppetvision-3d-is-closed-whats-next/"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYZpj7",
+  "name": "Rock 'n' Roller Coaster",
+  "field": "name",
+  "before": "Rock 'n' Roller Coaster",
+  "after": "Rock 'n' Roller Coaster Starring The Muppets",
+  "source": "https://disneyworld.disney.go.com/attractions/hollywood-studios/ (42 things to do, checked Nov 16, 2026): official listing name is \"Rock \u2019n\u2019 Roller Coaster Starring The Muppets \u2014 New!\" (48\" or taller; straight apostrophes kept to match site data). Slug hs-rock-roller UNCHANGED."
+ },
+ {
+  "draftId": "drafts.r5PBb5Nahg2bY9oktfqOej",
+  "name": "Walt Disney World Railroad",
+  "field": "DRAFT DISCARDED (deleted)",
+  "before": "draft existed (isClosed true, refurb note from Oct 19); backup: railroad-draft-BACKUP.json",
+  "after": "no draft; published doc untouched",
+  "source": "CEO/Bennett instruction; revert.py re-creates from backup"
  }
 ]

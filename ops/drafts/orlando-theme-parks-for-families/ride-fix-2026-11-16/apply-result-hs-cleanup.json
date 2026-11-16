@@ -1,0 +1,17 @@
+{
+ "transactionId": "3iAtfmFS6JL5tysBAqAVOZ",
+ "results": [
+  {
+   "id": "drafts.UzjbPEJ4gI65TQn8dT78P8",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNaYZpj7",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.r5PBb5Nahg2bY9oktfqOej",
+   "operation": "delete"
+  }
+ ]
+}

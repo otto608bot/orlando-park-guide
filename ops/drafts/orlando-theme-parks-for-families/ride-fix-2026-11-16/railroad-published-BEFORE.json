@@ -1,0 +1,22 @@
+{
+ "_createdAt": "2026-03-31T13:59:09Z",
+ "_id": "r5PBb5Nahg2bY9oktfqOej",
+ "_rev": "UzjbPEJ4gI65TQn8dUU3kc",
+ "_type": "ride",
+ "_updatedAt": "2026-03-31T17:42:13Z",
+ "accessibility": [
+  "wheelchair-accessible",
+  "loud-audio"
+ ],
+ "description": "A scenic train tour around the park",
+ "heightRequirement": 0,
+ "image": null,
+ "name": "Walt Disney World Railroad",
+ "park": "Magic Kingdom",
+ "rideDuration": "20 min",
+ "rideType": "Train",
+ "slug": {
+  "current": "mk-railroad"
+ },
+ "thrillLevel": 1
+}

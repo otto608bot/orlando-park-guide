@@ -16,3 +16,9 @@ All values checked Nov 16, 2026 (~9:48-10:05 AM CT) on official pages; raw captu
 - Universal Studios Florida height list no longer includes Hollywood Rip Ride Rockit or Fast & Furious (Sanity 51 / 40). Not changed.
 - New docs leave thrillLevel unset (no official numeric rating) and Expedition Odyssey / Penguin Trek / Ice Breaker land unset; rideType only where the official page implies one.
 - The Orlando HEIGHT-MISMATCHES table lists 7 missing docs; the 8th added is Ice Breaker (48"), flagged in RIDE-FINDER-FLAGS.md.
+
+## Addendum: Hollywood Studios data (apply_hs_cleanup.py, result apply-result-hs-cleanup.json)
+- `drafts.UzjbPEJ4gI65TQn8dT78P8` Muppet*Vision 3D: isClosed null -> true, closureNote -> "Permanently closed in June 2025 (checked Nov 16, 2026)". Source: Disney's HS attractions listing (disneyworld.disney.go.com/attractions/hollywood-studios/, 42 items, checked Nov 16) has no Muppet*Vision 3D (its old URL redirects to that listing); closure date from WDWNT (final public show June 7, closed June 8, 2025) and Disney Tourist Blog.
+- `drafts.q5bQv6QFqWcAZeLNaYZpj7` Rock 'n' Roller Coaster: name -> "Rock 'n' Roller Coaster Starring The Muppets" (official listing: "Rock ’n’ Roller Coaster Starring The Muppets", 48"; straight apostrophes kept to match site data). Name only; slug `hs-rock-roller` unchanged.
+- `drafts.r5PBb5Nahg2bY9oktfqOej` Walt Disney World Railroad: pending draft DELETED (backup `railroad-draft-BACKUP.json`; it carried isClosed true + a refurb note dated Oct 19, never published). Published doc untouched (`railroad-published-BEFORE.json`, verified identical). `revert.py --go` re-creates it from the backup.
+- Carousel of Progress left alone.

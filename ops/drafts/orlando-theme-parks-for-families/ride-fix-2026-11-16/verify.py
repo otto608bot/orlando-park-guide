@@ -4,9 +4,12 @@ def get(i):
     req=urllib.request.Request(P+"data/doc/production/"+i,headers={"Authorization":"Bearer "+os.environ["SANITY_API_TOKEN"]})
     d=json.load(urllib.request.urlopen(req))["documents"]; return d[0] if d else None
 res=[]
-for f in ("apply-result.json","apply-result-skytower.json"):
+for f in ("apply-result.json","apply-result-skytower.json","apply-result-hs-cleanup.json"):
     res+=json.load(open(f))["results"]
-ids=sorted({r["id"] for r in res})
+ids=sorted({r["id"] for r in res if r.get("operation")!="delete"})
+RID="drafts.r5PBb5Nahg2bY9oktfqOej"
+rp=get(RID[7:]); rb=json.load(open("railroad-published-BEFORE.json"))
+print(RID,"| draft deleted:",get(RID) is None,"| published _rev unchanged:",rp["_rev"]==rb["_rev"],"| published identical:",rp==rb)
 before={}
 for m in json.load(open("manifest.json")): before.setdefault(m["draftId"],[]).append(m)
 ok=True
@@ -20,4 +23,5 @@ for i in ids:
         flag="OK" if v==m["after"] else "MISMATCH"; ok&=(v==m["after"])
         print("   ",m["field"],"draft =",v,"expected",m["after"],flag)
     if pub and d and pub.get("_updatedAt")>="2026-11-16": print("   !! published updated today"); ok=False
+ok&=(get(RID) is None and rp==rb)
 print("ALL OK" if ok else "PROBLEM")
