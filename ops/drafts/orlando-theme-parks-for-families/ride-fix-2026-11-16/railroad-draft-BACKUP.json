@@ -1,0 +1,24 @@
+{
+ "_createdAt": "2026-10-19T14:21:57Z",
+ "_id": "drafts.r5PBb5Nahg2bY9oktfqOej",
+ "_rev": "hpFs1xdB3qwqRTGz5cgWaB",
+ "_type": "ride",
+ "_updatedAt": "2026-10-19T14:21:57Z",
+ "accessibility": [
+  "wheelchair-accessible",
+  "loud-audio"
+ ],
+ "closureNote": "Temporarily closed for routine refurbishment beginning Sep 28, 2026; expected to reopen November 2026, per Disney's official attraction page (checked Oct 19, 2026).",
+ "description": "A scenic train tour around the park",
+ "heightRequirement": 0,
+ "image": null,
+ "isClosed": true,
+ "name": "Walt Disney World Railroad",
+ "park": "Magic Kingdom",
+ "rideDuration": "20 min",
+ "rideType": "Train",
+ "slug": {
+  "current": "mk-railroad"
+ },
+ "thrillLevel": 1
+}
