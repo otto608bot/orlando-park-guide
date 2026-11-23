@@ -8,6 +8,7 @@ Stages: `idea` → `brief` → `drafting` → `qa1` → `qa2` → `awaiting_appr
 
 | slug / topic | Stage | Why | Monetization | Links |
 |---|---|---|---|---|
+| universal-orlando-parks-with-kids | **qa2 done → awaiting images, then approval (Sanity draft only)** | GSC "Universal parks" cluster 137 impr / 0 clicks / pos 29.5 (28d to 2026-11-21); holiday timing | tickets + Amazon | `drafts.blogPost-universal-orlando-parks-with-kids` · `ops/drafts/universal-orlando-parks-with-kids/` · buffer `ops/buffer/universal-orlando-parks-with-kids-2026-11/` |
 | magic-kingdom-with-kids-rides-by-height | **awaiting_approval (Sanity draft + PR)** | GSC ~50 impr/0 clicks (MK with kids cluster 2026-09-20→10-17) | tickets + Amazon | `drafts.blogPost-magic-kingdom-with-kids-rides-by-height` · `ops/drafts/magic-kingdom-with-kids/` · buffer `ops/buffer/magic-kingdom-with-kids-2026-10/` |
 | parks hub CTR v2 | published + distributed | live; mobile height chooser shipped 2026-09-25 | tickets | https://planyourpark.com/parks/ |
 | disney-vs-universal-with-kids-2026 | published | height/energy/interests decision post | tickets | https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/ |

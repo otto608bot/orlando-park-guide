@@ -1,0 +1,159 @@
+PASS link /affiliate-disclosure/ 200
+PASS anchor<=60 "See our affiliate disclosure" 
+PASS link /rides/for/universal-orlando-under-40/ 200
+PASS anchor<=60 "Universal rides under 40 inche" 
+PASS link /rides/for/universal-orlando-all/ 200
+PASS anchor<=60 "every Universal Orlando ride" 
+PASS link /parks/ 200
+PASS anchor<=60 "park chooser" 
+PASS link /blog/universal-orlando-height-requirements/ 200
+PASS anchor<=60 "Universal height requirements " 
+PASS link /rides/for/universal-studios-under-40/ 200
+PASS anchor<=60 "Universal Studios rides under " 
+PASS link /rides/for/universal-studios-all/ 200
+PASS anchor<=60 "all Universal Studios rides" 
+PASS link /parks/universal-studios-florida/ 200
+PASS anchor<=60 "Universal Studios Florida park" 
+PASS link /rides/for/islands-of-adventure-under-40/ 200
+PASS anchor<=60 "Islands of Adventure rides und" 
+PASS link /parks/islands-of-adventure/ 200
+PASS anchor<=60 "Islands of Adventure park page" 
+PASS link /rides/for/epic-universe-under-40/ 200
+PASS anchor<=60 "Epic Universe rides under 40 i" 
+PASS link /parks/epic-universe/ 200
+PASS anchor<=60 "Epic Universe park page" 
+PASS link /blog/epic-universe-rides-ranked-guide/ 200
+PASS anchor<=60 "all Epic Universe rides ranked" 
+PASS link /blog/epic-universe-1-day-plan/ 200
+PASS anchor<=60 "Epic Universe 1-day plan" 
+PASS link /rides/for/islands-of-adventure-calm-under-40/ 200
+PASS anchor<=60 "Islands of Adventure calm ride" 
+PASS link /rides/for/universal-orlando-48/ 200
+PASS anchor<=60 "Universal rides for kids 48 in" 
+PASS link /blog/epic-universe-tickets-guide/ 200
+PASS anchor<=60 "Epic Universe tickets guide" 
+PASS link /deals/ 200
+PASS anchor<=60 "Universal and Orlando deals pa" 
+PASS link https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpark-20 200
+PASS anchor<=60 "kids' rain poncho" 
+PASS link https://www.amazon.com/s?k=waterproof+phone+pouch&tag=planyourpark-20 503
+PASS anchor<=60 "waterproof phone pouch" 
+PASS link https://www.amazon.com/s?k=lightweight+travel+stroller&tag=planyourpark-20 503
+PASS anchor<=60 "lightweight travel stroller" 
+PASS link /blog/disney-vs-universal-with-kids-2026/ 200
+PASS anchor<=60 "Disney vs. Universal with kids" 
+PASS internal links have trailing slash 
+PASS no empty headings 
+PASS no empty list items 
+PASS no duplicate H2 
+PASS no unbalanced ** markers 
+PASS title <= 70 chars 64
+PASS excerpt <= 200 chars 158
+PASS title has "Universal Orlando Parks" + kids + 4 
+PASS excerpt has primary words + date 
+PASS first block is affiliate disclosure 
+PASS disclosure before first affiliate link 
+PASS amazon links tagged planyourpark-20 
+PASS >=6 ride-finder links 9
+PASS links /parks/ /deals/ + 3 Universal park pages 
+PASS links all 5 related posts 
+PASS does not link parked/unpublished Orlando post 
+PASS FAQ has >=8 questions 9
+PASS FAQ covers: 4 parks at Universal Orlando 
+PASS FAQ covers: How many parks 
+PASS FAQ covers: What parks are at Universal Studios 
+PASS FAQ covers: best for young kids 
+PASS FAQ covers: Epic Universe good for little kids 
+PASS FAQ covers: under 40 inches 
+PASS FAQ covers: Volcano Bay open 
+PASS FAQ covers: holiday events included 
+PASS FAQ covers: Child Swap 
+PASS no first-person lore (excl. official name "If I Ran the Zoo") 
+PASS no prices / $ 
+PASS no age-to-height mapping 
+PASS no crowd predictions 
+PASS no Express Pass / Lightning Lane claims 
+PASS facts dated Nov 23, 2026 (>=8x) 8
+PASS no hype words (excl. official name "The Amazing Adventures of Spider-Man") 
+PASS Tiana not mentioned (Disney-only refurb, n/a) 
+-- pass 2 --
+PASS official height 40": Despicable Me Minion Mayhem 
+PASS official height 34": E.T. Adventure 
+PASS official height 42": Harry Potter and the Escape from Gringotts 
+PASS official height 42": MEN IN BLACK 
+PASS official height 40": Race Through New York Starring Jimmy Fallon 
+PASS official height 48": Revenge of the Mummy 
+PASS official height 40": The Simpsons Ride 
+PASS official height 40": TRANSFORMERS: The Ride-3D 
+PASS official height 36": Trolls Trollercoaster 
+PASS official height 40": The Amazing Adventures of Spider-Man 
+PASS official height 36": Cat in the Hat 
+PASS official height 52": Doctor Doom's Fearfall 
+PASS official height 44": Dudley Do-Right's Ripsaw Falls 
+PASS official height 36": Flight of the Hippogriff 
+PASS official height 48": Hagrid's Magical Creatures Motorbike Adventure 
+PASS official height 48": Harry Potter and the Forbidden Journey 
+PASS official height 42": Jurassic Park River Adventure 
+PASS official height 51": Jurassic World VelociCoaster 
+PASS official height 36": The High in the Sky Seuss Trolley Train Ride! 
+PASS official height 54": The Incredible Hulk Coaster 
+PASS official height 42": Popeye & Bluto's Bilge-Rat Barges 
+PASS official height 36": Pteranodon Flyers 
+PASS official height 36": Skull Island: Reign of Kong 
+PASS official height 40": Curse of the Werewolf 
+PASS official height 48": Dragon Racer's Rally 
+PASS official height 40": Harry Potter and the Battle at the Ministry 
+PASS official height 40": Hiccup's Wing Gliders 
+PASS official height 40": Mario Kart 
+PASS official height 40": Mine-Cart Madness 
+PASS official height 48": Monsters Unchained: The Frankenstein Experiment 
+PASS official height 48": Stardust Racers 
+PASS official height 34": Yoshi's Adventure 
+PASS post pairs height: E.T. Adventure:** 34 
+PASS post pairs height: Trolls Trollercoaster:** 36 
+PASS post pairs height: Despicable Me Minion Mayhem:** 40 
+PASS post pairs height: Revenge of the Mummy:** 48 
+PASS post pairs height: Yoshi's Adventure:** 34 
+PASS post pairs height: Jurassic World VelociCoaster:** 51 
+PASS post pairs height: Doctor Doom's Fearfall:** 52 
+PASS post pairs height: The Incredible Hulk Coaster:** 54 
+PASS post pairs height: Dudley Do-Right's Ripsaw Falls:** 44 
+PASS post pairs height: The Amazing Adventures of Spider-Man:** 40 
+PASS no minimum official: Caro-Seuss-el ride-caro-seuss-el
+PASS no minimum official: One Fish ride-one-fish-two-fish-red-fish
+PASS no minimum official: Storm Force ride-storm-force-accelatron
+PASS no minimum official: Kang & Kodos ride-kang-and-kodos-twirl-and-hurl
+PASS no minimum official: Constellation Carousel ride-constellation-carousel
+PASS no minimum official: Fyre Drill ride-fyre-drill
+PASS Villain-Con: companion under 48, no hand-held infants (no minimum) 
+PASS Minion Mayhem stationary seat under 40 
+PASS Pteranodon 36-56 + child must accompany >56 
+PASS Hogwarts Express absent from height page (no minimum listed) 
+PASS Hogwarts Express needs Park-to-Park 
+PASS Supercharged + Rip Ride Rockit absent from height page 
+PASS Volcano Bay closed, reopening on or before April 1, 2027 
+PASS Jurassic Park River Adventure closed Jan 5 - Dec 16, 2026 
+PASS Monsters Unchained closed Dec 11-15, 2026 
+PASS Po Live! starting Oct 3, 2026 
+PASS 2027 refurbs: Barges Jan 9-Feb 2, Fyre Drill Jan 25-Feb 4, Forbidden Journey Feb 8-19 
+PASS Holidays Nov 14, 2026 - Jan 3, 2027, included w/ ticket, blockouts 
+PASS Parade each night at USF 
+PASS Parade: tree lighting led by Santa (press) 
+PASS Grinchmas Who-liday Spectacular + meet the Grinch (press) 
+PASS Hogwarts castle projection show (press) 
+PASS Epic: Nintendo decor + Snoggletog + Celestial Park trees 
+PASS Wizarding World Christmas in all three lands 
+PASS Grinch breakfast: Circus McGurkus + same-day IOA admission 
+PASS Holiday Tour select dates to Jan 2, 2027 + Grinch meet 
+PASS Parade/show times in app 
+PASS Tickets: One-Park-Per-Day incl. 4 parks 
+PASS Tickets: Park-to-Park incl. Epic + Hogwarts Express 
+PASS Tickets: prices vary by day 
+PASS Child Swap wording 
+PASS Test seats asterisk note 
+PASS Volcano Bay rules: Tot Tiki <48, Runamukka <54, life vests 
+PASS Water ride quotes (really wet / very, very wet) 
+PASS DreamWorks Land: Po camp, Swamp Symphony, Shrek/Fiona/Donkey at cottage, Trollercoaster family-friendly 
+PASS If I Ran the Zoo is a kids play area (URL kids-play-areas) 
+PASS Constellation/Fyre: hand-held infants not permitted 
+pass1 fails 0 | pass2 fails 0 | checks 157

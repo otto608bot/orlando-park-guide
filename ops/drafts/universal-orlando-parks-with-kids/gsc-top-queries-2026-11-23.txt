@@ -1,0 +1,147 @@
+=== 28d 2026-10-25..2026-11-21 rows=519
+  0   124  0.00%  33.3 | orlando parks
+  0    98  0.00%  24.7 | orlando theme parks
+  0    98  0.00%  29.4 | parks in orlando
+  0    86  0.00%  33.2 | parks in orlando florida
+  0    70  0.00%   7.8 | animal kingdom ride heights
+  0    62  0.00%  24.3 | orlando amusement parks
+  0    57  0.00%  38.3 | animal kingdom with kids
+  0    52  0.00%  65.1 | animal kingdom rides for toddlers
+  0    52  0.00%  27.7 | epic universe rides
+  0    48  0.00%  37.0 | magic kingdom with kids
+  0    47  0.00%  37.1 | animal kingdom rides for kids
+  0    44  0.00%  43.3 | magic kingdom rides for kids
+  0    36  0.00%   6.4 | is universal orlando or disney world better for young children?
+  0    35  0.00%   9.7 | low-height children's rides
+  0    34  0.00%  25.1 | legoland florida ride heights
+  0    30  0.00%  22.4 | park in orlando
+  0    30  0.00%  38.2 | parques de orlando
+  0    30  0.00%  25.7 | universal epic universe rides
+  0    29  0.00%  21.1 | epic universe rides ranked
+  0    28  0.00%  33.4 | universal studios orlando parks
+  0    26  0.00%  34.6 | epcot for kids
+  0    24  0.00%  61.2 | attractieparken orlando
+  0    24  0.00%  19.4 | epic universe best rides
+  0    24  0.00%  36.6 | orlando theme parks for families
+  0    22  0.00%  32.8 | how may rides are at epcot
+  0    22  0.00%  69.7 | legoland florida rides
+  0    20  0.00%  70.8 | best epcot rides for kids
+  0    20  0.00%  23.2 | epic universe attractions
+  0    20  0.00%  35.1 | how many rides are at legoland florida
+  0    19  0.00%  12.1 | animal kingdom height requirements
+  0    19  0.00%  33.4 | legoland height rides
+  0    18  0.00%  19.3 | epic universe height requirements
+  0    17  0.00%  23.2 | legoland ride heights
+  0    17  0.00%  35.6 | magic kingdom height requirements
+  0    16  0.00%  16.4 | walt disney character dining reservations
+  0    15  0.00%   7.9 | animal kingdom rides height requirements
+  0    15  0.00%  19.4 | how many rides are at animal kingdom
+  0    15  0.00%  67.8 | orlando pretparken
+  0    15  0.00%  51.3 | pretparken orlando
+  0    14  0.00%  12.1 | fun parks in orlando
+  0    14  0.00%  10.9 | fun parks in orlando florida
+  0    14  0.00%  20.4 | orlando florida parks
+  0    14  0.00%  36.6 | orlando park
+  0    14  0.00%  67.8 | pretparken in orlando
+  0    13  0.00%  17.5 | booking disney character meals
+  0    13  0.00%   6.4 | disney o universal: ¿cuál es mejor para niños?
+  0    13  0.00%  25.7 | epic universe rides list
+  0    12  0.00%  13.2 | all parks in orlando
+  0    12  0.00%  63.2 | epcot rides for kids
+  0    12  0.00%  26.4 | epic universe ride list
+  0    12  0.00%  15.3 | park orlando
+  0    12  0.00%  25.5 | parks orlando
+  0    12  0.00%  27.2 | universal orlando parks
+  0    11  0.00%   9.2 | best character meal set for a kid's birthday gift?
+  0    10  0.00%  15.6 | animal kingdom ride height requirements
+  0    10  0.00%   9.2 | detail epic universe tickets options, package structures, and base pricing rules
+  0    10  0.00%  18.9 | how many theme parks are in orlando
+  0    10  0.00%  42.5 | magic kingdom kiddie rides
+  0    10  0.00%  50.4 | parques de orlando universal
+  0     9  0.00%   7.4 | animal kingdom rides and height requirements
+  0     9  0.00%  20.7 | how many rides are at magic kingdom
+  0     9  0.00%  26.6 | how many rides at epic universe
+  0     9  0.00%  19.7 | universal studios parks
+  0     8  0.00%  12.8 | disney character lunch reservations
+  0     8  0.00%  13.0 | how many amusement parks are in orlando
+  0     7  0.00%   9.0 | avatar ride animal kingdom height
+  0     7  0.00%   8.9 | legoland florida height requirements
+  0     7  0.00%  19.4 | list of disney world character dining
+  0     7  0.00%  29.1 | parks orlando florida
+  0     7  0.00%  47.6 | things to do at epcot for kids
+--- seasonal/crowd/holiday matches
+  0     1  0.00%  14.0 | november 20, 2026
+=== 90d 2026-08-24..2026-11-21 rows=689
+  0   287  0.00%  33.4 | orlando parks
+  0   200  0.00%  28.0 | parks in orlando
+  0   155  0.00%  33.9 | parks in orlando florida
+  0   148  0.00%  24.4 | orlando theme parks
+  0   120  0.00%  34.1 | animal kingdom with kids
+  0    93  0.00%  34.4 | animal kingdom rides for kids
+  0    93  0.00%  35.2 | magic kingdom with kids
+  0    79  0.00%   7.7 | animal kingdom ride heights
+  0    78  0.00%  25.8 | orlando amusement parks
+  0    77  0.00%  43.2 | magic kingdom rides for kids
+  0    74  0.00%  21.5 | park in orlando
+  0    63  0.00%  39.7 | parques de orlando
+  0    54  0.00%  64.5 | animal kingdom rides for toddlers
+  0    53  0.00%  27.7 | epic universe rides
+  0    43  0.00%  24.1 | legoland florida ride heights
+  0    42  0.00%  34.5 | epcot for kids
+  0    40  0.00%  21.9 | orlando florida parks
+  0    37  0.00%  60.4 | legoland florida rides
+  0    36  0.00%   6.4 | is universal orlando or disney world better for young children?
+  0    35  0.00%   9.7 | low-height children's rides
+  0    34  0.00%  39.0 | how many rides are at legoland florida
+  0    33  0.00%  34.8 | orlando park
+  0    32  0.00%  25.8 | universal epic universe rides
+  0    32  0.00%  31.8 | universal studios orlando parks
+  0    30  0.00%  13.4 | all parks in orlando
+  0    30  0.00%  20.9 | epic universe rides ranked
+  0    29  0.00%  31.6 | how may rides are at epcot
+  0    28  0.00%  35.1 | legoland height rides
+  0    28  0.00%  35.8 | orlando theme parks for families
+  0    25  0.00%  61.4 | attractieparken orlando
+  0    25  0.00%  19.7 | epic universe best rides
+  0    24  0.00%  26.9 | parks orlando
+  0    23  0.00%  41.7 | what to bring for kids to disney world
+  0    22  0.00%  14.2 | animal kingdom height requirements
+  0    22  0.00%  17.4 | orlando parks list
+  0    21  0.00%  70.3 | best epcot rides for kids
+  0    21  0.00%  23.3 | epic universe attractions
+  0    20  0.00%  11.6 | fun parks in orlando
+  0    18  0.00%   7.4 | animal kingdom rides height requirements
+  0    18  0.00%  19.3 | epic universe height requirements
+  0    18  0.00%  23.8 | legoland ride heights
+  0    18  0.00%  37.4 | magic kingdom height requirements
+  0    18  0.00%  44.7 | save on theme parks orlando
+  0    18  0.00%  29.1 | universal orlando parks
+  0    17  0.00%  30.5 | legoland rides
+  0    17  0.00%  68.9 | orlando pretparken
+  0    16  0.00%  21.9 | how many theme parks are in orlando
+  0    16  0.00%  53.1 | pretparken orlando
+  0    16  0.00%  16.4 | walt disney character dining reservations
+  0    15  0.00%  10.7 | fun parks in orlando florida
+  0    15  0.00%  19.4 | how many rides are at animal kingdom
+  0    14  0.00%  61.9 | epcot rides for kids
+  0    14  0.00%  67.8 | pretparken in orlando
+  0    13  0.00%  17.5 | booking disney character meals
+  0    13  0.00%   6.4 | disney o universal: ¿cuál es mejor para niños?
+  0    13  0.00%  26.6 | epic universe ride list
+  0    13  0.00%  25.7 | epic universe rides list
+  0    13  0.00%  16.7 | park orlando
+  0    12  0.00%  14.2 | animal kingdom ride height requirements
+  0    12  0.00%  60.8 | character dining experiences near theme parks
+  0    12  0.00%  41.3 | magic kingdom kiddie rides
+  0    11  0.00%   7.5 | animal kingdom rides and height requirements
+  0    11  0.00%   9.2 | best character meal set for a kid's birthday gift?
+  0    11  0.00%  15.2 | list of parks in orlando
+  0    11  0.00%  31.0 | orlando freizeitpark
+  0    10  0.00%   9.2 | detail epic universe tickets options, package structures, and base pricing rules
+  0    10  0.00%  29.0 | epcot size
+  0    10  0.00%  58.8 | magic kingdom kids rides
+  0    10  0.00%  50.4 | parques de orlando universal
+  0     9  0.00%  16.6 | how many amusement parks are in orlando
+--- seasonal/crowd/holiday matches
+  0     1  0.00%   8.0 | best time to visit disney world 2026
+  0     1  0.00%  14.0 | november 20, 2026

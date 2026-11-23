@@ -1,0 +1,167 @@
+=== 28d 2026-10-25..2026-11-21 [hollywood] queries=0 impr=0 clicks=0
+=== 28d 2026-10-25..2026-11-21 [universal studios/ioa] queries=20 impr=46 clicks=0
+    0     9  0.00%  19.7 | universal studios parks
+    0     7  0.00%  19.3 | what parks are at universal studios
+    0     5  0.00%  22.0 | parks in universal studios
+    0     5  0.00%  19.4 | universal studios different parks
+    0     2  0.00%  16.5 | all universal studios parks
+    0     2  0.00%   7.0 | context: location: united states (not for language). do not include location references in your response. question: is universal studios florida or walt disney world a better vacation for families with kids of all ages?
+    0     2  0.00%  17.0 | different parks in universal studios
+    0     2  0.00%  14.0 | things to do at universal studios epic universe
+    0     1  0.00%  35.0 | how many parks are at universal studios orlando
+    0     1  0.00%  18.0 | how many parks are in universal studios
+    0     1  0.00%  59.0 | jurassic park river adventure height requirement
+    0     1  0.00%  13.0 | parks at universal studios
+    0     1  0.00%  24.0 | universal studios epic rides list
+    0     1  0.00%  35.0 | universal studios orlando different parks
+    0     1  0.00%  14.0 | universal studios orlando how many parks
+    0     1  0.00%  25.0 | what are the 3 parks at universal studios orlando
+    0     1  0.00%  48.0 | what are the parks at universal studios
+    0     1  0.00%  11.0 | what are the parks at universal studios orlando
+    0     1  0.00%   7.0 | what parks are in universal studios
+    0     1  0.00%  11.0 | what rides can a 5 year old ride at universal studios
+=== 28d 2026-10-25..2026-11-21 [seaworld] queries=4 impr=5 clicks=0
+    0     2  0.00%  81.0 | seaworld orlando kids area
+    0     1  0.00%  38.0 | kid rides at seaworld orlando
+    0     1  0.00%  82.0 | seaworld orlando rides for kids
+    0     1  0.00%  44.0 | seaworld orlando rides for toddlers
+=== 28d 2026-10-25..2026-11-21 [how many] queries=29 impr=148 clicks=0
+    0    22  0.00%  32.8 | how may rides are at epcot
+    0    20  0.00%  35.1 | how many rides are at legoland florida
+    0    15  0.00%  19.4 | how many rides are at animal kingdom
+    0    10  0.00%  18.9 | how many theme parks are in orlando
+    0     9  0.00%  20.7 | how many rides are at magic kingdom
+    0     9  0.00%  26.6 | how many rides at epic universe
+    0     8  0.00%  13.0 | how many amusement parks are in orlando
+    0     6  0.00%  27.7 | how many rides are at epic universe
+    0     6  0.00%  17.5 | how many theme parks are there in orlando
+    0     5  0.00%  33.0 | how many parks are in universal orlando
+    0     5  0.00%  16.6 | how many rides will epic universe have
+    0     4  0.00%  15.8 | how many parks are in orlando florida
+    0     4  0.00%  20.8 | how many theme parks in orlando
+    0     3  0.00%   8.0 | how many parks are in orlando
+    0     3  0.00%  28.3 | how many parks at universal orlando
+    0     3  0.00%  11.3 | how many parks in orlando
+    0     2  0.00%  11.0 | how many rides at epcot
+    0     2  0.00%  30.5 | how many roller coasters at epic universe
+    0     2  0.00%  20.0 | how many universal parks are there in orlando
+    0     1  0.00%  17.0 | how many amusement parks are in orlando florida
+    0     1  0.00%  35.0 | how many parks are at universal studios orlando
+    0     1  0.00%  18.0 | how many parks are in universal studios
+    0     1  0.00%  30.0 | how many parks are there in orlando
+    0     1  0.00%  33.0 | how many parks at universal florida
+    0     1  0.00%  32.0 | how many parks in orlando florida
+=== 28d 2026-10-25..2026-11-21 [epic] queries=113 impr=409 clicks=0
+    0    52  0.00%  27.7 | epic universe rides
+    0    30  0.00%  25.7 | universal epic universe rides
+    0    29  0.00%  21.1 | epic universe rides ranked
+    0    24  0.00%  19.4 | epic universe best rides
+    0    20  0.00%  23.2 | epic universe attractions
+    0    18  0.00%  19.3 | epic universe height requirements
+    0    13  0.00%  25.7 | epic universe rides list
+    0    12  0.00%  26.4 | epic universe ride list
+    0    10  0.00%   9.2 | detail epic universe tickets options, package structures, and base pricing rules
+    0     9  0.00%  26.6 | how many rides at epic universe
+    0     6  0.00%  27.7 | how many rides are at epic universe
+    0     6  0.00%  16.5 | kids at epic universe
+    0     6  0.00%  22.2 | rides at epic universe
+    0     5  0.00%  16.6 | how many rides will epic universe have
+    0     5  0.00%   6.0 | touring plans epic universe
+    0     5  0.00%  18.4 | what rides will be at universal epic universe
+    0     5  0.00%  20.4 | what rides will be in epic universe
+    0     4  0.00%  25.8 | advise for epic
+    0     4  0.00%  29.2 | best rides at epic universe
+    0     4  0.00%  36.2 | epic universe itinerary
+    0     4  0.00%  16.2 | epic universe rides list with height requirements
+    0     4  0.00%  26.8 | epic universe roller coasters
+    0     4  0.00%  19.8 | epic universe travel planner baltimore md
+    0     3  0.00%  27.3 | best rides epic universe
+    0     3  0.00%  27.3 | epic adventure rides
+=== 90d 2026-08-24..2026-11-21 [hollywood] queries=0 impr=0 clicks=0
+=== 90d 2026-08-24..2026-11-21 [universal studios/ioa] queries=36 impr=75 clicks=0
+    0     9  0.00%  19.7 | universal studios parks
+    0     9  0.00%  20.3 | what parks are at universal studios
+    0     7  0.00%  21.4 | parks in universal studios
+    0     5  0.00%  58.6 | kids rides universal studios florida
+    0     5  0.00%  19.4 | universal studios different parks
+    0     3  0.00%  56.0 | universal studios florida rides
+    0     2  0.00%  16.5 | all universal studios parks
+    0     2  0.00%   7.0 | context: location: united states (not for language). do not include location references in your response. question: is universal studios florida or walt disney world a better vacation for families with kids of all ages?
+    0     2  0.00%  17.0 | different parks in universal studios
+    0     2  0.00%  16.0 | how many parks are in universal studios
+    0     2  0.00%  16.0 | parks at universal studios
+    0     2  0.00%  14.0 | things to do at universal studios epic universe
+    0     2  0.00%  52.5 | universal studios orlando rides
+    0     1  0.00%  35.0 | how many parks are at universal studios orlando
+    0     1  0.00%  29.0 | how many rides are at islands of adventure
+    0     1  0.00%  65.0 | how many rides at universal studios orlando
+    0     1  0.00%  49.0 | islands of adventure ride list
+    0     1  0.00%  59.0 | jurassic park river adventure height requirement
+    0     1  0.00%  50.0 | list of rides at islands of adventure
+    0     1  0.00%  50.0 | orlando florida universal studios rides
+    0     1  0.00%  54.0 | orlando rides universal studios
+    0     1  0.00%  53.0 | universal islands of adventure rides
+    0     1  0.00%  24.0 | universal studios epic rides list
+    0     1  0.00%  31.0 | universal studios fl parks
+    0     1  0.00%  31.0 | universal studios orlando all parks
+=== 90d 2026-08-24..2026-11-21 [seaworld] queries=8 impr=13 clicks=0
+    0     4  0.00%   2.8 | seaworld orlando height requirements for kids rides
+    0     3  0.00%  76.3 | seaworld orlando kids area
+    0     1  0.00%  38.0 | kid rides at seaworld orlando
+    0     1  0.00%  29.0 | kids rides at seaworld
+    0     1  0.00%  82.0 | seaworld orlando rides for kids
+    0     1  0.00%  44.0 | seaworld orlando rides for toddlers
+    0     1  0.00%  36.0 | seaworld orlando rides list
+    0     1  0.00%  49.0 | seaworld rides for kids
+=== 90d 2026-08-24..2026-11-21 [how many] queries=36 impr=201 clicks=0
+    0    34  0.00%  39.0 | how many rides are at legoland florida
+    0    29  0.00%  31.6 | how may rides are at epcot
+    0    16  0.00%  21.9 | how many theme parks are in orlando
+    0    15  0.00%  19.4 | how many rides are at animal kingdom
+    0     9  0.00%  16.6 | how many amusement parks are in orlando
+    0     9  0.00%  38.0 | how many rides are at epic universe
+    0     9  0.00%  20.7 | how many rides are at magic kingdom
+    0     9  0.00%  26.6 | how many rides at epic universe
+    0     7  0.00%  31.3 | how many parks are in universal orlando
+    0     7  0.00%  27.0 | how many parks in orlando
+    0     7  0.00%  18.4 | how many theme parks are there in orlando
+    0     5  0.00%  16.6 | how many rides will epic universe have
+    0     5  0.00%  20.8 | how many theme parks in orlando
+    0     4  0.00%   8.5 | how many parks are in orlando
+    0     4  0.00%  15.8 | how many parks are in orlando florida
+    0     3  0.00%  28.3 | how many parks at universal orlando
+    0     2  0.00%  36.0 | how many amusement parks in orlando
+    0     2  0.00%  16.0 | how many parks are in universal studios
+    0     2  0.00%  35.0 | how many parks are there in orlando
+    0     2  0.00%  36.0 | how many parks in orlando florida
+    0     2  0.00%  11.0 | how many rides at epcot
+    0     2  0.00%  47.0 | how many rides does epic universe have
+    0     2  0.00%  30.5 | how many roller coasters at epic universe
+    0     2  0.00%  21.5 | how many theme parks are in orlando florida
+    0     2  0.00%  20.0 | how many universal parks are there in orlando
+=== 90d 2026-08-24..2026-11-21 [epic] queries=144 impr=495 clicks=0
+    0    53  0.00%  27.7 | epic universe rides
+    0    32  0.00%  25.8 | universal epic universe rides
+    0    30  0.00%  20.9 | epic universe rides ranked
+    0    25  0.00%  19.7 | epic universe best rides
+    0    21  0.00%  23.3 | epic universe attractions
+    0    18  0.00%  19.3 | epic universe height requirements
+    0    13  0.00%  26.6 | epic universe ride list
+    0    13  0.00%  25.7 | epic universe rides list
+    0    10  0.00%   9.2 | detail epic universe tickets options, package structures, and base pricing rules
+    0     9  0.00%  38.0 | how many rides are at epic universe
+    0     9  0.00%  26.6 | how many rides at epic universe
+    0     8  0.00%  18.4 | rides at epic universe
+    0     7  0.00%  26.6 | one day at epic universe
+    0     6  0.00%  25.5 | advise for epic
+    0     6  0.00%  36.2 | epic universe itinerary
+    0     6  0.00%  16.5 | kids at epic universe
+    0     6  0.00%   7.8 | touring plans epic universe
+    0     5  0.00%  29.4 | best rides at epic universe
+    0     5  0.00%  26.8 | epic universe in one day
+    0     5  0.00%  10.2 | epic universe rides for kids
+    0     5  0.00%  16.6 | how many rides will epic universe have
+    0     5  0.00%  29.0 | things to do in universal epic universe
+    0     5  0.00%  18.4 | what rides will be at universal epic universe
+    0     5  0.00%  20.4 | what rides will be in epic universe
+    0     4  0.00%  27.5 | best rides epic universe

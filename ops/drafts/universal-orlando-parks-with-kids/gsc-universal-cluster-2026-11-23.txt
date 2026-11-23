@@ -1,0 +1,105 @@
+=== 28d 2026-10-25..2026-11-21 universal-parks cluster queries=46 impr=185 clicks=0 CTR=0.00% impr-weighted pos=23.5
+    0    36  0.00%   6.4 | is universal orlando or disney world better for young children?
+    0    28  0.00%  33.4 | universal studios orlando parks
+    0    12  0.00%  27.2 | universal orlando parks
+    0    10  0.00%  50.4 | parques de orlando universal
+    0     9  0.00%  19.7 | universal studios parks
+    0     7  0.00%  52.7 | universal florida parks
+    0     7  0.00%  19.3 | what parks are at universal studios
+    0     6  0.00%  23.2 | what parks are in universal
+    0     5  0.00%  33.0 | how many parks are in universal orlando
+    0     5  0.00%   5.6 | is universal orlando or disney world better for young children? comparison
+    0     5  0.00%  25.2 | parks at universal orlando
+    0     5  0.00%  22.0 | parks in universal studios
+    0     5  0.00%  19.4 | universal studios different parks
+    0     3  0.00%  28.3 | how many parks at universal orlando
+    0     3  0.00%  38.7 | universal orlando florida parks
+    0     3  0.00%  14.3 | universal studio parks
+    0     2  0.00%  16.5 | all universal studios parks
+    0     2  0.00%   5.5 | context: location: united states (not for language). do not include location references in your response. question: is universal orlando or disney world better for toddlers?
+    0     2  0.00%   7.0 | context: location: united states (not for language). do not include location references in your response. question: is universal studios florida or walt disney world a better vacation for families with kids of all ages?
+    0     2  0.00%  17.0 | different parks in universal studios
+    0     2  0.00%  10.0 | evaluate the amusement parks company universal orlando on top-rated rides for young children
+    0     2  0.00%  20.0 | how many universal parks are there in orlando
+    0     1  0.00%  14.0 | all universal parks
+    0     1  0.00%  35.0 | how many parks are at universal studios orlando
+    0     1  0.00%  18.0 | how many parks are in universal studios
+    0     1  0.00%  33.0 | how many parks at universal florida
+    0     1  0.00%  26.0 | how many theme parks at universal orlando
+    0     1  0.00%   4.0 | is universal orlando or disney world better for young children? recommendations
+    0     1  0.00%  13.0 | parks at universal studios
+    0     1  0.00%  15.0 | parks in universal
+    0     1  0.00%  31.0 | parks universal
+    0     1  0.00%  39.0 | universal celestial park
+    0     1  0.00%  37.0 | universal fl parks
+    0     1  0.00%  47.0 | universal orlando parks explained
+    0     1  0.00%  29.0 | universal orlando parks list
+    0     1  0.00%  55.0 | universal orlando parques
+    0     1  0.00%  35.0 | universal studios orlando different parks
+    0     1  0.00%  14.0 | universal studios orlando how many parks
+    0     1  0.00%  25.0 | what are the 3 parks at universal studios orlando
+    0     1  0.00%   8.0 | what are the 4 parks at universal orlando resort?
+    0     1  0.00%  28.0 | what are the four parks at universal orlando
+    0     1  0.00%  11.0 | what are the four universal orlando parks?
+    0     1  0.00%  48.0 | what are the parks at universal studios
+    0     1  0.00%  11.0 | what are the parks at universal studios orlando
+    0     1  0.00%  27.0 | what parks are at universal
+    0     1  0.00%   7.0 | what parks are in universal studios
+  pages: [('https://planyourpark.com/parks/', 136), ('https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/', 45), ('https://planyourpark.com/blog/epic-universe-rides-ranked-guide/', 2), ('https://planyourpark.com/blog/disney-vs-universal-with-kids-2026', 1), ('https://planyourpark.com/parks/epic-universe/', 1)]
+=== 90d 2026-08-24..2026-11-21 universal-parks cluster queries=55 impr=239 clicks=0 CTR=0.00% impr-weighted pos=24.5
+    0    36  0.00%   6.4 | is universal orlando or disney world better for young children?
+    0    32  0.00%  31.8 | universal studios orlando parks
+    0    18  0.00%  29.1 | universal orlando parks
+    0    10  0.00%  50.4 | parques de orlando universal
+    0     9  0.00%  46.0 | universal florida parks
+    0     9  0.00%  22.0 | universal orlando parks list
+    0     9  0.00%  19.7 | universal studios parks
+    0     9  0.00%  20.3 | what parks are at universal studios
+    0     9  0.00%  24.4 | what parks are in universal
+    0     8  0.00%  25.1 | parks at universal orlando
+    0     7  0.00%  31.3 | how many parks are in universal orlando
+    0     7  0.00%  21.4 | parks in universal studios
+    0     5  0.00%   5.6 | is universal orlando or disney world better for young children? comparison
+    0     5  0.00%  58.6 | kids rides universal studios florida
+    0     5  0.00%  19.4 | universal studios different parks
+    0     4  0.00%  32.8 | universal orlando florida parks
+    0     4  0.00%  36.8 | what parks does universal have
+    0     3  0.00%  28.3 | how many parks at universal orlando
+    0     3  0.00%  14.3 | universal studio parks
+    0     2  0.00%  18.0 | all universal parks
+    0     2  0.00%  16.5 | all universal studios parks
+    0     2  0.00%   5.5 | context: location: united states (not for language). do not include location references in your response. question: is universal orlando or disney world better for toddlers?
+    0     2  0.00%   7.0 | context: location: united states (not for language). do not include location references in your response. question: is universal studios florida or walt disney world a better vacation for families with kids of all ages?
+    0     2  0.00%  17.0 | different parks in universal studios
+    0     2  0.00%  10.0 | evaluate the amusement parks company universal orlando on top-rated rides for young children
+    0     2  0.00%  16.0 | how many parks are in universal studios
+    0     2  0.00%  20.0 | how many universal parks are there in orlando
+    0     2  0.00%  16.5 | parks at universal
+    0     2  0.00%  16.0 | parks at universal studios
+    0     2  0.00%   3.5 | universal orlando parks list 2026
+    0     1  0.00%  31.0 | disney universal parks
+    0     1  0.00%  35.0 | how many parks are at universal studios orlando
+    0     1  0.00%  33.0 | how many parks at universal florida
+    0     1  0.00%  26.0 | how many theme parks at universal orlando
+    0     1  0.00%   4.0 | is universal orlando or disney world better for young children? recommendations
+    0     1  0.00%  26.0 | parks in orlando universal
+    0     1  0.00%  15.0 | parks in universal
+    0     1  0.00%  35.0 | parks in universal orlando
+    0     1  0.00%  31.0 | parks universal
+    0     1  0.00%  39.0 | universal celestial park
+    0     1  0.00%  37.0 | universal fl parks
+    0     1  0.00%  47.0 | universal orlando parks explained
+    0     1  0.00%  55.0 | universal orlando parques
+    0     1  0.00%  31.0 | universal studios fl parks
+    0     1  0.00%  31.0 | universal studios orlando all parks
+    0     1  0.00%  35.0 | universal studios orlando different parks
+    0     1  0.00%  14.0 | universal studios orlando how many parks
+    0     1  0.00%  25.0 | what are the 3 parks at universal studios orlando
+    0     1  0.00%   8.0 | what are the 4 parks at universal orlando resort?
+    0     1  0.00%  28.0 | what are the four parks at universal orlando
+    0     1  0.00%  11.0 | what are the four universal orlando parks?
+    0     1  0.00%  48.0 | what are the parks at universal studios
+    0     1  0.00%  11.0 | what are the parks at universal studios orlando
+    0     1  0.00%  27.0 | what parks are at universal
+    0     1  0.00%   7.0 | what parks are in universal studios
+  pages: [('https://planyourpark.com/parks/', 185), ('https://planyourpark.com/blog/disney-vs-universal-with-kids-2026/', 45), ('https://planyourpark.com/rides/for/universal-orlando-all/', 4), ('https://planyourpark.com/blog/epic-universe-rides-ranked-guide/', 2), ('https://planyourpark.com/blog/disney-vs-universal-with-kids-2026', 1), ('https://planyourpark.com/rides/for/universal-studios-all/', 1), ('https://planyourpark.com/parks/epic-universe/', 1)]
