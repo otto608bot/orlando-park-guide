@@ -1,0 +1,27 @@
+{
+ "_createdAt": "2026-03-31T13:59:48Z",
+ "_id": "q5bQv6QFqWcAZeLNaYa8Up",
+ "_rev": "UzjbPEJ4gI65TQn8dUHGWW",
+ "_type": "ride",
+ "_updatedAt": "2026-03-31T17:02:23Z",
+ "accessibility": [
+  "transfer-accessible",
+  "not-pregnant-safe",
+  "dark-ride",
+  "loud-audio",
+  "fog-effects",
+  "sudden-movements"
+ ],
+ "description": "A high-speed chase with the Fast crew",
+ "heightRequirement": 40,
+ "image": null,
+ "name": "Fast & Furious",
+ "park": "Universal Studios Florida",
+ "rideDuration": "5 min",
+ "rideType": "Simulator",
+ "slug": {
+  "_type": "slug",
+  "current": "usf-fast-furious"
+ },
+ "thrillLevel": 3
+}

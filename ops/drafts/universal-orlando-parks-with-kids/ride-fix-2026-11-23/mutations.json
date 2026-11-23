@@ -1,0 +1,91 @@
+[
+ {
+  "createOrReplace": {
+   "_id": "drafts.q5bQv6QFqWcAZeLNaYa8Up",
+   "_type": "ride",
+   "accessibility": [
+    "transfer-accessible",
+    "not-pregnant-safe",
+    "dark-ride",
+    "loud-audio",
+    "fog-effects",
+    "sudden-movements"
+   ],
+   "description": "A high-speed chase with the Fast crew",
+   "heightRequirement": 40,
+   "image": null,
+   "name": "Fast & Furious",
+   "park": "Universal Studios Florida",
+   "rideDuration": "5 min",
+   "rideType": "Simulator",
+   "slug": {
+    "_type": "slug",
+    "current": "usf-fast-furious"
+   },
+   "thrillLevel": 3,
+   "isClosed": true,
+   "closureNote": "Permanently closed. Last day Aug 16, 2026 (closed Aug 17), moved up from the 2027 closure in Universal's Jan 20, 2026 press release, per Universal's passholder notice as reported by Inside Universal (Jul 15 and Aug 17, 2026). No longer on Universal's ride height page, and its official ride page now redirects to the homepage (checked Nov 23, 2026)."
+  }
+ },
+ {
+  "createOrReplace": {
+   "_id": "drafts.q5bQv6QFqWcAZeLNaYa8qq",
+   "_type": "ride",
+   "accessibility": [
+    "transfer-accessible",
+    "not-pregnant-safe",
+    "loud-audio",
+    "sudden-movements"
+   ],
+   "description": "A vertical lift hill coaster with onboard music",
+   "heightRequirement": 51,
+   "image": null,
+   "name": "Hollywood Rip Ride Rockit",
+   "park": "Universal Studios Florida",
+   "rideDuration": "2 min",
+   "rideType": "Coaster",
+   "slug": {
+    "current": "usf-rockit"
+   },
+   "thrillLevel": 5,
+   "isClosed": true,
+   "closureNote": "Permanently closed. Last day Aug 17, 2025, as reported by WDW News Today and Inside Universal (Aug 18, 2025); Universal's Jan 20, 2026 press release calls it \"the former Hollywood Rip Ride Rockit\", being replaced by Fast & Furious: Hollywood Drift in 2027. No longer on Universal's ride height page, and its official ride page now redirects to the homepage (checked Nov 23, 2026)."
+  }
+ },
+ {
+  "createOrReplace": {
+   "_id": "drafts.ride-ioa-caro-seuss-el",
+   "_type": "ride",
+   "name": "Caro-Seuss-el",
+   "park": "Islands of Adventure",
+   "land": "Seuss Landing",
+   "heightRequirement": 0,
+   "rideType": "Carousel",
+   "thrillLevel": 1,
+   "description": "A carousel of Dr. Seuss characters whose eyes blink, ears wiggle and heads turn when you pull the reins. Children under 48 inches need a supervising companion.",
+   "accessibility": [],
+   "slug": {
+    "_type": "slug",
+    "current": "ioa-caro-seuss-el"
+   }
+  }
+ },
+ {
+  "createOrReplace": {
+   "_id": "drafts.ride-usf-kang-kodos-twirl-n-hurl",
+   "_type": "ride",
+   "name": "Kang & Kodos' Twirl 'n' Hurl",
+   "park": "Universal Studios Florida",
+   "land": "Springfield, U.S.A.: Home of The Simpsons",
+   "heightRequirement": 0,
+   "rideType": "Spinner",
+   "thrillLevel": 1,
+   "description": "Pilot your own flying saucer with Kang and Kodos from The Simpsons, swooping up and down as you spin through space. Children under 48 inches need a supervising companion.",
+   "accessibility": [],
+   "slug": {
+    "_type": "slug",
+    "current": "usf-kang-kodos"
+   }
+  }
+ }
+]

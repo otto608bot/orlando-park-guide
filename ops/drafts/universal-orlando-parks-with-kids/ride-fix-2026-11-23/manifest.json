@@ -1,0 +1,50 @@
+[
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYa8Up",
+  "name": "Fast & Furious",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (not listed) + https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/fast-furious-supercharged (redirects to homepage) + https://media.universalparksusa.com/press-releases/trade-universal-orlando-resort-reveals-its-next-blockbuster-attraction-fast-furious-hollywood-drift-a-high-speed-roller-coaster-coming-to-universal-studios-florida-in-2027/ ('will permanently close in 2027') + https://www.insideuniversal.net/2026/08/fast-furious-supercharged-permanently-closes-at-universal-studios-florida/"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYa8Up",
+  "name": "Fast & Furious",
+  "field": "closureNote",
+  "before": null,
+  "after": "Permanently closed. Last day Aug 16, 2026 (closed Aug 17), moved up from the 2027 closure in Universal's Jan 20, 2026 press release, per Universal's passholder notice as reported by Inside Universal (Jul 15 and Aug 17, 2026). No longer on Universal's ride height page, and its official ride page now redirects to the homepage (checked Nov 23, 2026).",
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (not listed) + https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/fast-furious-supercharged (redirects to homepage) + https://media.universalparksusa.com/press-releases/trade-universal-orlando-resort-reveals-its-next-blockbuster-attraction-fast-furious-hollywood-drift-a-high-speed-roller-coaster-coming-to-universal-studios-florida-in-2027/ ('will permanently close in 2027') + https://www.insideuniversal.net/2026/08/fast-furious-supercharged-permanently-closes-at-universal-studios-florida/"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYa8qq",
+  "name": "Hollywood Rip Ride Rockit",
+  "field": "isClosed",
+  "before": null,
+  "after": true,
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (not listed) + https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/hollywood-rip-ride-rockit (redirects to homepage) + https://media.universalparksusa.com/press-releases/trade-universal-orlando-resort-reveals-its-next-blockbuster-attraction-fast-furious-hollywood-drift-a-high-speed-roller-coaster-coming-to-universal-studios-florida-in-2027/ ('Replacing the former Hollywood Rip Ride Rockit') + https://wdwnt.com/2025/08/last-look-hollywood-rip-ride-rockit-universal-studios-florida/"
+ },
+ {
+  "draftId": "drafts.q5bQv6QFqWcAZeLNaYa8qq",
+  "name": "Hollywood Rip Ride Rockit",
+  "field": "closureNote",
+  "before": null,
+  "after": "Permanently closed. Last day Aug 17, 2025, as reported by WDW News Today and Inside Universal (Aug 18, 2025); Universal's Jan 20, 2026 press release calls it \"the former Hollywood Rip Ride Rockit\", being replaced by Fast & Furious: Hollywood Drift in 2027. No longer on Universal's ride height page, and its official ride page now redirects to the homepage (checked Nov 23, 2026).",
+  "source": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements (not listed) + https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/hollywood-rip-ride-rockit (redirects to homepage) + https://media.universalparksusa.com/press-releases/trade-universal-orlando-resort-reveals-its-next-blockbuster-attraction-fast-furious-hollywood-drift-a-high-speed-roller-coaster-coming-to-universal-studios-florida-in-2027/ ('Replacing the former Hollywood Rip Ride Rockit') + https://wdwnt.com/2025/08/last-look-hollywood-rip-ride-rockit-universal-studios-florida/"
+ },
+ {
+  "draftId": "drafts.ride-ioa-caro-seuss-el",
+  "name": "Caro-Seuss-el",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 0,
+  "source": "https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/caro-seuss-el (Seuss Landing, 'No Minimum Height', 'Under 48\" Requires Supervising Companion', Kid Friendly)"
+ },
+ {
+  "draftId": "drafts.ride-usf-kang-kodos-twirl-n-hurl",
+  "name": "Kang & Kodos' Twirl 'n' Hurl",
+  "field": "NEW DOC heightRequirement",
+  "before": null,
+  "after": 0,
+  "source": "https://www.universalorlando.com/web/en/us/things-to-do/rides-attractions/kang-and-kodos-twirl-and-hurl (Springfield, U.S.A., 'No Minimum Height', 'Under 48\" Requires Supervising Companion', Kid Friendly)"
+ }
+]

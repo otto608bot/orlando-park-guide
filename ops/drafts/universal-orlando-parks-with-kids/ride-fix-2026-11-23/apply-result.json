@@ -1,0 +1,21 @@
+{
+ "transactionId": "UmCdGwdZAOvDlOz2lHfWEO",
+ "results": [
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNaYa8Up",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNaYa8qq",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.ride-ioa-caro-seuss-el",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.ride-usf-kang-kodos-twirl-n-hurl",
+   "operation": "create"
+  }
+ ]
+}

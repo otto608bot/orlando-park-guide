@@ -92,6 +92,9 @@
 - [ ] **EPCOT with kids (2026-10-26)** — approve publish of `drafts.blogPost-epcot-with-kids-rides-by-height` + social pack `ops/buffer/epcot-with-kids-2026-10/`; ride finder flags (Soarin' Around the World closed → Across America, missing Journey of Water doc, Living with the Land closed 11-27→12-30) in `ops/drafts/epcot-with-kids/RIDE-FINDER-FLAGS.md`
 - [ ] **GSC token scope regression (2026-10-26)** — `.hermes/google_seo_token.json` rewritten 09:06 CT with read-only scopes only; `scripts/seo_analytics_review.py get_credentials()` writes refreshed creds with readonly SCOPES. Re-auth with webmasters write scope + stop the script from rewriting the token
 
+- [ ] **Universal ride-finder data (2026-11-23)** — Sanity shows Fast & Furious (Supercharged) `q5bQv6QFqWcAZeLNaYa8Up` and Hollywood Rip Ride Rockit `q5bQv6QFqWcAZeLNaYa8qq` as open (neither on Universal's height page); Jurassic Park River Adventure `UzjbPEJ4gI65TQn8dT7iky` closed until Dec 16, 2026 (isClosed null); no docs for Caro-Seuss-el / Kang & Kodos' Twirl 'n' Hurl. Details: `ops/drafts/universal-orlando-parks-with-kids/HEIGHT-MISMATCHES.md`. Drafts only after approval.
+- [ ] **CTR refresh: epic-universe-rides-ranked-guide (2026-11-23)** — Epic rides cluster 409 impr / 0 clicks (28d to 2026-11-21), page 683 impr / 1 click / pos 17.9; title/meta/FAQ pass via draft+approval.
+
 ## P2
 - [ ] Lead magnet PDF + light email welcome (after traffic)  
 - [ ] Reddit/Quora draft engine  

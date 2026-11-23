@@ -1,0 +1,24 @@
+{
+ "_createdAt": "2026-03-31T13:59:52Z",
+ "_id": "q5bQv6QFqWcAZeLNaYa8qq",
+ "_rev": "q5bQv6QFqWcAZeLNabDP2t",
+ "_type": "ride",
+ "_updatedAt": "2026-03-31T17:41:55Z",
+ "accessibility": [
+  "transfer-accessible",
+  "not-pregnant-safe",
+  "loud-audio",
+  "sudden-movements"
+ ],
+ "description": "A vertical lift hill coaster with onboard music",
+ "heightRequirement": 51,
+ "image": null,
+ "name": "Hollywood Rip Ride Rockit",
+ "park": "Universal Studios Florida",
+ "rideDuration": "2 min",
+ "rideType": "Coaster",
+ "slug": {
+  "current": "usf-rockit"
+ },
+ "thrillLevel": 5
+}

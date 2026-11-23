@@ -1,0 +1,14 @@
+{
+ "slug": {
+  "_type": "slug",
+  "current": "universal-orlando-parks-with-kids"
+ },
+ "title": "Universal Orlando Parks with Kids: Which of the 4 to Pick (2026)",
+ "updatedAt": "2026-11-23T15:36:56Z",
+ "bodyChars": 14160,
+ "blockCount": 106,
+ "severity": "ok",
+ "flags": [],
+ "details": [],
+ "url": "https://planyourpark.com/blog/{'_type': 'slug', 'current': 'universal-orlando-parks-with-kids'}/"
+}
