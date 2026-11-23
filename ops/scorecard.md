@@ -23,7 +23,7 @@ Families with kids → choose the right park/rides → return + convert (tickets
 ## Leading indicators this sprint
 - **Watch CTR (utility 2026-08-05 + height landings 2026-09-01):** [height landings hub](https://planyourpark.com/rides/for/under-40/), [MK under-40 landing](https://planyourpark.com/rides/for/magic-kingdom-under-40/), [Disney under-40](https://planyourpark.com/rides/for/disney-world-under-40/), [Disney World 52″](https://planyourpark.com/rides/for/disney-world-52/), [Epic under-40](https://planyourpark.com/rides/for/epic-universe-under-40/), [Epic ranked](https://planyourpark.com/blog/epic-universe-rides-ranked-guide/), [Epic tickets](https://planyourpark.com/blog/epic-universe-tickets-guide/), [parks](https://planyourpark.com/parks/), [packing kids](https://planyourpark.com/blog/disney-world-packing-list-kids/), [Universal heights](https://planyourpark.com/blog/universal-orlando-height-requirements/), [home](https://planyourpark.com/), [rides](https://planyourpark.com/rides/), [deals](https://planyourpark.com/deals/)
 - Preserve earners: [Epic 1-day plan](https://planyourpark.com/blog/epic-universe-1-day-plan/), [MK rides under 40"](https://planyourpark.com/blog/best-magic-kingdom-rides-kids-under-40-inches/), packing kids
-- Amazon live on packing paths (`tag=planyourpark-20`); Undercover Tourist ticket CTAs on commercial pages
+- Amazon live on packing paths (`tag=planyourpar0a-20`); Undercover Tourist ticket CTAs on commercial pages
 - Integrity: **14/14 clean** (reconfirmed 2026-09-22 script)
 - Live blog QA: **14/14 PASS** (2026-09-01 deploy)
 - Buffer channels connected: FB / IG / Pinterest

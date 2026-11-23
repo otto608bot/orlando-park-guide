@@ -27,6 +27,9 @@ export default function AffiliateDisclosurePage() {
         title="Affiliate Disclosure"
         intro="Plan Your Park participates in affiliate programs and may earn commissions from qualifying purchases made through certain links on this site."
       >
+        <p style={{ fontSize: "1.125rem", fontWeight: 600, margin: "0 0 1.5rem" }}>
+          As an Amazon Associate I earn from qualifying purchases.
+        </p>
         <section>
           <h2>What this means</h2>
           <p>
@@ -45,7 +48,7 @@ export default function AffiliateDisclosurePage() {
             </li>
             <li>
               <strong>Packing and gear</strong> — Amazon Associates (
-              <code>tag=planyourpark-20</code>) on packing and gear mentions when those products are
+              <code>tag=planyourpar0a-20</code>) on packing and gear mentions when those products are
               relevant
             </li>
           </ul>

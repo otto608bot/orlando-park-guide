@@ -1,0 +1,838 @@
+{
+ "_createdAt": "2026-03-31T20:32:29Z",
+ "_id": "r5PBb5Nahg2bY9okthycnn",
+ "_rev": "mhyEdxiDDd35ke8IQPp2jA",
+ "_type": "blogPost",
+ "_updatedAt": "2026-10-19T14:32:08Z",
+ "affiliateCTA": "Planning a Disney World trip? We recommend these Amazon products: \n<a href=\"https://www.amazon.com/dp/B005IHT94S?tag=planyourpark-20\">sunscreen</a>, \n<a href=\"https://www.amazon.com/dp/B09KV1QTQ8?tag=planyourpark-20\">a great water bottle</a>, and a \n<a href=\"https://www.amazon.com/dp/B08866RDYK?tag=planyourpark-20\">stroller fan</a> for hot Florida days. \nAs an Amazon Associate, Plan Your Park earns from qualifying purchases.",
+ "author": {
+  "name": "Plan Your Park Team"
+ },
+ "body": [
+  {
+   "_key": "qA3myj3wioIqOqUk24ZD0G",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZD4Q",
+     "_type": "span",
+     "text": "Universal Orlando Height Requirements: Everything You Need to Know"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "261cedb8edd3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a112a9554470",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "8d26e2e7e684",
+     "_type": "span",
+     "marks": [
+      "d7f29c44db42"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "1bdeae50322d",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "d7f29c44db42",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "78b6e60db25b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4c2fea525bdc",
+     "_type": "span",
+     "marks": [],
+     "text": "Quick chart note: the current major thresholds include 34, 36, 40, 42, 44, 48, 51, 52, and 54 inches. This guide highlights representative rides rather than every attraction; verify the official Universal Orlando app and entrance signage for your date."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "35825d7827c1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b2be703d6b77",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Orlando has a wide range of family rides and serious thrill rides, especially after Epic Universe opened in 2025. That makes posted height requirements one of the most important planning details for a mixed-age visit. This is a planning guide, not a substitute for the sign at the attraction: requirements and operating status can change, and the Team Member at the entrance makes the final call."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "de6cfe1a45db",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ef0716fef758",
+     "_type": "span",
+     "marks": [],
+     "text": "Want the list filtered to your kid's height? Use the "
+    },
+    {
+     "_key": "f1033c3cddcb",
+     "_type": "span",
+     "marks": [
+      "fa4891651ecb"
+     ],
+     "text": "Universal Orlando rides for kids under 40 inches"
+    },
+    {
+     "_key": "445432431f37",
+     "_type": "span",
+     "marks": [],
+     "text": ", or jump to the "
+    },
+    {
+     "_key": "7b8b25a44d9e",
+     "_type": "span",
+     "marks": [
+      "4154f4ea94aa"
+     ],
+     "text": "44-inch"
+    },
+    {
+     "_key": "1dc0e6d41752",
+     "_type": "span",
+     "marks": [],
+     "text": " and "
+    },
+    {
+     "_key": "f04207cd017a",
+     "_type": "span",
+     "marks": [
+      "6c92a2c6ba4a"
+     ],
+     "text": "48-inch"
+    },
+    {
+     "_key": "749fa18b0798",
+     "_type": "span",
+     "marks": [],
+     "text": " views in our ride finder. Still deciding between parks? The "
+    },
+    {
+     "_key": "640769a15a8d",
+     "_type": "span",
+     "marks": [
+      "399113150770"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "8c9f2bb22f44",
+     "_type": "span",
+     "marks": [],
+     "text": " compares every Orlando park by height and thrill level."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "fa4891651ecb",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-under-40/"
+    },
+    {
+     "_key": "4154f4ea94aa",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-44/"
+    },
+    {
+     "_key": "6c92a2c6ba4a",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-48/"
+    },
+    {
+     "_key": "399113150770",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZD8a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDCk",
+     "_type": "span",
+     "text": "The Major Universal Orlando Rides by Height Requirement"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDGu",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDL4",
+     "_type": "span",
+     "text": "48 Inches and Up — The World's Scariest Coasters"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "44ba52bee730",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3e28e1db3f85",
+     "_type": "span",
+     "marks": [],
+     "text": "At 48 inches (122 cm), several major thrill rides open up at Universal Orlando. A few headline coasters require more than 48 inches, so do not treat this as an “everything” threshold."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "4fc84ae4f192",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "376c70b145dc",
+     "_type": "span",
+     "marks": [],
+     "text": "Hagrid’s Magical Creatures Motorbike Adventure — 48 inches. This launched coaster has a motorbike-style seat and several surprises, so use the test seat and consider your child’s comfort with speed, darkness, and sudden motion."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6911b01a5d9f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e9753a01a451",
+     "_type": "span",
+     "marks": [],
+     "text": "Jurassic World VelociCoaster — 51 inches. This high-intensity coaster has launches and inversions; it is a separate threshold above 48 inches."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ff27db3cbb56",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "76cac8ffbd4b",
+     "_type": "span",
+     "marks": [],
+     "text": "The Incredible Hulk Coaster — 54 inches. This is the resort’s highest posted height threshold; check the attraction’s current operating status and the entrance sign on your visit."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1b43215c0b63",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2d655901a684",
+     "_type": "span",
+     "marks": [],
+     "text": "Do not plan around Dragon Challenge: that attraction closed in 2017. Use the current Universal Orlando ride list and the official app when choosing today’s coasters."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDPE",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDTO",
+     "_type": "span",
+     "text": "44 Inches — Full Thrill Territory"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "ca74f6616a00",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d8f918470fa5",
+     "_type": "span",
+     "marks": [],
+     "text": "At 44 inches, a child gains a few additional options, but many major rides are set at 48 inches or above. Do not assume a 44-inch child can ride all Harry Potter attractions or the biggest coasters."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "881b4859b176",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4178fc2a290a",
+     "_type": "span",
+     "marks": [],
+     "text": "Harry Potter and the Forbidden Journey — 48 inches. This motion-heavy Hogwarts ride is at Islands of Adventure; Harry Potter and the Escape from Gringotts is a different attraction at Universal Studios Florida with a 42-inch minimum."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "4408a86c1963",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a37874019e2f",
+     "_type": "span",
+     "marks": [],
+     "text": "Despicable Me Minion Mayhem — 40 inches for the motion-simulator seating. A stationary seating option may have different eligibility; confirm at the attraction."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b0aed426360f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cf737d0bb42d",
+     "_type": "span",
+     "marks": [],
+     "text": "TRANSFORMERS: The Ride-3D — 40 inches. It is a 3D motion-based attraction, so consider whether your child enjoys screen-based motion."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "394e333a51bc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8bd4f827aa42",
+     "_type": "span",
+     "marks": [],
+     "text": "Revenge of the Mummy — 48 inches. This indoor launched coaster includes darkness, speed, and sudden motion."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDXY",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDbi",
+     "_type": "span",
+     "text": "40 Inches — The Middle Ground"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "f9195598c910",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "12fba35bd7a1",
+     "_type": "span",
+     "marks": [],
+     "text": "At 40 inches, a meaningful set of family attractions opens, but several major rides remain at 42, 44, 48, 51, 52, or 54 inches."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDfs",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDk2",
+     "_type": "span",
+     "text": "The Amazing Adventures of Spider-Man — 40 inches. One of the best dark ride shooters ever built, at any Universal park. 3D motion simulator with incredible effects. Consistently rated one of the best rides in the world. Essential for any Spider-Man fan."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "308203156a77",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d4bbc11eb1ec",
+     "_type": "span",
+     "marks": [],
+     "text": "Skull Island: Reign of Kong — 36 inches. Kongfrontation was a former Universal Studios Florida attraction; the current Kong ride is at Islands of Adventure."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b69a2844211a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c7b043aea8ac",
+     "_type": "span",
+     "marks": [],
+     "text": "Dudley Do-Right’s Ripsaw Falls — 44 inches. This water ride includes a large drop; expect to get wet."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7ab358a4abb6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fc26a6907f2d",
+     "_type": "span",
+     "marks": [],
+     "text": "Popeye & Bluto’s Bilge-Rat Barges has a posted minimum height; confirm the current sign and app before relying on an older chart. Expect to get wet."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDoC",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZDsM",
+     "_type": "span",
+     "text": "36 Inches — Entry-Level Thrill"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "ca964ef85c03",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "79f3db660002",
+     "_type": "span",
+     "marks": [],
+     "text": "At 36 inches, several family attractions open up. The mix varies by park, so use the official ride list instead of assuming every 36-inch ride is a coaster or a good fit for every child."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZDwW",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZE0g",
+     "_type": "span",
+     "text": "Flight of the Hippogriff — 36 inches. A gentle roller coaster in Hogsmeade at Islands of Adventure. Not scary — great for first-time coaster riders. The theming is excellent and it gives kids the 'I rode a coaster' experience without the intensity."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "0f291e866fd7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9d18d753cb89",
+     "_type": "span",
+     "marks": [],
+     "text": "Storm Force Accelatron has no posted minimum height, though a supervising companion may be required for young guests."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZE4q",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZE90",
+     "_type": "span",
+     "text": "The High in the Sky Seuss Trolley Train Ride — 36 inches. A gentle elevated train ride through Dr. Seuss worlds. Excellent for young kids who need a slower-paced experience."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZEDA",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZEHK",
+     "_type": "span",
+     "text": "34 Inches and Under — What's Left"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "d3ea7dcf8253",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cc097b4efb69",
+     "_type": "span",
+     "marks": [],
+     "text": "Kids under 34 inches still have real options, including attractions with no posted minimum and designated play areas. Caro-Seuss-el and the Me Ship are in Islands of Adventure; check current access and supervision rules before you go."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZELU",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZEPe",
+     "_type": "span",
+     "text": "Height Measurement: The Moment of Truth"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "5ff60262ab48",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0cf144fc84a1",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal measures guests at the attraction and the posted minimum is a safety requirement. If a child does not meet it at the entrance, they cannot ride. Measurements, footwear policies, and companion requirements are handled by the Team Member at the attraction."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9b8aec3634f5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b124c578b28f",
+     "_type": "span",
+     "marks": [],
+     "text": "Measure your child at home as a planning aid, especially if they are close to a cutoff. Treat the park measurement as final; do not build the day around a borderline ride."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "65b84ab92611",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c067d3a1b76b",
+     "_type": "span",
+     "marks": [],
+     "text": "Do not rely on footwear to change eligibility. Use the shoes your child will comfortably wear, and let the attraction Team Member apply the current measurement procedure."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZETo",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZEXy",
+     "_type": "span",
+     "text": "Planning a Universal Trip Around Height Requirements"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "ca02451ad0eb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e1b1489be6a3",
+     "_type": "span",
+     "marks": [],
+     "text": "For mixed-height families, map shared priorities by the shortest rider, then plan a few Child Swap or split-up windows for the taller riders."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f5f0bfedc0b0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "53841bc7ad48",
+     "_type": "span",
+     "marks": [],
+     "text": "With mixed heights, use Child Swap where offered and split up for select rides. Check each attraction’s current policies; single-rider lines are not available at every ride and do not replace the height requirement."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "02dddc6a45be",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "872d36289887",
+     "_type": "span",
+     "marks": [],
+     "text": "One thing many families consider is Universal Express Pass. It can save standby time on eligible attractions, but pricing, eligible rides, and wait-time benefits vary by date and product. Compare the current official options for your dates; do not assume Express applies to every attraction."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZEc8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZEgI",
+     "_type": "span",
+     "text": "What to Bring to Universal Orlando"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZEkS",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZEoc",
+     "_type": "span",
+     "marks": [],
+     "text": "A cooling towel is genuinely essential at Universal — the parks are less shaded than Disney and the thrill rides generate their own excitement-induced heat. Your body temperature goes up on the intense coasters; a cooling towel helps manage that."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZEww",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZF16",
+     "_type": "span",
+     "marks": [],
+     "text": "Your phone needs to be secured — no loose phones in pouches on rides with high speeds, drops, or spinning. A waterproof pouch is the safest bet for any ride — and Universal has water rides (Dudley Do-Right, Popeye's Barges) where a phone in an unsecured pocket is a disaster waiting to happen."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZF9Q",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZFDa",
+     "_type": "span",
+     "marks": [],
+     "text": "Comfortable shoes are non-negotiable. Universal Orlando parks involve serious walking, often on uneven surfaces. Islands of Adventure in particular has significant hills and staircases. A blister on a Universal day will ruin your trip faster than a wait time."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZFLu",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZFQ4",
+     "_type": "span",
+     "marks": [],
+     "text": "A rain poncho is essential — not for weather (though that too), but for the water rides. Dudley Do-Right's and Popeye's Bilge-Rat Barges will absolutely soak you. A Universal Orlando rain poncho worn on those rides means you walk away dry instead of wringing out your shoes."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZFYO",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZFcY",
+     "_type": "span",
+     "marks": [],
+     "text": "A portable phone charger matters at Universal for the same reason it matters at Disney — the apps, photos, and wait time monitoring drain battery fast. With two parks connected by the Hogwarts Express, you're going to want your phone available for navigation and timing."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZFks",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZFp2",
+     "_type": "span",
+     "text": "The Bottom Line"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "b7a17d617aa14",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "sdc4c52072003",
+     "_type": "span",
+     "marks": [],
+     "text": "Mixing parks on one trip? Disney’s short-rider map is different — start with "
+    },
+    {
+     "_key": "s216b4813626d",
+     "_type": "span",
+     "marks": [
+      "l2a68f5a0562c"
+     ],
+     "text": "Magic Kingdom rides for kids under 40 inches"
+    },
+    {
+     "_key": "s459204277de8",
+     "_type": "span",
+     "marks": [],
+     "text": " and compare parks on our "
+    },
+    {
+     "_key": "saedea0422dc5",
+     "_type": "span",
+     "marks": [
+      "lcc651041323c"
+     ],
+     "text": "Orlando parks hub"
+    },
+    {
+     "_key": "s60a51240ec2c",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "l2a68f5a0562c",
+     "_type": "link",
+     "href": "/blog/best-magic-kingdom-rides-kids-under-40-inches/"
+    },
+    {
+     "_key": "lcc651041323c",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZFtC",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZFxM",
+     "_type": "span",
+     "text": "Universal Orlando in 2026 is a serious theme park destination, not a Disney complement. The height requirements reflect that — at 48 inches, you're looking at some of the most intense thrill rides in the world. At 44 inches, you have access to nearly every major ride. At 38 inches, you're more limited but still have real options. Below 34 inches, the play areas become the draw. The key is knowing where your family falls on that spectrum before you go, building your day accordingly, and being honest about whether the 48-inch coaster your 8-year-old is begging for is actually right for them. Universal's thrills are not Disney's thrills. They don't ease you in. When they say 48 inches, they mean it. Plan for that reality."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZG1W",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZG5g",
+     "_type": "span",
+     "text": "As an Amazon Associate, Plan Your Park earns from qualifying purchases."
+    }
+   ],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "qA3myj3wioIqOqUk24ZCw6",
+   "_ref": "q5bQv6QFqWcAZeLNacatl5",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Can your kids ride it? Complete height chart for Islands of Adventure, Universal Studios, and Epic Universe — plan mixed-height family days fast.",
+ "heroImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-197800209e53920f2edd6371ae3c250db9c40b14-1408x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-03-31T00:00:00Z",
+ "readTime": 10,
+ "slug": {
+  "_type": "slug",
+  "current": "universal-orlando-height-requirements"
+ },
+ "tags": [
+  "universal",
+  "height-requirements",
+  "thrill-rides",
+  "kids",
+  "safety"
+ ],
+ "title": "Universal Height Requirements 2026 — Full Ride Chart"
+}

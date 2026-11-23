@@ -48,7 +48,7 @@ Chat: Bennett Telegram DM (gateway). Ops review every 4 days is the standing sco
 | Rail | Status | Notes |
 |---|---|---|
 | Undercover Tourist (CJ) | Active | Primary ticket CTA |
-| Amazon Associates `tag=planyourpark-20` | Active in blog inject | Packing/gear posts |
+| Amazon Associates `tag=planyourpar0a-20` | Active in blog inject | Packing/gear posts |
 | Hotels / cars / more ticket programs | Apply / expand | Ask Bennett only if login/action required |
 | Email (Tally) | Keep for now | Not critical until traffic; revisit after organic lift |
 | Partnerships | Later | Draft outreach only until approved |
