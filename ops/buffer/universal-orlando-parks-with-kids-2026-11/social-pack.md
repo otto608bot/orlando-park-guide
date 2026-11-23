@@ -2,7 +2,7 @@
 Status: **DRAFT. Do not queue, do not shareNow, do not create Buffer posts or ideas.** Nothing was sent to Buffer.
 - The post is a Sanity draft (`drafts.blogPost-universal-orlando-parks-with-kids`) and is **not live yet**. The URLs below 404 until it is published.
 - Use only after Bennett approves publish + queue (via Plan Your Park CEO).
-- **Images:** not generated yet (executor has no image tool). Specs, prompts, alt text and exact target paths are in `README.md`. All art must be new and original for this post.
+- **Images:** generated 2026-11-23, new and original for this post (checked: no text, logos or characters). Files in `images/`; specs and prompts in `README.md`. The hero is set on the Sanity draft.
 - **Instagram bio:** the bio already points to https://planyourpark.com/links/, which updates from Sanity on each deploy. No per-post bio swap is needed.
 
 Slug: `universal-orlando-parks-with-kids` · Campaign: `evergreen-2026-11` (UTM scheme per ops/distribution.md)
@@ -26,8 +26,8 @@ Plus what's closed right now and what's on for Holidays at Universal (Nov 14, 20
 https://planyourpark.com/blog/universal-orlando-parks-with-kids/?utm_source=facebook&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=universal-orlando-parks-with-kids
 
 ## Instagram (planyourparknow)
-**Image:** `images/instagram-1x1.jpg` (1080×1080; to be generated, see README)
-**Alt text:** (final alt text in README; confirm it matches the generated image)
+**Image:** `images/instagram-1x1.jpg` (1080×1080)
+**Alt text:** A laughing child on a parent's shoulders throws both arms up while a sibling points at giant snowflake, star and candy-cane balloons, with palm trees in string lights and a decorated holiday tree behind.
 
 **Caption:**
 Which Universal Orlando park fits your kids? 🎢🎄
@@ -47,14 +47,15 @@ Full guide: link in bio.
 - **Title:** Universal Orlando Parks with Kids: Which of the 4 Parks to Pick
 - **Description:** Universal Orlando has four parks: Universal Studios Florida, Islands of Adventure, Epic Universe and Volcano Bay. See which park fits your kids' heights, which rides have no minimum height, what's closed right now and what's on for Holidays at Universal 2026. Checked on Universal's official pages November 23, 2026.
 - **Board:** **Orlando Theme Parks** (boardServiceId `1106900483355706576`), the existing board used in prior packs. Not re-checked in Buffer (no Buffer API used).
-- **Image:** `images/pin-1000x1500.jpg` (to be generated, see README)
-- **Alt text:** (final alt text in README; confirm it matches the generated image)
+- **Image:** `images/pin-1000x1500.jpg` (1000×1500, center-cropped to 2:3)
+- **Alt text:** A boy with both hands up and a laughing girl ride a spinning teal ride car beside a grinning parent, with palm trees, flowers, a sandstone tower with a teal roof, a bronze ring globe and holiday garlands under a blue sky.
 - **Destination URL:** https://planyourpark.com/blog/universal-orlando-parks-with-kids/?utm_source=pinterest&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=universal-orlando-parks-with-kids
 
 ## Checks
 - [x] UTM matches the approved scheme exactly: `?utm_source={facebook|instagram|pinterest}&utm_medium=social&utm_campaign=evergreen-2026-11&utm_content=universal-orlando-parks-with-kids` (one `?`, `&` separators; verified by script, see below)
 - [x] Heights, dates and closures match the post and Universal's official pages (accessed 2026-11-23)
 - [x] No prices; no baked-in text in image prompts; no Universal/Disney logos or trademarked characters in prompts
-- [ ] Images generated (pending: parent bot)
+- [x] Images generated (new, original; hero set on the Sanity draft with alt text)
+- **Hero alt text (Sanity):** A family of four walks hand in hand along a lagoon promenade toward a bronze ring-globe fountain, with palm trees, holiday garlands on lamp posts, and a sandstone fairytale castle and coaster track at sunset.
 - [ ] Post published (blocked: needs Bennett's approval)
 - [ ] Times confirmed by CEO; not queued

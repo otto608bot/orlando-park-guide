@@ -1,5 +1,5 @@
 # Image specs + prompts: Universal Orlando Parks with Kids: Which of the 4 to Pick (2026)
-Slug: `universal-orlando-parks-with-kids` · Pack written 2026-11-23 · Status: **images NOT generated yet** (the executor has no image tool; the parent bot generates them).
+Slug: `universal-orlando-parks-with-kids` · Pack written 2026-11-23 · Status: **images generated 2026-11-23** (parent bot), saved at the paths below; hero set on the Sanity draft (asset `image-d5e270f9e8cd17bd6cef832de55de15c52813ac1-1376x768-jpg`).
 All art must be **new and original for this post**: never reused or cropped from another post's art (Bennett, Nov 2). Follow `ops/hero-image-style.md`.
 
 ## Exact target files (worktree `/workspace/pyp-wt-2026-11-23`)
@@ -28,7 +28,7 @@ Tall palm trees wrapped in warm string lights and a few red-and-gold holiday gar
 Sky: peach and soft orange sunset glow with light clouds, horizon in the upper third, family in the lower third, globe as the clean focal point near center so a 16:9 card crop keeps it.
 Wide establishing shot, 16:9. No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters, no readable words anywhere.
 ```
-**Alt text (adjust to match the output):** A family of four walks hand in hand along a lagoon promenade toward a bronze globe fountain, with palm trees in holiday lights and a sandstone fairytale castle and coaster track at sunset.
+**Alt text (final, matches the image):** A family of four walks hand in hand along a lagoon promenade toward a bronze ring-globe fountain, with palm trees, holiday garlands on lamp posts, and a sandstone fairytale castle and coaster track at sunset.
 
 ## 2) SOCIAL — Instagram/Facebook 1:1 → 1080×1080 JPG. More fun: a holiday-parade moment of kids' delight
 ```
@@ -39,7 +39,7 @@ Background: palm trees wrapped in warm string lights, a decorated holiday tree i
 Square 1:1 composition, the child's raised arms and face in the upper-center, safe margins on all sides.
 No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters, no readable words.
 ```
-**Alt text (adjust to match the output):** A laughing child on a parent's shoulders throws both arms up as giant snowflake, star and candy-cane balloons float by at a sunny holiday parade lined with palm trees in string lights.
+**Alt text (final, matches the image):** A laughing child on a parent's shoulders throws both arms up while a sibling points at giant snowflake, star and candy-cane balloons, with palm trees in string lights and a decorated holiday tree behind.
 
 ## 3) SOCIAL — Pinterest pin, 9:16 → center-crop to 1000×1500 JPG. A ride-in-motion moment
 ```
@@ -49,7 +49,7 @@ Background: tall palm trees, bright pink and purple flower beds, a small ORIGINA
 Keep the kids and ride car in the center two-thirds so a 2:3 center-crop loses nothing important; leave the top 15% as calm sky.
 No text, no signs, no logos, no brand marks, no cartoon characters, no costumed characters, no fish or Seuss-style shapes, no readable words.
 ```
-**Alt text (adjust to match the output):** Two kids laugh with hands up in a spinning pastel ride car while a parent grins beside them, with palm trees, flowers, a sandstone tower and holiday garlands under a blue sky.
+**Alt text (final, matches the image):** A boy with both hands up and a laughing girl ride a spinning teal ride car beside a grinning parent, with palm trees, flowers, a sandstone tower with a teal roof, a bronze ring globe and holiday garlands under a blue sky.
 
 ## After generating (parent resumes the executor)
 1. Save the three files at the exact paths above (hero resized to 1376×768).

@@ -12,7 +12,7 @@
 - Deliberately NOT included (unverifiable or off-policy): crowd predictions for Christmas week, prices, Express Pass claims, Animal Actors on Location (news reports it closed Nov 2, 2026; not recommended), age-to-height mapping.
 
 ## Open issues for the reviewer
-1. **Images not generated** (no image tool in executor). Specs/prompts/paths in `ops/buffer/universal-orlando-parks-with-kids-2026-11/README.md`. Hero not set on the draft yet (`set_hero.py` ready).
+1. **Images generated** 2026-11-23 (new, original); hero set on the draft (asset `image-d5e270f9e8cd17bd6cef832de55de15c52813ac1-1376x768-jpg`).
 2. **Ride finder data (not fixed; needs approval):** Sanity still shows Fast & Furious (Supercharged) and Hollywood Rip Ride Rockit as open (neither is on Universal's height page); Jurassic Park River Adventure isClosed null while closed until Dec 16, 2026; Caro-Seuss-el and Kang & Kodos' Twirl 'n' Hurl have no ride docs. The `/rides/for/universal-*` pages this post links to show that stale data.
 3. **Dated facts to re-check on publish day:** Volcano Bay reopening (on or before Apr 1, 2027), Jurassic Park River Adventure (to Dec 16), Monsters Unchained (Dec 11–15), 2027 refurb dates, Holidays dates.
 4. Supercharged/Rip Ride Rockit are described only as "no longer on Universal's ride height page" (official), not with closure dates (those come from news sites).
