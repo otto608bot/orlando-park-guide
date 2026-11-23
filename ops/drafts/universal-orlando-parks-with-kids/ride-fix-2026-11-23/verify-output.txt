@@ -1,0 +1,62 @@
+drafts.q5bQv6QFqWcAZeLNaYa8Up | Fast & Furious
+  OK   draft exists
+  OK   draft _type ride
+  OK   isClosed = true
+  OK   closureNote = "Permanently closed. Last day Aug 16, 2026 (closed Aug 17), 
+  OK   published doc identical to pre-apply backup (rev UzjbPEJ4gI65TQn8dUHGWW)
+  OK   published isClosed still unset
+  OK   draft keeps published heightRequirement
+  OK   draft keeps published name
+  OK   draft keeps published park
+  OK   draft keeps published rideType
+  OK   draft keeps published slug
+  OK   closureNote dated (checked Nov 23, 2026)
+drafts.q5bQv6QFqWcAZeLNaYa8qq | Hollywood Rip Ride Rockit
+  OK   draft exists
+  OK   draft _type ride
+  OK   isClosed = true
+  OK   closureNote = "Permanently closed. Last day Aug 17, 2025, as reported by W
+  OK   published doc identical to pre-apply backup (rev q5bQv6QFqWcAZeLNabDP2t)
+  OK   published isClosed still unset
+  OK   draft keeps published heightRequirement
+  OK   draft keeps published name
+  OK   draft keeps published park
+  OK   draft keeps published rideType
+  OK   draft keeps published slug
+  OK   closureNote dated (checked Nov 23, 2026)
+drafts.ride-ioa-caro-seuss-el | Caro-Seuss-el
+  OK   draft exists
+  OK   draft _type ride
+  OK   heightRequirement = 0
+  OK   no published version (new doc)
+  OK   name set
+  OK   park set
+  OK   land set
+  OK   rideType set
+  OK   slug set
+  OK   description set
+  OK   thrillLevel 1
+  OK   closure fields unset
+drafts.ride-usf-kang-kodos-twirl-n-hurl | Kang & Kodos' Twirl 'n' Hurl
+  OK   draft exists
+  OK   draft _type ride
+  OK   heightRequirement = 0
+  OK   no published version (new doc)
+  OK   name set
+  OK   park set
+  OK   land set
+  OK   rideType set
+  OK   slug set
+  OK   description set
+  OK   thrillLevel 1
+  OK   closure fields unset
+drafts.blogPost-universal-orlando-parks-with-kids
+  OK   blog post draft exists
+  OK   blog post has no published version
+  OK   blog post draft unchanged by rechecks (rev bHXamdrlLTlbFGrX8Ok7G6)
+  OK   post states 'April 1, 2027' (matches Nov 23 recheck)
+  OK   post states 'January 5 to December 16, 2026' (matches Nov 23 recheck)
+  OK   post states 'December 11 to December 15, 2026' (matches Nov 23 recheck)
+  OK   post states 'November 14, 2026 to January 3, 2027' (matches Nov 23 recheck)
+  OK   post heroImage set
+ALL OK
