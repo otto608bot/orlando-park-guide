@@ -24,7 +24,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p className="footer-disclaimer">
-            As an Amazon Associate and Undercover Tourist affiliate, we may earn from qualifying purchases.
+            As an Amazon Associate I earn from qualifying purchases. We may also earn from Undercover Tourist and other partner links.
           </p>
           <p className="footer-copyright">
             © {new Date().getFullYear()} PlanYourPark.com

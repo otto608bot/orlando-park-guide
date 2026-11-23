@@ -881,7 +881,7 @@ BODY_MUST_CONTAIN = {
     "/affiliate-disclosure/": [
         "FAQPage",
         "Does Plan Your Park use affiliate links",
-        "planyourpark-20",
+        "planyourpar0a-20",
         "Undercover Tourist",
         "application/ld+json",
     ],

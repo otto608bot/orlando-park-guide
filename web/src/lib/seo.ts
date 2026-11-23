@@ -274,7 +274,7 @@ export function getAffiliateDisclosureJsonLd(): Record<string, unknown> {
             name: "Does Plan Your Park use affiliate links?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. Ticket links (for example Undercover Tourist via CJ) and some packing or gear links (Amazon Associates tag planyourpark-20) may earn a commission if you buy after clicking. There is no extra cost to you.",
+              text: "Yes. Ticket links (for example Undercover Tourist via CJ) and some packing or gear links (Amazon Associates tag planyourpar0a-20) may earn a commission if you buy after clicking. There is no extra cost to you.",
             },
           },
           {

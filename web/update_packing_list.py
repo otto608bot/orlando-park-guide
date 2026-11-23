@@ -65,7 +65,7 @@ body = [
 
     p("Your phone is the single most important item you bring to Disney World in 2026. It serves as your ticket, your Lightning Lane booking device, your map, your mobile food ordering system, and your camera. Here's what you need:"),
 
-    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Lightning Lane bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpark-20"),
+    li("Portable Phone Charger (20,000mAh+) — Your phone dies fast at Disney. Lightning Lane bookings, Lightning Lane photos, mobile ordering, and maps all drain battery. A 20,000mAh power bank lasts two full park days. https://www.amazon.com/s?k=portable+phone+charger+20000mah&tag=planyourpar0a-20"),
     li("USB Charging Cables (2+) — Backup cables for the whole family. Park benches have USB ports at some locations."),
     li("Car Charger — If you're driving to the parks, keep devices charged between destinations."),
     li("USB Charging Cube (Wall Adapter) — Pack a dual-port wall adapter so you can charge two devices simultaneously from your resort room outlet. Most resort rooms have limited outlets near the vanity, not the bed."),
@@ -78,9 +78,9 @@ body = [
 
     p("Orlando summers regularly hit 95°F with 80%+ humidity. Winter daytime temps run 60–75°F but buildings are aggressively air-conditioned. Pack for both scenarios:"),
 
-    li("Insulated Water Bottle (32oz) — Disney allows reusable water bottles. Fill up for free at any quick-service restaurant. An insulated bottle keeps water ice-cold for 8+ hours. https://www.amazon.com/s?k=insulated+water+bottle+park&tag=planyourpark-20"),
-    li("Sunscreen SPF 50+ Lotion — Disney requires SPF 50+ and does not allow spray sunscreen. Pack a lotion-based sunscreen. https://www.amazon.com/s?k=sunscreen+spf+50+lotion&tag=planyourpark-20"),
-    li("Cooling Towel — Soak it in water and drape it around your neck. Keeps you cool in 95-degree lines. https://www.amazon.com/s?k=cooling+towel+disney&tag=planyourpark-20"),
+    li("Insulated Water Bottle (32oz) — Disney allows reusable water bottles. Fill up for free at any quick-service restaurant. An insulated bottle keeps water ice-cold for 8+ hours. https://www.amazon.com/s?k=insulated+water+bottle+park&tag=planyourpar0a-20"),
+    li("Sunscreen SPF 50+ Lotion — Disney requires SPF 50+ and does not allow spray sunscreen. Pack a lotion-based sunscreen. https://www.amazon.com/s?k=sunscreen+spf+50+lotion&tag=planyourpar0a-20"),
+    li("Cooling Towel — Soak it in water and drape it around your neck. Keeps you cool in 95-degree lines. https://www.amazon.com/s?k=cooling+towel+disney&tag=planyourpar0a-20"),
     li("Handheld Fan (USB Rechargeable) — Florida summer is brutal. A USB rechargeable fan is the single best investment for hot afternoon lines."),
     li("UV Protective Sunglasses — Polarized is better. You'll be walking in direct sun for hours."),
     li("Wide-Brim Hat or Visor — Sun protection for your face and neck that your phone hand can manage."),
@@ -96,13 +96,13 @@ body = [
     li("Comfortable Walking Shoes — Athletic shoes or supportive sandals are non-negotiable. Do not break in new shoes at Disney — blisters will ruin your trip."),
     li("Extra Pairs of Socks (2–3 per person) — Your feet will sweat in summer heat and get soaked on water rides. Moisture-wicking athletic socks prevent blisters."),
     li("Lightweight Long-Sleeve Shirt — For spring and winter visits, a sun-protective long-sleeve shirt (UPF 50+) weighs almost nothing and dramatically reduces sunburn."),
-    li("Rain Jacket (Lightweight, Packable) — Florida thunderstorms roll in fast. Ponchos tear in 10mph wind. A compact rain jacket packs small, breathes, and lasts all week. https://www.amazon.com/s?k=packable+rain+jacket&tag=planyourpark-20"),
-    li("Rain Ponchos (20-Pack) — For the whole family at once. Buy in bulk before your trip. https://www.amazon.com/dp/B018THPISO?tag=planyourpark-20"),
+    li("Rain Jacket (Lightweight, Packable) — Florida thunderstorms roll in fast. Ponchos tear in 10mph wind. A compact rain jacket packs small, breathes, and lasts all week. https://www.amazon.com/s?k=packable+rain+jacket&tag=planyourpar0a-20"),
+    li("Rain Ponchos (20-Pack) — For the whole family at once. Buy in bulk before your trip. https://www.amazon.com/dp/B018THPISO?tag=planyourpar0a-20"),
     li("Swim Trunks / Cover-Up — Required for pool days at the resort, which you should have even on park days."),
     li("Stroller Rain Cover — Compact, fits in a backpack pocket. Disney has covered walkways but open-air stroller rides in rain are brutal."),
     li("Change of Clothes (for travel day) — After a long park day, you'll want fresh clothes for the drive or flight home."),
     li("Compression Socks — For flights or long drive days. Helps with circulation on long park days too."),
-    li("Stroller Fan with Clip — Absolute game-changer for summer visits when temps hit 95°F. Clips to the stroller and keeps your kid cool. https://www.amazon.com/s?k=stroller+fan+clip&tag=planyourpark-20"),
+    li("Stroller Fan with Clip — Absolute game-changer for summer visits when temps hit 95°F. Clips to the stroller and keeps your kid cool. https://www.amazon.com/s?k=stroller+fan+clip&tag=planyourpar0a-20"),
 
     h2("Health and First Aid"),
 
@@ -121,8 +121,8 @@ body = [
 
     h2("Organization and Packing"),
 
-    li("Packing Cubes (6-Pack) — Keeps your suitcase organized and makes repacking for departure faster. https://www.amazon.com/s?k=packing+cubes&tag=planyourpark-20"),
-    li("Waterproof Phone Pouch (2-Pack) — For water rides and rainy days. Keeps your phone completely dry. https://www.amazon.com/s?k=waterproof+phone+pouch&tag=planyourpark-20"),
+    li("Packing Cubes (6-Pack) — Keeps your suitcase organized and makes repacking for departure faster. https://www.amazon.com/s?k=packing+cubes&tag=planyourpar0a-20"),
+    li("Waterproof Phone Pouch (2-Pack) — For water rides and rainy days. Keeps your phone completely dry. https://www.amazon.com/s?k=waterproof+phone+pouch&tag=planyourpar0a-20"),
     li("Small Backpack or Daypack — You'll want a dedicated park bag. Disney is flexible with bag sizes. Note: some rides require bags to fit in lockers — a smaller bag is better than a large one."),
     li("Ziplock Bags (Various Sizes) — Keeps electronics dry, organizes snacks, contains trash."),
     li("Laundry Bag or Garment Pouch — Keeps worn clothes separate from clean ones in your resort room."),
@@ -160,7 +160,7 @@ body = [
 
     p("Traveling with kids changes the packing equation. These items are specifically for families with young children:"),
 
-    li("Stroller Fan with Clip — Keeps your kid cool in summer heat. Absolute game-changer. https://www.amazon.com/s?k=stroller+fan+clip&tag=planyourpark-20"),
+    li("Stroller Fan with Clip — Keeps your kid cool in summer heat. Absolute game-changer. https://www.amazon.com/s?k=stroller+fan+clip&tag=planyourpar0a-20"),
     li("Stroller Blanket — Park buildings and restaurants are aggressively air-conditioned. Have a light blanket for napping kids and cold theater shows."),
     li("Autograph Book and Pen — For character meet-and-greets. Pack a clipboard so kids have a hard surface to write on in lines."),
     li("Diaper Cream and Wet Wipes — Disney restrooms have changing stations but wipes dry out fast in Florida heat. Pack more than you think you need."),

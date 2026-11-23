@@ -55,7 +55,9 @@ export default function BlogContentUrlProcessor({ children }: { children: React.
           const link = document.createElement('a');
           link.href = url;
           link.target = '_blank';
-          link.rel = 'noopener noreferrer';
+          link.rel = url.includes('amazon.com')
+            ? 'noopener noreferrer sponsored'
+            : 'noopener noreferrer';
           link.className = 'inline-link';
           // Use clean display text for Amazon URLs, otherwise show clean truncated URL
           if (url.includes('amazon.com')) {

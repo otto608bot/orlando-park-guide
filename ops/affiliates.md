@@ -5,7 +5,7 @@
 | Program | Status | Where used | Notes |
 |---|---|---|---|
 | Undercover Tourist (CJ) | **Active** | `web/src/config/affiliate-links.ts`, park CTAs, blog | Primary ticket revenue |
-| Amazon Associates | **Active** | `tag=planyourpark-20` via `web/src/components/blogAffiliates.tsx` | Search links; packing/gear |
+| Amazon Associates | **Active** | `tag=planyourpar0a-20` via `web/src/components/blogAffiliates.tsx` | Search links; packing/gear |
 
 ## Apply / expand (Phase 1–2)
 
@@ -23,6 +23,6 @@
 - Track which URLs drive clicks once analytics allow (UTM on major CTAs later)
 
 ## Open work
-- [ ] Verify Amazon Associates central still active for `planyourpark-20`  
+- [ ] Amazon Associates tag swap to `planyourpar0a-20` prepared 2026-11-23 (drafts + PR); still needs Bennett approval to publish and deploy  
 - [ ] Inventory all ticket CTAs on top posts  
 - [ ] Add hotel/car programs after first content needing them  

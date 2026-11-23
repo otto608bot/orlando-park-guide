@@ -1,0 +1,37 @@
+{
+ "transactionId": "fdARc5vwRCfZlS3Imedaj5",
+ "results": [
+  {
+   "id": "drafts.blogPost-animal-kingdom-with-kids-rides-by-height",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.blogPost-disney-world-rides-for-toddlers-and-preschoolers",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNacauDO",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.r5PBb5Nahg2bY9okthych9",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.blogPost-epcot-with-kids-rides-by-height",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.blogPost-magic-kingdom-with-kids-rides-by-height",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.q5bQv6QFqWcAZeLNacaufh",
+   "operation": "create"
+  },
+  {
+   "id": "drafts.r5PBb5Nahg2bY9okthycnn",
+   "operation": "create"
+  }
+ ]
+}

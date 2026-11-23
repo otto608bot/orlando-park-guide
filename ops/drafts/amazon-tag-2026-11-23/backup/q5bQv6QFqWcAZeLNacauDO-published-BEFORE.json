@@ -1,0 +1,557 @@
+{
+ "_createdAt": "2026-03-31T20:32:26Z",
+ "_id": "q5bQv6QFqWcAZeLNacauDO",
+ "_rev": "2UmNz8ycICQZgVjJKJBieg",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-03T02:50:31Z",
+ "affiliateCTA": "Planning a Disney World trip? We recommend these Amazon products: \n<a href=\"https://www.amazon.com/dp/B005IHT94S?tag=planyourpark-20\">sunscreen</a>, \n<a href=\"https://www.amazon.com/dp/B09KV1QTQ8?tag=planyourpark-20\">a great water bottle</a>, and a \n<a href=\"https://www.amazon.com/dp/B08866RDYK?tag=planyourpark-20\">stroller fan</a> for hot Florida days. \nAs an Amazon Associate, Plan Your Park earns from qualifying purchases.",
+ "author": {
+  "name": "Plan Your Park Team"
+ },
+ "body": [
+  {
+   "_key": "h250qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s51qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom Rides for Kids Under 40 Inches"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "p52qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s53qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A child who is just under 40 inches can still have a full Magic Kingdom day. The important part is to build the plan around rides they can actually board, rather than promising rides they are not tall enough for yet."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "p54qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s55qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Height rules are enforced at the attraction entrance. Re-measure close to travel and confirm the official requirement on Universal or Disney’s site and in the park app; attractions and operating procedures can change."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h256qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s57qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "The Key Height Breaks"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "bullet58qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s59qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "No height requirement: many Fantasyland, Adventureland and classic Tomorrowland rides are available to the whole family."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet5aqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5bqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "32 inches: Tomorrowland Speedway is an option for eligible children."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet5cqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5dqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "35 inches: The Barnstormer becomes available."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet5eqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5fqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "38 inches: Seven Dwarfs Mine Train and Big Thunder Mountain Railroad become available."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet5gqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5hqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "40 inches: Tiana’s Bayou Adventure becomes available, so it is not an option for a child below 40 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "h25iqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5jqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Best Picks Below 40 Inches"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "h35kqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5lqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Peter Pan’s Flight"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "p5mqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5nqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A classic family dark ride with no height requirement. It is a strong early priority if it matters to your group, but use the official app on the day rather than assuming a particular wait."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h35oqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5pqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "The Many Adventures of Winnie the Pooh"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "p5qqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5rqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A gentle dark ride with no height requirement and a good fit for preschoolers who need a break from louder attractions."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h35sqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5tqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "“it’s a small world”"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "p5uqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5vqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A no-height boat ride and a useful cool-down stop when little legs need a seated attraction."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h35wqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5xqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Jungle Cruise, Dumbo and The Magic Carpets of Aladdin"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "p5yqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s5zqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "All are no-height options with distinct appeal: a slow boat ride, a classic spinner and a family-favorite flying ride. Choose by interest and energy rather than forcing every one."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h360qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s61qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "The Barnstormer and Seven Dwarfs Mine Train"
+    }
+   ],
+   "style": "h3"
+  },
+  {
+   "_key": "p62qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s63qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "For children who meet the posted threshold, The Barnstormer (35 inches), Seven Dwarfs Mine Train (38 inches), and Big Thunder Mountain Railroad (38 inches) are the coaster choices under 40 inches. All three can feel bigger than their height rule suggests, so judge the child—not only the measurement."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h264qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s65qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Rides to Save for 40 Inches or Taller"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "p66qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s67qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Tiana’s Bayou Adventure requires 40 inches, Space Mountain requires 44 inches, and TRON Lightcycle / Run requires 48 inches. Do not treat a near-miss as negotiable; Disney measures at the entrance."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "dedf61dff452",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ee9101e45052",
+     "_type": "span",
+     "marks": [],
+     "text": "Closure note (updated November 2, 2026): "
+    },
+    {
+     "_key": "7eda14f4c48a",
+     "_type": "span",
+     "marks": [
+      "997c979dd0be"
+     ],
+     "text": "Disney says Tiana's Bayou Adventure"
+    },
+    {
+     "_key": "f64390a53326",
+     "_type": "span",
+     "marks": [],
+     "text": " is temporarily closed for routine refurbishment starting November 2, 2026, and is expected to reopen in December 2026. If your trip falls in that window, plan around it and check the My Disney Experience app before you go."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "997c979dd0be",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/attractions/magic-kingdom/tianas-bayou-adventure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "h268qaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s69qaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A Low-Stress One-Day Plan"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "bullet6aqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6bqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "At opening, choose one high-priority no-height ride and one 35- or 38-inch ride if your child qualifies."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet6cqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6dqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Use late morning for nearby classics rather than zig-zagging across the park."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet6eqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6fqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Schedule a real midday break: a seated attraction, a meal or a hotel/pool reset."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "bullet6gqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6hqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "For Disney’s current paid line-skip service, consider Lightning Lane Multi Pass and Lightning Lane Single Pass only after checking the attractions and return windows available for your date."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "h26iqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6jqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Use the Live Filter Before Park Day"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "p6uqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6kqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "Open our "
+    },
+    {
+     "_key": "s6mqaB",
+     "_type": "span",
+     "marks": [
+      "link6lqaB"
+     ],
+     "text": "Magic Kingdom ride finder preset for 40 inches"
+    },
+    {
+     "_key": "s6nqaB",
+     "_type": "span",
+     "marks": [],
+     "text": " to see the current ride list, then pair it with the "
+    },
+    {
+     "_key": "s6pqaB",
+     "_type": "span",
+     "marks": [
+      "link6oqaB"
+     ],
+     "text": "Disney World kids packing list"
+    },
+    {
+     "_key": "s6qqaB",
+     "_type": "span",
+     "marks": [],
+     "text": ". Planning Universal too? Read the "
+    },
+    {
+     "_key": "s6sqaB",
+     "_type": "span",
+     "marks": [
+      "link6rqaB"
+     ],
+     "text": "Universal height requirements guide"
+    },
+    {
+     "_key": "s6tqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "link6lqaB",
+     "_type": "link",
+     "href": "/rides/?height=40&parks=Magic%20Kingdom"
+    },
+    {
+     "_key": "link6oqaB",
+     "_type": "link",
+     "href": "/blog/disney-world-packing-list-kids/"
+    },
+    {
+     "_key": "link6rqaB",
+     "_type": "link",
+     "href": "/blog/universal-orlando-height-requirements/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "p6vqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6wqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "A great Magic Kingdom day with a shorter child is about realistic priorities, shade and breaks. The classics are classics for a reason—let them be the main event."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "p6xqaB",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "s6yqaB",
+     "_type": "span",
+     "marks": [],
+     "text": "As an Amazon Associate and affiliate partner, Plan Your Park may earn from qualifying purchases at no extra cost to you."
+    }
+   ],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "yXET3SHVid8KwVG5S1dxKl",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "The best Magic Kingdom rides for kids under 40 inches, with accurate height breaks and a low-stress family plan.",
+ "heroImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-2dc58633c84ea9d17915c45b2acac353ec8009e4-1408x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-03-31T00:00:00Z",
+ "readTime": 8,
+ "slug": {
+  "_type": "slug",
+  "current": "best-magic-kingdom-rides-kids-under-40-inches"
+ },
+ "tags": [
+  "magic-kingdom",
+  "kids",
+  "height-requirements",
+  "family",
+  "rides"
+ ],
+ "testField": "Affiliate link test",
+ "title": "Best Magic Kingdom Rides for Kids Under 40 Inches"
+}
