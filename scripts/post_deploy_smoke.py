@@ -167,7 +167,7 @@ TITLE_MUST_CONTAIN = {
     "/parks/legoland-florida/": "LEGOLAND Florida with Kids",
     "/blog/": "Families",  # staged blog hub is family-oriented
     "/deals/": "Ticket Deals for Families",
-    "/character-dining/": "Character Dining with Kids",
+    "/character-dining/": "Character Dining List (2026)",
     "/rides/": "Ride Finder",
     "/rides/for/under-40/": 'Under 40',
     "/rides/for/magic-kingdom-under-40/": "Magic Kingdom",

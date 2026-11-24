@@ -1,7 +1,8 @@
 import React from 'react';
 /**
  * Keyword-based affiliate link injection for blog post text.
- * Amazon search links (/s?k=) — stable, tag=planyourpar0a-20.
+ * Amazon links use tag=planyourpar0a-20. Product picks use /dp/ASIN;
+ * remaining unmatched keywords still use search URLs.
  *
  * Rules (2026-07-23):
  * - Prefer long, specific product phrases only
@@ -24,23 +25,23 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['sunscreen spf 70+', 'sunscreen spf 70', 'sunscreen lotion', 'sunscreen'],
-    url: 'https://www.amazon.com/s?k=sunscreen+spf+70+lotion+disney+world&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B004CDQ73K?tag=planyourpar0a-20',
   },
   {
     keywords: ['stroller fan with clip', 'usb stroller fan', 'stroller fan'],
-    url: 'https://www.amazon.com/s?k=usb+stroller+fan+clip+disney&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B085L71L9R?tag=planyourpar0a-20',
   },
   {
     keywords: ['portable phone charger', 'portable charger', 'phone charger', 'power bank'],
-    url: 'https://www.amazon.com/s?k=portable+phone+charger+20000mah+disney&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B0DT12DNVF?tag=planyourpar0a-20',
   },
   {
     keywords: ['lightweight rain poncho', 'full-coverage rain poncho', 'rain poncho', 'disposable poncho'],
-    url: 'https://www.amazon.com/s?k=rain+poncho+20+pack+disney+world&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B0CP74JJ3Z?tag=planyourpar0a-20',
   },
   {
     keywords: ['cooling towel', 'cooling neck gaiter'],
-    url: 'https://www.amazon.com/s?k=cooling+towel+disney+world+hot+weather&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B08L5LXKGW?tag=planyourpar0a-20',
   },
   {
     keywords: ['baby carrier', 'ergonomic carrier'],
@@ -52,7 +53,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['insulated water bottle', 'reusable water bottle', 'water bottle'],
-    url: 'https://www.amazon.com/s?k=insulated+water+bottle+32oz+disney+world&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B0BG6NRL86?tag=planyourpar0a-20',
   },
   {
     keywords: ['disney princess dress', 'princess dress'],
@@ -60,7 +61,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['autograph book for kids', 'autograph book', 'disney autograph'],
-    url: 'https://www.amazon.com/s?k=disney+autograph+book+for+kids&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B0FZYMW236?tag=planyourpar0a-20',
   },
   {
     keywords: ['disney magic band', 'magic band', 'magicband'],
@@ -68,7 +69,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['blister prevention', 'blister pads', 'moleskin'],
-    url: 'https://www.amazon.com/s?k=moleskin+blister+pads+disney+world&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B077TKLJ8T?tag=planyourpar0a-20',
   },
   {
     keywords: ['travel snacks', 'granola bars', 'protein bars', 'snack bars'],
@@ -80,7 +81,7 @@ export const blogAffiliateLinks: AffiliateLink[] = [
   },
   {
     keywords: ['waterproof phone pouch or dry bag', 'waterproof phone pouch', 'waterproof phone case'],
-    url: 'https://www.amazon.com/s?k=waterproof+phone+pouch+disney+world&tag=planyourpar0a-20',
+    url: 'https://www.amazon.com/dp/B0BTHVCV49?tag=planyourpar0a-20',
   },
   {
     keywords: ['portable bluetooth speaker', 'portable speaker', 'travel speaker'],

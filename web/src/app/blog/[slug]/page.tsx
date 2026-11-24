@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import NewsletterForm from "@/components/NewsletterForm";
+import AmazonProductModule from "@/components/AmazonProductModule";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
 import QuestionForm from "@/components/QuestionForm";
@@ -368,6 +369,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="blog-hero">
           <img src={post.heroImage?.asset?.url || getFallbackHero(post)} alt={post.heroImage?.alt || post.title || "Plan Your Park blog hero"} />
         </div>
+
+        <AmazonProductModule slug={slug} />
 
         <BlogContentUrlProcessor>
           <PortableText value={post.body as any} components={components} />
