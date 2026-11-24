@@ -6,9 +6,11 @@ import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 import AmazonProductModule from "@/components/AmazonProductModule";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
-import { processTextWithAffiliates } from "@/components/blogAffiliates";
+import { processTextWithAffiliates, textHasAffiliateKeyword } from "@/components/blogAffiliates";
 import {
+  AMAZON_DISCLOSURE,
   AMAZON_LINK_REL,
+  findAmazonModuleAfterHeading,
   getAmazonTagForSlug,
   isAmazonUrl,
   resolveAmazonHref,
@@ -195,6 +197,42 @@ function renderProcessedText(children: ReactNode | undefined, slug: string) {
   return processTextWithAffiliates(children, slug);
 }
 
+function plainReactText(node: ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(plainReactText).join("");
+  if (typeof node === "object" && node && "props" in node) {
+    return plainReactText((node as { props?: { children?: ReactNode } }).props?.children);
+  }
+  return "";
+}
+
+function portableBlockText(block: { children?: { text?: string }[] } | undefined): string {
+  return (block?.children || []).map((child) => child.text || "").join("");
+}
+
+function findFirstAffiliateBlockKey(body: unknown, slug: string): string | null {
+  if (!Array.isArray(body)) return null;
+  for (const block of body) {
+    if (!block || typeof block !== "object") continue;
+    const item = block as {
+      _type?: string;
+      _key?: string;
+      markDefs?: { href?: string }[];
+      children?: { text?: string }[];
+    };
+    if (item._type !== "block" || !item._key) continue;
+    const hrefs = (item.markDefs || []).map((mark) => mark.href).filter(Boolean) as string[];
+    if (hrefs.some((href) => isAmazonUrl(href) && resolveAmazonHref(href, slug))) {
+      return item._key;
+    }
+    if (textHasAffiliateKeyword(portableBlockText(item))) {
+      return item._key;
+    }
+  }
+  return null;
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const { post, related, helpfulLinks, contextualTicketCta } = await getPostData(slug);
@@ -213,13 +251,55 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   // Continue <ol> numbering across heading-split list groups within this post render.
   let nextOrderedListStart = 1;
+  const firstAffiliateBlockKey = findFirstAffiliateBlockKey(post.body, slug);
+  const disclosure = { shown: false };
+  let pendingHeading: string | null = null;
+
+  function disclosureIfBlock(value?: { _key?: string }) {
+    if (disclosure.shown || !firstAffiliateBlockKey || value?._key !== firstAffiliateBlockKey) {
+      return null;
+    }
+    disclosure.shown = true;
+    return <p className="amp-disclosure amp-disclosure--inline">{AMAZON_DISCLOSURE}</p>;
+  }
+
+  function flushPendingModule() {
+    if (!pendingHeading) return null;
+    const module = findAmazonModuleAfterHeading(slug, pendingHeading);
+    pendingHeading = null;
+    if (!module) return null;
+    const showDisclosure = !disclosure.shown;
+    if (showDisclosure) disclosure.shown = true;
+    return <AmazonProductModule module={module} showDisclosure={showDisclosure} />;
+  }
+
+  function FlushPendingAmazonModule() {
+    return flushPendingModule();
+  }
+
+  function renderHeading(
+    Tag: "h2" | "h3",
+    children?: ReactNode,
+    value?: { _key?: string; children?: { text?: string }[] } | any,
+  ) {
+    const text = portableBlockText(value) || plainReactText(children);
+    const flushed = flushPendingModule();
+    pendingHeading = text;
+    return (
+      <>
+        {flushed}
+        <Tag>{renderProcessedText(children, slug)}</Tag>
+        {disclosureIfBlock(value)}
+      </>
+    );
+  }
 
   const components = {
     block: {
       // Headings + lists carry most packing/gear product phrases — process them too.
-      h2: ({ children }: { children?: ReactNode }) => <h2>{renderProcessedText(children, slug)}</h2>,
-      h3: ({ children }: { children?: ReactNode }) => <h3>{renderProcessedText(children, slug)}</h3>,
-      normal: ({ children }: { children?: ReactNode }) => {
+      h2: ({ children, value }: any) => renderHeading("h2", children, value),
+      h3: ({ children, value }: any) => renderHeading("h3", children, value),
+      normal: ({ children, value }: { children?: ReactNode; value?: { _key?: string } }) => {
         let ticketText: string | null = null;
 
         if (typeof children === "string") {
@@ -240,12 +320,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           );
         }
 
-        return <p>{renderProcessedText(children, slug)}</p>;
+        return (
+          <>
+            <p>{renderProcessedText(children, slug)}</p>
+            {disclosureIfBlock(value)}
+          </>
+        );
       },
-      blockquote: ({ children }: { children?: ReactNode }) => (
-        <blockquote>
-          <p>{renderProcessedText(children, slug)}</p>
-        </blockquote>
+      blockquote: ({ children, value }: { children?: ReactNode; value?: { _key?: string } }) => (
+        <>
+          <blockquote>
+            <p>{renderProcessedText(children, slug)}</p>
+          </blockquote>
+          {disclosureIfBlock(value)}
+        </>
       ),
     },
     marks: {
@@ -309,12 +397,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     listItem: {
       // Do not re-run affiliate processing on the whole <li> (marks already handled) —
       // double-processing was mangling titles down to a single linked keyword.
-      bullet: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
-      number: ({ children }: { children?: ReactNode }) => <li>{children}</li>,
+      bullet: ({ children, value }: { children?: ReactNode; value?: { _key?: string } }) => (
+        <li>
+          {children}
+          {disclosureIfBlock(value)}
+        </li>
+      ),
+      number: ({ children, value }: { children?: ReactNode; value?: { _key?: string } }) => (
+        <li>
+          {children}
+          {disclosureIfBlock(value)}
+        </li>
+      ),
     },
     types: {
-      span: ({ value }: { value?: { text?: string } }) =>
-        value?.text ? <p>{renderProcessedText(value.text, slug)}</p> : null,
+      span: ({ value }: { value?: { text?: string; _key?: string } }) =>
+        value?.text ? (
+          <>
+            <p>{renderProcessedText(value.text, slug)}</p>
+            {disclosureIfBlock(value)}
+          </>
+        ) : null,
     },
   };
 
@@ -392,10 +495,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <img src={post.heroImage?.asset?.url || getFallbackHero(post)} alt={post.heroImage?.alt || post.title || "Plan Your Park blog hero"} />
         </div>
 
-        <AmazonProductModule slug={slug} />
-
         <BlogContentUrlProcessor>
           <PortableText value={post.body as any} components={components} />
+          <FlushPendingAmazonModule />
         </BlogContentUrlProcessor>
 
         <section className="blog-helpful-links">

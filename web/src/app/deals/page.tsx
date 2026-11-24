@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
-import AmazonProductModule from "@/components/AmazonProductModule";
+import { AmazonProductModules } from "@/components/AmazonProductModule";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { createPageMetadata, getDealsJsonLd } from "@/lib/seo";
 
@@ -264,9 +264,13 @@ export default function DealsPage() {
         </div>
       </section>
 
-      {/* Amazon Gear Section — product cards from amazon-products.ts */}
+      {/* Amazon gear: compact mid-page groups, same picks as the packing lists */}
       <section className="gear-section" id="park-gear">
-        <AmazonProductModule slug="deals" />
+        <div className="gear-header">
+          <h2>Park-ready gear</h2>
+          <p>The same products we recommend in our packing lists, grouped by how you would use them.</p>
+        </div>
+        <AmazonProductModules slug="deals" />
       </section>
 
       {/* Money-Saving Tips */}

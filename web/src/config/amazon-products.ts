@@ -54,13 +54,21 @@ export type AmazonProduct = {
   asin: string;
 };
 
-export type AmazonModuleVariant = "pick-list" | "gear-box" | "deals-grid";
+export type AmazonModuleVariant = "compact" | "deals-group";
 
 export type AmazonModule = {
+  /** Stable id for React keys and preview checks. */
+  id: string;
   slug: string;
+  /**
+   * Place the box after the article section whose heading matches
+   * this string (normalized). Omit on /deals groups, which are
+   * rendered mid-page in a fixed slot.
+   */
+  afterHeading?: string;
   variant: AmazonModuleVariant;
   title: string;
-  intro: string;
+  intro?: string;
   productIds: AmazonProductId[];
 };
 
@@ -158,70 +166,156 @@ export const KIDS_PACK_IDS: AmazonProductId[] = [
 ];
 
 export const AMAZON_MODULES: AmazonModule[] = [
+  // Family packing list: 3 compact boxes, mid-article, no top-of-page list.
   {
+    id: "pack-power",
     slug: "disney-world-packing-list",
-    variant: "pick-list",
-    title: "What we'd actually pack",
-    intro: "A short list of specific products we would put in the bag for a Disney World trip with kids. The full checklist follows.",
-    productIds: FAMILY_PACK_IDS,
+    afterHeading: "Electronics and Chargers",
+    variant: "compact",
+    title: "Power and phone picks",
+    intro: "A charger that lasts a park day, and a pouch for water rides and rain.",
+    productIds: ["anker-zolo-20k", "hiearcool-pouch-2pk"],
   },
   {
+    id: "pack-heat",
+    slug: "disney-world-packing-list",
+    afterHeading: "Sun Protection and Hydration",
+    variant: "compact",
+    title: "Heat and sun picks",
+    intro: "What we would actually put in the bag for a hot Orlando day.",
+    productIds: [
+      "stroller-fan-amacool",
+      "frogg-toggs-chilly-pad",
+      "thinkbaby-spf50",
+      "hydroflask-32oz",
+    ],
+  },
+  {
+    id: "pack-kids",
+    slug: "disney-world-packing-list",
+    afterHeading: "Essentials for Babies and Toddlers",
+    variant: "compact",
+    title: "Little-kid picks",
+    intro: "A compact stroller and an autograph book for character stops.",
+    productIds: ["stroller-3dlite", "autograph-castle"],
+  },
+  // Kids packing list: 3 compact boxes after the matching checklist sections.
+  {
+    id: "pack-kids-essentials",
     slug: "disney-world-packing-list-kids",
-    variant: "pick-list",
-    title: "What we'd actually pack",
-    intro: "Specific products we would pack for a Disney World trip with kids, including ear muffs for fireworks and loud shows. The full checklist follows.",
-    productIds: KIDS_PACK_IDS,
+    afterHeading: "Essentials Every Kid Needs at Disney World",
+    variant: "compact",
+    title: "Heat, rain, and water picks",
+    intro: "The kid-list items we would actually order ahead.",
+    productIds: [
+      "thinkbaby-spf50",
+      "frogg-toggs-chilly-pad",
+      "cloudten-ponchos-4pk",
+      "hydroflask-32oz",
+    ],
   },
   {
+    id: "pack-kids-toddler",
+    slug: "disney-world-packing-list-kids",
+    afterHeading: "Packing for Kids Ages 2-4",
+    variant: "compact",
+    title: "Picks for ages 2 to 4",
+    intro: "A stroller, a clip-on fan, and muffs for loud shows.",
+    productIds: ["stroller-3dlite", "stroller-fan-amacool", "prohear-032-kids"],
+  },
+  {
+    id: "pack-kids-school",
+    slug: "disney-world-packing-list-kids",
+    afterHeading: "Packing for Kids Ages 5-8",
+    variant: "compact",
+    title: "Picks for ages 5 to 8",
+    intro: "A charger, a dry bag for splash rides, and an autograph book.",
+    productIds: ["anker-zolo-20k", "hiearcool-pouch-2pk", "autograph-castle"],
+  },
+  // /deals: mid-page, three compact groups instead of one large grid.
+  {
+    id: "deals-heat",
     slug: "deals",
-    variant: "deals-grid",
-    title: "Park-ready gear",
-    intro: "The same products we recommend on our packing lists, so you can order ahead and have them at home or at your hotel before you go.",
-    productIds: FAMILY_PACK_IDS,
+    variant: "deals-group",
+    title: "Heat and sun",
+    intro: "Gear we recommend on our packing lists for hot park days.",
+    productIds: [
+      "stroller-fan-amacool",
+      "frogg-toggs-chilly-pad",
+      "thinkbaby-spf50",
+      "hydroflask-32oz",
+    ],
   },
   {
+    id: "deals-rain",
+    slug: "deals",
+    variant: "deals-group",
+    title: "Rain and water rides",
+    intro: "A family poncho pack and a phone pouch for storms and splash rides.",
+    productIds: ["cloudten-ponchos-4pk", "hiearcool-pouch-2pk"],
+  },
+  {
+    id: "deals-park",
+    slug: "deals",
+    variant: "deals-group",
+    title: "Park-day basics",
+    intro: "The stroller, charger, blister kit, and autograph book from our lists.",
+    productIds: [
+      "stroller-3dlite",
+      "anker-zolo-20k",
+      "bandaid-proheal",
+      "autograph-castle",
+    ],
+  },
+  // Other posts: one compact box mid-article, next to a practical section.
+  {
+    id: "toddler-tips",
     slug: "disney-world-rides-for-toddlers-and-preschoolers",
-    variant: "gear-box",
+    afterHeading: "Practical Tips for Riding With Little Kids",
+    variant: "compact",
     title: "Worth packing for a toddler park day",
-    intro: "A short list of gear that makes a Disney day with a toddler or preschooler easier.",
     productIds: [
       "stroller-3dlite",
       "stroller-fan-amacool",
       "prohear-032-kids",
       "thinkbaby-spf50",
-      "autograph-castle",
     ],
   },
   {
+    id: "baby-stroller",
     slug: "disney-world-with-baby-toddler",
-    variant: "gear-box",
-    title: "Worth packing with a baby or toddler",
-    intro: "A few specific items that help on long, hot park days with little ones.",
-    productIds: [
-      "stroller-3dlite",
-      "stroller-fan-amacool",
-      "thinkbaby-spf50",
-      "cloudten-ponchos-4pk",
-    ],
+    afterHeading: "The Stroller Question: Bring Your Own",
+    variant: "compact",
+    title: "Stroller picks",
+    productIds: ["stroller-3dlite", "stroller-fan-amacool"],
   },
   {
+    id: "baby-dressing",
+    slug: "disney-world-with-baby-toddler",
+    afterHeading: "Dressing Your Toddler for Disney",
+    variant: "compact",
+    title: "Sun and rain picks",
+    productIds: ["thinkbaby-spf50", "cloudten-ponchos-4pk"],
+  },
+  {
+    id: "mk-heat",
     slug: "magic-kingdom-with-kids-rides-by-height",
-    variant: "gear-box",
+    afterHeading: "Heat, Crowds, and Safety Tips",
+    variant: "compact",
     title: "Worth packing for a Magic Kingdom day",
-    intro: "Heat, afternoon storms, and water rides show up on a typical Magic Kingdom itinerary.",
     productIds: [
       "stroller-fan-amacool",
       "frogg-toggs-chilly-pad",
       "cloudten-ponchos-4pk",
       "anker-zolo-20k",
-      "hiearcool-pouch-2pk",
     ],
   },
   {
+    id: "epcot-weather",
     slug: "epcot-with-kids-rides-by-height",
-    variant: "gear-box",
+    afterHeading: "Walking, Weather and Safety Tips",
+    variant: "compact",
     title: "Worth packing for an EPCOT day",
-    intro: "A short park-day kit for heat, storms, and a phone that needs to last.",
     productIds: [
       "stroller-fan-amacool",
       "frogg-toggs-chilly-pad",
@@ -230,10 +324,11 @@ export const AMAZON_MODULES: AmazonModule[] = [
     ],
   },
   {
+    id: "ak-heat",
     slug: "animal-kingdom-with-kids-rides-by-height",
-    variant: "gear-box",
+    afterHeading: "Heat, Shade and Safety Tips",
+    variant: "compact",
     title: "Worth packing for an Animal Kingdom day",
-    intro: "Animal Kingdom is a walking park with little shade in places. These help.",
     productIds: [
       "stroller-fan-amacool",
       "frogg-toggs-chilly-pad",
@@ -242,10 +337,11 @@ export const AMAZON_MODULES: AmazonModule[] = [
     ],
   },
   {
+    id: "universal-tips",
     slug: "universal-orlando-parks-with-kids",
-    variant: "gear-box",
+    afterHeading: "Practical Tips for Universal with Little Kids",
+    variant: "compact",
     title: "Worth packing for a Universal day",
-    intro: "A short list for heat, storms, and the water rides at Universal Orlando.",
     productIds: [
       "stroller-3dlite",
       "cloudten-ponchos-4pk",
@@ -254,24 +350,47 @@ export const AMAZON_MODULES: AmazonModule[] = [
     ],
   },
   {
+    id: "universal-bring",
     slug: "universal-orlando-height-requirements",
-    variant: "gear-box",
+    afterHeading: "What to Bring to Universal Orlando",
+    variant: "compact",
     title: "Worth packing for a Universal park day",
-    intro: "A few items that help on a long day moving between Universal's parks.",
-    productIds: [
-      "anker-zolo-20k",
-      "frogg-toggs-chilly-pad",
-      "cloudten-ponchos-4pk",
-    ],
+    productIds: ["anker-zolo-20k", "frogg-toggs-chilly-pad", "cloudten-ponchos-4pk"],
   },
 ];
 
-const MODULES_BY_SLUG: Record<string, AmazonModule> = Object.fromEntries(
-  AMAZON_MODULES.map((module) => [module.slug, module]),
+function normalizeHeading(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[’']/g, "'")
+    .replace(/[–—]/g, "-")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+const MODULES_BY_SLUG: Record<string, AmazonModule[]> = AMAZON_MODULES.reduce(
+  (acc, module) => {
+    (acc[module.slug] ||= []).push(module);
+    return acc;
+  },
+  {} as Record<string, AmazonModule[]>,
 );
 
-export function getAmazonModule(slug: string): AmazonModule | undefined {
-  return MODULES_BY_SLUG[slug];
+export function getAmazonModulesForSlug(slug: string): AmazonModule[] {
+  return MODULES_BY_SLUG[slug] ?? [];
+}
+
+export function findAmazonModuleAfterHeading(
+  slug: string,
+  heading: string,
+): AmazonModule | undefined {
+  const needle = normalizeHeading(heading);
+  if (!needle) return undefined;
+  return getAmazonModulesForSlug(slug).find((module) => {
+    if (!module.afterHeading) return false;
+    const target = normalizeHeading(module.afterHeading);
+    return needle === target || needle.startsWith(target);
+  });
 }
 
 export function getAmazonProduct(id: AmazonProductId): AmazonProduct {

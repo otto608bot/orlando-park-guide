@@ -135,6 +135,11 @@ function segmentize(text: string): Segment[] {
   return segments;
 }
 
+/** True if this text would receive a catalog product link. */
+export function textHasAffiliateKeyword(text: string): boolean {
+  return segmentize(text).some((seg) => Boolean(seg.productId));
+}
+
 /**
  * Process text content and return React nodes with at most one affiliate link.
  * Does not recurse into already-built React elements (avoids double-linking).

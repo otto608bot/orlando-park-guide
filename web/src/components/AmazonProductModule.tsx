@@ -2,98 +2,92 @@ import {
   AMAZON_DISCLOSURE,
   AMAZON_LINK_REL,
   amazonProductUrl,
-  getAmazonModule,
+  getAmazonModulesForSlug,
   getAmazonTagForSlug,
   productsForModule,
-  type AmazonModuleVariant,
+  type AmazonModule,
   type AmazonProduct,
 } from "@/config/amazon-products";
 
-const CTA_LABEL: Record<AmazonModuleVariant, string> = {
-  "pick-list": "View on Amazon",
-  "gear-box": "View on Amazon",
-  "deals-grid": "Order on Amazon",
-};
-
 function ProductLink({
   product,
-  variant,
   tag,
 }: {
   product: AmazonProduct;
-  variant: AmazonModuleVariant;
   tag: string;
 }) {
   const href = amazonProductUrl(product.asin, tag);
-  const cta = CTA_LABEL[variant];
 
-  if (variant === "deals-grid") {
-    return (
+  return (
+    <li className="amp-item">
       <a
         href={href}
         target="_blank"
         rel={AMAZON_LINK_REL}
-        className="amp-card"
+        className="amp-item-link"
         data-amazon-tag={tag}
       >
-        <div className="amp-card-info">
-          <h3>{product.name}</h3>
-          <p>{product.why}</p>
-        </div>
-        <span className="amp-cta">{cta} →</span>
-      </a>
-    );
-  }
-
-  return (
-    <li className="amp-item">
-      <a href={href} target="_blank" rel={AMAZON_LINK_REL} className="amp-item-link" data-amazon-tag={tag}>
-        <span className="amp-item-name">{product.name}</span>
+        <span className="amp-item-row">
+          <span className="amp-item-name">{product.name}</span>
+          <span className="amp-cta">View →</span>
+        </span>
         <span className="amp-item-why">{product.why}</span>
-        <span className="amp-cta">{cta} →</span>
       </a>
     </li>
   );
 }
 
 type Props = {
-  slug: string;
+  module: AmazonModule;
+  showDisclosure?: boolean;
 };
 
-export default function AmazonProductModule({ slug }: Props) {
-  const module = getAmazonModule(slug);
-  if (!module) return null;
-
+export default function AmazonProductModule({ module, showDisclosure = false }: Props) {
   const products = productsForModule(module);
-  const tag = getAmazonTagForSlug(slug);
-  const isGrid = module.variant === "deals-grid";
+  const tag = getAmazonTagForSlug(module.slug);
 
   return (
     <aside
       className={`amp amp--${module.variant}`}
-      aria-labelledby={`amp-title-${module.slug}`}
+      aria-labelledby={`amp-title-${module.id}`}
       data-amazon-module={module.variant}
       data-amazon-slug={module.slug}
+      data-amazon-box={module.id}
+      data-amazon-after={module.afterHeading || ""}
       data-amazon-tag={tag}
     >
       <div className="amp-header">
-        <h2 id={`amp-title-${module.slug}`}>{module.title}</h2>
-        <p>{module.intro}</p>
+        <h2 id={`amp-title-${module.id}`}>{module.title}</h2>
+        {module.intro ? <p>{module.intro}</p> : null}
       </div>
-      {isGrid ? (
-        <div className="amp-grid">
-          {products.map((product) => (
-            <ProductLink key={product.id} product={product} variant={module.variant} tag={tag} />
-          ))}
-        </div>
-      ) : (
-        <ol className="amp-list">
-          {products.map((product) => (
-            <ProductLink key={product.id} product={product} variant={module.variant} tag={tag} />
-          ))}
-        </ol>
-      )}
-      <p className="amp-disclosure">{AMAZON_DISCLOSURE}</p>
+      <ol className="amp-list">
+        {products.map((product) => (
+          <ProductLink key={product.id} product={product} tag={tag} />
+        ))}
+      </ol>
+      {showDisclosure ? <p className="amp-disclosure">{AMAZON_DISCLOSURE}</p> : null}
     </aside>
+  );
+}
+
+type ListProps = {
+  slug: string;
+  showDisclosureOnFirst?: boolean;
+};
+
+/** Render every catalog box for a slug (used on /deals). */
+export function AmazonProductModules({ slug, showDisclosureOnFirst = true }: ListProps) {
+  const modules = getAmazonModulesForSlug(slug);
+  if (!modules.length) return null;
+  return (
+    <div className="amp-groups" data-amazon-slug={slug}>
+      {modules.map((module, index) => (
+        <AmazonProductModule
+          key={module.id}
+          module={module}
+          showDisclosure={showDisclosureOnFirst && index === 0}
+        />
+      ))}
+    </div>
   );
 }
