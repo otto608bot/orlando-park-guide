@@ -1,0 +1,1216 @@
+{
+ "_createdAt": "2026-10-19T14:32:08Z",
+ "_id": "blogPost-animal-kingdom-with-kids-rides-by-height",
+ "_rev": "UmCdGwdZAOvDlOz2lHjZv5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-23T16:32:52Z",
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "body": [
+  {
+   "_key": "22646b7369e7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7ae3eb8d6c68",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "df015b95c2f2",
+     "_type": "span",
+     "marks": [
+      "89988b3dd0a0"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "b318c3cbce94",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "89988b3dd0a0",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "ec9d92e682a9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fe72ddb1ee58",
+     "_type": "span",
+     "marks": [],
+     "text": "Is Animal Kingdom Good for Kids?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "fd42e4dddc76",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ee869f413c43",
+     "_type": "span",
+     "marks": [],
+     "text": "Yes — Animal Kingdom is one of the easiest Disney World parks for mixed-age families, because most of what it does best has no height requirement at all. Animal trails, a safari ride, a gentle boat ride, a train and live shows work for babies, preschoolers and grandparents alike. The trade-off is a shorter list of rides than Magic Kingdom, and only three attractions with a height minimum."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e85ea0584520",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c6107fde36d4",
+     "_type": "span",
+     "marks": [],
+     "text": "That makes height the first thing to check. Below, every current Animal Kingdom ride and major attraction is sorted by the official minimum height listed on Disney's attraction pages (checked October 16, 2026). Rules can change, so re-check close to your trip. Want the list filtered automatically? Open our "
+    },
+    {
+     "_key": "b2c64f953377",
+     "_type": "span",
+     "marks": [
+      "cbd9816653f6"
+     ],
+     "text": "Animal Kingdom rides for kids under 40 inches"
+    },
+    {
+     "_key": "c4043861e7a6",
+     "_type": "span",
+     "marks": [],
+     "text": " in the ride finder."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "cbd9816653f6",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "74adcfc059f2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7e90e8acc750",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom Ride Heights at a Glance"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "c2619f1b277b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f9783dc9b9f6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Any height:"
+    },
+    {
+     "_key": "8239b6579684",
+     "_type": "span",
+     "marks": [],
+     "text": " Kilimanjaro Safaris, Na'vi River Journey, Wildlife Express Train, Gorilla Falls Exploration Trail, Maharajah Jungle Trek, Discovery Island Trails, Conservation Station, Zootopia: Better Zoogether! (show)"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3b0d661e3f39",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5043c63183c1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches (97 cm):"
+    },
+    {
+     "_key": "8118fc9ac8e3",
+     "_type": "span",
+     "marks": [],
+     "text": " Kali River Rapids"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "254009483be1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fa3959c40766",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches (112 cm):"
+    },
+    {
+     "_key": "371fbd8f4e9b",
+     "_type": "span",
+     "marks": [],
+     "text": " Avatar Flight of Passage, Expedition Everest"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f9324a04db81",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2b4e225b5fd1",
+     "_type": "span",
+     "marks": [],
+     "text": "Source: official Walt Disney World attraction pages, accessed October 16, 2026. See the "
+    },
+    {
+     "_key": "1b1d73fb231e",
+     "_type": "span",
+     "marks": [
+      "ae82a616f2fd"
+     ],
+     "text": "44-inch Animal Kingdom list"
+    },
+    {
+     "_key": "b1bb550a98b4",
+     "_type": "span",
+     "marks": [],
+     "text": " and the "
+    },
+    {
+     "_key": "75184180617d",
+     "_type": "span",
+     "marks": [
+      "1218563833b2"
+     ],
+     "text": "48-inch view"
+    },
+    {
+     "_key": "cd74b088bcfe",
+     "_type": "span",
+     "marks": [],
+     "text": " in the ride finder."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "ae82a616f2fd",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-44/"
+    },
+    {
+     "_key": "1218563833b2",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-48/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "0503ec342550",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1c7cb6ed6823",
+     "_type": "span",
+     "marks": [],
+     "text": "What Changed in 2026: DinoLand Is Closed"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "26a8ecfe6462",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1e4f8b7e1eea",
+     "_type": "span",
+     "marks": [],
+     "text": "If you are reading older guides, note that DinoLand U.S.A. is gone. WDWMagic reported that TriceraTop Spin closed in January 2025 and The Boneyard playground on September 2, 2025 (WDWMagic, Sep 2, 2025), and that DINOSAUR's last day was February 1, 2026 (WDWMagic, Sep 2, 2025; WDW News Today, Feb 2, 2026). It's Tough to be a Bug! also closed after its final shows on March 16, 2025 (WDWMagic, Mar 14, 2025), and its theater now hosts Zootopia: Better Zoogether!. The DinoLand area is being rebuilt as Tropical Americas; check Disney's official site for current opening timing. Finding Nemo: The Big Blue… and Beyond! is a separate theater show; check the park's entertainment schedule for current times."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ef098f79254e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b27e573424dd",
+     "_type": "span",
+     "marks": [],
+     "text": "Best Animal Kingdom Rides for Kids Under 38 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "3b29ffba1071",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b568286a429e",
+     "_type": "span",
+     "marks": [],
+     "text": "Kids this age can do more of Animal Kingdom than any other Disney park. Start here:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "df3f998ba856",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a95b43ae4026",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kilimanjaro Safaris"
+    },
+    {
+     "_key": "e2d5bce1227b",
+     "_type": "span",
+     "marks": [],
+     "text": " — an open-sided truck ride through a savanna with giraffes, elephants and more. No height requirement, and it is often the highlight for animal-loving preschoolers. Early in the day can be a good time to ride."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eb009cefa975",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7c4f8603ded4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Na'vi River Journey"
+    },
+    {
+     "_key": "a6f39f45b6b1",
+     "_type": "span",
+     "marks": [],
+     "text": " — a slow, dark-ish boat ride through Pandora's glowing rainforest. Any height. Some young kids find dark rides spooky, so preview it if your child is sensitive."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "95f42c06ebbd",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f7f673402540",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Wildlife Express Train"
+    },
+    {
+     "_key": "1b1a27f9cf74",
+     "_type": "span",
+     "marks": [],
+     "text": " — a short train to Rafiki's Planet Watch and Conservation Station, a good indoor-ish break."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6fe8fba62da5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b959706b33dc",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gorilla Falls Exploration Trail and Maharajah Jungle Trek"
+    },
+    {
+     "_key": "63e12eb0bb17",
+     "_type": "span",
+     "marks": [],
+     "text": " — walk-at-your-own-pace trails with gorillas, tigers and birds. Easy to do with a stroller."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d18fc0bc43f8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c98326567c05",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Zootopia: Better Zoogether!"
+    },
+    {
+     "_key": "9ddae9529b1b",
+     "_type": "span",
+     "marks": [],
+     "text": " — a seated indoor show in the Tree of Life Theater, useful for a midday reset."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "22407a77b06a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9bd47dbd0172",
+     "_type": "span",
+     "marks": [],
+     "text": "For calmer kids, the ride finder's "
+    },
+    {
+     "_key": "7613928c0307",
+     "_type": "span",
+     "marks": [
+      "0f852366b528"
+     ],
+     "text": "calm Animal Kingdom picks under 40 inches"
+    },
+    {
+     "_key": "1ec72dcc34b9",
+     "_type": "span",
+     "marks": [],
+     "text": " skips anything with drops or sudden motion."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "0f852366b528",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-calm-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "ff097c42e9b6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fcf6c876b9be",
+     "_type": "span",
+     "marks": [],
+     "text": "Rides for Kids 38 to 43 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "9353dc0119ec",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dfc681f72237",
+     "_type": "span",
+     "marks": [],
+     "text": "At 38 inches, "
+    },
+    {
+     "_key": "942cb3079d86",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kali River Rapids"
+    },
+    {
+     "_key": "1d9a02675f0d",
+     "_type": "span",
+     "marks": [],
+     "text": " opens up. It is a round raft that spins through rapids, and you will get wet — sometimes very wet. Pack a poncho or a change of clothes, and plan it for the warmest part of the day. Everything in the \"any height\" list still applies."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2c9064164def",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4173ab7a5d49",
+     "_type": "span",
+     "marks": [],
+     "text": "Rides for Kids 44 Inches and Up"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "6a8c8f6575fb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "95a0cae40113",
+     "_type": "span",
+     "marks": [],
+     "text": "At 44 inches, two headliners open up:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f426b30e8f83",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "db969b8e7559",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Avatar Flight of Passage"
+    },
+    {
+     "_key": "9857e73da7b3",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 3D flying simulator on a motorbike-style seat. It is intense for some kids because of the motion, height illusion and 3D effects, even though it does not have drops in the coaster sense."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b7d372b9c068",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f9dfa2dd6f51",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Expedition Everest"
+    },
+    {
+     "_key": "898950fe257b",
+     "_type": "span",
+     "marks": [],
+     "text": " — a roller coaster with a backward section and a large drop. It is the park's biggest thrill ride; check your child's comfort with coasters first."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dc4e8d775f4f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6d72fc83352e",
+     "_type": "span",
+     "marks": [],
+     "text": "If one child is too short or not interested, Disney's "
+    },
+    {
+     "_key": "a09e246e298c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Rider Switch"
+    },
+    {
+     "_key": "ec60e4b9517a",
+     "_type": "span",
+     "marks": [],
+     "text": " lets one adult wait with the child while the other adult rides, then swap without waiting in line again (see Disney's Rider Switch page for current rules)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b4e280e2b172",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6d296eba0c35",
+     "_type": "span",
+     "marks": [],
+     "text": "A Simple Half-Day Plan for Kids Under 40 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "912d682f2e9f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e46ff587c1e0",
+     "_type": "span",
+     "marks": [],
+     "text": "Arrive near park opening and head to "
+    },
+    {
+     "_key": "eaa53273167d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kilimanjaro Safaris"
+    },
+    {
+     "_key": "ae22cc41cf19",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dc20a5890921",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "33193d09a371",
+     "_type": "span",
+     "marks": [],
+     "text": "Walk "
+    },
+    {
+     "_key": "58830cb2a562",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gorilla Falls Exploration Trail"
+    },
+    {
+     "_key": "0c0f08fd230f",
+     "_type": "span",
+     "marks": [],
+     "text": " nearby."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c15f06d5c16d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6218cc6e3bfb",
+     "_type": "span",
+     "marks": [],
+     "text": "Cross to Pandora for "
+    },
+    {
+     "_key": "29c1bbd9450b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Na'vi River Journey"
+    },
+    {
+     "_key": "32a77635b621",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "72a982b5cfab",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "91ef55b4b686",
+     "_type": "span",
+     "marks": [],
+     "text": "Take a seated break at "
+    },
+    {
+     "_key": "dbeb90a6b878",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Zootopia: Better Zoogether!"
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "102d2d1a411e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4f028814364e",
+     "_type": "span",
+     "marks": [],
+     "text": "Finish with "
+    },
+    {
+     "_key": "449a9a274c87",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Maharajah Jungle Trek"
+    },
+    {
+     "_key": "f1646241da05",
+     "_type": "span",
+     "marks": [],
+     "text": " or the "
+    },
+    {
+     "_key": "9a2c376f6062",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Wildlife Express Train"
+    },
+    {
+     "_key": "cb8b37b4c524",
+     "_type": "span",
+     "marks": [],
+     "text": " to Conservation Station."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7e625fd05d14",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0d1269cc3c9a",
+     "_type": "span",
+     "marks": [],
+     "text": "Older kids (44\"+) can add Flight of Passage and Expedition Everest, ideally with Lightning Lane or at quieter times. Check current Lightning Lane options and prices in the My Disney Experience app, since they vary by date."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e87e1779e7b7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6402c4b0d240",
+     "_type": "span",
+     "marks": [],
+     "text": "Heat, Shade and Safety Tips"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "34504f323286",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ceeda4fe1599",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom has long outdoor walks and Orlando summers are hot and humid. Plan shade and water breaks, bring refillable bottles, and use indoor shows to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor — Disney lists First Aid in every Walt Disney World theme park."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a355b28a317d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7dcfe8f1c6dd",
+     "_type": "span",
+     "marks": [],
+     "text": "Useful gear (affiliate links may apply): a "
+    },
+    {
+     "_key": "3ec7878e9df9",
+     "_type": "span",
+     "marks": [
+      "9192a376ede0"
+     ],
+     "text": "cooling towel"
+    },
+    {
+     "_key": "6a3adf595ab4",
+     "_type": "span",
+     "marks": [],
+     "text": ", a "
+    },
+    {
+     "_key": "52031b3791bf",
+     "_type": "span",
+     "marks": [
+      "91d7a84a6a97"
+     ],
+     "text": "kids' rain poncho"
+    },
+    {
+     "_key": "6136bdb6ba27",
+     "_type": "span",
+     "marks": [],
+     "text": " for Kali River Rapids, and a "
+    },
+    {
+     "_key": "7bf3b2b5ad12",
+     "_type": "span",
+     "marks": [
+      "0511280b7333"
+     ],
+     "text": "stroller fan"
+    },
+    {
+     "_key": "b8e1c422963e",
+     "_type": "span",
+     "marks": [],
+     "text": ". Our "
+    },
+    {
+     "_key": "04f38ae30536",
+     "_type": "span",
+     "marks": [
+      "3912e23113d8"
+     ],
+     "text": "Disney World packing list for kids"
+    },
+    {
+     "_key": "6ab6bed3ce43",
+     "_type": "span",
+     "marks": [],
+     "text": " has the full checklist."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "9192a376ede0",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "91d7a84a6a97",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "0511280b7333",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=stroller+fan&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "3912e23113d8",
+     "_type": "link",
+     "href": "/blog/disney-world-packing-list-kids/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "4ce22d34b72d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7cf7a137e6df",
+     "_type": "span",
+     "marks": [],
+     "text": "Is Animal Kingdom Worth It With Toddlers?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "5486cf341d59",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9bed881fcc74",
+     "_type": "span",
+     "marks": [],
+     "text": "For many families, yes — especially as a lighter day between bigger parks. If your kids are mostly under 38 inches, Animal Kingdom gives them nearly full access. If your trip is short, compare it with the other parks in our "
+    },
+    {
+     "_key": "cc1d58cb7791",
+     "_type": "span",
+     "marks": [
+      "4fe003103aa9"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "e66afb092fc3",
+     "_type": "span",
+     "marks": [],
+     "text": ", or read our "
+    },
+    {
+     "_key": "b122bf104395",
+     "_type": "span",
+     "marks": [
+      "b61b947e3fef"
+     ],
+     "text": "Animal Kingdom park guide"
+    },
+    {
+     "_key": "0a2f6e5f1f1a",
+     "_type": "span",
+     "marks": [],
+     "text": ". Families with babies may also like our "
+    },
+    {
+     "_key": "e539054663b9",
+     "_type": "span",
+     "marks": [
+      "f5e6b4910696"
+     ],
+     "text": "Disney World with a baby or toddler guide"
+    },
+    {
+     "_key": "306a1d5cfac3",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "4fe003103aa9",
+     "_type": "link",
+     "href": "/parks/"
+    },
+    {
+     "_key": "b61b947e3fef",
+     "_type": "link",
+     "href": "/parks/animal-kingdom/"
+    },
+    {
+     "_key": "f5e6b4910696",
+     "_type": "link",
+     "href": "/blog/disney-world-with-baby-toddler/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "5005be185e2b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f6291151de75",
+     "_type": "span",
+     "marks": [],
+     "text": "Tickets"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "f10bf81e5d11",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0572b0756ee0",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom is included with standard Disney World park tickets. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our "
+    },
+    {
+     "_key": "f2f57b8ceb3e",
+     "_type": "span",
+     "marks": [
+      "268a68e3dd26"
+     ],
+     "text": "Disney World deals page"
+    },
+    {
+     "_key": "4bf04024ba98",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "268a68e3dd26",
+     "_type": "link",
+     "href": "/deals/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "22a88324d936",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "437c1f493f18",
+     "_type": "span",
+     "marks": [],
+     "text": "FAQ"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "5195f7e91cd5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1c64b2fee23f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Avatar Flight of Passage?"
+    },
+    {
+     "_key": "06ba404d64c0",
+     "_type": "span",
+     "marks": [],
+     "text": " 44 inches (112 cm), per Disney's official attraction page (accessed Oct 16, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "09c38f65d9bc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9a0611dad188",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Expedition Everest?"
+    },
+    {
+     "_key": "0dfa10ff0521",
+     "_type": "span",
+     "marks": [],
+     "text": " 44 inches (112 cm)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9008b8d29d34",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "55f23f7bc853",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Kali River Rapids?"
+    },
+    {
+     "_key": "eb500218d528",
+     "_type": "span",
+     "marks": [],
+     "text": " 38 inches (97 cm)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ce45fd154714",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9d1c4a55c346",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What can a 3-year-old do at Animal Kingdom?"
+    },
+    {
+     "_key": "113f51fdeaed",
+     "_type": "span",
+     "marks": [],
+     "text": " Kilimanjaro Safaris, Na'vi River Journey, the Wildlife Express Train, the animal trails and the shows all have no height requirement. See all of them in the "
+    },
+    {
+     "_key": "5a231deae112",
+     "_type": "span",
+     "marks": [
+      "ad6a622ad5c7"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "9f8cc0e1fab1",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "ad6a622ad5c7",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-all/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "bd063f4ae697",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "892190d865b1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Is DINOSAUR still open?"
+    },
+    {
+     "_key": "aa152a70fe92",
+     "_type": "span",
+     "marks": [],
+     "text": " No. WDWMagic and WDW News Today reported that DINOSAUR's last day was February 1, 2026, as DinoLand U.S.A. closed for the Tropical Americas project."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "151d5f8d0b8e",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Animal Kingdom with kids, sorted by height: which rides work under 38, 38–43 and 44+ inches, the best no-height-limit picks, and a calm half-day plan. Heights checked Oct 2026.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "Family with two young kids walking a jungle path past thatched-roof huts and a giant tree at golden hour",
+  "asset": {
+   "_ref": "image-f81fa497f85fd275949281cb30e3e5ad93b60607-1376x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-10-19T15:00:00Z",
+ "readTime": 5,
+ "slug": {
+  "_type": "slug",
+  "current": "animal-kingdom-with-kids-rides-by-height"
+ },
+ "tags": [
+  "Animal Kingdom with kids",
+  "Animal Kingdom rides for kids",
+  "Disney World height requirements",
+  "Animal Kingdom"
+ ],
+ "title": "Animal Kingdom with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)"
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import AmazonProductModule from "@/components/AmazonProductModule";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import { createPageMetadata, getDealsJsonLd } from "@/lib/seo";
 
@@ -13,78 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 
 const SPONSORED_REL = "noopener noreferrer sponsored" as const;
 
-const gearItems = [
-  {
-    id: "travel-adapter",
-    name: "Travel Adapter",
-    description: "Universal adapter for international devices — works at Disney resorts and parks.",
-    url: "https://www.amazon.com/s?k=universal+travel+adapter+international&tag=planyourpar0a-20",
-    icon: "🔌",
-  },
-  {
-    id: "phone-charger",
-    name: "Portable Phone Charger",
-    description: "20000mAh power bank to keep your phone charged all day in the parks.",
-    url: "https://www.amazon.com/s?k=portable+phone+charger+20000mah+disney&tag=planyourpar0a-20",
-    icon: "🔋",
-  },
-  {
-    id: "sunscreen-spray",
-    name: "Sunscreen Spray",
-    description: "Easy spray-on SPF 50 sunscreen — Florida sun is no joke at the parks.",
-    url: "https://www.amazon.com/s?k=sunscreen+spf+50+spray+disney&tag=planyourpar0a-20",
-    icon: "☀️",
-  },
-  {
-    id: "water-bottle",
-    name: "Insulated Water Bottle",
-    description: "Keeps water ice-cold for hours. Disney allows reusable bottles — fill up for free.",
-    url: "https://www.amazon.com/s?k=insulated+water+bottle+32oz+disney&tag=planyourpar0a-20",
-    icon: "💧",
-  },
-  {
-    id: "mini-fan",
-    name: "Mini Fan",
-    description: "USB rechargeable handheld fan — a lifesaver in the Florida summer heat.",
-    url: "https://www.amazon.com/s?k=usb+handheld+fan+disney+world&tag=planyourpar0a-20",
-    icon: "🌀",
-  },
-  {
-    id: "cooling-towel",
-    name: "Cooling Towel",
-    description: "Soak in cold water and drape around your neck. Magic in the Florida heat.",
-    url: "https://www.amazon.com/s?k=cooling+towel+disney+world&tag=planyourpar0a-20",
-    icon: "❄️",
-  },
-  {
-    id: "poncho",
-    name: "Rain Ponchos (20-Pack)",
-    description: "Pack 20 so the whole family stays dry when Florida thunderstorms roll through.",
-    url: "https://www.amazon.com/s?k=rain+poncho+20+pack+disney&tag=planyourpar0a-20",
-    icon: "🌧️",
-  },
-  {
-    id: "stroller-fan",
-    name: "Stroller Fan",
-    description: "Clip-on USB rechargeable fan for your stroller. Keeps little ones comfortable.",
-    url: "https://www.amazon.com/s?k=stroller+fan+usb+disney&tag=planyourpar0a-20",
-    icon: "👶",
-  },
-  {
-    id: "waterproof-pouch",
-    name: "Waterproof Phone Pouch",
-    description: "Keep your phone dry on water rides and in the rain. Floats if dropped in water.",
-    url: "https://www.amazon.com/s?k=waterproof+phone+pouch+disney&tag=planyourpar0a-20",
-    icon: "📱",
-  },
-  {
-    id: "backpack",
-    name: "Lightweight Daypack",
-    description: "Compact backpack for park essentials. Folds into its own pocket for travel.",
-    url: "https://www.amazon.com/s?k=lightweight+daypack+travel+disney&tag=planyourpar0a-20",
-    icon: "🎒",
-  },
-];
+
 
 const tips = [
   { icon: "📅", tip: "Visit mid-week (Tuesday–Thursday) for the shortest lines at Disney", highlight: false },
@@ -334,30 +264,9 @@ export default function DealsPage() {
         </div>
       </section>
 
-      {/* Amazon Gear Section */}
-      <section className="gear-section">
-        <div className="gear-header">
-          <h2>Park-Ready Gear</h2>
-          <p>Order ahead and save — delivered to your hotel or home before your trip.</p>
-        </div>
-        <div className="gear-grid">
-          {gearItems.map(item => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel={SPONSORED_REL}
-              className="gear-card"
-            >
-              <div className="gear-icon">{item.icon}</div>
-              <div className="gear-info">
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-              </div>
-              <span className="gear-cta">Order on Amazon →</span>
-            </a>
-          ))}
-        </div>
+      {/* Amazon Gear Section — product cards from amazon-products.ts */}
+      <section className="gear-section" id="park-gear">
+        <AmazonProductModule slug="deals" />
       </section>
 
       {/* Money-Saving Tips */}

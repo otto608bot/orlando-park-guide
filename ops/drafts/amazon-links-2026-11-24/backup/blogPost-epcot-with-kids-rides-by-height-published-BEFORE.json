@@ -1,0 +1,1773 @@
+{
+ "_createdAt": "2026-10-26T14:24:26Z",
+ "_id": "blogPost-epcot-with-kids-rides-by-height",
+ "_rev": "UmCdGwdZAOvDlOz2lHjZv5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-23T16:32:52Z",
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "body": [
+  {
+   "_key": "0a3f6bcb79b4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a25ffa62147c",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "a19fe235d641",
+     "_type": "span",
+     "marks": [
+      "0858e543668b"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "2e8f249a4d3c",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "0858e543668b",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "77450853aee7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4afde46a117d",
+     "_type": "span",
+     "marks": [],
+     "text": "Is EPCOT Good for Kids?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "46ff8998aa65",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c5e0f1800496",
+     "_type": "span",
+     "marks": [],
+     "text": "Yes — more than its reputation suggests. EPCOT has a big list of attractions with no height requirement, including Frozen Ever After, Remy's Ratatouille Adventure, The Seas with Nemo & Friends and a hands-on water trail inspired by Moana. Only four rides have a height minimum, and the tallest is 44 inches. The trade-off is walking: World Showcase is a long loop, so pace the day around breaks."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "778c9632ea9c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1212cbad1dc8",
+     "_type": "span",
+     "marks": [],
+     "text": "Below, every current EPCOT ride and major kid attraction is sorted by the official minimum height on Disney's attraction pages (checked October 26, 2026). Rules can change, so re-check close to your trip. Want the list filtered for you? Open "
+    },
+    {
+     "_key": "d75985bfa3c9",
+     "_type": "span",
+     "marks": [
+      "292816f599f0"
+     ],
+     "text": "EPCOT rides for kids under 40 inches"
+    },
+    {
+     "_key": "641154f85de6",
+     "_type": "span",
+     "marks": [],
+     "text": " in the ride finder."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "292816f599f0",
+     "_type": "link",
+     "href": "/rides/for/epcot-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "bcb04d77d3be",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "98d60225acc7",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT Ride Heights at a Glance"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "76acc8352d5f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c3d0da437514",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Any height:"
+    },
+    {
+     "_key": "24009de1b772",
+     "_type": "span",
+     "marks": [],
+     "text": " Frozen Ever After, Remy's Ratatouille Adventure, Spaceship Earth, The Seas with Nemo & Friends, Turtle Talk with Crush, Journey Into Imagination with Figment, Gran Fiesta Tour Starring The Three Caballeros, Living with the Land (see the holiday closure note below), Journey of Water Inspired by Moana, Disney and Pixar Short Film Festival, Awesome Planet, Canada Far and Wide, Beauty and the Beast Sing-Along"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "01fb27ed84d4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "94ebfee20137",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches (102 cm):"
+    },
+    {
+     "_key": "c0b8c518dc07",
+     "_type": "span",
+     "marks": [],
+     "text": " Test Track, Soarin' Across America, Mission: SPACE (Green, the gentler orbit version)"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ff38273ec90c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dd8837fe6e78",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "42 inches (107 cm):"
+    },
+    {
+     "_key": "72b4055acca1",
+     "_type": "span",
+     "marks": [],
+     "text": " Guardians of the Galaxy: Cosmic Rewind"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3e1015d0879b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0d8e5de32ca1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches (112 cm):"
+    },
+    {
+     "_key": "7c9f76727279",
+     "_type": "span",
+     "marks": [],
+     "text": " Mission: SPACE (Orange, the more intense Mars version)"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "27db437f3270",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "24e8ee308825",
+     "_type": "span",
+     "marks": [],
+     "text": "Source: official Walt Disney World attraction pages, accessed October 26, 2026. See every EPCOT ride in the "
+    },
+    {
+     "_key": "97a0efdccd1f",
+     "_type": "span",
+     "marks": [
+      "c2611801b736"
+     ],
+     "text": "EPCOT all-heights ride finder"
+    },
+    {
+     "_key": "c169b3d87caf",
+     "_type": "span",
+     "marks": [],
+     "text": ", or the "
+    },
+    {
+     "_key": "576a4fdc14d8",
+     "_type": "span",
+     "marks": [
+      "e213f0dcfb6a"
+     ],
+     "text": "44-inch EPCOT list"
+    },
+    {
+     "_key": "813e4627495b",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "c2611801b736",
+     "_type": "link",
+     "href": "/rides/for/epcot-all/"
+    },
+    {
+     "_key": "e213f0dcfb6a",
+     "_type": "link",
+     "href": "/rides/for/epcot-44/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d5d9cf2f9e29",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6205e2dc9506",
+     "_type": "span",
+     "marks": [],
+     "text": "What's Different at EPCOT Right Now"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "0791f4e38f50",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fe9e816216c8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Soarin' Across America has replaced Soarin' Around the World for now."
+    },
+    {
+     "_key": "e0e08d4574af",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's Soarin' Around the World page says that film is currently unavailable and points guests to Soarin' Across America, a limited-time film tied to the country's 250th birthday. Same ride system, same 40-inch minimum."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3cea67f38ae4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ca14b9aa8d60",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Living with the Land shows as closed November 27 through December 30, 2026"
+    },
+    {
+     "_key": "ca27aa26eb44",
+     "_type": "span",
+     "marks": [],
+     "text": " on Disney's official schedule (checked October 26, 2026). It is listed as operating before and after those dates. If you visit during the holidays, plan around it."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "0c9965651cd8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "36de6ea3d70f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "DuckTales World Showcase Adventure"
+    },
+    {
+     "_key": "9e99a43981f0",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney's page says it is currently under refurbishment and may be available in a limited format."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "13f86c54101a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f952249ec4b4",
+     "_type": "span",
+     "marks": [],
+     "text": "Best EPCOT Rides for Kids Under 40 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "0646874dfce9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c4a3d00d2b1a",
+     "_type": "span",
+     "marks": [],
+     "text": "Shorter kids can still fill a day at EPCOT. Start here:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "383b61599377",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "df5997503eae",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Frozen Ever After"
+    },
+    {
+     "_key": "039ae198f66b",
+     "_type": "span",
+     "marks": [],
+     "text": " — a slow-moving boat ride through Arendelle with Anna, Elsa and Olaf. Any height. Disney notes backward and forward plunges down short waterfalls, and you may get wet, so give nervous riders a heads-up."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d5106117ff22",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "817ad11af81a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Remy's Ratatouille Adventure"
+    },
+    {
+     "_key": "c12d5331fb50",
+     "_type": "span",
+     "marks": [],
+     "text": " — a ride that makes you feel shrunk down to Chef Remy's size in Gusteau's restaurant. Any height, and a great pick for Pixar fans."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "73869621bc9c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d448dac0e00e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Seas with Nemo & Friends"
+    },
+    {
+     "_key": "2c6548bdaa38",
+     "_type": "span",
+     "marks": [],
+     "text": " — a slow \"clamobile\" ride, then a huge aquarium with sea turtles, rays and sharks. Disney also lists a free Dory scavenger hunt here."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "06f8d25fe0d0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e4f52bdfe334",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Turtle Talk with Crush"
+    },
+    {
+     "_key": "31f9eca12f48",
+     "_type": "span",
+     "marks": [],
+     "text": " — a live, improvised chat with Crush the sea turtle. Kids may get to ask him a question, and it's different every time."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a18447febe0b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "21fcb3030e1f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey Into Imagination with Figment"
+    },
+    {
+     "_key": "1f11cdc8091b",
+     "_type": "span",
+     "marks": [],
+     "text": " — a silly ride through the five senses, which leads into "
+    },
+    {
+     "_key": "deebaa6e69f0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "ImageWorks"
+    },
+    {
+     "_key": "4e399051a617",
+     "_type": "span",
+     "marks": [],
+     "text": ", an indoor play space where kids can jump on musical \"Stepping Tones\" and conduct an orchestra by waving their arms."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f795e026588d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fb58b984361b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Spaceship Earth"
+    },
+    {
+     "_key": "7cd54e5690d8",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 16-minute seated ride inside the giant sphere, which makes it a good rest stop."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "8366c76f4a03",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6295108daf6f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gran Fiesta Tour"
+    },
+    {
+     "_key": "0995710ff40a",
+     "_type": "span",
+     "marks": [],
+     "text": " — a gentle boat ride with Donald Duck inside the Mexico pavilion."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c04d6fbfc1e2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7916a9debf35",
+     "_type": "span",
+     "marks": [],
+     "text": "For sensitive riders, the ride finder's "
+    },
+    {
+     "_key": "f18ba36813a7",
+     "_type": "span",
+     "marks": [
+      "d7e0cfa176d0"
+     ],
+     "text": "calm EPCOT picks under 40 inches"
+    },
+    {
+     "_key": "ab341283a9ad",
+     "_type": "span",
+     "marks": [],
+     "text": " skips anything with big drops or spinning."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "d7e0cfa176d0",
+     "_type": "link",
+     "href": "/rides/for/epcot-calm-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "e7abcb27095c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "594d51f9cfc0",
+     "_type": "span",
+     "marks": [],
+     "text": "Where Can Kids Play at EPCOT?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "57969e0e4f87",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f159d7f91d4b",
+     "_type": "span",
+     "marks": [],
+     "text": "Families often search for an EPCOT playground. The best hands-on spots on Disney's current attraction list are:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fa00a8266431",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "af6feb38b917",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey of Water Inspired by Moana"
+    },
+    {
+     "_key": "d1917fc8b2d1",
+     "_type": "span",
+     "marks": [],
+     "text": " — an outdoor exploration trail where kids can play with water. Any height. Disney says you can choose to get wet or take the dry path."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3daab1c04620",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6eea76b50d36",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "ImageWorks"
+    },
+    {
+     "_key": "4a5ace0f2d2c",
+     "_type": "span",
+     "marks": [],
+     "text": " — the indoor sensory play area after Figment."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "786db7926bbe",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a0baa8167acb",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kidcot Fun Stops"
+    },
+    {
+     "_key": "c836771d25d3",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney lists Kidcot Fun Stops at EPCOT; check the My Disney Experience app for current locations."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7da49c70eb91",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5ab61c9fba72",
+     "_type": "span",
+     "marks": [],
+     "text": "Rides for Kids 40 to 43 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "9f0a8841cb1e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "20c738b7f57c",
+     "_type": "span",
+     "marks": [],
+     "text": "At 40 inches, three rides open up:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "883d15625184",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9ba3576e7f3c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Test Track"
+    },
+    {
+     "_key": "cd0f23f52d9f",
+     "_type": "span",
+     "marks": [],
+     "text": " — a future-of-cars ride that ends with what Disney calls a high-speed race. It's about speed rather than big drops."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6c23f4ffc523",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5c847cbaf65b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Soarin' Across America"
+    },
+    {
+     "_key": "9d3f20e71bc7",
+     "_type": "span",
+     "marks": [],
+     "text": " — a simulated flight in front of an 80-foot dome screen, with scents and what Disney calls graceful motion."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "8ae6ea692705",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ca432142a900",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Mission: SPACE (Green)"
+    },
+    {
+     "_key": "6335e37b08b6",
+     "_type": "span",
+     "marks": [],
+     "text": " — the gentler orbit-of-Earth version of this simulator. It still feels intense for some kids, so try it before the Orange side."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "af2ab0594ee2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "01fc24ac2b6c",
+     "_type": "span",
+     "marks": [],
+     "text": "At 42 inches, "
+    },
+    {
+     "_key": "ca440215ee68",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Guardians of the Galaxy: Cosmic Rewind"
+    },
+    {
+     "_key": "4c42ada24459",
+     "_type": "span",
+     "marks": [],
+     "text": " opens. It's a fully enclosed roller coaster whose cars rotate 360 degrees, with a reverse launch. It's the park's biggest coaster, so check your child's comfort with coasters first."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "afb22bc94018",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1e69a86e0890",
+     "_type": "span",
+     "marks": [],
+     "text": "Rides for Kids 44 Inches and Up"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "15deedac9f2f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f9df8b3e2b96",
+     "_type": "span",
+     "marks": [],
+     "text": "At 44 inches, kids can add "
+    },
+    {
+     "_key": "b53c0c370458",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Mission: SPACE (Orange)"
+    },
+    {
+     "_key": "8c5bf16deb84",
+     "_type": "span",
+     "marks": [],
+     "text": ", the Mars mission, which Disney says uses a centrifuge that spins and tilts to simulate launch G-forces. Disney calls it the more intense option, and it's fine to skip."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2bfb59f6d3ba",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6d9de43313f5",
+     "_type": "span",
+     "marks": [],
+     "text": "If one child is too short or not interested, Disney's "
+    },
+    {
+     "_key": "5d88605b5e28",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Rider Switch"
+    },
+    {
+     "_key": "714b620e2d7d",
+     "_type": "span",
+     "marks": [],
+     "text": " lets one adult wait with the child while the other adult rides, then swap without waiting in line again (see Disney's Rider Switch page for current rules)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "971376e569f0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "89f90365ae7f",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT with Kids During the Holidays (2026)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "0debb77ec55d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b67283353c8e",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney lists the "
+    },
+    {
+     "_key": "a78b0d401bff",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT International Festival of the Holidays"
+    },
+    {
+     "_key": "52f97eb737fb",
+     "_type": "span",
+     "marks": [],
+     "text": " from "
+    },
+    {
+     "_key": "6976f368476d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 27 to December 30, 2026"
+    },
+    {
+     "_key": "4fe5225f9807",
+     "_type": "span",
+     "marks": [],
+     "text": ". Kid-friendly highlights on Disney's entertainment page include holiday storytellers in the World Showcase pavilions, "
+    },
+    {
+     "_key": "4c928605fae1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Goofy as Santa"
+    },
+    {
+     "_key": "0b062130e7d6",
+     "_type": "span",
+     "marks": [],
+     "text": " at The Odyssey (daily November 27 to December 30), and "
+    },
+    {
+     "_key": "25c5918be38d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Meet Santa Claus"
+    },
+    {
+     "_key": "f04da2594290",
+     "_type": "span",
+     "marks": [],
+     "text": " at CommuniCore Hall (Disney lists \"daily through December 24\"). The "
+    },
+    {
+     "_key": "592f86171cbe",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Candlelight Processional"
+    },
+    {
+     "_key": "3c8864e9fa8a",
+     "_type": "span",
+     "marks": [],
+     "text": " runs nightly at America Gardens Theatre at 4:45, 6:30 and 8:00 PM, per Disney."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "41f0c875c18b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "487d2a757b29",
+     "_type": "span",
+     "marks": [],
+     "text": "Visiting before that? The "
+    },
+    {
+     "_key": "158cef75d728",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT International Food & Wine Festival"
+    },
+    {
+     "_key": "485d01e0beef",
+     "_type": "span",
+     "marks": [],
+     "text": " runs through November 21, 2026, and Disney lists "
+    },
+    {
+     "_key": "cbf8a81b4fa3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Remy's Ratatouille Hide & Squeak"
+    },
+    {
+     "_key": "112cfa769bd4",
+     "_type": "span",
+     "marks": [],
+     "text": ", a find-Remy hunt around the festival. Festival entertainment is subject to change, so check the My Disney Experience app on the day."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b14ad66545ba",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dac22046636c",
+     "_type": "span",
+     "marks": [],
+     "text": "A Simple Half-Day Plan for Kids Under 40 Inches"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "dbec80c5a3be",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8ee84410d503",
+     "_type": "span",
+     "marks": [],
+     "text": "Arrive near park opening and head to "
+    },
+    {
+     "_key": "6a7f9c8187ab",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Frozen Ever After"
+    },
+    {
+     "_key": "49fe7a3dd9a5",
+     "_type": "span",
+     "marks": [],
+     "text": " in Norway."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "cdd9aad92afc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e78ef319df9e",
+     "_type": "span",
+     "marks": [],
+     "text": "Walk to France for "
+    },
+    {
+     "_key": "5cc0a1a7cd80",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Remy's Ratatouille Adventure"
+    },
+    {
+     "_key": "8d6143badfba",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "96b8cc639e53",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4a847c103d8e",
+     "_type": "span",
+     "marks": [],
+     "text": "Cut back through the middle of the park to "
+    },
+    {
+     "_key": "df5207c81f45",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey of Water Inspired by Moana"
+    },
+    {
+     "_key": "743d2e589c99",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "23216122b7bd",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4db785d02f1c",
+     "_type": "span",
+     "marks": [],
+     "text": "Next door, ride "
+    },
+    {
+     "_key": "0f187ed5e9c0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Seas with Nemo & Friends"
+    },
+    {
+     "_key": "4f9c6c33b734",
+     "_type": "span",
+     "marks": [],
+     "text": ", see the aquarium and catch "
+    },
+    {
+     "_key": "31b64d9e6348",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Turtle Talk with Crush"
+    },
+    {
+     "_key": "6e079c3edb3d",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a489670487f3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1cce50abda5a",
+     "_type": "span",
+     "marks": [],
+     "text": "Finish with "
+    },
+    {
+     "_key": "c11a86077bab",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey Into Imagination with Figment"
+    },
+    {
+     "_key": "4d3b40a35f73",
+     "_type": "span",
+     "marks": [],
+     "text": " and playtime in "
+    },
+    {
+     "_key": "deaa1af0ae15",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "ImageWorks"
+    },
+    {
+     "_key": "755cc13660b8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b1dc43c118a1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c2d797d45d4a",
+     "_type": "span",
+     "marks": [],
+     "text": "Kids 40\" and up can add Test Track and Soarin', and 42\"+ can add Guardians, ideally with Lightning Lane or at quieter times. Check current Lightning Lane options and prices in the My Disney Experience app, since they vary by date. Picking dates? Our "
+    },
+    {
+     "_key": "f54a9a748a3a",
+     "_type": "span",
+     "marks": [
+      "374efb4b35ec"
+     ],
+     "text": "best time to visit Disney World guide"
+    },
+    {
+     "_key": "acac4c827529",
+     "_type": "span",
+     "marks": [],
+     "text": " covers crowds by season."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "374efb4b35ec",
+     "_type": "link",
+     "href": "/blog/best-time-visit-disney-world-2026/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "c53a4b21411f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a9ed5bca0453",
+     "_type": "span",
+     "marks": [],
+     "text": "Walking, Weather and Safety Tips"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "e1330c22b12a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2a686609efc1",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT involves a lot of walking, and Orlando can stay warm into fall. Plan shade and water breaks, bring refillable bottles, and use indoor rides like Spaceship Earth and The Seas to cool off. If a child shows signs of heat illness, get help from park First Aid or a doctor — Disney lists First Aid in every Walt Disney World theme park."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "33ca498221ff",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ded9269e0bfc",
+     "_type": "span",
+     "marks": [],
+     "text": "Useful gear (affiliate links may apply): a "
+    },
+    {
+     "_key": "687bc6a74704",
+     "_type": "span",
+     "marks": [
+      "0b89b0516be3"
+     ],
+     "text": "kids' cooling towel"
+    },
+    {
+     "_key": "f367b47c4750",
+     "_type": "span",
+     "marks": [],
+     "text": ", a "
+    },
+    {
+     "_key": "d04c5f50aefd",
+     "_type": "span",
+     "marks": [
+      "78fbf0d93133"
+     ],
+     "text": "kids' rain poncho"
+    },
+    {
+     "_key": "72f3f5b4dac4",
+     "_type": "span",
+     "marks": [],
+     "text": " for Florida showers, and a "
+    },
+    {
+     "_key": "10ee4bb17149",
+     "_type": "span",
+     "marks": [
+      "c1b0e587466f"
+     ],
+     "text": "stroller fan"
+    },
+    {
+     "_key": "7c7c6e555a1d",
+     "_type": "span",
+     "marks": [],
+     "text": ". Our "
+    },
+    {
+     "_key": "cdec4b875dd6",
+     "_type": "span",
+     "marks": [
+      "59e18f95c081"
+     ],
+     "text": "Disney World packing list for kids"
+    },
+    {
+     "_key": "4745ea823552",
+     "_type": "span",
+     "marks": [],
+     "text": " has the full checklist."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "0b89b0516be3",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=cooling+towel+kids&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "78fbf0d93133",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "c1b0e587466f",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=stroller+fan&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "59e18f95c081",
+     "_type": "link",
+     "href": "/blog/disney-world-packing-list-kids/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3fbbec6b5a04",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0e640ca4f5e7",
+     "_type": "span",
+     "marks": [],
+     "text": "Is EPCOT Worth It With Young Kids?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "b35068937359",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "94277f54af5f",
+     "_type": "span",
+     "marks": [],
+     "text": "For many families, yes — especially kids who love Frozen, Nemo or Ratatouille, or who are still under 40 inches. If your trip is short, compare it with the other parks in our "
+    },
+    {
+     "_key": "30857b235351",
+     "_type": "span",
+     "marks": [
+      "c98a309c2246"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "be65ae3c0b4b",
+     "_type": "span",
+     "marks": [],
+     "text": ", or read our "
+    },
+    {
+     "_key": "7ec574844b12",
+     "_type": "span",
+     "marks": [
+      "11c74aa4f5be"
+     ],
+     "text": "EPCOT park guide"
+    },
+    {
+     "_key": "f75d163748e3",
+     "_type": "span",
+     "marks": [],
+     "text": ". Doing more parks? See our "
+    },
+    {
+     "_key": "9ed690a6ec16",
+     "_type": "span",
+     "marks": [
+      "4fc4c4d8d630"
+     ],
+     "text": "Magic Kingdom rides by height"
+    },
+    {
+     "_key": "0c6d90808f58",
+     "_type": "span",
+     "marks": [],
+     "text": " and "
+    },
+    {
+     "_key": "c89b1d2f94a6",
+     "_type": "span",
+     "marks": [
+      "0e7bf2594118"
+     ],
+     "text": "Animal Kingdom rides by height"
+    },
+    {
+     "_key": "56c4464ae21e",
+     "_type": "span",
+     "marks": [],
+     "text": " guides, or our "
+    },
+    {
+     "_key": "2c5fadeb1776",
+     "_type": "span",
+     "marks": [
+      "3e9ade15ec49"
+     ],
+     "text": "Disney World with a baby or toddler guide"
+    },
+    {
+     "_key": "8fa968fcc576",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "c98a309c2246",
+     "_type": "link",
+     "href": "/parks/"
+    },
+    {
+     "_key": "11c74aa4f5be",
+     "_type": "link",
+     "href": "/parks/epcot/"
+    },
+    {
+     "_key": "4fc4c4d8d630",
+     "_type": "link",
+     "href": "/blog/magic-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "0e7bf2594118",
+     "_type": "link",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "3e9ade15ec49",
+     "_type": "link",
+     "href": "/blog/disney-world-with-baby-toddler/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "0a223e070b5b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5de2ace9138b",
+     "_type": "span",
+     "marks": [],
+     "text": "Tickets"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "c0d0e7fecaa6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8bc3967d6e97",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT is included with standard Disney World park tickets, and Disney says the Food & Wine Festival is included with valid EPCOT admission. Check Disney's official ticket page for current child ticket ages and prices before you buy. Compare current ticket options on our "
+    },
+    {
+     "_key": "7ece6d20d932",
+     "_type": "span",
+     "marks": [
+      "6afa1527b324"
+     ],
+     "text": "Disney World deals page"
+    },
+    {
+     "_key": "3ac605874473",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "6afa1527b324",
+     "_type": "link",
+     "href": "/deals/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "298648e88133",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d3fdd9c70b6d",
+     "_type": "span",
+     "marks": [],
+     "text": "FAQ"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "a1305a400984",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bec655bd14ec",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Guardians of the Galaxy: Cosmic Rewind?"
+    },
+    {
+     "_key": "32e308bce50c",
+     "_type": "span",
+     "marks": [],
+     "text": " 42 inches (107 cm), per Disney's official attraction page (accessed Oct 26, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a200d6f349df",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c650399f71c6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Test Track?"
+    },
+    {
+     "_key": "51418e7986b2",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches (102 cm)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b51ca4de5338",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "531c4d88e327",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Soarin'?"
+    },
+    {
+     "_key": "aecb77519758",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches (102 cm) for Soarin' Across America, the film currently showing."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fc1f9e86e4dc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6523c1ed35b9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is the height requirement for Mission: SPACE?"
+    },
+    {
+     "_key": "1ee15d69c8e4",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches (102 cm) for Green and 44 inches (112 cm) for Orange."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "34e9fce26a9d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "befc696ffa96",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Does Spaceship Earth have a height requirement?"
+    },
+    {
+     "_key": "7e0f7e46fed1",
+     "_type": "span",
+     "marks": [],
+     "text": " No. Disney lists Spaceship Earth as any height."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1095e911c3a9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "11f0d9cae129",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What can a 4-year-old do at EPCOT?"
+    },
+    {
+     "_key": "54d20786f0d8",
+     "_type": "span",
+     "marks": [],
+     "text": " Frozen Ever After, Remy's Ratatouille Adventure, The Seas with Nemo & Friends, Turtle Talk with Crush, Figment, Spaceship Earth, Journey of Water and ImageWorks all have no height requirement. See all of them in the "
+    },
+    {
+     "_key": "daadef0596a2",
+     "_type": "span",
+     "marks": [
+      "205f074fe680"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "905ec1eea4a0",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "205f074fe680",
+     "_type": "link",
+     "href": "/rides/for/epcot-all/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "4229f3ceb586",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b6cc805b59af",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "How many rides are at EPCOT?"
+    },
+    {
+     "_key": "40d04470b0c2",
+     "_type": "span",
+     "marks": [],
+     "text": " This guide counts 11 rides operating as of October 26, 2026 (with Mission: SPACE counted once), plus shows, films, walk-through trails and play areas. Living with the Land is scheduled closed November 27 to December 30, 2026. Our ride finder lists EPCOT rides with heights."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "01805c792f6e",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "EPCOT with kids, sorted by height: what works for any height, what opens at 40, 42 and 44 inches, kid play spots, holiday festival tips and a calm half-day plan. Checked Oct 2026.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "Family with two kids strolling a lakeside promenade with a giant geodesic sphere and world pavilions at sunset",
+  "asset": {
+   "_ref": "image-9bd743da3aa59ac3a1084a5d8a1098f9117ab439-1376x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "readTime": 7,
+ "slug": {
+  "_type": "slug",
+  "current": "epcot-with-kids-rides-by-height"
+ },
+ "tags": [
+  "EPCOT with kids",
+  "EPCOT rides for kids",
+  "Disney World height requirements",
+  "EPCOT"
+ ],
+ "title": "EPCOT with Kids: Rides by Height, Best Picks, and a Simple Plan (2026)"
+}
