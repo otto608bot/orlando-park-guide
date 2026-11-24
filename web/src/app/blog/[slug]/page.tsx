@@ -7,6 +7,12 @@ import NewsletterForm from "@/components/NewsletterForm";
 import AmazonProductModule from "@/components/AmazonProductModule";
 import BlogContentUrlProcessor from "@/components/BlogContentUrlProcessor";
 import { processTextWithAffiliates } from "@/components/blogAffiliates";
+import {
+  AMAZON_LINK_REL,
+  getAmazonTagForSlug,
+  isAmazonUrl,
+  resolveAmazonHref,
+} from "@/config/amazon-products";
 import QuestionForm from "@/components/QuestionForm";
 import { AFFILIATE_LINKS } from "@/config/affiliate-links";
 import {
@@ -185,8 +191,8 @@ function getTicketButtonHref(ticketText: string) {
   return AFFILIATE_LINKS.ucDealsPage;
 }
 
-function renderProcessedText(children?: ReactNode) {
-  return processTextWithAffiliates(children);
+function renderProcessedText(children: ReactNode | undefined, slug: string) {
+  return processTextWithAffiliates(children, slug);
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -211,8 +217,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const components = {
     block: {
       // Headings + lists carry most packing/gear product phrases — process them too.
-      h2: ({ children }: { children?: ReactNode }) => <h2>{renderProcessedText(children)}</h2>,
-      h3: ({ children }: { children?: ReactNode }) => <h3>{renderProcessedText(children)}</h3>,
+      h2: ({ children }: { children?: ReactNode }) => <h2>{renderProcessedText(children, slug)}</h2>,
+      h3: ({ children }: { children?: ReactNode }) => <h3>{renderProcessedText(children, slug)}</h3>,
       normal: ({ children }: { children?: ReactNode }) => {
         let ticketText: string | null = null;
 
@@ -234,18 +240,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           );
         }
 
-        return <p>{renderProcessedText(children)}</p>;
+        return <p>{renderProcessedText(children, slug)}</p>;
       },
       blockquote: ({ children }: { children?: ReactNode }) => (
         <blockquote>
-          <p>{renderProcessedText(children)}</p>
+          <p>{renderProcessedText(children, slug)}</p>
         </blockquote>
       ),
     },
     marks: {
       // Titles: allow a single careful product link
       strong: ({ children }: { children?: ReactNode }) => (
-        <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{renderProcessedText(children)}</strong>
+        <strong style={{ color: "var(--text-dark)", fontWeight: 700 }}>{renderProcessedText(children, slug)}</strong>
       ),
       // Body notes under list items: NEVER auto-affiliate (was linking "poncho", "snacks", drugs mid-sentence)
       description: ({ children }: { children?: ReactNode }) => (
@@ -254,6 +260,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       link: ({ children, value }: { children?: ReactNode; value?: { href?: string } }) => {
         const href = value?.href?.trim();
         if (!href) return <>{children}</>;
+
+        if (isAmazonUrl(href)) {
+          const resolved = resolveAmazonHref(href, slug);
+          if (!resolved) return <>{children}</>;
+          return (
+            <a
+              href={resolved}
+              target="_blank"
+              rel={AMAZON_LINK_REL}
+              className="affiliate-link"
+              data-amazon-tag={getAmazonTagForSlug(slug)}
+            >
+              {children}
+            </a>
+          );
+        }
 
         const isInternal = href.startsWith("/") || href.startsWith("https://planyourpark.com") || href.startsWith("http://planyourpark.com");
         const cleanHref = href.replace(/^https?:\/\/planyourpark\.com/, "");
@@ -292,7 +314,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
     types: {
       span: ({ value }: { value?: { text?: string } }) =>
-        value?.text ? <p>{renderProcessedText(value.text)}</p> : null,
+        value?.text ? <p>{renderProcessedText(value.text, slug)}</p> : null,
     },
   };
 

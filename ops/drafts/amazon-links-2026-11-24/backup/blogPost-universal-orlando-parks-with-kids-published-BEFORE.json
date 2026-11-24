@@ -1,0 +1,2747 @@
+{
+ "_createdAt": "2026-11-23T16:32:52Z",
+ "_id": "blogPost-universal-orlando-parks-with-kids",
+ "_rev": "UmCdGwdZAOvDlOz2lHjZv5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-23T16:32:52Z",
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "body": [
+  {
+   "_key": "03fe10c22dac",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e49f836a71eb",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "afa289679f3f",
+     "_type": "span",
+     "marks": [
+      "19410f60ff63"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "03aca87e47c5",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "19410f60ff63",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "a940ea53db3b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4315e5449eeb",
+     "_type": "span",
+     "marks": [],
+     "text": "Quick Answer: The 4 Universal Orlando Parks"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "afdfdd882770",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f8896f195a01",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Orlando Resort has "
+    },
+    {
+     "_key": "22128decb4d8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "four parks"
+    },
+    {
+     "_key": "87ebe8df99bb",
+     "_type": "span",
+     "marks": [],
+     "text": ": three theme parks and one water park. People often say \"Universal Studios\" for the whole resort, but Universal Studios Florida is just one of the four."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "bf16d6b7409b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "398760daa21c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Studios Florida:"
+    },
+    {
+     "_key": "c0adc815954d",
+     "_type": "span",
+     "marks": [],
+     "text": " Minions, DreamWorks Land, The Simpsons and Diagon Alley. A strong first pick for younger kids."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "56f0eafd1bfe",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "72ceb5480177",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Islands of Adventure:"
+    },
+    {
+     "_key": "69204de5996e",
+     "_type": "span",
+     "marks": [],
+     "text": " Seuss Landing, Hogsmeade, Jurassic Park and Marvel Super Hero Island. It has the widest spread, from a carousel to big coasters."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "26b3ecc78a37",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "717291561767",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Epic Universe:"
+    },
+    {
+     "_key": "3d2d368900f3",
+     "_type": "span",
+     "marks": [],
+     "text": " the newest park, with SUPER NINTENDO WORLD, How to Train Your Dragon – Isle of Berk and Celestial Park. Most of its headline rides start at 40 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b6546dee2cd9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bb43e7dfd8e1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Volcano Bay (water park):"
+    },
+    {
+     "_key": "3a10969e36c1",
+     "_type": "span",
+     "marks": [],
+     "text": " "
+    },
+    {
+     "_key": "1dac22fd8033",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "closed right now."
+    },
+    {
+     "_key": "df8096691f49",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal's park hours page says it is temporarily closed for maintenance, with a planned reopening on or before April 1, 2027."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d2600bdc07ea",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "558e68e981a3",
+     "_type": "span",
+     "marks": [],
+     "text": "We checked every height, closure and holiday date below against Universal's official pages on "
+    },
+    {
+     "_key": "b3207b372e4c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 23, 2026"
+    },
+    {
+     "_key": "9c5968fe67d0",
+     "_type": "span",
+     "marks": [],
+     "text": ". Rules change, so confirm in the Universal Orlando Resort app before you go. Want it filtered for your child? Open "
+    },
+    {
+     "_key": "17fce693ee8a",
+     "_type": "span",
+     "marks": [
+      "3ec17729074f"
+     ],
+     "text": "Universal rides under 40 inches"
+    },
+    {
+     "_key": "210c98ec90e7",
+     "_type": "span",
+     "marks": [],
+     "text": " in our ride finder, or browse "
+    },
+    {
+     "_key": "2fb30fac5072",
+     "_type": "span",
+     "marks": [
+      "01e0ab3eec60"
+     ],
+     "text": "every Universal Orlando ride"
+    },
+    {
+     "_key": "eb7db9375532",
+     "_type": "span",
+     "marks": [],
+     "text": ". Still deciding between Universal and Disney? Start with our "
+    },
+    {
+     "_key": "0cce4fcd7d33",
+     "_type": "span",
+     "marks": [
+      "ae8e37362ae9"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "3f011c2f1030",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "3ec17729074f",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-under-40/"
+    },
+    {
+     "_key": "01e0ab3eec60",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-all/"
+    },
+    {
+     "_key": "ae8e37362ae9",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "415252a77e6b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7d260ae38df7",
+     "_type": "span",
+     "marks": [],
+     "text": "How to Read This Guide"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "313ea2ac61f9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "eed23acf6cca",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "\"No minimum height\""
+    },
+    {
+     "_key": "e84e98ff59ad",
+     "_type": "span",
+     "marks": [],
+     "text": " means Universal's ride page lists no minimum. Universal's pages are the final word, so also check the sign at each ride entrance."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e7b86d26f021",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3a7529760888",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Under 48 inches usually means an adult rides too."
+    },
+    {
+     "_key": "24abc4e99381",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal's height page says children under 48 inches must ride with a supervising companion on most of the rides below."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "be17dd8dcdae",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1eb68fd7d854",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Heights are minimums, not readiness."
+    },
+    {
+     "_key": "26e4c5954bba",
+     "_type": "span",
+     "marks": [],
+     "text": " A child can be tall enough and still not enjoy the dark, the noise or the drops. We don't map ages to heights, because kids of the same age vary a lot."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "006c883c9ec1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b95b16a286a9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Child Swap helps when your party is split."
+    },
+    {
+     "_key": "a2db207d9f30",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal's park services page says one adult can wait in a designated area with a child who can't or won't ride, then trade places once the rest of the group is off. Ask a ride attendant for instructions."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fbb80550e604",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e5610584c0fd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Test seats"
+    },
+    {
+     "_key": "b4c526664626",
+     "_type": "span",
+     "marks": [],
+     "text": " are available at rides marked with an asterisk on Universal's height page, so you can check the fit before you queue."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d3faf6cd7dcb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ddde84600471",
+     "_type": "span",
+     "marks": [],
+     "text": "For the complete chart, see our "
+    },
+    {
+     "_key": "966e8b9c438b",
+     "_type": "span",
+     "marks": [
+      "354cba034f9e"
+     ],
+     "text": "Universal height requirements guide"
+    },
+    {
+     "_key": "1b75fcf31c87",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "354cba034f9e",
+     "_type": "link",
+     "href": "/blog/universal-orlando-height-requirements/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "8a893d1ab0ed",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "713987d40403",
+     "_type": "span",
+     "marks": [],
+     "text": "Closed or Changed Right Now (Checked November 23, 2026)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "9e0735ea01c9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "41a7db73dc41",
+     "_type": "span",
+     "marks": [],
+     "text": "Older guides are out of date on these, so check this list first. All dates come from Universal's park hours page on November 23, 2026:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "750fd99fa96e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0c45e8ea9d8a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Volcano Bay:"
+    },
+    {
+     "_key": "faba3186ec63",
+     "_type": "span",
+     "marks": [],
+     "text": " closed for maintenance, with a planned reopening on or before April 1, 2027."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "22200586eb08",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7cdaadca3fd9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jurassic Park River Adventure (Islands of Adventure):"
+    },
+    {
+     "_key": "46bb972047f3",
+     "_type": "span",
+     "marks": [],
+     "text": " closed January 5 to December 16, 2026."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5942c3ffa31e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fd4b384f4dbd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Monsters Unchained: The Frankenstein Experiment (Epic Universe):"
+    },
+    {
+     "_key": "55ab4da964ed",
+     "_type": "span",
+     "marks": [],
+     "text": " closed December 11 to December 15, 2026."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "766a4e264b8f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "db39a0eef99b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Po Live! (Universal Studios Florida):"
+    },
+    {
+     "_key": "ca146acb0af2",
+     "_type": "span",
+     "marks": [],
+     "text": " listed as a temporary closure starting October 3, 2026."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5589640bb05a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "37bb838c4442",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Coming up in early 2027:"
+    },
+    {
+     "_key": "6399ad83904b",
+     "_type": "span",
+     "marks": [],
+     "text": " Popeye & Bluto's Bilge-Rat Barges (January 9 to February 2), Fyre Drill (January 25 to February 4) and Harry Potter and the Forbidden Journey (February 8 to February 19)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "aa4d03288e2d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6cd8779905b0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gone from the list:"
+    },
+    {
+     "_key": "7b9f6e86690f",
+     "_type": "span",
+     "marks": [],
+     "text": " Fast & Furious – Supercharged and Hollywood Rip Ride Rockit no longer appear on Universal's ride height page, so don't plan around them."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2424f86b5c96",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d100dda2ed38",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Studios Florida with Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "2caf7e891505",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3a1ee818fee4",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Studios Florida is an easy first Universal park for younger kids. DreamWorks Land, Minion Land and Springfield are close together, and several rides have no minimum height. Browse "
+    },
+    {
+     "_key": "cfd3e05ed76b",
+     "_type": "span",
+     "marks": [
+      "3f7742ec4d1c"
+     ],
+     "text": "Universal Studios rides under 40 inches"
+    },
+    {
+     "_key": "04fdeeaadc61",
+     "_type": "span",
+     "marks": [],
+     "text": " or "
+    },
+    {
+     "_key": "ad8d513ae1cc",
+     "_type": "span",
+     "marks": [
+      "acffa8ff58fc"
+     ],
+     "text": "all Universal Studios rides"
+    },
+    {
+     "_key": "98c54ac10404",
+     "_type": "span",
+     "marks": [],
+     "text": ", or see the "
+    },
+    {
+     "_key": "81091df916c8",
+     "_type": "span",
+     "marks": [
+      "535619db0076"
+     ],
+     "text": "Universal Studios Florida park page"
+    },
+    {
+     "_key": "ee108034d6ab",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "3f7742ec4d1c",
+     "_type": "link",
+     "href": "/rides/for/universal-studios-under-40/"
+    },
+    {
+     "_key": "acffa8ff58fc",
+     "_type": "link",
+     "href": "/rides/for/universal-studios-all/"
+    },
+    {
+     "_key": "535619db0076",
+     "_type": "link",
+     "href": "/parks/universal-studios-florida/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d48b1c40b1ee",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "14d8e0e89a18",
+     "_type": "span",
+     "marks": [],
+     "text": "No minimum height"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "68b2500c140f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "26d50de7ec98",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Illumination's Villain-Con Minion Blast:"
+    },
+    {
+     "_key": "6ba120dc7bf5",
+     "_type": "span",
+     "marks": [],
+     "text": " supervising companion required under 48 inches. Universal says no hand-held infants."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ddd7f5d03041",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "381813223b1f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kang & Kodos' Twirl 'n' Hurl:"
+    },
+    {
+     "_key": "d31b80250bfc",
+     "_type": "span",
+     "marks": [],
+     "text": " no minimum height; supervising companion under 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a2e1244bb9d6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7136ede4ed71",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "DreamWorks Land play areas:"
+    },
+    {
+     "_key": "255ba6531051",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal lists Po's Kung Fu Training Camp and King Harold's Swamp Symphony, plus Shrek, Fiona and Donkey meeting guests outside Shrek's cottage."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a192a273fe3f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8f762ae9c698",
+     "_type": "span",
+     "marks": [],
+     "text": "Low height minimums"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "f14332227e17",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "78e8de11e25d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "E.T. Adventure:"
+    },
+    {
+     "_key": "7ac0cc2f3f9d",
+     "_type": "span",
+     "marks": [],
+     "text": " 34 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "837f9c58d048",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "30ace677bbdb",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Trolls Trollercoaster:"
+    },
+    {
+     "_key": "5f8f70dc8fab",
+     "_type": "span",
+     "marks": [],
+     "text": " 36 inches. Universal calls it a family-friendly coaster."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ded76dc54ca5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4c2242beb262",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Despicable Me Minion Mayhem:"
+    },
+    {
+     "_key": "e9e39d817138",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches. Universal says guests under 40 inches can experience it from an adjacent stationary seat, which is a nice option for smaller siblings."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "89042f11342c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8eea389a2431",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Simpsons Ride, Race Through New York Starring Jimmy Fallon and TRANSFORMERS: The Ride-3D:"
+    },
+    {
+     "_key": "21c4f91bf2fd",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches each."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "35979869a263",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5cf4e4cfccb4",
+     "_type": "span",
+     "marks": [],
+     "text": "Bigger-kid rides"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "540e07aa9619",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d318a028163d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Harry Potter and the Escape from Gringotts and MEN IN BLACK Alien Attack:"
+    },
+    {
+     "_key": "f114aea36db0",
+     "_type": "span",
+     "marks": [],
+     "text": " 42 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "47a8f7c89827",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f39d28a588aa",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Revenge of the Mummy:"
+    },
+    {
+     "_key": "943e3ad60cab",
+     "_type": "span",
+     "marks": [],
+     "text": " 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "bf91466bb175",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c9eb78c3eb27",
+     "_type": "span",
+     "marks": [],
+     "text": "Islands of Adventure with Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "df01d1ca66e7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "422d2c80e33e",
+     "_type": "span",
+     "marks": [],
+     "text": "Islands of Adventure has the widest range, so it works for mixed-height families. Seuss Landing is the little-kid anchor, and the big coasters are in other lands. Browse "
+    },
+    {
+     "_key": "3d54f8ec35c7",
+     "_type": "span",
+     "marks": [
+      "734de20e381d"
+     ],
+     "text": "Islands of Adventure rides under 40 inches"
+    },
+    {
+     "_key": "523daf84867c",
+     "_type": "span",
+     "marks": [],
+     "text": " or the "
+    },
+    {
+     "_key": "5df1b41c63df",
+     "_type": "span",
+     "marks": [
+      "0053810a2a3a"
+     ],
+     "text": "Islands of Adventure park page"
+    },
+    {
+     "_key": "f9d8b01afee5",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "734de20e381d",
+     "_type": "link",
+     "href": "/rides/for/islands-of-adventure-under-40/"
+    },
+    {
+     "_key": "0053810a2a3a",
+     "_type": "link",
+     "href": "/parks/islands-of-adventure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d2bf51243d38",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5feb5a2a358a",
+     "_type": "span",
+     "marks": [],
+     "text": "No minimum height"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "476cdad9ce32",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4853f7b504d3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Caro-Seuss-el, One Fish, Two Fish, Red Fish, Blue Fish and Storm Force Accelatron:"
+    },
+    {
+     "_key": "3207a9b3781a",
+     "_type": "span",
+     "marks": [],
+     "text": " no minimum height on Universal's pages; supervising companion under 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "335ccccea0b1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9e0d9faf7edf",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "If I Ran the Zoo:"
+    },
+    {
+     "_key": "37e7402dfede",
+     "_type": "span",
+     "marks": [],
+     "text": " a Seuss Landing play area."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9b38b8bfbceb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bfe0e5aa57f7",
+     "_type": "span",
+     "marks": [],
+     "text": "Low height minimums (36 inches)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "96b0c9f56e4a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7a5dd602b388",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Cat in the Hat"
+    },
+    {
+     "_key": "902027c98648",
+     "_type": "span",
+     "marks": [],
+     "text": " and "
+    },
+    {
+     "_key": "222613d48897",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The High in the Sky Seuss Trolley Train Ride!"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "46580588c86a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2df85c8ce36a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Flight of the Hippogriff"
+    },
+    {
+     "_key": "98edc5aed932",
+     "_type": "span",
+     "marks": [],
+     "text": " in Hogsmeade."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "10f1ae72f01e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5bd7f1672349",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Skull Island: Reign of Kong."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b2a9f40c5261",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c344b0f4f8b4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Pteranodon Flyers:"
+    },
+    {
+     "_key": "5f269bee0b30",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal says it is designed for children 36 to 56 inches tall, and guests over 56 inches can ride only with a child who meets that range."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "616964cba1d3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "99a0cc106c7a",
+     "_type": "span",
+     "marks": [],
+     "text": "Bigger-kid rides"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "3159957bc9e6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9309c3fde530",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Amazing Adventures of Spider-Man:"
+    },
+    {
+     "_key": "7ae43d5581d9",
+     "_type": "span",
+     "marks": [],
+     "text": " 40 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e3bd511423fb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d924af82e1f9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Popeye & Bluto's Bilge-Rat Barges:"
+    },
+    {
+     "_key": "8e56db345c2b",
+     "_type": "span",
+     "marks": [],
+     "text": " 42 inches. "
+    },
+    {
+     "_key": "0339c2b970ef",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jurassic Park River Adventure"
+    },
+    {
+     "_key": "c6de4b106466",
+     "_type": "span",
+     "marks": [],
+     "text": " is also 42 inches but is closed until December 16, 2026."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9de39786f705",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "293685e6387d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Dudley Do-Right's Ripsaw Falls:"
+    },
+    {
+     "_key": "1331803ed23b",
+     "_type": "span",
+     "marks": [],
+     "text": " 44 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1f09b5d5fd47",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9eefcd680412",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Hagrid's Magical Creatures Motorbike Adventure and Harry Potter and the Forbidden Journey:"
+    },
+    {
+     "_key": "c1d7399af5ad",
+     "_type": "span",
+     "marks": [],
+     "text": " 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3443bed8588a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "318a748eaff0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jurassic World VelociCoaster:"
+    },
+    {
+     "_key": "20196d10ea57",
+     "_type": "span",
+     "marks": [],
+     "text": " 51 inches. "
+    },
+    {
+     "_key": "a5d03c7263ae",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Doctor Doom's Fearfall:"
+    },
+    {
+     "_key": "185e3d641347",
+     "_type": "span",
+     "marks": [],
+     "text": " 52 inches. "
+    },
+    {
+     "_key": "e968065cefae",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Incredible Hulk Coaster:"
+    },
+    {
+     "_key": "73f4824f2479",
+     "_type": "span",
+     "marks": [],
+     "text": " 54 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d1f3efe336e1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "faf2189d63df",
+     "_type": "span",
+     "marks": [],
+     "text": "Epic Universe with Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "bbce610275d3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "62a2213c21b2",
+     "_type": "span",
+     "marks": [],
+     "text": "Epic Universe has only two rides with no minimum height, but its 34-inch and 40-inch rides open up a lot once your child gets there. Browse "
+    },
+    {
+     "_key": "92588f37edfa",
+     "_type": "span",
+     "marks": [
+      "049ffbbddd16"
+     ],
+     "text": "Epic Universe rides under 40 inches"
+    },
+    {
+     "_key": "83ecb841f4d5",
+     "_type": "span",
+     "marks": [],
+     "text": " or the "
+    },
+    {
+     "_key": "6676f4d7851b",
+     "_type": "span",
+     "marks": [
+      "939551c098ca"
+     ],
+     "text": "Epic Universe park page"
+    },
+    {
+     "_key": "7f7b250a3ba6",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "049ffbbddd16",
+     "_type": "link",
+     "href": "/rides/for/epic-universe-under-40/"
+    },
+    {
+     "_key": "939551c098ca",
+     "_type": "link",
+     "href": "/parks/epic-universe/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "a38f91b1c355",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a174003359ee",
+     "_type": "span",
+     "marks": [],
+     "text": "No minimum height"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "f6c3aa0cefc2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c236cf8ebf65",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Constellation Carousel"
+    },
+    {
+     "_key": "be86c4f63fb0",
+     "_type": "span",
+     "marks": [],
+     "text": " (Celestial Park) and "
+    },
+    {
+     "_key": "951cbf09c6e2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Fyre Drill"
+    },
+    {
+     "_key": "08ef53449637",
+     "_type": "span",
+     "marks": [],
+     "text": " (Isle of Berk): no height requirement; supervising companion under 48 inches. Universal says hand-held infants are not permitted on either."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d4bab61e0a3f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bc4c13f3fec8",
+     "_type": "span",
+     "marks": [],
+     "text": "Low height minimums"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "3b94d54900f2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "73e325485611",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Yoshi's Adventure:"
+    },
+    {
+     "_key": "a2b07eda1aed",
+     "_type": "span",
+     "marks": [],
+     "text": " 34 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5d7301eb13e9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a0984804bb16",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches:"
+    },
+    {
+     "_key": "884c567859b7",
+     "_type": "span",
+     "marks": [],
+     "text": " Mario Kart: Bowser's Challenge, Mine-Cart Madness, Hiccup's Wing Gliders, Harry Potter and the Battle at the Ministry and Curse of the Werewolf."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "69bed5497333",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e2504341336a",
+     "_type": "span",
+     "marks": [],
+     "text": "Bigger-kid rides"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "d4ebe9293c29",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "39fdcc4b82b5",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "48 inches:"
+    },
+    {
+     "_key": "89ffcdeaddbd",
+     "_type": "span",
+     "marks": [],
+     "text": " Stardust Racers, Dragon Racer's Rally and Monsters Unchained: The Frankenstein Experiment (closed December 11 to 15, 2026)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a699dc5e1be4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "77294673808f",
+     "_type": "span",
+     "marks": [],
+     "text": "Planning a full Epic day? See "
+    },
+    {
+     "_key": "b5bf6593c0ff",
+     "_type": "span",
+     "marks": [
+      "6504df810fb7"
+     ],
+     "text": "all Epic Universe rides ranked for kids"
+    },
+    {
+     "_key": "61f7b71d643c",
+     "_type": "span",
+     "marks": [],
+     "text": " and our "
+    },
+    {
+     "_key": "c143ba926710",
+     "_type": "span",
+     "marks": [
+      "4404596708ff"
+     ],
+     "text": "Epic Universe 1-day plan"
+    },
+    {
+     "_key": "207140977ef1",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "6504df810fb7",
+     "_type": "link",
+     "href": "/blog/epic-universe-rides-ranked-guide/"
+    },
+    {
+     "_key": "4404596708ff",
+     "_type": "link",
+     "href": "/blog/epic-universe-1-day-plan/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "a75c9e6a9870",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f39d30c173d7",
+     "_type": "span",
+     "marks": [],
+     "text": "Volcano Bay with Kids (When It Reopens)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "e6262959cc46",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9860b66a50bc",
+     "_type": "span",
+     "marks": [],
+     "text": "Volcano Bay is closed for maintenance until a planned reopening on or before April 1, 2027, per Universal's park hours page on November 23, 2026. For a spring trip, Universal's height page lists these kid areas and rules:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6277819a8120",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "90ac854b3adb",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Tot Tiki Reef:"
+    },
+    {
+     "_key": "534b28b7cf2c",
+     "_type": "span",
+     "marks": [],
+     "text": " designed for children under 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e82df42b7cdb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1ec473ca584e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Runamukka Reef:"
+    },
+    {
+     "_key": "694cf65a13f5",
+     "_type": "span",
+     "marks": [],
+     "text": " designed for children under 54 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3ec4985d1527",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6ce8b87e12a5",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Life vests:"
+    },
+    {
+     "_key": "7fa779e6e85f",
+     "_type": "span",
+     "marks": [],
+     "text": " children under 48 inches must wear a U.S. Coast Guard-approved life vest at Waturi Beach, The Reef and Puka Uli Lagoon."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "343ea4ffe7ad",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5d62b963338c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Most slides start at 42 or 48 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6ec7b1b7bbc5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "59a8b33451ef",
+     "_type": "span",
+     "marks": [],
+     "text": "Which Universal Park Fits Your Kids? (By Height)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "ac286286b9e2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b46cfa763ca0",
+     "_type": "span",
+     "marks": [],
+     "text": "Here is a simple way to choose, based on the official minimums above (checked November 23, 2026):"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "464793ef5de9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6292d062e978",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Under 34 inches:"
+    },
+    {
+     "_key": "42f34bdce1dd",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal Studios Florida or Islands of Adventure. Both have several no-minimum rides, and kids under 40 inches can experience Minion Mayhem from a stationary seat. Epic Universe has two no-minimum rides on Universal's height page."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6be68e59a787",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "14a560a43d76",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "34 to 35 inches:"
+    },
+    {
+     "_key": "fc1c5aa2a1b2",
+     "_type": "span",
+     "marks": [],
+     "text": " add E.T. Adventure and Yoshi's Adventure."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "809c0c330d64",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c36648f80218",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "36 to 39 inches:"
+    },
+    {
+     "_key": "d8df99cb424e",
+     "_type": "span",
+     "marks": [],
+     "text": " Islands of Adventure gets much better (Seuss rides, Flight of the Hippogriff, Kong, Pteranodon Flyers), plus Trolls Trollercoaster at Universal Studios Florida. Try our "
+    },
+    {
+     "_key": "3781e5316a51",
+     "_type": "span",
+     "marks": [
+      "bda50a1bbec6"
+     ],
+     "text": "Islands of Adventure calm rides under 40 inches"
+    },
+    {
+     "_key": "2a66f101acfe",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "bda50a1bbec6",
+     "_type": "link",
+     "href": "/rides/for/islands-of-adventure-calm-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "044251a2f5f4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e55180a186c8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 to 47 inches:"
+    },
+    {
+     "_key": "72b1514d6cfa",
+     "_type": "span",
+     "marks": [],
+     "text": " all three theme parks work, and Epic Universe becomes a strong pick."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "377c462571b2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6958db345286",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "48 inches and up:"
+    },
+    {
+     "_key": "c2116320735c",
+     "_type": "span",
+     "marks": [],
+     "text": " everything except the tallest coasters (VelociCoaster at 51, Doctor Doom's Fearfall at 52 and The Incredible Hulk Coaster at 54). See "
+    },
+    {
+     "_key": "3a30dcf08c6a",
+     "_type": "span",
+     "marks": [
+      "5237e323fe42"
+     ],
+     "text": "Universal rides for kids 48 inches and up"
+    },
+    {
+     "_key": "928d870aabb9",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "5237e323fe42",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-48/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "baad4050f4b8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "844b79f08dab",
+     "_type": "span",
+     "marks": [],
+     "text": "Holidays at Universal Orlando 2026 with Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "056af08617b5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5545294bde9b",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal's holidays page says Holidays at Universal Orlando runs "
+    },
+    {
+     "_key": "028087245588",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 14, 2026 to January 3, 2027"
+    },
+    {
+     "_key": "ad2c055cffd8",
+     "_type": "span",
+     "marks": [],
+     "text": ", and it is included with a theme park ticket or pass (blockout dates and restrictions apply). Here is what's where, per Universal's holidays page, parade page and its November 11, 2026 press release:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6806a0c6e486",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "80e0a3a110f8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Studios Florida:"
+    },
+    {
+     "_key": "0f5f8ed1135d",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal's Holiday Parade featuring Macy's runs each night, with giant balloons, Minions and characters from Shrek and Madagascar. Universal says it ends with a Christmas tree lighting led by Santa."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "926b42dd6802",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "93dd8a60cafd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Islands of Adventure:"
+    },
+    {
+     "_key": "c2c5cfbe907a",
+     "_type": "span",
+     "marks": [],
+     "text": " Grinchmas in Seuss Landing, with the Grinchmas Who-liday Spectacular stage show and a chance to meet the Grinch. Hogsmeade adds The Magic of Christmas at Hogwarts Castle, a projection show on the castle."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f71e26830a8c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9e44861ea4c0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Epic Universe:"
+    },
+    {
+     "_key": "9108d08f4404",
+     "_type": "span",
+     "marks": [],
+     "text": " holiday décor in SUPER NINTENDO WORLD, Snoggletog in How to Train Your Dragon – Isle of Berk, and Christmas trees in Celestial Park."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b58ec956c99c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "03e81f1ecd89",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Christmas in The Wizarding World of Harry Potter"
+    },
+    {
+     "_key": "6afa63cac1f1",
+     "_type": "span",
+     "marks": [],
+     "text": " runs in all three wizarding lands: Diagon Alley, Hogsmeade and the Ministry of Magic."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "478be605c013",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c3dfcbdb4ef1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Extras that cost more:"
+    },
+    {
+     "_key": "f56e9bb0cbbd",
+     "_type": "span",
+     "marks": [],
+     "text": " The Grinch & Friends Character Breakfast at Circus McGurkus Cafe Stoo-pendous needs a reservation and same-day Islands of Adventure admission. The Universal Holiday Tour runs on select dates from November 14, 2026 to January 2, 2027 and includes a Grinch meet and greet."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a80e93be6060",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a3024d3d9ad3",
+     "_type": "span",
+     "marks": [],
+     "text": "Holiday tips for families: parade and show times are in the Universal app, so check them the morning you go. Universal also notes that ticket prices and availability vary by day, so compare dates before you lock in a holiday week. If your trip lands between December 11 and 16, remember that Monsters Unchained and Jurassic Park River Adventure are both closed for part of that week."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "358608b45cec",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "381faea71b8a",
+     "_type": "span",
+     "marks": [],
+     "text": "Tickets: One Park per Day or Park-to-Park?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "fcdb3114a946",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ccd98e6d831f",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal's ticket FAQ (checked November 23, 2026) describes two main types:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dc794f9fdd0f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a583747c005c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "One-Park-Per-Day:"
+    },
+    {
+     "_key": "7f739f65a12b",
+     "_type": "span",
+     "marks": [],
+     "text": " one park each day, including Epic Universe, Universal Studios Florida, Islands of Adventure or Volcano Bay."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a8a4de68d2ae",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2e69d8938ea6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Park-to-Park:"
+    },
+    {
+     "_key": "9bcb9aea2154",
+     "_type": "span",
+     "marks": [],
+     "text": " move between parks on the same day. Universal says Park-to-Park is available at every Universal Orlando theme park, including Epic Universe. With Park-to-Park access to Islands of Adventure and Universal Studios Florida, you can also ride the Hogwarts Express between Hogsmeade and Diagon Alley. Universal's height page doesn't list a minimum height for the train, which makes it a great little-kid \"ride.\""
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9f129a177a32",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cdcd77e8aef9",
+     "_type": "span",
+     "marks": [],
+     "text": "With young kids, one park per day is often plenty. Park-to-Park is most useful if you want the Hogwarts Express or plan to split nap breaks across parks. For Epic-specific options, read our "
+    },
+    {
+     "_key": "6f00c496c478",
+     "_type": "span",
+     "marks": [
+      "a28b9490d063"
+     ],
+     "text": "Epic Universe tickets guide"
+    },
+    {
+     "_key": "dd992e56e3d7",
+     "_type": "span",
+     "marks": [],
+     "text": ", and compare current offers on our "
+    },
+    {
+     "_key": "096d136b567a",
+     "_type": "span",
+     "marks": [
+      "e18547fb0058"
+     ],
+     "text": "Universal and Orlando deals page"
+    },
+    {
+     "_key": "b3eda8d5bdc8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "a28b9490d063",
+     "_type": "link",
+     "href": "/blog/epic-universe-tickets-guide/"
+    },
+    {
+     "_key": "e18547fb0058",
+     "_type": "link",
+     "href": "/deals/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "98b0832117bc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f674387728e6",
+     "_type": "span",
+     "marks": [],
+     "text": "Practical Tips for Universal with Little Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "205a29dd5da0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6d9e58e0cc66",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Pick one anchor land per park."
+    },
+    {
+     "_key": "685eca90833b",
+     "_type": "span",
+     "marks": [],
+     "text": " Seuss Landing, DreamWorks Land and Minion Land, and Celestial Park all give you rides and room to roam close together."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6805b0f74106",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4873bdeb545a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Use Child Swap"
+    },
+    {
+     "_key": "eb55f5a15721",
+     "_type": "span",
+     "marks": [],
+     "text": " on the bigger rides so adults can take turns."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fc8b90ff76f7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d514edbb8077",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Pack dry clothes for the water rides."
+    },
+    {
+     "_key": "9ad1d86f5613",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal's own pages say you'll be \"really wet\" on Popeye & Bluto's Bilge-Rat Barges and to \"plan to get very, very wet\" on Dudley Do-Right's Ripsaw Falls."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ae298f6ae95e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "039eb70770d4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Check the closure list the night before."
+    },
+    {
+     "_key": "62f9ad05f503",
+     "_type": "span",
+     "marks": [],
+     "text": " The dates above can shift, and Universal's park hours page is the source."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "bafbf728f439",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1352a0d5ab0f",
+     "_type": "span",
+     "marks": [],
+     "text": "Gear that helps (affiliate links may apply): a "
+    },
+    {
+     "_key": "3936963ea02c",
+     "_type": "span",
+     "marks": [
+      "a3d34435c83e"
+     ],
+     "text": "kids' rain poncho"
+    },
+    {
+     "_key": "a9b6659399bb",
+     "_type": "span",
+     "marks": [],
+     "text": ", a "
+    },
+    {
+     "_key": "d736526c8534",
+     "_type": "span",
+     "marks": [
+      "15bce7f56e6f"
+     ],
+     "text": "waterproof phone pouch"
+    },
+    {
+     "_key": "f5ef0eb11413",
+     "_type": "span",
+     "marks": [],
+     "text": " for the water rides, and a "
+    },
+    {
+     "_key": "ad266b1aef16",
+     "_type": "span",
+     "marks": [
+      "22c81061319c"
+     ],
+     "text": "lightweight travel stroller"
+    },
+    {
+     "_key": "4021c9ea685a",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "a3d34435c83e",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "15bce7f56e6f",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=waterproof+phone+pouch&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "22c81061319c",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=lightweight+travel+stroller&tag=planyourpar0a-20"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "7fd478e67f46",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8e8c329ec47d",
+     "_type": "span",
+     "marks": [],
+     "text": "Still choosing between resorts? Our "
+    },
+    {
+     "_key": "c8fd46291058",
+     "_type": "span",
+     "marks": [
+      "4430dc1d2116"
+     ],
+     "text": "Disney vs. Universal with kids guide"
+    },
+    {
+     "_key": "50acb69d021e",
+     "_type": "span",
+     "marks": [],
+     "text": " compares the two."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "4430dc1d2116",
+     "_type": "link",
+     "href": "/blog/disney-vs-universal-with-kids-2026/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "a6ef5d2f6b91",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "710983558750",
+     "_type": "span",
+     "marks": [],
+     "text": "FAQ"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "aef897e17074",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a7cb203ed4c3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What are the 4 parks at Universal Orlando?"
+    },
+    {
+     "_key": "81b92a9de9a7",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal Studios Florida, Universal Islands of Adventure and Universal Epic Universe are the three theme parks. Universal Volcano Bay is the water park, and it is closed for maintenance until a planned reopening on or before April 1, 2027 (checked November 23, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "800f743d278c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "08748b92eed3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "How many parks are in Universal Orlando?"
+    },
+    {
+     "_key": "0981c8758e48",
+     "_type": "span",
+     "marks": [],
+     "text": " Four: three theme parks and one water park. Universal CityWalk is a dining and entertainment district, not a park."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "cc478bdac632",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f7b85cef1345",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What parks are at Universal Studios?"
+    },
+    {
+     "_key": "463e4f8cf859",
+     "_type": "span",
+     "marks": [],
+     "text": " If you mean the Orlando resort, the parks are Universal Studios Florida, Islands of Adventure, Epic Universe and Volcano Bay. Universal Studios Florida is the name of just one of them."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6644c0188790",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dca129a7f9d9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Which Universal Orlando park is best for young kids?"
+    },
+    {
+     "_key": "75ee994b4b3b",
+     "_type": "span",
+     "marks": [],
+     "text": " Universal Studios Florida and Islands of Adventure have the most rides with no minimum height. For a child who is 36 to 39 inches tall, Islands of Adventure has the most options. Once a child reaches 40 inches, Epic Universe opens up."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5132c8e74459",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6a44db0a3523",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Is Epic Universe good for little kids?"
+    },
+    {
+     "_key": "a44e9ef3a4e4",
+     "_type": "span",
+     "marks": [],
+     "text": " Yes, though it is better once a child reaches 40 inches. Constellation Carousel and Fyre Drill have no height requirement, and Yoshi's Adventure starts at 34 inches."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "018822deb6c0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0c349cfddf45",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What can a child under 40 inches ride at Universal?"
+    },
+    {
+     "_key": "a4ebf11bd955",
+     "_type": "span",
+     "marks": [],
+     "text": " No-minimum rides like Caro-Seuss-el, One Fish, Two Fish, Red Fish, Blue Fish, Kang & Kodos' Twirl 'n' Hurl, Villain-Con Minion Blast, Constellation Carousel and Fyre Drill. Then add E.T. Adventure and Yoshi's Adventure at 34 inches and the 36-inch rides above. See the "
+    },
+    {
+     "_key": "6a37ff1559c3",
+     "_type": "span",
+     "marks": [
+      "b0337757e0c5"
+     ],
+     "text": "Universal rides under 40 inches"
+    },
+    {
+     "_key": "627cb11a9ade",
+     "_type": "span",
+     "marks": [],
+     "text": " list."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "b0337757e0c5",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3ef5b10b874b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "18387baca03c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Is Volcano Bay open in December 2026?"
+    },
+    {
+     "_key": "2f791bbb124c",
+     "_type": "span",
+     "marks": [],
+     "text": " No. Universal's park hours page (checked November 23, 2026) says it is closed for maintenance until a planned reopening on or before April 1, 2027."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "0d43e8cc1ab0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e7cec763c294",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Are the Universal holiday events included with a ticket?"
+    },
+    {
+     "_key": "24aa07308a07",
+     "_type": "span",
+     "marks": [],
+     "text": " Yes. Universal's holidays page says Holidays at Universal Orlando (November 14, 2026 to January 3, 2027) is included with a theme park ticket or pass, with blockout dates and restrictions for passes. The Grinch & Friends Character Breakfast and Universal Holiday Tour cost extra."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "10d99a115063",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "27bb06c20c13",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What is Child Swap at Universal?"
+    },
+    {
+     "_key": "4423039bef51",
+     "_type": "span",
+     "marks": [],
+     "text": " One adult waits with a child who can't or won't ride, then trades places when the rest of the group is off the ride. Ask a ride attendant for details."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "ffc69ea8db9b",
+   "_ref": "q5bQv6QFqWcAZeLNacatl5",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Universal Orlando parks with kids: what the 4 parks are, which fits your child's height, what's closed and the 2026 holiday events. Checked November 23, 2026.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "A family of four walks hand in hand along a lagoon promenade toward a bronze ring-globe fountain, with palm trees, holiday garlands on lamp posts, and a sandstone fairytale castle and coaster track at sunset.",
+  "asset": {
+   "_ref": "image-d5e270f9e8cd17bd6cef832de55de15c52813ac1-1376x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-11-23T16:32:51Z",
+ "readTime": 10,
+ "slug": {
+  "_type": "slug",
+  "current": "universal-orlando-parks-with-kids"
+ },
+ "tags": [
+  "Universal Orlando parks",
+  "Universal Orlando with kids",
+  "Universal Studios Florida",
+  "Islands of Adventure",
+  "Epic Universe"
+ ],
+ "title": "Universal Orlando Parks with Kids: Which of the 4 to Pick (2026)"
+}

@@ -1,0 +1,674 @@
+{
+ "_createdAt": "2026-03-31T20:32:28Z",
+ "_id": "r5PBb5Nahg2bY9okthych9",
+ "_rev": "UmCdGwdZAOvDlOz2lHjZv5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-23T16:32:52Z",
+ "affiliateCTA": "Planning a Disney World trip? We recommend these Amazon products: \n<a href=\"https://www.amazon.com/dp/B005IHT94S?tag=planyourpar0a-20\">sunscreen</a>, \n<a href=\"https://www.amazon.com/dp/B09KV1QTQ8?tag=planyourpar0a-20\">a great water bottle</a>, and a \n<a href=\"https://www.amazon.com/dp/B08866RDYK?tag=planyourpar0a-20\">stroller fan</a> for hot Florida days. \nAs an Amazon Associate, Plan Your Park earns from qualifying purchases.",
+ "author": {
+  "name": "Plan Your Park Team"
+ },
+ "body": [
+  {
+   "_key": "qA3myj3wioIqOqUk24Z7hW",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z7lg",
+     "_type": "span",
+     "text": "Disney World with a Baby or Toddler: The Complete Guide"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "b620390023ac",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3cab47aebece",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "b426175f78ef",
+     "_type": "span",
+     "marks": [
+      "dc7fd74c6559"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "8f35657ec7aa",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "dc7fd74c6559",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z7pq",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z7u0",
+     "_type": "span",
+     "text": "Disney World with a baby or toddler is not the same as Disney World with a 6-year-old. If you go in expecting to do Disney World the way you remember it from your own childhood — park hopper, rope drop, hit everything — you're going to have a rough time. But if you go in with the right expectations and the right gear, it can be one of the most magical experiences you share as a family. Here's how to actually do it."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z7yA",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z82K",
+     "_type": "span",
+     "text": "The Stroller Question: Bring Your Own"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z86U",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8Ae",
+     "_type": "span",
+     "marks": [],
+     "text": "This is non-negotiable: bring your own stroller. Disney rents strollers but they're hard plastic, uncomfortable, and frankly, not appropriate for a full day at the parks. Your kid needs their own familiar stroller — one they've slept in, one that reclines, one they associate with feeling safe. A long Disney day means a stroller that can handle naps."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7e96e5aae61e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fe8e7d393424",
+     "_type": "span",
+     "marks": [],
+     "text": "For hot days, a stroller fan can be a comfort item if you use it safely: choose a model with a protective cover, secure it where little fingers cannot reach it, and follow the manufacturer’s instructions. Use shade, breaks in air-conditioned spaces, water, and your child’s cues as your primary heat-management plan; ask a pediatric clinician for individualized advice."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8Iy",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8N8",
+     "_type": "span",
+     "text": "What Your Baby Can Actually Ride"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "b8c7add0bc71",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "db20a9732bef",
+     "_type": "span",
+     "marks": [],
+     "text": "The good news: babies and toddlers have plenty of options at Disney World. Many classic dark rides, boat rides, and gentle attractions have no minimum height, while several coasters and thrill rides have posted height requirements. Check Disney’s official attraction page and the sign at the entrance on the day you visit, since eligibility is always determined there."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "59b08b470e32",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6b18b12150e8",
+     "_type": "span",
+     "marks": [],
+     "text": "Examples with no posted minimum height include it’s a small world, Jungle Cruise, Pirates of the Caribbean, The Magic Carpets of Aladdin, Dumbo the Flying Elephant, Peter Pan’s Flight, The Many Adventures of Winnie the Pooh, and Buzz Lightyear’s Space Ranger Spin. The Barnstormer has a 35-inch minimum; Seven Dwarfs Mine Train and Big Thunder Mountain Railroad each have a 38-inch minimum, and Tiana’s Bayou Adventure has a 40-inch minimum. A child who is tall enough still needs to be comfortable with the ride’s motion and theme."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1cc90e0ed52c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "05b208eba71c",
+     "_type": "span",
+     "marks": [],
+     "text": "For now, plan to skip the height-restricted thrill rides if your child does not meet the posted minimum: Seven Dwarfs Mine Train and Big Thunder Mountain Railroad are 38 inches; Tiana’s Bayou Adventure is 40 inches; Space Mountain is 44 inches; and TRON Lightcycle / Run is 48 inches. Splash Mountain is no longer an operating Magic Kingdom attraction; its replacement is Tiana’s Bayou Adventure."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eec458222c33",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3edf1bd26b33",
+     "_type": "span",
+     "marks": [],
+     "text": "Closure note (updated November 2, 2026): "
+    },
+    {
+     "_key": "e331ffbc6873",
+     "_type": "span",
+     "marks": [
+      "73bb1dd6b751"
+     ],
+     "text": "Disney says Tiana's Bayou Adventure"
+    },
+    {
+     "_key": "5154b69e92d3",
+     "_type": "span",
+     "marks": [],
+     "text": " is temporarily closed for routine refurbishment starting November 2, 2026, and is expected to reopen in December 2026. If your trip falls in that window, plan around it and check the My Disney Experience app before you go."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "73bb1dd6b751",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/attractions/magic-kingdom/tianas-bayou-adventure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "b658b5bb6ad08",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "sad2a947855af",
+     "_type": "span",
+     "marks": [],
+     "text": "For a full Magic Kingdom short-rider plan (what to rope-drop, what to skip, and realistic expectations), use our "
+    },
+    {
+     "_key": "s7419dc6460f8",
+     "_type": "span",
+     "marks": [
+      "l24db92531bc4"
+     ],
+     "text": "Magic Kingdom rides under 40 inches"
+    },
+    {
+     "_key": "s060055174936",
+     "_type": "span",
+     "marks": [],
+     "text": " guide — or open the "
+    },
+    {
+     "_key": "s2e4681d88590",
+     "_type": "span",
+     "marks": [
+      "l10cc61c0cde0"
+     ],
+     "text": "ride finder filtered for ~40″ at Magic Kingdom"
+    },
+    {
+     "_key": "seebcd4f3d5d8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "l24db92531bc4",
+     "_type": "link",
+     "href": "/blog/best-magic-kingdom-rides-kids-under-40-inches/"
+    },
+    {
+     "_key": "l10cc61c0cde0",
+     "_type": "link",
+     "href": "/rides/?height=40&parks=Magic%20Kingdom"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8RI",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8VS",
+     "_type": "span",
+     "text": "The Baby Center at Each Park"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8Zc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8dm",
+     "_type": "span",
+     "text": "Every Disney World park has a Baby Center — a dedicated room for nursing, pumping, bottle warming, and changing. They have changing tables, nursing chairs, formula, baby food, diapers, and wipes for purchase. They're air-conditioned oases that most visitors don't know about. Find them before you need them."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8hw",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8m6",
+     "_type": "span",
+     "text": "Magic Kingdom Baby Center: Near the intersection of Main Street and Fantasyland, on the left side as you face Cinderella Castle."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8qG",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z8uQ",
+     "_type": "span",
+     "text": "Epcot Baby Center: Near the Innovations East building, adjacent to the FountainView Esplanade."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z8ya",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z92k",
+     "_type": "span",
+     "text": "Hollywood Studios Baby Center: Near the restrooms adjacent to the Sunset Boulevard exit."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z96u",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9B4",
+     "_type": "span",
+     "text": "Animal Kingdom Baby Center: Near the checkout area at the main gift shop as you exit toward Africa."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9FE",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9JO",
+     "_type": "span",
+     "text": "Feeding and Food Strategy"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9NY",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9Ri",
+     "_type": "span",
+     "text": "You can bring food for your baby into any Disney park. This is not a gray area — the policy explicitly allows outside food for dietary and medical needs, including infants. Pack more food than you think you need. A hungry toddler in a Disney park is a crisis situation."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9Vs",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9a2",
+     "_type": "span",
+     "text": "For breastfed babies: nursing covers are legal and acceptable at Disney. You can nurse anywhere — cast members are trained not to bother nursing mothers. The Baby Centers offer private nursing rooms if you prefer privacy."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9eC",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9iM",
+     "_type": "span",
+     "text": "For bottle-fed babies: bring pre-mixed formula or have your partner meet you at the Baby Center for a feeding. Disney does sell formula and baby food at Baby Centers and select quick-service locations, but your preferred brand may not be available. Bring more than you think you need — a hungry baby at Disney is not a situation you want to be in."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9mW",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9qg",
+     "_type": "span",
+     "text": "For toddlers: Disney's counter-service locations have kid-friendly options but they're expensive ($10-14 for a small bowl of pasta). Mobile ordering through the app is a lifesaver — order from wherever you are and pick up when ready, so you don't have to wrangle a toddler in a busy restaurant."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24Z9uq",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24Z9z0",
+     "_type": "span",
+     "text": "Naps and Sleep"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "d6bd253b133f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bc1b9ee2550a",
+     "_type": "span",
+     "marks": [],
+     "text": "Naps are unpredictable in a theme-park setting. Some toddlers will nap in a familiar reclined stroller; others will need a hotel or other quiet break. Build a flexible midday reset into your plan rather than treating a park nap as guaranteed."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZA3A",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZA7K",
+     "_type": "span",
+     "text": "If your stroller reclines fully, your toddler might sleep in the stroller during an afternoon walk through World Showcase or along the less-stimulating pathways at Epcot or Animal Kingdom. But for a real nap — the 90-minute reset that makes the difference between a good evening and a catastrophic evening — you need to go back to the hotel."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZABU",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZAFe",
+     "_type": "span",
+     "marks": [],
+     "text": "A portable white noise machine is worth its weight in gold for toddler naps in a hotel. The Disney resort rooms are not quiet — hallways, neighboring rooms, and outside noise all disrupt naps. A portable white noise machine creates a sleep cave anywhere and costs under $20. This is the single most underrated piece of gear for Disney with toddlers."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZANy",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZAS8",
+     "_type": "span",
+     "text": "Dressing Your Toddler for Disney"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZAWI",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZAaS",
+     "_type": "span",
+     "marks": [],
+     "text": "Florida in spring and summer is hot, humid, and subject to sudden afternoon thunderstorms. Dress your toddler in light, breathable layers — a UV-protective shirt, light shorts, and a wide-brim hat. Apply sunscreen before you leave the hotel and reapply every two hours. A mineral stick sunscreen is the easiest to apply to a squirming toddler."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZAim",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZAmw",
+     "_type": "span",
+     "text": "Waterproof everything: Florida afternoon rain comes fast and hard. A rain poncho for your toddler is essential — not an umbrella, which is useless in wind. Keep a compact poncho in your stroller at all times."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZAr6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZAvG",
+     "_type": "span",
+     "marks": [],
+     "text": "Keep a waterproof phone pouch in your stroller. Between the mist from rides like Kali River Rapids, the splash zones at shows, and the occasional Florida downpour, your phone is in constant danger. A waterproof pouch means you can keep your phone in the stroller cup holder and not worry about it."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZB3a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZB7k",
+     "_type": "span",
+     "text": "The Baby Carrier Question"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBBu",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBG4",
+     "_type": "span",
+     "marks": [],
+     "text": "Even with a stroller, a baby carrier is essential at Disney World. There are moments when your toddler won't be in the stroller — during loading and unloading of rides, while walking through narrow queue areas, or when your older child needs to be in the stroller instead. A comfortable baby carrier that distributes weight across your hips and back is the difference between carrying a toddler for 20 minutes and carrying one for 2 hours."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBOO",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBSY",
+     "_type": "span",
+     "text": "The Ergobaby or LILLEbaby carriers are the gold standard for Disney — they have lumbar support, adjustable straps, and can be worn for hours without pain. If you're doing a multi-day Disney trip with a toddler who doesn't want to be in the stroller, this is not optional. It's survival gear."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBWi",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBas",
+     "_type": "span",
+     "text": "Managing Overstimulation"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "a4e71e0ac0cf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4041d8c71a7e",
+     "_type": "span",
+     "marks": [],
+     "text": "A long, loud, busy day can be a lot for a toddler, but every child’s limit is different. Watch for your own child’s cues—fatigue, frustration, hunger, or a need for quiet—and build in shade, snacks, water, and a break before the day unravels."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBf2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBjC",
+     "_type": "span",
+     "text": "The signs are predictable: increased whining, refusing eye contact, seeking to be held constantly, tantrums over nothing. When you see these signs, the answer is not 'one more ride.' The answer is leaving. Now. Not in 20 minutes. Now."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBnM",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBrW",
+     "_type": "span",
+     "text": "Build a departure threshold into your day. When your toddler hits it — and they will — you want to already be heading toward the exit, not standing in line for Space Mountain. The families who have good Disney days with toddlers are the families who know when to quit."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZBvg",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZBzq",
+     "_type": "span",
+     "text": "The Nighttime Equation"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZC40",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZC8A",
+     "_type": "span",
+     "text": "If you're doing Disney fireworks with a toddler, you're doing it for yourselves, not for them. Most toddlers under 3 are asleep by 8pm anyway. If you want to see Happily Ever After at Magic Kingdom, plan to leave the park by 6pm, eat dinner, rest, and come back just for the show — or watch from the Polynesian beach, where you can see the fireworks over the castle across the water without the crowd. It's genuinely magical and significantly less chaotic."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZCCK",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZCGU",
+     "_type": "span",
+     "text": "The Bottom Line"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZCKe",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZCOo",
+     "_type": "span",
+     "text": "Disney World with a baby or toddler is absolutely doable — and genuinely wonderful. But it requires a completely different mental model than going with older kids. The parks are there for you, not the other way around. You're not trying to see everything. You're trying to have a few genuinely great experiences and come home without anyone losing their mind. That goal is completely achievable if you go in with the right expectations, the right gear, and the willingness to leave when it's time to leave. The magic is there. Your job is to find it at your toddler's pace, not at Disney's pace."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "qA3myj3wioIqOqUk24ZCSy",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "qA3myj3wioIqOqUk24ZCX8",
+     "_type": "span",
+     "text": "As an Amazon Associate, Plan Your Park earns from qualifying purchases."
+    }
+   ],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "qA3myj3wioIqOqUk24ZCbI",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Disney World with a baby or toddler? It's absolutely doable—and honestly, magical. Here's everything you need to know about strollers, naps, feeding, and maximizing the magic when your little one is under 3.",
+ "heroImage": {
+  "_type": "image",
+  "asset": {
+   "_ref": "image-12dfd18a7180d9ba89ccaa7599815e7f124b4906-1408x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-03-31T00:00:00Z",
+ "readTime": 10,
+ "slug": {
+  "_type": "slug",
+  "current": "disney-world-with-baby-toddler"
+ },
+ "tags": [
+  "baby",
+  "toddler",
+  "planning",
+  "kids",
+  "genie-plus",
+  "stroller"
+ ],
+ "title": "Disney World with a Baby or Toddler: The Complete Guide"
+}

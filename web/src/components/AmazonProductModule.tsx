@@ -3,6 +3,7 @@ import {
   AMAZON_LINK_REL,
   amazonProductUrl,
   getAmazonModule,
+  getAmazonTagForSlug,
   productsForModule,
   type AmazonModuleVariant,
   type AmazonProduct,
@@ -17,11 +18,13 @@ const CTA_LABEL: Record<AmazonModuleVariant, string> = {
 function ProductLink({
   product,
   variant,
+  tag,
 }: {
   product: AmazonProduct;
   variant: AmazonModuleVariant;
+  tag: string;
 }) {
-  const href = amazonProductUrl(product.asin);
+  const href = amazonProductUrl(product.asin, tag);
   const cta = CTA_LABEL[variant];
 
   if (variant === "deals-grid") {
@@ -31,6 +34,7 @@ function ProductLink({
         target="_blank"
         rel={AMAZON_LINK_REL}
         className="amp-card"
+        data-amazon-tag={tag}
       >
         <div className="amp-card-info">
           <h3>{product.name}</h3>
@@ -43,7 +47,7 @@ function ProductLink({
 
   return (
     <li className="amp-item">
-      <a href={href} target="_blank" rel={AMAZON_LINK_REL} className="amp-item-link">
+      <a href={href} target="_blank" rel={AMAZON_LINK_REL} className="amp-item-link" data-amazon-tag={tag}>
         <span className="amp-item-name">{product.name}</span>
         <span className="amp-item-why">{product.why}</span>
         <span className="amp-cta">{cta} →</span>
@@ -61,6 +65,7 @@ export default function AmazonProductModule({ slug }: Props) {
   if (!module) return null;
 
   const products = productsForModule(module);
+  const tag = getAmazonTagForSlug(slug);
   const isGrid = module.variant === "deals-grid";
 
   return (
@@ -69,6 +74,7 @@ export default function AmazonProductModule({ slug }: Props) {
       aria-labelledby={`amp-title-${module.slug}`}
       data-amazon-module={module.variant}
       data-amazon-slug={module.slug}
+      data-amazon-tag={tag}
     >
       <div className="amp-header">
         <h2 id={`amp-title-${module.slug}`}>{module.title}</h2>
@@ -77,13 +83,13 @@ export default function AmazonProductModule({ slug }: Props) {
       {isGrid ? (
         <div className="amp-grid">
           {products.map((product) => (
-            <ProductLink key={product.id} product={product} variant={module.variant} />
+            <ProductLink key={product.id} product={product} variant={module.variant} tag={tag} />
           ))}
         </div>
       ) : (
         <ol className="amp-list">
           {products.map((product) => (
-            <ProductLink key={product.id} product={product} variant={module.variant} />
+            <ProductLink key={product.id} product={product} variant={module.variant} tag={tag} />
           ))}
         </ol>
       )}

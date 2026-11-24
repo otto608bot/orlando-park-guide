@@ -1,0 +1,3619 @@
+{
+ "_createdAt": "2026-11-18T01:48:37Z",
+ "_id": "blogPost-disney-world-rides-for-toddlers-and-preschoolers",
+ "_rev": "UmCdGwdZAOvDlOz2lHjZv5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-23T16:32:52Z",
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "body": [
+  {
+   "_key": "8e58551b2729",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "94ab8a091534",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket and gear links in this guide are affiliate links. If you book or buy through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "be18ece5cade",
+     "_type": "span",
+     "marks": [
+      "fc0ddac375fd"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "42362efa9d26",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "fc0ddac375fd",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d205463383f7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e2f1ae7e57a5",
+     "_type": "span",
+     "marks": [],
+     "text": "Quick Answer: The Best Disney World Rides for Toddlers and Preschoolers"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "6cddff6bf189",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3b1fa2652886",
+     "_type": "span",
+     "marks": [],
+     "text": "Most of what little kids love at Disney World has "
+    },
+    {
+     "_key": "4d726b446824",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "no height requirement at all"
+    },
+    {
+     "_key": "5d7365f02d0a",
+     "_type": "span",
+     "marks": [],
+     "text": ". By our count of Disney's attraction pages on "
+    },
+    {
+     "_key": "1ed11078e886",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 16, 2026"
+    },
+    {
+     "_key": "cb8233624fcf",
+     "_type": "span",
+     "marks": [],
+     "text": ", Magic Kingdom has 15 rides open to any height, EPCOT has 7, Animal Kingdom has 3 and Hollywood Studios has 2. The lowest posted minimum on any ride at the four theme parks is "
+    },
+    {
+     "_key": "fa8cfe0e75f3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "32 inches"
+    },
+    {
+     "_key": "b4f7ab84463e",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "25c452138a20",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "06812c3390c8",
+     "_type": "span",
+     "marks": [],
+     "text": "Here is the short version, park by park:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a68d33e76912",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fbd152c336a3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Magic Kingdom:"
+    },
+    {
+     "_key": "0c85e2a0bb57",
+     "_type": "span",
+     "marks": [],
+     "text": " Dumbo the Flying Elephant, Prince Charming Regal Carrousel, Peter Pan's Flight, The Many Adventures of Winnie the Pooh, \"it's a small world,\" Under the Sea - Journey of The Little Mermaid"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b38728873ea8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "995325777c38",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT:"
+    },
+    {
+     "_key": "52a794260995",
+     "_type": "span",
+     "marks": [],
+     "text": " Frozen Ever After, The Seas with Nemo & Friends, Journey Into Imagination With Figment, Gran Fiesta Tour, Journey of Water"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "663397313c0f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f2154dd3fe78",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Hollywood Studios:"
+    },
+    {
+     "_key": "beee19a7039a",
+     "_type": "span",
+     "marks": [],
+     "text": " Toy Story Mania!, Mickey & Minnie's Runaway Railway, Alien Swirling Saucers (32 inches)"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f7b4a2321229",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "da9ed9b480b5",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Animal Kingdom:"
+    },
+    {
+     "_key": "0a135c2d2e11",
+     "_type": "span",
+     "marks": [],
+     "text": " Kilimanjaro Safaris, Na'vi River Journey, Wildlife Express Train, the animal trails"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "760f82c981c8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2d9f36f4242d",
+     "_type": "span",
+     "marks": [],
+     "text": "We checked every height and status below against Disney's official attraction pages on November 16, 2026. Rules change, so confirm in the My Disney Experience app before you go. Want it filtered for your child? Open the "
+    },
+    {
+     "_key": "11a12f0360a7",
+     "_type": "span",
+     "marks": [
+      "0319ae3dc061"
+     ],
+     "text": "Disney World rides under 40 inches"
+    },
+    {
+     "_key": "13e007ba8181",
+     "_type": "span",
+     "marks": [],
+     "text": " in our ride finder, or browse "
+    },
+    {
+     "_key": "f189fcdfee68",
+     "_type": "span",
+     "marks": [
+      "9884d6f53697"
+     ],
+     "text": "every Disney World ride"
+    },
+    {
+     "_key": "497f1a0cb927",
+     "_type": "span",
+     "marks": [],
+     "text": ". Still choosing a park? Start with our "
+    },
+    {
+     "_key": "d5b618cd3ff9",
+     "_type": "span",
+     "marks": [
+      "dd9608c9c41a"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "9d7c3b09bb54",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "0319ae3dc061",
+     "_type": "link",
+     "href": "/rides/for/disney-world-under-40/"
+    },
+    {
+     "_key": "9884d6f53697",
+     "_type": "link",
+     "href": "/rides/for/disney-world-all/"
+    },
+    {
+     "_key": "dd9608c9c41a",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "246fb1ad2a75",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "85b50f3a2a04",
+     "_type": "span",
+     "marks": [],
+     "text": "How to Read This Guide"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "2ad8fe746d21",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7e39f91315d1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "\"Any height\""
+    },
+    {
+     "_key": "ea1aef5633b5",
+     "_type": "span",
+     "marks": [],
+     "text": " means Disney's page lists no minimum height. Disney's pages are the final word, so also check the posted height at each attraction."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f50ae8d6f53a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d022e57c337b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Heights are minimums, not readiness."
+    },
+    {
+     "_key": "5abc0b119c50",
+     "_type": "span",
+     "marks": [],
+     "text": " A child can be tall enough and still not love the dark, the noise or the motion. Where Disney's own page describes a ride as slow, gentle or mildly frightening, we say so. Otherwise we stick to Disney's description."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1adbd60e25eb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9977d664bce4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "We don't map ages to heights."
+    },
+    {
+     "_key": "312a334938fa",
+     "_type": "span",
+     "marks": [],
+     "text": " Kids of the same age vary a lot. Use the height lists below and your own child's comfort level."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7a18bb960540",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6d276d524842",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Rider Switch helps when your party is split."
+    },
+    {
+     "_key": "310c66beb4cb",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's "
+    },
+    {
+     "_key": "73e2345cbf66",
+     "_type": "span",
+     "marks": [
+      "e3b7913edbfa"
+     ],
+     "text": "Rider Switch page"
+    },
+    {
+     "_key": "51f6a293c957",
+     "_type": "span",
+     "marks": [],
+     "text": " says adults can take turns riding while one waits with a child who doesn't meet the boarding requirements, then skip the standard queue on the second turn. Ask a Cast Member at the entrance."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "e3b7913edbfa",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/guest-services/rider-switch/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "08f1e7f5ec87",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a3b481b8c7c3",
+     "_type": "span",
+     "marks": [],
+     "text": "Closed or Changed Right Now (Checked November 16, 2026)"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "a3edf3490bc6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "efcf6c3500b5",
+     "_type": "span",
+     "marks": [],
+     "text": "Older guides are out of date on these, so check this list first:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "80a1b3e4af55",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "097ed36ad834",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Tiana's Bayou Adventure (Magic Kingdom):"
+    },
+    {
+     "_key": "154b8fc338c5",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's page says it temporarily closes for routine refurbishment on November 2 and is expected to reopen in December 2026. It has a 40-inch minimum."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6d95c15a01da",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "88a15ba441dd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jungle Cruise (Magic Kingdom):"
+    },
+    {
+     "_key": "d9b1cd1a95ac",
+     "_type": "span",
+     "marks": [],
+     "text": " it shows \"No times available\" on Disney's page because it is the Jingle Cruise for the holidays. Disney says Jungle Cruise returns early next year. "
+    },
+    {
+     "_key": "f2ab9a839fb5",
+     "_type": "span",
+     "marks": [
+      "0b3cb29d450f"
+     ],
+     "text": "Jingle Cruise"
+    },
+    {
+     "_key": "8b24a3ee84ba",
+     "_type": "span",
+     "marks": [],
+     "text": " is listed as any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "0b3cb29d450f",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/attractions/magic-kingdom/jingle-cruise/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "5cde9b9c808d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "250e4e1b209f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Walt Disney World Railroad (Magic Kingdom):"
+    },
+    {
+     "_key": "4b9273552be3",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney says it is running a modified route that skips Frontierland, as a shuttle between the Main Street and Fantasyland stations only."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9b95448650db",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "919f1593a55a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Soarin' Around the World (EPCOT):"
+    },
+    {
+     "_key": "aeb8f763674d",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's page says it is currently unavailable and points guests to "
+    },
+    {
+     "_key": "15a883a9b15b",
+     "_type": "span",
+     "marks": [
+      "6fb77f816054"
+     ],
+     "text": "Soarin' Across America"
+    },
+    {
+     "_key": "a341fb537ceb",
+     "_type": "span",
+     "marks": [],
+     "text": ", which has a 40-inch minimum."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "6fb77f816054",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/attractions/epcot/soarin-across-america/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "f9196d18343e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "928631d33038",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "DuckTales World Showcase Adventure (EPCOT):"
+    },
+    {
+     "_key": "1ede5e462aaf",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's page says it is under refurbishment and may be available in a limited format. We left it out of our picks."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1450e1d272f8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2b8e0939eacf",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "DinoLand U.S.A. (Animal Kingdom):"
+    },
+    {
+     "_key": "7f6d371c20c7",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's Animal Kingdom attractions list no longer includes DINOSAUR or TriceraTop Spin. Our "
+    },
+    {
+     "_key": "611ec3e2512b",
+     "_type": "span",
+     "marks": [
+      "1bc8e6549fb7"
+     ],
+     "text": "Animal Kingdom guide"
+    },
+    {
+     "_key": "4082a9399cee",
+     "_type": "span",
+     "marks": [],
+     "text": " has the details and sources."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "1bc8e6549fb7",
+     "_type": "link",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "7fb40e6424cb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "72de96905579",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom: Rides for Toddlers and Preschoolers"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "58b4c0aed9af",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "941ad1d0d2df",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom has the most no-height-limit rides of the four parks, so it is the easiest first Disney day for a short rider. Everything below is listed on Disney's official Magic Kingdom pages (checked November 16, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d378aac53646",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8236ece65a03",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom rides with no height requirement"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "a66f32f244bb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "abd8754a6a37",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Dumbo the Flying Elephant"
+    },
+    {
+     "_key": "a7bc0b0abac5",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney calls it a \"whimsical flight aboard Dumbo,\" and you can adjust your altitude during the flight. The air-conditioned play area in the big-top tent makes the wait easier."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "70a4e7c475d0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "36d13e231494",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Prince Charming Regal Carrousel"
+    },
+    {
+     "_key": "1ebe3ea400b0",
+     "_type": "span",
+     "marks": [],
+     "text": " — ride \"atop a regal steed\" past colorful scenes and music. A classic first ride."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7ce7cffcb132",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "644d9b9bb323",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Magic Carpets of Aladdin"
+    },
+    {
+     "_key": "349ac9b1c898",
+     "_type": "span",
+     "marks": [],
+     "text": " — fly over Adventureland on an enchanted carpet."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2b01e66ca82e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8e26845436b2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Mad Tea Party"
+    },
+    {
+     "_key": "22dad47d553f",
+     "_type": "span",
+     "marks": [],
+     "text": " — giant spinning teacups. Disney says you can turn the wheel fast for a wild ride or turn slowly, or not at all, for a gentle turn around the table."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d9be53c87921",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "62e0ab9fd854",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Astro Orbiter"
+    },
+    {
+     "_key": "6898b442ee2c",
+     "_type": "span",
+     "marks": [],
+     "text": " — pilot a spaceship high above Tomorrowland."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "63fb61e33e1a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "189797226231",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Tomorrowland Transit Authority PeopleMover"
+    },
+    {
+     "_key": "3841d0d267ac",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 10-minute tour of Tomorrowland, good for a seated break."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d8a2f293e8c4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4fac0eee071e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Peter Pan's Flight"
+    },
+    {
+     "_key": "08723373ebe6",
+     "_type": "span",
+     "marks": [],
+     "text": " — a high-flying adventure over scenes from the film."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ace70f7d2e5f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "98b51ce022d8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Many Adventures of Winnie the Pooh"
+    },
+    {
+     "_key": "4fd30b0de9c4",
+     "_type": "span",
+     "marks": [],
+     "text": " — a ride through the Hundred-Acre Wood in an oversized Hunny Pot."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5ec40a8a9adb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6c1cd45272d9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "\"it's a small world\""
+    },
+    {
+     "_key": "0a3354f21b7c",
+     "_type": "span",
+     "marks": [],
+     "text": " — a whimsical boat ride past a chorus of children from around the globe. Disney calls it a \"gentle 10-minute journey.\""
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "32d5804a9928",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "184512971056",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Under the Sea - Journey of The Little Mermaid"
+    },
+    {
+     "_key": "0f73cf7bbdf9",
+     "_type": "span",
+     "marks": [],
+     "text": " — a clamshell ride through scenes from the film."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b890f71a7c33",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3c8c81b7500d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Buzz Lightyear's Space Ranger Spin"
+    },
+    {
+     "_key": "caa0ad645c9d",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney describes it as \"dark, slow-moving and suitable for all ages.\" Kids fire a blaster at targets as they ride."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9b93f99ae7cf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8edeefec1f1e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Haunted Mansion"
+    },
+    {
+     "_key": "a37b6c601aba",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney says it is dark with \"some mildly frightening scenes,\" but \"no gore,\" friendly ghosts and a slow-moving ride. Preview it first if your child is sensitive."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1231684b3b39",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "af6d744f0210",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Pirates of the Caribbean"
+    },
+    {
+     "_key": "e6d9f1be658e",
+     "_type": "span",
+     "marks": [],
+     "text": " — a swashbuckling boat voyage, also any height. Read Disney's page first if your child is sensitive to dark rides."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c34fcf437424",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dcec6ecf3d3a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jingle Cruise"
+    },
+    {
+     "_key": "d9c514a0978b",
+     "_type": "span",
+     "marks": [],
+     "text": " — the holiday version of Jungle Cruise, any height (see the closure notes above)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "47a8efdb52e8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3bd3fd2765af",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Walt Disney World Railroad"
+    },
+    {
+     "_key": "f899fe31169f",
+     "_type": "span",
+     "marks": [],
+     "text": " — any height, on a modified shuttle route right now (see above)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6c234ff32777",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "98a8a27eda72",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom shows and play spots"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "0cb946513af8",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "aaa3828de236",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Mickey's PhilharMagic"
+    },
+    {
+     "_key": "b5e779e3f8f2",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 12-minute 3D show starring Donald Duck. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "974f12bd956a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c05705d107d6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Enchanted Tales with Belle"
+    },
+    {
+     "_key": "02c5a1ee31e2",
+     "_type": "span",
+     "marks": [],
+     "text": " — you take part in Belle's fairytale alongside Belle herself, per Disney. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "923a6cd2b9f9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9d014bf1b50c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Monsters, Inc. Laugh Floor"
+    },
+    {
+     "_key": "1b830a5632c8",
+     "_type": "span",
+     "marks": [],
+     "text": " — an interactive comedy show. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "168eb61184c0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1123cd58fc55",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Casey Jr. Splash 'N' Soak Station"
+    },
+    {
+     "_key": "4461b476c176",
+     "_type": "span",
+     "marks": [],
+     "text": " — a water play area for cooling off. Any height. Pack a change of clothes."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b262aaa626ea",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "812289779b7c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Swiss Family Treehouse"
+    },
+    {
+     "_key": "ffe5825c0781",
+     "_type": "span",
+     "marks": [],
+     "text": " — a walk-through treehouse. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "12125f4244ae",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2da3ba715005",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom rides with a low height minimum"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "8bdfffa0dd48",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "753dd4681688",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "32 inches: Tomorrowland Speedway."
+    },
+    {
+     "_key": "48b5c0b34fc4",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's page says guests at least 32 inches tall may drive their own car if they are accompanied by someone at least 54 inches tall."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fd06661592c5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9fcffb82824c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "35 inches: The Barnstormer."
+    },
+    {
+     "_key": "6d32e2bc8617",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney calls it a \"junior roller coaster.\""
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b67a5459ba7c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "eb6478d1a87e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches: Seven Dwarfs Mine Train and Big Thunder Mountain Railroad."
+    },
+    {
+     "_key": "befc631e5ce6",
+     "_type": "span",
+     "marks": [],
+     "text": " Both are coasters. Big Thunder is described as a fast coaster-type ride with some bumpy, dark parts."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6ae45b8c9721",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9ba294719b09",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches: Tiana's Bayou Adventure."
+    },
+    {
+     "_key": "bc02ec4ab8cb",
+     "_type": "span",
+     "marks": [],
+     "text": " Closed for refurbishment right now (see above)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "48e8c317341b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "76ee699aa03b",
+     "_type": "span",
+     "marks": [],
+     "text": "For a full Magic Kingdom plan, read our "
+    },
+    {
+     "_key": "c3ce243b631a",
+     "_type": "span",
+     "marks": [
+      "2078c88d7241"
+     ],
+     "text": "Magic Kingdom with kids guide"
+    },
+    {
+     "_key": "affd1df30738",
+     "_type": "span",
+     "marks": [],
+     "text": " and the deeper dive on "
+    },
+    {
+     "_key": "019c1719ff22",
+     "_type": "span",
+     "marks": [
+      "5d146a06b328"
+     ],
+     "text": "Magic Kingdom rides for kids under 40 inches"
+    },
+    {
+     "_key": "cacee93c8289",
+     "_type": "span",
+     "marks": [],
+     "text": ". Use the ride finder's "
+    },
+    {
+     "_key": "1dd8905fdda0",
+     "_type": "span",
+     "marks": [
+      "257981630f1b"
+     ],
+     "text": "calm Magic Kingdom rides under 40 inches"
+    },
+    {
+     "_key": "1a3e6e9aa7d9",
+     "_type": "span",
+     "marks": [],
+     "text": ", or see our "
+    },
+    {
+     "_key": "1f5ae31dacf2",
+     "_type": "span",
+     "marks": [
+      "f892e3df656a"
+     ],
+     "text": "Magic Kingdom park guide"
+    },
+    {
+     "_key": "1dc013dcb477",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "2078c88d7241",
+     "_type": "link",
+     "href": "/blog/magic-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "5d146a06b328",
+     "_type": "link",
+     "href": "/blog/best-magic-kingdom-rides-kids-under-40-inches/"
+    },
+    {
+     "_key": "257981630f1b",
+     "_type": "link",
+     "href": "/rides/for/magic-kingdom-calm-under-40/"
+    },
+    {
+     "_key": "f892e3df656a",
+     "_type": "link",
+     "href": "/parks/magic-kingdom/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "a0a439ea175a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ad8090d24e18",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT: Rides for Toddlers and Preschoolers"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "550470f9c4a4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f2e5a8390032",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT has seven rides open to any height, and most are boat or ride-through experiences. Heights below come from Disney's EPCOT pages (checked November 16, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e72226899ecb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0237430736c2",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT rides with no height requirement"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "48d557e6e9e4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cc9de3495f11",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Frozen Ever After"
+    },
+    {
+     "_key": "f1fec915553a",
+     "_type": "span",
+     "marks": [],
+     "text": " — a boat ride through the wintery world of Frozen."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "acb2eb1d08aa",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5f5951dfe1df",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Seas with Nemo & Friends"
+    },
+    {
+     "_key": "01cae95c7985",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney calls it a \"gentle ride\" based on Finding Nemo."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "8dbc2fcf9ec3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0993cd0d1d02",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey Into Imagination With Figment"
+    },
+    {
+     "_key": "a03607e1a6d9",
+     "_type": "span",
+     "marks": [],
+     "text": " — a ride through the sensory labs of the Imagination Institute with a playful dragon as the guide."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "054219807be1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "67109c7e29f3",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gran Fiesta Tour Starring The Three Caballeros"
+    },
+    {
+     "_key": "bdcc635766da",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney calls it a \"gentle boat ride,\" and also describes it as a dark boat ride through the Mexico Pavilion."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "40dff307b0fc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0fe98a2017ce",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Living with the Land"
+    },
+    {
+     "_key": "b32b2cef7212",
+     "_type": "span",
+     "marks": [],
+     "text": " — Disney calls it a \"gentle boat tour\" past greenhouses."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c35e447e0641",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f44fd5bc1436",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Remy's Ratatouille Adventure"
+    },
+    {
+     "_key": "5f54983bd356",
+     "_type": "span",
+     "marks": [],
+     "text": " — a ride that makes you feel shrunk down to Remy's size."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "212288f2e94b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b0d633d833ee",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Spaceship Earth"
+    },
+    {
+     "_key": "eacbcc1a1c36",
+     "_type": "span",
+     "marks": [],
+     "text": " — a trip through the history of human communication."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3d1559f8d602",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b6cb7c49961a",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT shows and play spots"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "e83ad3935327",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "978a8f5cc419",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Journey of Water, Inspired by Moana"
+    },
+    {
+     "_key": "418bd382fcd9",
+     "_type": "span",
+     "marks": [],
+     "text": " — a lush walk-through trail Disney describes as fun for all ages. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "67da03ae0b95",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b4507f57a85a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "ImageWorks - The \"What If\" Labs"
+    },
+    {
+     "_key": "9d41c8982bd4",
+     "_type": "span",
+     "marks": [],
+     "text": " — a creative play space where, in Disney's words, \"little ones can explore their senses.\" Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "aa443662376b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "06fd03dcbcc2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Turtle Talk With Crush"
+    },
+    {
+     "_key": "1864a50fb6e3",
+     "_type": "span",
+     "marks": [],
+     "text": " — a real-time conversation with Crush the sea turtle. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eba679f75c7a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b445ce8430e0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Disney and Pixar Short Film Festival"
+    },
+    {
+     "_key": "f69ff5332b53",
+     "_type": "span",
+     "marks": [],
+     "text": " — popular shorts in 4D. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f61a3c0beeb0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3e5e301cf716",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Bruce's Shark World"
+    },
+    {
+     "_key": "79a9789a715d",
+     "_type": "span",
+     "marks": [],
+     "text": " (an interactive walkthrough exhibit) and "
+    },
+    {
+     "_key": "d7c893c7f26d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kidcot Fun Stops"
+    },
+    {
+     "_key": "54394dec0afa",
+     "_type": "span",
+     "marks": [],
+     "text": " (activity-card stops across World Showcase). Both are any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "55e69e2593e0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1097f34cf414",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT rides with a height minimum"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "1fea1d09456c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "81345c7512ac",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches:"
+    },
+    {
+     "_key": "dc0b2c758298",
+     "_type": "span",
+     "marks": [],
+     "text": " Test Track, Soarin' Across America and Mission: SPACE (Green Mission)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "4ba2be9625af",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9599cfbeaaae",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "42 inches:"
+    },
+    {
+     "_key": "b4ac9f8c4ae6",
+     "_type": "span",
+     "marks": [],
+     "text": " Guardians of the Galaxy: Cosmic Rewind."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "332c42f515da",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f575326bf134",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches:"
+    },
+    {
+     "_key": "60de098ad234",
+     "_type": "span",
+     "marks": [],
+     "text": " Mission: SPACE (Orange Mission)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "de68d3143af7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bef2183e4a69",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney says the Green Mission \"doesn't spin\" and uses a motion simulator with light movement, and it is the better choice if you are unsure which level to pick. The Orange Mission uses a spinning centrifuge. Kids under 40 inches can't ride either mission."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e54bff70523d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cffae0f296f3",
+     "_type": "span",
+     "marks": [],
+     "text": "See our "
+    },
+    {
+     "_key": "7335c657edfd",
+     "_type": "span",
+     "marks": [
+      "6bb4762316f4"
+     ],
+     "text": "EPCOT with kids guide"
+    },
+    {
+     "_key": "fe6fc2f20e26",
+     "_type": "span",
+     "marks": [],
+     "text": ", the ride finder's "
+    },
+    {
+     "_key": "470a8097c097",
+     "_type": "span",
+     "marks": [
+      "4bb715ae314a"
+     ],
+     "text": "calm EPCOT rides under 40 inches"
+    },
+    {
+     "_key": "9bc3a24d3b4d",
+     "_type": "span",
+     "marks": [],
+     "text": ", and our "
+    },
+    {
+     "_key": "cdbcb5b00989",
+     "_type": "span",
+     "marks": [
+      "3072213cf99e"
+     ],
+     "text": "EPCOT park guide"
+    },
+    {
+     "_key": "1069ac2f11c8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "6bb4762316f4",
+     "_type": "link",
+     "href": "/blog/epcot-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "4bb715ae314a",
+     "_type": "link",
+     "href": "/rides/for/epcot-calm-under-40/"
+    },
+    {
+     "_key": "3072213cf99e",
+     "_type": "link",
+     "href": "/parks/epcot/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "db0d2ff9b245",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "afa77b74359e",
+     "_type": "span",
+     "marks": [],
+     "text": "Hollywood Studios: Rides for Toddlers and Preschoolers"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "7101615fb25f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "82f1261c61e1",
+     "_type": "span",
+     "marks": [],
+     "text": "Hollywood Studios has the fewest no-height rides: just two. It still works for little kids who love Toy Story and Mickey, and the heights climb quickly after that. All details are from Disney's Hollywood Studios pages (checked November 16, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "569e00674290",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2c79d023b40b",
+     "_type": "span",
+     "marks": [],
+     "text": "Hollywood Studios rides with no height requirement"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "4fc1b75d68a3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "82a918975e4d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Toy Story Mania!"
+    },
+    {
+     "_key": "68a8b924f8ea",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 4D shooting game starring the Toy Story gang. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "4ba983cdae87",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c280ab9a72d5",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Mickey & Minnie's Runaway Railway"
+    },
+    {
+     "_key": "1e67ee45a84a",
+     "_type": "span",
+     "marks": [],
+     "text": " — a zany adventure through a cartoon universe. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "afbda9d08f4b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5d7681611bf5",
+     "_type": "span",
+     "marks": [],
+     "text": "Hollywood Studios rides with a low height minimum"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "1cb0c134a2db",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3b287c146f05",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "32 inches: Alien Swirling Saucers."
+    },
+    {
+     "_key": "9de83c24db6e",
+     "_type": "span",
+     "marks": [],
+     "text": " An \"intergalactic spin\" with the Toy Story aliens."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7b43776546a5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "886131d23b46",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches: Slinky Dog Dash and Millennium Falcon: Smugglers Run."
+    },
+    {
+     "_key": "859d7c5f1d25",
+     "_type": "span",
+     "marks": [],
+     "text": " Slinky Dog Dash is a family coaster, and Smugglers Run is an interactive motion simulator."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "27e671854f63",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9640bc2a9131",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches:"
+    },
+    {
+     "_key": "594944bec71d",
+     "_type": "span",
+     "marks": [],
+     "text": " Star Tours - The Adventures Continue, Star Wars: Rise of the Resistance and The Twilight Zone Tower of Terror."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "048a83eb9f11",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "db84ef0cebf2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "48 inches:"
+    },
+    {
+     "_key": "5d71fe13e9e8",
+     "_type": "span",
+     "marks": [],
+     "text": " Rock 'n' Roller Coaster Starring The Muppets."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "1421e9c270fb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ad9daae96c53",
+     "_type": "span",
+     "marks": [],
+     "text": "Hollywood Studios shows for little kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "27dd34cd55d1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6fae12519c25",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney's Hollywood Studios page lists these on November 16, 2026: "
+    },
+    {
+     "_key": "e5943260889a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Disney Jr. Mickey Mouse Clubhouse Live!"
+    },
+    {
+     "_key": "0422c85d7ec5",
+     "_type": "span",
+     "marks": [],
+     "text": ", "
+    },
+    {
+     "_key": "8ec51a88bc92",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "For the First Time in Forever: A Frozen Sing-Along Celebration"
+    },
+    {
+     "_key": "0825bc4398da",
+     "_type": "span",
+     "marks": [],
+     "text": ", "
+    },
+    {
+     "_key": "4986f1a6136f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "The Little Mermaid – A Musical Adventure"
+    },
+    {
+     "_key": "b529b53e9367",
+     "_type": "span",
+     "marks": [],
+     "text": ", "
+    },
+    {
+     "_key": "59b18550be3a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Beauty and the Beast – Live on Stage"
+    },
+    {
+     "_key": "53dde8ebf2f3",
+     "_type": "span",
+     "marks": [],
+     "text": ", and "
+    },
+    {
+     "_key": "547010e0d608",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Vacation Fun"
+    },
+    {
+     "_key": "c11d71976d08",
+     "_type": "span",
+     "marks": [],
+     "text": ", an animated short starring Mickey and Minnie at the Mickey Shorts Theater (any height). Check the My Disney Experience app for show times, since they change by day."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ff30d743915a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "970ec0d01faa",
+     "_type": "span",
+     "marks": [],
+     "text": "Read our "
+    },
+    {
+     "_key": "5e02edcc6520",
+     "_type": "span",
+     "marks": [
+      "eaa9412d21aa"
+     ],
+     "text": "Disney vs. Universal guide for young children"
+    },
+    {
+     "_key": "60765687995e",
+     "_type": "span",
+     "marks": [],
+     "text": " if you are comparing parks. For Hollywood Studios, try the "
+    },
+    {
+     "_key": "7fe26e1997aa",
+     "_type": "span",
+     "marks": [
+      "0cf5b136865a"
+     ],
+     "text": "calm Hollywood Studios rides under 40 inches"
+    },
+    {
+     "_key": "a8cee20c6694",
+     "_type": "span",
+     "marks": [],
+     "text": " or open the "
+    },
+    {
+     "_key": "df4c63e53539",
+     "_type": "span",
+     "marks": [
+      "460abc352818"
+     ],
+     "text": "Hollywood Studios park guide"
+    },
+    {
+     "_key": "6a54666c2dc6",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "eaa9412d21aa",
+     "_type": "link",
+     "href": "/blog/disney-vs-universal-with-kids-2026/"
+    },
+    {
+     "_key": "0cf5b136865a",
+     "_type": "link",
+     "href": "/rides/for/hollywood-studios-calm-under-40/"
+    },
+    {
+     "_key": "460abc352818",
+     "_type": "link",
+     "href": "/parks/hollywood-studios/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "1ee2a21e233d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5e9acbff7631",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom: Rides for Toddlers and Preschoolers"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "05b699f65b6d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "022339934f90",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom is more about animals than rides, and nearly everything it does best has no height requirement. Only Kali River Rapids (38 inches) and the two 44-inch headliners have a minimum. Details come from Disney's Animal Kingdom pages (checked November 16, 2026)."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "07aaa3b09429",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7787303d794a",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom rides and trails with no height requirement"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "55e5d0ca21c2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b32fcac0182d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Kilimanjaro Safaris"
+    },
+    {
+     "_key": "4082596a9aab",
+     "_type": "span",
+     "marks": [],
+     "text": " — an open-air vehicle tour of a savanna where you can spot real animals roaming free. Disney describes it as an 18-minute expedition. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "585783f6733b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cded0378c80a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Na'vi River Journey"
+    },
+    {
+     "_key": "712d1c9cdb40",
+     "_type": "span",
+     "marks": [],
+     "text": " — a boat ride into Pandora's glowing bioluminescent rainforest. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dfafd3426cd0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cc907763d69a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Wildlife Express Train"
+    },
+    {
+     "_key": "26db2a5bb9ca",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 7-minute, 1.2-mile train ride to Conservation Station. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5dddf6f1684f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "084f39ad6eb1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Gorilla Falls Exploration Trail, Maharajah Jungle Trek and Discovery Island Trails"
+    },
+    {
+     "_key": "3f2c0f11c796",
+     "_type": "span",
+     "marks": [],
+     "text": " — self-guided walking trails with animals. All listed as any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "78830f03c5cd",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "66596cb778d8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Zootopia: Better Zoogether!"
+    },
+    {
+     "_key": "75d2d030d34a",
+     "_type": "span",
+     "marks": [],
+     "text": " — a 4D show in the Tree of Life Theater with Judy Hopps and Nick Wilde. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2a33d724a170",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1bc088e98ea1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Conservation Station"
+    },
+    {
+     "_key": "c016c1a3133d",
+     "_type": "span",
+     "marks": [],
+     "text": " — reach it by train. Disney lists Animal Care at Conservation Station as any height, and the area includes Bluey's Wild World and the new Jumping Junction kangaroo and wallaby experience."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6c7fa6c2bedf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "86e943cbe0b1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Wilderness Explorers"
+    },
+    {
+     "_key": "d34860739266",
+     "_type": "span",
+     "marks": [],
+     "text": " — a self-guided sticker-badge activity with more than 20 badges. Any height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a370b4c321ad",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "568fbbb02460",
+     "_type": "span",
+     "marks": [],
+     "text": "Animal Kingdom rides with a height minimum"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "6b91f7794b33",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a5570d16fedf",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches: Kali River Rapids."
+    },
+    {
+     "_key": "bf2278e5df6b",
+     "_type": "span",
+     "marks": [],
+     "text": " A raft ride that can get you wet."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c14df8240e07",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ced7680f9ee5",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches:"
+    },
+    {
+     "_key": "0f6c0e84cb88",
+     "_type": "span",
+     "marks": [],
+     "text": " Avatar Flight of Passage and Expedition Everest."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9c9945315a59",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4a60d92a1f4d",
+     "_type": "span",
+     "marks": [],
+     "text": "Two big shows, "
+    },
+    {
+     "_key": "ddd433608c5e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Finding Nemo: The Big Blue… and Beyond!"
+    },
+    {
+     "_key": "2e9b5bda180e",
+     "_type": "span",
+     "marks": [],
+     "text": " and "
+    },
+    {
+     "_key": "1648663101af",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Festival of the Lion King"
+    },
+    {
+     "_key": "b667b5ffcbcf",
+     "_type": "span",
+     "marks": [],
+     "text": ", are also on Disney's list. Check show times in the app."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e29cc455fb3c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ccd57d19b714",
+     "_type": "span",
+     "marks": [],
+     "text": "Our "
+    },
+    {
+     "_key": "8b7c8f257fda",
+     "_type": "span",
+     "marks": [
+      "fef70bf746d4"
+     ],
+     "text": "Animal Kingdom with kids guide"
+    },
+    {
+     "_key": "fdd99391f282",
+     "_type": "span",
+     "marks": [],
+     "text": " has a half-day plan for short riders. The ride finder's "
+    },
+    {
+     "_key": "cd45c0c4dcba",
+     "_type": "span",
+     "marks": [
+      "7735559074ae"
+     ],
+     "text": "calm Animal Kingdom rides under 40 inches"
+    },
+    {
+     "_key": "8f794b2757f7",
+     "_type": "span",
+     "marks": [],
+     "text": " and our "
+    },
+    {
+     "_key": "87ffd554fa85",
+     "_type": "span",
+     "marks": [
+      "3fef153bc808"
+     ],
+     "text": "Animal Kingdom park guide"
+    },
+    {
+     "_key": "697240e8296b",
+     "_type": "span",
+     "marks": [],
+     "text": " help with planning."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "fef70bf746d4",
+     "_type": "link",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "7735559074ae",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-calm-under-40/"
+    },
+    {
+     "_key": "3fef153bc808",
+     "_type": "link",
+     "href": "/parks/animal-kingdom/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "7c120efd1cf5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6b2dc0a05e22",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney World Rides by Height at a Glance"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "b5628393c042",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "aa0bb85f660d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Any height:"
+    },
+    {
+     "_key": "debcb9e0f01f",
+     "_type": "span",
+     "marks": [],
+     "text": " the rides and shows listed above, including Dumbo, the Carrousel, Peter Pan's Flight, Frozen Ever After, Toy Story Mania!, Kilimanjaro Safaris and Na'vi River Journey"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "84072890bd5b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "61efdff78d96",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "32 inches:"
+    },
+    {
+     "_key": "1e6a0e3e6d72",
+     "_type": "span",
+     "marks": [],
+     "text": " Tomorrowland Speedway, Alien Swirling Saucers"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "902a0c4c84c6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "39c1691dd9bf",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "35 inches:"
+    },
+    {
+     "_key": "9c0539e3b38d",
+     "_type": "span",
+     "marks": [],
+     "text": " The Barnstormer"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "289a1d02b375",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8f06eb5f684c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches:"
+    },
+    {
+     "_key": "9f4ff21a9bde",
+     "_type": "span",
+     "marks": [],
+     "text": " Seven Dwarfs Mine Train, Big Thunder Mountain Railroad, Slinky Dog Dash, Millennium Falcon: Smugglers Run, Kali River Rapids"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "e7907df7ceaf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b6577621b898",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches:"
+    },
+    {
+     "_key": "d8b85417794c",
+     "_type": "span",
+     "marks": [],
+     "text": " Test Track, Soarin' Across America, Mission: SPACE (Green), Star Tours, Star Wars: Rise of the Resistance, The Twilight Zone Tower of Terror, Tiana's Bayou Adventure (closed)"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "9df852d2830f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5cb38f62b453",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "42 inches:"
+    },
+    {
+     "_key": "1a34e7299f95",
+     "_type": "span",
+     "marks": [],
+     "text": " Guardians of the Galaxy: Cosmic Rewind"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "93bd1499f805",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "489dcf5625f2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches:"
+    },
+    {
+     "_key": "a6c231bd3318",
+     "_type": "span",
+     "marks": [],
+     "text": " Space Mountain, Mission: SPACE (Orange), Avatar Flight of Passage, Expedition Everest"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f6319378b1fd",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f321692b769d",
+     "_type": "span",
+     "marks": [],
+     "text": "Source: official Walt Disney World attraction pages, accessed November 16, 2026. For the full list, use the "
+    },
+    {
+     "_key": "90022721f271",
+     "_type": "span",
+     "marks": [
+      "346df1208252"
+     ],
+     "text": "Disney World ride finder"
+    },
+    {
+     "_key": "897140bc61c7",
+     "_type": "span",
+     "marks": [],
+     "text": " and filter by your child's height."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "346df1208252",
+     "_type": "link",
+     "href": "/rides/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "07b2e7593ac9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5f2119a92cff",
+     "_type": "span",
+     "marks": [],
+     "text": "Which Disney World Park Is Best for Toddlers and Preschoolers?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "0b73bd49e08a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5cad45502b5d",
+     "_type": "span",
+     "marks": [],
+     "text": "Based on the any-height counts above, "
+    },
+    {
+     "_key": "60ad4460142f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Magic Kingdom"
+    },
+    {
+     "_key": "b392bb5bb88d",
+     "_type": "span",
+     "marks": [],
+     "text": " is the strongest first choice for a short rider because it has the most rides with no minimum. "
+    },
+    {
+     "_key": "1b70e0e79df6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT"
+    },
+    {
+     "_key": "ca3e49babc29",
+     "_type": "span",
+     "marks": [],
+     "text": " is a good second, with slow boat rides and a play space. "
+    },
+    {
+     "_key": "9534c0ee899b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Animal Kingdom"
+    },
+    {
+     "_key": "e60a5cd14bac",
+     "_type": "span",
+     "marks": [],
+     "text": " works well as a lighter day, especially for animal fans. "
+    },
+    {
+     "_key": "c6f9da4002a9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Hollywood Studios"
+    },
+    {
+     "_key": "93b46c717fbd",
+     "_type": "span",
+     "marks": [],
+     "text": " is the one to save for later, unless your child loves Toy Story or Mickey, because only two rides are open to every height."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "58b36a66e3a6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d4502a40b29f",
+     "_type": "span",
+     "marks": [],
+     "text": "If your family is split between a toddler and an older sibling, compare parks in our "
+    },
+    {
+     "_key": "6b54414c6f13",
+     "_type": "span",
+     "marks": [
+      "6033d976d906"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "e898e76656ac",
+     "_type": "span",
+     "marks": [],
+     "text": " before you buy tickets. For babies and children under 3, our "
+    },
+    {
+     "_key": "521f061eae14",
+     "_type": "span",
+     "marks": [
+      "c2c425ee4ab9"
+     ],
+     "text": "Disney World with a baby or toddler guide"
+    },
+    {
+     "_key": "0fe299e997ce",
+     "_type": "span",
+     "marks": [],
+     "text": " covers strollers, feeding and nap breaks."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "6033d976d906",
+     "_type": "link",
+     "href": "/parks/"
+    },
+    {
+     "_key": "c2c425ee4ab9",
+     "_type": "link",
+     "href": "/blog/disney-world-with-baby-toddler/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "6c4f8efa85b6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "18a77cf25332",
+     "_type": "span",
+     "marks": [],
+     "text": "Practical Tips for Riding With Little Kids"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "063dc51ea7fe",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d1336c094a29",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Pick two or three headline rides per park."
+    },
+    {
+     "_key": "66ad3d13d4a5",
+     "_type": "span",
+     "marks": [],
+     "text": " Fill the rest of the day with shows, play areas and snacks."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "cce3bca5dfa5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6cfc36590980",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Use Rider Switch"
+    },
+    {
+     "_key": "54b78b88a401",
+     "_type": "span",
+     "marks": [],
+     "text": " if one child is under the height minimum (see the link above)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ccfa07fc3d47",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6c16bb1d9fcc",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Watch the dark rides."
+    },
+    {
+     "_key": "8c0daaa297ae",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney describes Haunted Mansion, Gran Fiesta Tour and Buzz Lightyear's Space Ranger Spin as dark, and all three are any height. Dark is a different test than tall enough."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dd87ee73634a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3e87e9093e07",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Plan for heat and water."
+    },
+    {
+     "_key": "eb64bd3db449",
+     "_type": "span",
+     "marks": [],
+     "text": " Dumbo's play area is air-conditioned, and Casey Jr. Splash 'N' Soak Station is a way to cool off. If a child seems unwell, Disney's "
+    },
+    {
+     "_key": "524e016137e7",
+     "_type": "span",
+     "marks": [
+      "6438d2b3b253"
+     ],
+     "text": "First Aid page"
+    },
+    {
+     "_key": "c63890f009b4",
+     "_type": "span",
+     "marks": [],
+     "text": " lists First Aid centers at its theme parks and water parks."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [
+    {
+     "_key": "6438d2b3b253",
+     "_type": "link",
+     "href": "https://disneyworld.disney.go.com/guest-services/first-aid/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "07c15278e22b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bb91d05c2170",
+     "_type": "span",
+     "marks": [],
+     "text": "Gear that helps (affiliate links may apply): a "
+    },
+    {
+     "_key": "39ce0d6aae74",
+     "_type": "span",
+     "marks": [
+      "f6743afd3e16"
+     ],
+     "text": "kids' rain poncho"
+    },
+    {
+     "_key": "4273a12fd7ec",
+     "_type": "span",
+     "marks": [],
+     "text": ", "
+    },
+    {
+     "_key": "d1a8692e436e",
+     "_type": "span",
+     "marks": [
+      "1ee4b71bea2e"
+     ],
+     "text": "kids' ear protection"
+    },
+    {
+     "_key": "84ee890fa247",
+     "_type": "span",
+     "marks": [],
+     "text": " for loud shows, and a "
+    },
+    {
+     "_key": "d5895aa6c395",
+     "_type": "span",
+     "marks": [
+      "d736d1abd8c0"
+     ],
+     "text": "lightweight travel stroller"
+    },
+    {
+     "_key": "0c4660d9808c",
+     "_type": "span",
+     "marks": [],
+     "text": ". Our "
+    },
+    {
+     "_key": "f553d7ad907d",
+     "_type": "span",
+     "marks": [
+      "139591de8ac1"
+     ],
+     "text": "Disney World packing list for kids"
+    },
+    {
+     "_key": "96f4fc313f09",
+     "_type": "span",
+     "marks": [],
+     "text": " has the full checklist."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "f6743afd3e16",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=kids+rain+poncho&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "1ee4b71bea2e",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=kids+ear+protection+earmuffs&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "d736d1abd8c0",
+     "_type": "link",
+     "href": "https://www.amazon.com/s?k=lightweight+travel+stroller&tag=planyourpar0a-20"
+    },
+    {
+     "_key": "139591de8ac1",
+     "_type": "link",
+     "href": "/blog/disney-world-packing-list-kids/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3edd581f16e1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "348717c6d9b6",
+     "_type": "span",
+     "marks": [],
+     "text": "Character fans can also read our "
+    },
+    {
+     "_key": "b970bc7466f9",
+     "_type": "span",
+     "marks": [
+      "b90f022744bf"
+     ],
+     "text": "best Disney World character dining for kids guide"
+    },
+    {
+     "_key": "336eafffda44",
+     "_type": "span",
+     "marks": [],
+     "text": " for meals where little ones meet characters."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "b90f022744bf",
+     "_type": "link",
+     "href": "/blog/best-disney-world-character-dining-kids/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "139157669fcd",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7ec6e5810721",
+     "_type": "span",
+     "marks": [],
+     "text": "Tickets"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "a5c8b63281b1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1a400b43ea43",
+     "_type": "span",
+     "marks": [],
+     "text": "Each of the four parks is included with a Disney World theme park ticket. Check Disney's official ticket page for current child ticket ages and prices before you buy, and compare current options on our "
+    },
+    {
+     "_key": "b14ccb4ea28f",
+     "_type": "span",
+     "marks": [
+      "189fdffc00d5"
+     ],
+     "text": "Disney World deals page"
+    },
+    {
+     "_key": "868fb1661d26",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "189fdffc00d5",
+     "_type": "link",
+     "href": "/deals/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "37865c8fd23a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "daa930ca369e",
+     "_type": "span",
+     "marks": [],
+     "text": "FAQ"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "3164335ccb9f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "726c16df7d4b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What Disney World rides can a toddler go on?"
+    },
+    {
+     "_key": "f12f6e7e0c2b",
+     "_type": "span",
+     "marks": [],
+     "text": " Most classic rides have no minimum height, including Dumbo, the Carrousel, Peter Pan's Flight, \"it's a small world,\" Frozen Ever After, Kilimanjaro Safaris and Toy Story Mania!, per Disney's pages (checked November 16, 2026). See the full list in our "
+    },
+    {
+     "_key": "a5682bca95f4",
+     "_type": "span",
+     "marks": [
+      "e4b5d55a93cb"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "d26f3ce9503f",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "e4b5d55a93cb",
+     "_type": "link",
+     "href": "/rides/for/disney-world-all/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "fa2f68bce409",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "0c1c547912b7",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What are the best Disney World rides for 4-year-olds?"
+    },
+    {
+     "_key": "b75884fa4239",
+     "_type": "span",
+     "marks": [],
+     "text": " The any-height rides above are the safest picks. If your 4-year-old is tall enough, Tomorrowland Speedway (32 inches), Alien Swirling Saucers (32 inches), The Barnstormer (35 inches) and the 38-inch coasters open up. Check the posted height at each ride."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b3ddb9a765fb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "39a9a5de2df1",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What Disney World rides have no height requirement?"
+    },
+    {
+     "_key": "d0b622ee1d3f",
+     "_type": "span",
+     "marks": [],
+     "text": " Magic Kingdom has 15 by our count, EPCOT has 7, Animal Kingdom has 3 and Hollywood Studios has 2, based on Disney's pages on November 16, 2026."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7986cf3c6344",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a0bdd9731446",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What are the best Animal Kingdom rides for toddlers?"
+    },
+    {
+     "_key": "fcce148eae93",
+     "_type": "span",
+     "marks": [],
+     "text": " Kilimanjaro Safaris, Na'vi River Journey and the Wildlife Express Train have no height requirement. The animal trails and the Zootopia: Better Zoogether! show are also any height. See our "
+    },
+    {
+     "_key": "82e58d52e0e6",
+     "_type": "span",
+     "marks": [
+      "22da88e6ca50"
+     ],
+     "text": "Animal Kingdom with kids guide"
+    },
+    {
+     "_key": "71c5fd1f3125",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "22da88e6ca50",
+     "_type": "link",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "c538d53a90f3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2f1b071dbc3d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What are the best rides at EPCOT for preschoolers?"
+    },
+    {
+     "_key": "810bebfc364b",
+     "_type": "span",
+     "marks": [],
+     "text": " Frozen Ever After, The Seas with Nemo & Friends, Journey Into Imagination With Figment, Gran Fiesta Tour and Living with the Land are all any height. Journey of Water and ImageWorks are good walk-through and play stops."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "cd98e2d807d7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9a5e7e51b89d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "What are the best Magic Kingdom rides for kids under 40 inches?"
+    },
+    {
+     "_key": "14424729a6b0",
+     "_type": "span",
+     "marks": [],
+     "text": " Every no-height ride in this guide, plus Tomorrowland Speedway (32 inches), The Barnstormer (35 inches) and the 38-inch coasters. We rank them in our "
+    },
+    {
+     "_key": "1d489f8d48fd",
+     "_type": "span",
+     "marks": [
+      "e5327ea1314f"
+     ],
+     "text": "Magic Kingdom rides under 40 inches guide"
+    },
+    {
+     "_key": "42bfb50852c8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "e5327ea1314f",
+     "_type": "link",
+     "href": "/blog/best-magic-kingdom-rides-kids-under-40-inches/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "7255323877b7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c876967c284d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Which Disney World park has the most rides for little kids?"
+    },
+    {
+     "_key": "70acd23a7565",
+     "_type": "span",
+     "marks": [],
+     "text": " Magic Kingdom, based on the number of rides with no height requirement on Disney's pages as of November 16, 2026."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "34a022f95219",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "214c1dcb1740",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Is Tiana's Bayou Adventure open?"
+    },
+    {
+     "_key": "c918ecdb1b82",
+     "_type": "span",
+     "marks": [],
+     "text": " Not right now. Disney's page says it is temporarily closed for routine refurbishment from November 2 and is expected to reopen in December 2026. It also has a 40-inch minimum."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "8ccec51dc50f",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "The best Disney World rides for toddlers and preschoolers at all four parks: no-height-limit picks, rides from 32 inches, and what's closed. Checked November 16, 2026.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "A smiling preschooler points at glowing lanterns from a pastel boat on a slow canal ride while a parent holds them close, with palm trees, flowers and a coral domed tower behind.",
+  "asset": {
+   "_ref": "image-13f8e60148004df48252afb571a38866976fa049-1280x720-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-11-18T01:48:37Z",
+ "readTime": 13,
+ "slug": {
+  "_type": "slug",
+  "current": "disney-world-rides-for-toddlers-and-preschoolers"
+ },
+ "tags": [
+  "Disney World rides for toddlers",
+  "Disney World rides for preschoolers",
+  "Disney World no height requirement rides",
+  "Disney World with kids"
+ ],
+ "title": "Best Disney World Rides for Toddlers and Preschoolers, Park by Park"
+}

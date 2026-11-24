@@ -1,0 +1,2794 @@
+{
+ "_createdAt": "2026-11-16T15:38:15Z",
+ "_id": "drafts.blogPost-orlando-theme-parks-for-families",
+ "_rev": "3iAtfmFS6JL5tysBAq4dhr",
+ "_type": "blogPost",
+ "_updatedAt": "2026-11-16T15:42:18Z",
+ "author": {
+  "_type": "author",
+  "name": "Plan Your Park"
+ },
+ "body": [
+  {
+   "_key": "fe6ced562a92",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9d073cc9fe9e",
+     "_type": "span",
+     "marks": [],
+     "text": "Heads up: some ticket links in this guide are affiliate links. If you book through them, we may earn a commission at no extra cost to you. "
+    },
+    {
+     "_key": "c27328a02eb5",
+     "_type": "span",
+     "marks": [
+      "66ce6ca6f995"
+     ],
+     "text": "See our affiliate disclosure"
+    },
+    {
+     "_key": "e0427d06d65e",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "66ce6ca6f995",
+     "_type": "link",
+     "href": "/affiliate-disclosure/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "791ab7bad2d4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ca1af6e0db3c",
+     "_type": "span",
+     "marks": [],
+     "text": "Quick Answer: The 9 Orlando Theme Parks Families Choose Between"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "eba397b444c1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9a69a6c3eec1",
+     "_type": "span",
+     "marks": [],
+     "text": "When families talk about \"the Orlando parks,\" they usually mean nine big theme parks run by four companies. Here's the full list, with the kind of family each one fits best:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "13817f5d6434",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3f2cfc5e2e3a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Magic Kingdom (Disney):"
+    },
+    {
+     "_key": "fb869460f561",
+     "_type": "span",
+     "marks": [],
+     "text": " the classic first park for young kids, with lots of rides that have no height requirement"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "02fdd92a2bac",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ad724f9b2e75",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT (Disney):"
+    },
+    {
+     "_key": "8a62e66edb0a",
+     "_type": "span",
+     "marks": [],
+     "text": " gentle family rides plus World Showcase; best for kids who like exploring and snacking their way around"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a82e7a88faf1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6cabe4bdd057",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Disney's Hollywood Studios:"
+    },
+    {
+     "_key": "cb83f4df3424",
+     "_type": "span",
+     "marks": [],
+     "text": " Toy Story Land and Star Wars; great for kids 38 inches and up"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "34f78bbe4dd7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f8734eec1048",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Disney's Animal Kingdom:"
+    },
+    {
+     "_key": "18da0d39e2c4",
+     "_type": "span",
+     "marks": [],
+     "text": " live animals, a safari ride and Pandora; good for every age"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "460dffad0448",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4d92be227731",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Studios Florida:"
+    },
+    {
+     "_key": "114f419273f3",
+     "_type": "span",
+     "marks": [],
+     "text": " Minions, Trolls, E.T. and Diagon Alley; strongest for kids 40 inches and up"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5d78a83f5b36",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3361eeb1076e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Islands of Adventure:"
+    },
+    {
+     "_key": "48631f11150b",
+     "_type": "span",
+     "marks": [],
+     "text": " Seuss Landing for little kids, big coasters for older ones"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7a7157c9e4ac",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3df3c8713df7",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Epic Universe:"
+    },
+    {
+     "_key": "92f7078aea13",
+     "_type": "span",
+     "marks": [],
+     "text": " the newest park, with SUPER NINTENDO WORLD and How to Train Your Dragon; most big rides open at 40 inches"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "138c934590be",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a1fb34df85b2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "SeaWorld Orlando:"
+    },
+    {
+     "_key": "8f876cd39e9b",
+     "_type": "span",
+     "marks": [],
+     "text": " marine animals and Sesame Street Land, plus some of the area's biggest coasters"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "370a39ed98c5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "43736edf70a4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "LEGOLAND Florida (Winter Haven):"
+    },
+    {
+     "_key": "6ca7be2c4322",
+     "_type": "span",
+     "marks": [],
+     "text": " built for younger kids, with the lowest height minimums of any park here"
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "dd457513c9af",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "37aa96871ff9",
+     "_type": "span",
+     "marks": [],
+     "text": "Not sure where to start? Our "
+    },
+    {
+     "_key": "5fae5728ca73",
+     "_type": "span",
+     "marks": [
+      "4c0b29a10113"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "f382f5d45a07",
+     "_type": "span",
+     "marks": [],
+     "text": " matches parks to your kids' heights and interests in under a minute. Ride heights below come from each park's official pages, checked on "
+    },
+    {
+     "_key": "59359d2cf4cb",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 16, 2026"
+    },
+    {
+     "_key": "c0aae7d52734",
+     "_type": "span",
+     "marks": [],
+     "text": ". Rules and closures change, so check again close to your trip."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "4c0b29a10113",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "cf02d44baa83",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2e6d47c5a196",
+     "_type": "span",
+     "marks": [],
+     "text": "How Many Theme Parks Are in Orlando?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "05fdd44a6d74",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b7b7360620d8",
+     "_type": "span",
+     "marks": [],
+     "text": "For most family trips, the answer is "
+    },
+    {
+     "_key": "8d367ab4fc6c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "nine"
+    },
+    {
+     "_key": "2be281a4424f",
+     "_type": "span",
+     "marks": [],
+     "text": ": four at Walt Disney World, three at Universal Orlando, SeaWorld Orlando, and LEGOLAND Florida. LEGOLAND is in Winter Haven rather than Orlando itself, but families usually plan it as part of an Orlando trip. The same resort also runs Peppa Pig Theme Park Florida."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "710e430e6ad5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "da19206f37fd",
+     "_type": "span",
+     "marks": [],
+     "text": "There are also water parks and smaller attractions. Two of the water parks are closed this winter: Universal's Volcano Bay is closed for maintenance with a planned reopening on or before April 1, 2027, and LEGOLAND Water Park is closed for the season."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "64527fe16fc1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "135c7dced7ad",
+     "_type": "span",
+     "marks": [],
+     "text": "Which Orlando Park Is Best for Your Kids?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "c2e6b31fff18",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fd57c0d2a4a4",
+     "_type": "span",
+     "marks": [],
+     "text": "There's no single best park. It depends on height, age and what your kids love. A few rules of thumb:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "542991e40fd2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f2e89cbc82bc",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Under 40 inches:"
+    },
+    {
+     "_key": "b4a10096eeab",
+     "_type": "span",
+     "marks": [],
+     "text": " Magic Kingdom, Animal Kingdom and LEGOLAND give you the most to do. Epic Universe and Universal Studios Florida have fewer rides at this height."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "35868ab96c8f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6fe1e14c07e4",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 to 47 inches:"
+    },
+    {
+     "_key": "211461937951",
+     "_type": "span",
+     "marks": [],
+     "text": " most Disney rides open up, and most of Universal's big family rides start right at 40 inches."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6a30f3cf7072",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b0c4f34ffd4f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "48 inches and up:"
+    },
+    {
+     "_key": "9b665b5685ae",
+     "_type": "span",
+     "marks": [],
+     "text": " nearly every ride at Disney and Universal opens up. A few big coasters need more, like Jurassic World VelociCoaster (51 inches) and Mako (54 inches)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3c86d27f457c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "5b98546bab2c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Animal lovers:"
+    },
+    {
+     "_key": "dbbad99877cd",
+     "_type": "span",
+     "marks": [],
+     "text": " Animal Kingdom and SeaWorld."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f81f972cc7b3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d7014dad1482",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Superfans:"
+    },
+    {
+     "_key": "4d5ff73ccfa3",
+     "_type": "span",
+     "marks": [],
+     "text": " match the park to the characters your kids already love (Mario, Harry Potter, Minions, Toy Story, Sesame Street, LEGO)."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "6925399d227c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "08b2662e083f",
+     "_type": "span",
+     "marks": [],
+     "text": "The quickest way to apply these rules is our "
+    },
+    {
+     "_key": "d3f0916d5d41",
+     "_type": "span",
+     "marks": [
+      "c81502862066"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "bc90c1cc50fd",
+     "_type": "span",
+     "marks": [],
+     "text": ": enter your kids' heights and it ranks the parks for you."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "c81502862066",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "72d7baf97c1b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "48b40c80b5fb",
+     "_type": "span",
+     "marks": [],
+     "text": "Want it filtered for your child? Start with the "
+    },
+    {
+     "_key": "b919b6de1069",
+     "_type": "span",
+     "marks": [
+      "a9c407f06925"
+     ],
+     "text": "Disney World rides under 40 inches"
+    },
+    {
+     "_key": "7730aaf45fec",
+     "_type": "span",
+     "marks": [],
+     "text": " or the "
+    },
+    {
+     "_key": "b9c710170a50",
+     "_type": "span",
+     "marks": [
+      "1e27cda416f4"
+     ],
+     "text": "Universal Orlando rides under 40 inches"
+    },
+    {
+     "_key": "2861b92230c3",
+     "_type": "span",
+     "marks": [],
+     "text": " in our ride finder. Still deciding between the two resorts? Read "
+    },
+    {
+     "_key": "5b129ff8c078",
+     "_type": "span",
+     "marks": [
+      "22a57d9ece64"
+     ],
+     "text": "Disney vs. Universal with kids"
+    },
+    {
+     "_key": "89696835c39b",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "a9c407f06925",
+     "_type": "link",
+     "href": "/rides/for/disney-world-under-40/"
+    },
+    {
+     "_key": "1e27cda416f4",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-under-40/"
+    },
+    {
+     "_key": "22a57d9ece64",
+     "_type": "link",
+     "href": "/blog/disney-vs-universal-with-kids-2026/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "2a1885a6b66e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4f47f12af9e9",
+     "_type": "span",
+     "marks": [],
+     "text": "Walt Disney World: 4 Theme Parks"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "3f8b473b3048",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "098ecd6bfe75",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "f8c0fd630454",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "71efdf49e99a",
+     "_type": "span",
+     "marks": [],
+     "text": "The castle park, and the easiest first park for little kids. Disney lists Peter Pan's Flight and Dumbo the Flying Elephant at "
+    },
+    {
+     "_key": "0e172eabbbf9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "any height"
+    },
+    {
+     "_key": "fc0d61b9bea1",
+     "_type": "span",
+     "marks": [],
+     "text": ". The first coaster step-up is Seven Dwarfs Mine Train and Big Thunder Mountain Railroad, both "
+    },
+    {
+     "_key": "9179fa88017f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches"
+    },
+    {
+     "_key": "c596d76c33ce",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7011fabf5332",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2a8318157659",
+     "_type": "span",
+     "marks": [],
+     "text": "Closed right now: "
+    },
+    {
+     "_key": "eb2a14723f4d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Tiana's Bayou Adventure"
+    },
+    {
+     "_key": "34a532accdde",
+     "_type": "span",
+     "marks": [],
+     "text": " is in a routine refurbishment that started November 2, and Disney expects it to reopen in December 2026."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5914b4c3cdd7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2714ea2afca8",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "eb7bc84d6301",
+     "_type": "span",
+     "marks": [
+      "fc12ef77aa38"
+     ],
+     "text": "Magic Kingdom with kids by height"
+    },
+    {
+     "_key": "b97d7549413d",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "50fa1099b457",
+     "_type": "span",
+     "marks": [
+      "9f3e42b505fb"
+     ],
+     "text": "Magic Kingdom park guide"
+    },
+    {
+     "_key": "79b0261d5e48",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "9be1528d353c",
+     "_type": "span",
+     "marks": [
+      "7b4f06a13143"
+     ],
+     "text": "Magic Kingdom rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "fc12ef77aa38",
+     "_type": "link",
+     "href": "/blog/magic-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "9f3e42b505fb",
+     "_type": "link",
+     "href": "/parks/magic-kingdom/"
+    },
+    {
+     "_key": "7b4f06a13143",
+     "_type": "link",
+     "href": "/rides/for/magic-kingdom-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "c98d9b214bb6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c711703fdc0a",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "52b8f004ac79",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a654609ba468",
+     "_type": "span",
+     "marks": [],
+     "text": "EPCOT is calmer than it looks. Frozen Ever After and Remy's Ratatouille Adventure are both open to "
+    },
+    {
+     "_key": "00f0f3eb5dd6",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "any height"
+    },
+    {
+     "_key": "a7e5b0e55b36",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Test Track needs "
+    },
+    {
+     "_key": "4ffa61ec8346",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches"
+    },
+    {
+     "_key": "7d85ef442032",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3ba32fcbf722",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ff3e6fee7775",
+     "_type": "span",
+     "marks": [],
+     "text": "December note: from November 27 to December 30, 2026, Disney is offering Living with the Land - Glimmering Greenhouses, and the regular Living with the Land isn't available during that window."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "ab28aa458976",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "51f56055e820",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "38afc8a17954",
+     "_type": "span",
+     "marks": [
+      "fa8f12504dff"
+     ],
+     "text": "EPCOT with kids by height"
+    },
+    {
+     "_key": "c85b8b94a31c",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "3fea2d3e5511",
+     "_type": "span",
+     "marks": [
+      "1a24ffde9891"
+     ],
+     "text": "EPCOT park guide"
+    },
+    {
+     "_key": "5a2ccb5dfb4c",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "e4a61509b022",
+     "_type": "span",
+     "marks": [
+      "fd1effca9dc7"
+     ],
+     "text": "EPCOT rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "fa8f12504dff",
+     "_type": "link",
+     "href": "/blog/epcot-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "1a24ffde9891",
+     "_type": "link",
+     "href": "/parks/epcot/"
+    },
+    {
+     "_key": "fd1effca9dc7",
+     "_type": "link",
+     "href": "/rides/for/epcot-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "6357eaf2f901",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9240488da183",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney's Hollywood Studios"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "f36394da001b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c98e43dc90dc",
+     "_type": "span",
+     "marks": [],
+     "text": "The park for Toy Story and Star Wars fans. Toy Story Mania! and Mickey & Minnie's Runaway Railway are open to "
+    },
+    {
+     "_key": "a6eef7f5a7ec",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "any height"
+    },
+    {
+     "_key": "f13cbf7f6874",
+     "_type": "span",
+     "marks": [],
+     "text": ", Alien Swirling Saucers starts at "
+    },
+    {
+     "_key": "2ee8f1505408",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "32 inches"
+    },
+    {
+     "_key": "243fe5c6450e",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Slinky Dog Dash and Millennium Falcon: Smugglers Run both need "
+    },
+    {
+     "_key": "3d2dd9ff2a22",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches"
+    },
+    {
+     "_key": "b76456a5028c",
+     "_type": "span",
+     "marks": [],
+     "text": ". Hollywood Studios has fewer rides for the smallest kids than Magic Kingdom, so it shines once your child clears 38 inches."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a22f7c477d46",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "81104d4ac179",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "2b61359f8430",
+     "_type": "span",
+     "marks": [
+      "5b1774331859"
+     ],
+     "text": "Hollywood Studios park guide"
+    },
+    {
+     "_key": "78d6e14db8f9",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "2c28da47e315",
+     "_type": "span",
+     "marks": [
+      "fe962a67f488"
+     ],
+     "text": "Hollywood Studios rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "5b1774331859",
+     "_type": "link",
+     "href": "/parks/hollywood-studios/"
+    },
+    {
+     "_key": "fe962a67f488",
+     "_type": "link",
+     "href": "/rides/for/hollywood-studios-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "9d49a09841ca",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2d3d37274194",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney's Animal Kingdom"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "ee07cf64da36",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "2f19f35df427",
+     "_type": "span",
+     "marks": [],
+     "text": "Part zoo, part theme park. Kilimanjaro Safaris and Na'vi River Journey are open to "
+    },
+    {
+     "_key": "4ed91456adad",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "any height"
+    },
+    {
+     "_key": "d4eec0cbd986",
+     "_type": "span",
+     "marks": [],
+     "text": ", Kali River Rapids needs "
+    },
+    {
+     "_key": "129442808d84",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches"
+    },
+    {
+     "_key": "92d93bf8d974",
+     "_type": "span",
+     "marks": [],
+     "text": " (Disney warns you will get wet), and Avatar Flight of Passage needs "
+    },
+    {
+     "_key": "52a377de8d66",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "44 inches"
+    },
+    {
+     "_key": "fb2e41dfae2b",
+     "_type": "span",
+     "marks": [],
+     "text": ". The animal trails work for every age, which makes it an easy pick for mixed-age families."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b9ccf2ddbeec",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "424207d4dda4",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "5d4e399d5d7f",
+     "_type": "span",
+     "marks": [
+      "ac476fe283f2"
+     ],
+     "text": "Animal Kingdom with kids by height"
+    },
+    {
+     "_key": "96b36259fe83",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "4d3d19a65d9c",
+     "_type": "span",
+     "marks": [
+      "3b01dd85a2ce"
+     ],
+     "text": "Animal Kingdom park guide"
+    },
+    {
+     "_key": "4ef10ee750ed",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "4fd57178292f",
+     "_type": "span",
+     "marks": [
+      "41c6915441d3"
+     ],
+     "text": "Animal Kingdom rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "ac476fe283f2",
+     "_type": "link",
+     "href": "/blog/animal-kingdom-with-kids-rides-by-height/"
+    },
+    {
+     "_key": "3b01dd85a2ce",
+     "_type": "link",
+     "href": "/parks/animal-kingdom/"
+    },
+    {
+     "_key": "41c6915441d3",
+     "_type": "link",
+     "href": "/rides/for/animal-kingdom-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "4bc51684b12c",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "440767d747eb",
+     "_type": "span",
+     "marks": [
+      "41d1bbab44a7"
+     ],
+     "text": "Compare Disney World 4-day Park Hopper tickets"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "41d1bbab44a7",
+     "_type": "link",
+     "href": "https://www.tkqlhce.com/click-101693488-12783539"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "8078aff25531",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1241fc3b13b1",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Orlando: 3 Theme Parks"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "b31111502510",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b3c0acb21a4f",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal posts a supervising-companion rule on most of its rides: kids under 48 inches often need to ride with someone who meets that ride's rules. Read the full wording on Universal's "
+    },
+    {
+     "_key": "a27a9949807b",
+     "_type": "span",
+     "marks": [
+      "85f328dc8950"
+     ],
+     "text": "ride height requirements page"
+    },
+    {
+     "_key": "b90202203c1a",
+     "_type": "span",
+     "marks": [],
+     "text": " before you go."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "85f328dc8950",
+     "_type": "link",
+     "href": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/ride-height-requirements"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3e326249dee5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "92f6def35e82",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Studios Florida"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "0ff4568db409",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "04ae37bfa326",
+     "_type": "span",
+     "marks": [],
+     "text": "Strong for kids who know Minions, Trolls and Harry Potter. Illumination's Villain-Con Minion Blast has "
+    },
+    {
+     "_key": "40d4ea567d3a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "no minimum height"
+    },
+    {
+     "_key": "7e619475d983",
+     "_type": "span",
+     "marks": [],
+     "text": " (kids under 48 inches ride with a supervising companion). E.T. Adventure starts at "
+    },
+    {
+     "_key": "c5ca7245add9",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "34 inches"
+    },
+    {
+     "_key": "9ab246f6f00d",
+     "_type": "span",
+     "marks": [],
+     "text": ", Trolls Trollercoaster at "
+    },
+    {
+     "_key": "8b3928547b09",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "36 inches"
+    },
+    {
+     "_key": "b85f7f31dd27",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Despicable Me Minion Mayhem at "
+    },
+    {
+     "_key": "858c69d240fc",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches"
+    },
+    {
+     "_key": "685c4c972448",
+     "_type": "span",
+     "marks": [],
+     "text": ". Kids under 40 inches can still experience Minion Mayhem from a stationary seat next to the moving ones."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5e9a0c4b23a4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ea522779f7ca",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "ef39d16b622d",
+     "_type": "span",
+     "marks": [
+      "9c3269b8e9ef"
+     ],
+     "text": "Universal Studios park guide"
+    },
+    {
+     "_key": "f889c78f6b98",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "7fc9908d0ce1",
+     "_type": "span",
+     "marks": [
+      "18c14ce5a425"
+     ],
+     "text": "Universal Studios rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "9c3269b8e9ef",
+     "_type": "link",
+     "href": "/parks/universal-studios-florida/"
+    },
+    {
+     "_key": "18c14ce5a425",
+     "_type": "link",
+     "href": "/rides/for/universal-studios-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "c68f7dc816e9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "432d51897bf9",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Islands of Adventure"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "7f54d6bf11da",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b7bf5f0a706f",
+     "_type": "span",
+     "marks": [],
+     "text": "A split personality: Seuss Landing for little kids, plus some of Orlando's biggest coasters. The Cat in the Hat, Flight of the Hippogriff and Skull Island: Reign of Kong all start at "
+    },
+    {
+     "_key": "3771a085af74",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "36 inches"
+    },
+    {
+     "_key": "2f70a57e27b8",
+     "_type": "span",
+     "marks": [],
+     "text": ", and The Amazing Adventures of Spider-Man needs "
+    },
+    {
+     "_key": "8f78e25817b8",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches"
+    },
+    {
+     "_key": "696413c7e648",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "d5a56ee418cb",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d80dd52cd0ea",
+     "_type": "span",
+     "marks": [],
+     "text": "Closed right now: "
+    },
+    {
+     "_key": "d7ea17ddbc4d",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Jurassic Park River Adventure"
+    },
+    {
+     "_key": "68f126d2ed82",
+     "_type": "span",
+     "marks": [],
+     "text": " is listed as closed through December 16, 2026."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eda87e6e1f9b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9737325f14af",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "d8dd4535e61e",
+     "_type": "span",
+     "marks": [
+      "5abbd29504a3"
+     ],
+     "text": "Islands of Adventure park guide"
+    },
+    {
+     "_key": "3ecd845385aa",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "e8eae79fa4df",
+     "_type": "span",
+     "marks": [
+      "cd382c31c4ca"
+     ],
+     "text": "Islands of Adventure rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "5abbd29504a3",
+     "_type": "link",
+     "href": "/parks/islands-of-adventure/"
+    },
+    {
+     "_key": "cd382c31c4ca",
+     "_type": "link",
+     "href": "/rides/for/islands-of-adventure-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "2d0facd1c09b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "3599131cd143",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal Epic Universe"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "b7a84c5839bf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "665baa496d1f",
+     "_type": "span",
+     "marks": [],
+     "text": "The newest Orlando park. Constellation Carousel and Fyre Drill have "
+    },
+    {
+     "_key": "b09f489eb55f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "no minimum height"
+    },
+    {
+     "_key": "7b17e0072521",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Yoshi's Adventure starts at "
+    },
+    {
+     "_key": "8ab6dd9078bb",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "34 inches"
+    },
+    {
+     "_key": "8a2d99357079",
+     "_type": "span",
+     "marks": [],
+     "text": ". The big jump is "
+    },
+    {
+     "_key": "d7fa9fae27ac",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches"
+    },
+    {
+     "_key": "b0587b29bc23",
+     "_type": "span",
+     "marks": [],
+     "text": ": that opens Mario Kart: Bowser's Challenge, Mine-Cart Madness, Hiccup's Wing Gliders and Harry Potter and the Battle at the Ministry. Monsters Unchained: The Frankenstein Experiment needs "
+    },
+    {
+     "_key": "cf14977d5098",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "48 inches"
+    },
+    {
+     "_key": "19c619fe64fa",
+     "_type": "span",
+     "marks": [],
+     "text": " and is scheduled to close December 11 to 15, 2026."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "3ff8d68cb5b9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b77292ced5e8",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "666ec0f86ff6",
+     "_type": "span",
+     "marks": [
+      "f2fcd86b7781"
+     ],
+     "text": "Epic Universe 1-day plan"
+    },
+    {
+     "_key": "0552cabaae22",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "087d9643be50",
+     "_type": "span",
+     "marks": [
+      "61997bcd8f93"
+     ],
+     "text": "Epic Universe rides ranked for kids"
+    },
+    {
+     "_key": "29a328cf767a",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "4ba48c37ff44",
+     "_type": "span",
+     "marks": [
+      "d8228ddb9eb2"
+     ],
+     "text": "Epic Universe rides under 40 inches"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "f2fcd86b7781",
+     "_type": "link",
+     "href": "/blog/epic-universe-1-day-plan/"
+    },
+    {
+     "_key": "61997bcd8f93",
+     "_type": "link",
+     "href": "/blog/epic-universe-rides-ranked-guide/"
+    },
+    {
+     "_key": "d8228ddb9eb2",
+     "_type": "link",
+     "href": "/rides/for/epic-universe-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "ecafae0580f2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "9c773b11f2b3",
+     "_type": "span",
+     "marks": [
+      "50f87b456f45"
+     ],
+     "text": "Compare Universal 3-park, 3-day tickets"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "50f87b456f45",
+     "_type": "link",
+     "href": "https://www.dpbolvw.net/click-101693488-12983229"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "34b4a6a7c4a0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ca6c28b1bf14",
+     "_type": "span",
+     "marks": [],
+     "text": "SeaWorld Orlando"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "40d6f20870b0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "f1b2d26d4eea",
+     "_type": "span",
+     "marks": [],
+     "text": "SeaWorld mixes animal habitats with a full Sesame Street Land for little kids. SeaWorld's rides page lists Elmo's Choo Choo Train at "
+    },
+    {
+     "_key": "5b74c469c6e2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "36 inches"
+    },
+    {
+     "_key": "e9bda633f003",
+     "_type": "span",
+     "marks": [],
+     "text": " and Super Grover's Box Car Derby at "
+    },
+    {
+     "_key": "a59c8f21689a",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "38 inches"
+    },
+    {
+     "_key": "e6049b30f56d",
+     "_type": "span",
+     "marks": [],
+     "text": ". The newest family ride, Expedition Odyssey: Fire & Ice, needs "
+    },
+    {
+     "_key": "885d2efeb14e",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "39 inches"
+    },
+    {
+     "_key": "e5159ff6a8ef",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Penguin Trek needs "
+    },
+    {
+     "_key": "8edf2b870e86",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "42 inches"
+    },
+    {
+     "_key": "dd2ec12c55c1",
+     "_type": "span",
+     "marks": [],
+     "text": " (42 to 48 inches with a supervising companion). The headline coasters like Mako and Manta need "
+    },
+    {
+     "_key": "1e6a8b34d5bd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "54 inches"
+    },
+    {
+     "_key": "8e12edc9182f",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "212db579e2c6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "111e1fba47ab",
+     "_type": "span",
+     "marks": [],
+     "text": "Closed right now: SeaWorld's rides page shows Abby's Flower Tower and Infinity Falls closed for annual maintenance, and Sky Tower temporarily closed."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eb4e8d041208",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c0764f93c5d8",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "ce2d08a79c04",
+     "_type": "span",
+     "marks": [
+      "4ffb4dca6836"
+     ],
+     "text": "SeaWorld Orlando park guide"
+    },
+    {
+     "_key": "52b669137bc1",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "c4a455badded",
+     "_type": "span",
+     "marks": [
+      "41083a0aa5fa"
+     ],
+     "text": "SeaWorld rides under 40 inches"
+    },
+    {
+     "_key": "1bff6ecfa3d5",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "9d3ef2a81e29",
+     "_type": "span",
+     "marks": [
+      "a2f1d15c653f"
+     ],
+     "text": "SeaWorld Orlando tickets"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "4ffb4dca6836",
+     "_type": "link",
+     "href": "/parks/seaworld-orlando/"
+    },
+    {
+     "_key": "41083a0aa5fa",
+     "_type": "link",
+     "href": "/rides/for/seaworld-under-40/"
+    },
+    {
+     "_key": "a2f1d15c653f",
+     "_type": "link",
+     "href": "https://www.tkqlhce.com/click-101693488-12540778"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "de532f0a9727",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b2a2e099cd5f",
+     "_type": "span",
+     "marks": [],
+     "text": "LEGOLAND Florida"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "1708abb2054f",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ad7a94c215ab",
+     "_type": "span",
+     "marks": [],
+     "text": "The lowest height minimums of any park on this list. Lost Kingdom Adventure starts at "
+    },
+    {
+     "_key": "2fb85cad3407",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "30 inches"
+    },
+    {
+     "_key": "674c4040fad1",
+     "_type": "span",
+     "marks": [],
+     "text": ", Galacticoaster at "
+    },
+    {
+     "_key": "353c55c99891",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "36 inches"
+    },
+    {
+     "_key": "2ba69af60a6b",
+     "_type": "span",
+     "marks": [],
+     "text": ", The Dragon at "
+    },
+    {
+     "_key": "5905338b049f",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "40 inches"
+    },
+    {
+     "_key": "6116f8f56b11",
+     "_type": "span",
+     "marks": [],
+     "text": ", and Coastersaurus at "
+    },
+    {
+     "_key": "b9734c79d6cd",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "42 inches"
+    },
+    {
+     "_key": "710512c1069a",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "86ba4252095e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "d89ad576fd82",
+     "_type": "span",
+     "marks": [],
+     "text": "Check before you go: LEGOLAND's temporary closures page lists LEGO NINJAGO The Ride and The Dragon as closed "
+    },
+    {
+     "_key": "ceaa65f2abbe",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "November 30 to December 18"
+    },
+    {
+     "_key": "51205d9ddf91",
+     "_type": "span",
+     "marks": [],
+     "text": ", plus Pirate River Quest, Battle of Bricksburg, DUPLO Tractor and Kid Power Towers with no end date posted."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "fac2891b84c2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4a7324fbe6e7",
+     "_type": "span",
+     "marks": [],
+     "text": "More: "
+    },
+    {
+     "_key": "23a322611123",
+     "_type": "span",
+     "marks": [
+      "13732418f63c"
+     ],
+     "text": "LEGOLAND Florida ride heights"
+    },
+    {
+     "_key": "4fc3efe0304a",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "55d879a2fb34",
+     "_type": "span",
+     "marks": [
+      "f358d2fc5ddc"
+     ],
+     "text": "LEGOLAND park guide"
+    },
+    {
+     "_key": "ec025a9468ea",
+     "_type": "span",
+     "marks": [],
+     "text": " · "
+    },
+    {
+     "_key": "83ab677bc568",
+     "_type": "span",
+     "marks": [
+      "9075ac1f41ec"
+     ],
+     "text": "LEGOLAND Florida tickets"
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "13732418f63c",
+     "_type": "link",
+     "href": "/blog/legoland-florida-rides-by-height/"
+    },
+    {
+     "_key": "f358d2fc5ddc",
+     "_type": "link",
+     "href": "/parks/legoland-florida/"
+    },
+    {
+     "_key": "9075ac1f41ec",
+     "_type": "link",
+     "href": "https://www.anrdoezrs.net/click-101693488-12540781"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3a72b800fdaf",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "65aba2275a7b",
+     "_type": "span",
+     "marks": [],
+     "text": "Orlando Theme Parks in December 2026"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "375e5856c438",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e6bf13ba09ff",
+     "_type": "span",
+     "marks": [],
+     "text": "December is a festive time to visit. Here's what's on, from each park's official pages:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "986b41944ec2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8f286a21d873",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Walt Disney World:"
+    },
+    {
+     "_key": "0ca4a0a22ff7",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney's holiday season runs November 13 to January 6. Mickey's Very Merry Christmas Party is a separately ticketed night event at Magic Kingdom on select nights from November 8 to December 22, 2026, and Disney says all 2026 dates have sold out."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "19ddf6f6930b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a2512222345b",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "EPCOT:"
+    },
+    {
+     "_key": "6e0dcabcd4da",
+     "_type": "span",
+     "marks": [],
+     "text": " the International Festival of the Holidays runs November 27 to December 30, 2026."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "7692ec66dd0b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "90aa09c39a2c",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Hollywood Studios:"
+    },
+    {
+     "_key": "e4758c2c04ba",
+     "_type": "span",
+     "marks": [],
+     "text": " Disney Jollywood Nights is a holiday night event on select nights from November 7, 2026, to January 5, 2027."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c2444190e9ca",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "be543f27d2aa",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Animal Kingdom:"
+    },
+    {
+     "_key": "668696d90815",
+     "_type": "span",
+     "marks": [],
+     "text": " holiday touches include a Merry Menagerie of arctic-animal puppets on Discovery Island and a holiday edition of Tree of Life Awakenings."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "262b6ebe9bf9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "128455bd6ee2",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "Universal Orlando:"
+    },
+    {
+     "_key": "c5fcc51198f0",
+     "_type": "span",
+     "marks": [],
+     "text": " Holidays run November 14, 2026, to January 3, 2027, with Universal's Holiday Parade featuring Macy's at Universal Studios Florida (included with a theme park ticket), Grinchmas in Seuss Landing at Islands of Adventure, and new holiday decor at Epic Universe."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "40863cd80928",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8f84913b84ce",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "SeaWorld Orlando:"
+    },
+    {
+     "_key": "e1e6b5516773",
+     "_type": "span",
+     "marks": [],
+     "text": " Christmas Celebration runs on select dates from November 6 to January 4."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "972270e7b9d0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "92ab4b405c57",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "LEGOLAND Florida:"
+    },
+    {
+     "_key": "059dac85b63a",
+     "_type": "span",
+     "marks": [],
+     "text": " Christmas Bricktacular is included with admission on select dates: November 21, 22, 27, 28 and 29; December 5, 6, 12, 13 and 18 to 31; and January 1 to 3."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "516986691c35",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "370dbf69f1bf",
+     "_type": "span",
+     "marks": [],
+     "text": "Plan your must-do rides early in the day and keep an eye on the closures above. Your kids will love seeing the parks all lit up."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "88ba0c992f33",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1b45cd3a5bf9",
+     "_type": "span",
+     "marks": [],
+     "text": "How Many Parks Should You Do With Kids?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "316194440c0d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fd362cd9a77b",
+     "_type": "span",
+     "marks": [],
+     "text": "This is a judgment call, not a rule, but here's a simple starting point:"
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5de752ca1416",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "db868f311fbc",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "3-day trip:"
+    },
+    {
+     "_key": "0681a52fa6ad",
+     "_type": "span",
+     "marks": [],
+     "text": " pick one resort. Three Disney parks, or Universal's three parks if your kids are 40 inches or taller."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "5b818429df26",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "06ad9081a253",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "5-day trip:"
+    },
+    {
+     "_key": "f4bb1cd660ad",
+     "_type": "span",
+     "marks": [],
+     "text": " four Disney parks plus a rest day, or a Disney and Universal split."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "53ef5feed75b",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e1e82cc984c0",
+     "_type": "span",
+     "marks": [
+      "strong"
+     ],
+     "text": "7-day trip:"
+    },
+    {
+     "_key": "9ffcdc7519c2",
+     "_type": "span",
+     "marks": [],
+     "text": " room for Disney, Universal and one of SeaWorld or LEGOLAND, with at least one pool day."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "eb733a3c9fd4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bcdf6feecc9c",
+     "_type": "span",
+     "marks": [],
+     "text": "Leaving room for naps, pool time and early nights often beats squeezing in one more park."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "b9cd5c7d1644",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ec3485b17078",
+     "_type": "span",
+     "marks": [],
+     "text": "Tickets"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "d6956f5a90de",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "64469842d24e",
+     "_type": "span",
+     "marks": [],
+     "text": "Ticket prices change by date, so compare current options on our "
+    },
+    {
+     "_key": "8efa01864a0b",
+     "_type": "span",
+     "marks": [
+      "e71fe12d5cfb"
+     ],
+     "text": "Orlando ticket deals page"
+    },
+    {
+     "_key": "de8b0b34a15e",
+     "_type": "span",
+     "marks": [],
+     "text": " before you buy. You can also start with "
+    },
+    {
+     "_key": "65fa01490c7e",
+     "_type": "span",
+     "marks": [
+      "cc0671438592"
+     ],
+     "text": "Disney World Park Hopper tickets"
+    },
+    {
+     "_key": "1810dddb9f3c",
+     "_type": "span",
+     "marks": [],
+     "text": " or "
+    },
+    {
+     "_key": "1e8fed229713",
+     "_type": "span",
+     "marks": [
+      "da2323d697ea"
+     ],
+     "text": "Universal 3-park tickets"
+    },
+    {
+     "_key": "5ac88c646ed0",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "e71fe12d5cfb",
+     "_type": "link",
+     "href": "/deals/"
+    },
+    {
+     "_key": "cc0671438592",
+     "_type": "link",
+     "href": "https://www.tkqlhce.com/click-101693488-12783539"
+    },
+    {
+     "_key": "da2323d697ea",
+     "_type": "link",
+     "href": "https://www.dpbolvw.net/click-101693488-12983229"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "68058d6976fc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "493bdf41d341",
+     "_type": "span",
+     "marks": [],
+     "text": "Plan It in Two Minutes"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "95575cdc7be3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7bfca786cad0",
+     "_type": "span",
+     "marks": [],
+     "text": "Measure your kids in shoes."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "c71075dd3098",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b397820103de",
+     "_type": "span",
+     "marks": [],
+     "text": "Open the "
+    },
+    {
+     "_key": "8e83debc22e4",
+     "_type": "span",
+     "marks": [
+      "08e6992d0a1c"
+     ],
+     "text": "park chooser"
+    },
+    {
+     "_key": "ebec925935e7",
+     "_type": "span",
+     "marks": [],
+     "text": " to see which parks fit their heights."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [
+    {
+     "_key": "08e6992d0a1c",
+     "_type": "link",
+     "href": "/parks/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d02edac76621",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "50b0ffacb6e2",
+     "_type": "span",
+     "marks": [],
+     "text": "Check every ride on your list in the "
+    },
+    {
+     "_key": "c68540a107ca",
+     "_type": "span",
+     "marks": [
+      "3ed51263a8d7"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "f3a43f35e535",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [
+    {
+     "_key": "3ed51263a8d7",
+     "_type": "link",
+     "href": "/rides/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "955bfcc50a42",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "cff4428c468e",
+     "_type": "span",
+     "marks": [],
+     "text": "Re-check official closure pages the week of your trip."
+    }
+   ],
+   "level": 1,
+   "listItem": "number",
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "f1b9d4bf4235",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "18b44c99e15b",
+     "_type": "span",
+     "marks": [],
+     "text": "FAQ"
+    }
+   ],
+   "markDefs": [],
+   "style": "h2"
+  },
+  {
+   "_key": "dd60726d69f9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "1419165a75c3",
+     "_type": "span",
+     "marks": [],
+     "text": "What are all the theme parks in Orlando?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "736a271772a4",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b966848623a3",
+     "_type": "span",
+     "marks": [],
+     "text": "The nine major ones are Magic Kingdom, EPCOT, Disney's Hollywood Studios and Disney's Animal Kingdom (Walt Disney World); Universal Studios Florida, Universal Islands of Adventure and Universal Epic Universe (Universal Orlando); SeaWorld Orlando; and LEGOLAND Florida in Winter Haven."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "2b07fdef9a75",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "854f7c4b26f3",
+     "_type": "span",
+     "marks": [],
+     "text": "What is the best Orlando theme park for toddlers?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "1a5cc4e74a9a",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6eba3979b4bb",
+     "_type": "span",
+     "marks": [],
+     "text": "Magic Kingdom and LEGOLAND Florida usually offer the most for kids under 36 inches, with many rides that have no or low height minimums. Animal Kingdom is another easy pick because the safari ride and animal trails work at any height."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "970eb5c6e6b5",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bc86fe345ab6",
+     "_type": "span",
+     "marks": [],
+     "text": "Which Orlando park is best for kids 40 inches tall?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "686a0283b6b1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e1ee659668b8",
+     "_type": "span",
+     "marks": [],
+     "text": "At 40 inches, most of Universal's family rides open up, including Mario Kart: Bowser's Challenge at Epic Universe and Despicable Me Minion Mayhem at Universal Studios Florida. Most Disney rides are also open by then. Use the "
+    },
+    {
+     "_key": "293fa4c595b6",
+     "_type": "span",
+     "marks": [
+      "7ddb0605b963"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "40669cca2784",
+     "_type": "span",
+     "marks": [],
+     "text": " to see the full list for your child's height."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "7ddb0605b963",
+     "_type": "link",
+     "href": "/rides/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "dabbc9e0cb4e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dc57affdc76e",
+     "_type": "span",
+     "marks": [],
+     "text": "Are the Orlando parks decorated for Christmas in 2026?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "9edf8961fbd9",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7fb807de2be3",
+     "_type": "span",
+     "marks": [],
+     "text": "Yes. Disney's holiday season runs November 13 to January 6, Universal's runs November 14, 2026, to January 3, 2027, SeaWorld's Christmas Celebration runs on select dates from November 6 to January 4, and LEGOLAND's Christmas Bricktacular runs on select dates through January 3."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  },
+  {
+   "_key": "a161e81b25c7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c959571ff75f",
+     "_type": "span",
+     "marks": [],
+     "text": "Is LEGOLAND Florida in Orlando?"
+    }
+   ],
+   "markDefs": [],
+   "style": "h3"
+  },
+  {
+   "_key": "8a17ad20c44e",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "fa39170b91fc",
+     "_type": "span",
+     "marks": [],
+     "text": "LEGOLAND Florida is in Winter Haven, outside Orlando. Many families still plan it as part of an Orlando trip."
+    }
+   ],
+   "markDefs": [],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "8cbbfe10035c",
+   "_ref": "q5bQv6QFqWcAZeLNacatoE",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Which Orlando theme park fits your kids? All 9 parks with kid-friendly rides by official height, current closures, and December 2026 holiday events. Checked Nov 16, 2026.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "A family of four, the youngest on dad's shoulders, looks out at sunset over a lagoon toward a fairytale castle, a silver geodesic sphere and a looping roller coaster, framed by palm trees and pink and purple flowers.",
+  "asset": {
+   "_ref": "image-6f2d64c8f8838393f2da5584b9cc0e168752b546-1376x768-jpg",
+   "_type": "reference"
+  }
+ },
+ "readTime": 9,
+ "slug": {
+  "_type": "slug",
+  "current": "orlando-theme-parks-for-families"
+ },
+ "tags": [
+  "Orlando theme parks",
+  "Orlando with kids",
+  "Orlando theme parks for families",
+  "Disney World with kids",
+  "Universal Orlando with kids",
+  "Orlando holidays 2026"
+ ],
+ "title": "Orlando Theme Parks for Families: Best Rides by Height 2026"
+}

@@ -1,0 +1,532 @@
+{
+ "_createdAt": "2026-09-25T22:10:14Z",
+ "_id": "drafts.disney-vs-universal-with-kids-2026",
+ "_rev": "Lbd62M6NNsBtBmz2JpmKX5",
+ "_type": "blogPost",
+ "_updatedAt": "2026-09-25T22:22:55Z",
+ "author": {
+  "_ref": "yiiTNZ4hTtUOs7sqMRhpyl",
+  "_type": "reference"
+ },
+ "body": [
+  {
+   "_key": "070d805e1c88",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "a0d3295abf0e",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney vs. Universal with kids: the quick decision"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "a87a2e2d2867",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "501776275ba1",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney can be the easier first choice when the youngest child needs to be included most of the day. Universal can be a stronger fit when the kids are taller, want more ride intensity, and care about specific movie or game worlds. This compares Walt Disney World Resort and Universal Orlando Resort; the best choice can change by individual park and your child’s current height."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "e6f9b82844a7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "intro-plain",
+     "_type": "span",
+     "marks": [],
+     "text": "Start with your child’s height. Then use the "
+    },
+    {
+     "_key": "intro-disney",
+     "_type": "span",
+     "marks": [
+      "intro-disney-link"
+     ],
+     "text": "Disney World under-40-inch ride list"
+    },
+    {
+     "_key": "intro-middle",
+     "_type": "span",
+     "marks": [],
+     "text": " or the "
+    },
+    {
+     "_key": "intro-universal",
+     "_type": "span",
+     "marks": [
+      "intro-universal-link"
+     ],
+     "text": "Universal Orlando under-40-inch ride list"
+    },
+    {
+     "_key": "intro-period",
+     "_type": "span",
+     "marks": [],
+     "text": " to see what can realistically be part of the day."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "intro-disney-link",
+     "_type": "link",
+     "href": "/rides/for/disney-world-under-40/"
+    },
+    {
+     "_key": "intro-universal-link",
+     "_type": "link",
+     "href": "/rides/for/universal-orlando-under-40/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "861cb63328ed",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "764dbb0a6bca",
+     "_type": "span",
+     "marks": [],
+     "text": "Start with height, not hype"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "2808c0b4dcda",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6a243307bf86",
+     "_type": "span",
+     "marks": [],
+     "text": "A child can love a land or movie franchise and still have a disappointing ride-heavy day if several headline attractions are above their height. The reverse can also be true: a younger child may have a strong day when the plan includes shows, characters, food, and realistic breaks."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "2aa2149af834",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ea9a088862fa",
+     "_type": "span",
+     "marks": [],
+     "text": "For mixed-height groups, make two short lists before choosing: experiences everyone can do together and priority rides for the taller child. That is a more useful starting point than a generic age recommendation."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "656790b31fd0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "b572480af5d9",
+     "_type": "span",
+     "marks": [],
+     "text": "Choose Disney when the day needs flexibility"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "d45faedd0d86",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "c814c46688e7",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney often works well when a preschooler, cautious rider, or character-focused child is setting the pace. A family can build a satisfying day around familiar attractions, characters, and seated breaks without making every hour depend on a major coaster."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "6a5f26ca7caa",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "593b30dedb0f",
+     "_type": "span",
+     "marks": [],
+     "text": "For Magic Kingdom, start with the "
+    },
+    {
+     "_key": "e201cb48b7d2",
+     "_type": "span",
+     "marks": [
+      "5b8afb2d2ca2"
+     ],
+     "text": "rides for kids under 40 inches guide"
+    },
+    {
+     "_key": "3fb9aead4d8a",
+     "_type": "span",
+     "marks": [],
+     "text": " before you commit to a park day."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "5b8afb2d2ca2",
+     "_type": "link",
+     "href": "/blog/best-magic-kingdom-rides-kids-under-40-inches/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "3929087c0bad",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "163e0426e665",
+     "_type": "span",
+     "marks": [],
+     "text": "The younger child needs genuine wins for most of the day."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "70469feda74d",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "009949b5efb9",
+     "_type": "span",
+     "marks": [],
+     "text": "Characters and familiar stories matter as much as bigger rides."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "8bc42f5c1898",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6085e4b01d22",
+     "_type": "span",
+     "marks": [],
+     "text": "Your group wants easy options when someone needs shade, food, or a reset."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "a4da16bbecfc",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "92ea72e56c79",
+     "_type": "span",
+     "marks": [],
+     "text": "Choose Universal when the kids are ready for a bigger ride day"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "e120f61181c6",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ab3bf06506f1",
+     "_type": "span",
+     "marks": [],
+     "text": "Universal can be a strong family choice when the kids meet the posted requirements for several must-do attractions and are excited by the worlds around them. The planning payoff is strongest when a group wants a more ride-forward day and has clear priorities."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "dc3c36bf56d1",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e73502814995",
+     "_type": "span",
+     "marks": [],
+     "text": "Use the "
+    },
+    {
+     "_key": "0778cabb0763",
+     "_type": "span",
+     "marks": [
+      "7e768d8b4133"
+     ],
+     "text": "Universal Orlando height requirements guide"
+    },
+    {
+     "_key": "a9b253b70815",
+     "_type": "span",
+     "marks": [],
+     "text": " and the "
+    },
+    {
+     "_key": "711f7bd072fb",
+     "_type": "span",
+     "marks": [
+      "9e1a339be898"
+     ],
+     "text": "ride finder"
+    },
+    {
+     "_key": "17bdb30b434e",
+     "_type": "span",
+     "marks": [],
+     "text": " to turn those priorities into a realistic list. If Epic Universe is the draw, pair it with the "
+    },
+    {
+     "_key": "09f003be13bc",
+     "_type": "span",
+     "marks": [
+      "4609a8b0e03f"
+     ],
+     "text": "family 1-day plan"
+    },
+    {
+     "_key": "dba754a91ab8",
+     "_type": "span",
+     "marks": [],
+     "text": "."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "7e768d8b4133",
+     "_type": "link",
+     "href": "/blog/universal-orlando-height-requirements/"
+    },
+    {
+     "_key": "9e1a339be898",
+     "_type": "link",
+     "href": "/rides/"
+    },
+    {
+     "_key": "4609a8b0e03f",
+     "_type": "link",
+     "href": "/blog/epic-universe-1-day-plan/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "61cf04ce82b0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "68b2a6d6aba9",
+     "_type": "span",
+     "marks": [],
+     "text": "The kids care more about Harry Potter, Nintendo, dinosaurs, or movie worlds than classic characters."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "c5bd2eaf1b52",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "6e25af502342",
+     "_type": "span",
+     "marks": [],
+     "text": "They actively want coasters or more intense rides."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "3936f52c3cb7",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "e592317380eb",
+     "_type": "span",
+     "marks": [],
+     "text": "They meet the posted requirements for several attractions they actually want to do."
+    }
+   ],
+   "level": 1,
+   "listItem": "bullet",
+   "style": "normal"
+  },
+  {
+   "_key": "4fede97a57a2",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "7b9f6fbc993a",
+     "_type": "span",
+     "marks": [],
+     "text": "Mixed ages: choose one clear winner for this trip"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "aafb63564b88",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "ac0f5291c772",
+     "_type": "span",
+     "marks": [],
+     "text": "For a mixed-age group, choose the park that gives the youngest or least-thrill-seeking child enough genuine wins, then make a short plan for the older child’s priorities. It can help to pick the child whose experience would be hardest to recover if the day goes wrong, count five experiences they would enjoy in each park, and use the afternoon energy check as the tie-breaker."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "74c1d9f11089",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "4fb898a6147e",
+     "_type": "span",
+     "marks": [],
+     "text": "Before you buy tickets"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "6cffa7e925c3",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "dba91c04bd73",
+     "_type": "span",
+     "marks": [],
+     "text": "Verify the current official park calendar, attraction availability, and posted height rules for your travel dates. Park operations and requirements can change. Then compare a ticket option that fits the actual plan—not the largest bundle by default."
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "08d79bf06448",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "8bd5fa94526c",
+     "_type": "span",
+     "marks": [],
+     "text": "After you have narrowed the choice, "
+    },
+    {
+     "_key": "63fcb5e1abcf",
+     "_type": "span",
+     "marks": [
+      "010d1df5977c"
+     ],
+     "text": "compare current Orlando ticket options"
+    },
+    {
+     "_key": "bb948fb0325a",
+     "_type": "span",
+     "marks": [],
+     "text": ". Plan Your Park may earn a commission when you use eligible ticket links, at no extra cost to you."
+    }
+   ],
+   "markDefs": [
+    {
+     "_key": "010d1df5977c",
+     "_type": "link",
+     "href": "/deals/"
+    }
+   ],
+   "style": "normal"
+  },
+  {
+   "_key": "d595c2d88075",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "da1f636e4372",
+     "_type": "span",
+     "marks": [],
+     "text": "The practical bottom line"
+    }
+   ],
+   "style": "h2"
+  },
+  {
+   "_key": "7c36db444ce0",
+   "_type": "block",
+   "children": [
+    {
+     "_key": "bottom-plain",
+     "_type": "span",
+     "marks": [],
+     "text": "Disney can be the easier first choice for a younger or flexibility-first group. Universal can be the better park day for taller kids who want more ride intensity and specific Universal worlds. Do the height check first, choose around the child who needs the most support, and let that plan drive the ticket decision."
+    }
+   ],
+   "style": "normal"
+  }
+ ],
+ "categories": [
+  {
+   "_key": "cat-general",
+   "_ref": "q5bQv6QFqWcAZeLNacatoE",
+   "_type": "reference"
+  },
+  {
+   "_key": "cat-disney",
+   "_ref": "q5bQv6QFqWcAZeLNacathw",
+   "_type": "reference"
+  },
+  {
+   "_key": "cat-universal",
+   "_ref": "q5bQv6QFqWcAZeLNacatl5",
+   "_type": "reference"
+  }
+ ],
+ "excerpt": "Compare Disney World and Universal Orlando for kids by height, ride intensity, and family interests. Use this decision guide before buying tickets.",
+ "heroImage": {
+  "_type": "image",
+  "alt": "Family walking between a storybook castle setting and an adventure-park skyline",
+  "asset": {
+   "_ref": "image-6c58deb906be7ad4714c65d9e85c1e4bafe6b4bc-1280x720-jpg",
+   "_type": "reference"
+  }
+ },
+ "publishedAt": "2026-09-25T21:00:00Z",
+ "readTime": 6,
+ "slug": {
+  "_type": "slug",
+  "current": "disney-vs-universal-with-kids-2026"
+ },
+ "tags": [
+  "Disney World",
+  "Universal Orlando",
+  "Orlando parks",
+  "family travel",
+  "kids",
+  "height requirements"
+ ],
+ "title": "Disney vs. Universal With Kids: Pick the Right Orlando Park"
+}
